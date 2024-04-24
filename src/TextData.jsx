@@ -1,6 +1,6 @@
 export const TextData = {
     Einleitung: {
-        VideoLink: "https://www.youtube-nocookie.com/embed/HLgKwZkm59M?si=p-12Mfp5IoZCa5aq&amp;rel=0&amp;modestbranding=1",
+        VideoLink: "https://www.youtube-nocookie.com/embed/kxsbAi3gmeE?si=PL74OEuieI7W2hce&amp;rel=0&amp;modestbranding=1",
         Texte: [
             { title: "EU AI Act", texts: [
                 "## Ziele des EU AI Acts:",

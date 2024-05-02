@@ -9,12 +9,6 @@ function AnimationContainer({ topicName }) {
 
   const animationDataContent = AnimationData[topicName];
 
-  /**
-   * 1 = title + graphic
-   * 2 = move title up
-   * 3 = loop with texts
-   * 4 = remove all + increase progress
-   */
   const [animationSelection, setAnimationSelection] = useState(0);
   // Progress in the module
   const [progress, setProgress] = useState(0);
@@ -27,7 +21,7 @@ function AnimationContainer({ topicName }) {
     `calc(40% + 150px)`,
   ]);
 
-  // Case 2 adds current top values if not there already
+  // Could be removed
   const [textValuesHistory, setTextValuesHistory] = useState([]);
 
   const updateTextTopValues = (index, newValue) => {
@@ -56,12 +50,9 @@ function AnimationContainer({ topicName }) {
         setProgress((prevProgress) => prevProgress - 1);
       }
       nextAnimation("back");
-      //backwardAnimations();
-      //lastAnimation();
     } else if (event.key === "ArrowRight") {
       nextAnimation("next");
       explanationController.start(animations.hide);
-      //forwardAnimation();
     }
   };
 
@@ -73,47 +64,29 @@ function AnimationContainer({ topicName }) {
     }
   })
 
-  // WHEN BACK ANIMATION JUST DO ANIMATIONSELECTION - 1 
-  /**
-   * TEMPORARY SOLUTION FOR PRESENTATION - MIGHT BECOME PERMAMENT
-   */
   const nextAnimation = async (direction) => {
     const animationPromises = [];
     let usedProgress = progress;
     let usedAnimationSelection;
     if (direction === "next") {
-      console.log("\nCASE NEXT", 'color: blue; font-size: 20px;')
-      console.log(animationDataContent.Content.length - 1);
-      console.log(animationDataContent.Content[animationDataContent.Content.length - 1].AnimationOrder[animationDataContent.Content[animationDataContent.Content.length - 1].AnimationOrder.length - 1].length)
-      if (usedProgress === animationDataContent.Content.length - 1 && animationSelection === animationDataContent.Content[animationDataContent.Content.length - 1].AnimationOrder[animationDataContent.Content[animationDataContent.Content.length - 1].AnimationOrder.length - 1].length) {
+      // es war (eigentlich falsch, ging auch nicht mehr woanders): animationSelection === animationDataContent.Content[animationDataContent.Content.length - 1].AnimationOrder[animationDataContent.Content[animationDataContent.Content.length - 1].AnimationOrder.length - 1].length
+      if (usedProgress === animationDataContent.Content.length - 1 && animationSelection === animationDataContent.Content[animationDataContent.Content.length - 1].AnimationOrder.length - 1) {
         return;
       }
       usedAnimationSelection = animationSelection;
     } else if (direction === "back" && animationSelection === 0) {
-      console.log('%cCASE PROGRESS - 1', 'color: blue; font-size: 20px;');
-      console.log("selection: ", usedAnimationSelection);
       usedAnimationSelection = animationDataContent.Content[usedProgress - 1].AnimationOrder.length - 1;
-      console.log("after ne aplly: ", usedAnimationSelection);
-      console.log("usedProgress - 1. order:");
-      console.log(animationDataContent.Content[usedProgress - 1].AnimationOrder);
       setAnimationSelection(usedAnimationSelection);
       usedProgress = progress - 1;
       setProgress(usedProgress);
     } else {
-      console.log("\n CASE DEAFULT SELECTION - 1", 'color: blue; font-size: 20px;');
       usedAnimationSelection = animationSelection - 1;
       setAnimationSelection(usedAnimationSelection);
     }
-    console.log("now animation value used:");
-    console.log(usedAnimationSelection);
 
-    console.log("now used progress value:");
-    console.log(usedProgress);
-
+    // gets next or last animation
     const animationData = direction === "next" ? animationDataContent.Content[usedProgress].AnimationOrder[usedAnimationSelection] : animationDataContent.Content[usedProgress].AnimationOrderRev[usedAnimationSelection];
 
-
-    console.log(animationDataContent.Content[usedProgress].AnimationOrder[usedAnimationSelection]);
     for (let i = 0; i < animationData.length; i++) {
 
       for (let j = 0; j < animationData[i].length; j++) {
@@ -132,12 +105,14 @@ function AnimationContainer({ topicName }) {
           if (animationSelected.includes(":")) {
             const stringParts = animationSelected.split(":");
             const animationMethod = stringParts[0];
-            const animationValue = stringParts[1];
+            const animationValue = stringParts.slice(1).join(":");
+            console.log("danach: " + animationValue);
 
             // special cases where a parameter needs to be passed
             switch (animationMethod) {
               // special case if a anchor (top, right, bottom, left) needs to be removed for another to be in effect
               case "remove":
+                console.log("case remove");
                 animationPromises.push(controller.start({
                   ...animations.unset(animationValue),
                   transition: {
@@ -147,6 +122,7 @@ function AnimationContainer({ topicName }) {
                 }))
                 break;
               case "color":
+                console.log("case color");
                 animationPromises.push(controller.start({
                   ...animations.color(animationValue),
                   transition: {
@@ -155,51 +131,53 @@ function AnimationContainer({ topicName }) {
                   }
                 }))
                 break;
-              // TODO: collapse cases
-              case "top":
-                console.log('%cCASE TOP: ', 'font-size: 20px');
-                console.log(animationValue);
+              case "move":
+                console.log("case move");
+                const moveParts = animationValue.split(":");
+                const direction = moveParts[0];
+                const moveValue = moveParts[1];
+                console.log("direction: " + direction);
+                console.log("moveValue: " + moveValue);
                 animationPromises.push(controller.start({
-                  ...animations.top(animationValue),
+                  ...animations.move(direction, moveValue),
                   transition: {
                     duration: speed,
                     ease: "easeInOut"
                   }
                 }))
                 break;
-              case "right":
-                break;
               default:
                 break;
             }
+          } else {
+            console.log("default case: " + animationSelected);
+            animationPromises.push(controller.start({
+              ...animations[animationSelected],
+              transition: {
+                duration: speed,
+                ease: "easeInOut"
+              }
+            }))
           }
-
-          animationPromises.push(controller.start({
-            ...animations[animationSelected],
-            transition: {
-              duration: speed,
-              ease: "easeInOut"
-            }
-          }))
         }
       }
       await Promise.all(animationPromises);
-      console.log("animationen durchgeführt");
     }
     if (direction === "next") {
       const newSelect = animationSelection + 1;
+      console.log("is next selection now");
       setAnimationSelection(newSelect);
     }
     if (direction === "next" && animationSelection === animationDataContent.Content[progress].AnimationOrder.length - 1) {
       setProgress((prevProgress) => prevProgress + 1);
       setAnimationSelection(0);
+      // FIXME: find a way to resolve
+      // recursive here brings error: cant read image, text, ... 
+      //nextAnimation("next");
     }
   }
 
   useEffect(() => {
-    console.log("useEffect:");
-    console.log("Effect selection: ", animationSelection);
-    console.log("Progress: ", progress);
   }, [animationSelection, progress])
 
   // assignment to animation controller

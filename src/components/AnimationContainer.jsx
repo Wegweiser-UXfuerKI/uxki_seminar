@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { animations } from "./animations";
@@ -12,29 +13,15 @@ function AnimationContainer({ topicName }) {
   const [animationSelection, setAnimationSelection] = useState(0);
   // Progress in the module
   const [progress, setProgress] = useState(0);
-
-  // top values for the positioning
-  const [textTopValuesMove, setTextTopValuesMove] = useState([
-    `calc(50% - 100px)`,
-    `calc(40% + 50px)`,
-    `calc(40% + 100px)`,
-    `calc(40% + 150px)`,
-  ]);
-
-  // Could be removed
-  const [textValuesHistory, setTextValuesHistory] = useState([]);
-
-  const updateTextTopValues = (index, newValue) => {
-    setTextTopValuesMove((prevState) => {
-      const updatedValues = [...prevState];
-      updatedValues[index] = newValue;
-      return updatedValues;
-    });
-  };
+  const [autoNext, setAutoNext] = useState(false);
+  const [autoBack, setAutoBack] = useState(false);
 
   // handles the correct animation
   const handleKeyPress = (event) => {
     if (event.key === "ArrowLeft") {
+      if (progress === 0 && animationSelection === 0) {
+        return;
+      }
       if (progress === 0 && animationSelection === 1) {
         explanationController.start({
           ...animations.show,
@@ -45,7 +32,7 @@ function AnimationContainer({ topicName }) {
           }
         });
       }
-      // TODO: that is correct here???
+      // TODO: verify this if can be deleted
       if (animationSelection === 0 && progress !== 0) {
         setProgress((prevProgress) => prevProgress - 1);
       }
@@ -65,9 +52,12 @@ function AnimationContainer({ topicName }) {
   })
 
   const nextAnimation = async (direction) => {
+    setAutoNext(false);
+    setAutoBack(false);
     const animationPromises = [];
     let usedProgress = progress;
     let usedAnimationSelection;
+    let startAutoBack = false;
     if (direction === "next") {
       // es war (eigentlich falsch, ging auch nicht mehr woanders): animationSelection === animationDataContent.Content[animationDataContent.Content.length - 1].AnimationOrder[animationDataContent.Content[animationDataContent.Content.length - 1].AnimationOrder.length - 1].length
       if (usedProgress === animationDataContent.Content.length - 1 && animationSelection === animationDataContent.Content[animationDataContent.Content.length - 1].AnimationOrder.length - 1) {
@@ -80,6 +70,7 @@ function AnimationContainer({ topicName }) {
       usedProgress = progress - 1;
       setProgress(usedProgress);
     } else {
+      startAutoBack = true;
       usedAnimationSelection = animationSelection - 1;
       setAnimationSelection(usedAnimationSelection);
     }
@@ -163,6 +154,13 @@ function AnimationContainer({ topicName }) {
       }
       await Promise.all(animationPromises);
     }
+    if (startAutoBack) {
+      setAutoBack(true);
+      console.log("\n\n\n\n\n");
+      console.log("setAutoBack true");
+      console.log("progress:", progress);
+      console.log("animation selection: ", animationSelection);
+    }
     if (direction === "next") {
       const newSelect = animationSelection + 1;
       console.log("is next selection now");
@@ -171,22 +169,31 @@ function AnimationContainer({ topicName }) {
     if (direction === "next" && animationSelection === animationDataContent.Content[progress].AnimationOrder.length - 1) {
       setProgress((prevProgress) => prevProgress + 1);
       setAnimationSelection(0);
-      // FIXME: find a way to resolve
-      // recursive here brings error: cant read image, text, ... 
-      //nextAnimation("next");
+      setAutoNext(true);
     }
   }
 
   useEffect(() => {
-  }, [animationSelection, progress])
+    console.log("\n\n\n\n\n");
+    console.log("autoBack: ", autoBack);
+    console.log("progress:", progress);
+    console.log("animation selection: ", animationSelection);
+    console.log("\n\n\n\n\n");
+    if (progress !== 0 && animationSelection === 0 && autoNext) {
+      nextAnimation("next");
+    } else if (progress !== 0 && animationSelection === 0 && autoBack) {
+      console.log("its running back now")
+      nextAnimation("back");
+    }
+  }, [progress, autoBack])
 
   // assignment to animation controller
   const explanationController = useAnimation();
   const graphicController = useAnimation();
-  const titleController = useAnimation();
 
   /* sure there is a better solution than this */
   const textControllers = [
+    useAnimation(),
     useAnimation(),
     useAnimation(),
     useAnimation(),
@@ -195,59 +202,14 @@ function AnimationContainer({ topicName }) {
 
   const elementToController = {
     "image": graphicController,
-    "text0": titleController,
-    "text1": textControllers[0],
-    "text2": textControllers[1],
-    "text3": textControllers[2],
-    "text4": textControllers[3]
+    "text0": textControllers[0],
+    "text1": textControllers[1],
+    "text2": textControllers[2],
+    "text3": textControllers[3],
+    "text4": textControllers[4]
   }
 
-  // Calculate the correct top values for the text elements
-  const updateYValues = () => {
-    // pos for text one
-    const title = document.getElementsByClassName("title");
-    const titleElement = title[0];
-    const titleHeight = titleElement.offsetHeight / 2;
-    updateTextTopValues(0, `calc(20% + ${titleHeight}px + 10px)`);
-
-    // text two pos
-    const textOne = document.getElementsByClassName("textOne");
-    const firstTextElement = textOne[0];
-    const textOneHeight = firstTextElement.offsetHeight;
-    updateTextTopValues(
-      1,
-      `calc(20% + ${titleHeight}px + ${textOneHeight}px + 20px)`
-    );
-
-    // text three pos
-    const textTwo = document.getElementsByClassName("textThree");
-    const secondTextElement = textTwo[0];
-    const textTwoHeight = secondTextElement.offsetHeight;
-    updateTextTopValues(
-      2,
-      `calc(20% + ${titleHeight}px + ${textOneHeight}px + ${textTwoHeight}px + 30px)`
-    );
-
-    // text four pos
-    const textThree = document.getElementsByClassName("textFour");
-    const thirdTextElement = textThree[0];
-    const textThreeHeight = thirdTextElement.offsetHeight;
-    updateTextTopValues(
-      3,
-      `calc(20% + ${titleHeight}px + ${textOneHeight}px + ${textTwoHeight}px + ${textThreeHeight}px + 40px)`
-    );
-    console.log("All top positions updated - theoratically");
-  };
-
-  const setNewTextTops = () => {
-    textControllers.forEach((controller, i) => {
-      controller.start(
-        animations.hiddenTextReset(textValuesHistory[progress - 1][i])
-      );
-      console.log(textTopValuesMove[i]);
-    });
-  };
-
+  
   return (
     <div
       style={{
@@ -259,7 +221,8 @@ function AnimationContainer({ topicName }) {
         justifyContent: "center",
         marginBottom: "100px"
       }}>
-      <div style={{ position: "relative", width: "60%", maxWidth: "1000px", height: "563px", backgroundColor: "white", borderRadius: "20px", cursor: "pointer", overflow: "hidden" }}>
+      <div style={{ position: "relative", maxWidth: "1000px", backgroundColor: "white", borderRadius: "20px", cursor: "pointer", overflow: "hidden" }}
+      className="h-[400px] md:h-[563px] w-4/5 md:w-3/5">
 
         <motion.div
           className="w-full, h-full flex justify-center"
@@ -272,10 +235,9 @@ function AnimationContainer({ topicName }) {
               height: "100%",
               position: "absolute",
               left: 0,
-              top: 0,
+              top: "50%",
               textAlign: "center",
               fontSize: "calc(14px + 1vmin)",
-              paddingTop: "30%",
             }}>
             Zurück
           </div>
@@ -285,10 +247,9 @@ function AnimationContainer({ topicName }) {
               height: "100%",
               position: "absolute",
               right: 0,
-              top: 0,
+              top: "50%",
               textAlign: "center",
               fontSize: "calc(14px + 1vmin)",
-              paddingTop: "30%"
             }}>
             Weiter
           </div>
@@ -317,7 +278,7 @@ function AnimationContainer({ topicName }) {
             top: 0,
             zIndex: 1,
           }}
-          className="bg-black opacity-0 hover:opacity-5 duration-200"
+          className="bg-black opacity-0 sm:hover:opacity-5 sm:duration-200"
           onClick={() => {
             handleKeyPress({ key: "ArrowLeft" });
           }}></div>
@@ -331,7 +292,7 @@ function AnimationContainer({ topicName }) {
             top: 0,
             zIndex: 1,
           }}
-          className="bg-black opacity-0 hover:opacity-5 duration-200"
+          className="bg-black opacity-0 sm:hover:opacity-5 sm:duration-200"
           onClick={() => {
             handleKeyPress({ key: "ArrowRight" });
           }}></div>
@@ -350,26 +311,11 @@ function AnimationContainer({ topicName }) {
 
         {/* Text Animation Container --  */}
         <motion.div
-          className="title"
-          animate={titleController}
+          className="textOne"
+          animate={textControllers[0]}
           initial={{ position: "absolute", right: "100%" }}
           style={{ width: "50%" }}>
           <AnimationText typeText={animationDataContent.Content[progress].Texts[0].typeText} text={animationDataContent.Content[progress].Texts[0].string} />
-        </motion.div>
-
-        <motion.div
-          className="textOne"
-          animate={textControllers[0]}
-          initial={{
-            position: "absolute",
-            opacity: 0,
-            right: "50%",
-            top: textTopValuesMove[0],
-          }}
-          style={{ width: "50%" }}>
-          {animationDataContent.Content[progress].Texts.length >= 2 ? (
-            <AnimationText typeText={animationDataContent.Content[progress].Texts[1].typeText} text={animationDataContent.Content[progress].Texts[1].string} />
-          ) : null}
         </motion.div>
 
         <motion.div
@@ -379,11 +325,11 @@ function AnimationContainer({ topicName }) {
             position: "absolute",
             opacity: 0,
             right: "50%",
-            top: textTopValuesMove[1],
+            top: "50%",
           }}
           style={{ width: "50%" }}>
-          {animationDataContent.Content[progress].Texts.length >= 3 ? (
-            <AnimationText typeText={animationDataContent.Content[progress].Texts[2].typeText} text={animationDataContent.Content[progress].Texts[2].string} />
+          {animationDataContent.Content[progress].Texts.length >= 2 ? (
+            <AnimationText typeText={animationDataContent.Content[progress].Texts[1].typeText} text={animationDataContent.Content[progress].Texts[1].string} />
           ) : null}
         </motion.div>
 
@@ -394,11 +340,11 @@ function AnimationContainer({ topicName }) {
             position: "absolute",
             opacity: 0,
             right: "50%",
-            top: textTopValuesMove[2],
+            top: "50%",
           }}
           style={{ width: "50%" }}>
-          {animationDataContent.Content[progress].Texts.length >= 4 ? (
-            <AnimationText typeText={animationDataContent.Content[progress].Texts[3].typeText} text={animationDataContent.Content[progress].Texts[3].string} />
+          {animationDataContent.Content[progress].Texts.length >= 3 ? (
+            <AnimationText typeText={animationDataContent.Content[progress].Texts[2].typeText} text={animationDataContent.Content[progress].Texts[2].string} />
           ) : null}
         </motion.div>
 
@@ -409,7 +355,22 @@ function AnimationContainer({ topicName }) {
             position: "absolute",
             opacity: 0,
             right: "50%",
-            top: textTopValuesMove[3],
+            top: "50%",
+          }}
+          style={{ width: "50%" }}>
+          {animationDataContent.Content[progress].Texts.length >= 4 ? (
+            <AnimationText typeText={animationDataContent.Content[progress].Texts[3].typeText} text={animationDataContent.Content[progress].Texts[3].string} />
+          ) : null}
+        </motion.div>
+
+        <motion.div
+          className="textFive"
+          animate={textControllers[4]}
+          initial={{
+            position: "absolute",
+            opacity: 0,
+            right: "50%",
+            top: "50%",
           }}
           style={{ width: "50%" }}>
           {animationDataContent.Content[progress].Texts.length >= 5 ? (
@@ -420,6 +381,7 @@ function AnimationContainer({ topicName }) {
     </div>
     // anstatt null, default Text setzen, sie sind aber hiddens
   );
+  
 }
 /*
 AnimationContainer.propTypes = {

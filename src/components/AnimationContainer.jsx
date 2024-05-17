@@ -5,6 +5,7 @@ import { animations } from "./animations";
 import { GraphicContainer } from "./GraphicContainer";
 import { AnimationText } from "./AnimationText";
 import { AnimationData } from "./AnimationData";
+import { AnimationProgressBar } from "./AnimationProgressBar";
 
 function AnimationContainer({ topicName }) {
 
@@ -377,6 +378,7 @@ function AnimationContainer({ topicName }) {
             <AnimationText typeText={animationDataContent.Content[progress].Texts[4].typeText} text={animationDataContent.Content[progress].Texts[1].string} />
           ) : null}
         </motion.div>
+        <AnimationProgressBar maxCount={20} currentCount={15} />
       </div>
     </div>
     // anstatt null, default Text setzen, sie sind aber hiddens

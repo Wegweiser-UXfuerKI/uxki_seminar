@@ -16,6 +16,8 @@ function AnimationContainer({ topicName }) {
   const [progress, setProgress] = useState(0);
   const [autoNext, setAutoNext] = useState(false);
   const [autoBack, setAutoBack] = useState(false);
+  const [maxProgress, setMaxProgress] = useState(0);
+  const [currentAllProgress, setCurrentAllProgress] = useState(0);
 
   // handles the correct animation
   const handleKeyPress = (event) => {
@@ -38,9 +40,17 @@ function AnimationContainer({ topicName }) {
         setProgress((prevProgress) => prevProgress - 1);
       }
       nextAnimation("back");
+      const newCurrentAllProgress = currentAllProgress - 1;
+      if (newCurrentAllProgress <= 0) {
+        setCurrentAllProgress(0);
+      } else {
+        setCurrentAllProgress(newCurrentAllProgress);
+      }
     } else if (event.key === "ArrowRight") {
       nextAnimation("next");
       explanationController.start(animations.hide);
+      const newCurrentAllProgress = currentAllProgress + 1;
+      setCurrentAllProgress(newCurrentAllProgress);
     }
   };
 
@@ -51,6 +61,22 @@ function AnimationContainer({ topicName }) {
       document.removeEventListener("keydown", handleKeyPress);
     }
   })
+
+  useEffect(() => {
+    let counter = 0;
+    for (let i = 0; i < animationDataContent.Content.length; i++) {
+      for (let k = 0; k < animationDataContent.Content[i].AnimationOrder.length - 1; k++) {
+        counter++;
+      }
+    }
+    setMaxProgress(counter);
+    //setCurrentAllProgress(0);
+    console.log("MaxProgress: ", maxProgress);
+  })
+
+  useEffect(() => {
+    console.log("CurrentMax: ", currentAllProgress);
+  }, [currentAllProgress]);
 
   const nextAnimation = async (direction) => {
     setAutoNext(false);
@@ -378,7 +404,8 @@ function AnimationContainer({ topicName }) {
             <AnimationText typeText={animationDataContent.Content[progress].Texts[4].typeText} text={animationDataContent.Content[progress].Texts[1].string} />
           ) : null}
         </motion.div>
-        <AnimationProgressBar maxCount={20} currentCount={15} />
+        {/* TODO: div with absolute and animation for hidden when progress 0 and selection 0 */}
+        <AnimationProgressBar maxCount={maxProgress} currentCount={currentAllProgress} />
       </div>
     </div>
     // anstatt null, default Text setzen, sie sind aber hiddens

@@ -5,6 +5,7 @@ import { ReactComponent as RightArrow } from "../../assets/images/right-arrow.sv
 import AnimationContainer from "../AnimationContainer";
 import { TopicData } from "../TopicData";
 import { TextData } from "../../TextData";
+import TextContainer from "../TextContainer";
 
 const SubTopicPage = () => {
   const { subtopicId } = useParams(); // get name of current subtopic
@@ -19,21 +20,19 @@ const SubTopicPage = () => {
   const [showToTopBtn, setShowToTopBtn] = useState(false);
 
   const isVideoAnimation = TopicData[subtopicId];
-  const colors = ["#77a9d1", "#8377d1", "#c177d1", "#d177b3"];
   const [videoHeight, setVideoHeight] = useState(0);
   const [websiteHeight, setWebsiteHeight] = useState(0);
   const videoRef = useRef(null);
   const websiteRef = useRef(null);
   const textData = TextData[subtopicId];
 
-  // scroll to specific content if it was clicked, or top of page
+
   useEffect(() => {
     if (!initialScrollDone) {
       // only use this scroll behavior initially
       if (clickedContent !== undefined) {
-        // get index of content to scroll to correct section
-        const index = contentNames.indexOf(clickedContent);
-        scrollToElement(`section${index + 1}`);
+        // scroll to the element with the ID matching clickedContent
+        scrollToElement(clickedContent);
       } else {
         window.scrollTo(0, 0); // else just scroll to top of page
       }
@@ -95,101 +94,54 @@ const SubTopicPage = () => {
 
   return (
     <div className="SubTopicPage" style={subTopic_style}>
-      <div id="top" className="h1 mt-10 mb-20">
+      <div id="top" className="h1 mt-10 mb-20 TextColor">
         {subtopicId}
       </div>
       <div
-        id="section1"
-        style={{ ...section_style, background: "#77a9d1", minHeight: "75vh" }}>
+        id="video"
+        style={{
+          ...section_style,
+          background: "#77a9d1",
+          minHeight: `calc(${videoHeight}px + 200px)`,
+        }}>
         {isVideoAnimation.Video && (
           <iframe
             ref={videoRef}
-            src={textData.VideoLink}
+            src={textData.VideoLink.link}
             title={"Einführungsvideo"}
             allowFullScreen
             style={{
               border: "0",
               height: `${videoHeight}px`,
-              width: "60%",
               maxWidth: "1000px",
-              margin: "100px",
               borderRadius: "20px",
-            }}></iframe>
+            }}
+            className="sm:m-[25px] w-[80%] m-[100px] sm:w-[60%]"
+            ></iframe>
         )}
       </div>
-      <div id="section2" style={{ ...section_style, background: "#8377d1" }}>
-        <div className="h-full">
-          <p className="h2 mb-10 mt-14 text-center">
+      <div id="section1" style={{ ...section_style, background: "#8377d1" }}>
+      <div className="h-full max-w-[1000px]">
+        <p className="h2 mb-10 mt-14 text-center TextColor">
             {textData.Texte[0].title}
-          </p>
-          <p className="text">
-            {textData.Texte[0].texts.map((item, index) => {
-              if (item.startsWith("##list ")) {
-                const listItems = item.split("##list").slice(1).map(section => section.trim());
-                console.log(listItems);
-                return (
-                  <ul className="list-disc pl-7" key={index}>
-                    {listItems.map((listItem, idx) => (
-                      <li className="text-white" key={idx}>{listItem}</li>
-                    ))}
-                  </ul>
-                );
-              } else if (item.startsWith("## ")) {
-                return (
-                  <p className="mt-5 text-lg text-white" key={index}>
-                    {item.slice(3)}
-                  </p>
-                );
-              } else {
-                return (
-                  <p className="text-white" key={index}>
-                    {item}
-                  </p>
-                );
-              }
-            })}
-          </p>
-        </div>
+        </p>
+        <TextContainer texts={textData.Texte[0].texts} />
+    </div>
         {isVideoAnimation.Animation && (
           <>
-            <p className="h2 mb-10 mt-14">Beispiel interaktiver Inhalt</p>
-            <AnimationContainer topicName={subtopicId} />
+            <p className="h2 mb-10 mt-14 TextColor">Beispiel interaktiver Inhalt</p>
+            {/*<AnimationContainer topicName={subtopicId} />*/}
           </>
         )}
       </div>
       {hasSectionThree && (
-        <div id="section3" style={{ ...section_style, background: "#c177d1" }}>
+        <div id="section2" style={{ ...section_style, background: "#c177d1" }}>
           {textData.Texte.length > 1 ? (
             <div className="h-full">
-              <p className="h2 mb-10 mt-14 text-center">
+              <p className="h2 mb-10 mt-14 text-center TextColor">
                 {textData.Texte[1].title}
               </p>
-              <div className="text">
-                {textData.Texte[1].texts.map((item, index) => {
-                  if (item.startsWith("##list ")) {
-                    const listItems = item.split("##list").slice(1).map(section => section.trim());
-                    return (
-                      <ul className="list-disc pl-7" key={index}>
-                        {listItems.map((listItem, idx) => (
-                          <li className="text-white" key={idx}>{listItem}</li>
-                        ))}
-                      </ul>
-                    );
-                  } else if (item.startsWith("## ")) {
-                    return (
-                      <p className="mt-5 text-lg text-white" key={index}>
-                        {item.slice(3)}
-                      </p>
-                    );
-                  } else {
-                    return (
-                      <p className="text-white" key={index}>
-                        {item}
-                      </p>
-                    );
-                  }
-                })}
-              </div>
+              <TextContainer texts={textData.Texte[1].texts} />
             </div>
           ) : null}
           {subtopicId === "Fazit" && (
@@ -240,7 +192,9 @@ const SubTopicPage = () => {
 // scrolls to element by id
 function scrollToElement(sectionId) {
   const elem = document.getElementById(sectionId);
-  elem.scrollIntoView({ behavior: "smooth" });
+  if (elem) {
+    elem.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 // scrolls to top

@@ -6,6 +6,7 @@ import AnimationContainer from "../animations/AnimationContainer";
 import { TopicData } from "../TopicData";
 import { TextData } from "../../TextData";
 import TextContainer from "../TextContainer";
+import DosAndDonts from "../dosdonts/DosAndDonts";
 
 const SubTopicPage = () => {
   const { subtopicId } = useParams(); // get name of current subtopic
@@ -131,8 +132,11 @@ const SubTopicPage = () => {
           <>
             <p className="h2 mb-10 mt-14 TextColor">Beispiel interaktiver Inhalt</p>
             {/*
-            */}
             <AnimationContainer topicName={subtopicId} />
+            */}
+            <div className="w-2/3 h-[800px] border">
+              <DosAndDonts />
+            </div>
           </>
         )}
       </div>

@@ -1,8 +1,8 @@
 import React, { useRef, useContext, useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import AppContext from "../AppContext";
+import AppContext from "../../AppContext";
 import { ReactComponent as RightArrow } from "../../assets/images/right-arrow.svg";
-import AnimationContainer from "../AnimationContainer";
+import AnimationContainer from "../animations/AnimationContainer";
 import { TopicData } from "../TopicData";
 import { TextData } from "../../TextData";
 import TextContainer from "../TextContainer";

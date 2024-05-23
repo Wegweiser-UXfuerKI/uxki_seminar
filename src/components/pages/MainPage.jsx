@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import SubTopic from '../SubTopic';
-import AppContext from '../AppContext';
+import AppContext from '../../AppContext';
 import { ReactComponent as RightArrow } from '../../assets/images/right-arrow.svg';
 import imageNr1 from '../../assets/images/Element1.png';
 import imageNr2 from '../../assets/images/Element2.png';

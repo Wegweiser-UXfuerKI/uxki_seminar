@@ -4,8 +4,7 @@ import MainPage from "./components/pages/MainPage";
 import SubTopicPage from "./components/pages/SubTopicPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import AppContext from "./components/AppContext";
-import AnimationContainer from "./components/AnimationContainer";
+import AppContext from "./AppContext";
 
 // static content of subtopics
 const topicContents = {
@@ -57,7 +56,6 @@ function App() {
               <Routes>
                 <Route index element={<MainPage />} />
                 <Route path="subtopic/:subtopicId" element={<SubTopicPage />} />
-                <Route path="animationTest" element={<AnimationContainer />} />
               </Routes>
             </div>
           </div>

@@ -1,14 +1,14 @@
-import exampleImg from '../assets/images/exampleImg.gif';
-import bild1 from '../assets/images/demo/Bild1.png';
-import bild2 from '../assets/images/demo/Bild2.png';
-import bild3 from '../assets/images/demo/Bild3.png';
-import bild4 from '../assets/images/demo/Bild4.png';
-import bild5 from '../assets/images/demo/Bild5.png';
-import bild6 from '../assets/images/demo/Bild6.png';
-import bild7 from '../assets/images/demo/Bild7.png';
-import bild8 from '../assets/images/demo/Bild8.png';
-import bild9 from '../assets/images/demo/Bild9.png';
-import bild10 from '../assets/images/demo/Bild10.png';
+import exampleImg from '../../assets/images/exampleImg.gif';
+import bild1 from '../../assets/images/demo/Bild1.png';
+import bild2 from '../../assets/images/demo/Bild2.png';
+import bild3 from '../../assets/images/demo/Bild3.png';
+import bild4 from '../../assets/images/demo/Bild4.png';
+import bild5 from '../../assets/images/demo/Bild5.png';
+import bild6 from '../../assets/images/demo/Bild6.png';
+import bild7 from '../../assets/images/demo/Bild7.png';
+import bild8 from '../../assets/images/demo/Bild8.png';
+import bild9 from '../../assets/images/demo/Bild9.png';
+import bild10 from '../../assets/images/demo/Bild10.png';
 
 export const AnimationData = {
   Einleitung: {

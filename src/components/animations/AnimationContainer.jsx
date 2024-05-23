@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { animations } from "../animations";
+import { animations } from "./animations";
 import { GraphicContainer } from "../GraphicContainer";
-import { AnimationText } from "../AnimationText";
-import { AnimationData } from "../AnimationData";
-import { AnimationProgressBar } from "../AnimationProgressBar";
+import { AnimationText } from "./AnimationText";
+import { AnimationData } from "./AnimationData";
+import { AnimationProgressBar } from "./AnimationProgressBar";
 
 function AnimationContainer({ topicName }) {
 

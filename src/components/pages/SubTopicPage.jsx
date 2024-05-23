@@ -130,7 +130,9 @@ const SubTopicPage = () => {
         {isVideoAnimation.Animation && (
           <>
             <p className="h2 mb-10 mt-14 TextColor">Beispiel interaktiver Inhalt</p>
-            {/*<AnimationContainer topicName={subtopicId} />*/}
+            {/*
+            */}
+            <AnimationContainer topicName={subtopicId} />
           </>
         )}
       </div>

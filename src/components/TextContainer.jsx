@@ -33,7 +33,7 @@ function TextContainer({ texts }) {
                 if (offset > lastTextIndex) {
                     partElements.push(el.substring(lastTextIndex, offset));
                 }
-                partElements.push(<b key={`b${offset}`} className="text TextColor font-bold">{content}</b>);
+                partElements.push(<b key={`b${offset}`} className="textSize TextColor font-bold">{content}</b>);
                 lastTextIndex = offset + match.length;
             });
 
@@ -79,7 +79,7 @@ function TextContainer({ texts }) {
             .slice(1)
             .map((section) => section.trim());
           return (
-            <ul className="list-disc pl-7" key={index}>
+            <ul className="list-disc pl-5" key={index}>
               {listItems.map((listItem, idx) => (
                 <li className="TextColor text" key={idx}>
                   {parseTexts(listItem)}
@@ -89,13 +89,13 @@ function TextContainer({ texts }) {
           );
         } else if (item.startsWith("## ")) {
           return (
-            <p className="mt-1 md:mt-4 h2-5 TextColor font-bold" key={index}>
+            <p className="mt-1 md:mt-4 h2-5 TextColor font-bold header" key={index}>
               {parseTexts(item.slice(3))}
             </p>
           );
         } else if (item.startsWith("### ")) {
           return (
-            <p className="mt-1 md:mt-4 h3 TextColor font-bold" key={index}>
+            <p className="mt-1 md:mt-4 h3 TextColor font-bold header" key={index}>
               {parseTexts(item.slice(3))}
             </p>
           );

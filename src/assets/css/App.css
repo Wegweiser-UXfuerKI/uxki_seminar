@@ -95,7 +95,11 @@
 .textSize {
   font-size: calc(8px + 1vmin);
   font-weight: 300;
-  max-width: 1000px;
+}
+
+.smallTextSize {
+  font-size: calc(5px + 1vmin);
+  font-weight: 300;
 }
 
 .tile {

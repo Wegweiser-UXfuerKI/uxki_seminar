@@ -27,7 +27,6 @@ const SubTopicPage = () => {
   const websiteRef = useRef(null);
   const textData = TextData[subtopicId];
 
-
   useEffect(() => {
     if (!initialScrollDone) {
       // only use this scroll behavior initially
@@ -117,24 +116,25 @@ const SubTopicPage = () => {
               maxWidth: "1000px",
               borderRadius: "20px",
             }}
-            className="sm:m-[25px] w-[80%] m-[100px] sm:w-[60%]"
-            ></iframe>
+            className="sm:m-[25px] w-[80%] m-[100px] sm:w-[60%]"></iframe>
         )}
       </div>
       <div id="section1" style={{ ...section_style, background: "#8377d1" }}>
-      <div className="h-full max-w-[1000px]">
-        <p className="h2 mb-10 mt-14 text-center TextColor">
+        <div className="h-full max-w-[1000px]">
+          <p className="h2 mb-10 mt-14 text-center TextColor">
             {textData.Texte[0].title}
-        </p>
-        <TextContainer texts={textData.Texte[0].texts} />
-    </div>
+          </p>
+          <TextContainer texts={textData.Texte[0].texts} />
+        </div>
         {isVideoAnimation.Animation && (
           <>
-            <p className="h2 mb-10 mt-14 TextColor">Beispiel interaktiver Inhalt</p>
+            <p className="h2 mb-10 mt-14 TextColor">
+              Beispiel interaktiver Inhalt
+            </p>
             {/*
             <AnimationContainer topicName={subtopicId} />
             */}
-            <div className="w-2/3 h-[800px] border">
+            <div className="w-4/5 h-[842px] flex justify-center items-center mb-[100px]">
               <DosAndDonts />
             </div>
           </>

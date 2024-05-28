@@ -2,38 +2,46 @@
 
 .help {
   --distance-to-edge: 30px;
-	position: absolute;
-	left: var(--distance-to-edge);
-	bottom: var(--distance-to-edge);
-	z-index: 100;
-	color: var(--grey-3);
-	font-weight: 700;
-	font-size: var(--fs-md);
+  position: absolute;
+  left: var(--distance-to-edge);
+  bottom: var(--distance-to-edge);
+  z-index: 100;
+  color: var(--grey-3);
+  font-weight: 700;
+  font-size: var(--fs-md);
   border-radius: 25px;
 }
 
 #expand-arrow {
-	transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 #help-button:hover #expand-arrow {
-	/* Move the expand-icon down while hovering as an affordance indicator */
-	transform: translateY(5px);
+  /* Move the expand-icon down while hovering as an affordance indicator */
+  transform: translateY(5px);
 }
 
 #help-heading {
-	font-size: var(--fs-md);
-	font-weight: 700;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 #help-content hr {
-	border-color: #555555;
+  border-color: #555555;
 }
 
 #help-content code {
-	color: white;
-	padding: 5px 9px;
-	border: solid 1px var(--grey-4);
-	font-size: var(--fs-sm);
-	margin: 5px;
+  color: white;
+  padding: 5px 9px;
+  border: solid 1px var(--grey-4);
+  font-size: var(--fs-sm);
+  margin: 5px;
+}
+
+#help-content p {
+  font-size: 0.7rem;
+}
+
+#help-content div {
+  font-size: 0.7rem;
 }

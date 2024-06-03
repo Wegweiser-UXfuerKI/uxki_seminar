@@ -19,7 +19,7 @@ function DosAndDonts() {
         <div className="w-full h-full relative">
           <NavBar currentView={currentView} setCurrentView={setCurrentView} />
           {currentView === "interaktiv" && <InteractiveElement />}
-          {currentView === "text" && <InformationText />}
+          {currentView === "text" && <InformationText setCurrentView={setCurrentView} />}
         </div>
       </TaskDataProvider>
     </div>

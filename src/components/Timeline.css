@@ -1,0 +1,62 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.year-section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.year-section.active {
+  z-index: 2;
+}
+
+.year-section.neighbor {
+  z-index: 1;
+}
+
+.year-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.expanded-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.expanded-year {
+  font-size: 2em;
+  margin: 0 10px;
+  transition: opacity 1.3s ease;
+}
+
+.side-year {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1em;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}

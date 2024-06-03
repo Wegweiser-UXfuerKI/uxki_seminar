@@ -1,3 +1,7 @@
+/* eslint-disable jsx-a11y/heading-has-content */
+/* eslint-disable jsx-a11y/no-redundant-roles */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable default-case */
 /* eslint-disable no-undef */
 // Packages
 import { React, useState, useRef, useEffect, useContext } from "react";
@@ -236,7 +240,11 @@ function InteractiveElement() {
 
       // The provided word definitions that appear on hover
       tippy("mark", {
-        content: (reference) => reference.getAttribute("data-definition"),
+        content: (reference) => {
+          const definition = reference.getAttribute("data-definition")
+          return `<div class="text-lightText text-sm">${definition}</div>`;
+        },
+        allowHTML: true,
         appendTo: document.body,
         interactive: true,
         animateFill: true,
@@ -404,11 +412,15 @@ function InteractiveElement() {
   const app1Ref = useRef(null);
   const app2Ref = useRef(null);
   useEffect(() => {
+    console.log("Index: ", index);
     // On index change, update the tasks and restore the answer if given previously
     setTask(tasks[index]);
     setAnswer(taskDataStorage[index].loggedInAnswer);
     setTasksRemain(index !== tasks.length - 1);
   }, [index]);
+  useEffect(() => {
+    console.log("Task remain:", tasksRemain);
+  }, [tasksRemain])
 
   useEffect(() => {
     // On task change, process the explanation for the current task
@@ -616,7 +628,7 @@ function InteractiveElement() {
                 <Link
                   id="referenced-article"
                   to="/text"
-                  className="flex justify-start items-center border-2">
+                  className="flex justify-start items-center border-2 hover:text-lightText">
                   <div id="article-img">
                     <img src={task.referencedArticle?.thumbnail} alt="" />
                   </div>
@@ -634,7 +646,7 @@ function InteractiveElement() {
           }`}>
           <div
             id="mid-content"
-            className="flex flex-col justify-center items-center gap-y-8 content-distribute">
+            className="flex flex-col justify-center items-center gap-y-4 content-distribute">
             <div
               id="app-container"
               className="flex justify-center uniform-x-gap pt-to-viewport">
@@ -648,7 +660,7 @@ function InteractiveElement() {
                     handleAppClicked(1);
                   }}
                   aria-label="App 1 wählen">
-                  <div className="pill opacity-70 flex justify-center items-center">
+                  <div className="pill opacity-70 flex justify-center items-center text-lightText">
                     1
                   </div>
                   <img
@@ -671,7 +683,7 @@ function InteractiveElement() {
                     handleAppClicked(2);
                   }}
                   aria-label="App 2 wählen">
-                  <div className="pill opacity-70 flex justify-center items-center">
+                  <div className="pill opacity-70 flex justify-center items-center text-lightText">
                     2
                   </div>
                   <img
@@ -716,20 +728,20 @@ function InteractiveElement() {
               {/* Only show in view EXPLAIN */}
               <div
                 id="dos-and-donts"
-                className="flex justify-center uniform-x-gap">
+                className="flex justify-center uniform-x-gap text-lightText">
                 <div
                   id={`${task.answer === 1 ? "do-side" : "dont-side"}`}
                   className="flex flex-col justify-start items-center app-width">
                   <div
                     id={`${task.answer === 1 ? "do-label" : "dont-label"}`}
-                    className="flex justify-center items-center py-2 mb-4 gap-x-2">
+                    className="flex justify-center items-center py-1 mb-3 gap-x-2 text-lightText">
                     <img
                       className="w-5 h-5"
                       src={`${task.answer === 1 ? checkIcon : crossIcon}`}
                       alt=""
                       loading="lazy"
                     />
-                    <h3>{`${
+                    <h3 className="text-inherit">{`${
                       task.answer === 1 ? "Berücksichtige" : "Vermeide"
                     }`}</h3>
                   </div>
@@ -742,14 +754,14 @@ function InteractiveElement() {
                   className="flex flex-col justify-start items-center app-width">
                   <div
                     id={`${task.answer === 1 ? "dont-label" : "do-label"}`}
-                    className="flex justify-center items-center py-2 mb-4 gap-x-2">
+                    className="flex justify-center items-center py-1 mb-3 gap-x-2 text-lightText">
                     <img
                       className="w-5 h-5"
                       src={`${task.answer === 1 ? crossIcon : checkIcon}`}
                       alt=""
                       loading="lazy"
                     />
-                    <h3>{`${
+                    <h3 className="text-inherit">{`${
                       task.answer === 1 ? "Vermeide" : "Berücksichtige"
                     }`}</h3>
                   </div>
@@ -810,7 +822,7 @@ function InteractiveElement() {
 
         <div
           id="right-pane"
-          className={`overflow-y-auto nav-protected-padding overflow-y-auto ${
+          className={`overflow-y-auto nav-protected-padding ${
             paneSlideAnimation ? "with-transition" : ""
           }`}>
           <div
@@ -871,12 +883,10 @@ function InteractiveElement() {
               </div>
               <button
                 id="next-button"
-                className={`cassette-btn-dark py-3 px-5 ${
-                  tasksRemain ? "" : "hidden"
-                }`}
+                className={`py-3 px-5 text-lightText ${tasksRemain ? "cassette-btn-dark" : "hidden"}`}
                 onClick={handleNextClicked}
                 aria-label="Nächste-Frage-Button">
-                Nächste Frage
+                {tasksRemain ? "Nächste Frage" : "Nah nah"}
               </button>
             </div>
           </div>

@@ -18,6 +18,7 @@ function AnimationContainer({ topicName }) {
   const [autoBack, setAutoBack] = useState(false);
   const [maxProgress, setMaxProgress] = useState(0);
   const [currentAllProgress, setCurrentAllProgress] = useState(0);
+  const [canClick, setCanClick] = useState(true)
 
   // handles the correct animation
   const handleKeyPress = (event) => {
@@ -25,6 +26,9 @@ function AnimationContainer({ topicName }) {
       if (progress === 0 && animationSelection === 0) {
         return;
       }
+      if (!canClick) {
+        return
+      };
       if (progress === 0 && animationSelection === 1) {
         explanationController.start({
           ...animations.show,
@@ -39,6 +43,7 @@ function AnimationContainer({ topicName }) {
       if (animationSelection === 0 && progress !== 0) {
         setProgress((prevProgress) => prevProgress - 1);
       }
+      console.log("Start animation");
       nextAnimation("back");
       const newCurrentAllProgress = currentAllProgress - 1;
       if (newCurrentAllProgress <= 0) {
@@ -47,6 +52,10 @@ function AnimationContainer({ topicName }) {
         setCurrentAllProgress(newCurrentAllProgress);
       }
     } else if (event.key === "ArrowRight") {
+      if (!canClick) {
+        return
+      };
+      console.log("Start animation");
       nextAnimation("next");
       explanationController.start(animations.hide);
       const newCurrentAllProgress = currentAllProgress + 1;
@@ -79,6 +88,7 @@ function AnimationContainer({ topicName }) {
   }, [currentAllProgress]);
 
   const nextAnimation = async (direction) => {
+    setCanClick(false);
     setAutoNext(false);
     setAutoBack(false);
     const animationPromises = [];
@@ -198,6 +208,7 @@ function AnimationContainer({ topicName }) {
       setAnimationSelection(0);
       setAutoNext(true);
     }
+    setCanClick(true);
   }
 
   useEffect(() => {

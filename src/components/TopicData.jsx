@@ -13,6 +13,6 @@ export const TopicData = {
     },
     Fazit: {
         Video: true,
-        Animation: true,
+        Animation: false,
     }
 }

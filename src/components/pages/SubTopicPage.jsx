@@ -7,6 +7,7 @@ import { TopicData } from "../TopicData";
 import { TextData } from "../../TextData";
 import TextContainer from "../TextContainer";
 import DosAndDonts from "../dosdonts/DosAndDonts";
+import Timeline from "../Timeline";
 
 const SubTopicPage = () => {
   const { subtopicId } = useParams(); // get name of current subtopic
@@ -23,8 +24,10 @@ const SubTopicPage = () => {
   const isVideoAnimation = TopicData[subtopicId];
   const [videoHeight, setVideoHeight] = useState(0);
   const [websiteHeight, setWebsiteHeight] = useState(0);
+  const [timelineHeight, setTimelineHeight] = useState(0);
   const videoRef = useRef(null);
   const websiteRef = useRef(null);
+  const timelineRef = useRef(null);
   const textData = TextData[subtopicId];
 
   useEffect(() => {
@@ -81,9 +84,18 @@ const SubTopicPage = () => {
       }
     };
 
+    const calculateHeightTimeline = () => {
+      if (timelineRef.current) {
+        const width = timelineRef.current.offsetWidth;
+        const height = (width / 16) * 9;
+        setTimelineHeight(height);
+      }
+    };
+
     const calculator = () => {
       calculateHeightVideo();
       calculateHeightWebsite();
+      calculateHeightTimeline();
     };
     calculator();
     window.addEventListener("resize", calculator);
@@ -131,12 +143,24 @@ const SubTopicPage = () => {
             <p className="h2 mb-10 mt-14 TextColor">
               Beispiel interaktiver Inhalt
             </p>
-            {/*
             <AnimationContainer topicName={subtopicId} />
-            */}
-            <div className="w-4/5 h-[842px] flex justify-center items-center mb-[100px]">
+            {subtopicId === "Einleitung" && (
+              <div
+              ref={timelineRef}
+              className="w-4/5 flex justify-center items-center mb-[100px] p-2 bg-lightText"
+              style={{
+                height: `${timelineHeight}px`,
+                minHeight: `${timelineHeight}px`,
+                borderRadius: "20px",
+              }}>
+              <Timeline />
+            </div>
+            )}
+            {subtopicId === "Fazit" && (
+              <div className="w-4/5 h-[842px] flex justify-center items-center mb-[100px]">
               <DosAndDonts />
             </div>
+            )}
           </>
         )}
       </div>

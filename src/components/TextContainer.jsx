@@ -101,7 +101,7 @@ function TextContainer({ texts }) {
           );
         } else {
           return (
-            <p className="TextColor text" key={index}>
+            <p className="TextColor text min-h-4" key={index}>
               {parseTexts(item)}
             </p>
           );

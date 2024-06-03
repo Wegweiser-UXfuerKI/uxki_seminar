@@ -1,0 +1,22 @@
+.year {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-bottom: 40px;
+  margin-left: 70px;
+  font-size: calc(160px + 1vmin);
+}
+
+.date-block {
+  position: relative;
+  z-index: 1;
+}
+
+.text-container {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hidden-text {
+  transition: right 0.5s ease;
+}

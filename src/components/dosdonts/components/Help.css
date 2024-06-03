@@ -31,7 +31,6 @@
 }
 
 #help-content code {
-  color: white;
   padding: 5px 9px;
   border: solid 1px var(--grey-4);
   font-size: var(--fs-sm);

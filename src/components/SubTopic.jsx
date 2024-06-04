@@ -29,7 +29,7 @@ const SubTopic = ({ topicName, image }) => {
                     key={index}
                     className='h4 arrow-btn'
                 >
-                    {index === 0 ? TextData[topicName].VideoLink.title : TextData[topicName].Texte[index - 1].title}
+                    {index === 0 ? TextData[topicName].VideoLink.title : TextData[topicName].Texte[index - 1].cardTitle}
                     <span className='arrow'></span>
                 </Link>
             ))}

@@ -12,6 +12,7 @@ export const TextData = {
     Texte: [
       {
         title: "EU AI Act",
+        cardTitle: "EU AI Act",
         texts: [
           "Nachdem Sie nun ein kurzes Einführungsvideo gesehen haben, wenden wir uns nun einer etwas detaillierteren Betrachtung des EU AI Acts zu.",
           "## Ziele des EU AI Acts",
@@ -58,6 +59,7 @@ export const TextData = {
     Texte: [
       {
         title: "Was muss je nach Risikostufe beachtet werden",
+        cardTitle: "Maßnahmen nach Risikostufen",
         texts: [
           "Dieser Text zielt darauf ab, ein tiefes Verständnis der verschiedenen Risikokategorien zu vermitteln, die in der KI-Verordnung (KIVO) definiert sind, die Anforderungen für jede Kategorie zu erläutern, mit besonderem Fokus auf Hochrisiko-KI-Systeme, und das Konzept eines KI-Managementsystems gemäß der KIVO und DIN 42001:2023 zu erklären.",
           "## Risikostufen im AI-Gesetz",
@@ -113,6 +115,7 @@ export const TextData = {
       },
       {
         title: "Die Rolle der High Level Expert Group für Trustworthy AI",
+        cardTitle: "High Level Expert Group",
         texts: [
           "### Die High-Level Expert Group on Artificial Intelligence und ihre Ziele",
           "Die High-Level Expert Group on Artificial Intelligence (HLEG) wurde im Juni 2018 von der Europäischen Kommission ins Leben gerufen. Diese unabhängige Expertengruppe besteht aus einer vielfältigen Auswahl von Fachleuten aus Wissenschaft, Industrie und Zivilgesellschaft. Ihr Hauptziel ist es, die Entwicklung und Implementierung von Künstlicher Intelligenz (KI) in Europa zu fördern und sicherzustellen, dass diese Technologien im Einklang mit europäischen Werten und Grundrechten stehen (European Commission, 2020a).",
@@ -153,6 +156,7 @@ export const TextData = {
     Texte: [
       {
         title: "Weitergehende Kriterien",
+        cardTitle: "Weitergehende Kriterien",
         texts: [
           "Nachdem wir uns nun damit beschäftigt haben was der EU AI Act eigentlich ist und wie er versucht durch Risikostufen die Nutzung von verschiedenen Arten von KI Systemen zu regulieren, wollen wir uns jetzt einmal angucken was diese Regeln jetzt für die Gestaltung bedeuten. Schauen wir uns das mal an ein paar Beispielen an!",
           "",
@@ -172,6 +176,7 @@ export const TextData = {
     Texte: [
       {
         title: "Diskussion",
+        cardTitle: "Letzte Worte",
         texts: [
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos temporibus itaque sit ipsa ex reiciendis, sint earum hic aliquid vel atque enim, inventore, magni numquam commodi iste? Quam, ab iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur odit aut impedit facilis laboriosam, adipisci eaque eos incidunt ad tenetur debitis repudiandae eius non recusandae. Quo harum at nostrum veritatis.",
         ],

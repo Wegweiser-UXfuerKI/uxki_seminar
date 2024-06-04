@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DOMPurify from 'dompurify';
-import { Link } from "react-router-dom";
 import { readingTime } from "reading-time-estimator";
 import showdown from "showdown";
 

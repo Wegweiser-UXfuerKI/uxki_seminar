@@ -1,0 +1,152 @@
+.clip-triangle-one {
+  clip-path: polygon(0 0, 15% 0, 20% 100%, 0% 100%);
+  background-color: #77d1cb;
+}
+
+.clip-triangle-two {
+  clip-path: polygon(0 0, 20% 0, 25% 100%, 0% 100%);
+  background-color: #77a9d1;
+}
+
+.clip-triangle-three {
+  clip-path: polygon(0 0, 25% 0, 30% 100%, 0% 100%);
+  background-color: #d177b3;
+}
+
+.clip-triangle-four {
+  clip-path: polygon(0 0, 30% 0, 35% 100%, 0% 100%);
+  background-color: #54506a;
+}
+
+.clip-text-triangle-one {
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 25% 100%);
+  background-color: #6bbcb7;
+}
+
+.clip-text-triangle-two {
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 30% 100%);
+  background-color: #6b98bc;
+}
+
+.clip-text-triangle-three {
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 35% 100%);
+  background-color: #bc6ba1;
+}
+
+.clip-text-triangle-four {
+  clip-path: polygon(35% 0, 100% 0, 100% 100%, 40% 100%);
+  background-color: #4c485f;
+}
+
+.clip-text-triangle-one,
+.clip-text-triangle-two,
+.clip-text-triangle-three,
+.clip-text-triangle-four {
+  transition: left 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.show-text {
+  left: 0;
+}
+
+.trennbereich-one {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.trennbereich-one::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  clip-path: polygon(0 0, 19.9% 0, 20.1% 100%, 0 100%);
+  z-index: 2;
+}
+
+.trennbereich-one::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d8d8d880;
+  clip-path: polygon(19.9% 0, 100% 0, 100% 100%, 20.1% 100%);
+  z-index: 2;
+}
+
+.trennbereich-two {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.trennbereich-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  clip-path: polygon(0 0, 24.9% 0, 25.1% 100%, 0 100%);
+  z-index: 2;
+}
+
+.trennbereich-two::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d8d8d880;
+  clip-path: polygon(24.9% 0, 100% 0, 100% 100%, 25.1% 100%);
+  z-index: 2;
+}
+
+.trennbereich-three {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.trennbereich-three::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  clip-path: polygon(0 0, 29.9% 0, 30.1% 100%, 0 100%);
+  z-index: 2;
+}
+
+.trennbereich-three::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d8d8d880;
+  clip-path: polygon(29.9% 0, 100% 0, 100% 100%, 30.1% 100%);
+  z-index: 2;
+}

@@ -7,7 +7,7 @@ import { TopicData } from "../TopicData";
 import { TextData } from "../../TextData";
 import TextContainer from "../TextContainer";
 import DosAndDonts from "../dosdonts/DosAndDonts";
-import Timeline from "../Timeline";
+import { Risikostufen } from "../Risikostufen";
 
 const SubTopicPage = () => {
   const { subtopicId } = useParams(); // get name of current subtopic
@@ -24,10 +24,8 @@ const SubTopicPage = () => {
   const isVideoAnimation = TopicData[subtopicId];
   const [videoHeight, setVideoHeight] = useState(0);
   const [websiteHeight, setWebsiteHeight] = useState(0);
-  const [timelineHeight, setTimelineHeight] = useState(0);
   const videoRef = useRef(null);
   const websiteRef = useRef(null);
-  const timelineRef = useRef(null);
   const textData = TextData[subtopicId];
 
   useEffect(() => {
@@ -84,18 +82,9 @@ const SubTopicPage = () => {
       }
     };
 
-    const calculateHeightTimeline = () => {
-      if (timelineRef.current) {
-        const width = timelineRef.current.offsetWidth;
-        const height = (width / 16) * 9;
-        setTimelineHeight(height);
-      }
-    };
-
     const calculator = () => {
       calculateHeightVideo();
       calculateHeightWebsite();
-      calculateHeightTimeline();
     };
     calculator();
     window.addEventListener("resize", calculator);
@@ -132,7 +121,7 @@ const SubTopicPage = () => {
         )}
       </div>
       <div id="section1" style={{ ...section_style, background: "#8377d1" }}>
-        <div className="h-full max-w-[1000px]">
+        <div className="h-full w-full flex flex-col items-center">
           <p className="h2 mb-10 mt-14 text-center TextColor">
             {textData.Texte[0].title}
           </p>
@@ -144,30 +133,30 @@ const SubTopicPage = () => {
               Beispiel interaktiver Inhalt
             </p>
             <AnimationContainer topicName={subtopicId} />
-            {subtopicId === "Einleitung" && (
-              <div
-              ref={timelineRef}
-              className="w-4/5 flex justify-center items-center mb-[100px] p-2 bg-lightText"
-              style={{
-                height: `${timelineHeight}px`,
-                minHeight: `${timelineHeight}px`,
-                borderRadius: "20px",
-              }}>
-              <Timeline />
-            </div>
-            )}
-            {subtopicId === "Fazit" && (
-              <div className="w-4/5 h-[842px] flex justify-center items-center mb-[100px]">
-              <DosAndDonts />
-            </div>
-            )}
           </>
+        )}
+        {subtopicId === "Risikostufen" && (
+          <div
+            ref={websiteRef}
+            className="w-4/5 max-w-[2000px] flex justify-center items-center my-5 border-[0.5rem] border-lightText"
+            style={{
+              height: `${websiteHeight}px`,
+              minHeight: `${websiteHeight}px`,
+              borderRadius: "20px"
+            }}>
+            <Risikostufen />
+          </div>
+        )}
+        {subtopicId === "Fazit" && (
+          <div className="w-4/5 h-[842px] flex justify-center items-center mb-[100px]">
+            <DosAndDonts />
+          </div>
         )}
       </div>
       {hasSectionThree && (
         <div id="section2" style={{ ...section_style, background: "#c177d1" }}>
           {textData.Texte.length > 1 ? (
-            <div className="h-full">
+            <div className="h-full w-full flex flex-col items-center">
               <p className="h2 mb-10 mt-14 text-center TextColor">
                 {textData.Texte[1].title}
               </p>
@@ -184,11 +173,8 @@ const SubTopicPage = () => {
                 width: "100%",
                 height: "100%",
               }}>
-              <iframe
+              <div
                 ref={websiteRef}
-                src={"https://tinobreier.github.io/dos-and-donts/#/interaktiv"}
-                title={"Interaktive Website für dos and donts bei KI"}
-                allowFullScreen
                 style={{
                   border: "0",
                   height: `${websiteHeight}px`,
@@ -196,7 +182,9 @@ const SubTopicPage = () => {
                   maxWidth: "2000px",
                   margin: "100px",
                   borderRadius: "20px",
-                }}></iframe>
+                }}>
+                <DosAndDonts />
+              </div>
               <iframe
                 ref={websiteRef}
                 src={"https://hkuswik.github.io/quiz_uxfuerki_ba/"}

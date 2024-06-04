@@ -6,26 +6,26 @@ const years = [2018, 2020, 2021, 2022, 2023, 2024];
 const colors = ['#77D1CB', '#77A9D1', '#8377D1', '#C177D1', '#D177B3', '#54506A'];
 const dateContent = [
   [
-    { date: "April", text: "Die Idee eines einheitlichen Rechtsrahmens für KI in der EU wurde erstmals im Rahmen der Europäischen KIStrategie vorgestellt. Diese Strategie betonte die Notwendigkeit, die EU als führenden Akteur im Bereich der KI zu etablieren, und legte den Grundstein für weitere Maßnahmen.", pos: "0.5" }
+    { date: "April", text: "Die Idee eines einheitlichen Rechtsrahmens für KI in der EU wurde erstmals im Rahmen der Europäischen KIStrategie vorgestellt. Diese Strategie betonte die Notwendigkeit, die EU als führenden Akteur im Bereich der KI zu etablieren, und legte den Grundstein für weitere Maßnahmen.", pos: "0.5", icon: "DocumentIcon" }
   ],
   [
-    { date: "Februar", text: "Die Europäische Kommission veröffentlichte das Weißbuch zur Künstlichen Intelligenz, das eine breite öffentliche Konsultation initiierte. Das Weißbuch skizzierte die Vision der EU für eine vertrauenswürdige und menschenzentrierte KI und schlug verschiedene Maßnahmen vor, um dieses Ziel zu erreichen. Es betonte die Notwendigkeit eines risikobasierten Ansatzes, bei dem KI-Systeme je nach ihrem Risiko für die Gesellschaft unterschiedlich reguliert werden.", pos: "0.5" }
+    { date: "Februar", text: "Die Europäische Kommission veröffentlichte das Weißbuch zur Künstlichen Intelligenz, das eine breite öffentliche Konsultation initiierte. Das Weißbuch skizzierte die Vision der EU für eine vertrauenswürdige und menschenzentrierte KI und schlug verschiedene Maßnahmen vor, um dieses Ziel zu erreichen. Es betonte die Notwendigkeit eines risikobasierten Ansatzes, bei dem KI-Systeme je nach ihrem Risiko für die Gesellschaft unterschiedlich reguliert werden.", pos: "0.5", icon: "DocumentIcon" }
   ],
   [
-    { date: "21. April", text: "Nach der öffentlichen Konsultation und intensiven Diskussionen zwischen den Mitgliedstaaten, Experten und Interessengruppen legte die Europäische Kommission im April 2021 ihren Vorschlag für den EU AI Act vor. Dieser Vorschlag zielte darauf ab, ein einheitliches Regelwerk zu schaffen, das Innovation fördert, Vertrauen aufbaut und die Grundrechte schützt.", pos: "0.3" },
-    { date: "29. November", text: "Die rotierende EU-Ratspräsidentschaft legte einen ersten Kompromisstext zum Entwurf des KIGesetzes vor, der wichtige Änderungen in den Bereichen soziales Scoring, biometrische Erkennungssysteme und Hochrisikoanwendungen enthielt.", pos: "0.6" }
+    { date: "21. April", text: "Nach der öffentlichen Konsultation und intensiven Diskussionen zwischen den Mitgliedstaaten, Experten und Interessengruppen legte die Europäische Kommission im April 2021 ihren Vorschlag für den EU AI Act vor. Dieser Vorschlag zielte darauf ab, ein einheitliches Regelwerk zu schaffen, das Innovation fördert, Vertrauen aufbaut und die Grundrechte schützt.", pos: "0.3", icon: "DocumentIcon" }, 
+    { date: "29. November", text: "Die rotierende EU-Ratspräsidentschaft legte einen ersten Kompromisstext zum Entwurf des KI Gesetzes vor, der wichtige Änderungen in den Bereichen soziales Scoring, biometrische Erkennungssysteme und Hochrisikoanwendungen enthielt.", pos: "0.6" }
   ],
   [
-    { date: "25. Januar", text: "Die federführenden Ausschüsse des Europäischen Parlaments hatten ihren ersten gemeinsamen Meinungsaustausch über den Vorschlag für ein KI-Gesetz.", pos: "0.3" },
-    { date: "6. Dezember", text: "Der Rat der EU verabschiedete seinen gemeinsamen Standpunkt zum AI-Gesetz.", pos: "0.6" }
+    { date: "25. Januar", text: "Die federführenden Ausschüsse des Europäischen Parlaments hatten ihren ersten gemeinsamen Meinungsaustausch über den Vorschlag für ein KI-Gesetz.", pos: "0.3", icon: "InfoIcon" },
+    { date: "6. Dezember", text: "Der Rat der EU verabschiedete seinen gemeinsamen Standpunkt zum AI-Gesetz.", pos: "0.6", icon: "SignIcon" }
   ],
   [
-    { date: "9. Dezember", text: "Parlament und Rat erzielten eine vorläufige Einigung über das AI-Gesetz.", pos: "0.5" }
+    { date: "9. Dezember", text: "Parlament und Rat erzielten eine vorläufige Einigung über das AI-Gesetz.", pos: "0.5", icon: "SignIcon" }
   ],
   [
-    { date: "13. Februar", text: "Der Ausschuss für Binnenmarkt und bürgerliche Freiheiten stimmte mit 71:8 Stimmen (7 Enthaltungen) für die Annahme des Ergebnisses der Verhandlungen mit den Mitgliedstaaten.", pos: "0.2" },
-    { date: "21. Februar", text: "Das Europäische Büro für künstliche Intelligenz wurde innerhalb der Kommission eingerichtet, um die Umsetzung des KI-Gesetzes zu unterstützen, insbesondere im Bereich der allgemeinen KI.", pos: "0.5" },
-    { date: "13. Mai", text: "Die 27 EU-Mitgliedstaaten billigten einstimmig die AI-Akte und bekräftigten damit die im Dezember erzielte politische Einigung.", pos: "0.68" },
+    { date: "13. Februar", text: "Der Ausschuss für Binnenmarkt und bürgerliche Freiheiten stimmte mit 71:8 Stimmen (7 Enthaltungen) für die Annahme des Ergebnisses der Verhandlungen mit den Mitgliedstaaten.", pos: "0.2", icon: "SignIcon" },
+    { date: "21. Februar", text: "Das Europäische Büro für künstliche Intelligenz wurde innerhalb der Kommission eingerichtet, um die Umsetzung des KI-Gesetzes zu unterstützen, insbesondere im Bereich der allgemeinen KI.", pos: "0.5", icon: "InfoIcon" },
+    { date: "13. Mai", text: "Die 27 EU-Mitgliedstaaten billigten einstimmig die AI-Akte und bekräftigten damit die im Dezember erzielte politische Einigung.", pos: "0.68", icon: "SignIcon" },
   ]
 ]
 

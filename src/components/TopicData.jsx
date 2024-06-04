@@ -5,11 +5,15 @@ export const TopicData = {
     },
     Risikostufen: {
         Video: true,
-        Animation: true,
+        Animation: false,
     },
     Designimplikationen: {
         Video: true,
-        Animation: true,
+        Animation: false,
+    },
+    "High Level Expert Group": {
+        Video: false,
+        Animation: false,
     },
     Fazit: {
         Video: true,

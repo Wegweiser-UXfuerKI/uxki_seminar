@@ -8,6 +8,9 @@ import { TextData } from "../../TextData";
 import TextContainer from "../TextContainer";
 import DosAndDonts from "../dosdonts/DosAndDonts";
 import { Risikostufen } from "../Risikostufen";
+import { TabLinkIcon } from "../svg/Icons";
+
+import checkerWebsite from "../../assets/images/EUAICheckerCropped.png";
 
 const SubTopicPage = () => {
   const { subtopicId } = useParams(); // get name of current subtopic
@@ -93,6 +96,10 @@ const SubTopicPage = () => {
     };
   }, []);
 
+  const openLinkNewTab = (url) => {
+    window.open(url, '_blank');
+  }
+
   return (
     <div className="SubTopicPage" style={subTopic_style}>
       <div id="top" className="h1 mt-10 mb-20 TextColor">
@@ -137,19 +144,50 @@ const SubTopicPage = () => {
         )}
         {subtopicId === "Risikostufen" && (
           <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+              height: "100%",
+            }}>
+            <img
             ref={websiteRef}
-            className="w-4/5 max-w-[2000px] flex justify-center items-center my-5 border-[0.5rem] border-lightText"
+              src={checkerWebsite}
+              alt="Bild des EU AI Act Compliance Checker"
+              style={{
+                width: "80%",
+                height: `${websiteHeight}px`,
+                maxWidth: "2000px",
+                margin: "100px",
+                borderRadius: "20px",
+              }}
+            />
+            <div
+              className="absolute w-4/5 flex justify-center items-center bg-darkText bg-opacity-20 hover:bg-opacity-30 duration-200"
+              style={{
+                height: `${websiteHeight}px`,
+                borderRadius: "20px",
+              }}
+              onClick={() => openLinkNewTab('https://artificialintelligenceact.eu/assessment/eu-ai-act-compliance-checker/')}
+              >
+              <div className="w-20 h-20">
+                <TabLinkIcon />
+              </div>
+            </div>
+          </div>
+        )}
+        {subtopicId === "Designimplikationen" && (
+          <div
+            ref={websiteRef}
+            className="w-4/5 max-w-[2000px] flex justify-center items-center my-[100px] border-[0.5rem] border-lightText"
             style={{
               height: `${websiteHeight}px`,
               minHeight: `${websiteHeight}px`,
-              borderRadius: "20px"
+              borderRadius: "20px",
             }}>
             <Risikostufen />
-          </div>
-        )}
-        {subtopicId === "Fazit" && (
-          <div className="w-4/5 h-[842px] flex justify-center items-center mb-[100px]">
-            <DosAndDonts />
           </div>
         )}
       </div>
@@ -189,11 +227,11 @@ const SubTopicPage = () => {
                 ref={websiteRef}
                 src={"https://hkuswik.github.io/quiz_uxfuerki_ba/"}
                 title={"Interaktive Website für Quizfragen für die UX von KI"}
+                className="w-4/5"
                 allowFullScreen
                 style={{
                   border: "0",
                   height: `${websiteHeight}px`,
-                  width: "80%",
                   maxWidth: "2000px",
                   margin: "100px",
                   borderRadius: "20px",

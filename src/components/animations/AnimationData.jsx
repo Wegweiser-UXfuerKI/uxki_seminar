@@ -788,7 +788,7 @@ export const AnimationData = {
       },
     ],
   },
-  Fazit: {
+  "High Level Expert Group": {
     Type: "Base",
     Content: [
       {

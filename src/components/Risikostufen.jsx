@@ -44,7 +44,7 @@ export const Risikostufen = () => {
         */}
       <div className="w-full h-1/4 min-h-[150px] relative drop-shadow-xl">
         <div
-          className="absolute top-0 left-0 w-full h-full clip-triangle-two flex items-end pl-[4%] pb-3 hover:cursor-pointer"
+          className="absolute top-0 left-0 w-full h-full clip-triangle-two flex items-end pb-3 hover:cursor-pointer"
           onClick={() => handleClick(1)}>
           <div className="h-full absolute top-1 bottom-0 left-0 right-[75%] pr-5 pb-3 flex justify-end items-end text-xl">
             Hohes Risiko
@@ -69,7 +69,7 @@ export const Risikostufen = () => {
       */}
       <div className="w-full h-1/4 min-h-[150px] relative drop-shadow-xl">
         <div
-          className="absolute top-0 left-0 w-full h-full clip-triangle-three flex items-end text-xl pl-2 pb-3"
+          className="absolute top-0 left-0 w-full h-full clip-triangle-three flex items-end pb-3 hover:cursor-pointer"
           onClick={() => handleClick(2)}>
           <div className="h-full absolute top-1 bottom-0 left-0 right-[70%] pr-5 pb-3 flex justify-end items-end text-xl">
             Begrenztes Risiko
@@ -92,7 +92,7 @@ export const Risikostufen = () => {
       */}
       <div className="w-full h-1/4 min-h-[150px] relative drop-shadow-xl">
         <div
-          className="absolute top-0 left-0 w-full h-full clip-triangle-four flex items-end text-xl pl-2 pb-3"
+          className="absolute top-0 left-0 w-full h-full clip-triangle-four flex items-end pb-3 hover:cursor-pointer"
           onClick={() => handleClick(3)}>
           <div className="h-full absolute top-1 bottom-0 left-0 right-[65%] pr-5 pb-3 flex justify-end items-end text-xl text-lightText">
             Minimales Risiko

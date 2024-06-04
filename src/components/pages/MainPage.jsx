@@ -38,6 +38,7 @@ const MainPage = () => {
                 <SubTopic topicName={topicNames[1]} image={imageNr2} />
                 <SubTopic topicName={topicNames[2]} image={imageNr3} />
                 <SubTopic topicName={topicNames[3]} image={imageNr4} />
+                <SubTopic topicName={topicNames[4]} image={imageNr4} />
             </div>
             {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}
         </div>

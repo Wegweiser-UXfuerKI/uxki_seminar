@@ -13,7 +13,7 @@ const dateContent = [
   ],
   [
     { date: "21. April", text: "Nach der öffentlichen Konsultation und intensiven Diskussionen zwischen den Mitgliedstaaten, Experten und Interessengruppen legte die Europäische Kommission im April 2021 ihren Vorschlag für den EU AI Act vor. Dieser Vorschlag zielte darauf ab, ein einheitliches Regelwerk zu schaffen, das Innovation fördert, Vertrauen aufbaut und die Grundrechte schützt.", pos: "0.3", icon: "DocumentIcon" }, 
-    { date: "29. November", text: "Die rotierende EU-Ratspräsidentschaft legte einen ersten Kompromisstext zum Entwurf des KI Gesetzes vor, der wichtige Änderungen in den Bereichen soziales Scoring, biometrische Erkennungssysteme und Hochrisikoanwendungen enthielt.", pos: "0.6" }
+    { date: "29. November", text: "Die rotierende EU-Ratspräsidentschaft legte einen ersten Kompromisstext zum Entwurf des KI Gesetzes vor, der wichtige Änderungen in den Bereichen soziales Scoring, biometrische Erkennungssysteme und Hochrisikoanwendungen enthielt.", pos: "0.6", icon: "DocumentIcon" }
   ],
   [
     { date: "25. Januar", text: "Die federführenden Ausschüsse des Europäischen Parlaments hatten ihren ersten gemeinsamen Meinungsaustausch über den Vorschlag für ein KI-Gesetz.", pos: "0.3", icon: "InfoIcon" },

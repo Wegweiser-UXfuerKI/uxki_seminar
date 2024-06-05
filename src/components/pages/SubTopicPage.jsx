@@ -76,6 +76,7 @@ const SubTopicPage = () => {
         setVideoHeight(height);
       }
     };
+    console.log("subtopicid: ", subtopicId);
 
     const calculateHeightWebsite = () => {
       if (websiteRef.current) {
@@ -97,8 +98,8 @@ const SubTopicPage = () => {
   }, []);
 
   const openLinkNewTab = (url) => {
-    window.open(url, '_blank');
-  }
+    window.open(url, "_blank");
+  };
 
   return (
     <div className="SubTopicPage" style={subTopic_style}>
@@ -126,71 +127,84 @@ const SubTopicPage = () => {
             }}
             className="sm:m-[25px] w-[80%] m-[100px] sm:w-[60%]"></iframe>
         )}
-      </div>
-      <div id="section1" style={{ ...section_style, background: "#8377d1" }}>
-        <div className="h-full w-full flex flex-col items-center">
-          <p className="h2 mb-10 mt-14 text-center TextColor">
-            {textData.Texte[0].title}
-          </p>
-          <TextContainer texts={textData.Texte[0].texts} />
-        </div>
-        {isVideoAnimation.Animation && (
-          <>
-            <p className="h2 mb-10 mt-14 TextColor">
-              Beispiel interaktiver Inhalt
+        {subtopicId === "High Level Expert Group" && (
+          <div className="h-full w-full flex flex-col items-center mb-[100px]">
+            <p className="h2 mb-10 mt-14 text-center TextColor">
+              {textData.Texte[0].title}
             </p>
-            <AnimationContainer topicName={subtopicId} />
-          </>
+            <TextContainer texts={textData.Texte[0].texts} />
+          </div>
         )}
-        {subtopicId === "Risikostufen" && (
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "100%",
-              height: "100%",
-            }}>
-            <img
-            ref={websiteRef}
-              src={checkerWebsite}
-              alt="Bild des EU AI Act Compliance Checker"
-              style={{
-                width: "80%",
-                height: `${websiteHeight}px`,
-                maxWidth: "2000px",
-                margin: "100px",
-                borderRadius: "20px",
-              }}
-            />
+      </div>
+      {subtopicId !== "High Level Expert Group" && (
+        <div id="section1" style={{ ...section_style, background: "#8377d1" }}>
+          <div className="h-full w-full flex flex-col items-center">
+            <p className="h2 mb-10 mt-14 text-center TextColor">
+              {textData.Texte[0].title}
+            </p>
+            <TextContainer texts={textData.Texte[0].texts} />
+          </div>
+          {isVideoAnimation.Animation && (
+            <>
+              <p className="h2 mb-10 mt-14 TextColor">
+                Beispiel interaktiver Inhalt
+              </p>
+              <AnimationContainer topicName={subtopicId} />
+            </>
+          )}
+          {subtopicId === "Risikostufen" && (
             <div
-              className="absolute w-4/5 flex justify-center items-center bg-darkText bg-opacity-20 hover:bg-opacity-30 duration-200"
               style={{
-                height: `${websiteHeight}px`,
-                borderRadius: "20px",
-              }}
-              onClick={() => openLinkNewTab('https://artificialintelligenceact.eu/assessment/eu-ai-act-compliance-checker/')}
-              >
-              <div className="w-20 h-20">
-                <TabLinkIcon />
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "100%",
+                height: "100%",
+              }}>
+              <img
+                ref={websiteRef}
+                src={checkerWebsite}
+                alt="Bild des EU AI Act Compliance Checker"
+                style={{
+                  width: "80%",
+                  height: `${websiteHeight}px`,
+                  maxWidth: "2000px",
+                  margin: "100px",
+                  borderRadius: "20px",
+                }}
+              />
+              <div
+                className="absolute w-4/5 flex justify-center items-center bg-darkText bg-opacity-20 hover:bg-opacity-30 hover:cursor-pointer duration-200" 
+                style={{
+                  height: `${websiteHeight}px`,
+                  borderRadius: "20px",
+                }}
+                onClick={() =>
+                  openLinkNewTab(
+                    "https://artificialintelligenceact.eu/assessment/eu-ai-act-compliance-checker/"
+                  )
+                }>
+                <div className="w-20 h-20">
+                  <TabLinkIcon />
+                </div>
               </div>
             </div>
-          </div>
-        )}
-        {subtopicId === "Designimplikationen" && (
-          <div
-            ref={websiteRef}
-            className="w-4/5 max-w-[2000px] flex justify-center items-center my-[100px] border-[0.5rem] border-lightText"
-            style={{
-              height: `${websiteHeight}px`,
-              minHeight: `${websiteHeight}px`,
-              borderRadius: "20px",
-            }}>
-            <Risikostufen />
-          </div>
-        )}
-      </div>
+          )}
+          {subtopicId === "Designimplikationen" && (
+            <div
+              ref={websiteRef}
+              className="w-4/5 max-w-[2000px] flex justify-center items-center my-[100px] border-[0.5rem] border-lightText"
+              style={{
+                height: `${websiteHeight}px`,
+                minHeight: `${websiteHeight}px`,
+                borderRadius: "20px",
+              }}>
+              <Risikostufen />
+            </div>
+          )}
+        </div>
+      )}
       {hasSectionThree && (
         <div id="section2" style={{ ...section_style, background: "#c177d1" }}>
           {textData.Texte.length > 1 ? (
@@ -268,7 +282,7 @@ const subTopic_style = {
   alignItems: "center",
 };
 const section_style = {
-  minHeight: "60vh",
+  minHeight: "30vh",
   width: "100%",
   display: "flex",
   flexDirection: "column",

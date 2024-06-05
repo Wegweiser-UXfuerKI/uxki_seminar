@@ -153,7 +153,7 @@ function TextContainer({ texts }) {
           return (
             <div
                 ref={timelineRef}
-                className="w-4/5 max-w-[2000px] flex justify-center items-center my-5 p-2 bg-lightText"
+                className="w-4/5 max-w-[1000px] flex justify-center items-center my-5 p-1 bg-lightText"
                 style={{
                   height: `${timelineHeight}px`,
                   minHeight: `${timelineHeight}px`,

@@ -2,8 +2,7 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   margin-bottom: 40px;
-  margin-left: 65px;
-  font-size: calc(160px + 1vmin);
+  font-size: calc(130px + 1vmin);
 }
 
 .date-block {
@@ -19,4 +18,5 @@
 
 .hidden-text {
   transition: right 0.5s ease;
+  font-size: calc(5px + 1vmin);
 }

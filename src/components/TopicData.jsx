@@ -1,13 +1,13 @@
 export const TopicData = {
     Einleitung: {
         Video: true,
-        Animation: true,
+        Animation: false,
     },
-    Risikostufen: {
+    "Risikostufen - Anwendungsbeispiele": {
         Video: true,
         Animation: false,
     },
-    Designimplikationen: {
+    "Risikostufen - Auswirkungen": {
         Video: true,
         Animation: false,
     },

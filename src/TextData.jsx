@@ -54,7 +54,7 @@ export const TextData = {
   "Risikostufen - Anwendungsbeispiele": {
     VideoLink: {
       link: "https://www.youtube-nocookie.com/embed/zkfqjX6om8g?si=XKEX_r1jRmViUJkB&amp;rel=0&amp;modestbranding=1",
-      title: "Video",
+      title: "Beispiele",
     },
     Texte: [
       {
@@ -68,21 +68,21 @@ export const TextData = {
           "**Beispiel 1 - AntragsAssistent**",
           "Stellen Sie sich vor Sie sind Teil einer kleinen in Berlin ansässigen Organisation, die es sich zum Ziel gesetzt hat Personen aus benachteiligten Gruppen bei der Kommunikation mit Behörden zu unterstützen bspw. durch Hilfe beim Schreiben von Briefen oder Anträgen, kleiner Übersetzungsleistungen o.Ä.. Um Ihre Prozesse zu optimieren haben Sie vor ein Unterstützungstool einzukaufen, dass die Unterlagenprüfung für Sie übernimmt. Personen die zu Ihnen kommen können dort ihre Dokumente digital hinterlegen, diese werden dann vom Antrags Assistenten geprüft, der Ihnen und ihren Kolleg:innen eine Auskunft darüber gibt, wie das System die Chancen auf Erfolg bei Antragsstellung bewertet. Das System kann keine Personen ablehnen und keine eigenständigen Entscheidungen treffen. Was glauben Sie? Nehmen Sie sich einen Moment Zeit und denken Sie darüber nach wo ein solches System eingeordnet werden könnte. Wir fassen die wichtigsten Informationen hier noch mal zusammen, dabei spielen nicht nur die Dinge eine Rolle, die das System tut, sondern explizit auch was es nicht tut oder kann.",
           "Übersicht Beispielsystem 1 - AntragsAssistent",
-          "##list Unser Organisation setzt das System nur ein. ##list Wir sind mit unserem Standort in Berlin innerhalb der EU niedergelassen. ##list Wir nutzen das System weder für militärische Zwecke, noch sind wir Teil einer Behörde oder Forschungseinrichtung. ##list Das System wird nicht für Dinge wie Social Scoring, Emotionserkennung oder Verhaltensmanipulation genutzt. ##list Da es sich um ein System handelt, dass potenziell den Zugang zu privaten und öffentlichen Leistungen beeinflusst, könnte dies besondere Auswirkungen auf die Einstufung unseres Tools haben. Wichtig ist dabei vor allem, dass kein erhebliches Risiko für die Gesundheit, die Sicherheit oder die Grundrechte einer Person darstellt.",
+          "##list Unsere Organisation setzt das System nur ein. ##list Wir sind mit unserem Standort in Berlin innerhalb der EU niedergelassen. ##list Wir nutzen das System weder für militärische Zwecke, noch sind wir Teil einer Behörde oder Forschungseinrichtung. ##list Das System wird nicht für Dinge wie Social Scoring, Emotionserkennung oder Verhaltensmanipulation genutzt. ##list Da es sich um ein System handelt, dass potenziell den Zugang zu privaten und öffentlichen Leistungen beeinflusst, könnte dies besondere Auswirkungen auf die Einstufung unseres Tools haben. Wichtig ist dabei vor allem, dass kein erhebliches Risiko für die Gesundheit, die Sicherheit oder die Grundrechte einer Person darstellt.",
           "",
           "Prüfen wir basierend auf diesen Informationen unser Assistenzsystem so bedeutet das, dass die Anwendung mit hoher Wahrscheinlichkeit der niedrigsten Risikostufe zugeordnet wird. Für Sie als Nutzende heißt das, dass Sie das System wie geplant nutzen können. Auf Anbieterseite ist dies allerdings mit einigen Pflichten verbunden. So muss das System in einer EU-Datenbank registriert werden und die getätigten Anfragen müssen beim Anbieter so gesichert werden, dass dieser Sie auf Anfrage der EU-Behörden übertragen kann.",
           "**Beispiel 2**",
           "Für unser zweites Beispiel stellen wir uns vor wir sind Teil einer in den USA und Europa agierenden auf Nachhaltigkeit und Tierwohl ausgerichtetet Organisation, die in Kooperation mit einer ländlichen Kommune die Population in einem Waldstück überwachen und messen möchte. Um ein möglichst detailliertes Bild zu bekommen sendet Ihnen ihre Hauptstelle in den Staate durch KI-Erkennungssystem gesteuerte Kameras, die im Waldstück angebracht werden und automatisch Tiere bedrohter Arten identifizieren und die gemachten Bilder speichern sollen. Bei der genutzten Tiererkennungssoftware handelt es sich um eine etablierte Anwendung eines großen Technologiehauses, die in Kooperation mit ihrer Hauptstelle entwickelt und in den USA schon weiträumig mit erfolg eingesetzt wird. Aufgrund der Serverinfrastruktur auf die das System zurückgreift werden Daten, die in Deutschland aufgenommen werden in der Hauptstelle in den USA verarbeitet und aufgenommen.",
           "Nehmen Sie sich auch hier wieder einen Moment Zeit und denken Sie darüber nach welcher Risikostufe so ein System zugeordnet werden könnte. Hier noch einmal die wichtigsten Informationen:",
-          "##list Das System wird von unserer Organisation hergestellt und eingesetzt. ##list Wir sind eine amerikanische Organisation mit einem Standort in Deutschland. ##list Wir nutzen das System weder für militärische Zwecke, noch sind wir Teil einer Behörde oder Forschungseinrichtung. ##list Das System wird nicht für Dinge wie Social Scoring, Emotionserkennung oder Verhaltensmanipulation genutzt. ##list Das System wird nicht in einem Hochrisikobereich eingesetzt bspw. bei der Strafverfolgung oder zum Grenzkontrollmanagement.",
+          "##list Das System wird von unserer Organisation hergestellt und eingesetzt. ##list Wir sind eine amerikanische Organisation mit einem Standort in Deutschland. ##list  Wir nutzen das System weder für militärische Zwecke, noch sind wir Teil einer Behörde oder Forschungseinrichtung. ##list Das System wird nicht für Dinge wie Social Scoring, Emotionserkennung oder Verhaltensmanipulation genutzt. ##list Das System wird nicht in einem Hochrisikobereich eingesetzt bspw. bei der Strafverfolgung oder zum Grenzkontrollmanagement.",
           "Prüfen wir basierend auf diesen Informationen unser Assistenzsystem so bedeutet das, dass auch diese Anwendung mit hoher Wahrscheinlichkeit der niedrigsten Risikostufe zugeordnet wird. Trotz der Verarbeitung der Daten im Nicht-Eu-Ausland und dem Einsatzgebiet bei der Überwachung handelt es sich mit hoher Wahrscheinlichkeit um ein System, dass auf Nutzendenseite keine weiteren Pflichten mit sich bringt. Unsere Dachorganisation bzw. der Technologiekonzern unterliegen dabei trotz ihres Standortes in den USA den gleichen Transparenzpflichten wie in Beispiel 1, wenn sie ihr System innerhalb der EU einsetzen wollen.",
-          "Die genaue Einschätzung in welche Risikostufe ein gegebenes KI-System fällt kann durchaus komplex sein und hängt von mehr Faktoren ab als wofür es inhaltlich genutzt wird bspw. ob ich als Hersteller und Nutzender auftrete. Wo ich das System einsetzen will? Ob ich Teil der EU bin etc. Um sich einen Überblick über die verschiedenen Möglichkeiten zu verschaffen gibt es den EU Compliance Checker. Das Tool bietet die Möglichkeit verschiedene Varianten durchzuspielen, um herauszufinden welche Regelungen für das eigene System gelten. Wir empfehlen daher es einmal selbst auszuprobieren und die oben genannten Beispiele oder eigene Idee einfach mal auf https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/ auszuprobieren.",
+          "Die genaue Einschätzung in welche Risikostufe ein gegebenes KI-System fällt kann durchaus komplex sein und hängt von mehr Faktoren ab als wofür es inhaltlich genutzt wird bspw. ob ich als Hersteller und Nutzender auftrete. Wo ich das System einsetzen will? Ob ich Teil der EU bin etc. Um sich einen Überblick über die verschiedenen Möglichkeiten zu verschaffen gibt es den EU Compliance Checker. Das Tool bietet die Möglichkeit verschiedene Varianten durchzuspielen, um herauszufinden welche Regelungen für das eigene System gelten. Wir empfehlen daher es einmal selbst auszuprobieren und die oben genannten Beispiele oder eigene Idee einfach mal auf https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/ oder mit einem klick auf die unten befindene Einbindung auszuprobieren.",
           "Im nächsten Abschnitt gehen wir dann noch mal konkret auf die Auswirkungen der Risikostufen auf mögliche Entwicklungsprozesse ein.",
         ],
       },
     ],
   },
-  Designimplikationen: {
+  "Risikostufen - Auswirkungen": {
     VideoLink: {
       link: "https://www.youtube-nocookie.com/embed/0rPt4Grl8D4?si=2BKL-W0acY6LRGPu&rel=0&modestbranding=1",
       title: "Video",
@@ -133,8 +133,21 @@ export const TextData = {
           "Minimale Risikostufe-KI-Systeme umfassen Anwendungen wie Spamfilter oder KI-gestützte Videospiele, die nur geringe Risiken für Benutzer darstellen. Diese Systeme erfordern keine zusätzlichen spezifischen Verpflichtungen gemäß der KIVO, müssen jedoch die bestehenden Gesetze und Vorschriften einhalten.",
           "",
           "**Was ist zu tun?** Für minimale Risikostufe-KI-Systeme ist es entscheidend, die allgemeinen gesetzlichen Anforderungen einzuhalten, um sicherzustellen, dass die Systeme im Rahmen der bestehenden Gesetze betrieben werden und keine unangemessenen Risiken für Benutzer darstellen.",
-          "",
-          "### KI-Managementsystem laut KIVO und DIN 42001:2023",
+          "[Component:Pyramide]",
+          
+        ],
+      },
+      {
+        title: "",
+        cardTitle: "Video",
+        texts: [
+          "[Component:Video2]",
+        ]
+      },
+      {
+        title: "KI-Managementsystem laut KIVO und DIN 42001:2023",
+        cardTitle: "KIVO und DIN 42001:2023",
+        texts: [
           "Ein KI-Managementsystem, wie in der KIVO definiert, umfasst umfassende Prozesse und Verfahren, um sicherzustellen, dass KI-Systeme die regulatorischen Anforderungen erfüllen, Risiken managen und hohe Leistungsstandards aufrechterhalten. Dieses System sollte in die allgemeinen Managementprozesse der Organisation integriert werden.",
           "",
           "Das KI-Managementsystem muss einen systematischen Ansatz zur Verwaltung aller KI-bezogenen Aktivitäten annehmen, um kontinuierliche Verbesserungen und Aktualisierungen der KI-Prozesse zu gewährleisten und sich an neue Entwicklungen anzupassen, um fortlaufende Compliance sicherzustellen. Es ist entscheidend, Rollen und Verantwortlichkeiten innerhalb der Organisation klar zu definieren, um eine Kultur der Verantwortung und Rechenschaftspflicht zu fördern.",
@@ -142,8 +155,8 @@ export const TextData = {
           "Der DIN 42001:2023-Standard bietet Leitlinien zur Implementierung eines KI-Managementsystems und betont die Notwendigkeit eines systematischen und kontinuierlichen Ansatzes zur Verwaltung von KI-Technologien. Der Fokus liegt darauf, das KI-Managementsystem in die bestehenden Managementprozesse der Organisation zu integrieren, um sicherzustellen, dass KI-Systeme ethisch und verantwortungsvoll entwickelt, eingesetzt und genutzt werden.",
           "",
           "Zusammenfassend lässt sich sagen, dass die KIVO einen umfassenden Rahmen für die Entwicklung, den Einsatz und die Nutzung von KI-Systemen schafft, diese in verschiedene Risikostufen einteilt und spezifische Anforderungen für jede Kategorie festlegt. Insbesondere Hochrisiko-KI-Systeme unterliegen strengen regulatorischen Anforderungen, um ihre Sicherheit und ethische Nutzung zu gewährleisten. Durch die Implementierung eines KI-Managementsystems gemäß der KIVO und DIN 42001:2023 können Organisationen effektiv KI-bezogene Aktivitäten verwalten, Compliance sicherstellen, verantwortungsvollen Einsatz fördern und Innovation in KI-Technologien vorantreiben.",
-        ],
-      },
+        ]
+      }
       
     ],
   },
@@ -183,7 +196,7 @@ export const TextData = {
           "Die Arbeit der High-Level Expert Group on AI stellt einen wichtigen Schritt dar, um sicherzustellen, dass KI-Systeme im Einklang mit europäischen Werten und Grundrechten entwickelt und eingesetzt werden. Die definierten Kriterien und Leitlinien dienen als Grundlage für die Entwicklung und Implementierung vertrauenswürdiger und ethisch verantwortungsvoller KI-Systeme. Die umfassende Betrachtung technischer, ethischer und sozialer Aspekte trägt dazu bei, dass KI nicht nur technologisch fortschrittlich, sondern auch sozial und ethisch verantwortungsvoll ist.",
           "",
           "European Commission. (2020a). The Ethics Guidelines for Trustworthy AI. Abgerufen von [https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai](https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai).",
-          "European Commission. (2020b). The EU AI Act: Regulatory framework proposal for Artificial Intelligence. Abgerufen von **LINK**"
+          "European Commission. (2020b). The EU AI Act: Regulatory framework proposal for Artificial Intelligence. Abgerufen von [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206)."
         ],
       },
     ],
@@ -198,8 +211,8 @@ export const TextData = {
         title: "Lernüberprüfung",
         cardTitle: "Lernüberprüfung",
         texts: [
-          "Nachdem nun kurz über die Inhalte diskutiert wurde ist man am Ende des Moduls EU AI Act angekommen.", 
-          "Nun steht noch die option offen in den unten eingebundenen Anwendungn die gelernten Inhalte zu überprüfen.",
+          "Nachdem Sie sich jetzt mit unseren Texten in Abschnitt 1 bis 4, sowie dem Diskussionsvideo auseinandergesetzt haben, können sie nun ihr Wissen prüfen. In den beiden folgenden Abschnitten finden Sie ein Lernspiel, dass es Ihnen erlaubt an drei praktischen Beispielen selbst zu beurteilen, ob eine gezeigte App den Anforderungen des EU AI Acts entspricht oder nicht.",
+          "Darüber hinaus finden Sie ein Quiz, dass Ihnen in drei Kategorien (Der EU Ai Act, In der Praxis und Internation) Fragen zum EU AI Act und dessen Anforderungen stellt.",
         ],
       },
     ],

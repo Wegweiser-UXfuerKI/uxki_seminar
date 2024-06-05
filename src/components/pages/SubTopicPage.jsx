@@ -103,7 +103,7 @@ const SubTopicPage = () => {
 
   return (
     <div className="SubTopicPage" style={subTopic_style}>
-      <div id="top" className="h1 mt-10 mb-20 TextColor">
+      <div id="top" className="h1 mt-10 mb-20 text-lightText">
         {subtopicId}
       </div>
       <div
@@ -113,7 +113,62 @@ const SubTopicPage = () => {
           background: "#77a9d1",
           minHeight: `calc(${videoHeight}px + 200px)`,
         }}>
-        {isVideoAnimation.Video && (
+        {(subtopicId === "Risikostufen - Anwendungsbeispiele" || subtopicId === "Risikostufen - Auswirkungen") ? (
+          <>
+            <div className="h-full w-full flex flex-col items-center mb-[100px]">
+              <p className="h2 mb-10 mt-14 text-center TextColor">
+                {textData.Texte[0].title}
+              </p>
+              <TextContainer texts={textData.Texte[0].texts} />
+            </div>
+            {subtopicId === "Risikostufen - Anwendungsbeispiele" && (
+              <div
+                className="relative"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "100%",
+                  height: "100%",
+                }}>
+                <img
+                  ref={websiteRef}
+                  src={checkerWebsite}
+                  alt="Bild des EU AI Act Compliance Checker"
+                  style={{
+                    width: "80%",
+                    height: `${websiteHeight}px`,
+                    maxWidth: "1000px",
+                    marginBottom: "100px",
+                    borderRadius: "20px",
+                  }}
+                />
+                <div
+                  className="absolute top-0 w-4/5 max-w-[1000px] flex justify-center items-center bg-darkText bg-opacity-20 hover:bg-opacity-30 hover:cursor-pointer duration-200"
+                  style={{
+                    height: `${websiteHeight}px`,
+                    borderRadius: "20px",
+                  }}
+                  onClick={() =>
+                    openLinkNewTab(
+                      "https://artificialintelligenceact.eu/assessment/eu-ai-act-compliance-checker/"
+                    )
+                  }>
+                  <div className="w-20 h-20">
+                    <TabLinkIcon />
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
+        ): null}
+        {subtopicId === "Fazit" && (
+          <div className="TextColor text min-h-4 w-4/5 max-w-[1000px]">
+            In diesem Abschnitt finden Sie nun noch einige interaktive Möglichkeiten das gelernte zu überprüfen, sowie ein kurzes Diskussionsvideo zur Rolle des EU AI Acts mit Blick auf die Anforderungen an gemeinwohlorientierte Organisationen. Nehmen Sie sich ein paar Minuten Zeit, um das Video zu schauen und Ihr Wissen zu überprüfen.
+          </div>
+        )}
+        {isVideoAnimation.Video && subtopicId !== "Risikostufen - Anwendungsbeispiele" && subtopicId !== "Risikostufen - Auswirkungen" ? (
           <iframe
             ref={videoRef}
             src={textData.VideoLink.link}
@@ -126,7 +181,7 @@ const SubTopicPage = () => {
               borderRadius: "20px",
             }}
             className="sm:m-[25px] w-[80%] m-[100px] sm:w-[60%]"></iframe>
-        )}
+        ) : null}
         {subtopicId === "High Level Expert Group" && (
           <div className="h-full w-full flex flex-col items-center mb-[100px]">
             <p className="h2 mb-10 mt-14 text-center TextColor">
@@ -136,14 +191,23 @@ const SubTopicPage = () => {
           </div>
         )}
       </div>
-      {subtopicId !== "High Level Expert Group" && (
+      {(subtopicId !== "High Level Expert Group" && subtopicId !== "Risikostufen - Anwendungsbeispiele") ? (
         <div id="section1" style={{ ...section_style, background: "#8377d1" }}>
-          <div className="h-full w-full flex flex-col items-center">
+          {subtopicId === "Risikostufen - Auswirkungen" ? (
+            <div className="h-full w-full flex flex-col items-center mb-[100px]">
+            <p className="h2 mb-10 mt-14 text-center TextColor">
+              {textData.Texte[1].title}
+            </p>
+            <TextContainer texts={textData.Texte[1].texts} />
+          </div>
+          ) : (
+            <div className="h-full w-full flex flex-col items-center mb-[100px]">
             <p className="h2 mb-10 mt-14 text-center TextColor">
               {textData.Texte[0].title}
             </p>
             <TextContainer texts={textData.Texte[0].texts} />
           </div>
+          )}
           {isVideoAnimation.Animation && (
             <>
               <p className="h2 mb-10 mt-14 TextColor">
@@ -152,8 +216,9 @@ const SubTopicPage = () => {
               <AnimationContainer topicName={subtopicId} />
             </>
           )}
-          {subtopicId === "Risikostufen" && (
+          {subtopicId === "Risikostufen - Anwendungsbeispiele" && (
             <div
+              className="relative"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -169,13 +234,13 @@ const SubTopicPage = () => {
                 style={{
                   width: "80%",
                   height: `${websiteHeight}px`,
-                  maxWidth: "2000px",
-                  margin: "100px",
+                  maxWidth: "1000px",
+                  marginBottom: "100px",
                   borderRadius: "20px",
                 }}
               />
               <div
-                className="absolute w-4/5 flex justify-center items-center bg-darkText bg-opacity-20 hover:bg-opacity-30 hover:cursor-pointer duration-200" 
+                className="absolute top-0 w-4/5 max-w-[1000px] flex justify-center items-center bg-darkText bg-opacity-20 hover:bg-opacity-30 hover:cursor-pointer duration-200"
                 style={{
                   height: `${websiteHeight}px`,
                   borderRadius: "20px",
@@ -204,17 +269,24 @@ const SubTopicPage = () => {
             </div>
           )}
         </div>
-      )}
-      {hasSectionThree && (
+      ) : null}
+      {(hasSectionThree) ? (
         <div id="section2" style={{ ...section_style, background: "#c177d1" }}>
-          {textData.Texte.length > 1 ? (
-            <div className="h-full w-full flex flex-col items-center">
+          {(textData.Texte.length > 1 && subtopicId !== "Risikostufen - Auswirkungen") ? (
+            <div className="h-full w-full flex flex-col items-center mb-[100px]">
               <p className="h2 mb-10 mt-14 text-center TextColor">
                 {textData.Texte[1].title}
               </p>
               <TextContainer texts={textData.Texte[1].texts} />
             </div>
-          ) : null}
+          ) : (subtopicId === "Risikostufen - Auswirkungen") ? (
+            <div className="h-full w-full flex flex-col items-center mb-[100px]">
+              <p className="h2 mb-10 mt-14 text-center TextColor">
+                {textData.Texte[2].title}
+              </p>
+              <TextContainer texts={textData.Texte[2].texts} />
+            </div>
+          ): null}
           {subtopicId === "Fazit" && (
             <div
               style={{
@@ -225,6 +297,9 @@ const SubTopicPage = () => {
                 width: "100%",
                 height: "100%",
               }}>
+              <div className="h2 text-lightText mt-[100px] mb-10">
+                Lernspiel praktische Anwendung
+              </div>
               <div
                 ref={websiteRef}
                 style={{
@@ -233,9 +308,13 @@ const SubTopicPage = () => {
                   width: "80%",
                   maxWidth: "2000px",
                   margin: "100px",
+                  marginTop: 0,
                   borderRadius: "20px",
                 }}>
                 <DosAndDonts />
+              </div>
+              <div className="h2 text-lightText mb-10">
+                Quiz zur Selbstüberprüfung
               </div>
               <iframe
                 ref={websiteRef}
@@ -248,12 +327,13 @@ const SubTopicPage = () => {
                   height: `${websiteHeight}px`,
                   maxWidth: "2000px",
                   margin: "100px",
+                  marginTop: 0,
                   borderRadius: "20px",
                 }}></iframe>
             </div>
           )}
         </div>
-      )}
+      ) : null}
       {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}
     </div>
   );

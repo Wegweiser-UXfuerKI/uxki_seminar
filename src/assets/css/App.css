@@ -1,6 +1,21 @@
 /* General */
+
+@font-face {
+  font-family: "CustomOpenSans";
+  src: url("../font/OpenSans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CustomOpenSans";
+  src: url("../font/OpenSans-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 * {
-  font-family: "Open Sans", sans-serif;
+  font-family: "CustomOpenSans", sans-serif;
   font-weight: 400;
   font-size: calc(10px + 1vmin);
   color: #21202b;

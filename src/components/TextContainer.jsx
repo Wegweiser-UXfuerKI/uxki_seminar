@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Timeline from "./Timeline";
+import { Risikostufen } from "./Risikostufen";
 
 function TextContainer({ texts }) {
   const [timelineHeight, setTimelineHeight] = useState(0);
@@ -162,7 +163,53 @@ function TextContainer({ texts }) {
                 <Timeline />
               </div>
           )
-        } else {
+        } else if(item.startsWith("[Component:Video]")) {
+          return (
+            <iframe
+            ref={timelineRef}
+            src="https://www.youtube-nocookie.com/embed/zkfqjX6om8g?si=XKEX_r1jRmViUJkB&amp;rel=0&amp;modestbranding=1"
+            title={"Einführungsvideo"}
+            allowFullScreen
+            style={{
+              border: "0",
+              height: `${timelineHeight}px`,
+              maxWidth: "1000px",
+              margin: "50px",
+              borderRadius: "20px",
+            }}
+            className="sm:m-[25px] w-[80%] m-[100px] sm:w-[60%]"></iframe>
+          )
+       } else if(item.startsWith("[Component:Video2]")) {
+        return (
+          <iframe
+          ref={timelineRef}
+          src="https://www.youtube-nocookie.com/embed/0rPt4Grl8D4?si=2BKL-W0acY6LRGPu&rel=0&modestbranding=1"
+          title={"Einführungsvideo"}
+          allowFullScreen
+          style={{
+            border: "0",
+            height: `${timelineHeight}px`,
+            maxWidth: "1000px",
+            minHeight: `${timelineHeight}px`,
+            margin: "50px",
+            borderRadius: "20px",
+          }}
+          className="sm:m-[25px] w-[80%] m-[100px] sm:w-[60%]"></iframe>
+        )
+     } else if (item.startsWith("[Component:Pyramide")) {
+      return (
+        <div
+              ref={timelineRef}
+              className="w-4/5 max-w-[2000px] flex justify-center items-center my-[100px] border-[0.5rem] border-lightText"
+              style={{
+                height: `${timelineHeight}px`,
+                minHeight: `${timelineHeight}px`,
+                borderRadius: "20px",
+              }}>
+              <Risikostufen />
+            </div>
+      )
+     } else {
           return (
             <p className="TextColor text min-h-4 w-4/5 max-w-[1000px]" key={index}>
               {parseTexts(item)}

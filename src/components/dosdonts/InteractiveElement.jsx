@@ -595,7 +595,7 @@ function InteractiveElement() {
           }`}>
           <div
             id="left-content"
-            className="flex flex-col justify-center gap-left-content content-distribute pt-to-viewport pb-to-viewport">
+            className="flex flex-col justify-start mt-10 gap-left-content content-distribute pt-to-viewport pb-to-viewport">
             <div id="task-container" className="fly-in-left">
               <div
                 id="exercise-tag"
@@ -620,22 +620,6 @@ function InteractiveElement() {
               />
             </div>
 
-            {task?.referencedArticle && (
-              <div id="reference-container" className="fly-in-left">
-                <p id="refers-to" className="mb-2">
-                  Nimmt Bezug auf
-                </p>
-                <Link
-                  id="referenced-article"
-                  to="/text"
-                  className="flex justify-start items-center border-2 hover:text-lightText">
-                  <div id="article-img">
-                    <img src={task.referencedArticle?.thumbnail} alt="" />
-                  </div>
-                  <p className="mx-2 text-inherit">{task.referencedArticle?.title}</p>
-                </Link>
-              </div>
-            )}
           </div>
         </div>
 

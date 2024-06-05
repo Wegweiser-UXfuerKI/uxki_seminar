@@ -19,7 +19,7 @@ const topicContents = {
   "Risikostufen - Anwendungsbeispiele": {
     Video: {
       link: "https://www.youtube-nocookie.com/embed/zkfqjX6om8g?si=XKEX_r1jRmViUJkB&amp;rel=0&amp;modestbranding=1",
-      title: "Einleitungsvideo",
+      title: "abc",
     },
     "Wie funktionieren Risikostufen":
       "Wie zuvor besprochen wollen wir uns als erstes mit dem Thema Risikostufen beschäftigen.  Zentral ist dabei das Verständnis, dass nicht jedes KI-System gleich viel Einfluss auf uns als Menschen hat - bei manchen sind die Risiken höher als bei anderen. Manchmal sogar inakzeptabel hoch. Die Notwendigkeit einer solchen Unterteilung hat auch die EU erkannt und deswegen ein zentrales Werkzeug im EU AI Act erschaffen - die Einteilung von KI-Systemen in vier Risikostufen: Die niedrigste Stufe geht davon aus, dass durch ein KI-System nur ein minimales Risiko besteht. Beispiele hierfür sind KI-Systeme, die in Videospielen eingesetzt werden oder intelligente Spam-Filter, die bestenfalls nach festen Regeln vorgehen. Die zweite Stufe kategorisiert Systeme mit einem begrenzten Risiko s.g. limited risk. Bei diesen gelten insbesondere Transparenzvorschriften, d.h., es muss klar gemacht werden, dass KI Systeme eingesetzt werden und wie. Das gilt z.B. beim Einsatz von Chatbots. Das Herzstück des Acts stellen final die High-Risk-Systeme da. Hierzu zählen alle Systeme, die irgendeiner Zulassung bedürfen. Dazu gehören medizinische Systeme, Systeme im Bereich der Strafverfolgung oder auch Systeme, die zur politischen Meinungsbildung geeignet sind. Der EU AI Act formuliert in dieser Kategorie hohe Anforderungen in Bezug auf die verschiedenen genutzten Variablen. So beispielsweise für die Dokumentation des Trainings, des genutzten Models und der bei der Entwicklung getroffenen Designentscheidungen. Für uns ist dabei vor allem der Punkt Transparenz und die Möglichkeit, der menschlichen Kontrollfähigkeit interessant.",
@@ -43,7 +43,7 @@ const topicContents = {
   Fazit: {
     Video: {
       link: "https://www.youtube-nocookie.com/embed/PZAkt-EuKn0?si=g-hnbptFXBW6kajx&amp;rel=0&amp;modestbranding=1",
-      title: "Einleitungsvideo",
+      title: "Diskussion",
     },
     Text: "Lorem ipsum",
     Lernüberprüfung: "quiz",

@@ -15,6 +15,8 @@ const SubTopic = ({ topicName, image }) => {
             */
       if (topicName === "Einleitung") {
         setContentNames(["Einleitungsvideo", "Was ist der EU AI"]);
+      } else if (topicName === "Fazit") {
+        setContentNames(["Diskussion", "Lernüberprüfung"]);
       } else {
         const names = TextData[topicName].Texte.map(item => item.cardTitle);
         setContentNames(names);

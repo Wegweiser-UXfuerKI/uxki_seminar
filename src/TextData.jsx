@@ -204,7 +204,7 @@ export const TextData = {
   Fazit: {
     VideoLink: {
       link: "https://www.youtube-nocookie.com/embed/PZAkt-EuKn0?si=g-hnbptFXBW6kajx&amp;rel=0&amp;modestbranding=1",
-      title: "Video",
+      title: "Diskussion",
     },
     Texte: [
       {

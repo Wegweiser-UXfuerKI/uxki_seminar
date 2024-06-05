@@ -6,6 +6,7 @@ import imageNr1 from '../../assets/images/Element1.png';
 import imageNr2 from '../../assets/images/Element2.png';
 import imageNr3 from '../../assets/images/Element3.png';
 import imageNr4 from '../../assets/images/Element4.png';
+import imageNr5 from '../../assets/images/Element5.png';
 
 const MainPage = () => {
     const topicContents = useContext(AppContext);
@@ -38,7 +39,7 @@ const MainPage = () => {
                 <SubTopic topicName={topicNames[1]} image={imageNr2} />
                 <SubTopic topicName={topicNames[2]} image={imageNr3} />
                 <SubTopic topicName={topicNames[3]} image={imageNr4} />
-                <SubTopic topicName={topicNames[4]} image={imageNr4} />
+                <SubTopic topicName={topicNames[4]} image={imageNr5} />
             </div>
             {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}
         </div>

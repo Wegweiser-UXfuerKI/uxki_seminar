@@ -44,7 +44,7 @@ const SubTopic = ({ topicName, image }) => {
       {contentNames.map((content, index) => (
         <Link
           to={`subtopic/${topicName}`}
-          state={{ clickedContent: content }}
+          state={{ clickedContent: content, index: index }}
           key={index}
           className="h4 arrow-btn">
           {contentNames[index]}

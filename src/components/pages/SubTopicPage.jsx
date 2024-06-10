@@ -15,7 +15,7 @@ import checkerWebsite from "../../assets/images/EUAICheckerCropped.png";
 const SubTopicPage = () => {
   const { subtopicId } = useParams(); // get name of current subtopic
   const location = useLocation(); // get params from Link element
-  const { clickedContent } = location.state || {}; // get clicked content from location state
+  const { clickedContent, index } = location.state || {}; // get clicked content from location state
 
   const topicContents = useContext(AppContext);
   const contentNames = Object.keys(topicContents[subtopicId]);
@@ -32,6 +32,52 @@ const SubTopicPage = () => {
   const textData = TextData[subtopicId];
 
   useEffect(() => {
+    if (index !== undefined) {
+      const indexToSection = ["video", "section1", "section2"];
+      const indexToScroller = document.getElementById(indexToSection[index]);
+      const scrollIndexZero = document.getElementById("video")
+      if (indexToScroller) {
+        scrollIndexZero.scrollIntoView({ behavior: "smooth", block: "start" });
+        setTimeout(() => {
+          let extraScroll = 0;
+          if (index === 1) {
+            const section0 = document.getElementById(indexToSection[0]);
+            if (section0) {
+              extraScroll = section0.getBoundingClientRect().height;
+            }
+            window.scrollBy({
+              top: extraScroll,
+              behavior: "smooth"
+            });
+          } else if (index === 2) {
+            const section0 = document.getElementById(indexToSection[0]);
+            const section1 = document.getElementById(indexToSection[1]);
+            if (section0) {
+              extraScroll += section0.getBoundingClientRect().height;
+            }
+            if (section1) {
+              extraScroll += section1.getBoundingClientRect().height;
+            }
+            window.scrollBy({
+              top: extraScroll,
+              behavior: "smooth"
+            });
+          }
+        }, 500);
+      }
+    } else {
+      window.scrollTo(0, 0); // else just scroll to top of page
+    }
+
+    setHasSectionThree(contentNames.length >= 3);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [contentNames.length, index]);
+
+  /*
     if (!initialScrollDone) {
       // only use this scroll behavior initially
       if (clickedContent !== undefined) {
@@ -48,16 +94,10 @@ const SubTopicPage = () => {
         window.removeEventListener("scroll", handleScroll);
       };
     }
+    */
 
-    // save if there is a third section to state
-    setHasSectionThree(contentNames.length >= 3);
-  }, [
-    clickedContent,
-    subtopicId,
-    topicContents,
-    contentNames,
-    initialScrollDone,
-  ]);
+  // save if there is a third section to state
+  //setHasSectionThree(contentNames.length >= 3);
 
   // only show toTopBtn if user scrolls 20px down
   const handleScroll = () => {
@@ -113,7 +153,8 @@ const SubTopicPage = () => {
           background: "#77a9d1",
           minHeight: `calc(${videoHeight}px + 200px)`,
         }}>
-        {(subtopicId === "Risikostufen - Anwendungsbeispiele" || subtopicId === "Risikostufen - Auswirkungen") ? (
+        {subtopicId === "Risikostufen - Anwendungsbeispiele" ||
+        subtopicId === "Risikostufen - Auswirkungen" ? (
           <>
             <div className="h-full w-full flex flex-col items-center mb-[100px]">
               <p className="h2 mb-10 mt-14 text-center TextColor">
@@ -162,13 +203,20 @@ const SubTopicPage = () => {
               </div>
             )}
           </>
-        ): null}
+        ) : null}
         {subtopicId === "Fazit" && (
           <div className="TextColor text min-h-4 w-4/5 max-w-[1000px]">
-            In diesem Abschnitt finden Sie nun noch einige interaktive Möglichkeiten das gelernte zu überprüfen, sowie ein kurzes Diskussionsvideo zur Rolle des EU AI Acts mit Blick auf die Anforderungen an gemeinwohlorientierte Organisationen. Nehmen Sie sich ein paar Minuten Zeit, um das Video zu schauen und Ihr Wissen zu überprüfen.
+            In diesem Abschnitt finden Sie nun noch einige interaktive
+            Möglichkeiten das gelernte zu überprüfen, sowie ein kurzes
+            Diskussionsvideo zur Rolle des EU AI Acts mit Blick auf die
+            Anforderungen an gemeinwohlorientierte Organisationen. Nehmen Sie
+            sich ein paar Minuten Zeit, um das Video zu schauen und Ihr Wissen
+            zu überprüfen.
           </div>
         )}
-        {isVideoAnimation.Video && subtopicId !== "Risikostufen - Anwendungsbeispiele" && subtopicId !== "Risikostufen - Auswirkungen" ? (
+        {isVideoAnimation.Video &&
+        subtopicId !== "Risikostufen - Anwendungsbeispiele" &&
+        subtopicId !== "Risikostufen - Auswirkungen" ? (
           <iframe
             ref={videoRef}
             src={textData.VideoLink.link}
@@ -191,22 +239,23 @@ const SubTopicPage = () => {
           </div>
         )}
       </div>
-      {(subtopicId !== "High Level Expert Group" && subtopicId !== "Risikostufen - Anwendungsbeispiele") ? (
+      {subtopicId !== "High Level Expert Group" &&
+      subtopicId !== "Risikostufen - Anwendungsbeispiele" ? (
         <div id="section1" style={{ ...section_style, background: "#8377d1" }}>
           {subtopicId === "Risikostufen - Auswirkungen" ? (
             <div className="h-full w-full flex flex-col items-center mb-[100px]">
-            <p className="h2 mb-10 mt-14 text-center TextColor">
-              {textData.Texte[1].title}
-            </p>
-            <TextContainer texts={textData.Texte[1].texts} />
-          </div>
+              <p className="h2 mb-10 mt-14 text-center TextColor">
+                {textData.Texte[1].title}
+              </p>
+              <TextContainer texts={textData.Texte[1].texts} />
+            </div>
           ) : (
             <div className="h-full w-full flex flex-col items-center mb-[100px]">
-            <p className="h2 mb-10 mt-14 text-center TextColor">
-              {textData.Texte[0].title}
-            </p>
-            <TextContainer texts={textData.Texte[0].texts} />
-          </div>
+              <p className="h2 mb-10 mt-14 text-center TextColor">
+                {textData.Texte[0].title}
+              </p>
+              <TextContainer texts={textData.Texte[0].texts} />
+            </div>
           )}
           {isVideoAnimation.Animation && (
             <>
@@ -270,23 +319,24 @@ const SubTopicPage = () => {
           )}
         </div>
       ) : null}
-      {(hasSectionThree) ? (
+      {hasSectionThree ? (
         <div id="section2" style={{ ...section_style, background: "#c177d1" }}>
-          {(textData.Texte.length > 1 && subtopicId !== "Risikostufen - Auswirkungen") ? (
+          {textData.Texte.length > 1 &&
+          subtopicId !== "Risikostufen - Auswirkungen" ? (
             <div className="h-full w-full flex flex-col items-center mb-[100px]">
               <p className="h2 mb-10 mt-14 text-center TextColor">
                 {textData.Texte[1].title}
               </p>
               <TextContainer texts={textData.Texte[1].texts} />
             </div>
-          ) : (subtopicId === "Risikostufen - Auswirkungen") ? (
+          ) : subtopicId === "Risikostufen - Auswirkungen" ? (
             <div className="h-full w-full flex flex-col items-center mb-[100px]">
               <p className="h2 mb-10 mt-14 text-center TextColor">
                 {textData.Texte[2].title}
               </p>
               <TextContainer texts={textData.Texte[2].texts} />
             </div>
-          ): null}
+          ) : null}
           {subtopicId === "Fazit" && (
             <div
               style={{

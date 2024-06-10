@@ -69,10 +69,6 @@
   }
 }
 
-* {
-  font-family: "Open Sans";
-}
-
 .base-background {
   background-color: var(--background-grey-2);
 }

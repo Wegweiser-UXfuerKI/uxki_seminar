@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import SubTopic from '../SubTopic';
-import AppContext from '../../AppContext';
+import {AppContext} from '../../AppContext';
 import { ReactComponent as RightArrow } from '../../assets/images/right-arrow.svg';
 import imageNr1 from '../../assets/images/Element1.png';
 import imageNr2 from '../../assets/images/Element2.png';
@@ -9,13 +9,16 @@ import imageNr4 from '../../assets/images/Element4.png';
 import imageNr5 from '../../assets/images/Element5.png';
 
 const MainPage = () => {
-    const topicContents = useContext(AppContext);
+    const { topicContents } = useContext(AppContext);
     const topicNames = Object.keys(topicContents);
 
     const [showToTopBtn, setShowToTopBtn] = useState(false);
 
     // check scroll behavior for toTopBtn
     useEffect(() => {
+        console.log("topicContents: ", topicContents);
+        console.log("topicNames: ", topicNames);
+
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);

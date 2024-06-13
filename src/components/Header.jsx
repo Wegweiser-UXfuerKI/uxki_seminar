@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { ReactComponent as RightArrow } from '../assets/images/right-arrow.svg';
 import wegweiserLogo from '../assets/images/Wegweiser_logo.png';
+import { AppContext } from '../AppContext';
 
 const Header = () => {
     const location = useLocation(); // get currently active path
@@ -10,6 +11,8 @@ const Header = () => {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [navOpen, setNavOpen] = useState(false);
+
+    const { selectedModule } = useContext(AppContext)
 
     useEffect(() => {
         const handleResize = () => {
@@ -66,7 +69,7 @@ const Header = () => {
             </div>
             <Link to="/" className='h3 hover:underline mr-3'>Kursübersicht</Link>
             <RightArrow className='h-3 w-5 mr-3' style={{ fill: '#21202b' }} />
-            <Link to="/" className='h3 hover:underline'>Der EU AI Act</Link>
+            <Link to="/" className='h3 hover:underline'>{selectedModule}</Link>
             {topicName !== "undefined" && (
                 <div className='flex items-center ml-3'>
                     <RightArrow className='h-3 w-5 mr-3' style={{ fill: '#21202b' }} />

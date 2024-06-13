@@ -1,6 +1,6 @@
 import React, { useRef, useContext, useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import AppContext from "../../AppContext";
+import {AppContext} from "../../AppContext";
 import { ReactComponent as RightArrow } from "../../assets/images/right-arrow.svg";
 import AnimationContainer from "../animations/AnimationContainer";
 import { TopicData } from "../TopicData";
@@ -17,7 +17,7 @@ const SubTopicPage = () => {
   const location = useLocation(); // get params from Link element
   const { clickedContent, index } = location.state || {}; // get clicked content from location state
 
-  const topicContents = useContext(AppContext);
+  const { topicContents } = useContext(AppContext);
   const contentNames = Object.keys(topicContents[subtopicId]);
   const [hasSectionThree, setHasSectionThree] = useState(true);
 

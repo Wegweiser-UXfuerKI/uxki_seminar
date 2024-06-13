@@ -4,7 +4,7 @@ import MainPage from "./components/pages/MainPage";
 import SubTopicPage from "./components/pages/SubTopicPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import AppContext from "./AppContext";
+import { AppProvider } from "./AppContext";
 
 // static content of subtopics
 const topicContents = {
@@ -53,20 +53,21 @@ const topicContents = {
 function App() {
   return (
     <div className="App">
-      <AppContext.Provider value={topicContents}>
+      <AppProvider>
         <BrowserRouter>
           <div className="flex">
             <div className="flex flex-col w-full">
               <Header />
               <Routes>
                 <Route index element={<MainPage />} />
-                <Route path="subtopic/:subtopicId" element={<SubTopicPage />} />
+                <Route path=":module" element={<MainPage />} />
+                <Route path=":module/:subtopicId" element={<SubTopicPage />} />
               </Routes>
             </div>
           </div>
           <Footer />
         </BrowserRouter>
-      </AppContext.Provider>
+      </AppProvider>
     </div>
   );
 }

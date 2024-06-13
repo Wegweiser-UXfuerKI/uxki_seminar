@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { TextData } from "../TextData";
+import { AppContext } from "../AppContext";
 
 const SubTopic = ({ topicName, image }) => {
   const [contentNames, setContentNames] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
+  const { selectedModule } = useContext(AppContext);
 
   useEffect(() => {
     if (TextData[topicName]) {
@@ -27,7 +29,7 @@ const SubTopic = ({ topicName, image }) => {
   return (
     <div style={subTopic_style}>
       <Link
-        to={`subtopic/${topicName}`}
+        to={`${selectedModule}/${topicName}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}>
         <div
@@ -43,7 +45,7 @@ const SubTopic = ({ topicName, image }) => {
       </Link>
       {contentNames.map((content, index) => (
         <Link
-          to={`subtopic/${topicName}`}
+          to={`${selectedModule}/${topicName}`}
           state={{ clickedContent: content, index: index }}
           key={index}
           className="h4 arrow-btn">

@@ -7,6 +7,7 @@ const SubTopic = ({ topicName, image }) => {
   const [contentNames, setContentNames] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
   const { selectedModule } = useContext(AppContext);
+  const { setSelectedSubtopic } = useContext(AppContext);
 
   useEffect(() => {
     if (TextData[topicName]) {
@@ -20,18 +21,23 @@ const SubTopic = ({ topicName, image }) => {
       } else if (topicName === "Fazit") {
         setContentNames(["Diskussion", "Lernüberprüfung"]);
       } else {
-        const names = TextData[topicName].Texte.map(item => item.cardTitle);
+        const names = TextData[topicName].Texte.map((item) => item.cardTitle);
         setContentNames(names);
       }
     }
   }, [topicName]);
+
+  const setContext = (topicName) => {
+    setSelectedSubtopic(topicName);
+  };
 
   return (
     <div style={subTopic_style}>
       <Link
         to={`${selectedModule}/${topicName}`}
         onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}>
+        onMouseLeave={() => setIsHovered(false)}
+        onClick={() => setContext(topicName)}>
         <div
           className="img-container h-32 w-full mb-5 text-wrap relative"
           style={{ borderRadius: "10px 10px 0px 0px", padding: "0px 33px" }}>
@@ -48,6 +54,7 @@ const SubTopic = ({ topicName, image }) => {
           to={`${selectedModule}/${topicName}`}
           state={{ clickedContent: content, index: index }}
           key={index}
+          onClick={() => setContext(topicName)}
           className="h4 arrow-btn">
           {contentNames[index]}
           <span className="arrow"></span>

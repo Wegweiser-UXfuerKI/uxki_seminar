@@ -5,6 +5,7 @@ import SubTopicPage from "./components/pages/SubTopicPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { AppProvider } from "./AppContext";
+import { TextLayout } from "./components/TextLayout";
 
 // static content of subtopics
 const topicContents = {
@@ -61,7 +62,7 @@ function App() {
               <Routes>
                 <Route index element={<MainPage />} />
                 <Route path=":module" element={<MainPage />} />
-                <Route path=":module/:subtopicId" element={<SubTopicPage />} />
+                <Route path=":module/:subtopicId" element={<TextLayout />} />
               </Routes>
             </div>
           </div>

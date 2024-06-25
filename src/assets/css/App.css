@@ -3,14 +3,14 @@
 @font-face {
   font-family: "CustomOpenSans";
   src: url("../font/OpenSans.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 300 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "CustomOpenSans";
   src: url("../font/OpenSans-Italic.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 300 800;
   font-style: italic;
 }
 
@@ -18,7 +18,8 @@
   font-family: "CustomOpenSans", sans-serif;
   font-weight: 400;
   font-size: calc(10px + 1vmin);
-  color: #21202b;
+  /*color: #21202b;*/
+  color: #f1f0f4;
 }
 
 .TextColor {
@@ -37,7 +38,7 @@
 
 /* Layout */
 .Header {
-  height: 10%;
+  height: 20%;
   width: 100%;
 }
 

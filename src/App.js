@@ -1,4 +1,3 @@
-import "./assets/css/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./components/pages/MainPage";
 import SubTopicPage from "./components/pages/SubTopicPage";
@@ -6,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { AppProvider } from "./AppContext";
 import { TextLayout } from "./components/TextLayout";
+import "./assets/css/App.css";
 
 // static content of subtopics
 const topicContents = {

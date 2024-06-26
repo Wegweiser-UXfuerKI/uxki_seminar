@@ -6,8 +6,8 @@ Ein Eintrag pro array ist ein Abschnitt (eine Hintergrund-Farbe)
 */
 const Einleitung = [
   /* Section 1 */
-  <div className={`${styles.outerContainer}`}>
-    <div className={`${styles.h1}`}>Überschrift Component</div>
+  <div className={`${styles.outerContainer} `}>
+    <h1 className={`${styles.h1} mainTitle text-center`}>Überschrift Component</h1>
   </div>,
   /* Section 2 */
   <div className={`${styles.outerContainer}`}>
@@ -15,13 +15,13 @@ const Einleitung = [
   </div>,
   /* Section 3 */
   <div className={`${styles.outerContainer}`}>
-    <div className={`${styles.h2}`}>Was ist der EU AI Act?</div>
-    <div className={`${styles.text}`}>
+    <h2 className={`${styles.h2}`}>Was ist der EU AI Act?</h2>
+    <p className={`${styles.text}`}>
       Nachdem Sie nun ein kurzes Einführungsvideo gesehen haben, wenden wir uns
       nun einer etwas detaillierteren Betrachtung des EU AI Acts zu.
-    </div>
-    <div className={`${styles.h3}`}>Ziele des EU AI Acts</div>
-    <div>
+    </p>
+    <h3 className={`${styles.h3}`}>Ziele des EU AI Acts</h3>
+    <p className={`${styles.text}`}>
       Mit dem EU AI Act haben sich die Mitgliedsstaaten der EU zum Ziel gesetzt,
       das erste umfassende Regularium für den Umgang mit Systemen, die auf
       Künstlicher Intelligenz (KI) basieren, zu verfassen. Ziel ist es,
@@ -34,9 +34,9 @@ const Einleitung = [
       EU hinaus einen Impuls setzen und, ähnlich wie die DSGVO im Datenschutz,
       einen Standard stellen, der auch in Nicht-EU-Ländern wie den USA oder
       Japan genutzt wird.
-    </div>
-    <div className={`${styles.h3}`}>Entwicklung des Acts</div>
-    <div className={`${styles.text}`}>
+    </p>
+    <h3 className={`${styles.h3}`}>Entwicklung des Acts</h3>
+    <p className={`${styles.text}`}>
       Bei der Entwicklung des EU AI Acts handelt es sich um einen komplexen
       bürokratischen Prozess, der sich nicht nur über viel Jahre hinweg
       entwickelte, sondern auch große Teile des parlamentarischen EU-Apparats
@@ -49,8 +49,8 @@ const Einleitung = [
         https://artificialintelligenceact.eu/de/entwicklungen/
       </a>
       .
-    </div>
-    <div>... und so weiter</div>
+    </p>
+    <h3>... und so weiter</h3>
   </div>,
 ];
 

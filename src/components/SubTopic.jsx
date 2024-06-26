@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { TextData } from "../TextData";
 import { AppContext } from "../AppContext";
+import "./SubTopic.css";
 
 const SubTopic = ({ topicName, image }) => {
   const [contentNames, setContentNames] = useState([]);

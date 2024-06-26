@@ -1,5 +1,9 @@
-/* Font */
+/* Tailwind */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
+/* Font */
 @font-face {
   font-family: "CustomOpenSans";
   src: url("../font/OpenSans.ttf") format("truetype");
@@ -44,7 +48,7 @@
   font-family: "CustomOpenSans", sans-serif;
   font-weight: 400;
   font-size: calc(10px + 1vmin);
-  color: var(--dark);
+  color: var(--white);
 }
 
 .App {
@@ -62,23 +66,50 @@
 }
 
 /* Layout */
-.Header,
-.Footer,
+header,
+footer,
 .Mainpage,
 .SubTopicPage {
   width: 100%;
 }
 
-.Header,
-.Footer {
+header,
+footer {
   height: 6%;
 }
 
-.Footer a {
+footer a {
   font-size: calc(6px + 1vmin);
+  color: var(--dark);
+  width: 10rem;
+  transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* Navigation */
+header {
+  color: var(--dark);
+}
+
+header nav a {
+  margin: 0 0.75rem;
+  color: var(--dark);
+  transition: all 0.3s ease-in-out;
+}
+
+header nav a:first-child {
+  margin-left: 0;
+}
+
+header nav a:hover,
+header nav a.active {
+  text-decoration: underline;
+}
+
+/* Mobile */
 .nav {
   background-color: var(--dark);
   width: 15%;
@@ -196,6 +227,7 @@ p {
 }
 
 .subTopicCard h2 {
+  color: var(--dark);
   z-index: 1;
   transition: all 0.3s ease-in-out;
 }
@@ -276,7 +308,10 @@ p {
 
 .arrow-btn:hover {
   color: var(--purple);
-  font-weight: 600;
+}
+
+.arrow-btn:last-child {
+  margin-bottom: 1rem;
 }
 
 /* to Top Button */
@@ -304,6 +339,7 @@ p {
 
 /* responsive */
 @media screen and (max-width: 600px) {
+
   .text,
   header {
     margin: 0px 40px 100px 40px;
@@ -351,8 +387,3 @@ p {
 .transition-opacity {
   transition: opacity 0.4s;
 }
-
-/* Tailwind */
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";

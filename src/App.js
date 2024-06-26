@@ -56,14 +56,14 @@ function App() {
     <div className="App">
       <AppProvider>
         <BrowserRouter>
-          <div className="flex flex-col">
-            <Header />
+          <Header />
+          <main className="flex flex-col">
             <Routes>
               <Route index element={<MainPage />} />
               <Route path=":module" element={<MainPage />} />
               <Route path=":module/:subtopicId" element={<TextLayout />} />
             </Routes>
-          </div>
+          </main>
           <Footer />
         </BrowserRouter>
       </AppProvider>

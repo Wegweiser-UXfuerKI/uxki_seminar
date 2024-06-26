@@ -56,15 +56,13 @@ function App() {
     <div className="App">
       <AppProvider>
         <BrowserRouter>
-          <div className="flex">
-            <div className="flex flex-col w-full">
-              <Header />
-              <Routes>
-                <Route index element={<MainPage />} />
-                <Route path=":module" element={<MainPage />} />
-                <Route path=":module/:subtopicId" element={<TextLayout />} />
-              </Routes>
-            </div>
+          <div className="flex flex-col">
+            <Header />
+            <Routes>
+              <Route index element={<MainPage />} />
+              <Route path=":module" element={<MainPage />} />
+              <Route path=":module/:subtopicId" element={<TextLayout />} />
+            </Routes>
           </div>
           <Footer />
         </BrowserRouter>

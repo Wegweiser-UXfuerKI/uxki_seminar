@@ -5,7 +5,6 @@ import { AppContext } from "../AppContext";
 
 const SubTopic = ({ topicName, image }) => {
   const [contentNames, setContentNames] = useState([]);
-  const [isHovered, setIsHovered] = useState(false);
   const { selectedModule } = useContext(AppContext);
   const { setSelectedSubtopic } = useContext(AppContext);
 
@@ -32,21 +31,13 @@ const SubTopic = ({ topicName, image }) => {
   };
 
   return (
-    <div style={subTopic_style}>
-      <Link
-        to={`${selectedModule}/${topicName}`}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        onClick={() => setContext(topicName)}>
-        <div
-          className="img-container h-32 w-full mb-5 text-wrap relative"
-          style={{ borderRadius: "10px 10px 0px 0px", padding: "0px 33px" }}>
-          <div
-            className="h2 left-0 right-0 top-0 bottom-0 px-[33px] absolute pb-4 cursor-pointer flex flex-col-reverse"
-            style={{ color: isHovered ? "#d177b3" : "#21202b" }}>
+    <div className="subTopicCard rounded-xl">
+      <Link to={`${selectedModule}/${topicName}`}>
+        <div className="relative img-container h-32 w-full mb-5">
+          <h2 className="thirdTitle absolute left-0 bottom-0 px-[33px]">
             {topicName}
-          </div>
-          <img src={image} className="opacity-50" alt="img-placeholder" />
+          </h2>
+          <img src={image} className="opacity-30" alt="img-placeholder" />
         </div>
       </Link>
       {contentNames.map((content, index) => (
@@ -55,26 +46,14 @@ const SubTopic = ({ topicName, image }) => {
           state={{ clickedContent: content, index: index }}
           key={index}
           onClick={() => setContext(topicName)}
-          className="h4 arrow-btn">
+          className="smallTextSize arrow-btn rounded-xl"
+        >
           {contentNames[index]}
           <span className="arrow"></span>
         </Link>
       ))}
     </div>
   );
-};
-
-// styles
-const subTopic_style = {
-  background: "white",
-  width: "320px",
-  height: "400px",
-  borderRadius: "10px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
-  margin: "20px",
 };
 
 export default SubTopic;

@@ -9,60 +9,47 @@ import imageNr4 from '../../assets/images/Element4.png';
 import imageNr5 from '../../assets/images/Element5.png';
 
 const MainPage = () => {
-    const { topicContents } = useContext(AppContext);
-    const topicNames = Object.keys(topicContents);
+  const { topicContents } = useContext(AppContext);
+  const topicNames = Object.keys(topicContents);
+  const [showToTopBtn, setShowToTopBtn] = useState(false);
 
-    const [showToTopBtn, setShowToTopBtn] = useState(false);
-
-    // check scroll behavior for toTopBtn
-    useEffect(() => {
-        console.log("topicContents: ", topicContents);
-        console.log("topicNames: ", topicNames);
-
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    // only show toTopBtn if user scrolls 20px down
+  // check scroll behavior for toTopBtn
+  useEffect(() => {
     const handleScroll = () => {
-        if (window.scrollY > 20) {
-            setShowToTopBtn(true);
-        } else {
-            setShowToTopBtn(false);
-        }
+      setShowToTopBtn(window.scrollY > 20);
     };
 
-    return (
-        <div className='Mainpage flex flex-col items-center'>
-            <div className='self-center TextColor h1 mt-20 mb-20'>Wegweiser UX für KI</div>
-            <div className='mb-20' style={item_row}>
-                <SubTopic topicName={topicNames[0]} image={imageNr1} />
-                <SubTopic topicName={topicNames[1]} image={imageNr2} />
-                <SubTopic topicName={topicNames[2]} image={imageNr3} />
-                <SubTopic topicName={topicNames[3]} image={imageNr4} />
-                <SubTopic topicName={topicNames[4]} image={imageNr5} />
-            </div>
-            {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}
-        </div>
-    );
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const images = [imageNr1, imageNr2, imageNr3, imageNr4, imageNr5];
+
+  return (
+    <div className="Mainpage flex flex-col items-center">
+      <h1 className="mainTitle text-center mt-24 mb-16">Wegweiser UX für KI</h1>
+      <div className="flex justify-center flex-wrap max-w-screen-xl mb-24">
+        {topicNames.map((topicName, index) => (
+          <SubTopic
+            key={topicName}
+            topicName={topicName}
+            image={images[index]}
+          />
+        ))}
+      </div>
+      {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}
+    </div>
+  );
 };
 
-// scrolls to top
+// Function to scroll to top
 function scrollToTop() {
-    window.scrollTo({
-        top: 0,
+  window.scrollTo({
+    top: 0,
         behavior: 'smooth'
-    });
-};
-
-// styles
-const item_row = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    maxWidth: '1000px'
-};
+  });
+}
 
 export default MainPage;

@@ -15,7 +15,12 @@ export const TextLayout = () => {
     Fazit: 4,
   };
 
+  console.log(selectedSubtopic);
+
   const currentChapterIndex = subTopicDict[selectedSubtopic] ?? 0;
+
+  // when different modules exist
+  // const selection = selectedModule === "EUAIAct" ? EuAiActSections : aother stuff;
 
   useEffect(() => {
     console.log("module: ", selectedModule, "sub: ", selectedSubtopic);

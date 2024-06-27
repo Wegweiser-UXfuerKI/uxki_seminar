@@ -1,12 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
-import SubTopic from '../SubTopic';
-import {AppContext} from '../../AppContext';
-import { ReactComponent as RightArrow } from '../../assets/images/right-arrow.svg';
-import imageNr1 from '../../assets/images/Element1.png';
-import imageNr2 from '../../assets/images/Element2.png';
-import imageNr3 from '../../assets/images/Element3.png';
-import imageNr4 from '../../assets/images/Element4.png';
-import imageNr5 from '../../assets/images/Element5.png';
+import React, { useContext, useEffect, useState } from "react";
+import SubTopic from "../SubTopic";
+import { AppContext } from "../../AppContext";
+import { ReactComponent as RightArrow } from "../../assets/images/right-arrow.svg";
+import imageNr1 from "../../assets/images/numbers/Element1.png";
+import imageNr2 from "../../assets/images/numbers/Element2.png";
+import imageNr3 from "../../assets/images/numbers/Element3.png";
+import imageNr4 from "../../assets/images/numbers/Element4.png";
+import imageNr5 from "../../assets/images/numbers/Element5.png";
 
 const MainPage = () => {
   const { topicContents } = useContext(AppContext);
@@ -48,7 +48,7 @@ const MainPage = () => {
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-        behavior: 'smooth'
+    behavior: "smooth",
   });
 }
 

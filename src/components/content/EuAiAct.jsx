@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "../../assets/css/Typo.module.css";
+import { ChapterHeader } from "../texts/ChapterHeader";
+import { VideoContainer } from "../texts/VideoContainer";
 
 /*
 Ein Eintrag pro array ist ein Abschnitt (eine Hintergrund-Farbe)
@@ -7,11 +9,19 @@ Ein Eintrag pro array ist ein Abschnitt (eine Hintergrund-Farbe)
 const Einleitung = [
   /* Section 1 */
   <div className={`${styles.outerContainer} `}>
-    <h1 className={`${styles.h1} mainTitle text-center`}>Überschrift Component</h1>
+    <h1 className={`${styles.h1} mainTitle text-center`}>
+      Überschrift Component
+    </h1>
+    <ChapterHeader text={"Überschrift"} number={1} />
   </div>,
   /* Section 2 */
   <div className={`${styles.outerContainer}`}>
-    <div>Video Component</div>
+    <VideoContainer
+      link={
+        "https://www.youtube-nocookie.com/embed/kxsbAi3gmeE?si=PL74OEuieI7W2hce&amp;rel=0&amp;modestbranding=1"
+      }
+      title={"Einleitungsvideo"}
+    />
   </div>,
   /* Section 3 */
   <div className={`${styles.outerContainer}`}>

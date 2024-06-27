@@ -33,7 +33,9 @@ const SubTopic = ({ topicName, image }) => {
 
   return (
     <div className="subTopicCard rounded-xl">
-      <Link to={`${selectedModule}/${topicName}`}>
+      <Link
+        to={`${selectedModule}/${topicName}`}
+        onClick={() => setContext(topicName)}>
         <div className="relative img-container h-32 w-full mb-5">
           <h2 className="thirdTitle absolute left-0 bottom-0 px-[33px]">
             {topicName}
@@ -47,8 +49,7 @@ const SubTopic = ({ topicName, image }) => {
           state={{ clickedContent: content, index: index }}
           key={index}
           onClick={() => setContext(topicName)}
-          className="smallTextSize arrow-btn rounded-xl"
-        >
+          className="smallTextSize arrow-btn rounded-xl">
           {contentNames[index]}
           <span className="arrow"></span>
         </Link>

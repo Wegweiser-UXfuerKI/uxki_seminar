@@ -8,12 +8,7 @@ Ein Eintrag pro array ist ein Abschnitt (eine Hintergrund-Farbe)
 */
 const Einleitung = [
   /* Section 1 */
-  <div className={`${styles.outerContainer} `}>
-    <h1 className={`${styles.h1} mainTitle text-center`}>
-      Überschrift Component
-    </h1>
-    <ChapterHeader text={"Überschrift"} number={1} />
-  </div>,
+  <ChapterHeader text={"Einleitung"} number={1} />,
   /* Section 2 */
   <div className={`${styles.outerContainer}`}>
     <VideoContainer
@@ -65,6 +60,8 @@ const Einleitung = [
 ];
 
 const RisikostufenAnwendungsbeispiele = [
+  /* Section 1 */
+  <ChapterHeader text={"Risikostufen - Anwendungsbeispiele"} number={2} />,
   <div>
     <strong>zweiter Bereich</strong> Lorem ipsum dolor sit amet consectetur
     adipisicing elit. Id, ipsum deserunt incidunt facere molestias possimus
@@ -86,6 +83,8 @@ const RisikostufenAnwendungsbeispiele = [
 ];
 
 const RisikostufenAuswirkungen = [
+  /* Section 1 */
+  <ChapterHeader text={"Risikostufen - Auswirkungen"} number={3} />,
   <div>
     zweiter Bereich Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
     ipsum deserunt incidunt facere molestias possimus reiciendis omnis officiis
@@ -94,27 +93,27 @@ const RisikostufenAuswirkungen = [
   </div>,
 ];
 
-const HLEG = () => {
-  return (
-    <div>
-      zweiter Bereich Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Id, ipsum deserunt incidunt facere molestias possimus reiciendis omnis
-      officiis voluptas excepturi, minima aliquam maxime. Eos voluptates
-      deleniti vel quia saepe quod.
-    </div>
-  );
-};
+const HLEG = [
+  /* Section 1 */
+  <ChapterHeader text={"High Level Expert Group"} number={4} />,
+  <div>
+    zweiter Bereich Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+    ipsum deserunt incidunt facere molestias possimus reiciendis omnis officiis
+    voluptas excepturi, minima aliquam maxime. Eos voluptates deleniti vel quia
+    saepe quod.
+  </div>,
+];
 
-const Fazit = () => {
-  return (
-    <div>
-      zweiter Bereich Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Id, ipsum deserunt incidunt facere molestias possimus reiciendis omnis
-      officiis voluptas excepturi, minima aliquam maxime. Eos voluptates
-      deleniti vel quia saepe quod.
-    </div>
-  );
-};
+const Fazit = [
+  /* Section 1 */
+  <ChapterHeader text={"Fazit"} number={5} />,
+  <div>
+    zweiter Bereich Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+    ipsum deserunt incidunt facere molestias possimus reiciendis omnis officiis
+    voluptas excepturi, minima aliquam maxime. Eos voluptates deleniti vel quia
+    saepe quod.
+  </div>,
+];
 
 const EuAiActSections = [
   Einleitung,

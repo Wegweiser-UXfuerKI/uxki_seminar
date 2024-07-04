@@ -7,29 +7,15 @@
 @font-face {
   font-family: "CustomOpenSans";
   src: url("../font/OpenSans.ttf") format("truetype");
-  font-weight: 400;
+  font-weight: 300 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "CustomOpenSans";
   src: url("../font/OpenSans-Italic.ttf") format("truetype");
-  font-weight: 400;
+  font-weight: 300 800;
   font-style: italic;
-}
-
-@font-face {
-  font-family: "CustomOpenSans";
-  src: url("../font/OpenSans-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "CustomOpenSans";
-  src: url("../font/OpenSans-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
 }
 
 /* Colors  */
@@ -55,10 +41,6 @@
   width: 100%;
   height: 100%;
   background-color: var(--bg);
-}
-
-.TextColor {
-  color: var(--white);
 }
 
 .img-container {
@@ -87,6 +69,14 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+.outerContainer,
+section {
+  padding: 70px 10px;
+  width: 60vw;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 /* Navigation */
@@ -127,12 +117,6 @@ header nav a.active {
 
 /* Typo */
 /* Todo: decide for one way of stlying headlines and text */
-.h1 {
-  font-size: calc(60px - 1vmin);
-  font-weight: 700;
-  line-height: 1.4;
-}
-
 .h2 {
   font-size: calc(35px + 1vmin);
   font-weight: 700;
@@ -155,11 +139,24 @@ header nav a.active {
   font-weight: 300;
 }
 
-.mainTitle {
-  font-size: calc(65px - 1vmin);
-  line-height: 60px;
+.mainTitle,
+h1 {
+  font-size: 60px;
+  line-height: 1.2;
   font-weight: bold;
   color: var(--white);
+  padding-top: 70px;
+}
+
+.outerContainer h1::after {
+  content: attr(data-number);
+  font-size: 230px;
+  font-weight: 800;
+  position: absolute;
+  left: 20px;
+  top: -30px;
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 .secondTitle {

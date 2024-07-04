@@ -4,7 +4,7 @@ import { TextData } from "../TextData";
 import { AppContext } from "../AppContext";
 import "./SubTopic.css";
 
-const SubTopic = ({ topicName, image }) => {
+const SubTopic = ({ topicName, number }) => {
   const [contentNames, setContentNames] = useState([]);
   const { selectedModule } = useContext(AppContext);
   const { setSelectedSubtopic } = useContext(AppContext);
@@ -35,12 +35,16 @@ const SubTopic = ({ topicName, image }) => {
     <div className="subTopicCard rounded-xl">
       <Link
         to={`${selectedModule}/${topicName}`}
-        onClick={() => setContext(topicName)}>
-        <div className="relative img-container h-32 w-full mb-5">
-          <h2 className="thirdTitle absolute left-0 bottom-0 px-[33px]">
+        onClick={() => setContext(topicName)}
+        className="w-full"
+      >
+        <div className="topSection relative overflow-hidden h-32">
+          <h2
+            className="thirdTitle absolute left-0 bottom-0 mb-0 px-[33px]"
+            topic-number={String(number + 1).padStart(2, "0")}
+          >
             {topicName}
           </h2>
-          <img src={image} className="opacity-30" alt="img-placeholder" />
         </div>
       </Link>
       {contentNames.map((content, index) => (
@@ -49,7 +53,8 @@ const SubTopic = ({ topicName, image }) => {
           state={{ clickedContent: content, index: index }}
           key={index}
           onClick={() => setContext(topicName)}
-          className="smallTextSize arrow-btn rounded-xl">
+          className="smallTextSize arrow-btn rounded-xl"
+        >
           {contentNames[index]}
           <span className="arrow"></span>
         </Link>

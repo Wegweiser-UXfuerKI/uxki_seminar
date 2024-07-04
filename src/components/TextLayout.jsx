@@ -26,21 +26,13 @@ export const TextLayout = () => {
     console.log("module: ", selectedModule, "sub: ", selectedSubtopic);
   }, [selectedModule, selectedSubtopic]);
 
-  const bgColors = [
-    "#77d1CB",
-    "#77A9D1",
-    "#8377D1",
-    "#C177D1",
-    "#D177B3",
-    "#54506A",
-  ];
-
   return (
-    <div className="w-full mt-10">
+    <div className="mt-20">
       {EuAiActSections[currentChapterIndex].map((section, sectionIndex) => (
         <div
           key={`kapitel-${sectionIndex}-section-${sectionIndex}`}
-          style={{ backgroundColor: bgColors[sectionIndex % bgColors.length] }}>
+          className={`bg-color-${sectionIndex % 6}`}
+        >
           {section}
         </div>
       ))}

@@ -85,7 +85,7 @@ const Header = () => {
         {topicName !== "undefined" && (
           <div className="flex items-center">
             <RightArrow />
-            <Link to={location.pathname}>{topicName}</Link>
+            <Link to={location.pathname} className="active">{topicName}</Link>
           </div>
         )}
       </nav>

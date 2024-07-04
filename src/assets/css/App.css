@@ -23,11 +23,39 @@
 :root {
   --bg: #77d1cb;
   --pink: #d177b3;
+  --rosa: #C177D1;
   --purple: #8377d1;
+  --blue: #77A9D1;
   --white: #f1f0f4;
+  --grey: #54506A;
   --dark: #292734;
   --whiteHover: #d4d2dd;
 }
+
+.bg-color-0 {
+  background-color: var(--bg);
+}
+
+.bg-color-1 {
+  background-color: var(--blue);
+}
+
+.bg-color-2 {
+  background-color: var(--purple);
+}
+
+.bg-color-3 {
+  background-color: var(--rosa);
+}
+
+.bg-color-4 {
+  background-color: var(--pink);
+}
+
+.bg-color-5 {
+  background-color: var(--grey);
+}
+
 
 /* General */
 * {
@@ -124,7 +152,6 @@ h1 {
   line-height: 1.2;
   font-weight: bold;
   color: var(--white);
-  padding-top: 70px;
 }
 
 .outerContainer h1::after {
@@ -133,7 +160,7 @@ h1 {
   font-weight: 800;
   position: absolute;
   left: 20px;
-  top: -30px;
+  top: 20px;
   opacity: 0.25;
   pointer-events: none;
 }
@@ -176,6 +203,11 @@ li {
 ul {
   list-style: disc;
   padding-left: 20px;
+}
+
+a {
+  font-weight: 600;
+  color: var(--dark);
 }
 
 /* to Top Button */

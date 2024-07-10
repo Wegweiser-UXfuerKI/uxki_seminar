@@ -18,7 +18,7 @@ export const Risikostufen = () => {
 
   return (
     <div
-      className="w-full h-full relative"
+      className="w-full h-96 relative max-w-[2000px] min-h-96 lex justify-center items-center border-[0.5rem] border-lightText rounded-xl"
       style={{ borderRadius: "10px", overflow: "hidden" }}>
       <div className="w-full absolute top-0 bottom-[75%] z-40">
         <div

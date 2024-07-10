@@ -182,6 +182,12 @@ h3 {
   margin-bottom: 15px;
 }
 
+h4 {
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
 p,
 li {
   font-size: calc(8px + 1vmin);

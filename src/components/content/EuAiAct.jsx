@@ -2,6 +2,7 @@ import React from "react";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import { Risikostufen } from "../Risikostufen";
+import DosAndDonts from "../dosdonts/DosAndDonts";
 
 /*
 Ein Eintrag pro array ist ein Abschnitt (eine Hintergrund-Farbe)
@@ -10,14 +11,16 @@ const Einleitung = [
   /* Section 1 */
   <ChapterHeader text={"Einleitung"} number={1} />,
   /* Section 2 */
-  <VideoContainer
-    link={
-      "https://www.youtube-nocookie.com/embed/kxsbAi3gmeE?si=PL74OEuieI7W2hce&amp;rel=0&amp;modestbranding=1"
-    }
-    title={"Einleitungsvideo"}
-  />,
+  <section id="einleitungsvideo">
+    <VideoContainer
+      link={
+        "https://www.youtube-nocookie.com/embed/kxsbAi3gmeE?si=PL74OEuieI7W2hce&amp;rel=0&amp;modestbranding=1"
+      }
+      title={"Einleitungsvideo"}
+    />
+  </section>,
   /* Section 3 */
-  <section>
+  <section id="euAIAct">
     <h2>Was ist der EU AI Act?</h2>
     <p>
       Nachdem Sie nun ein kurzes Einführungsvideo gesehen haben, wenden wir uns
@@ -44,7 +47,9 @@ const Einleitung = [
       bürokratischen Prozess, der sich nicht nur über viel Jahre hinweg
       entwickelte, sondern auch große Teile des parlamentarischen EU-Apparats
       durchlaufen hat.
-      <br /> Komponent: Timeline <br />
+    </p>
+    <h2> Komponent: Timeline </h2>
+    <p>
       Eine vollständige Übersicht des zeitlichen Verlaufs des
       Gestaltungsprozesses und der damit verbundenen Institutionen und
       Zwischenstände finden Sie hier:{" "}
@@ -229,7 +234,7 @@ const Einleitung = [
 const RisikostufenAnwendungsbeispiele = [
   /* Section 1 */
   <ChapterHeader text={"Risikostufen - Anwendungsbeispiele"} number={2} />,
-  <section>
+  <section id="risikostufen">
     <h2>Einteilung in Risikostufen anhand Anwendungsbeispielen</h2>
     <p>
       Nachdem wir zuvor einen groben Überblick über die Entwicklung und die
@@ -248,12 +253,14 @@ const RisikostufenAnwendungsbeispiele = [
       Sie sich gerne folgendes Video an:
     </p>
   </section>,
-  <VideoContainer
-    link={
-      "https://www.youtube-nocookie.com/embed/zkfqjX6om8g?si=XKEX_r1jRmViUJkB&rel=0&modestbranding=1"
-    }
-    title={"Risikostufen"}
-  />,
+  <section>
+    <VideoContainer
+      link={
+        "https://www.youtube-nocookie.com/embed/zkfqjX6om8g?si=XKEX_r1jRmViUJkB&rel=0&modestbranding=1"
+      }
+      title={"Risikostufen"}
+    />
+  </section>,
   <section>
     <h2>Die Beispiele</h2>
     <p>
@@ -397,7 +404,7 @@ const RisikostufenAnwendungsbeispiele = [
 const RisikostufenAuswirkungen = [
   /* Section 1 */
   <ChapterHeader text={"Risikostufen - Auswirkungen"} number={3} />,
-  <section>
+  <section id="maßnahmen">
     <h2>Was muss je nach Risikostufe beachtet werden</h2>
     <p>
       Dieser Text zielt darauf ab, ein tiefes Verständnis der verschiedenen
@@ -576,17 +583,18 @@ const RisikostufenAuswirkungen = [
     </p>
   </section>,
   <section>
-    <h2>Componente Risikostufen</h2>
     {/* TODO: Fix CSS of Component */}
-    {/* <Risikostufen /> */}
+    <Risikostufen />
   </section>,
-  <VideoContainer
-    link={
-      "https://www.youtube-nocookie.com/embed/0rPt4Grl8D4?si=2BKL-W0acY6LRGPu&rel=0&modestbranding=1"
-    }
-    title={"Designimplikationen"}
-  />,
-  <section>
+  <section id="videoRisikostufen">
+    <VideoContainer
+      link={
+        "https://www.youtube-nocookie.com/embed/0rPt4Grl8D4?si=2BKL-W0acY6LRGPu&rel=0&modestbranding=1"
+      }
+      title={"Designimplikationen"}
+    />
+  </section>,
+  <section id="KIVO">
     <h2>KI-Managementsystem laut KIVO und DIN 42001:2023</h2>
     <p>
       Ein KI-Managementsystem, wie in der KIVO definiert, umfasst umfassende
@@ -829,7 +837,8 @@ const HLEG = [
     <p>
       European Commission. (2020a). The Ethics Guidelines for Trustworthy AI.
       Abgerufen von
-      https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai. <br></br>
+      https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai.
+      <br></br>
       European Commission. (2020b). The EU AI Act: Regulatory framework proposal
       for Artificial Intelligence. Abgerufen von
       https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206.
@@ -841,10 +850,64 @@ const Fazit = [
   /* Section 1 */
   <ChapterHeader text={"Fazit"} number={5} />,
   <section>
-    zweiter Bereich Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-    ipsum deserunt incidunt facere molestias possimus reiciendis omnis officiis
-    voluptas excepturi, minima aliquam maxime. Eos voluptates deleniti vel quia
-    saepe quod.
+    <p>
+      In diesem Abschnitt finden Sie nun noch einige interaktive Möglichkeiten
+      das gelernte zu überprüfen, sowie ein kurzes Diskussionsvideo zur Rolle
+      des EU AI Acts mit Blick auf die Anforderungen an gemeinwohlorientierte
+      Organisationen. Nehmen Sie sich ein paar Minuten Zeit, um das Video zu
+      schauen und Ihr Wissen zu überprüfen.
+    </p>
+  </section>,
+  <section id="diskussion">
+    <VideoContainer
+      link={
+        "https://www.youtube-nocookie.com/embed/PZAkt-EuKn0?si=g-hnbptFXBW6kajx&amp;rel=0&amp;modestbranding=1"
+      }
+      title={"Diskussion"}
+    />
+  </section>,
+  <section id="Lernüberprüfung">
+    <h2>Lernüberprüfung</h2>
+    <p>
+      Nachdem Sie sich jetzt mit unseren Texten in Abschnitt 1 bis 4, sowie dem
+      Diskussionsvideo auseinandergesetzt haben, können sie nun ihr Wissen
+      prüfen. In den beiden folgenden Abschnitten finden Sie ein Lernspiel, dass
+      es Ihnen erlaubt an drei praktischen Beispielen selbst zu beurteilen, ob
+      eine gezeigte App den Anforderungen des EU AI Acts entspricht oder nicht.
+    </p>
+    <p>
+      Darüber hinaus finden Sie ein Quiz, dass Ihnen in drei Kategorien (Der EU
+      Ai Act, In der Praxis und Internation) Fragen zum EU AI Act und dessen
+      Anforderungen stellt.
+    </p>
+  </section>,
+  <section>
+    <h2>Lernspiel praktische Anwendung</h2>
+    {/* TODO: update CSS */}
+    <div
+      style={{
+        border: "0",
+        width: "100%",
+        marginTop: 0,
+        borderRadius: "20px",
+      }}
+    >
+      <DosAndDonts />
+    </div>
+  </section>,
+  <section>
+    <h2>Quiz zur Selbstüberprüfung</h2>
+    {/* TODO: correct link and styles */}
+    <iframe
+      src={"https://hkuswik.github.io/quiz_uxfuerki_ba/"}
+      title={"Interaktive Website für Quizfragen für die UX von KI"}
+      className="w-4/5"
+      allowFullScreen
+      style={{
+        width: "100%",
+        borderRadius: "20px",
+      }}
+    ></iframe>
   </section>,
 ];
 

@@ -3,6 +3,7 @@ import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import { Risikostufen } from "../Risikostufen";
 import DosAndDonts from "../dosdonts/DosAndDonts";
+import Timeline from "../Timeline";
 
 /*
 Ein Eintrag pro array ist ein Abschnitt (eine Hintergrund-Farbe)
@@ -48,7 +49,9 @@ const Einleitung = [
       entwickelte, sondern auch große Teile des parlamentarischen EU-Apparats
       durchlaufen hat.
     </p>
-    <h2> Komponent: Timeline </h2>
+    <div className="w-full h-96 flex justify-center items-center my-10 p-1 bg-lightText rounded-xl">
+      <Timeline />
+    </div>
     <p>
       Eine vollständige Übersicht des zeitlichen Verlaufs des
       Gestaltungsprozesses und der damit verbundenen Institutionen und
@@ -884,14 +887,7 @@ const Fazit = [
   <section>
     <h2>Lernspiel praktische Anwendung</h2>
     {/* TODO: update CSS */}
-    <div
-      style={{
-        border: "0",
-        width: "100%",
-        marginTop: 0,
-        borderRadius: "20px",
-      }}
-    >
+    <div className="w-full rounded-xl">
       <DosAndDonts />
     </div>
   </section>,
@@ -901,12 +897,8 @@ const Fazit = [
     <iframe
       src={"https://hkuswik.github.io/quiz_uxfuerki_ba/"}
       title={"Interaktive Website für Quizfragen für die UX von KI"}
-      className="w-4/5"
+      className="w-full rounded-xl"
       allowFullScreen
-      style={{
-        width: "100%",
-        borderRadius: "20px",
-      }}
     ></iframe>
   </section>,
 ];

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import MainPage from "./components/pages/MainPage";
+import Home from "./components/pages/Home";
+import ModulePage from "./components/pages/ModulePage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { AppProvider } from "./AppContext";
@@ -25,20 +26,20 @@ function App() {
 
   return (
     <div className="App">
-      <AppProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <AppProvider>
           <Header />
           <main className="flex flex-col">
             <Routes>
-              <Route index element={<MainPage />} />
-              <Route path=":module" element={<MainPage />} />
+              <Route index element={<Home />} />
+              <Route path=":module" element={<ModulePage />} />
               <Route path=":module/:subtopicId" element={<TextLayout />} />
             </Routes>
             {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}
           </main>
           <Footer />
-        </BrowserRouter>
-      </AppProvider>
+        </AppProvider>
+      </BrowserRouter>
     </div>
   );
 }

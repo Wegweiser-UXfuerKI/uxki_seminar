@@ -23,11 +23,11 @@
 :root {
   --bg: #77d1cb;
   --pink: #d177b3;
-  --rosa: #C177D1;
+  --rosa: #c177d1;
   --purple: #8377d1;
-  --blue: #77A9D1;
+  --blue: #77a9d1;
   --white: #f1f0f4;
-  --grey: #54506A;
+  --grey: #54506a;
   --dark: #292734;
   --whiteHover: #d4d2dd;
 }
@@ -56,7 +56,6 @@
   background-color: var(--grey);
 }
 
-
 /* General */
 * {
   font-family: "CustomOpenSans", sans-serif;
@@ -78,7 +77,7 @@
 /* Layout */
 header,
 footer,
-.Mainpage,
+.Modulepage,
 .SubTopicPage {
   width: 100%;
 }
@@ -247,7 +246,6 @@ a {
 
 /* responsive */
 @media screen and (max-width: 600px) {
-
   .text,
   header {
     margin: 0px 40px 100px 40px;

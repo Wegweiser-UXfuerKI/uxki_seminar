@@ -16,7 +16,7 @@ export default function TimelineYear({ year, color, dates, isActive }) {
 
   return (
     <div className="w-full h-full absolute left-0 right-0 flex overflow-hidden">
-      <div className="min-w-[200px] max-w-[200px] flex items-end">
+      <div className="min-w-[220px] max-w-[200px] flex items-end">
         <div className="year font-bold text-lightText w-full h-full" style={{ lineHeight: "1.7"}}>{year}</div>
       </div>
       <div className="w-full h-full relative flex flex-col justify-evenly overflow-hidden">

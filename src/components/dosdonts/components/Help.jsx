@@ -59,7 +59,7 @@ function Help() {
         className='help flex justify-center items-center gap-x-1'
         aria-label='Hilfe-Button'
       >
-        <h2 className="text-inherit">Hilfe</h2>
+        <h3 className="text-inherit mt-0 mb-0">Hilfe</h3>
         <img id='expand-arrow' src={expandIcon} className='w-[24px]' aria-label='Ausklappbar' />
       </button>
     </>

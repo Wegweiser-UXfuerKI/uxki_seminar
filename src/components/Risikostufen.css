@@ -1,49 +1,49 @@
 /* left polygons */
-.clip-triangle-one {
+.clip-triangle-1 {
   clip-path: polygon(0 0, 15% 0, 20% 100%, 0% 100%);
   background-color: #77d1cb;
 }
 
-.clip-triangle-two {
+.clip-triangle-2 {
   clip-path: polygon(0 0, 20% 0, 25% 100%, 0% 100%);
   background-color: #8377d1;
 }
 
-.clip-triangle-three {
+.clip-triangle-3 {
   clip-path: polygon(0 0, 25% 0, 30% 100%, 0% 100%);
   background-color: #bc6ba1;
 }
 
-.clip-triangle-four {
+.clip-triangle-4 {
   clip-path: polygon(0 0, 30% 0, 35% 100%, 0% 100%);
   background-color: #d177b3;
 }
 
 /* right polygons */
-.clip-text-triangle-one {
+.clip-text-triangle-1 {
   clip-path: polygon(20% 0, 100% 0, 100% 100%, 25% 100%);
   background-color: #77d1cb;
 }
 
-.clip-text-triangle-two {
+.clip-text-triangle-2 {
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 30% 100%);
   background-color: #8377d1;
 }
 
-.clip-text-triangle-three {
+.clip-text-triangle-3 {
   clip-path: polygon(30% 0, 100% 0, 100% 100%, 35% 100%);
   background-color: #bc6ba1;
 }
 
-.clip-text-triangle-four {
+.clip-text-triangle-4 {
   clip-path: polygon(35% 0, 100% 0, 100% 100%, 40% 100%);
   background-color: #d177b3;
 }
 
-.clip-text-triangle-one,
-.clip-text-triangle-two,
-.clip-text-triangle-three,
-.clip-text-triangle-four {
+.clip-text-triangle-1,
+.clip-text-triangle-2,
+.clip-text-triangle-3,
+.clip-text-triangle-4 {
   transition: left 0.5s ease-in-out;
   position: absolute;
   top: 0;
@@ -54,7 +54,7 @@
   left: 0;
 }
 
-.trennbereich-one {
+.trennbereich-1 {
   position: absolute;
   width: 100%;
   height: 5px;
@@ -63,7 +63,7 @@
   z-index: 3;
 }
 
-.trennbereich-one::before {
+.trennbereich-1::before {
   content: "";
   position: absolute;
   top: 0;
@@ -75,7 +75,7 @@
   z-index: 2;
 }
 
-.trennbereich-one::after {
+.trennbereich-1::after {
   content: "";
   position: absolute;
   top: 0;
@@ -87,7 +87,7 @@
   z-index: 2;
 }
 
-.trennbereich-two {
+.trennbereich-2 {
   position: absolute;
   width: 100%;
   height: 5px;
@@ -96,7 +96,7 @@
   z-index: 3;
 }
 
-.trennbereich-two::before {
+.trennbereich-2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -108,7 +108,7 @@
   z-index: 2;
 }
 
-.trennbereich-two::after {
+.trennbereich-2::after {
   content: "";
   position: absolute;
   top: 0;
@@ -120,7 +120,7 @@
   z-index: 2;
 }
 
-.trennbereich-three {
+.trennbereich-3 {
   position: absolute;
   width: 100%;
   height: 5px;
@@ -129,7 +129,7 @@
   z-index: 3;
 }
 
-.trennbereich-three::before {
+.trennbereich-3::before {
   content: "";
   position: absolute;
   top: 0;
@@ -141,7 +141,7 @@
   z-index: 2;
 }
 
-.trennbereich-three::after {
+.trennbereich-3::after {
   content: "";
   position: absolute;
   top: 0;

@@ -11,7 +11,7 @@ const Einleitung = {
   linkName: "einleitung",
   name: "Einleitung",
   description:
-    "Dieses Kapitel beschäftigt sich damit was der EU AI Act im allgemeinen ist, was die Ziele sind und wie in anderen Ländern gehandelt wird.",
+    "Dieses Kapitel beschäftigt sich damit, was der EU AI Act im Allgemeinen ist, was die Ziele sind und wie in anderen Ländern gehandelt wird.",
   content: [
     /* Section 1 */
     <ChapterHeader text={"Einleitung"} number={1} />,
@@ -247,7 +247,7 @@ const RisikostufenAnwendungsbeispiele = {
   linkName: "risikostufen-anwendungsbeispiele",
   name: "Risikostufen - Anwendungsbeispiele",
   description:
-    "Hier werden mögliche Anwendungen beispielhaft betrachtet, welche Auswirkungen der AU AI Act auf diese hat.",
+    "Hier werden mögliche Anwendungen beispielhaft betrachtet und welche Auswirkungen der EU AI Act auf diese hat.",
   content: [
     /* Section 1 */
     <ChapterHeader text={"Risikostufen - Anwendungsbeispiele"} number={2} />,
@@ -909,7 +909,7 @@ const Fazit = {
   linkName: "fazit",
   name: "Fazit",
   description:
-    "Zum schluss findet ein kleiner Diskurs statt und die gelernten Inhalte können interaktiv überprüft werden.",
+    "Zum Schluss findet ein kleiner Diskurs statt und die gelernten Inhalte können interaktiv überprüft werden.",
   content: [
     /* Section 1 */
     <ChapterHeader text={"Fazit"} number={5} />,

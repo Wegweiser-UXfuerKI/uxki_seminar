@@ -22,21 +22,25 @@ export const ChapterSwitch = () => {
   };
 
   return (
-    <section className="flex justify-between mb-4">
-      {prevChapterLink && (
-        <Link
-          to={`/${selectedModuleLink}/${prevChapterLink}`}
-          onClick={handleNavigation}>
-          Vorheriges Kapitel
-        </Link>
-      )}
-      {nextChapterLink && (
-        <Link
-          to={`/${selectedModuleLink}/${nextChapterLink}`}
-          onClick={handleNavigation}>
-          Nächstes Kapitel
-        </Link>
-      )}
+    <section className="flex justify-between">
+      <div className="w-1/2">
+        {prevChapterLink && (
+          <Link
+            to={`/${selectedModuleLink}/${prevChapterLink}`}
+            onClick={handleNavigation}>
+            Vorheriges Kapitel
+          </Link>
+        )}
+      </div>
+      <div className="w-1/2 flex justify-end">
+        {nextChapterLink && (
+          <Link
+            to={`/${selectedModuleLink}/${nextChapterLink}`}
+            onClick={handleNavigation}>
+            Nächstes Kapitel
+          </Link>
+        )}
+      </div>
     </section>
   );
 };

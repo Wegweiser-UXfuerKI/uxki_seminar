@@ -31,7 +31,8 @@ const SubTopic = ({ topicName, link, description, number }) => {
             {topicName}
           </h2>
         </div>
-        <div className="text-black px-[33px] w-full textSize">
+        {/* FIXME: text size */}
+        <div className="text-black px-[33px] w-full text-[16px]">
           {description}
         </div>
       </Link>

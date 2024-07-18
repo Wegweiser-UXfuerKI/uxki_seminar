@@ -4,6 +4,8 @@ import { VideoContainer } from "../texts/VideoContainer";
 import { Risikostufen } from "../Risikostufen";
 import DosAndDonts from "../dosdonts/DosAndDonts";
 import Timeline from "../Timeline";
+import { GraphicContainer } from "../GraphicContainer";
+import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.png";
 
 const Einleitung = {
   linkName: "einleitung",
@@ -409,6 +411,27 @@ const RisikostufenAnwendungsbeispiele = {
         eigene Idee einfach mal auf
         https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/
         oder mit einem klick auf die unten befindene Einbindung auszuprobieren.
+        <a
+          href="https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/"
+          style={{ position: "relative", display: "inline-block" }}
+          className="rounded-xl overflow-hidden"
+          target="_blank"
+          rel="noopener noreferrer">
+          <GraphicContainer
+            type={"image"}
+            src={ComlianceCheckerImg}
+            altText={"EU AI Compliance-Checker Startseite"}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            className="bg-black bg-opacity-15 hover:bg-opacity-20"></div>
+        </a>
       </p>
       <h3>Componente EU AI Act Compliance Checker</h3>
       <p>

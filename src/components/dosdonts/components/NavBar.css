@@ -53,6 +53,7 @@
 
 #website-title {
   font-size: var(--fs-xl);
+  color: var(--grey-1);
 }
 
 @media (max-width: 450px) {

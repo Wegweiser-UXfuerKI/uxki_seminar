@@ -4,14 +4,14 @@ import { ChapterSwitch } from "./ChapterSwitch";
 import { getSubtopicContentByLink } from "./ContentHandler";
 
 export const TextLayout = () => {
-  const { selectedModuleLink, selectedSubtopic } = useContext(AppContext);
+  const { selectedModuleLink, selectedSubtopicLink } = useContext(AppContext);
   const [subtopicContent, setSubtopicContent] = useState(null);
 
   useEffect(() => {
     setSubtopicContent(
-      getSubtopicContentByLink(selectedModuleLink, selectedSubtopic)
+      getSubtopicContentByLink(selectedModuleLink, selectedSubtopicLink)
     );
-  }, [selectedModuleLink, selectedSubtopic]);
+  }, [selectedModuleLink, selectedSubtopicLink]);
 
   useEffect(() => {
     console.log("subtopic Content: ", subtopicContent);

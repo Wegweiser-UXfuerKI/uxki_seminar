@@ -12,7 +12,12 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [navOpen, setNavOpen] = useState(false);
 
-  const { selectedModuleLink, selectedModuleName } = useContext(AppContext);
+  const {
+    selectedModuleLink,
+    selectedModuleName,
+    selectedSubtopicLink,
+    selectedSubtopicName,
+  } = useContext(AppContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -73,18 +78,23 @@ const Header = () => {
       </div>
       <nav className="flex items-center">
         <Link to="/">Kursübersicht</Link>
-        <RightArrow />
-        <Link to={`/${selectedModuleLink}`} className="active">
-          {selectedModuleName}
-        </Link>
-        {topicName !== "undefined" && (
-          // should be moved to new link system
-          <div className="flex items-center">
+        {selectedModuleName && (
+          <>
             <RightArrow />
-            <Link to={location.pathname} className="active">
-              {topicName}
+            <Link to={`/${selectedModuleLink}`} className="active">
+              {selectedModuleName}
             </Link>
-          </div>
+            {selectedSubtopicName && (
+              <>
+                <RightArrow />
+                <Link
+                  to={`/${selectedModuleLink}/${selectedSubtopicLink}`}
+                  className="active">
+                  {selectedSubtopicName}
+                </Link>
+              </>
+            )}
+          </>
         )}
       </nav>
     </header>

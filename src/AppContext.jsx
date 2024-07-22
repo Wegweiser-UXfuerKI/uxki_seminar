@@ -4,6 +4,7 @@ import {
   getModuleLinks,
   getModuleNameByLink,
   getSubtopicByLink,
+  getSubtopicNameByLink,
 } from "./components/ContentHandler";
 
 const AppContext = createContext();
@@ -11,7 +12,8 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [selectedModuleLink, setSelectedModuleLink] = useState(null);
   const [selectedModuleName, setSelectedModuleName] = useState(null);
-  const [selectedSubtopic, setSelectedSubtopic] = useState(null);
+  const [selectedSubtopicLink, setSelectedSubtopicLink] = useState(null);
+  const [selectedSubtopicName, setSelectedSubtopicName] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -28,15 +30,20 @@ const AppProvider = ({ children }) => {
       if (subtopicLink) {
         const subtopic = getSubtopicByLink(module, subtopicLink);
         if (subtopic) {
-          setSelectedSubtopic(subtopicLink);
+          setSelectedSubtopicLink(subtopicLink);
+          const subtopicName = getSubtopicNameByLink(module, subtopicLink);
+          setSelectedSubtopicName(subtopicName);
         } else {
           navigate(`/${module}`);
         }
       } else {
-        setSelectedSubtopic(null);
+        setSelectedSubtopicLink(null);
+        setSelectedSubtopicName(null);
       }
     } else {
       navigate("/");
+      setSelectedModuleLink(null);
+      setSelectedModuleName(null);
     }
   }, [location.pathname, navigate]);
 
@@ -44,8 +51,9 @@ const AppProvider = ({ children }) => {
     selectedModuleLink,
     selectedModuleName,
     setSelectedModuleLink,
-    selectedSubtopic,
-    setSelectedSubtopic,
+    selectedSubtopicLink,
+    setSelectedSubtopicLink,
+    selectedSubtopicName,
   };
 
   return (

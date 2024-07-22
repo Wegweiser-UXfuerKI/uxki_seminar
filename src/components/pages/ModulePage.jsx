@@ -4,14 +4,16 @@ import { AppContext } from "../../AppContext";
 import { getSubtopicData } from "../ContentHandler";
 
 const ModulePage = () => {
-  const { selectedModuleLink } = useContext(AppContext);
+  const { selectedModuleLink, selectedModuleName } = useContext(AppContext);
 
   const subtopicData = getSubtopicData(selectedModuleLink);
   console.log(subtopicData);
 
   return (
     <div className="Modulepage flex flex-col items-center">
-      <h1 className="mainTitle text-center mt-24 mb-16">Wegweiser UX für KI</h1>
+      <h1 className="mainTitle text-center mt-24 mb-16">
+        {selectedModuleName}
+      </h1>
       <div className="flex justify-center flex-wrap max-w-screen-xl mb-24">
         {subtopicData &&
           subtopicData.map((subtopic, index) => (

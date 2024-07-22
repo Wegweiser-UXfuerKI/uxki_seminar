@@ -4,18 +4,18 @@ import { getPreviousSubtopicLink, getNextSubtopicLink } from "./ContentHandler";
 import { Link } from "react-router-dom";
 
 export const ChapterSwitch = () => {
-  const { selectedModuleLink, selectedSubtopic } = useContext(AppContext);
+  const { selectedModuleLink, selectedSubtopicLink } = useContext(AppContext);
   const [prevChapterLink, setPrevChapterLink] = useState(null);
   const [nextChapterLink, setNextChapterLink] = useState(null);
 
   useEffect(() => {
     setPrevChapterLink(
-      getPreviousSubtopicLink(selectedModuleLink, selectedSubtopic)
+      getPreviousSubtopicLink(selectedModuleLink, selectedSubtopicLink)
     );
     setNextChapterLink(
-      getNextSubtopicLink(selectedModuleLink, selectedSubtopic)
+      getNextSubtopicLink(selectedModuleLink, selectedSubtopicLink)
     );
-  }, [selectedModuleLink, selectedSubtopic]);
+  }, [selectedModuleLink, selectedSubtopicLink]);
 
   const handleNavigation = () => {
     window.scrollTo(0, 0);

@@ -27,6 +27,13 @@ export function getSubtopicLinksByModule(moduleLink) {
   return module.content.map((entry) => entry.linkName);
 }
 
+// gets the name of a subtopic
+export function getSubtopicNameByLink(moduleLink, subtopicLink) {
+  const content = getSubtopicContentByLink(moduleLink, subtopicLink);
+  if (!content) return null;
+  return content.name;
+}
+
 // gets a subtopic from a module with th subtopics link
 export function getSubtopicByLink(moduleLink, subtopicLink) {
   const module = getModuleByLink(moduleLink);

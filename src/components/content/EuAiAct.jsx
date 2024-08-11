@@ -6,6 +6,7 @@ import DosAndDonts from "../dosdonts/DosAndDonts";
 import Timeline from "../Timeline";
 import { GraphicContainer } from "../GraphicContainer";
 import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.png";
+import Quiz from "../quizUX/components/Quiz";
 
 const Einleitung = {
   linkName: "einleitung",
@@ -956,11 +957,7 @@ const Fazit = {
     <section>
       <h2>Quiz zur Selbstüberprüfung</h2>
       {/* TODO: correct link and styles */}
-      <iframe
-        src={"https://hkuswik.github.io/quiz_uxfuerki_ba/"}
-        title={"Interaktive Website für Quizfragen für die UX von KI"}
-        className="w-full rounded-xl"
-        allowFullScreen></iframe>
+      <Quiz />
     </section>,
   ],
 };

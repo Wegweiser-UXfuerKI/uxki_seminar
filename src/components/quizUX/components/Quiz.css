@@ -1,0 +1,208 @@
+/* styles for main Quiz component */
+.Quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 95%;
+}
+
+.svg-container {
+  margin-top: 125px;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+}
+
+svg#board {
+  width: 100%;
+  height: 100%;
+}
+
+.help-btn {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  border-radius: 100%;
+  background-color: #d4d2dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* general styles, reusable */
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.img-container {
+  overflow: hidden;
+}
+
+.pink {
+  color: #d177b3;
+  font-weight: 700;
+}
+
+.lila {
+  color: #8377d1;
+  font-weight: 700;
+}
+
+.türkis {
+  color: #77d1cb;
+  font-weight: 700;
+}
+
+.circle-active-hover {
+  stroke-dasharray: none;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-self: center;
+  padding: 10px;
+  align-items: center;
+  cursor: default;
+}
+
+.header-bg {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  height: 125px;
+  background-color: #2d2c36;
+  width: 100%;
+  justify-content: center;
+}
+
+#header-logo {
+  height: 96px;
+}
+
+#all-quest {
+  height: 80px;
+}
+
+/* Header: Progress Bar */
+.progress-bar {
+  display: flex;
+  height: 25px;
+  width: 250px;
+  background-color: #54506a;
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.progress-section {
+  width: 82px;
+  height: 100%;
+  background-color: #d4d2dd;
+  display: grid;
+}
+
+.progress {
+  grid-column: 1;
+  grid-row: 1;
+  transition: width 0.3s ease;
+}
+
+/* Popup */
+.popup-size {
+  padding: 20px;
+  height: 80vh;
+  width: 60vw;
+  max-width: 1000px;
+}
+
+#close-btn {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+/* Matching Exercise */
+.drop-container {
+  margin-bottom: 15px;
+  padding: 2px;
+}
+
+/* smaller pc screens */
+@media screen and (max-width: 1500px) {
+  .header-bg {
+    height: 69px;
+  }
+
+  #header-logo {
+    height: 60px;
+  }
+
+  #all-quest {
+    height: 60px;
+    border-width: 1px;
+  }
+
+  .svg-container {
+    margin-top: 69px;
+  }
+
+  .popup-size {
+    padding: 10px;
+    height: 90vh;
+    width: 70vw;
+  }
+
+  #close-btn {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .drop-container {
+    margin: 5px;
+    padding: 1px;
+  }
+}
+
+/* Tip Joker */
+.speech-bubble {
+  position: relative;
+  background: #d4d2dd;
+  border-radius: 90px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: 2%;
+  left: 30%;
+  width: 0;
+  height: 0;
+  border: 38px solid transparent;
+  border-top-color: #d4d2dd;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -19px;
+  margin-bottom: -38px;
+}

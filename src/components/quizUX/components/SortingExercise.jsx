@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import QuizContext from "./QuizContext";
 import check_btn from "../../../assets/quizUX/images/überprüfen_btn.png";
+import styles from "./Quiz.module.css";
 
 // popup content when exercise is of type 'sort'
 const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
@@ -140,7 +141,9 @@ const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
 
   return (
     <div className="flex flex-col h-full w-full justify-around">
-      <div className="font-semibold cursor-default">{exercise.question}</div>
+      <div className="font-semibold cursor-default text-black">
+        {exercise.question}
+      </div>
       <div className="flex flex-col">
         {Object.keys(userSelections).map((item) => (
           <div
@@ -154,6 +157,7 @@ const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
                 onClick={() => handleButtonClick(item, firstCategory)}
                 onMouseOver={() => handleBtnHover(item, firstCategory)}
                 onMouseLeave={() => handleBtnLeave(firstCategory)}
+                className="text-black"
                 style={{
                   ...button_style,
                   ...(userSelections[item] === firstCategory
@@ -192,6 +196,7 @@ const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
                 onClick={() => handleButtonClick(item, secondCategory)}
                 onMouseOver={() => handleBtnHover(item, secondCategory)}
                 onMouseLeave={() => handleBtnLeave(secondCategory)}
+                className="text-black"
                 style={{
                   ...button_style,
                   ...(userSelections[item] === secondCategory
@@ -240,11 +245,9 @@ const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
         {!checkClicked && (
           <div
             onClick={() => checkAnswer()}
-            className={
-              allSelected
-                ? "img-container cursor-pointer hover:opacity-80"
-                : "img-container opacity-40"
-            }>
+            className={`${styles.img_container} ${
+              allSelected ? "cursor-pointer hover:opacity-80" : "opacity-40"
+            }`}>
             <img src={check_btn} className="w-28" alt="Überprüfen Button" />
           </div>
         )}
@@ -269,6 +272,7 @@ const item_style = {
   alignItems: "center",
   width: "80%",
   padding: "5px 10px 5px 15px",
+  color: "black",
 };
 
 const button_style = {

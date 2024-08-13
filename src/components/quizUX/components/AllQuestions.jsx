@@ -3,6 +3,7 @@ import QuizContext from "./QuizContext";
 import quizData from "../data/Quizinhalte_Testseminar.json";
 import arrow_left from "../../../assets/quizUX/images/arrow_left.png";
 import arrow_right from "../../../assets/quizUX/images/arrow_right.png";
+import styles from "./Quiz.module.css";
 
 // popup content that displays all exercises with their solutions
 const AllQuestions = () => {
@@ -177,19 +178,21 @@ const AllQuestions = () => {
           <h5 style={{ color: getColor(exercise.topic) }}>{exercise.topic}</h5>
         </div>
         <div className="flex row justify-self-center">
-          <div className="img-container flex flex-col h-full justify-center">
+          <div
+            className={`${styles.img_container} flex flex-col h-full justify-center`}>
             <img
               src={arrow_left}
               onClick={() => handleLeftClick()}
-              className="h-10 hover:opacity-70 cursor-pointer mr-3"
+              className={`${styles.image} h-10 hover:opacity-70 cursor-pointer mr-3`}
               alt="Pfeil nach links"
             />
           </div>
-          <div className="img-container flex flex-col h-full justify-center">
+          <div
+            className={`${styles.img_container} flex flex-col h-full justify-center`}>
             <img
               src={arrow_right}
               onClick={() => handleRightClick()}
-              className="h-10 hover:opacity-70 cursor-pointer"
+              className={`${styles.image} h-10 hover:opacity-70 cursor-pointer`}
               alt="Pfeil nach rechts"
             />
           </div>

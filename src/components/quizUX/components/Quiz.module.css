@@ -6,10 +6,11 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  max-width: 95%;
+  position: relative;
+  border: 2px solid red;
 }
 
-.svg-container {
+.svg_container {
   margin-top: 125px;
   display: flex;
   justify-self: center;
@@ -26,7 +27,7 @@ svg#board {
   height: 100%;
 }
 
-.help-btn {
+.help_btn {
   width: 60px;
   height: 60px;
   position: absolute;
@@ -41,12 +42,12 @@ svg#board {
 }
 
 /* general styles, reusable */
-img {
+.image {
   max-width: 100%;
   max-height: 100%;
 }
 
-.img-container {
+.img_container {
   overflow: hidden;
 }
 
@@ -65,7 +66,7 @@ img {
   font-weight: 700;
 }
 
-.circle-active-hover {
+.circle_active_hover {
   stroke-dasharray: none;
 }
 
@@ -81,8 +82,8 @@ img {
   cursor: default;
 }
 
-.header-bg {
-  position: fixed;
+.header_bg {
+  position: absolute;
   top: 0;
   display: flex;
   flex-direction: row;
@@ -92,16 +93,16 @@ img {
   justify-content: center;
 }
 
-#header-logo {
+.header_logo {
   height: 96px;
 }
 
-#all-quest {
+#all_quest {
   height: 80px;
 }
 
 /* Header: Progress Bar */
-.progress-bar {
+.progress_bar {
   display: flex;
   height: 25px;
   width: 250px;
@@ -111,7 +112,7 @@ img {
   justify-content: space-between;
 }
 
-.progress-section {
+.progress_section {
   width: 82px;
   height: 100%;
   background-color: #d4d2dd;
@@ -125,62 +126,62 @@ img {
 }
 
 /* Popup */
-.popup-size {
+.popup_size {
   padding: 20px;
-  height: 80vh;
-  width: 60vw;
+  height: 85%;
+  width: 85%;
   max-width: 1000px;
 }
 
-#close-btn {
+.close_btn {
   font-size: 30px;
   line-height: 35px;
 }
 
 /* Matching Exercise */
-.drop-container {
+.drop_container {
   margin-bottom: 15px;
   padding: 2px;
 }
 
 /* smaller pc screens */
 @media screen and (max-width: 1500px) {
-  .header-bg {
+  .header_bg {
     height: 69px;
   }
 
-  #header-logo {
+  .header_logo {
     height: 60px;
   }
 
-  #all-quest {
+  #all_quest {
     height: 60px;
     border-width: 1px;
   }
 
-  .svg-container {
+  .svg_container {
     margin-top: 69px;
   }
 
-  .popup-size {
+  .popup_size {
     padding: 10px;
     height: 90vh;
     width: 70vw;
   }
 
-  #close-btn {
+  #close_btn {
     font-size: 24px;
     line-height: 30px;
   }
 
-  .drop-container {
+  .drop_container {
     margin: 5px;
     padding: 1px;
   }
 }
 
 /* Tip Joker */
-.speech-bubble {
+.speech_bubble {
   position: relative;
   background: #d4d2dd;
   border-radius: 90px;
@@ -192,7 +193,7 @@ img {
   padding: 15px;
 }
 
-.speech-bubble:after {
+.speech_bubble:after {
   content: "";
   position: absolute;
   bottom: 2%;

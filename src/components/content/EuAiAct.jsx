@@ -1,12 +1,12 @@
 import React from "react";
+import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.png";
+import DosAndDonts from "../dosdonts/DosAndDonts";
+import { GraphicContainer } from "../GraphicContainer";
+import QuizContainer from "../quizUX/components/QuizContainer";
+import { Risikostufen } from "../Risikostufen";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
-import { Risikostufen } from "../Risikostufen";
-import DosAndDonts from "../dosdonts/DosAndDonts";
 import Timeline from "../Timeline";
-import { GraphicContainer } from "../GraphicContainer";
-import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.png";
-import Quiz from "../quizUX/components/Quiz";
 
 const Einleitung = {
   linkName: "einleitung",
@@ -957,7 +957,7 @@ const Fazit = {
     <section>
       <h2>Quiz zur Selbstüberprüfung</h2>
       {/* TODO: correct link and styles */}
-      <Quiz />
+      <QuizContainer />
     </section>,
   ],
 };

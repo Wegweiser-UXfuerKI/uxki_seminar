@@ -8,6 +8,7 @@ import Disclaimer from "./Disclaimer";
 import soundOnIcon from "../../../assets/quizUX/images/soundOn.png";
 import soundOffIcon from "../../../assets/quizUX/images/soundOff.png";
 import Review from "./Review";
+import styles from "./Quiz.module.css";
 
 // empty popup component that renders all popup types
 const Popup = ({
@@ -131,13 +132,13 @@ const Popup = ({
     <div style={popupContainer} onClick={onClose}>
       <div
         style={{ ...popupContent, background: bgColor }}
-        className="popup-size"
+        className={styles.popup_size}
         onClick={handlePopupClick}>
         <div className="flex row justify-between mr-1 ml-1">
           {soundOn && isExercise && (
             <div
               onClick={onSoundClick}
-              className="img-container hover:opacity-80 cursor-pointer">
+              className={`${styles.img_container} hover:opacity-80 cursor-pointer`}>
               <img
                 src={soundOnIcon}
                 className="h-5 mt-1"
@@ -148,7 +149,7 @@ const Popup = ({
           {!soundOn && isExercise && (
             <div
               onClick={onSoundClick}
-              className="img-container hover:opacity-80 cursor-pointer">
+              className={`${styles.img_container} hover:opacity-80 cursor-pointer`}>
               <img
                 src={soundOffIcon}
                 className="h-5 mt-1"
@@ -159,8 +160,7 @@ const Popup = ({
           {!isExercise && <div></div>}
           <div
             onClick={onClose}
-            id="close-btn"
-            className="font-medium cursor-pointer hover:opacity-80">
+            className={`${styles.close_btn} font-medium cursor-pointer hover:opacity-80`}>
             X
           </div>
         </div>
@@ -174,14 +174,12 @@ const Popup = ({
 // styles
 const popupContainer = {
   background: "rgba(0, 0, 0, 0.5)",
-  position: "fixed",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "100%",
+  position: "absolute",
+  inset: "0 0 0 0",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  border: "2px solid green",
 };
 
 const popupContent = {

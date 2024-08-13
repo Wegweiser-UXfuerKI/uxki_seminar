@@ -3,6 +3,7 @@ import MatchingExercise from "./MatchingExercise";
 import SortingExercise from "./SortingExercise";
 import arrow_left from "../../../assets/quizUX/images/arrow_left.png";
 import arrow_right from "../../../assets/quizUX/images/arrow_right.png";
+import styles from "./Quiz.module.css";
 
 // component that displays an already answered exercise and uses respective component of current exercise type
 const Review = ({ reviewContent, onReviewClick }) => {
@@ -43,7 +44,8 @@ const Review = ({ reviewContent, onReviewClick }) => {
       <div className="flex row justify-between items-center ml-2 relative bottom-0">
         <h4 className="w-20">{exerciseNr}/24</h4>
         <div className="flex row justify-self-center">
-          <div className="img-container flex flex-col h-full justify-center">
+          <div
+            className={`${styles.img_container} flex flex-col h-full justify-center`}>
             <img
               src={arrow_left}
               onClick={() => onReviewClick("left")}
@@ -51,7 +53,8 @@ const Review = ({ reviewContent, onReviewClick }) => {
               alt="Pfeil nach links"
             />
           </div>
-          <div className="img-container flex flex-col h-full justify-center">
+          <div
+            className={`${styles.img_container} flex flex-col h-full justify-center`}>
             <img
               src={arrow_right}
               onClick={() => onReviewClick("right")}

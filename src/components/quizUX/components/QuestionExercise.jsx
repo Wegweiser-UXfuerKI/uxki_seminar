@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import QuizContext from "./QuizContext";
 import check_btn from "../../../assets/quizUX/images/überprüfen_btn.png";
+import styles from "./Quiz.module.css";
 
 // popup content when exercise is of type 'question'
 const QuestionExercise = ({ exercise, onAnswer, answerUser = null }) => {
@@ -135,7 +136,7 @@ const QuestionExercise = ({ exercise, onAnswer, answerUser = null }) => {
             <div
               key={index}
               style={answerStyles}
-              className="sm"
+              className="sm text-black"
               onMouseOver={() => handleAnswerHover(answer)}
               onMouseLeave={handleAnswerLeave}
               onClick={() =>
@@ -160,11 +161,9 @@ const QuestionExercise = ({ exercise, onAnswer, answerUser = null }) => {
         {!checkClicked && (
           <div
             onClick={() => checkAnswer(selected)}
-            className={
-              selected !== ""
-                ? "img-container cursor-pointer hover:opacity-80"
-                : "img-container opacity-40"
-            }>
+            className={`${styles.img_container} ${
+              selected !== "" ? "cursor-pointer hover:opacity-80" : "opacity-40"
+            }`}>
             <img src={check_btn} className="w-28" alt="Überprüfen Button" />
           </div>
         )}
@@ -195,6 +194,7 @@ const question_style = {
   justifyContent: "center",
   borderRadius: "8px",
   cursor: "default",
+  color: "black",
 };
 
 const answer_style = {

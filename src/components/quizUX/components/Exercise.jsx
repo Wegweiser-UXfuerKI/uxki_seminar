@@ -12,6 +12,7 @@ import avatarPink from "../../../assets/quizUX/images/avatar_pink.png";
 import correctSound from "../../../assets/quizUX/sound/correct_answer.wav";
 import wrongSound from "../../../assets/quizUX/sound/wrong_answer.mp3";
 import { Tooltip } from "react-tooltip";
+import styles from "./Quiz.module.css";
 
 // popup content for exercises; displays joker column and exercise number and renders specific exercise type
 const Exercise = ({
@@ -152,7 +153,7 @@ const Exercise = ({
       <div className="flex row justify-between" style={{ height: "92%" }}>
         <div className="flex row text-center">
           <div style={joker_col}>
-            <h4 className="mb-1">Joker:</h4>
+            <h4 className="mb-1 text-black">Joker:</h4>
             <p className="mb-4 sm italic" style={{ color: "#696485" }}>
               1 Joker pro Aufgabe
             </p>
@@ -192,7 +193,7 @@ const Exercise = ({
         </div>
       </div>
       <div className="flex row justify-between items-end ml-2 relative bottom-0">
-        <h4>{exerciseNr}/24</h4>
+        <h4 className="text-black">{exerciseNr}/24</h4>
         {checkClicked && (
           <div className="img-container">
             <img
@@ -210,12 +211,13 @@ const Exercise = ({
             <div className="flex row justify-end mr-4 mt-3">
               <div
                 onClick={() => setShowTipPopup(false)}
-                className="relative right-0 text-2xl font-medium cursor-pointer hover:opacity-80">
+                className="relative right-0 text-2xl font-medium cursor-pointer hover:opacity-80 text-black">
                 X
               </div>
             </div>
             <div className="flex row justify-center h-full">
-              <div className="img-container flex flex-col h-full justify-center">
+              <div
+                className={`${styles.img_container} flex flex-col h-full justify-center`}>
                 <img
                   src={tipAvatar}
                   className="h-64 mt-20"
@@ -223,7 +225,7 @@ const Exercise = ({
                 />
               </div>
               <div className="flex flex-col h-full justify-center">
-                <div className="speech-bubble mb-40 -ml-12">
+                <div className={`${styles.speech_bubble} mb-40 -ml-12`}>
                   <p className="text-center sm">{tip}</p>
                 </div>
               </div>

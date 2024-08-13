@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import "./Quiz.css";
+import { useState, useEffect, useContext } from "react";
 import QuizContext from "./QuizContext";
 import quizData from "../data/Quizinhalte_Testseminar.json";
 import feedbackImg from "../../../assets/quizUX/images/feedback.png";
@@ -7,54 +6,55 @@ import Header from "./Header";
 import Popup from "./Popup";
 import swapIcon from "../../../assets/quizUX/images/swap.png";
 import bulbIcon from "../../../assets/quizUX/images/bulb.png";
-
-const topics = ["Der EU AI Act", "International", "In der Praxis"];
-const colors = {
-  pink: "#D177B3",
-  purple: "#8377D1",
-  turquoise: "#77D1CB",
-  correct: "#7AD177",
-  wrong: "#D24141",
-  lightgrey: "#D4D2DD",
-  grey: "#817C9C",
-};
-
-// save all circles in a graph-like structure (directed); with their topic, x and y position (in svg) and what circle is reachable
-const pathGraph = {
-  szenario1: { next: "circle1", topic: "szenario1", x: "150", y: "140" },
-  circle1: { next: "circle2", topic: topics[0], x: "305", y: "170" },
-  circle2: { next: "circle3", topic: topics[0], x: "370", y: "270" },
-  circle3: { next: "circle4", topic: topics[0], x: "290", y: "350" },
-  circle4: { next: "circle5", topic: topics[0], x: "170", y: "390" },
-  circle5: { next: "circle6", topic: topics[0], x: "110", y: "500" },
-  circle6: { next: "circle7", topic: topics[0], x: "140", y: "620" },
-  circle7: { next: "circle8", topic: topics[0], x: "250", y: "690" },
-  circle8: { next: "feedback1", topic: topics[0], x: "380", y: "710" },
-  feedback1: { next: "szenario2", topic: "feedback", x: "496", y: "680" },
-  szenario2: { next: "circle9", topic: "szenario2", x: "660", y: "680" },
-  circle9: { next: "circle10", topic: topics[1], x: "810", y: "650" },
-  circle10: { next: "circle11", topic: topics[1], x: "890", y: "570" },
-  circle11: { next: "circle12", topic: topics[1], x: "850", y: "460" },
-  circle12: { next: "circle13", topic: topics[1], x: "740", y: "400" },
-  circle13: { next: "circle14", topic: topics[1], x: "640", y: "320" },
-  circle14: { next: "circle15", topic: topics[1], x: "630", y: "200" },
-  circle15: { next: "circle16", topic: topics[1], x: "730", y: "150" },
-  circle16: { next: "feedback2", topic: topics[1], x: "860", y: "140" },
-  feedback2: { next: "szenario3", topic: "feedback", x: "992", y: "140" },
-  szenario3: { next: "circle17", topic: "szenario3", x: "1160", y: "150" },
-  circle17: { next: "circle18", topic: topics[2], x: "1310", y: "190" },
-  circle18: { next: "circle19", topic: topics[2], x: "1390", y: "270" },
-  circle19: { next: "circle20", topic: topics[2], x: "1330", y: "370" },
-  circle20: { next: "circle21", topic: topics[2], x: "1210", y: "410" },
-  circle21: { next: "circle22", topic: topics[2], x: "1110", y: "490" },
-  circle22: { next: "circle23", topic: topics[2], x: "1100", y: "620" },
-  circle23: { next: "circle24", topic: topics[2], x: "1190", y: "710" },
-  circle24: { next: "feedback3", topic: topics[2], x: "1310", y: "750" },
-  feedback3: { next: "circle1", topic: "feedback", x: "1430", y: "769" },
-};
+import styles from "./Quiz.module.css";
 
 // main component that handles quiz state and renders quiz board
 const Quiz = () => {
+  const {
+    topics,
+    colors,
+    showPopup,
+    setShowPopup,
+    soundOn,
+    setSoundOn,
+    currentContent,
+    setCurrentContent,
+  } = useContext(QuizContext);
+
+  // save all circles in a graph-like structure (directed); with their topic, x and y position (in svg) and what circle is reachable
+  const pathGraph = {
+    szenario1: { next: "circle1", topic: "szenario1", x: "150", y: "140" },
+    circle1: { next: "circle2", topic: topics[0], x: "305", y: "170" },
+    circle2: { next: "circle3", topic: topics[0], x: "370", y: "270" },
+    circle3: { next: "circle4", topic: topics[0], x: "290", y: "350" },
+    circle4: { next: "circle5", topic: topics[0], x: "170", y: "390" },
+    circle5: { next: "circle6", topic: topics[0], x: "110", y: "500" },
+    circle6: { next: "circle7", topic: topics[0], x: "140", y: "620" },
+    circle7: { next: "circle8", topic: topics[0], x: "250", y: "690" },
+    circle8: { next: "feedback1", topic: topics[0], x: "380", y: "710" },
+    feedback1: { next: "szenario2", topic: "feedback", x: "496", y: "680" },
+    szenario2: { next: "circle9", topic: "szenario2", x: "660", y: "680" },
+    circle9: { next: "circle10", topic: topics[1], x: "810", y: "650" },
+    circle10: { next: "circle11", topic: topics[1], x: "890", y: "570" },
+    circle11: { next: "circle12", topic: topics[1], x: "850", y: "460" },
+    circle12: { next: "circle13", topic: topics[1], x: "740", y: "400" },
+    circle13: { next: "circle14", topic: topics[1], x: "640", y: "320" },
+    circle14: { next: "circle15", topic: topics[1], x: "630", y: "200" },
+    circle15: { next: "circle16", topic: topics[1], x: "730", y: "150" },
+    circle16: { next: "feedback2", topic: topics[1], x: "860", y: "140" },
+    feedback2: { next: "szenario3", topic: "feedback", x: "992", y: "140" },
+    szenario3: { next: "circle17", topic: "szenario3", x: "1160", y: "150" },
+    circle17: { next: "circle18", topic: topics[2], x: "1310", y: "190" },
+    circle18: { next: "circle19", topic: topics[2], x: "1390", y: "270" },
+    circle19: { next: "circle20", topic: topics[2], x: "1330", y: "370" },
+    circle20: { next: "circle21", topic: topics[2], x: "1210", y: "410" },
+    circle21: { next: "circle22", topic: topics[2], x: "1110", y: "490" },
+    circle22: { next: "circle23", topic: topics[2], x: "1100", y: "620" },
+    circle23: { next: "circle24", topic: topics[2], x: "1190", y: "710" },
+    circle24: { next: "feedback3", topic: topics[2], x: "1310", y: "750" },
+    feedback3: { next: "circle1", topic: "feedback", x: "1430", y: "769" },
+  };
+
   const [state, setState] = useState("DEFAULT");
   const [hasStarted, setHasStarted] = useState(false);
   const [completedAtLeastOnce, setCompletedAtLeastOnce] = useState(false);
@@ -64,9 +64,6 @@ const Quiz = () => {
     [topics[1]]: [],
     [topics[2]]: [],
   });
-
-  const [showPopup, setShowPopup] = useState(true);
-  const [soundOn, setSoundOn] = useState(true);
 
   const [activeCircle, setActiveCircle] = useState("szenario1"); // which circle is next
   const [lastClicked, setLastClicked] = useState("");
@@ -80,7 +77,6 @@ const Quiz = () => {
   const [correctCircles, setCorrectCircles] = useState([]); // correctly answered
 
   const [currentTopic, setCurrentTopic] = useState(topics[0]);
-  const [currentContent, setCurrentContent] = useState("start"); // current content for popup
   const [currentExercise, setCurrentExercise] = useState(null); // currently selected exercise
 
   const [jokerMap, setJokerMap] = useState({}); // which joker was used at which circle
@@ -106,30 +102,6 @@ const Quiz = () => {
   const [completedExercises, setCompletedExercises] = useState({});
   const [reviewContent, setReviewContent] = useState(null);
 
-  // save circle names as keys and joker as values to save which were used where
-  const initializeJokerMap = () => {
-    const circleMap = Object.keys(pathGraph)
-      .filter((key) => key.includes("circle"))
-      .reduce((acc, key) => {
-        // acc = accumulator
-        acc[key] = "";
-        return acc;
-      }, {});
-    setJokerMap(circleMap);
-  };
-
-  // save circle names as keys and exercise ids as well as user's answers as values
-  const initializeCompletedExercises = () => {
-    const circleMap = Object.keys(pathGraph)
-      .filter((key) => key.includes("circle"))
-      .reduce((acc, key) => {
-        // acc = accumulator
-        acc[key] = { id: null, answers: [] };
-        return acc;
-      }, {});
-    setCompletedExercises(circleMap);
-  };
-
   useEffect(() => {
     const initializeExercises = () => {
       // save exercises according to topic and randomize order for each topic
@@ -142,10 +114,36 @@ const Quiz = () => {
       setExercises(topicExercises);
     };
 
+    // save circle names as keys and joker as values to save which were used where
+    const initializeJokerMap = () => {
+      const circleMap = Object.keys(pathGraph)
+        .filter((key) => key.includes("circle"))
+        .reduce((acc, key) => {
+          // acc = accumulator
+          acc[key] = "";
+          return acc;
+        }, {});
+      setJokerMap(circleMap);
+    };
+
+    // save circle names as keys and exercise ids as well as user's answers as values
+    const initializeCompletedExercises = () => {
+      const circleMap = Object.keys(pathGraph)
+        .filter((key) => key.includes("circle"))
+        .reduce((acc, key) => {
+          // acc = accumulator
+          acc[key] = { id: null, answers: [] };
+          return acc;
+        }, {});
+      setCompletedExercises(circleMap);
+    };
+
     initializeExercises();
     initializeJokerMap();
     initializeCompletedExercises();
   }, []);
+
+  // load of path graph when topics are loaded
 
   // logic for clicking on a circle
   const handleCircleClick = (circle, isSectionStart = false) => {
@@ -588,7 +586,7 @@ const Quiz = () => {
             }
             stroke={isReachable ? "white" : color}
             className={`${
-              isReachable && isHovered ? "circle-active-hover" : ""
+              isReachable && isHovered ? styles.circle_active_hover : ""
             } ${isSzenario && isHovered ? "opacity-80" : ""}`}
             strokeWidth="2px"
             strokeDasharray={
@@ -667,82 +665,81 @@ const Quiz = () => {
   };
 
   return (
-    <QuizContext.Provider value={{ topics, colors }}>
-      <div className="Quiz">
-        <Header
-          onReset={handleReset}
-          doneInTopic={doneInTopic}
-          correctInTopic={correctInTopic}></Header>
-        <div className="svg-container">
-          <svg id="board" viewBox="0 0 1470 820">
-            <text
-              x={248}
-              y={50}
-              textAnchor="middle"
-              fill={colors.pink}
-              className="h3">
-              {topics[0]}
-            </text>
-            <text
-              x={744}
-              y={50}
-              textAnchor="middle"
-              fill={colors.purple}
-              className="h3">
-              {topics[1]}
-            </text>
-            <text
-              x={1240}
-              y={50}
-              textAnchor="middle"
-              fill={colors.turquoise}
-              className="h3">
-              {topics[2]}
-            </text>
-            <line
-              x1={496}
-              y1={0}
-              x2={496}
-              y2={1000}
-              style={{ stroke: "#2D2C36", strokeWidth: "5px" }}
-            />
-            <line
-              x1={992}
-              y1={0}
-              x2={992}
-              y2={1000}
-              style={{ stroke: "#2D2C36", strokeWidth: "5px" }}
-            />
-            {renderBoard()}
-          </svg>
-        </div>
-        <div
-          onClick={() => handleHelpClick()}
-          className="help-btn hover:opacity-80">
-          <h2 className="cursor-pointer">?</h2>
-        </div>
-        {showPopup && (
-          <Popup
-            onClose={() => setShowPopup(false)}
-            content={currentContent}
-            active={activeCircle}
-            currentTopic={currentTopic}
-            onAnswer={handleAnswer}
-            onUpdate={handleUpdate}
-            onJoker={handleJoker}
-            onRepeat={handleTopicRepeat}
-            jokerUsed={jokerUsed}
-            correctAmount={correctInTopic[currentTopic]}
-            jokerAmount={jokerInTopic[currentTopic]}
-            completedAtLeastOnce={completedAtLeastOnce}
-            soundOn={soundOn}
-            onSoundClick={handleSoundClick}
-            reviewContent={reviewContent}
-            onReviewClick={handleReviewClick}
+    <div className={styles.Quiz}>
+      <Header
+        onReset={handleReset}
+        doneInTopic={doneInTopic}
+        correctInTopic={correctInTopic}></Header>
+      <div className={styles.svg_container}>
+        <svg id="board" viewBox="0 0 1470 820">
+          <text
+            x={248}
+            y={50}
+            textAnchor="middle"
+            fill={colors.pink}
+            className="h3">
+            {topics[0]}
+          </text>
+          <text
+            x={744}
+            y={50}
+            textAnchor="middle"
+            fill={colors.purple}
+            className="h3">
+            {topics[1]}
+          </text>
+          <text
+            x={1240}
+            y={50}
+            textAnchor="middle"
+            fill={colors.turquoise}
+            className="h3">
+            {topics[2]}
+          </text>
+          <line
+            x1={496}
+            y1={0}
+            x2={496}
+            y2={1000}
+            style={{ stroke: "#2D2C36", strokeWidth: "5px" }}
           />
-        )}
+          <line
+            x1={992}
+            y1={0}
+            x2={992}
+            y2={1000}
+            style={{ stroke: "#2D2C36", strokeWidth: "5px" }}
+          />
+          {renderBoard()}
+        </svg>
       </div>
-    </QuizContext.Provider>
+      <div
+        onClick={() => handleHelpClick()}
+        className={`${styles.help_btn} hover:opacity-80`}>
+        <h2 className="cursor-pointer mb-0">?</h2>
+      </div>
+      {showPopup && (
+        <Popup
+          onClose={() => setShowPopup(false)}
+          content={currentContent}
+          active={activeCircle}
+          currentTopic={currentTopic}
+          onAnswer={handleAnswer}
+          onUpdate={handleUpdate}
+          onJoker={handleJoker}
+          onRepeat={handleTopicRepeat}
+          jokerUsed={jokerUsed}
+          correctAmount={correctInTopic[currentTopic]}
+          jokerAmount={jokerInTopic[currentTopic]}
+          completedAtLeastOnce={completedAtLeastOnce}
+          soundOn={soundOn}
+          onSoundClick={handleSoundClick}
+          reviewContent={reviewContent}
+          onReviewClick={handleReviewClick}
+          onReset={handleReset}
+        />
+      )}
+    </div>
   );
 };
 

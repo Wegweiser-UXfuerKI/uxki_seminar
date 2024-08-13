@@ -3,6 +3,7 @@ import QuizContext from "./QuizContext";
 import start_topic1 from "../../../assets/quizUX/images/start_topic1.png";
 import start_topic2 from "../../../assets/quizUX/images/start_topic2.png";
 import start_topic3 from "../../../assets/quizUX/images/start_topic3.png";
+import styles from "./Quiz.module.css";
 
 // popup content when szenario circles are clicked; displays szenario text for current topic
 const Szenario = ({ whichSzenario, onUpdate }) => {
@@ -65,7 +66,7 @@ const Szenario = ({ whichSzenario, onUpdate }) => {
       </div>
       <div
         onClick={() => onUpdate(whichSzenario, topic)}
-        className="img-container self-end mr-4 hover:opacity-85 cursor-pointer">
+        className={`${styles.img_container} self-end mr-4 hover:opacity-85 cursor-pointer`}>
         <img src={button} className="h-20" alt="Abschnitt starten Button" />
       </div>
     </div>

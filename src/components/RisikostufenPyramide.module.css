@@ -1,60 +1,60 @@
 /* left polygons */
-.clip-triangle-1 {
+.clip_triangle_1 {
   clip-path: polygon(0 0, 15% 0, 20% 100%, 0% 100%);
   background-color: #77d1cb;
 }
 
-.clip-triangle-2 {
+.clip_triangle_2 {
   clip-path: polygon(0 0, 20% 0, 25% 100%, 0% 100%);
-  background-color: #8377d1;
+  background-color: #77a9d1;
 }
 
-.clip-triangle-3 {
+.clip_triangle_3 {
   clip-path: polygon(0 0, 25% 0, 30% 100%, 0% 100%);
   background-color: #bc6ba1;
 }
 
-.clip-triangle-4 {
+.clip_triangle_4 {
   clip-path: polygon(0 0, 30% 0, 35% 100%, 0% 100%);
   background-color: #d177b3;
 }
 
 /* right polygons */
-.clip-text-triangle-1 {
+.clip_text_triangle_1 {
   clip-path: polygon(20% 0, 100% 0, 100% 100%, 25% 100%);
   background-color: #77d1cb;
 }
 
-.clip-text-triangle-2 {
+.clip_text_triangle_2 {
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 30% 100%);
-  background-color: #8377d1;
+  background-color: #77a9d1;
 }
 
-.clip-text-triangle-3 {
+.clip_text_triangle_3 {
   clip-path: polygon(30% 0, 100% 0, 100% 100%, 35% 100%);
   background-color: #bc6ba1;
 }
 
-.clip-text-triangle-4 {
+.clip_text_triangle_4 {
   clip-path: polygon(35% 0, 100% 0, 100% 100%, 40% 100%);
   background-color: #d177b3;
 }
 
-.clip-text-triangle-1,
-.clip-text-triangle-2,
-.clip-text-triangle-3,
-.clip-text-triangle-4 {
+.clip_text_triangle_1,
+.clip_text_triangle_2,
+.clip_text_triangle_3,
+.clip_text_triangle_4 {
   transition: left 0.5s ease-in-out;
   position: absolute;
   top: 0;
   left: 100%;
 }
 
-.show-text {
+.show_text {
   left: 0;
 }
 
-.trennbereich-1 {
+.trennbereich_1 {
   position: absolute;
   width: 100%;
   height: 5px;
@@ -63,7 +63,7 @@
   z-index: 3;
 }
 
-.trennbereich-1::before {
+.trennbereich_1::before {
   content: "";
   position: absolute;
   top: 0;
@@ -75,7 +75,7 @@
   z-index: 2;
 }
 
-.trennbereich-1::after {
+.trennbereich_1::after {
   content: "";
   position: absolute;
   top: 0;
@@ -87,7 +87,7 @@
   z-index: 2;
 }
 
-.trennbereich-2 {
+.trennbereich_2 {
   position: absolute;
   width: 100%;
   height: 5px;
@@ -96,7 +96,7 @@
   z-index: 3;
 }
 
-.trennbereich-2::before {
+.trennbereich_2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -108,7 +108,7 @@
   z-index: 2;
 }
 
-.trennbereich-2::after {
+.trennbereich_2::after {
   content: "";
   position: absolute;
   top: 0;
@@ -120,7 +120,7 @@
   z-index: 2;
 }
 
-.trennbereich-3 {
+.trennbereich_3 {
   position: absolute;
   width: 100%;
   height: 5px;
@@ -129,7 +129,7 @@
   z-index: 3;
 }
 
-.trennbereich-3::before {
+.trennbereich_3::before {
   content: "";
   position: absolute;
   top: 0;
@@ -141,7 +141,7 @@
   z-index: 2;
 }
 
-.trennbereich-3::after {
+.trennbereich_3::after {
   content: "";
   position: absolute;
   top: 0;

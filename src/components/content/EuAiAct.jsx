@@ -3,7 +3,7 @@ import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.png";
 import DosAndDonts from "../dosdonts/DosAndDonts";
 import { GraphicContainer } from "../GraphicContainer";
 import QuizContainer from "../quizUX/components/QuizContainer";
-import { Risikostufen } from "../Risikostufen";
+import { RisikostufenPyramide } from "../RisikostufenPyramide";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import Timeline from "../Timeline";
@@ -634,7 +634,7 @@ const RisikostufenAuswirkungen = {
     </section>,
     <section>
       {/* TODO: Fix CSS of Component */}
-      <Risikostufen />
+      <RisikostufenPyramide />
     </section>,
     <section id="videoRisikostufen">
       <VideoContainer

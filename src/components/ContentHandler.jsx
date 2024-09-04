@@ -1,11 +1,16 @@
 import EuAiActSections from "./content/EuAiAct";
 
 // List of all Modules ~ auto import?
-const modules = [EuAiActSections];
+const modules = [EuAiActSections, TestoE];
 
 // gets a list af all module links
 export function getModuleLinks() {
   return modules.map((module) => module.linkName);
+}
+
+// gets a list a fll module names
+export function getModuleNames() {
+  return modules.map((module) => module.name);
 }
 
 // gets the name of a module by the link of it
@@ -15,9 +20,21 @@ export function getModuleNameByLink(moduleLink) {
   return module.name;
 }
 
+// gets a list of all modules links and names
+export function getModuleLinksAndNames() {
+  return modules.map((module) => [module.linkName, module.name]);
+}
+
 // gets a module by its link
 export function getModuleByLink(moduleLink) {
   return modules.find((module) => module.linkName === moduleLink);
+}
+
+// gets the image for a module by its link
+export function getModuleImageByLink(moduleLink) {
+  const module = getModuleByLink(moduleLink);
+  if (!module) return null;
+  return module.moduleImage;
 }
 
 // gets a list of all subtopics of a module by its link
@@ -25,6 +42,13 @@ export function getSubtopicLinksByModule(moduleLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return [];
   return module.content.map((entry) => entry.linkName);
+}
+
+// gets a list of all linsk and names of a subtopic by its module link
+export function getSubtopicLinksAndNamesByModulelink(moduleLink) {
+  const module = getModuleByLink(moduleLink);
+  if (!module) return [];
+  return module.content.map((entry) => [entry.linkName, entry.name]);
 }
 
 // gets the name of a subtopic

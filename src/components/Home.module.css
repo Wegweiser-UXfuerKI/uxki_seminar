@@ -1,0 +1,183 @@
+/* Topic Cards */
+.moduleCard {
+  background: white;
+  color: var(--dark);
+  width: 1280px;
+  min-height: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.moduleCard:hover {
+  background: var(--white);
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.moduleCard:hover > .arrow-btn {
+  background: white;
+}
+
+.moduleCard h2 {
+  color: var(--dark);
+  padding-bottom: 10px;
+  margin: 0;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.moduleCard:hover h2 {
+  color: var(--purple);
+  transform: translateY(-5px);
+}
+
+.moduleCard .img-container {
+  padding: 0px 33px;
+}
+
+.moduleCard .thirdTitle::before {
+  content: attr(topic-number);
+  font-size: 200px;
+  font-weight: 800;
+  position: absolute;
+  left: 40px;
+  bottom: 50px;
+  opacity: 0.1;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.moduleCard:hover .thirdTitle::before {
+  transform: translateY(5px) translateX(15px);
+}
+
+.moduleCard .thirdTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 100px;
+  background: linear-gradient(to top, white, transparent 20%);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.moduleCard:hover .thirdTitle::after {
+  background: linear-gradient(to top, var(--white), transparent 20%);
+  transform: translateY(5px);
+}
+
+/* Topic Cards Buttons */
+.arrow-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
+  padding: 10px;
+  margin: 10px;
+  width: 85%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn > .arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #21202b;
+  border-bottom: 2px solid #21202b;
+  position: relative;
+  transform: rotate(-45deg);
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn > .arrow::before {
+  display: block;
+  background-color: currentColor;
+  width: 3px;
+  transform-origin: bottom right;
+  height: 2px;
+  position: absolute;
+  opacity: 0;
+  bottom: calc(-2px / 2);
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+  content: "";
+  right: 0;
+}
+
+.arrow-btn:hover > .arrow {
+  transform: rotate(-45deg) translate(5px, 5px);
+}
+
+.arrow-btn:hover > .arrow::before {
+  opacity: 1;
+  width: 10px;
+  border-radius: 10px;
+}
+
+.arrow-btn:hover {
+  color: var(--purple);
+}
+
+.arrow-btn:last-child {
+  margin-bottom: 1.4rem;
+}
+
+.subtopicBlocks {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  text-decoration: none;
+  flex: 0 1 calc(50% - 10px);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.subtopicName {
+  position: relative; /* Notwendig für das Positionieren des Pseudo-Elements */
+}
+
+.subtopicName::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Positioniert die Linie direkt unter dem Text */
+  left: 0;
+  height: 2px; /* Dicke der Unterstreichung */
+  width: 0;
+  background-color: var(--purple); /* Farbe der Unterstreichung */
+  transition: width 0.3s ease-in-out; /* Animation der Breite */
+}
+
+.subtopicBlocks:hover .subtopicName::after {
+  width: 100%; /* Die Unterstreichung breitet sich von links nach rechts aus */
+}
+
+.subtopicBlocks:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.subtopicBlocks svg {
+  fill: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.subtopicBlocks:hover svg {
+  fill: var(--purple);
+  transform: translateX(5px);
+}

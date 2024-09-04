@@ -8,6 +8,8 @@ import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import Timeline from "../Timeline";
 
+import element1 from "../../assets/images/numbers/Element1.png";
+
 const Einleitung = {
   linkName: "einleitung",
   name: "Einleitung",
@@ -965,6 +967,7 @@ const Fazit = {
 const EuAiActSections = {
   linkName: "eu-ai-act",
   name: "EU AI Act",
+  moduleImage: element1,
   content: [
     Einleitung,
     RisikostufenAnwendungsbeispiele,

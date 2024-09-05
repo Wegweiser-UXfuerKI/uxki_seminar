@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../Home.module.css";
-import { GraphicContainer } from "../GraphicContainer";
 import {
   getModuleLinksAndNames,
   getSubtopicLinksAndNamesByModulelink,
@@ -33,14 +32,14 @@ const Home = () => {
                   <h2 className="text-black">{module[1]}</h2>
                 </div>
               </div>
-              <div className="flex-grow w-3/5 p-4 flex items-center">
+              <div className="flex-grow w-3/5 p-4 flex items-start pt-8">
                 <div className="flex flex-wrap gap-x-[15px] gap-y-[30px]">
                   {getSubtopicLinksAndNamesByModulelink(module[0]).map(
                     ([subLink, subName], subIndex) => (
                       <Link
                         key={subIndex}
                         to={`/${module[0]}/${subLink}`}
-                        className={`text-black p-2 ${styles.subtopicBlocks}`}>
+                        className={`text-black p-2 rounded-lg ${styles.subtopicBlocks}`}>
                         <div
                           className={`w-[75%] text-black ${styles.subtopicName}`}>
                           {subName}

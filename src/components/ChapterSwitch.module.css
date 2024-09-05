@@ -1,0 +1,39 @@
+.linkBox {
+  background: linear-gradient(
+    to bottom,
+    rgba(187, 232, 229, 0.4),
+    rgba(187, 232, 229, 0)
+  );
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.linkBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.linkBox h3 {
+  transition: all 0.3s ease-in-out;
+}
+
+.linkBox:hover h3 {
+  color: var(--purple);
+}
+
+.linkBox svg {
+  transition: all 0.3s ease-in-out;
+}
+
+.linkBox:hover svg {
+  fill: var(--purple);
+  transform: translateX(5px);
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.linkBox:hover .rotated {
+  transform: translateX(-5px) rotate(180deg);
+}

@@ -49,22 +49,22 @@
 }
 
 .subtopicName {
-  position: relative; /* Notwendig für das Positionieren des Pseudo-Elements */
+  position: relative;
 }
 
 .subtopicName::after {
   content: "";
   position: absolute;
-  bottom: -2px; /* Positioniert die Linie direkt unter dem Text */
+  bottom: -2px;
   left: 0;
-  height: 2px; /* Dicke der Unterstreichung */
+  height: 2px;
   width: 0;
-  background-color: var(--purple); /* Farbe der Unterstreichung */
-  transition: width 0.3s ease-in-out; /* Animation der Breite */
+  background-color: var(--purple);
+  transition: width 0.3s ease-in-out;
 }
 
 .subtopicBlocks:hover .subtopicName::after {
-  width: 100%; /* Die Unterstreichung breitet sich von links nach rechts aus */
+  width: 100%;
 }
 
 .subtopicBlocks:hover {

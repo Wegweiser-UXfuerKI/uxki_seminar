@@ -1,14 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ReactComponent as RightArrow } from "../assets/images/right-arrow.svg";
 import wegweiserLogo from "../assets/images/Wegweiser_logo.png";
 import { AppContext } from "../AppContext";
 
 const Header = () => {
-  const location = useLocation(); // get currently active path
-  const encodedTopicName = location.pathname.split("/")[2]; // extract topic name from encoded pathname
-  const topicName = decodeURIComponent(encodedTopicName); // decode to prevent errors when using 'üöä'
-
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [navOpen, setNavOpen] = useState(false);
 
@@ -64,7 +60,7 @@ const Header = () => {
             to="/"
             className="text-right text-gray-400 font-semibold hover:text-gray-200 focus:outline-none"
             onClick={toggleNavbar}>
-            Der EU AI Act
+            {selectedModuleName}
           </Link>
         </div>
       </nav>
@@ -81,7 +77,9 @@ const Header = () => {
         {selectedModuleName && (
           <>
             <RightArrow />
-            <Link to={`/${selectedModuleLink}`} className="active">
+            <Link
+              to={`/${selectedModuleLink}`}
+              className={selectedSubtopicName ? "" : "active"}>
               {selectedModuleName}
             </Link>
             {selectedSubtopicName && (

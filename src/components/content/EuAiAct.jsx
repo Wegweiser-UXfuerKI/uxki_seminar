@@ -7,6 +7,7 @@ import { RisikostufenPyramide } from "../RisikostufenPyramide";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import Timeline from "../Timeline";
+import ContainerSixteenNine from "../ContainerSixteenNine";
 
 import element1 from "../../assets/images/numbers/Element1.png";
 
@@ -56,8 +57,10 @@ const Einleitung = {
         entwickelte, sondern auch große Teile des parlamentarischen EU-Apparats
         durchlaufen hat.
       </p>
-      <div className="w-full h-96 flex justify-center items-center my-10 p-1 bg-lightText rounded-xl">
-        <Timeline />
+      <div className="w-full flex justify-center items-center my-10 p-1 bg-lightText rounded-xl">
+        <ContainerSixteenNine>
+          <Timeline />
+        </ContainerSixteenNine>
       </div>
       <p>
         Eine vollständige Übersicht des zeitlichen Verlaufs des
@@ -635,8 +638,9 @@ const RisikostufenAuswirkungen = {
       </p>
     </section>,
     <section>
-      {/* TODO: Fix CSS of Component */}
-      <RisikostufenPyramide />
+      <ContainerSixteenNine>
+        <RisikostufenPyramide />
+      </ContainerSixteenNine>
     </section>,
     <section id="videoRisikostufen">
       <VideoContainer

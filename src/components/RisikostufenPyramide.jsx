@@ -18,7 +18,7 @@ export const RisikostufenPyramide = () => {
 
   return (
     <div
-      className="w-full h-[80dvh] relative max-w-[2000px] min-h-96 border-[0.3rem] border-lightText rounded-xl"
+      className="w-full h-full relative max-w-[2000px] min-h-96 border-[0.3rem] border-lightText rounded-xl"
       style={{ borderRadius: "10px", overflow: "hidden" }}>
       <div className="w-full absolute top-0 bottom-[75%] z-40">
         <div
@@ -29,7 +29,7 @@ export const RisikostufenPyramide = () => {
           </h3>
         </div>
         <div
-          className={`absolute top-0 left-0 w-full h-full ${
+          className={`absolute top-0 w-full h-full ${
             styles.clip_text_triangle_1
           } flex pl-[25%] justify-end items-end ${
             visibleText.includes(0) ? styles.show_text : ""
@@ -52,7 +52,7 @@ export const RisikostufenPyramide = () => {
           </h3>
         </div>
         <div
-          className={`absolute top-0 left-0 w-full h-full ${
+          className={`absolute top-0 w-full h-full ${
             styles.clip_text_triangle_2
           } flex pl-[30%] justify-end items-end ${
             visibleText.includes(1) ? styles.show_text : ""
@@ -78,7 +78,7 @@ export const RisikostufenPyramide = () => {
           </h3>
         </div>
         <div
-          className={`absolute top-0 left-0 w-full h-full ${
+          className={`absolute top-0 w-full h-full ${
             styles.clip_text_triangle_3
           } flex pl-[35%] justify-end items-end ${
             visibleText.includes(2) ? styles.show_text : ""
@@ -102,7 +102,7 @@ export const RisikostufenPyramide = () => {
           </h3>
         </div>
         <div
-          className={`absolute top-0 left-0 w-full h-full ${
+          className={`absolute top-0 w-full h-full ${
             styles.clip_text_triangle_4
           } flex pl-[40%] justify-end items-end ${
             visibleText.includes(3) ? styles.show_text : ""

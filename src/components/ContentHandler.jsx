@@ -1,7 +1,6 @@
 import EuAiActSections from "./content/EuAiAct";
 
 // List of all Modules ~ auto import?
-const modules = [EuAiActSections, TestoE];
 const modules = [EuAiActSections];
 
 // gets a list af all module links

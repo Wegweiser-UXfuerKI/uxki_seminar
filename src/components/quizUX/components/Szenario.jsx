@@ -56,13 +56,13 @@ const Szenario = ({ whichSzenario, onUpdate }) => {
       className="flex flex-col items-center justify-between cursor-default"
       style={{ height: "80vh" }}>
       <div></div>
-      <div className="flex flex-col items-center">
-        <h2>Szenario {szenarioNr}:</h2>
+      <div className="flex flex-col items-center text-black">
+        <h2 className="text-inherit">Szenario {szenarioNr}:</h2>
         <h2 style={{ color: color }} className="font-bold">
           {topic}
         </h2>
         {/* <p className="font-medium w-11/12 text-lg mt-16">Versetze dich in folgendes Szenario:</p> */}
-        <p className="w-11/12 mt-3">{szenarioText}</p>
+        <p className="w-11/12 mt-3 text-inherit">{szenarioText}</p>
       </div>
       <div
         onClick={() => onUpdate(whichSzenario, topic)}

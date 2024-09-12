@@ -15,7 +15,7 @@ const Einleitung = {
   linkName: "einleitung",
   name: "Einleitung",
   description:
-    "Dieses Kapitel beschäftigt sich damit, was der EU AI Act im Allgemeinen ist, was die Ziele sind und wie in anderen Ländern gehandelt wird.",
+    "Dieses Kapitel beschäftigt sich damit, was der EU AI Act im Allgemeinen ist, welche Ziele er verfolgt und wie in anderen Ländern gehandelt wird.",
   content: [
     /* Section 1 */
     <ChapterHeader text={"Einleitung"} number={1} />,
@@ -37,7 +37,7 @@ const Einleitung = {
       </p>
       <h3>Ziele des EU AI Acts</h3>
       <p>
-        Mit dem EU AI Act haben sich die Mitgliedsstaaten der EU zum Ziel
+        Mit dem EU AI Act haben sich die Mitgliedstaaten der EU zum Ziel
         gesetzt, das erste umfassende Regularium für den Umgang mit Systemen,
         die auf Künstlicher Intelligenz (KI) basieren, zu verfassen. Ziel ist
         es, rechtliche Rahmenbedingungen zu schaffen, in denen KI-Projekte in
@@ -53,7 +53,7 @@ const Einleitung = {
       <h3>Entwicklung des Acts</h3>
       <p>
         Bei der Entwicklung des EU AI Acts handelt es sich um einen komplexen
-        bürokratischen Prozess, der sich nicht nur über viel Jahre hinweg
+        bürokratischen Prozess, der sich nicht nur über viele Jahre hinweg
         entwickelte, sondern auch große Teile des parlamentarischen EU-Apparats
         durchlaufen hat.
       </p>
@@ -66,7 +66,10 @@ const Einleitung = {
         Eine vollständige Übersicht des zeitlichen Verlaufs des
         Gestaltungsprozesses und der damit verbundenen Institutionen und
         Zwischenstände finden Sie hier:{" "}
-        <a href="https://artificialintelligenceact.eu/de/entwicklungen/">
+        <a
+          href="https://artificialintelligenceact.eu/de/entwicklungen/"
+          target="_blank"
+          rel="noopener noreferrer">
           https://artificialintelligenceact.eu/de/entwicklungen/
         </a>
         .
@@ -78,7 +81,7 @@ const Einleitung = {
       <p>
         Betrachtet man den EU AI Act als groß angelegte Normierung innerhalb des
         europäischen Raums, drängt sich schnell die Frage auf, welche
-        Auswirkungen die Gesetzgebung außerhalb seiner Mitgliedsstaaten haben
+        Auswirkungen die Gesetzgebung außerhalb seiner Mitgliedstaaten haben
         wird. Es kann dabei davon ausgegangen werden, dass das EU-Parlament zwar
         primär die Regulierung im eigenen Legislaturbereich im Blick hat, aber
         auch auf andere große Volkswirtschaften wie die USA, China und das
@@ -96,8 +99,8 @@ const Einleitung = {
         so stellt man fest, dass auch dort weitreichende Maßnahmen für die
         Regulierung und den ethischen Umgang mit KI bereits getroffen worden
         sind. Die britische Regierung setzt dabei auf bestehende sektorale
-        Vorgaben wie bspw. die KI-Prinzipien der OECD oder die Empfehlung zu
-        ethischem Umgang mit KI der UNESCO. Diese übergeordneten Richtlinien
+        Vorgaben wie bspw. die KI-Prinzipien der OECD oder die Empfehlung zum
+        ethischen Umgang mit KI der UNESCO. Diese übergeordneten Richtlinien
         werden durch lokal angetriebene Maßnahmen erweitert. Von besonderer
         Bedeutung ist dabei zum Beispiel die Bletchley Declaration aus November
         2023, bei der sich 28 Länder, darunter die Vereinigten Staaten, China
@@ -105,11 +108,11 @@ const Einleitung = {
         Bewältigung von Herausforderungen und Risiken im Bereich der KI
         zusammenzuarbeiten. Im Fokus standen dabei vor allem "frontier"-Systeme,
         also KI-Grundlagenmodelle, die für alle möglichen Anwendungsfälle
-        nutzbar gemacht werden können, so wie bspw. die ChatGPT
-        zugrundeliegenden LLMs. Es gibt also ein klares Bewusstsein für die
-        Bedeutung des Themas KI und erste Bestrebungen für Lösungen. Die dabei
-        getroffenen Vereinbarungen sind dabei eher Leitlinie und weniger
-        strenges Regularium als es der EU AI Act sein möchte.
+        nutzbar gemacht werden können, so wie bspw. die ChatGPT zugrunde
+        liegenden LLMs. Es gibt also ein klares Bewusstsein für die Bedeutung
+        des Themas KI und erste Bestrebungen für Lösungen. Die dabei getroffenen
+        Vereinbarungen sind dabei eher Leitlinien und weniger strenges
+        Regularium, als es der EU AI Act sein möchte.
       </p>
       <h3>USA</h3>
       <p>
@@ -240,7 +243,7 @@ const Einleitung = {
         betrifft eine Vielzahl von KI-Anwendungen, von Gesundheitsdiagnosetools
         bis hin zu Chatbots, und erfordert von Anbieter:innen und Nutzer:innen
         die Einhaltung strenger Vorgaben. Bei Verstößen drohen erhebliche
-        Sanktionen, einschließlich hoher Bußgelder. In den nächsten Modulen
+        Sanktionen, einschließlich hoher Bußgelder. In den nächsten Kapiteln
         werden wir uns detailliert mit den Risikostufen und der Klassifizierung
         von KI-Systemen befassen, um ein tieferes Verständnis für die
         Implementierung und Einhaltung des EU AI Acts zu entwickeln.
@@ -291,26 +294,27 @@ const RisikostufenAnwendungsbeispiele = {
         konnten, können wir uns nun den Beispielen zuwenden, die praktischen
         Herausforderungen besser illustrieren.
       </p>
-      <h3>Beispiel 1 - AntragsAssistent</h3>
+      <h3>Beispiel 1 - Antrags Assistent</h3>
       <p>
         Stellen Sie sich vor Sie sind Teil einer kleinen in Berlin ansässigen
         Organisation, die es sich zum Ziel gesetzt hat Personen aus
         benachteiligten Gruppen bei der Kommunikation mit Behörden zu
-        unterstützen bspw. durch Hilfe beim Schreiben von Briefen oder Anträgen,
-        kleiner Übersetzungsleistungen o.Ä.. Um Ihre Prozesse zu optimieren
-        haben Sie vor ein Unterstützungstool einzukaufen, dass die
+        unterstützen, bspw. durch Hilfe beim Schreiben von Briefen oder
+        Anträgen, kleiner Übersetzungsleistungen o.Ä.. Um Ihre Prozesse zu
+        optimieren haben Sie vor ein Unterstützungstool einzukaufen, dass die
         Unterlagenprüfung für Sie übernimmt. Personen die zu Ihnen kommen können
         dort ihre Dokumente digital hinterlegen, diese werden dann vom Antrags
         Assistenten geprüft, der Ihnen und ihren Kolleg:innen eine Auskunft
         darüber gibt, wie das System die Chancen auf Erfolg bei Antragsstellung
         bewertet. Das System kann keine Personen ablehnen und keine
-        eigenständigen Entscheidungen treffen. Was glauben Sie? Nehmen Sie sich
-        einen Moment Zeit und denken Sie darüber nach wo ein solches System
-        eingeordnet werden könnte. Wir fassen die wichtigsten Informationen hier
-        noch mal zusammen, dabei spielen nicht nur die Dinge eine Rolle, die das
-        System tut, sondern explizit auch was es nicht tut oder kann.
+        eigenständigen Entscheidungen treffen. <br /> Was glauben Sie? Nehmen
+        Sie sich einen Moment Zeit und denken Sie darüber nach wo ein solches
+        System eingeordnet werden könnte. Wir fassen die wichtigsten
+        Informationen hier noch mal zusammen, dabei spielen nicht nur die Dinge
+        eine Rolle, die das System tut, sondern explizit auch was es nicht tut
+        oder kann.
       </p>
-      <h3>Übersicht Beispielsystem 1 - AntragsAssistent</h3>
+      <h3>Übersicht Beispielsystem 1 - Antrags Assistent</h3>
       <ul>
         <li>Unsere Organisation setzt das System nur ein.</li>
         <li>
@@ -350,7 +354,7 @@ const RisikostufenAnwendungsbeispiele = {
         ausgerichtetet Organisation, die in Kooperation mit einer ländlichen
         Kommune die Population in einem Waldstück überwachen und messen möchte.
         Um ein möglichst detailliertes Bild zu bekommen sendet Ihnen ihre
-        Hauptstelle in den Staate durch KI-Erkennungssystem gesteuerte Kameras,
+        Hauptstelle in den Staaten durch KI-Erkennungssystem gesteuerte Kameras,
         die im Waldstück angebracht werden und automatisch Tiere bedrohter Arten
         identifizieren und die gemachten Bilder speichern sollen. Bei der
         genutzten Tiererkennungssoftware handelt es sich um eine etablierte
@@ -409,7 +413,7 @@ const RisikostufenAnwendungsbeispiele = {
     <section>
       <h2>EU AI Act Compliance Checker</h2>
       <p>
-        m sich einen Überblick über die verschiedenen Möglichkeiten zu
+        Um sich einen Überblick über die verschiedenen Möglichkeiten zu
         verschaffen gibt es den EU Compliance Checker. Das Tool bietet die
         Möglichkeit verschiedene Varianten durchzuspielen, um herauszufinden
         welche Regelungen für das eigene System gelten. Wir empfehlen daher es
@@ -439,7 +443,6 @@ const RisikostufenAnwendungsbeispiele = {
             className="bg-black bg-opacity-15 hover:bg-opacity-20"></div>
         </a>
       </p>
-      <h3>Componente EU AI Act Compliance Checker</h3>
       <p>
         Im nächsten Abschnitt gehen wir dann noch mal konkret auf die
         Auswirkungen der Risikostufen auf mögliche Entwicklungsprozesse ein.
@@ -459,7 +462,7 @@ const RisikostufenAuswirkungen = {
     <section id="maßnahmen">
       <h2>Was muss je nach Risikostufe beachtet werden</h2>
       <p>
-        Dieser Text zielt darauf ab, ein tiefes Verständnis der verschiedenen
+        Dieser Text zielt darauf ab, ein tieferes Verständnis der verschiedenen
         Risikokategorien zu vermitteln, die in der KI-Verordnung (KIVO)
         definiert sind, die Anforderungen für jede Kategorie zu erläutern, mit
         besonderem Fokus auf Hochrisiko-KI-Systeme, und das Konzept eines
@@ -482,7 +485,7 @@ const RisikostufenAuswirkungen = {
         EU-Gesetzgebung verankerten Werten und Rechten. Beispielsweise sind
         KI-Systeme, die darauf abzielen, menschliches Verhalten in einer Weise
         zu manipulieren, die Schaden verursacht, streng verboten. Dies könnte
-        Nuding-Techniken umfassen, die Personen ohne deren bewusste Wahrnehmung
+        Nudging-Techniken umfassen, die Personen ohne deren bewusste Wahrnehmung
         beeinflussen sollen. Darüber hinaus sind Systeme, die eine soziale
         Bewertung durch Regierungen ermöglichen und zu ungerechter oder
         diskriminierender Behandlung basierend auf sozialem Verhalten oder
@@ -695,14 +698,14 @@ const RisikostufenAuswirkungen = {
 
 const HLEG = {
   linkName: "high-level-expert-group",
-  name: "High Level Expert Group",
+  name: "High-Level Expert Group",
   description:
     "Es wird die HLEG betrachtet, was deren Ziele sind und welchen Einfluss sie haben.",
   content: [
     /* Section 1 */
-    <ChapterHeader text={"High Level Expert Group"} number={4} />,
+    <ChapterHeader text={"High-Level Expert Group"} number={4} />,
     <section>
-      <h2>Die Rolle der High Level Expert Group für Trustworthy AI</h2>
+      <h2>Die Rolle der High-Level Expert Group für Trustworthy AI</h2>
       <h3>
         Die High-Level Expert Group on Artificial Intelligence und ihre Ziele
       </h3>

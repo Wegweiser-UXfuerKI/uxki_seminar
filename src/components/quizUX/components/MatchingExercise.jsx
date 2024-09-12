@@ -396,8 +396,8 @@ const Definition = ({
 const dropContainer_style = {
   width: "100%",
   height: "auto",
-  minHeight: "80px",
-  borderRadius: "10px",
+  minHeight: "70px",
+  borderRadius: "0 0 10px 10px",
   background: "#F1F0F4",
   display: "flex",
   justifyContent: "center",
@@ -415,7 +415,7 @@ const term_style = {
 const defaultContainer_style = {
   width: "100%",
   height: "auto",
-  minHeight: "20vh",
+  minHeight: "100px",
   display: "flex",
   flexDirection: "row",
   flexWrap: "wrap",

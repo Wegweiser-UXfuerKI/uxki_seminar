@@ -7,7 +7,6 @@
   height: 100%;
   width: 100%;
   position: relative;
-  border: 2px solid red;
 }
 
 .svg_container {
@@ -31,10 +30,10 @@ svg#board {
   width: 60px;
   height: 60px;
   position: absolute;
-  left: 50px;
-  bottom: 50px;
+  left: 10px;
+  bottom: 10px;
   border-radius: 100%;
-  background-color: #d4d2dd;
+  background-color: #918f9a;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -164,7 +164,9 @@ const Popup = ({
             X
           </div>
         </div>
-        {renderPopupContent(content)}
+        <div className="bg-green-400 w-full h-full">
+          {renderPopupContent(content)}
+        </div>
         <div></div>
       </div>
     </div>
@@ -179,7 +181,6 @@ const popupContainer = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  border: "2px solid green",
 };
 
 const popupContent = {

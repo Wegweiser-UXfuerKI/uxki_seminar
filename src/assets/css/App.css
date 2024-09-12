@@ -217,7 +217,25 @@ ul {
 a {
   font-size: inherit;
   font-weight: 600;
-  color: var(--dark);
+  color: var(--bg);
+
+  position: relative;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg);
+  transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 /* to Top Button */
@@ -292,4 +310,15 @@ a {
 
 .transition-opacity {
   transition: opacity 0.4s;
+}
+
+.special-text {
+  background: linear-gradient(
+    to bottom,
+    rgba(230, 230, 230, 0.4),
+    rgba(230, 230, 230, 0)
+  );
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+  min-height: 50px;
 }

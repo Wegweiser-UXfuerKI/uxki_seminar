@@ -52,9 +52,7 @@ const Szenario = ({ whichSzenario, onUpdate }) => {
   }, [whichSzenario, topics, colors]);
 
   return (
-    <div
-      className="flex flex-col items-center justify-between cursor-default"
-      style={{ height: "80vh" }}>
+    <div className="h-full w-full flex flex-col items-center justify-between cursor-default">
       <div></div>
       <div className="flex flex-col items-center text-black">
         <h2 className="text-inherit">Szenario {szenarioNr}:</h2>

@@ -218,12 +218,14 @@ a {
   font-size: inherit;
   font-weight: 600;
   color: var(--bg);
+}
 
+.inlineLink {
   position: relative;
   text-decoration: none;
 }
 
-a::after {
+.inlineLink::after {
   content: "";
   position: absolute;
   width: 0;
@@ -234,7 +236,7 @@ a::after {
   transition: width 0.3s ease-in-out;
 }
 
-a:hover::after {
+.inlineLink:hover::after {
   width: 100%;
 }
 

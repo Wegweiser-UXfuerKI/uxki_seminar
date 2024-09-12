@@ -69,7 +69,8 @@ const Einleitung = {
         <a
           href="https://artificialintelligenceact.eu/de/entwicklungen/"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+          className="inlineLink">
           https://artificialintelligenceact.eu/de/entwicklungen/
         </a>
         .

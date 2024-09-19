@@ -176,7 +176,7 @@ const Start = ({ onUpdate, popupType }) => {
     }
   };
 
-  return <div style={{ height: "80vh" }}>{renderContent(content)}</div>;
+  return <div className="h-full w-full">{renderContent(content)}</div>;
 };
 
 // styles

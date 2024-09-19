@@ -134,7 +134,7 @@ const Popup = ({
         style={{ ...popupContent, background: bgColor }}
         className={styles.popup_size}
         onClick={handlePopupClick}>
-        <div className="flex row justify-between mr-1 ml-1">
+        <div className="flex w-full justify-between bg-neutral-800">
           {soundOn && isExercise && (
             <div
               onClick={onSoundClick}

@@ -207,6 +207,11 @@ li {
 b,
 strong {
   font-weight: 600;
+  font-size: inherit;
+}
+
+i {
+  font-size: inherit;
 }
 
 ul {

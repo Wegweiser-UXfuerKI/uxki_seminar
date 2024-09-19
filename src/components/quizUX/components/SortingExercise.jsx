@@ -146,13 +146,11 @@ const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
       </div>
       <div className="flex flex-col">
         {Object.keys(userSelections).map((item) => (
-          <div
-            key={item}
-            className="flex row justify-between mb-2 items-center">
-            <p style={item_style} className="sm">
+          <div key={item} className="flex justify-between mb-3 items-center">
+            <p style={item_style} className="sm mb-0">
               {item}
             </p>
-            <div className="flex row">
+            <div className="flex">
               <div
                 onClick={() => handleButtonClick(item, firstCategory)}
                 onMouseOver={() => handleBtnHover(item, firstCategory)}

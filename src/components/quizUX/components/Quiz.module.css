@@ -126,7 +126,7 @@ svg#board {
 
 /* Popup */
 .popup_size {
-  padding: 20px;
+  padding: 10px;
   height: 85%;
   width: 85%;
   max-width: 1000px;

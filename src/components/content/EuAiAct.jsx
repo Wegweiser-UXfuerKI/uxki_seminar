@@ -9,7 +9,8 @@ import { VideoContainer } from "../texts/VideoContainer";
 import Timeline from "../Timeline";
 import ContainerSixteenNine from "../ContainerSixteenNine";
 
-import element1 from "../../assets/images/numbers/Element1.png";
+import element1 from "../../assets/images/numbers/Element3.png";
+import APASourceEntry from "../texts/APASourceEntry";
 
 const Einleitung = {
   linkName: "einleitung",
@@ -959,15 +960,91 @@ const Fazit = {
     </section>,
     <section>
       <h2>Lernspiel praktische Anwendung</h2>
-      {/* TODO: update CSS */}
       <div className="w-full rounded-xl">
         <DosAndDonts />
       </div>
     </section>,
     <section>
       <h2>Quiz zur Selbstüberprüfung</h2>
-      {/* TODO: correct link and styles */}
       <QuizContainer />
+    </section>,
+  ],
+};
+
+// currently supported types: buch, artikel, website, bild, buchKapitel
+const Sources = {
+  literatur: [
+    {
+      typ: "buch",
+      autor: "Müller, A.",
+      jahr: "2020",
+      titel: "Titel",
+      verlag: "Springer",
+      url: "",
+    },
+    {
+      typ: "artikel",
+      autor: "Alphabet",
+      jahr: "2024",
+      titel: "Google Seite",
+      verlag: "Journal",
+      band: "50",
+      ausgabe: "1",
+      seiten: "20-23",
+      url: "https://www.google.de/",
+    },
+  ],
+  bilder: [
+    {
+      typ: "bild",
+      autor: "Wegweiser",
+      jahr: "2019",
+      titel: "Wegweiser",
+      format: "Screenshot",
+      url: "projekt.ux-fuer-ki.de",
+    },
+  ],
+  sonstiges: [
+    {
+      typ: "website",
+      autor: "Lukas",
+      jahr: "2024",
+      titel: "ux website",
+      url: "wegweiser.ux-fuer-ki.de",
+    },
+  ],
+};
+
+// Content section in this should always stay the same
+const Quellen = {
+  linkName: "quellen",
+  name: "Quellen",
+  description: "Quellen die in diesem Modul genutzt wurden",
+  content: [
+    <ChapterHeader text={"Quellen"} number={6} />,
+    <section>
+      <h2>Literatur:</h2>
+      <ul>
+        {Sources.literatur.map((quelle, index) => (
+          <APASourceEntry key={index} {...quelle} />
+        ))}
+      </ul>
+    </section>,
+    <section>
+      <h2>Bilder und Grafiken:</h2>
+      <ul>
+        {Sources.bilder.map((quelle, index) => (
+          <APASourceEntry key={index} {...quelle} />
+        ))}
+      </ul>
+    </section>,
+    <section>
+      <h2>Sonstige Quellen:</h2>
+      <ul>
+        {Sources.sonstiges.map((quelle, index) => (
+          <APASourceEntry key={index} {...quelle} />
+        ))}
+      </ul>
     </section>,
   ],
 };
@@ -982,6 +1059,7 @@ const EuAiActSections = {
     RisikostufenAuswirkungen,
     HLEG,
     Fazit,
+    Quellen,
   ],
 };
 

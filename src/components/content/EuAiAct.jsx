@@ -9,7 +9,7 @@ import { VideoContainer } from "../texts/VideoContainer";
 import Timeline from "../Timeline";
 import ContainerSixteenNine from "../ContainerSixteenNine";
 
-import element1 from "../../assets/images/numbers/Element3.png";
+import imageElement from "../../assets/images/numbers/Element10.png";
 import APASourceEntry from "../texts/APASourceEntry";
 
 const Einleitung = {
@@ -975,33 +975,66 @@ const Fazit = {
 const Sources = {
   literatur: [
     {
-      typ: "buch",
-      autor: "Müller, A.",
-      jahr: "2020",
-      titel: "Titel",
-      verlag: "Springer",
-      url: "",
+      typ: "Artikel",
+      autor: "Future of Life Institute",
+      jahr: "2024",
+      titel: "Entwicklungen des EU AI Act",
+      verlag: "Artificial Intelligence Act",
+      url: "https://artificialintelligenceact.eu/de/entwicklungen/",
     },
     {
-      typ: "artikel",
-      autor: "Alphabet",
+      typ: "Artikel",
+      autor: "Pinsent Masons",
+      jahr: "2023",
+      titel: "EU AI Act takes latest step through European Parliament",
+      verlag: "Pinsent Masons (Out-Law)",
+      url: "https://www.pinsentmasons.com/out-law/news/eu-ai-act-takes-latest-step-through-european-parliament",
+    },
+    {
+      typ: "Artikel",
+      autor: "Simon, D., Chiruvola, P., Kerr-Shaw, N. & Werry, S.",
       jahr: "2024",
-      titel: "Google Seite",
-      verlag: "Journal",
-      band: "50",
-      ausgabe: "1",
-      seiten: "20-23",
-      url: "https://www.google.de/",
+      titel: "Latest Text of EU AI Act Proposes Expanding Obligation",
+      verlag: "Skadden",
+      url: "https://www.skadden.com/insights/publications/2024/02/latest-text-of-eu-ai-act-proposes-expanding-obligation",
+    },
+    {
+      typ: "Artikel",
+      autor: "Future of Life Institute",
+      jahr: "2024",
+      titel: "EU AI Act Compliance Checker",
+      verlag: "Artificial Intelligence Act",
+      url: "https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/",
+    },
+    {
+      typ: "Rechtsdokument",
+      autor: "High-Level Expert Group on Artificial Intelligence (AI HLEG)",
+      jahr: "2020a",
+      titel: "The Ethics Guidelines for Trustworthy AI",
+      verlag: "European Commission",
+      url: "https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai",
+      herausgeber: "European Commission",
+    },
+    {
+      typ: "Rechtsdokument",
+      autor: "European Commission",
+      jahr: "2020b",
+      titel:
+        "The EU AI Act: Regulatory framework proposal for Artificial Intelligence",
+      verlag: "European Commission",
+      url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206",
+      herausgeber: "European Commission",
     },
   ],
   bilder: [
     {
       typ: "bild",
-      autor: "Wegweiser",
-      jahr: "2019",
-      titel: "Wegweiser",
+      autor: "Future of Life Institute",
+      jahr: "2024",
+      titel: "EU AI Act Compliance Checker",
+      verlag: "Artificial Intelligence Act",
+      url: "https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/",
       format: "Screenshot",
-      url: "projekt.ux-fuer-ki.de",
     },
   ],
   sonstiges: [
@@ -1019,7 +1052,7 @@ const Sources = {
 const Quellen = {
   linkName: "quellen",
   name: "Quellen",
-  description: "Quellen die in diesem Modul genutzt wurden",
+  description: "Quellen beschreibungstext",
   content: [
     <ChapterHeader text={"Quellen"} number={6} />,
     <section>
@@ -1052,7 +1085,7 @@ const Quellen = {
 const EuAiActSections = {
   linkName: "eu-ai-act",
   name: "EU AI Act",
-  moduleImage: element1,
+  moduleImage: imageElement,
   content: [
     Einleitung,
     RisikostufenAnwendungsbeispiele,

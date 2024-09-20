@@ -1,7 +1,9 @@
 import EuAiActSections from "./content/EuAiAct";
+import UXBasics from "./content/GrundlagenUX";
+import UXKISections from "./content/UXKI";
 
 // List of all Modules ~ auto import?
-const modules = [EuAiActSections];
+const modules = [UXBasics, UXKISections, EuAiActSections];
 
 // gets a list af all module links
 export function getModuleLinks() {

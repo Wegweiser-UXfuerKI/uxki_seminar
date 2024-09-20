@@ -1,16 +1,28 @@
-import React from 'react';
-import bmfsfjLogo from '../assets/images/BMFSFJ_Logo.jpg';
-import imis from '../assets/images/IMIS_Logo.png';
+import React from "react";
+import bmfsfjLogo from "../assets/images/BMFSFJ_Logo.jpg";
+import imis from "../assets/images/IMIS_Logo.png";
 
 const Footer = () => {
   return (
-    <footer className='relative flex justify-between items-center bg-white p-3'>
+    <footer className="relative flex justify-between items-center bg-white p-3 px-20">
       <a href="https://ux-fuer-ki.de/impressum.html">Impressum</a>
-      <a href="https://www.bmfsfj.de/bmfsfj" target="_blank" rel="noopener noreferrer">
-        <img src={bmfsfjLogo} alt="Logo Bundesministerium für Familie, Senioren, Frauen und Jugend" />
-      </a> 
-      <a href="https://www.uni-luebeck.de/universitaet/universitaet.html" target="_blank" rel="noopener noreferrer">
-        <img src={imis} alt="Logo Institut für Multimedia und Interaktive Systeme" />
+      <a
+        href="https://www.bmfsfj.de/bmfsfj"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          src={bmfsfjLogo}
+          alt="Logo Bundesministerium für Familie, Senioren, Frauen und Jugend"
+        />
+      </a>
+      <a
+        href="https://www.uni-luebeck.de/universitaet/universitaet.html"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          src={imis}
+          alt="Logo Institut für Multimedia und Interaktive Systeme"
+        />
       </a>
     </footer>
   );

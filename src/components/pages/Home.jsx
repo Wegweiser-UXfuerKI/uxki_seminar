@@ -29,7 +29,7 @@ const Home = () => {
                 </div>
                 <div className="w-4/5 border"></div>
                 <div className="h-1/3 w-4/5 p-5 pl-0 flex justify-center items-center">
-                  <h2 className="text-black">{module[1]}</h2>
+                  <h2 className="text-ux_dark">{module[1]}</h2>
                 </div>
               </div>
               <div className="flex-grow w-3/5 p-4 flex items-start pt-8">
@@ -39,9 +39,9 @@ const Home = () => {
                       <Link
                         key={subIndex}
                         to={`/${module[0]}/${subLink}`}
-                        className={`text-black p-2 rounded-lg ${styles.subtopicBlocks}`}>
+                        className={`text-ux_dark p-2 rounded-lg ${styles.subtopicBlocks}`}>
                         <div
-                          className={`w-[75%] text-black ${styles.subtopicName}`}>
+                          className={`w-[75%] text-ux_dark ${styles.subtopicName}`}>
                           {subName}
                         </div>
                         <RightArrow />

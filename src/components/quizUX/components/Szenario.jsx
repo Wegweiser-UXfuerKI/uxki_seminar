@@ -54,7 +54,7 @@ const Szenario = ({ whichSzenario, onUpdate }) => {
   return (
     <div className="h-full w-full flex flex-col items-center justify-between cursor-default">
       <div></div>
-      <div className="flex flex-col items-center text-black">
+      <div className="flex flex-col items-center text-ux_dark">
         <h2 className="text-inherit">Szenario {szenarioNr}:</h2>
         <h2 style={{ color: color }} className="font-bold">
           {topic}

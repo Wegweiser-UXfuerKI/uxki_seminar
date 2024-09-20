@@ -218,7 +218,7 @@ const MatchingExercise = ({ exercise, onAnswer, answersUser = null }) => {
 
   return (
     <div className="flex flex-col h-full w-full justify-around">
-      <div className="font-semibold mb-4 cursor-default text-black">
+      <div className="font-semibold mb-4 cursor-default text-ux_dark">
         {exercise.question}
       </div>
       <DragDropContext onDragEnd={handleOnDragEnd}>

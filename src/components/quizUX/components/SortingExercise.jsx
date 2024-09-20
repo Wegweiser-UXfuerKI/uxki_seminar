@@ -141,7 +141,7 @@ const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
 
   return (
     <div className="flex flex-col h-full w-full justify-around">
-      <div className="font-semibold cursor-default text-black">
+      <div className="font-semibold cursor-default text-ux_dark">
         {exercise.question}
       </div>
       <div className="flex flex-col">
@@ -155,7 +155,7 @@ const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
                 onClick={() => handleButtonClick(item, firstCategory)}
                 onMouseOver={() => handleBtnHover(item, firstCategory)}
                 onMouseLeave={() => handleBtnLeave(firstCategory)}
-                className="text-black"
+                className="text-ux_dark"
                 style={{
                   ...button_style,
                   ...(userSelections[item] === firstCategory
@@ -194,7 +194,7 @@ const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
                 onClick={() => handleButtonClick(item, secondCategory)}
                 onMouseOver={() => handleBtnHover(item, secondCategory)}
                 onMouseLeave={() => handleBtnLeave(secondCategory)}
-                className="text-black"
+                className="text-ux_dark"
                 style={{
                   ...button_style,
                   ...(userSelections[item] === secondCategory

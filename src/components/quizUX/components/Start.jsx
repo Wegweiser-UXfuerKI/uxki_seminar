@@ -19,7 +19,7 @@ const Start = ({ onUpdate, popupType }) => {
           <div></div>
           {popupType === "help" && (
             <div className="flex flex-col items-center self-center text-center w-5/6">
-              <p className="pb-3 text-black">
+              <p className="pb-3 text-ux_dark">
                 Im <b className="text-inherit">Wegweiser.UX-für-KI Quiz</b>{" "}
                 kannst du dich selbstständig zu den Themen{" "}
                 <b className={styles.pink}>{topics[0]}</b>,{" "}
@@ -85,7 +85,7 @@ const Start = ({ onUpdate, popupType }) => {
                   </div>
                 </div>
               </div>
-              <p className="w-7/12 text-black">
+              <p className="w-7/12 text-ux_dark">
                 Der <b className="text-inherit">Fortschrittsbalken</b> zeigt an,
                 wie weit du jeweils in den drei Themenabschnitten{" "}
                 <b className={styles.pink}>{topics[0]}</b>,{" "}
@@ -114,7 +114,7 @@ const Start = ({ onUpdate, popupType }) => {
                   </div>
                 </div>
               </div>
-              <p className="w-7/12 text-black">
+              <p className="w-7/12 text-ux_dark">
                 Du hast zwei Joker zur Verfügung, mit denen du entweder die{" "}
                 <b className="text-inherit">Frage tauschen</b> oder einen{" "}
                 <b className="text-inherit">Tipp erhalten</b> kannst. Du kannst
@@ -142,20 +142,20 @@ const Start = ({ onUpdate, popupType }) => {
       return (
         <div className="flex flex-col h-full justify-between cursor-default">
           <div></div>
-          <div className="flex flex-col items-center text-center text-black">
+          <div className="flex flex-col items-center text-center text-ux_dark">
             <h2 className="text-inherit">Willkommen</h2>
             <h2 className="text-inherit">beim</h2>
             <h2 className="font-semibold text-inherit">
               Wegweiser.UX-für-KI Quiz
             </h2>
             <div className="w-9/12 mt-8">
-              <p className="pb-3 text-black">
+              <p className="pb-3 text-ux_dark">
                 Du kannst dich hier selbstständig zu den Themen{" "}
                 <b className={styles.pink}>{topics[0]}</b>,{" "}
                 <b className={styles.lila}>{topics[1]}</b> und{" "}
                 <b className={styles.türkis}>{topics[2]}</b> testen.
               </p>
-              <p className="text-black">
+              <p className="text-ux_dark">
                 Zu jedem Thema erhältst du zunächst ein kurzes{" "}
                 <b className="text-inherit">Szenario</b>, in das du dich
                 reinversetzen sollst. Zum Abschluss jedes Wegabschnitts erhältst

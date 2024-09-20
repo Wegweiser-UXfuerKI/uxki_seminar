@@ -21,15 +21,26 @@
 /* Colors  */
 /* todo: add all colors */
 :root {
+  /* Main Colors: */
   --bg: #77d1cb;
-  --pink: #d177b3;
-  --rosa: #c177d1;
-  --purple: #8377d1;
   --blue: #77a9d1;
-  --white: #f1f0f4;
+  --purple: #8377d1;
+  --rosa: #c177d1;
+  --pink: #d177b3;
   --grey: #54506a;
+  /* secondary Colors: */
+  --scnd-bg: #99ddd8;
+  --scnd-blue: #92bada;
+  --scnd-purple: #9c92da;
+  --scnd-rosa: #c682d5;
+  --scnd-pink: #da92c2;
+  --scnd-grey: #817c9c;
+  /* Font colors: */
+  --white: #f1f0f4;
   --dark: #292734;
   --whiteHover: #d4d2dd;
+  --darkHover: #54506a;
+  --whiteUnselected: #b7b4c7;
 }
 
 .bg-color-0 {

@@ -153,7 +153,7 @@ const Exercise = ({
       <div className="flex row justify-between" style={{ height: "92%" }}>
         <div className="flex row text-center">
           <div style={joker_col}>
-            <h4 className="mb-1 text-black">Joker:</h4>
+            <h4 className="mb-1 text-ux_dark">Joker:</h4>
             <p className="mb-4 sm italic" style={{ color: "#696485" }}>
               1 Joker pro Aufgabe
             </p>
@@ -193,7 +193,7 @@ const Exercise = ({
         </div>
       </div>
       <div className="flex row justify-between items-end ml-2 relative bottom-0">
-        <h4 className="text-black">{exerciseNr}/24</h4>
+        <h4 className="text-ux_dark">{exerciseNr}/24</h4>
         {checkClicked && (
           <div className="img-container">
             <img
@@ -211,7 +211,7 @@ const Exercise = ({
             <div className="flex row justify-end mr-4 mt-3">
               <div
                 onClick={() => setShowTipPopup(false)}
-                className="relative right-0 text-2xl font-medium cursor-pointer hover:opacity-80 text-black">
+                className="relative right-0 text-2xl font-medium cursor-pointer hover:opacity-80 text-ux_dark">
                 X
               </div>
             </div>

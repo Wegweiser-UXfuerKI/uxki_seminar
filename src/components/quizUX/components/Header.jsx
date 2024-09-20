@@ -34,7 +34,7 @@ const Header = ({ doneInTopic, correctInTopic }) => {
         </div>
         <div className="flex row justify-around items-center">
           <div className="flex flex-col">
-            <p className="text-white mr-4 mb-1">Fortschritt:</p>
+            <p className="text-ux_white mr-4 mb-1">Fortschritt:</p>
             <ProgressBar
               doneInTopic={doneInTopic}
               correctInTopic={correctInTopic}

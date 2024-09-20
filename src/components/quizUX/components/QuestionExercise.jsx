@@ -136,7 +136,7 @@ const QuestionExercise = ({ exercise, onAnswer, answerUser = null }) => {
             <div
               key={index}
               style={answerStyles}
-              className="sm text-black"
+              className="sm text-ux_dark"
               onMouseOver={() => handleAnswerHover(answer)}
               onMouseLeave={handleAnswerLeave}
               onClick={() =>

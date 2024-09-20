@@ -28,18 +28,18 @@ const Disclaimer = ({ content, onReset }) => {
                 />
               </div>
               <h2 className="mb-8">
-                <b className="text-black">Achtung!</b>
+                <b className="text-ux_dark">Achtung!</b>
               </h2>
             </div>
             {isAllQuest && (
-              <h4 className="w-3/4 text-black">
+              <h4 className="w-3/4 text-ux_dark">
                 Wenn du fortfährst, siehst du eine Übersicht aller Fragen
                 mitsamt ihrer Lösungen.
               </h4>
             )}
             {!isAllQuest && (
               <div className="flex flex-col items-center">
-                <h4 className="w-3/4 mb-7 mt-3 text-black">
+                <h4 className="w-3/4 mb-7 mt-3 text-ux_dark">
                   Wenn du fortfährst, wird dein gesamter Fortschritt
                   zurückgesetzt - das Quiz beginnt von vorne.
                 </h4>

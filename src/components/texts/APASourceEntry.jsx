@@ -23,7 +23,7 @@ const APASourceEntry = ({
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white font-normal hover:text-ux_bg duration-300">
+            className="text-ux_white font-normal hover:text-ux_bg duration-300">
             {url}
           </a>
         )}
@@ -41,7 +41,7 @@ const APASourceEntry = ({
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white font-normal hover:text-ux_bg duration-300">
+            className="text-ux_white font-normal hover:text-ux_bg duration-300">
             {url}
           </a>
         )}
@@ -57,7 +57,7 @@ const APASourceEntry = ({
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white font-normal hover:text-ux_bg duration-300">
+          className="text-ux_white font-normal hover:text-ux_bg duration-300">
           {url}
         </a>
       </li>
@@ -72,7 +72,7 @@ const APASourceEntry = ({
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white font-normal hover:text-ux_bg duration-300">
+          className="text-ux_white font-normal hover:text-ux_bg duration-300">
           {url}
         </a>
       </li>
@@ -97,7 +97,7 @@ const APASourceEntry = ({
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white font-normal hover:text-ux_bg duration-300">
+          className="text-ux_white font-normal hover:text-ux_bg duration-300">
           {url}
         </a>
       )}

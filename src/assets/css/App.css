@@ -259,8 +259,8 @@ a {
 /* to Top Button */
 #toTopBtn {
   position: fixed;
-  bottom: 70px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
   background-color: var(--whiteHover);
   fill: var(--dark);
   cursor: pointer;

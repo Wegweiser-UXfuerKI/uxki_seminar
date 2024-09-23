@@ -27,7 +27,6 @@ const Home = () => {
                     className="h-full"
                   />
                 </div>
-                <div className="w-4/5 border"></div>
                 <div className="h-1/3 w-4/5 p-5 pl-0 flex justify-center items-center">
                   <h2 className="text-ux_dark">{module[1]}</h2>
                 </div>

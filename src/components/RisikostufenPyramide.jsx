@@ -19,7 +19,7 @@ export const RisikostufenPyramide = () => {
   return (
     <div
       className="w-full h-full relative max-w-[2000px] min-h-96 border-[0.3rem] border-lightText rounded-xl"
-      style={{ borderRadius: "10px", overflow: "hidden" }}>
+      style={{ overflow: "hidden" }}>
       <div className="w-full absolute top-0 bottom-[75%] z-40">
         <div
           className={`absolute top-0 left-0 w-full h-full ${styles.clip_triangle_1} flex items-end text-xl pl-[1%] pb-3 hover:cursor-pointer`}

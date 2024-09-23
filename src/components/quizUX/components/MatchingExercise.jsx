@@ -410,6 +410,7 @@ const term_style = {
   padding: "3px 10px 3px 10px",
   cursor: "default",
   color: "black",
+  width: "100%",
 };
 
 const defaultContainer_style = {

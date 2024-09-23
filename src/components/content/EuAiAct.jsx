@@ -1037,15 +1037,7 @@ const Sources = {
       format: "Screenshot",
     },
   ],
-  sonstiges: [
-    {
-      typ: "website",
-      autor: "Lukas",
-      jahr: "2024",
-      titel: "ux website",
-      url: "wegweiser.ux-fuer-ki.de",
-    },
-  ],
+  sonstiges: [],
 };
 
 // Content section in this should always stay the same
@@ -1055,30 +1047,36 @@ const Quellen = {
   description: "Quellen beschreibungstext",
   content: [
     <ChapterHeader text={"Quellen"} number={6} />,
-    <section>
-      <h2>Literatur:</h2>
-      <ul>
-        {Sources.literatur.map((quelle, index) => (
-          <APASourceEntry key={index} {...quelle} />
-        ))}
-      </ul>
-    </section>,
-    <section>
-      <h2>Bilder und Grafiken:</h2>
-      <ul>
-        {Sources.bilder.map((quelle, index) => (
-          <APASourceEntry key={index} {...quelle} />
-        ))}
-      </ul>
-    </section>,
-    <section>
-      <h2>Sonstige Quellen:</h2>
-      <ul>
-        {Sources.sonstiges.map((quelle, index) => (
-          <APASourceEntry key={index} {...quelle} />
-        ))}
-      </ul>
-    </section>,
+    Sources.literatur.length > 0 && (
+      <section>
+        <h2>Literatur:</h2>
+        <ul>
+          {Sources.literatur.map((quelle, index) => (
+            <APASourceEntry key={index} {...quelle} />
+          ))}
+        </ul>
+      </section>
+    ),
+    Sources.bilder.length > 0 && (
+      <section>
+        <h2>Bilder und Grafiken:</h2>
+        <ul>
+          {Sources.bilder.map((quelle, index) => (
+            <APASourceEntry key={index} {...quelle} />
+          ))}
+        </ul>
+      </section>
+    ),
+    Sources.sonstiges.length > 0 && (
+      <section>
+        <h2>Sonstige Quellen:</h2>
+        <ul>
+          {Sources.sonstiges.map((quelle, index) => (
+            <APASourceEntry key={index} {...quelle} />
+          ))}
+        </ul>
+      </section>
+    ),
   ],
 };
 

@@ -33,7 +33,9 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex-grow w-3/5 p-4 flex items-start pt-8">
-                <div className="flex flex-wrap gap-x-[15px] gap-y-[30px]">
+                <div
+                  className="flex flex-wrap justify-between gap-x-[var(--customSubtopicBlockGapX)] gap-y-[15px]"
+                  style={{ "--customSubtopicBlockGapX": "15px" }}>
                   {getSubtopicLinksAndNamesByModulelink(module[0]).map(
                     ([subLink, subName], subIndex) => (
                       <Link

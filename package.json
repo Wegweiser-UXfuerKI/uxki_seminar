@@ -17,6 +17,7 @@
     "reading-time-estimator": "^1.9.4",
     "showdown": "^2.1.0",
     "tippy.js": "^6.3.7",
+    "ux-ki-app": "file:",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

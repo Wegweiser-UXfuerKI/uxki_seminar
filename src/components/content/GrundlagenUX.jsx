@@ -1,4 +1,4 @@
-import imageElement from "../../assets/images/numbers/Element1.png";
+import imageElement from "../../assets/svg/ki_placeholder.svg";
 
 const UXBasics = {
   linkName: "ux-usability",

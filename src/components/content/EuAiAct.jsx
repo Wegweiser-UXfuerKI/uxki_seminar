@@ -9,7 +9,7 @@ import { VideoContainer } from "../texts/VideoContainer";
 import Timeline from "../Timeline";
 import ContainerSixteenNine from "../ContainerSixteenNine";
 
-import imageElement from "../../assets/images/numbers/Element10.png";
+import imageElement from "../../assets/svg/euaiact_icon.svg";
 import APASourceEntry from "../texts/APASourceEntry";
 
 const Einleitung = {
@@ -71,7 +71,8 @@ const Einleitung = {
           href="https://artificialintelligenceact.eu/de/entwicklungen/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inlineLink">
+          className="inlineLink"
+        >
           https://artificialintelligenceact.eu/de/entwicklungen/
         </a>
         .
@@ -428,7 +429,8 @@ const RisikostufenAnwendungsbeispiele = {
           style={{ position: "relative", display: "inline-block" }}
           className="rounded-xl overflow-hidden"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           <GraphicContainer
             type={"image"}
             src={ComlianceCheckerImg}
@@ -442,7 +444,8 @@ const RisikostufenAnwendungsbeispiele = {
               width: "100%",
               height: "100%",
             }}
-            className="bg-black bg-opacity-15 hover:bg-opacity-20"></div>
+            className="bg-black bg-opacity-15 hover:bg-opacity-20"
+          ></div>
         </a>
       </p>
       <p>

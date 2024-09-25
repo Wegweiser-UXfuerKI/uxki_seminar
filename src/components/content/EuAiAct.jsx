@@ -176,16 +176,14 @@ const Einleitung = {
         teilweise noch am Anfang einer konkreten Ausformulierung von Regeln und
         Gesetzen stehen oder generell einen offeneren Ansatz mit Blick auf
         möglichst freie Innovationsentwicklung verfolgen.
-      </p>
-      <h2>Umsetzung des Acts in den Mitgliedstaaten</h2>
-      <p>
+      
         Die faktische Umsetzung des EU AI Acts in den Mitgliedstaaten erfordert
         sorgfältige Planung und Koordination, um die umfassenden Anforderungen
         des Gesetzes zu erfüllen.
       </p>
     </section>,
     <section>
-      <h2>Primäre Inhalte des Eu AI Acts</h2>
+      <h2>Primäre Inhalte des EU AI Acts</h2>
       <p>
         Der EU AI Act ist ein umfassendes Regelwerk, das den Einsatz von KI
         innerhalb der EU reguliert. Zu den primären Inhalten gehören die
@@ -278,7 +276,7 @@ const RisikostufenAnwendungsbeispiele = {
         vorstellen, das Sie selbst zur Einstufung nutzen können.{" "}
       </p>
       <p>
-        Für eine einfache Übersicht über die verschiedenen Risikostufen, schauen
+        Für eine einfache Übersicht über die verschiedenen Risikostufen schauen
         Sie sich gerne folgendes Video an:
       </p>
     </section>,
@@ -299,13 +297,13 @@ const RisikostufenAnwendungsbeispiele = {
       </p>
       <h3>Beispiel 1 - Antrags Assistent</h3>
       <p>
-        Stellen Sie sich vor Sie sind Teil einer kleinen in Berlin ansässigen
+        Stellen Sie sich vor, Sie sind Teil einer kleinen in Berlin ansässigen
         Organisation, die es sich zum Ziel gesetzt hat Personen aus
         benachteiligten Gruppen bei der Kommunikation mit Behörden zu
         unterstützen, bspw. durch Hilfe beim Schreiben von Briefen oder
         Anträgen, kleiner Übersetzungsleistungen o.Ä.. Um Ihre Prozesse zu
         optimieren haben Sie vor ein Unterstützungstool einzukaufen, dass die
-        Unterlagenprüfung für Sie übernimmt. Personen die zu Ihnen kommen können
+        Unterlagenprüfung für Sie übernimmt. Personen, die zu Ihnen kommen können
         dort ihre Dokumente digital hinterlegen, diese werden dann vom Antrags
         Assistenten geprüft, der Ihnen und ihren Kolleg:innen eine Auskunft
         darüber gibt, wie das System die Chancen auf Erfolg bei Antragsstellung
@@ -354,16 +352,16 @@ const RisikostufenAnwendungsbeispiele = {
       <p>
         Für unser zweites Beispiel stellen wir uns vor wir sind Teil einer in
         den USA und Europa agierenden auf Nachhaltigkeit und Tierwohl
-        ausgerichtetet Organisation, die in Kooperation mit einer ländlichen
+        ausgerichtete Organisation, die in Kooperation mit einer ländlichen
         Kommune die Population in einem Waldstück überwachen und messen möchte.
-        Um ein möglichst detailliertes Bild zu bekommen sendet Ihnen ihre
+        Um ein möglichst detailliertes Bild zu bekommen, sendet Ihnen ihre
         Hauptstelle in den Staaten durch KI-Erkennungssystem gesteuerte Kameras,
         die im Waldstück angebracht werden und automatisch Tiere bedrohter Arten
         identifizieren und die gemachten Bilder speichern sollen. Bei der
         genutzten Tiererkennungssoftware handelt es sich um eine etablierte
         Anwendung eines großen Technologiehauses, die in Kooperation mit ihrer
-        Hauptstelle entwickelt und in den USA schon weiträumig mit erfolg
-        eingesetzt wird. Aufgrund der Serverinfrastruktur auf die das System
+        Hauptstelle entwickelt und in den USA schon weiträumig mit Erfolg
+        eingesetzt wird. Aufgrund der Serverinfrastruktur, auf die das System
         zurückgreift werden Daten, die in Deutschland aufgenommen werden in der
         Hauptstelle in den USA verarbeitet und aufgenommen.
       </p>
@@ -407,7 +405,7 @@ const RisikostufenAnwendungsbeispiele = {
       </p>
       <p>
         Die genaue Einschätzung in welche Risikostufe ein gegebenes KI-System
-        fällt kann durchaus komplex sein und hängt von mehr Faktoren ab als
+        fällt, kann durchaus komplex sein und hängt von mehr Faktoren ab als
         wofür es inhaltlich genutzt wird bspw. ob ich als Hersteller und
         Nutzender auftrete. Wo ich das System einsetzen will? Ob ich Teil der EU
         bin etc.
@@ -417,13 +415,13 @@ const RisikostufenAnwendungsbeispiele = {
       <h2>EU AI Act Compliance Checker</h2>
       <p>
         Um sich einen Überblick über die verschiedenen Möglichkeiten zu
-        verschaffen gibt es den EU Compliance Checker. Das Tool bietet die
+        verschaffen, gibt es den EU-Compliance-Checker. Das Tool bietet die
         Möglichkeit verschiedene Varianten durchzuspielen, um herauszufinden
         welche Regelungen für das eigene System gelten. Wir empfehlen daher es
         einmal selbst auszuprobieren und die oben genannten Beispiele oder
         eigene Idee einfach mal auf
         https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/
-        oder mit einem klick auf die unten befindene Einbindung auszuprobieren.
+        oder mit einem Klick auf die unten befindliche Einbindung zu testen.
         <a
           href="https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/"
           style={{ position: "relative", display: "inline-block" }}

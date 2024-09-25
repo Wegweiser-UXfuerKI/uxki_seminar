@@ -35,21 +35,29 @@ const Home = () => {
                   <h2 className="text-ux_dark">{module[1]}</h2>
                 </div>
               </div>
-              <div className="h-full w-2/3 flex flex-wrap items-center justify-between">
-                {getSubtopicLinksAndNamesByModulelink(module[0]).map(
-                  ([subLink, subName], subIndex) => (
-                    <Link
-                      key={subIndex}
-                      to={`/${module[0]}/${subLink}`}
-                      className="h-fit w-[48%]"
-                    >
-                      <UXButton
-                        text={subName}
-                        bgColor="ux_lightgrey"
-                      ></UXButton>
-                    </Link>
-                  )
-                )}
+              <div className="h-full w-2/3 flex flex-col items-center justify-center gap-3">
+                {getSubtopicLinksAndNamesByModulelink(module[0])
+                  .reduce((result, value, index, array) => {
+                    if (index % 2 === 0)
+                      result.push(array.slice(index, index + 2));
+                    return result;
+                  }, [])
+                  .map((pair, pairIndex) => (
+                    <div key={pairIndex} className="w-full flex gap-3">
+                      {pair.map(([subLink, subName], subIndex) => (
+                        <Link
+                          key={subIndex}
+                          to={`/${module[0]}/${subLink}`}
+                          className="h-fit w-[48%]"
+                        >
+                          <UXButton
+                            text={subName}
+                            bgColor="ux_lightgrey"
+                          ></UXButton>
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
               </div>
             </Link>
           </div>

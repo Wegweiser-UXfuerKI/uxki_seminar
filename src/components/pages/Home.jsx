@@ -28,14 +28,14 @@ const Home = () => {
                   <img
                     src={getModuleImageByLink(module[0])}
                     alt={`module icon: ${module[0]}`}
-                    className="w-auto h-[150px] object-contain"
+                    className="w-auto h-[150px] object-contain fill-ux_lightgrey"
                   />
                 </div>
                 <div className="h-1/3 w-full flex flex-col-reverse">
                   <h2 className="text-ux_dark">{module[1]}</h2>
                 </div>
               </div>
-              <div className="h-full w-2/3 flex flex-col items-center justify-center gap-3">
+              <div className="h-full w-2/3 flex flex-col items-center justify-center gap-5">
                 {getSubtopicLinksAndNamesByModulelink(module[0])
                   .reduce((result, value, index, array) => {
                     if (index % 2 === 0)
@@ -43,7 +43,7 @@ const Home = () => {
                     return result;
                   }, [])
                   .map((pair, pairIndex) => (
-                    <div key={pairIndex} className="w-full flex gap-3">
+                    <div key={pairIndex} className="w-full flex gap-5">
                       {pair.map(([subLink, subName], subIndex) => (
                         <Link
                           key={subIndex}
@@ -53,6 +53,8 @@ const Home = () => {
                           <UXButton
                             text={subName}
                             bgColor="ux_lightgrey"
+                            textColor="ux_darkgrey"
+                            arrowColor="ux_darkgrey"
                           ></UXButton>
                         </Link>
                       ))}

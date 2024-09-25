@@ -2,7 +2,6 @@
 .moduleCard {
   background: var(--white);
   color: var(--dark);
-  height: 400px;
   display: flex;
   flex-direction: row;
   margin: 20px;

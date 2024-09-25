@@ -23,15 +23,22 @@ export const TextLayout = () => {
       {subtopicContent &&
       subtopicContent.content &&
       Array.isArray(subtopicContent.content) ? (
-        subtopicContent.content.map((section, sectionIndex) => (
-          <div
-            key={`kapitel-${sectionIndex}-section-${sectionIndex}`}
-            className={`bg-color-${sectionIndex % 6}`}>
-            {section}
-          </div>
-        ))
+        subtopicContent.content.map((section, sectionIndex) => {
+          let bgColorClass;
+          if (sectionIndex === 0) {
+            bgColorClass = "bg-color-0";
+          } else {
+            bgColorClass = `bg-color-${((sectionIndex - 1) % 5) + 1}`;
+          }
+          return (
+            <div
+              key={`kapitel-${sectionIndex}-section-${sectionIndex}`}
+              className={bgColorClass}>
+              {section}
+            </div>
+          );
+        })
       ) : (
-        /* TODO: styling or own component? */
         <p>Loading...</p>
       )}
       <ChapterSwitch />

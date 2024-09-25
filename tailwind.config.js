@@ -24,6 +24,7 @@ module.exports = {
         ux_darkHover: "#54506a",
         ux_whiteUnselected: "#b7b4c7",
         ux_lightgrey: "#e0e0e0",
+        ux_darkgrey: "#5C5B5B",
       },
     },
   },

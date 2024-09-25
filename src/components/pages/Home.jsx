@@ -17,12 +17,10 @@ const Home = () => {
         modulesData.map((module, index) => (
           <div
             className={`${styles.moduleCard} w-10/12 rounded-3xl p-14`}
-            key={index}
-          >
+            key={index}>
             <Link
               to={`/${module[0]}`}
-              className="w-full flex flex-grow justify-between"
-            >
+              className="w-full flex flex-grow justify-between">
               <div className="relative flex flex-col-reverse h-full w-1/3">
                 <div className="absolute top-0 left-0 z-10">
                   <img
@@ -35,19 +33,28 @@ const Home = () => {
                   <h2 className="text-ux_dark">{module[1]}</h2>
                 </div>
               </div>
-              <div className="h-full w-2/3 flex flex-wrap items-center justify-between">
-                {getSubtopicLinksAndNamesByModulelink(module[0]).map(
-                  ([subLink, subName], subIndex) => (
-                    <Link
-                      key={subIndex}
-                      to={`/${module[0]}/${subLink}`}
-                      className="px-4 py-3 rounded-xl bg-ux_lightgrey flex flex-row h-fit w-[48%] justify-between items-center "
-                    >
-                      <div className="text-ux_dark ">{subName}</div>
-                      <RightArrow />
-                    </Link>
-                  )
-                )}
+              <div className="h-full w-2/3 flex flex-col items-center justify-center gap-y-5">
+                {getSubtopicLinksAndNamesByModulelink(module[0])
+                  .reduce((result, value, index, array) => {
+                    if (index % 2 === 0)
+                      result.push(array.slice(index, index + 2));
+                    return result;
+                  }, [])
+                  .map((pair, pairIndex) => (
+                    <div
+                      key={pairIndex}
+                      className="w-full flex justify-between">
+                      {pair.map(([subLink, subName], subIndex) => (
+                        <Link
+                          key={subIndex}
+                          to={`/${module[0]}/${subLink}`}
+                          className="px-4 py-3 rounded-xl bg-ux_lightgrey flex flex-row h-fit w-[48%] justify-between items-center">
+                          <div className="text-ux_dark">{subName}</div>
+                          <RightArrow />
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
               </div>
             </Link>
           </div>

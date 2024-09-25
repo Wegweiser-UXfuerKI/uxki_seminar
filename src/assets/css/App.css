@@ -41,6 +41,8 @@
   --whiteHover: #d4d2dd;
   --darkHover: #54506a;
   --whiteUnselected: #b7b4c7;
+  /*Icons*/
+  --lightgrey: #e0e0e0;
 }
 
 .bg-color-0 {

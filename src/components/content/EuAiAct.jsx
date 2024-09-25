@@ -176,16 +176,14 @@ const Einleitung = {
         teilweise noch am Anfang einer konkreten Ausformulierung von Regeln und
         Gesetzen stehen oder generell einen offeneren Ansatz mit Blick auf
         möglichst freie Innovationsentwicklung verfolgen.
-      </p>
-      <h2>Umsetzung des Acts in den Mitgliedstaaten</h2>
-      <p>
+      
         Die faktische Umsetzung des EU AI Acts in den Mitgliedstaaten erfordert
         sorgfältige Planung und Koordination, um die umfassenden Anforderungen
         des Gesetzes zu erfüllen.
       </p>
     </section>,
     <section>
-      <h2>Primäre Inhalte des Eu AI Acts</h2>
+      <h2>Primäre Inhalte des EU AI Acts</h2>
       <p>
         Der EU AI Act ist ein umfassendes Regelwerk, das den Einsatz von KI
         innerhalb der EU reguliert. Zu den primären Inhalten gehören die
@@ -278,7 +276,7 @@ const RisikostufenAnwendungsbeispiele = {
         vorstellen, das Sie selbst zur Einstufung nutzen können.{" "}
       </p>
       <p>
-        Für eine einfache Übersicht über die verschiedenen Risikostufen, schauen
+        Für eine einfache Übersicht über die verschiedenen Risikostufen schauen
         Sie sich gerne folgendes Video an:
       </p>
     </section>,
@@ -299,13 +297,13 @@ const RisikostufenAnwendungsbeispiele = {
       </p>
       <h3>Beispiel 1 - Antrags Assistent</h3>
       <p>
-        Stellen Sie sich vor Sie sind Teil einer kleinen in Berlin ansässigen
+        Stellen Sie sich vor, Sie sind Teil einer kleinen in Berlin ansässigen
         Organisation, die es sich zum Ziel gesetzt hat Personen aus
         benachteiligten Gruppen bei der Kommunikation mit Behörden zu
         unterstützen, bspw. durch Hilfe beim Schreiben von Briefen oder
         Anträgen, kleiner Übersetzungsleistungen o.Ä.. Um Ihre Prozesse zu
         optimieren haben Sie vor ein Unterstützungstool einzukaufen, dass die
-        Unterlagenprüfung für Sie übernimmt. Personen die zu Ihnen kommen können
+        Unterlagenprüfung für Sie übernimmt. Personen, die zu Ihnen kommen können
         dort ihre Dokumente digital hinterlegen, diese werden dann vom Antrags
         Assistenten geprüft, der Ihnen und ihren Kolleg:innen eine Auskunft
         darüber gibt, wie das System die Chancen auf Erfolg bei Antragsstellung

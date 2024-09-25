@@ -352,16 +352,16 @@ const RisikostufenAnwendungsbeispiele = {
       <p>
         Für unser zweites Beispiel stellen wir uns vor wir sind Teil einer in
         den USA und Europa agierenden auf Nachhaltigkeit und Tierwohl
-        ausgerichtetet Organisation, die in Kooperation mit einer ländlichen
+        ausgerichtete Organisation, die in Kooperation mit einer ländlichen
         Kommune die Population in einem Waldstück überwachen und messen möchte.
-        Um ein möglichst detailliertes Bild zu bekommen sendet Ihnen ihre
+        Um ein möglichst detailliertes Bild zu bekommen, sendet Ihnen ihre
         Hauptstelle in den Staaten durch KI-Erkennungssystem gesteuerte Kameras,
         die im Waldstück angebracht werden und automatisch Tiere bedrohter Arten
         identifizieren und die gemachten Bilder speichern sollen. Bei der
         genutzten Tiererkennungssoftware handelt es sich um eine etablierte
         Anwendung eines großen Technologiehauses, die in Kooperation mit ihrer
-        Hauptstelle entwickelt und in den USA schon weiträumig mit erfolg
-        eingesetzt wird. Aufgrund der Serverinfrastruktur auf die das System
+        Hauptstelle entwickelt und in den USA schon weiträumig mit Erfolg
+        eingesetzt wird. Aufgrund der Serverinfrastruktur, auf die das System
         zurückgreift werden Daten, die in Deutschland aufgenommen werden in der
         Hauptstelle in den USA verarbeitet und aufgenommen.
       </p>
@@ -405,7 +405,7 @@ const RisikostufenAnwendungsbeispiele = {
       </p>
       <p>
         Die genaue Einschätzung in welche Risikostufe ein gegebenes KI-System
-        fällt kann durchaus komplex sein und hängt von mehr Faktoren ab als
+        fällt, kann durchaus komplex sein und hängt von mehr Faktoren ab als
         wofür es inhaltlich genutzt wird bspw. ob ich als Hersteller und
         Nutzender auftrete. Wo ich das System einsetzen will? Ob ich Teil der EU
         bin etc.
@@ -415,13 +415,13 @@ const RisikostufenAnwendungsbeispiele = {
       <h2>EU AI Act Compliance Checker</h2>
       <p>
         Um sich einen Überblick über die verschiedenen Möglichkeiten zu
-        verschaffen gibt es den EU Compliance Checker. Das Tool bietet die
+        verschaffen, gibt es den EU-Compliance-Checker. Das Tool bietet die
         Möglichkeit verschiedene Varianten durchzuspielen, um herauszufinden
         welche Regelungen für das eigene System gelten. Wir empfehlen daher es
         einmal selbst auszuprobieren und die oben genannten Beispiele oder
         eigene Idee einfach mal auf
         https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/
-        oder mit einem klick auf die unten befindene Einbindung auszuprobieren.
+        oder mit einem Klick auf die unten befindliche Einbindung zu testen.
         <a
           href="https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/"
           style={{ position: "relative", display: "inline-block" }}

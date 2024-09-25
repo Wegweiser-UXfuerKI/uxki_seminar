@@ -17,12 +17,10 @@ const Home = () => {
         modulesData.map((module, index) => (
           <div
             className={`${styles.moduleCard} w-10/12 rounded-3xl`}
-            key={index}
-          >
+            key={index}>
             <Link
               to={`/${module[0]}`}
-              className="w-full flex flex-grow justify-between p-14"
-            >
+              className="w-full flex flex-grow justify-between p-14">
               <div className="relative flex flex-col-reverse h-full w-1/3">
                 <div className="absolute top-0 left-0 z-10">
                   <img
@@ -48,14 +46,13 @@ const Home = () => {
                         <Link
                           key={subIndex}
                           to={`/${module[0]}/${subLink}`}
-                          className="h-fit w-[48%]"
-                        >
+                          className="h-fit w-[48%]">
                           <UXButton
                             text={subName}
-                            bgColor="ux_lightgrey"
-                            textColor="ux_darkgrey"
-                            arrowColor="ux_darkgrey"
-                          ></UXButton>
+                            bgColor="--lightgrey"
+                            textColor="--darkgrey"
+                            arrowColor="--darkgrey"
+                          />
                         </Link>
                       ))}
                     </div>

@@ -71,8 +71,7 @@ const Einleitung = {
           href="https://artificialintelligenceact.eu/de/entwicklungen/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inlineLink"
-        >
+          className="inlineLink">
           https://artificialintelligenceact.eu/de/entwicklungen/
         </a>
         .
@@ -175,11 +174,10 @@ const Einleitung = {
         unkontrollierten Auswirkungen haben, im Gegensatz zur EU allerdings
         teilweise noch am Anfang einer konkreten Ausformulierung von Regeln und
         Gesetzen stehen oder generell einen offeneren Ansatz mit Blick auf
-        möglichst freie Innovationsentwicklung verfolgen.
-      
-        Die faktische Umsetzung des EU AI Acts in den Mitgliedstaaten erfordert
-        sorgfältige Planung und Koordination, um die umfassenden Anforderungen
-        des Gesetzes zu erfüllen.
+        möglichst freie Innovationsentwicklung verfolgen. Die faktische
+        Umsetzung des EU AI Acts in den Mitgliedstaaten erfordert sorgfältige
+        Planung und Koordination, um die umfassenden Anforderungen des Gesetzes
+        zu erfüllen.
       </p>
     </section>,
     <section>
@@ -303,14 +301,14 @@ const RisikostufenAnwendungsbeispiele = {
         unterstützen, bspw. durch Hilfe beim Schreiben von Briefen oder
         Anträgen, kleiner Übersetzungsleistungen o.Ä.. Um Ihre Prozesse zu
         optimieren haben Sie vor ein Unterstützungstool einzukaufen, dass die
-        Unterlagenprüfung für Sie übernimmt. Personen, die zu Ihnen kommen können
-        dort ihre Dokumente digital hinterlegen, diese werden dann vom Antrags
-        Assistenten geprüft, der Ihnen und ihren Kolleg:innen eine Auskunft
-        darüber gibt, wie das System die Chancen auf Erfolg bei Antragsstellung
-        bewertet. Das System kann keine Personen ablehnen und keine
-        eigenständigen Entscheidungen treffen. <br /> Was glauben Sie? Nehmen
-        Sie sich einen Moment Zeit und denken Sie darüber nach wo ein solches
-        System eingeordnet werden könnte. Wir fassen die wichtigsten
+        Unterlagenprüfung für Sie übernimmt. Personen, die zu Ihnen kommen
+        können dort ihre Dokumente digital hinterlegen, diese werden dann vom
+        Antrags Assistenten geprüft, der Ihnen und ihren Kolleg:innen eine
+        Auskunft darüber gibt, wie das System die Chancen auf Erfolg bei
+        Antragsstellung bewertet. Das System kann keine Personen ablehnen und
+        keine eigenständigen Entscheidungen treffen. <br /> Was glauben Sie?
+        Nehmen Sie sich einen Moment Zeit und denken Sie darüber nach wo ein
+        solches System eingeordnet werden könnte. Wir fassen die wichtigsten
         Informationen hier noch mal zusammen, dabei spielen nicht nur die Dinge
         eine Rolle, die das System tut, sondern explizit auch was es nicht tut
         oder kann.
@@ -427,8 +425,7 @@ const RisikostufenAnwendungsbeispiele = {
           style={{ position: "relative", display: "inline-block" }}
           className="rounded-xl overflow-hidden"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <GraphicContainer
             type={"image"}
             src={ComlianceCheckerImg}
@@ -442,8 +439,7 @@ const RisikostufenAnwendungsbeispiele = {
               width: "100%",
               height: "100%",
             }}
-            className="bg-black bg-opacity-15 hover:bg-opacity-20"
-          ></div>
+            className="bg-black bg-opacity-15 hover:bg-opacity-20"></div>
         </a>
       </p>
       <p>
@@ -683,18 +679,16 @@ const RisikostufenAuswirkungen = {
         dass KI-Systeme ethisch und verantwortungsvoll entwickelt, eingesetzt
         und genutzt werden.
       </p>
-      <i>
-        Zusammenfassend lässt sich sagen, dass die KIVO einen umfassenden Rahmen
-        für die Entwicklung, den Einsatz und die Nutzung von KI-Systemen
-        schafft, diese in verschiedene Risikostufen einteilt und spezifische
-        Anforderungen für jede Kategorie festlegt. Insbesondere
-        Hochrisiko-KI-Systeme unterliegen strengen regulatorischen
-        Anforderungen, um ihre Sicherheit und ethische Nutzung zu gewährleisten.
-        Durch die Implementierung eines KI-Managementsystems gemäß der KIVO und
-        DIN 42001:2023 können Organisationen effektiv KI-bezogene Aktivitäten
-        verwalten, Compliance sicherstellen, verantwortungsvollen Einsatz
-        fördern und Innovation in KI-Technologien vorantreiben.
-      </i>
+      Zusammenfassend lässt sich sagen, dass die KIVO einen umfassenden Rahmen
+      für die Entwicklung, den Einsatz und die Nutzung von KI-Systemen schafft,
+      diese in verschiedene Risikostufen einteilt und spezifische Anforderungen
+      für jede Kategorie festlegt. Insbesondere Hochrisiko-KI-Systeme
+      unterliegen strengen regulatorischen Anforderungen, um ihre Sicherheit und
+      ethische Nutzung zu gewährleisten. Durch die Implementierung eines
+      KI-Managementsystems gemäß der KIVO und DIN 42001:2023 können
+      Organisationen effektiv KI-bezogene Aktivitäten verwalten, Compliance
+      sicherstellen, verantwortungsvollen Einsatz fördern und Innovation in
+      KI-Technologien vorantreiben.
     </section>,
   ],
 };

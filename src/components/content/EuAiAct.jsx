@@ -898,7 +898,7 @@ const HLEG = {
         Die Arbeit der High-Level Expert Group on AI stellt einen wichtigen
         Schritt dar, um sicherzustellen, dass KI-Systeme im Einklang mit
         europäischen Werten und Grundrechten entwickelt und eingesetzt werden.
-        Die definierten Kriterien und Leitlinien dienen als Grundlage für die
+        Definierte Kriterien und Leitlinien dienen dabei als Grundlage für die
         Entwicklung und Implementierung vertrauenswürdiger und ethisch
         verantwortungsvoller KI-Systeme. Die umfassende Betrachtung technischer,
         ethischer und sozialer Aspekte trägt dazu bei, dass KI nicht nur

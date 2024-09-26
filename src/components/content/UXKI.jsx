@@ -1,4 +1,4 @@
-import imageElement from "../../assets/svg/ki_placeholder.svg";
+import imageElement from "../../assets/svg/uxki_icon.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 

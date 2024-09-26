@@ -28,7 +28,7 @@ const Home = () => {
                   <img
                     src={getModuleImageByLink(module[0])}
                     alt={`module icon: ${module[0]}`}
-                    className="w-auto h-[150px] object-contain fill-ux_lightgrey"
+                    className="w-auto max-h-[150px] max-w-[150px] object-contain fill-ux_lightgrey"
                   />
                 </div>
                 <div className="h-1/3 w-full flex flex-col-reverse">

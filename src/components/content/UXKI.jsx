@@ -15,7 +15,12 @@ const WahrgenommeneAutonomie = {
   content: [
     <ChapterHeader text={"Wahrgenommene Autonomie"} number={2} />,
     <section>
-      <VideoContainer link={""} title={"Wahrgenommene Autonomie Vidoe"} />
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/7QDwxEpQNHk?rel=0&modestbranding=1"
+        }
+        title={"Perceived Autonomy"}
+      />
     </section>,
     <section>
       <h2>1. Definition von wahrgenommener Autonomie</h2>
@@ -298,7 +303,14 @@ const WahrgenommenesSituationsbewusstsein = {
       text={"Wahrgenommenes Situationsbewusstsein (SA)"}
       number={3}
     />,
-    <section>Video</section>,
+    <section>
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/mhUXTuMQ5mY?rel=0&modestbranding=1"
+        }
+        title={"Perceived Situationawareness"}
+      />
+    </section>,
     <section>
       <h2>1. Definition Situationsbewusstsein (SA)</h2>
       <p>
@@ -1036,7 +1048,14 @@ const Zusammenfassung = {
     "Hier findet man eine kurze Zusammenfassung der wichtigsten Aspekte, sowie einen Ausblick auf das nächste Modul.",
   content: [
     <ChapterHeader text={"Zusammenfassung und Ausblick"} number={7} />,
-    <section>video</section>,
+    <section>
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/Qmg1FlFCSMw?rel=0&modestbranding=1"
+        }
+        title={"Outro"}
+      />
+    </section>,
     <section>
       <p>
         In dieser Lektion haben wir uns intensiv mit den spezifischen User
@@ -1165,7 +1184,12 @@ const EinführungUXKI = {
   content: [
     <ChapterHeader text={"Einführung in KI-bezogene UX"} number={1} />,
     <section>
-      <VideoContainer link={"youtube.com"} title={"Einleitungsvideo"} />
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/dbBIEqBMudI?rel=0&modestbranding=1"
+        }
+        title={"Intro"}
+      />
       <p>
         In der vorigen Lektion haben wir etablierte UX-Konstrukte betrachtet,
         die allgemeine Nutzererfahrungen beschreiben. KI-Systeme hingegen

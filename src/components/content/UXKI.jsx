@@ -1,70 +1,16 @@
 import imageElement from "../../assets/svg/uxki_icon.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
+import { Link } from "react-router-dom";
 
-const EinführungUXKI = {
-  linkName: "einfuehrung-ki-bezogene-ux",
-  name: "Einführung KI-bezogene UX",
-  description: "",
-  content: [
-    <ChapterHeader text={"Einführung in KI-bezogene UX"} number={1} />,
-    <section>
-      <VideoContainer link={"youtube.com"} title={"Einleitungsvideo"} />
-      <p>
-        In der vorigen Lektion haben wir etablierte UX-Konstrukte betrachtet,
-        die allgemeine Nutzererfahrungen beschreiben. KI-Systeme hingegen
-        greifen tief in unsere Informationsverarbeitung ein, was zusätzliche
-        Aspekte für die User Experience (UX) relevant macht. Diese neuen
-        Dimensionen sind essentiell, da sie direkt beeinflussen, wie Menschen
-        mit KI-Systemen interagieren und diese wahrnehmen.
-      </p>
-    </section>,
-    <section>
-      <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
-      <div>KACHELN MIT LINKS</div>
-    </section>,
-    <section>
-      <h2>Warum sind diese Aspekte wichtig für die Automation-Related UX?</h2>
-      <p>
-        Mit der zunehmenden Integration von KI in alltägliche Systeme ist es
-        entscheidend, diese Aspekte in der UX zu berücksichtigen. KI-Systeme
-        übernehmen Aufgaben, die früher Menschen vorbehalten waren, und
-        erfordern daher, dass Nutzer ein Gefühl von Kontrolle, Verständnis und
-        Vertrauen behalten. Die Gestaltung von KI-Systemen muss sicherstellen,
-        dass Nutzer die Systeme nicht nur effektiv nutzen, sondern sich auch
-        sicher und autonom fühlen können.
-      </p>
-      <h3>Beispiel:</h3>
-      <p>
-        Stellen Sie sich ein KI-gestütztes Verkehrsmanagementsystem vor. Dieses
-        System analysiert Verkehrsdaten und schlägt Optimierungen für
-        Ampelphasen vor. Nutzer wie Verkehrsingenieure müssen das System
-        verstehen, seine Vorschläge bewerten und gegebenenfalls anpassen können.
-        Hier ist es wichtig, dass das System Transparenz bietet, um das
-        Situationsbewusstsein zu fördern, eine angenehme Menge an Informationen
-        bereitstellt, um Überlastung zu vermeiden, und Vertrauen in die
-        Automatisierung aufbaut.
-      </p>
-      <h3>Ausblick:</h3>
-      <p>
-        In den folgenden Kapiteln werden wir detailliert untersuchen, wie diese
-        fünf Aspekte – Wahrgenommene Autonomie, Situationsbewusstsein,
-        Information Overload / Mentale Arbeitsbelastung, Trustworthiness und
-        Confidence/Diagnosticity – die Gestaltung und Nutzung von KI-Systemen
-        beeinflussen. Wir werden sehen, wie diese Aspekte in der Praxis
-        umgesetzt werden können und welche Designrichtlinien helfen, eine
-        positive und effektive Mensch-KI-Interaktion zu fördern. Freuen Sie sich
-        auf eine tiefere Auseinandersetzung mit den Herausforderungen und
-        Chancen der KI-bezogenen UX!
-      </p>
-    </section>,
-  ],
-};
+const moduleLink = "ki-bezogene-ux";
+const moduleName = "KI bezogene UX";
 
 const WahrgenommeneAutonomie = {
   linkName: "wahrgenommene-autonomie",
   name: "Wahrgenommene Autonomie",
-  description: "",
+  description:
+    "Dieser Aspekt beschreibt, wie sehr Nutzende das Gefühl haben, selbstständig zu handeln und Entscheidungen zu treffen, während sie mit einem KI-System interagieren.",
   content: [
     <ChapterHeader text={"Wahrgenommene Autonomie"} number={2} />,
     <section>
@@ -344,7 +290,8 @@ const WahrgenommeneAutonomie = {
 const WahrgenommenesSituationsbewusstsein = {
   linkName: "wahrgenommenes-situationsbewusstsein",
   name: "Wahrgenommenes Situationsbewusstsein",
-  description: "",
+  description:
+    "Dies bezieht sich auf das Verständnis der Nutzende über ihre Umgebung und die Änderungen, die durch das KI-System verursacht werden.",
   content: [
     <ChapterHeader
       text={"Wahrgenommenes Situationsbewusstsein (SA)"}
@@ -507,7 +454,8 @@ const WahrgenommenesSituationsbewusstsein = {
 const WahrgenommeneInformationOverload = {
   linkName: "wahrgenommene-information-overload",
   name: "Wahrgenommene Information Overload / Mentale Arbeitsbelastung",
-  description: "",
+  description:
+    "Dieser Aspekt umfasst den kognitiven Aufwand, der erforderlich ist, um Informationen zu verarbeiten und Entscheidungen zu treffen, und die potenzielle Überlastung durch zu viele Informationen.",
   content: [
     <ChapterHeader
       text={"Wahrgenommene Information Overload / Mentale Arbeitsbelastung"}
@@ -658,7 +606,8 @@ const WahrgenommeneInformationOverload = {
 const PerceivedTrustworthiness = {
   linkName: "perceived-trustworthiness",
   name: "Perceived Trustworthiness",
-  description: "",
+  description:
+    "Die Wahrnehmung, wie zuverlässig Nutzende ein KI-System empfinden, und wie gut es ihre Bedürfnisse erfüllt. ",
   content: [
     <ChapterHeader text={"Perceived Trustworthiness"} number={5} />,
     <section>Video</section>,
@@ -893,7 +842,8 @@ const PerceivedTrustworthiness = {
 const PerceivedConfidence = {
   linkName: "perceived-confidence",
   name: "Perceived Confidence / Diagnosticity",
-  description: "",
+  description:
+    "Dies beschreibt das Vertrauen der Nutzende in die Diagnosen oder Vorschläge des KI-Systems und wie gut diese die gewünschten Ergebnisse liefern. ",
   content: [
     <ChapterHeader text={"Perceived Confidence / Diagnosticity"} number={6} />,
     <section>
@@ -1172,9 +1122,107 @@ const Zusammenfassung = {
   ],
 };
 
+const linksAndNames = [
+  {
+    link: WahrgenommeneAutonomie.linkName,
+    name: WahrgenommeneAutonomie.name,
+    description: WahrgenommeneAutonomie.description,
+  },
+  {
+    link: WahrgenommenesSituationsbewusstsein.linkName,
+    name: WahrgenommenesSituationsbewusstsein.name,
+    description: WahrgenommenesSituationsbewusstsein.description,
+  },
+  {
+    link: WahrgenommeneInformationOverload.linkName,
+    name: WahrgenommeneInformationOverload.name,
+    description: WahrgenommeneInformationOverload.description,
+  },
+  {
+    link: PerceivedTrustworthiness.linkName,
+    name: PerceivedTrustworthiness.name,
+    description: PerceivedTrustworthiness.description,
+  },
+  {
+    link: PerceivedConfidence.linkName,
+    name: PerceivedConfidence.name,
+    description: PerceivedConfidence.description,
+  },
+];
+
+const EinführungUXKI = {
+  linkName: "einfuehrung-ki-bezogene-ux",
+  name: "Einführung KI-bezogene UX",
+  description: "",
+  content: [
+    <ChapterHeader text={"Einführung in KI-bezogene UX"} number={1} />,
+    <section>
+      <VideoContainer link={"youtube.com"} title={"Einleitungsvideo"} />
+      <p>
+        In der vorigen Lektion haben wir etablierte UX-Konstrukte betrachtet,
+        die allgemeine Nutzererfahrungen beschreiben. KI-Systeme hingegen
+        greifen tief in unsere Informationsverarbeitung ein, was zusätzliche
+        Aspekte für die User Experience (UX) relevant macht. Diese neuen
+        Dimensionen sind essentiell, da sie direkt beeinflussen, wie Menschen
+        mit KI-Systemen interagieren und diese wahrnehmen.
+      </p>
+    </section>,
+    <section>
+      <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
+      <div className="flex flex-wrap justify-center">
+        {linksAndNames.map((item, index) => (
+          <div className="w-[320px] min-h-[360px] h-auto flex flex-col items-center m-[20px] bg-white rounded-xl">
+            <Link to={`/${moduleLink}/${item.link}`} className="w-full h-full">
+              <h2 className="text-base text-ux_dark m-8">{item.name}</h2>
+              <div className="text-ux_dark px-8 w-full smallTextSize mb-5 mt-3">
+                {item.description}
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </section>,
+    <section>
+      <h2>Warum sind diese Aspekte wichtig für die Automation-Related UX?</h2>
+      <p>
+        Mit der zunehmenden Integration von KI in alltägliche Systeme ist es
+        entscheidend, diese Aspekte in der UX zu berücksichtigen. KI-Systeme
+        übernehmen Aufgaben, die früher Menschen vorbehalten waren, und
+        erfordern daher, dass Nutzer ein Gefühl von Kontrolle, Verständnis und
+        Vertrauen behalten. Die Gestaltung von KI-Systemen muss sicherstellen,
+        dass Nutzer die Systeme nicht nur effektiv nutzen, sondern sich auch
+        sicher und autonom fühlen können.
+      </p>
+      <h3>Beispiel:</h3>
+      <p>
+        Stellen Sie sich ein KI-gestütztes Verkehrsmanagementsystem vor. Dieses
+        System analysiert Verkehrsdaten und schlägt Optimierungen für
+        Ampelphasen vor. Nutzer wie Verkehrsingenieure müssen das System
+        verstehen, seine Vorschläge bewerten und gegebenenfalls anpassen können.
+        Hier ist es wichtig, dass das System Transparenz bietet, um das
+        Situationsbewusstsein zu fördern, eine angenehme Menge an Informationen
+        bereitstellt, um Überlastung zu vermeiden, und Vertrauen in die
+        Automatisierung aufbaut.
+      </p>
+      <h3>Ausblick:</h3>
+      <p>
+        In den folgenden Kapiteln werden wir detailliert untersuchen, wie diese
+        fünf Aspekte – Wahrgenommene Autonomie, Situationsbewusstsein,
+        Information Overload / Mentale Arbeitsbelastung, Trustworthiness und
+        Confidence/Diagnosticity – die Gestaltung und Nutzung von KI-Systemen
+        beeinflussen. Wir werden sehen, wie diese Aspekte in der Praxis
+        umgesetzt werden können und welche Designrichtlinien helfen, eine
+        positive und effektive Mensch-KI-Interaktion zu fördern. Freuen Sie sich
+        auf eine tiefere Auseinandersetzung mit den Herausforderungen und
+        Chancen der KI-bezogenen UX!
+      </p>
+    </section>,
+  ],
+};
+
 const UXKISections = {
-  linkName: "ki-bezogene-ux",
-  name: "KI bezogene UX",
+  linkName: moduleLink,
+  name: moduleName,
   moduleImage: imageElement,
   content: [
     EinführungUXKI,

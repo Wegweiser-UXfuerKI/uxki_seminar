@@ -2,6 +2,7 @@ import imageElement from "../../assets/svg/uxki_icon.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import { Link } from "react-router-dom";
+import "../SubTopic.css";
 
 const moduleLink = "ki-bezogene-ux";
 const moduleName = "KI bezogene UX";
@@ -452,15 +453,12 @@ const WahrgenommenesSituationsbewusstsein = {
 };
 
 const WahrgenommeneInformationOverload = {
-  linkName: "wahrgenommene-information-overload",
-  name: "Wahrgenommene Information Overload / Mentale Arbeitsbelastung",
+  linkName: "mental-workload",
+  name: "Mental Workload",
   description:
     "Dieser Aspekt umfasst den kognitiven Aufwand, der erforderlich ist, um Informationen zu verarbeiten und Entscheidungen zu treffen, und die potenzielle Überlastung durch zu viele Informationen.",
   content: [
-    <ChapterHeader
-      text={"Wahrgenommene Information Overload / Mentale Arbeitsbelastung"}
-      number={4}
-    />,
+    <ChapterHeader text={"Mental Workload"} number={4} />,
     <section>video</section>,
     <section>
       <h2>1. Definition: Mentale Arbeitsbelastung</h2>
@@ -1034,7 +1032,8 @@ const PerceivedConfidence = {
 const Zusammenfassung = {
   linkName: "zusammenfassung-ausblick",
   name: "Zusammenfassung und Ausblick",
-  description: "",
+  description:
+    "Hier findet man eine kurze Zusammenfassung der wichtigsten Aspekte, sowie einen Ausblick auf das nächste Modul.",
   content: [
     <ChapterHeader text={"Zusammenfassung und Ausblick"} number={7} />,
     <section>video</section>,
@@ -1122,6 +1121,14 @@ const Zusammenfassung = {
   ],
 };
 
+const Quellen = {
+  linkName: "quellen",
+  name: "Quellen",
+  description:
+    "Hier befinden sich die verwendeten Quellen in Reihenfolge des ersten Auftretens",
+  content: [<ChapterHeader text={"Quellen"} number={8} />],
+};
+
 const linksAndNames = [
   {
     link: WahrgenommeneAutonomie.linkName,
@@ -1153,7 +1160,8 @@ const linksAndNames = [
 const EinführungUXKI = {
   linkName: "einfuehrung-ki-bezogene-ux",
   name: "Einführung KI-bezogene UX",
-  description: "",
+  description:
+    "KI-Systeme machen mehr Aspekte für die User Experience relevant. Hier werden wichtige dieser KI-bezogenen UX Aspekte ein erstes mal angeführt.",
   content: [
     <ChapterHeader text={"Einführung in KI-bezogene UX"} number={1} />,
     <section>
@@ -1171,10 +1179,16 @@ const EinführungUXKI = {
       <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
       <div className="flex flex-wrap justify-center">
         {linksAndNames.map((item, index) => (
-          <div className="w-[320px] min-h-[360px] h-auto flex flex-col items-center m-[20px] bg-white rounded-xl">
+          <div className="subTopicCard rounded-xl">
             <Link to={`/${moduleLink}/${item.link}`} className="w-full h-full">
-              <h2 className="text-base text-ux_dark m-8">{item.name}</h2>
-              <div className="text-ux_dark px-8 w-full smallTextSize mb-5 mt-3">
+              <div className="topSection relative overflow-hidden h-32">
+                <h2
+                  className="thirdTitle absolute left-0 bottom-0 mb-0 px-[33px]"
+                  topic-number={String(index + 2).padStart(2, "0")}>
+                  {item.name}
+                </h2>
+              </div>
+              <div className="text-ux_dark px-[33px] w-full smallTextSize mb-5 mt-3">
                 {item.description}
               </div>
             </Link>
@@ -1232,6 +1246,7 @@ const UXKISections = {
     PerceivedTrustworthiness,
     PerceivedConfidence,
     Zusammenfassung,
+    Quellen,
   ],
 };
 

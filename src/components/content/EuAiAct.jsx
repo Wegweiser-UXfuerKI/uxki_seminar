@@ -71,8 +71,7 @@ const Einleitung = {
           href="https://artificialintelligenceact.eu/de/entwicklungen/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inlineLink"
-        >
+          className="inlineLink">
           https://artificialintelligenceact.eu/de/entwicklungen/
         </a>
         .
@@ -426,8 +425,7 @@ const RisikostufenAnwendungsbeispiele = {
           style={{ position: "relative", display: "inline-block" }}
           className="rounded-xl overflow-hidden"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <GraphicContainer
             type={"image"}
             src={ComlianceCheckerImg}
@@ -441,8 +439,7 @@ const RisikostufenAnwendungsbeispiele = {
               width: "100%",
               height: "100%",
             }}
-            className="bg-black bg-opacity-15 hover:bg-opacity-20"
-          ></div>
+            className="bg-black bg-opacity-15 hover:bg-opacity-20"></div>
         </a>
       </p>
       <p>
@@ -1042,7 +1039,8 @@ const Sources = {
 const Quellen = {
   linkName: "quellen",
   name: "Quellen",
-  description: "Quellen beschreibungstext",
+  description:
+    "Hier befinden sich die verwendeten Quellen in Reihenfolge des ersten Auftretens",
   content: [
     <ChapterHeader text={"Quellen"} number={6} />,
     Sources.literatur.length > 0 && (

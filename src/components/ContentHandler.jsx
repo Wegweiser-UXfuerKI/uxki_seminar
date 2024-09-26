@@ -1,9 +1,23 @@
+import Dateninput from "./content/Dateninput";
 import EuAiActSections from "./content/EuAiAct";
 import UXBasics from "./content/GrundlagenUX";
+import IdentifikationProzesse from "./content/IdentifikationProzesse";
+import KIErgebnisse from "./content/KI-Ergebnisse";
 import UXKISections from "./content/UXKI";
+import UXKIEigenschaften from "./content/UXKIEigenschaften";
+import Verarbeitung from "./content/Verarbeitung";
 
 // List of all Modules ~ auto import?
-const modules = [UXBasics, UXKISections, EuAiActSections];
+const modules = [
+  UXBasics,
+  UXKISections,
+  UXKIEigenschaften,
+  Dateninput,
+  Verarbeitung,
+  KIErgebnisse,
+  IdentifikationProzesse,
+  EuAiActSections,
+];
 
 // gets a list af all module links
 export function getModuleLinks() {

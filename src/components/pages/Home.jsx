@@ -43,7 +43,10 @@ const Home = () => {
                     return result;
                   }, [])
                   .map((pair, pairIndex) => (
-                    <div key={pairIndex} className="w-full flex gap-5">
+                    <div
+                      key={pairIndex}
+                      className="w-full flex gap-5 items-center"
+                    >
                       {pair.map(([subLink, subName], subIndex) => (
                         <Link
                           key={subIndex}

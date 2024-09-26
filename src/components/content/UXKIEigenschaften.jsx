@@ -1,4 +1,4 @@
-import imageElement from "../../assets/svg/ki_placeholder.svg";
+import imageElement from "../../assets/svg/uxbezkieig_icon.svg";
 
 const UXKIEigenschaften = {
   linkName: "ux-bezogene-ki-eigenschaften",

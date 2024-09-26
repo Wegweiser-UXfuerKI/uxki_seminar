@@ -134,7 +134,7 @@ const Popup = ({
         style={{ ...popupContent, background: bgColor }}
         className={styles.popup_size}
         onClick={handlePopupClick}>
-        <div className="flex w-full justify-between bg-neutral-800">
+        <div className="flex w-full justify-between">
           {soundOn && isExercise && (
             <div
               onClick={onSoundClick}
@@ -164,9 +164,7 @@ const Popup = ({
             X
           </div>
         </div>
-        <div className="bg-green-400 w-full h-full">
-          {renderPopupContent(content)}
-        </div>
+        <div className="w-full h-full">{renderPopupContent(content)}</div>
         <div></div>
       </div>
     </div>

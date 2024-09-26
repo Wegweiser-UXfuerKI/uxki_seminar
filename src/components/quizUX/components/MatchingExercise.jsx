@@ -217,7 +217,7 @@ const MatchingExercise = ({ exercise, onAnswer, answersUser = null }) => {
   };
 
   return (
-    <div className="flex flex-col h-full w-full justify-around">
+    <div className="flex flex-col h-full w-full justify-around relative">
       <div className="font-semibold mb-4 cursor-default text-ux_dark">
         {exercise.question}
       </div>
@@ -239,18 +239,20 @@ const MatchingExercise = ({ exercise, onAnswer, answersUser = null }) => {
                   />
                 ))}
             </div>
-            <div>
-              <DropContainer
-                key={Object.values(containers)[0].id}
-                exercise={exercise}
-                container={Object.values(containers)[0]}
-                color={color}
-                containerColor={containerColor}
-                selected={selected}
-                correctPairs={correctPairs}
-                checkClicked={checkClicked}
-              />
-            </div>
+            {!checkClicked && (
+              <div>
+                <DropContainer
+                  key={Object.values(containers)[0].id}
+                  exercise={exercise}
+                  container={Object.values(containers)[0]}
+                  color={color}
+                  containerColor={containerColor}
+                  selected={selected}
+                  correctPairs={correctPairs}
+                  checkClicked={checkClicked}
+                />
+              </div>
+            )}
           </div>
         )}
       </DragDropContext>
@@ -271,6 +273,22 @@ const MatchingExercise = ({ exercise, onAnswer, answersUser = null }) => {
           </div>
         )}
       </div>
+      {checkClicked && (
+        <div className="absolute top-0 w-full h-full flex justify-center items-center">
+          <div className="bg-slate-500 bg-opacity-65 rounded-xl p-5">
+            <div className="text-center font-semibold text-sm cursor-default">
+              Lösungen:
+            </div>
+            {correctPairs.map((pair, index) => (
+              <div key={index}>
+                <p className="sm p-1">
+                  <b>{pair[0]}:</b> {pair[1]}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -317,20 +335,6 @@ const DropContainer = ({
                 checkClicked={checkClicked}
               />
             ))}
-            {isDefault && checkClicked && (
-              <div>
-                <div className="text-center font-semibold text-sm cursor-default">
-                  Lösungen:
-                </div>
-                {correctPairs.map((pair, index) => (
-                  <div key={index}>
-                    <p className="sm p-1">
-                      <b>{pair[0]}:</b> {pair[1]}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            )}
             {provided.placeholder}
           </div>
         </div>
@@ -427,7 +431,7 @@ const defaultContainer_style = {
 };
 
 const draggable_style = {
-  background: "white",
+  background: "green",
   width: "25em",
   height: "auto",
   padding: "4px",

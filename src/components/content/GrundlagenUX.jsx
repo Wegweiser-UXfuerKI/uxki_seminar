@@ -121,26 +121,6 @@ const Evaluation = {
   ],
 };
 
-const PragmatischeHedonischeQuali = {
-  linkName: "pragmatische-hedonische-qualitaet",
-  name: "Pragmatische Hedonische Qualität",
-  description:
-    "Unterscheidung zwischen pragmatischen und hedonischen Aspekten der UX und deren Bedeutung für das Nutzererlebnis.",
-  content: [
-    <ChapterHeader text={"Pragmatische Hedonische Qualität"} number={7} />,
-    <section>
-      <div className="text-center p-10 pb-0 bg-slate-200 rounded-xl text-ux_dark flex flex-col justify-center items-center">
-        Work in progress...
-        <Link
-          to={"/"}
-          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
-          Zurück zur Kursübersicht
-        </Link>
-      </div>
-    </section>,
-  ],
-};
-
 const Fazit = {
   linkName: "fazit",
   name: "Fazit",
@@ -189,7 +169,6 @@ const UXBasicsData = {
     UserExperience,
     MenschComputerInteraktion,
     Evaluation,
-    PragmatischeHedonischeQuali,
     Fazit,
     Quellen,
   ],

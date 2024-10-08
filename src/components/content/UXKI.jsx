@@ -319,6 +319,16 @@ const WahrgenommenesSituationsbewusstsein = {
         der Zeit oder durch externe Faktoren auftreten können. Diese Fähigkeit
         ist grundlegend für effektive Entscheidungsfindung in vielen Bereichen.
       </p>
+      <p>
+        Eine ausführliche Erklärung der Definition finden Sie im folgenden
+        Video.
+      </p>
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/y6MyW_MGGCU?rel=0&modestbranding=1"
+        }
+        title={"Definition Situationawareness"}
+      />
     </section>,
     <section>
       <h2>2. Konzepte und Modelle</h2>
@@ -471,7 +481,14 @@ const WahrgenommeneInformationOverload = {
     "Dieser Aspekt umfasst den kognitiven Aufwand, der erforderlich ist, um Informationen zu verarbeiten und Entscheidungen zu treffen, und die potenzielle Überlastung durch zu viele Informationen.",
   content: [
     <ChapterHeader text={"Mental Workload"} number={4} />,
-    <section>video</section>,
+    <section>
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/dXiEQZShiCM?rel=0&modestbranding=1"
+        }
+        title={"Mental Workload"}
+      />
+    </section>,
     <section>
       <h2>1. Definition: Mentale Arbeitsbelastung</h2>
       <p>
@@ -620,7 +637,14 @@ const PerceivedTrustworthiness = {
     "Die Wahrnehmung, wie zuverlässig Nutzende ein KI-System empfinden, und wie gut es ihre Bedürfnisse erfüllt. ",
   content: [
     <ChapterHeader text={"Perceived Trustworthiness"} number={5} />,
-    <section>Video</section>,
+    <section>
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/ZGpk3LJDTzg?rel=0&modestbranding=1"
+        }
+        title={"Perceived Trustworthiness"}
+      />
+    </section>,
     <section>
       <h2>1. Definition: Perceived Trustworthiness</h2>
       <p>
@@ -856,6 +880,14 @@ const PerceivedConfidence = {
     "Dies beschreibt das Vertrauen der Nutzende in die Diagnosen oder Vorschläge des KI-Systems und wie gut diese die gewünschten Ergebnisse liefern. ",
   content: [
     <ChapterHeader text={"Perceived Confidence / Diagnosticity"} number={6} />,
+    <section>
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/jdsnWIIGT7c?rel=0&modestbranding=1"
+        }
+        title={"Perceived Confidence"}
+      />
+    </section>,
     <section>
       <h2>1. Definition: Diagnosticity</h2>
       <p>

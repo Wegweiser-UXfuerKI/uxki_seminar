@@ -13,6 +13,7 @@ const Header = () => {
     selectedModuleName,
     selectedSubtopicLink,
     selectedSubtopicName,
+    setScrollToChapter,
   } = useContext(AppContext);
 
   useEffect(() => {
@@ -73,8 +74,16 @@ const Header = () => {
         </Link>
       </div>
       <nav className="flex items-center">
-        <Link to="/">Kursübersicht</Link>
-        {selectedModuleName && (
+        <Link
+          to="/"
+          onClick={() => {
+            if (selectedModuleLink) {
+              setScrollToChapter(selectedModuleLink);
+            }
+          }}>
+          Kursübersicht
+        </Link>
+        {selectedModuleLink && (
           <>
             <RightArrow />
             <Link

@@ -14,6 +14,7 @@ const AppProvider = ({ children }) => {
   const [selectedModuleName, setSelectedModuleName] = useState(null);
   const [selectedSubtopicLink, setSelectedSubtopicLink] = useState(null);
   const [selectedSubtopicName, setSelectedSubtopicName] = useState(null);
+  const [scrollToChapter, setScrollToChapter] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -54,6 +55,8 @@ const AppProvider = ({ children }) => {
     selectedSubtopicLink,
     setSelectedSubtopicLink,
     selectedSubtopicName,
+    scrollToChapter,
+    setScrollToChapter,
   };
 
   return (

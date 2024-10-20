@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useContext } from "react";
 import QuizContext from "./QuizContext";
 import quizData from "../data/Quizinhalte_Testseminar.json";

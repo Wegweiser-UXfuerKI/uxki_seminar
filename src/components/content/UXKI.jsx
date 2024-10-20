@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "../SubTopic.css";
 
 const moduleLink = "ki-bezogene-ux";
-const moduleName = "KI bezogene UX";
+const moduleName = "KI-bezogene UX";
 
 const WahrgenommeneAutonomie = {
   linkName: "wahrgenommene-autonomie",

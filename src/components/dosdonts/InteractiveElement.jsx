@@ -6,7 +6,6 @@
 // Packages
 import { React, useState, useRef, useEffect, useContext } from "react";
 import tippy, { animateFill, hideAll } from "tippy.js";
-import { Link } from "react-router-dom";
 
 // Context and States
 import { tasks } from "./content/tasks.js";
@@ -241,7 +240,7 @@ function InteractiveElement() {
       // The provided word definitions that appear on hover
       tippy("mark", {
         content: (reference) => {
-          const definition = reference.getAttribute("data-definition")
+          const definition = reference.getAttribute("data-definition");
           return `<div class="text-lightText text-sm">${definition}</div>`;
         },
         allowHTML: true,
@@ -420,7 +419,7 @@ function InteractiveElement() {
   }, [index]);
   useEffect(() => {
     console.log("Task remain:", tasksRemain);
-  }, [tasksRemain])
+  }, [tasksRemain]);
 
   useEffect(() => {
     // On task change, process the explanation for the current task
@@ -619,7 +618,6 @@ function InteractiveElement() {
                 loading="lazy"
               />
             </div>
-
           </div>
         </div>
 
@@ -867,7 +865,9 @@ function InteractiveElement() {
               </div>
               <button
                 id="next-button"
-                className={`py-3 px-5 text-lightText ${tasksRemain ? "cassette-btn-dark" : "hidden"}`}
+                className={`py-3 px-5 text-lightText ${
+                  tasksRemain ? "cassette-btn-dark" : "hidden"
+                }`}
                 onClick={handleNextClicked}
                 aria-label="Nächste-Frage-Button">
                 {tasksRemain ? "Nächste Frage" : "Nah nah"}

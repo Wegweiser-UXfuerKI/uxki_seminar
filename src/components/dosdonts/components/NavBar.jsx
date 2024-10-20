@@ -7,26 +7,28 @@ import "./NavBar.css";
 */
 function NavBar({ currentView, setCurrentView }) {
   return (
-    <header className='nav-bar flex justify-between px-4 items-center'>
-      <a className='home flex items-center' href='#'>
-        <img className='logo' src={logo} alt='Logo UX-für-KI' />
-        <span id='website-title' className='text-center hidden md:block'>
+    <header className="nav-bar flex justify-between px-4 items-center">
+      <button className="home flex items-center">
+        <img className="logo" src={logo} alt="Logo UX-für-KI" />
+        <span id="website-title" className="text-center hidden md:block">
           Plattform zur Evaluation
         </span>
-      </a>
-      <span id='nav-button-container'>
+      </button>
+      <span id="nav-button-container">
         <button
-          id='text-link'
-          className={`nav-button mx-2 ${currentView === "text" ? "active-link" : ""}`}
-          onClick={() => setCurrentView("text")}
-        >
+          id="text-link"
+          className={`nav-button mx-2 ${
+            currentView === "text" ? "active-link" : ""
+          }`}
+          onClick={() => setCurrentView("text")}>
           <span className="text-inherit">Informationstext</span>
         </button>
         <button
-          id='app-link'
-          className={`nav-button mx-2 ${currentView === "interaktiv" ? "active-link" : ""}`}
-          onClick={() => setCurrentView("interaktiv")}
-        >
+          id="app-link"
+          className={`nav-button mx-2 ${
+            currentView === "interaktiv" ? "active-link" : ""
+          }`}
+          onClick={() => setCurrentView("interaktiv")}>
           <span className="text-inherit">Lernanwendung</span>
         </button>
       </span>

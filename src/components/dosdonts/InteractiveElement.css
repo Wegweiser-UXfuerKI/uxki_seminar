@@ -96,6 +96,7 @@ header {
   max-width: 576px;
   min-width: 330px;
   background-color: var(--background-grey-2);
+  overflow: hidden;
 
   position: absolute;
   width: 30%;

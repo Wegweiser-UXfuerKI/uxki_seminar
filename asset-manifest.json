@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8d254335.css",
-    "main.js": "/static/js/main.1eb5890b.js",
+    "main.css": "/static/css/main.87fc566d.css",
+    "main.js": "/static/js/main.d832c3ff.js",
     "static/media/avatar_girl.png": "/static/media/avatar_girl.7601c71f27f447ccb627.png",
     "static/media/OpenSans-Italic.ttf": "/static/media/OpenSans-Italic.582284c873c3f85ba4f8.ttf",
     "static/media/OpenSans.ttf": "/static/media/OpenSans.19ba637387f1d6142f55.ttf",
@@ -53,11 +53,11 @@
     "static/media/cross-icon.svg": "/static/media/cross-icon.17648e90379eb58fc516694bef79f83d.svg",
     "static/media/check-icon.svg": "/static/media/check-icon.721d68647ede2f838e805e7ca81a1970.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.5b05a247aa326306ecde9370dc152c7d.svg",
-    "main.8d254335.css.map": "/static/css/main.8d254335.css.map",
-    "main.1eb5890b.js.map": "/static/js/main.1eb5890b.js.map"
+    "main.87fc566d.css.map": "/static/css/main.87fc566d.css.map",
+    "main.d832c3ff.js.map": "/static/js/main.d832c3ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d254335.css",
-    "static/js/main.1eb5890b.js"
+    "static/css/main.87fc566d.css",
+    "static/js/main.d832c3ff.js"
   ]
 }

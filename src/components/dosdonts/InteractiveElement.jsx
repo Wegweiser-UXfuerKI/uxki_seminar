@@ -723,7 +723,7 @@ function InteractiveElement() {
                       alt=""
                       loading="lazy"
                     />
-                    <h3 className="text-inherit">{`${
+                    <h3 className="text-inherit p-0 my-3">{`${
                       task.answer === 1 ? "Berücksichtige" : "Vermeide"
                     }`}</h3>
                   </div>
@@ -743,7 +743,7 @@ function InteractiveElement() {
                       alt=""
                       loading="lazy"
                     />
-                    <h3 className="text-inherit">{`${
+                    <h3 className="text-inherit p-0 my-3">{`${
                       task.answer === 1 ? "Vermeide" : "Berücksichtige"
                     }`}</h3>
                   </div>

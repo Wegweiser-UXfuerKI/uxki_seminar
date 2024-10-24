@@ -1250,16 +1250,24 @@ const Quellen = {
             IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems
             and Humans, 30
           </i>
-          (3), 286–297.{" "}
-          <a href="https://doi.org/10.1109/3468.844354" target="_blank" rel="noreferrer">
+          (3), 286–297.
+          <a
+            href="https://doi.org/10.1109/3468.844354"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             https://doi.org/10.1109/3468.844354
           </a>
         </li>
         <li>
           Hopkins, D., & Schwanen, T. (2021). Talking about automated vehicles:
           What do levels of automation do? <i>Technology in Society, 64</i>,
-          101488.{" "}
-          <a href="https://doi.org/10.1016/j.techsoc.2020.101488" target="_blank" rel="noreferrer">
+          101488.
+          <a
+            href="https://doi.org/10.1016/j.techsoc.2020.101488"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             https://doi.org/10.1016/j.techsoc.2020.101488
           </a>
         </li>
@@ -1271,8 +1279,12 @@ const Quellen = {
             Human Factors: The Journal of the Human Factors and Ergonomics
             Society, 56
           </i>
-          (3), 476–488.{" "}
-          <a href="https://doi.org/10.1177/0018720813501549" target="_blank" rel="noreferrer">
+          (3), 476–488.
+          <a
+            href="https://doi.org/10.1177/0018720813501549"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             https://doi.org/10.1177/0018720813501549
           </a>
         </li>
@@ -1280,16 +1292,24 @@ const Quellen = {
           Kaber, D. B., & Endsley, M. R. (2004). The effects of level of
           automation and adaptive automation on human performance, situation
           awareness and workload in a dynamic control task.{" "}
-          <i>Theoretical Issues in Ergonomics Science, 5</i>(2), 113–153.{" "}
-          <a href="https://doi.org/10.1080/1463922021000054335" target="_blank" rel="noreferrer">
+          <i>Theoretical Issues in Ergonomics Science, 5</i>(2), 113–153.
+          <a
+            href="https://doi.org/10.1080/1463922021000054335"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             https://doi.org/10.1080/1463922021000054335
           </a>
         </li>
         <li>
           Rieger, T., Roesler, E., & Manzey, D. (2022). Challenging presumed
           technological superiority when working with (artificial) colleagues.{" "}
-          <i>Scientific Reports, 12</i>, 3768.{" "}
-          <a href="https://doi.org/10.1038/s41598-022-07808-x" target="_blank" rel="noreferrer">
+          <i>Scientific Reports, 12</i>, 3768.
+          <a
+            href="https://doi.org/10.1038/s41598-022-07808-x"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             https://doi.org/10.1038/s41598-022-07808-x
           </a>
         </li>
@@ -1300,16 +1320,24 @@ const Quellen = {
         </li>
         <li>
           Zoubir, M. (2024). <i>Preference for Automation Types Scale (PATS)</i>
-          .{" "}
-          <a href="https://doi.org/10.13140/RG.2.2.22149.97769" target="_blank" rel="noreferrer">
+          .
+          <a
+            href="https://doi.org/10.13140/RG.2.2.22149.97769"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             https://doi.org/10.13140/RG.2.2.22149.97769
           </a>
         </li>
         <li>
           Moradbakhti, L., Leichtmann, B., & Mara, M. (2024). Development and
           validation of a basic psychological needs scale for technology use.{" "}
-          <i>Psychological Test Adaptation and Development, 5</i>(1), 26–45.{" "}
-          <a href="https://doi.org/10.1027/2698-1866/a000062" target="_blank" rel="noreferrer">
+          <i>Psychological Test Adaptation and Development, 5</i>(1), 26–45.
+          <a
+            href="https://doi.org/10.1027/2698-1866/a000062"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             https://doi.org/10.1027/2698-1866/a000062
           </a>
         </li>

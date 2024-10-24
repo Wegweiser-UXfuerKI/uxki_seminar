@@ -188,7 +188,7 @@ h2 {
 
 .thirdTitle,
 h3 {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.25;
   font-weight: 600;
   margin-top: 30px;
@@ -196,15 +196,19 @@ h3 {
 }
 
 h4 {
+  font-size: 20px;
   font-weight: 600;
   font-style: italic;
-  margin-bottom: 5px;
+  padding: 10px 0;
 }
 
 p,
 li {
   font-size: calc(8px + 1vmin);
   line-height: 1.8;
+  text-align: justify;
+  hyphens: auto;
+  word-wrap: break-word;
   margin-bottom: 20px;
 }
 

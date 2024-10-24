@@ -35,42 +35,57 @@ const WahrgenommeneAutonomie = {
     </section>,
     <section>
       <h2>2. Relevante Konzepte und Modelle</h2>
-      <h4>Automatisierungsgrade:</h4>
+      <h3>Automatisierungsstufen (Levels of Automation)</h3>
       <p>
-        Diese Strukturierung hilft zu verstehen, wie Menschen mit
-        automatisierten Systemen interagieren. Verschiedene Stufen der
-        Automatisierung beschreiben dabei, welche Aufgaben vom Menschen oder der
-        Maschine übernommen werden.
-      </p>
-      <h4>Levels of Automation (LOA)</h4>
-      <p>
-        Ein Modell, das zehn Stufen der Aufgabenteilung und Verantwortlichkeit
-        zwischen Mensch und Maschine beschreibt.
-      </p>
-      <h4>Society of Automotive Engineers (SAE)</h4>
-      <p>
-        Definiert fünf Stufen der Mensch-Maschine-Interaktion, die verschiedene
-        Szenarien von Automatisierung berücksichtigen.
+        Die <b>Automatisierungsstufen</b> (Levels of Automation, LOA) wurden
+        entwickelt, um Abstufungen oder Kategorien der <b>Autonomie</b> zu
+        veranschaulichen. Diese Struktur hilft zu verstehen,{" "}
+        <b>wie Menschen mit automatisierten Systemen interagieren</b> und
+        beschreibt, welche Aufgaben entweder vom Menschen oder von der Maschine
+        übernommen werden.
+        <p></p>
+        Das LOA-Modell nach Parasuraman et al. (2000) umfasst{" "}
+        <b>zehn Stufen der Aufgabenteilung</b> und Verantwortlichkeit zwischen
+        Mensch und Maschine. Je nach Modell und Anwendungsbereich können die
+        Automatisierungsstufen jedoch variieren. So definiert beispielsweise die
+        Society of Automotive Engineers (SAE) <b>fünf Stufen</b> der
+        Automatisierung im Bereich <b>autonomer Fahrzeuge</b> (Hopkins &
+        Schwanen, 2021).
       </p>
       <h4>Einfluss der Automatisierung auf psychologische Variablen</h4>
       <p>
-        Automatisierung kann Stress, Arbeitsbelastung, Arbeitszufriedenheit,
-        Vertrauen und Situationsbewusstsein beeinflussen.
+        Die Einführung von Automatisierung hat einen signifikanten Einfluss auf
+        psychologische Variablen wie{" "}
+        <b>
+          Arbeitsbelastung, Fähigkeiten, Vertrauen und Situationsbewusstsein
+        </b>{" "}
+        der Nutzer (Parasuraman et al., 2000). Daher ist es entscheidend, das
+        geeignete Automatisierungsniveau je nach Aufgabe auszuwählen, um
+        unerwünschte Effekte zu vermeiden.
       </p>
       <h4>Vier Stufen der Informationsverarbeitung</h4>
       <p>
-        Umfasst Informationsbeschaffung, Informationsanalyse,
-        Entscheidungsfindung und Handlungsumsetzung.
+        Parasuraman, Sheridan und Wickens (2000) verknüpften die
+        Automatisierungsstufen mit vier grundlegenden Funktionen, die auf einem
+        Modell der menschlichen Informationsverarbeitung basieren und in einem
+        Mensch-Maschine-System unterstützt werden sollen:
+        <ol>
+          <li>Informationsbeschaffung,</li>
+          <li>Informationsanalyse,</li>
+          <li>Entscheidungsfindung</li>
+          <li>Handlungsausführung.</li>
+        </ol>
+        Dieses Modell bietet eine strukturierte Herangehensweise zur
+        Klassifizierung von Aufgaben, bei denen Automatisierung den Menschen
+        unterstützen kann.
       </p>
-      <h4>Anpassbare vs. selbstanpassende Automatisierung</h4>
       <p>
-        Systeme können entweder auf Nutzeranpassungen reagieren oder sich
-        selbstständig an veränderte Bedingungen anpassen.
-      </p>
-      <h4>Automatisierungsbezogene Benutzererfahrung</h4>
-      <p>
-        Bezieht sich auf das Verhalten der Nutzenden in Bezug auf die
-        Vertrauenswürdigkeit, Nachvollziehbarkeit und Nützlichkeit des Systems.
+        Fehler eines Systems in späteren Stadien können störender wirken als in
+        Systemen, bei denen die Automatisierung höchstens bis zur Phase der
+        Informationsanalyse eingesetzt wird. Akzeptanz, Vertrauen und Leistung
+        können abnehmen, wenn in den späteren Phasen der
+        Informationsverarbeitung zu viel Automatisierung vorhanden ist (Onnasch
+        et al., 2014).
       </p>
       <h4>Einfluss der Automatisierung auf die menschliche Leistung</h4>
       <p>
@@ -80,28 +95,98 @@ const WahrgenommeneAutonomie = {
       </p>
       <ol>
         <li>
-          1. Situationsbewusstsein: Das Verständnis der aktuellen Umgebung und
-          Situation durch den Menschen, welches durch Automatisierung entweder
-          gefördert oder beeinträchtigt werden kann
+          <b>Situationsbewusstsein:</b> Das Verständnis der aktuellen Umgebung
+          und Situation durch den Menschen, welches durch Automatisierung
+          entweder gefördert oder beeinträchtigt werden kann.
         </li>
         <li>
-          2. Vertrauen: Das Vertrauen der Nutzenden in das System ist
+          <b>Vertrauen:</b> Das Vertrauen der Nutzenden in das System ist
           entscheidend für eine erfolgreiche Interaktion und hängt stark von der
           wahrgenommenen Autonomie ab.
         </li>
         <li>
-          3. Abbau von Fähigkeiten: Hohe Automatisierung kann zu einem Rückgang
-          menschlicher Fähigkeiten führen, da weniger manuelle Eingriffe und
-          Entscheidungen nötig sind.
+          <b>Abbau von Fähigkeiten:</b> Hohe Automatisierung kann zu einem
+          Rückgang menschlicher Fähigkeiten führen, da weniger manuelle
+          Eingriffe und Entscheidungen nötig sind.
         </li>
         <li>
-          4. Arbeitsbelastung: Automatisierung kann die Arbeitsbelastung
+          <b>Arbeitsbelastung:</b> Automatisierung kann die Arbeitsbelastung
           entweder reduzieren oder erhöhen, abhängig davon, wie gut sie an die
           Bedürfnisse der Nutzenden angepasst ist.
         </li>
       </ol>
+      <h4>Anpassbare vs. selbstanpassende Automatisierung</h4>
+      <p>
+        Die Wahl des Automatisierungsniveaus hat einen signifikanten Einfluss
+        auf die Mensch-Automation-Interaktion. Es gibt zwei grundlegende
+        Ansätze: <b>anpassbare Automatisierung</b> und{" "}
+        <b>selbstanpassende Automatisierung</b>. In der anpassbaren
+        Automatisierung wählt der Benutzer das Automatisierungsniveau manuell
+        basierend auf seinen eigenen Bedürfnissen und Vorlieben. Im Gegensatz
+        dazu überwacht die selbstanpassende Automatisierung den Zustand des
+        Benutzers, wie Arbeitsbelastung oder Wachsamkeit, und passt das
+        Automatisierungsniveau automatisch an.
+      </p>
+      <ol>
+        <li>
+          Anpassbare Automatisierung (Adaptable Automation):
+          <ul>
+            <li>
+              Der Benutzer hat die Kontrolle über die Auswahl des
+              Automatisierungsniveaus.
+            </li>
+            <li>
+              Bietet Flexibilität und Anpassung an individuelle Präferenzen.
+            </li>
+            <li>
+              Vorteilhaft, wenn Benutzer die Systeme nach ihren eigenen
+              Bedürfnissen steuern wollen.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Selbstanpassende Automatisierung (Adaptive Automation):
+          <ul>
+            <li>
+              Das System überwacht den Benutzer (z. B. Arbeitsbelastung) und
+              passt das Automatisierungsniveau automatisch an.
+            </li>
+            <li>
+              Hilfreich in dynamischen Umgebungen, da es auf Veränderungen
+              reagiert, ohne dass der Benutzer eingreifen muss.
+            </li>
+            <li>
+              Kann die Arbeitsbelastung reduzieren, birgt jedoch das Risiko,
+              dass der Benutzer die Kontrolle verliert.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>,
+    <section>
+      <h2>3. Studien zur User Experience und KI</h2>
+      <h4>
+        Kaber & Endsley (2004): The effects of level of automation and adaptive
+        automation on human performance, situation awareness and workload in a
+        dynamic control task.
+      </h4>
+      <p>
+        Untersuchten die Auswirkungen von adaptiver Automatisierung auf die
+        Leistung des Menschen, das Situationsbewusstsein und die
+        Arbeitsbelastung in dynamischen Umgebungen.
+      </p>
+      <p>
+        <b>Niedriges Automatisierungsniveau:</b> Verbessert die Leistung, da der
+        Benutzer stark eingebunden bleibt (Kaber & Endsley, 2004).{" "}
+        <b>Mittleres Automatisierungsniveau:</b> Führt zu verbessertem
+        Situationsbewusstsein, was entscheidend für komplexe und dynamische
+        Aufgaben ist. Allerdings führen mittlere Automatisierungsstufen nicht
+        immer zu besserer Leistung oder geringerer Arbeitsbelastung, obwohl sie
+        das Situationsbewusstsein verbessern.
+      </p>
       <h4>
         Rieger et al. (2022): Challenging presumed technological superiority
+        when working with (artificial) colleagues.
       </h4>
       <p>
         Diese Studie untersucht, wie Menschen klassische Automatisierung und
@@ -115,61 +200,52 @@ const WahrgenommeneAutonomie = {
         Maschinen deren <b>Objektivität</b> und <b>Konsistenz</b> als
         vorteilhaft angesehen werden.
       </p>
-    </section>,
-    <section>
-      <h2>3. Studien zur User Experience und KI</h2>
-      <h4>Kaber & Endsley</h4>
+      <h4>Deci & Ryan (1985): Self-determination theory (SDT)</h4>
       <p>
-        Untersuchten die Auswirkungen von adaptiver Automatisierung auf die
-        Leistung des Menschen, das Situationsbewusstsein und die
-        Arbeitsbelastung in dynamischen Umgebungen. Sie stellten fest, dass
-        mittlere Automatisierungsstufen das Situationsbewusstsein fördern,
-        jedoch nicht immer zu besserer Leistung führen.
-      </p>
-      <h4>Chapanis (1965)</h4>
-      <p>
-        Zeigte die Bedeutung der Funktionszuweisung zwischen Mensch und Maschine
-        auf.
-      </p>
-      <h4>Selbstbestimmungstheorie (SDT)</h4>
-      <p>
-        Beschreibt die Bedeutung der Befriedigung der Bedürfnisse nach
-        Autonomie, Kompetenz und sozialer Eingebundenheit für das Wohlbefinden
-        und die Motivation der Nutzenden.
-      </p>
-      <h4>Studien zu Digitalen Kontaktverfolgungs-Apps und Automatisierung</h4>
-      <p>
-        Zeigten, dass die Wahrnehmung der Systemkomplexität und
-        Fehleranfälligkeit die Nutzungsintention beeinflusst.
+        Die Selbstbestimmungstheorie (Self-Determination Theory) definiert drei
+        universelle grundlegende psychologische Bedürfnisse (Basic Psychological
+        Needs, BPNs):
+        <ol>
+          <li>
+            <b>Autonomie:</b> das Gefühl, Kontrolle über eigene Entscheidungen
+            und Handlungen zu haben
+          </li>
+          <li>
+            <b>Kompetenz:</b> das Erleben von Wirksamkeit und Beherrschung einer
+            Aufgaben
+          </li>
+          <li>
+            <b>soziale Verbundenheit:</b> sich um andere zu kümmern und im
+            Gegenzug Fürsorge zu erfahren
+          </li>
+        </ol>
       </p>
     </section>,
     <section>
       <h2>4. Operationalisierung und Messinstrumente</h2>
-      <h4>Preference for Automation Types Scale (PATS)</h4>
+      <h4>Zoubir (2024): Preference for Automation Types Scale (PATS)</h4>
       <p>
         Ein Fragebogen zur Erfassung von Präferenzen der Nutzer hinsichtlich
         Automatisierungsaufgaben, basierend auf den Modellen von Parasuraman et
         al. (2000). Dieser misst, inwieweit Nutzer Automatisierung in
         verschiedenen Phasen der Informationsverarbeitung bevorzugen.
       </p>
-      <h4>Basic Psychological Need Satisfaction for Technology Use (BPN-TU)</h4>
+      <h4>
+        Moradbakhti et. al (2024): Basic Psychological Need Satisfaction for
+        Technology Use (BPN-TU)
+      </h4>
       <p>
-        Ein Messinstrument, das die Erfüllung der psychologischen Bedürfnisse
-        nach Autonomie, Kompetenz und sozialer Eingebundenheit erfasst und auf
-        die Nutzung von Technologie anwendet.
-      </p>
-      <h4>NASA-TLX</h4>
-      <p>
-        Ein Instrument zur Messung der subjektiv wahrgenommenen Arbeitsbelastung
-        in verschiedenen Szenarien, einschließlich automatisierter Systeme.
+        Die BPN-TU ist eine Skala zur Messung der Befriedigung grundlegender
+        psychologischer Bedürfnisse bei der Nutzung von Technologie. Gemäß der
+        Selbstbestimmungstheorie ist die Befriedigung der grundlegenden
+        psychologischen Bedürfnisse nach Autonomie, Kompetenz und Verbundenheit
+        entscheidend für das Wohlbefinden und die autonome Motivation.
       </p>
     </section>,
     <section>
       <h2>5. Design-Guidelines für eine gute UX</h2>
-      <h3>Adaptive Automatisierung ermöglichen</h3>
-      <h4>
-        <i>Beispiel: Verkehrsmanagementsysteme für städtischen Verkehr</i>
-      </h4>
+      <h3>1. Adaptive Automatisierung ermöglichen</h3>
+      <h4>Beispiel: Verkehrsmanagementsysteme für städtischen Verkehr</h4>
       <p>
         Ein städtisches Verkehrsmanagementsystem bietet verschiedene
         Automatisierungsstufen, wie z. B. die automatische Steuerung von Ampeln
@@ -178,7 +254,6 @@ const WahrgenommeneAutonomie = {
         Verkehrsaufkommen und speziellen Ereignissen die Automatisierungsstufe
         flexibel anpassen.
       </p>
-      <h4>Nutzen:</h4>
       <p>
         Diese Anpassungsmöglichkeit erlaubt eine präzise und flexible Steuerung
         des Verkehrsflusses, reduziert Staus und priorisiert den öffentlichen
@@ -186,27 +261,22 @@ const WahrgenommeneAutonomie = {
         Automatisierungsgrad individuell anpassen, was zu einem effizienteren
         und reibungsloseren Verkehrserlebnis führt.
       </p>
-      <h3>Situationsbewusstsein unterstützen</h3>
-      <h4>
-        <i>Beispiel: Notfallmanagementsysteme in Städten</i>
-      </h4>
+      <h3>2. Situationsbewusstsein unterstützen</h3>
+      <h4>Beispiel: Notfallmanagementsysteme in Städten</h4>
       <p>
         Ein Notfallmanagementsystem liefert Echtzeitdaten zu städtischen
         Notfällen wie Verkehrsunfällen, Bränden oder Überschwemmungen. Es bietet
         automatisierte Empfehlungen für Evakuierungsrouten und Einsatzplanungen,
         die Einsatzleiter bei Bedarf manuell anpassen können.
       </p>
-      <h4>Nutzen:</h4>
       <p>
         Dank der Echtzeitinformationen können Einsatzkräfte schnell und präzise
         Entscheidungen treffen. Die Kombination aus automatisierten Vorschlägen
         und menschlichem Eingriff auf mittleren Automatisierungsstufen sorgt für
         ein optimales Gleichgewicht zwischen Effizienz und Sicherheit.
       </p>
-      <h3>Flexibilität bei der Informationsverarbeitung</h3>
-      <h4>
-        <i>Beispiel: Umweltüberwachungssysteme in Städten</i>
-      </h4>
+      <h3>3. Flexibilität bei der Informationsverarbeitung</h3>
+      <h4>Beispiel: Umweltüberwachungssysteme in Städten</h4>
       <p>
         Ein Umweltüberwachungssystem erlaubt es den Nutzenden, die Art und Menge
         der überwachten Daten individuell festzulegen – etwa zur Überwachung der
@@ -214,17 +284,14 @@ const WahrgenommeneAutonomie = {
         den Fokus je nach Dringlichkeit und Prioritäten anpassen und die
         Detailtiefe der Analysen steuern.
       </p>
-      <h4>Nutzen:</h4>
       <p>
         Diese Flexibilität ermöglicht es den Nutzenden, auf spezifische
         Umweltfaktoren einzugehen und die Überwachung an aktuelle Bedürfnisse
         anzupassen. Dadurch wird eine maßgeschneiderte Umweltpolitik möglich,
         die effektiver auf akute Herausforderungen reagiert.
       </p>
-      <h3>Transparenz sicherstellen</h3>
-      <h4>
-        <i>Beispiel: Medizinisches Diagnosetools</i>
-      </h4>
+      <h3>4. Transparenz sicherstellen</h3>
+      <h4>Beispiel: Medizinisches Diagnosetools</h4>
       <p>
         Ein KI-basiertes Diagnosetool für Ärzte zeigt nicht nur die
         Diagnoseergebnisse, sondern auch die zugrunde liegenden Daten und die
@@ -232,31 +299,25 @@ const WahrgenommeneAutonomie = {
         visualisiert, und das System erklärt, warum bestimmte Diagnosen
         vorgeschlagen wurden.
       </p>
-      <h4>Nutzen:</h4>
       <p>
         Diese Transparenz stärkt das Vertrauen der Ärzte in die KI, da sie genau
         nachvollziehen können, wie die Empfehlungen zustande kommen. Dies
         fördert einen effizienteren und informierten Entscheidungsprozess.
       </p>
-      <h4>
-        <i>Beispiel: Überwachungssysteme für den öffentlichen Verkehr</i>
-      </h4>
+      <h4>Beispiel: Überwachungssysteme für den öffentlichen Verkehr</h4>
       <p>
         Ein städtisches Verkehrssystem analysiert den Verkehrsfluss und erklärt
         transparent, wie Ampelschaltungen optimiert oder bestimmte Routen
         priorisiert werden.
       </p>
-      <h4>Nutzen:</h4>
       <p>
         Durch die klare Kommunikation der Algorithmen und Entscheidungsprozesse
         wird das Vertrauen der Öffentlichkeit gestärkt. Nutzende können
         nachvollziehen, wie Entscheidungen getroffen wurden, was ihre Akzeptanz
         und das Gefühl der Autonomie im Umgang mit dem System verbessert.
       </p>
-      <h3>Nutzerzentrierte Anpassung</h3>
-      <h4>
-        <i>Beispiel: Smart City Mobilitätsplattformen</i>
-      </h4>
+      <h3>5. Nutzerzentrierte Anpassung</h3>
+      <h4>Beispiel: Smart City Mobilitätsplattformen</h4>
       <p>
         Eine Smart City Mobilitätsplattform ermöglicht es den Bürgern, ihre
         persönlichen Verkehrspräferenzen festzulegen – von bevorzugten
@@ -266,7 +327,6 @@ const WahrgenommeneAutonomie = {
         oder Fahrgemeinschaften, die den individuellen Präferenzen der Nutzenden
         entsprechen.
       </p>
-      <h4>Nutzen:</h4>
       <p>
         Diese nutzerzentrierte Anpassung gibt den Bürgern das Gefühl der
         Kontrolle über ihre Mobilitätsentscheidungen. Das Ergebnis ist eine
@@ -278,16 +338,17 @@ const WahrgenommeneAutonomie = {
     <section>
       <h2>Fazit</h2>
       <p>
-        Die wahrgenommene Autonomie in der Interaktion mit KI-Systemen ist
-        entscheidend für die Nutzerzufriedenheit und das Vertrauen. Die Konzepte
-        und Modelle zeigen, dass unterschiedliche Stufen der Automatisierung und
-        Anpassungsfähigkeit Einfluss auf die psychologische Wahrnehmung haben.
-        Studien verdeutlichen, dass Transparenz, Flexibilität und die
-        Möglichkeit zur Anpassung der Automatisierungsgrade die wahrgenommene
-        Autonomie stärken. Die Anwendung entsprechender Designrichtlinien, wie
-        adaptive Automatisierung und transparente Entscheidungsprozesse, fördert
-        ein Gefühl der Kontrolle und Selbstbestimmung, was zu einer effektiveren
-        und zufriedenstellenderen Nutzung von KI-Systemen führt.
+        Die <b>wahrgenommene Autonomie</b> in der Interaktion mit KI-Systemen
+        ist entscheidend für die Nutzerzufriedenheit und das Vertrauen. Die
+        Konzepte und Modelle zeigen, dass unterschiedliche Stufen der
+        Automatisierung und Anpassungsfähigkeit Einfluss auf die psychologische
+        Wahrnehmung haben. Studien verdeutlichen, dass <b>Transparenz</b>,{" "}
+        <b>Flexibilität</b> und die Möglichkeit zur Anpassung der
+        Automatisierungsgrade die wahrgenommene Autonomie stärken. Die Anwendung
+        entsprechender Designrichtlinien, wie adaptive Automatisierung und{" "}
+        <b>transparente Entscheidungsprozesse</b>, fördert ein Gefühl der
+        Kontrolle und Selbstbestimmung, was zu einer effektiveren und
+        zufriedenstellenderen Nutzung von KI-Systemen führt.
       </p>
     </section>,
   ],
@@ -634,7 +695,7 @@ const PerceivedTrustworthiness = {
   linkName: "perceived-trustworthiness",
   name: "Perceived Trustworthiness",
   description:
-    "Die Wahrnehmung, wie zuverlässig Nutzende ein KI-System empfinden, und wie gut es ihre Bedürfnisse erfüllt. ",
+    "Damit ist das Vertrauen gemeint, das Nutzende in ein KI-System haben, basierend auf dessen Handlungen.",
   content: [
     <ChapterHeader text={"Perceived Trustworthiness"} number={5} />,
     <section>
@@ -1177,7 +1238,84 @@ const Quellen = {
   name: "Quellen",
   description:
     "Hier befinden sich die verwendeten Quellen in Reihenfolge des ersten Auftretens",
-  content: [<ChapterHeader text={"Quellen"} number={8} />],
+  content: [
+    <ChapterHeader text={"Quellen"} number={8} />,
+    <section>
+      <h4>Literatur zu Wahrgenommener Autonomie</h4>
+      <ul>
+        <li>
+          Parasuraman, R., Sheridan, T., & Wickens, C. (2000). A model for types
+          and levels of human interaction with automation.{" "}
+          <i>
+            IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems
+            and Humans, 30
+          </i>
+          (3), 286–297.{" "}
+          <a href="https://doi.org/10.1109/3468.844354" target="_blank">
+            https://doi.org/10.1109/3468.844354
+          </a>
+        </li>
+        <li>
+          Hopkins, D., & Schwanen, T. (2021). Talking about automated vehicles:
+          What do levels of automation do? <i>Technology in Society, 64</i>,
+          101488.{" "}
+          <a href="https://doi.org/10.1016/j.techsoc.2020.101488" target="_blank">
+            https://doi.org/10.1016/j.techsoc.2020.101488
+          </a>
+        </li>
+        <li>
+          Onnasch, L., Wickens, C. D., Li, H., & Manzey, D. (2014). Human
+          performance consequences of stages and levels of automation: An
+          integrated meta-analysis.{" "}
+          <i>
+            Human Factors: The Journal of the Human Factors and Ergonomics
+            Society, 56
+          </i>
+          (3), 476–488.{" "}
+          <a href="https://doi.org/10.1177/0018720813501549" target="_blank">
+            https://doi.org/10.1177/0018720813501549
+          </a>
+        </li>
+        <li>
+          Kaber, D. B., & Endsley, M. R. (2004). The effects of level of
+          automation and adaptive automation on human performance, situation
+          awareness and workload in a dynamic control task.{" "}
+          <i>Theoretical Issues in Ergonomics Science, 5</i>(2), 113–153.{" "}
+          <a href="https://doi.org/10.1080/1463922021000054335" target="_blank">
+            https://doi.org/10.1080/1463922021000054335
+          </a>
+        </li>
+        <li>
+          Rieger, T., Roesler, E., & Manzey, D. (2022). Challenging presumed
+          technological superiority when working with (artificial) colleagues.{" "}
+          <i>Scientific Reports, 12</i>, 3768.{" "}
+          <a href="https://doi.org/10.1038/s41598-022-07808-x" target="_blank">
+            https://doi.org/10.1038/s41598-022-07808-x
+          </a>
+        </li>
+        <li>
+          Deci, E. L., & Ryan, R. M. (2000). The "what" and "why" of goal
+          pursuits: Human needs and the self-determination of behavior.{" "}
+          <i>Psychological Inquiry, 11</i>(4), 227–268.
+        </li>
+        <li>
+          Zoubir, M. (2024). <i>Preference for Automation Types Scale (PATS)</i>
+          .{" "}
+          <a href="https://doi.org/10.13140/RG.2.2.22149.97769" target="_blank">
+            https://doi.org/10.13140/RG.2.2.22149.97769
+          </a>
+        </li>
+        <li>
+          Moradbakhti, L., Leichtmann, B., & Mara, M. (2024). Development and
+          validation of a basic psychological needs scale for technology use.{" "}
+          <i>Psychological Test Adaptation and Development, 5</i>(1), 26–45.{" "}
+          <a href="https://doi.org/10.1027/2698-1866/a000062" target="_blank">
+            https://doi.org/10.1027/2698-1866/a000062
+          </a>
+        </li>
+      </ul>
+    </section>,
+  ],
 };
 
 const linksAndNames = [
@@ -1222,7 +1360,7 @@ const EinführungUXKI = {
         }
         title={"Intro"}
       />
-      <p>
+      <p className="mt-5">
         In der vorigen Lektion haben wir etablierte UX-Konstrukte betrachtet,
         die allgemeine Nutzererfahrungen beschreiben. KI-Systeme hingegen
         greifen tief in unsere Informationsverarbeitung ein, was zusätzliche
@@ -1240,7 +1378,8 @@ const EinführungUXKI = {
               <div className="topSection relative overflow-hidden h-32">
                 <h2
                   className="thirdTitle absolute left-0 bottom-0 mb-0 px-[33px]"
-                  topic-number={String(index + 2).padStart(2, "0")}>
+                  topic-number={String(index + 2).padStart(2, "0")}
+                >
                   {item.name}
                 </h2>
               </div>
@@ -1253,7 +1392,7 @@ const EinführungUXKI = {
       </div>
     </section>,
     <section>
-      <h2>Warum sind diese Aspekte wichtig für die Automation-Related UX?</h2>
+      <h3>Warum sind diese Aspekte wichtig für die Automation-Related UX?</h3>
       <p>
         Mit der zunehmenden Integration von KI in alltägliche Systeme ist es
         entscheidend, diese Aspekte in der UX zu berücksichtigen. KI-Systeme
@@ -1263,7 +1402,7 @@ const EinführungUXKI = {
         dass Nutzer die Systeme nicht nur effektiv nutzen, sondern sich auch
         sicher und autonom fühlen können.
       </p>
-      <h3>Beispiel:</h3>
+      <h4>Beispiel: KI-gestütztes Verkehrsmanagementsystem </h4>
       <p>
         Stellen Sie sich ein KI-gestütztes Verkehrsmanagementsystem vor. Dieses
         System analysiert Verkehrsdaten und schlägt Optimierungen für
@@ -1274,17 +1413,19 @@ const EinführungUXKI = {
         bereitstellt, um Überlastung zu vermeiden, und Vertrauen in die
         Automatisierung aufbaut.
       </p>
-      <h3>Ausblick:</h3>
+    </section>,
+    <section>
+      <h3>Was können Sie von dieser Lektion erwarten?</h3>
       <p>
         In den folgenden Kapiteln werden wir detailliert untersuchen, wie diese
-        fünf Aspekte – Wahrgenommene Autonomie, Situationsbewusstsein,
-        Information Overload / Mentale Arbeitsbelastung, Trustworthiness und
-        Confidence/Diagnosticity – die Gestaltung und Nutzung von KI-Systemen
-        beeinflussen. Wir werden sehen, wie diese Aspekte in der Praxis
-        umgesetzt werden können und welche Designrichtlinien helfen, eine
-        positive und effektive Mensch-KI-Interaktion zu fördern. Freuen Sie sich
-        auf eine tiefere Auseinandersetzung mit den Herausforderungen und
-        Chancen der KI-bezogenen UX!
+        fünf Aspekte – Wahrgenommene Autonomie, Situationsbewusstsein, Mentale
+        Arbeitsbelastung, Trustworthiness und Confidence/Diagnosticity – die
+        Gestaltung und Nutzung von KI-Systemen beeinflussen. Wir werden sehen,
+        wie diese Aspekte in der Praxis umgesetzt werden können und welche
+        Designrichtlinien helfen, eine positive und effektive
+        Mensch-KI-Interaktion zu fördern. Freuen Sie sich auf eine tiefere
+        Auseinandersetzung mit den Herausforderungen und Chancen der
+        KI-bezogenen UX!
       </p>
     </section>,
   ],

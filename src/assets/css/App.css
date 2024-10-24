@@ -181,7 +181,7 @@ h1 {
 .secondTitle,
 h2 {
   font-size: 35px;
-  line-height: 48px;
+  line-height: 1.25;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -189,7 +189,7 @@ h2 {
 .thirdTitle,
 h3 {
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.25;
   font-weight: 600;
   margin-top: 30px;
   margin-bottom: 15px;
@@ -228,9 +228,26 @@ i {
   font-size: inherit;
 }
 
+ul,
+ol {
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
 ul {
   list-style: disc;
-  padding-left: 20px;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: 10px !important;
+}
+
+ol li::marker {
+  font-weight: bold;
 }
 
 a {
@@ -283,24 +300,6 @@ a {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* responsive */
-@media screen and (max-width: 600px) {
-  .text,
-  header {
-    margin: 0px 40px 100px 40px;
-  }
-
-  .h1 {
-    font-size: calc(30px + 1vmin);
-  }
-}
-
-@media screen and (max-width: 460px) {
-  .text {
-    margin: 0px 40px;
-  }
-}
-
 .bar1,
 .bar2,
 .bar3 {
@@ -334,12 +333,56 @@ a {
 }
 
 .special-text {
-  background: linear-gradient(
-    to bottom,
-    rgba(230, 230, 230, 0.4),
-    rgba(230, 230, 230, 0)
-  );
+  background: linear-gradient(to bottom,
+      rgba(230, 230, 230, 0.4),
+      rgba(230, 230, 230, 0));
   border-radius: 20px;
   padding: 5px 10px 5px 10px;
   min-height: 50px;
+}
+
+
+/* responsive */
+@media screen and (max-width: 1280px) {
+
+  .outerContainer,
+  section {
+    width: 90vw;
+  }
+}
+
+/* Tablets (Landscape) */
+@media screen and (max-width: 1024px) {
+
+  .outerContainer,
+  section {
+    width: 100%;
+    padding: 36px 24px;
+  }
+}
+
+/* Smartphones (Portrait) */
+@media screen and (max-width: 768px) {
+
+  p,
+  li,
+  .smallTextSize {
+    font-size: 16px !important;
+  }
+
+  h1 {
+    font-size: calc(26px + 1vmin) !important;
+  }
+
+  h2 {
+    font-size: calc(18px + 1vmin) !important;
+  }
+
+  h3 {
+    font-size: calc(14px + 1vmin) !important;
+  }
+
+  h4 {
+    font-size: calc(12px + 1vmin) !important;
+  }
 }

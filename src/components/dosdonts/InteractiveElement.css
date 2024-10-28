@@ -619,8 +619,8 @@ header {
 }
 
 #right-content {
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   line-height: 1.5;
 }
 
@@ -669,6 +669,8 @@ header {
   font-weight: 600;
   text-align: left;
   color: var(--grey-1);
+
+  width: 100%;
 
   white-space: pre-line;
   word-wrap: break-word;

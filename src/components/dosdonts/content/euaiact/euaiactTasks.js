@@ -2,15 +2,15 @@
   Note: For hosting this application on gh-pages and using this approach of a .js file for the content, 
   we have to import resources like images here, so that they get found in the production build.
 */
-import referencedArticleThumbnail from "../content/article-nutzerverhalten-thumbnail-80x80.webp";
-import task1Do from "../content/taskA-do.png";
-import task1Dont from "../content/taskA-dont.png";
+import referencedArticleThumbnail from "./article-nutzerverhalten-thumbnail-80x80.webp";
+import task1Do from "./taskA-do.png";
+import task1Dont from "./taskA-dont.png";
 
-import task2Do from "../content/task2-do.webp";
-import task2Dont from "../content/task2-dont.webp";
+import task2Do from "./task2-do.webp";
+import task2Dont from "./task2-dont.webp";
 
-import task3Do from "../content/task3-do.webp";
-import task3Dont from "../content/task3-dont.webp";
+import task3Do from "./task3-do.webp";
+import task3Dont from "./task3-dont.webp";
 
 /*
   Enter an entry for each task.
@@ -18,7 +18,7 @@ import task3Dont from "../content/task3-dont.webp";
   The following properties are optional: 
     id, referencedArticle, alt1, alt2, wordDefinitions
 */
-export const tasks = [
+export const euAiActTasks = [
   {
     id: 1,
     taskDescription: "Wähle die App aus, die der folgenden Richtlinie folgt:",

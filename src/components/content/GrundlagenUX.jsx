@@ -1,4 +1,5 @@
 import imageElement from "../../assets/svg/ki_placeholder.svg";
+import DosAndDonts from "../dosdonts/DosAndDonts";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import { Link } from "react-router-dom";
@@ -134,6 +135,12 @@ const Fazit = {
         }
         title={"Outro"}
       />
+    </section>,
+    <section>
+      <h2>Lernspiel praktische Anwendung</h2>
+      <div className="w-full rounded-xl">
+        <DosAndDonts />
+      </div>
     </section>,
   ],
 };

@@ -8,7 +8,7 @@ import { React, useState, useRef, useEffect, useContext } from "react";
 import tippy, { animateFill, hideAll } from "tippy.js";
 
 // Context and States
-import { tasks } from "./content/tasks.js";
+//import { euAiActTasks as tasks } from "./content/tasks.js";
 import { TaskDataContext } from "./Context.jsx";
 
 // Components
@@ -32,6 +32,8 @@ import crossIcon from "../../assets/dosAndDonts/cross-icon.svg";
 import ideaIcon from "../../assets/dosAndDonts/idea-icon.svg";
 import forwardIcon from "../../assets/dosAndDonts/forward-icon.png";
 import "../../assets/dosAndDonts/kor_animations/kor-sparkles.js";
+import { getModuleMap } from "./TaskHandler.jsx";
+import { AppContext } from "../../AppContext.jsx";
 
 /* 
   Main component for the learning element, containting three main panes:
@@ -79,6 +81,10 @@ function InteractiveElement() {
       return updatedData;
     });
   };
+
+  const { selectedModuleLink } = useContext(AppContext);
+
+  const tasks = getModuleMap(selectedModuleLink);
 
   // The type of interaction chosen by the user determines whether the pane slide is animated or not.
   const [paneSlideAnimation, setPaneSlideAnimation] = useState(true);
@@ -413,6 +419,8 @@ function InteractiveElement() {
   useEffect(() => {
     console.log("Index: ", index);
     // On index change, update the tasks and restore the answer if given previously
+    console.log(tasks[index]);
+    console.log("taskdatastorage in other: ", taskDataStorage[index]);
     setTask(tasks[index]);
     setAnswer(taskDataStorage[index].loggedInAnswer);
     setTasksRemain(index !== tasks.length - 1);
@@ -632,7 +640,7 @@ function InteractiveElement() {
             <div
               id="app-container"
               className="flex justify-center uniform-x-gap pt-to-viewport">
-              <div>
+              <div className="w-1/2 flex justify-center px-3">
                 <button
                   ref={app1Ref}
                   id="app1"
@@ -655,7 +663,7 @@ function InteractiveElement() {
                   />
                 </button>
               </div>
-              <div>
+              <div className="w-1/2 flex justify-center px-3">
                 <button
                   ref={app2Ref}
                   id="app2"
@@ -710,13 +718,13 @@ function InteractiveElement() {
               {/* Only show in view EXPLAIN */}
               <div
                 id="dos-and-donts"
-                className="flex justify-center uniform-x-gap text-lightText">
+                className="flex justify-center uniform-x-gap text-ux_white">
                 <div
                   id={`${task.answer === 1 ? "do-side" : "dont-side"}`}
-                  className="flex flex-col justify-start items-center app-width">
+                  className="flex flex-col justify-start items-center app-width px-3">
                   <div
                     id={`${task.answer === 1 ? "do-label" : "dont-label"}`}
-                    className="flex justify-center items-center py-1 mb-3 gap-x-2 text-lightText">
+                    className="flex justify-center items-center py-1 mb-3 gap-x-2 text-ux_white">
                     <img
                       className="w-5 h-5"
                       src={`${task.answer === 1 ? checkIcon : crossIcon}`}
@@ -733,10 +741,10 @@ function InteractiveElement() {
                 </div>
                 <div
                   id={`${task.answer === 1 ? "dont-side" : "do-side"}`}
-                  className="flex flex-col justify-start items-center app-width">
+                  className="flex flex-col justify-start items-center app-width px-3">
                   <div
                     id={`${task.answer === 1 ? "dont-label" : "do-label"}`}
-                    className="flex justify-center items-center py-1 mb-3 gap-x-2 text-lightText">
+                    className="flex justify-center items-center py-1 mb-3 gap-x-2 text-ux_white">
                     <img
                       className="w-5 h-5"
                       src={`${task.answer === 1 ? crossIcon : checkIcon}`}
@@ -757,7 +765,7 @@ function InteractiveElement() {
 
           <div
             id="tip-container"
-            className={`drop-shadow flex flex-col justify-center items-center`}>
+            className={`drop-shadow flex flex-col justify-center items-center z-10`}>
             <button
               id="show-tip-button"
               className="flex justify-center items-center"
@@ -786,9 +794,9 @@ function InteractiveElement() {
                   <button
                     ref={revealButton}
                     id="tip-reveal-button"
-                    className="flex justify-start items-center"
+                    className="flex justify-start items-center mb-2"
                     aria-label="Auflösen-Button">
-                    <p>Zur Auflösung</p>
+                    <p className="p-0 m-0">Zur Auflösung</p>
                     <img
                       className="w-[22px]"
                       src={forwardIcon}
@@ -804,7 +812,7 @@ function InteractiveElement() {
 
         <div
           id="right-pane"
-          className={`overflow-y-auto nav-protected-padding ${
+          className={`overflow-y-auto overflow-hidden nav-protected-padding ${
             paneSlideAnimation ? "with-transition" : ""
           }`}>
           <div
@@ -858,8 +866,10 @@ function InteractiveElement() {
                   id="end-box-content"
                   className="flex justify-center items-center">
                   <>
-                    <span ref={scoreRef}>{0}</span>
-                    <span>/{tasks.length}</span>
+                    <span ref={scoreRef} className="text-ux_dark">
+                      {0}
+                    </span>
+                    <span className="text-ux_dark">/{tasks.length}</span>
                   </>
                 </div>
               </div>

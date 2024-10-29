@@ -3,7 +3,7 @@
   background: white;
   color: var(--dark);
   width: 320px;
-  min-height: 360px;
+  min-height: 320px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -42,11 +42,12 @@
 
 .subTopicCard .thirdTitle::before {
   content: attr(topic-number);
-  font-size: 200px;
+  font-size: 180px;
+  line-height: 1;
   font-weight: 800;
   position: absolute;
-  left: 40px;
-  bottom: 50px;
+  right: 40px;
+  bottom: -20px;
   opacity: 0.1;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
@@ -129,4 +130,20 @@
 
 .arrow-btn:last-child {
   margin-bottom: 1.4rem;
+}
+
+/* Tablets (Landscape) */
+@media screen and (max-width: 1024px) {
+  .subTopicCard {
+    min-height: auto;
+    padding-bottom: 20px;
+  }
+}
+
+/* Smartphones (Portrait) */
+@media screen and (max-width: 768px) {
+  .subTopicCard .thirdTitle::before {
+    font-size: 140px;
+    right: 20px;
+  }
 }

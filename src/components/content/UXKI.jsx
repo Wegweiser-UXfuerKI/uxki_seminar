@@ -23,7 +23,7 @@ const WahrgenommeneAutonomie = {
       />
     </section>,
     <section>
-      <h2>1. Definition von wahrgenommener Autonomie</h2>
+      <h2>1. Definition wahrgenommener Autonomie</h2>
       <p>
         Die <b>wahrgenommene Autonomie</b> beschreibt, inwiefern Nutzende eines
         KI-Systems das Gefühl haben, selbstständig handeln und Entscheidungen
@@ -222,7 +222,7 @@ const WahrgenommeneAutonomie = {
       </p>
     </section>,
     <section>
-      <h2>4. Operationalisierung und Messinstrumente</h2>
+      <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
       <h4>Zoubir (2024): Preference for Automation Types Scale (PATS)</h4>
       <p>
         Ein Fragebogen zur Erfassung von Präferenzen der Nutzer hinsichtlich
@@ -375,10 +375,11 @@ const WahrgenommenesSituationsbewusstsein = {
     <section>
       <h2>1. Definition Situationsbewusstsein (SA)</h2>
       <p>
-        Situationsbewusstsein (Situational Awareness, SA) ist das Verständnis
-        der Umgebung und ihrer Elemente sowie der Veränderungen, die im Laufe
-        der Zeit oder durch externe Faktoren auftreten können. Diese Fähigkeit
-        ist grundlegend für effektive Entscheidungsfindung in vielen Bereichen.
+        Situationsbewusstsein (Situational Awareness, SA) bedeutet, die Umgebung
+        und ihre wichtigsten Details zu verstehen. Es umfasst auch das Erkennen
+        von Veränderungen, die im Laufe der Zeit oder durch äußere Einflüsse
+        auftreten können. Diese Fähigkeit ist wichtig, um gute Entscheidungen in
+        verschiedenen Situationen zu treffen.
       </p>
       <p>
         Eine ausführliche Erklärung der Definition finden Sie im folgenden
@@ -392,144 +393,143 @@ const WahrgenommenesSituationsbewusstsein = {
       />
     </section>,
     <section>
-      <h2>2. Konzepte und Modelle</h2>
-      <p>Situationsbewusstsein umfasst laut Endsley drei Ebenen:</p>
+      <h2>2. Relevante Konzepte und Modelle</h2>
+      <h3>Drei Ebenen des Situationsbewusstsein laut Endsley (2000):</h3>
       <ol>
         <li>
-          1. Wahrnehmung (Perception): Die Erfassung der relevanten
-          Informationen in einer Umgebung.
+          <b>Wahrnehmung:</b> Die Erfassung der relevanten Informationen in
+          einer Umgebung.
         </li>
         <li>
-          2. Verständnis (Comprehension): Die Interpretation und das Verstehen
-          der Bedeutung dieser Informationen.
+          <b>Verständnis:</b> Die Interpretation und das Verstehen der Bedeutung
+          dieser Informationen.
         </li>
         <li>
-          3. Projektion (Projection): Die Fähigkeit, vorherzusagen, wie sich die
-          Umgebung aufgrund dieser Informationen verändern könnte.
+          <b>Projektion:</b> Die Fähigkeit, zukünftige Zustände oder
+          Entwicklungen einer Situation vorherzusagen, basierend auf dem
+          aktuellen Verständnis und der Wahrnehmung der Situation.
         </li>
       </ol>
-      <p>
-        Diese drei Ebenen korrespondieren mit den SIPA-Facetten (Subjective
-        Information Processing Awareness):
-      </p>
-      <ul>
-        <li>Transparenz</li>
-        <li>Verständlichkeit</li>
-        <li>Vorhersehbarkeit</li>
-      </ul>
       <p>
         Das <i>HASO-Modell</i> von Endsley betont ebenfalls diese drei
         wesentlichen Eigenschaften von Automatisierungssystemen, da sie direkt
         mit der Situationswahrnehmung der Nutzenden verknüpft sind.
       </p>
-      <p>Zentrale Konzepte:</p>
-      <ul>
+      <ol>
         <li>
-          Transparenz: Das System muss klar kommunizieren, wie es zu seinen
-          Entscheidungen gelangt.
+          <b>Transparenz:</b> Das System muss klar kommunizieren, wie es zu
+          seinen Entscheidungen gelangt.
         </li>
         <li>
-          Verständlichkeit: Die Darstellung der Informationen muss leicht
+          <b>Verständlichkeit:</b> Die Darstellung der Informationen muss leicht
           nachvollziehbar sein.
         </li>
         <li>
-          Vorhersehbarkeit: Nutzende müssen einschätzen können, wie das System
-          sich unter bestimmten Bedingungen verhalten wird.
+          <b>Vorhersehbarkeit:</b> Nutzende müssen einschätzen können, wie das
+          System sich unter bestimmten Bedingungen verhalten wird.
         </li>
-      </ul>
+      </ol>
     </section>,
     <section>
-      <h2>3. Existierende Studien zu UX und KI</h2>
+      <h2>3. Studien zur User Experience und KI</h2>
       <p>
-        Studien wie die von <b>Edgar et al.</b> untersuchen das
+        Studien wie die von <b>Edgar et al. (2018)</b> untersuchen das
         Situationsbewusstsein in der Mensch-Maschine-Interaktion. Sie berechnen
-        das wahrgenommene Situationsbewusstsein basierend auf der
-        Vertrauensbewertung von Nutzenden, nachdem diese wahre oder falsche
-        Aussagen beurteilt haben. Endsley betont, dass Transparenz,
-        Verständlichkeit und Vorhersehbarkeit entscheidend für die
-        Aufrechterhaltung des Situationsbewusstseins und des Vertrauens in
-        automatisierte Systeme sind. In der <b>Studie I</b> zur User Experience
-        in Digital Contact Tracing (DCT) wurde gezeigt, dass das subjektive
+        das wahrgenommene Situationsbewusstsein auf Basis einer
+        Vertrauensbewertung durch die Bewertung wahr/falsch-Aussagen, wobei hier
+        ebenfalls keine signifikanten Zusammenhang mit dem Verhalten
+        festgestellt werden können. Es ist argumentierbar, dass die
+        Gleichsetzung von wahrgenommenem Situationsbewusstsein und Vertrauen
+        kritisch betrachtet werden kann, da sich das Situationsbewusstsein über
+        drei verschiedene Stufen entwickelt.
+      </p>
+      <p>
+        <b>Endsley et al. (1995)</b> betont, dass Transparenz, Verständlichkeit
+        und Vorhersehbarkeit entscheidend für die Aufrechterhaltung des
+        Situationsbewusstseins und des Vertrauens in automatisierte Systeme
+        sind. Während Endsley (1998) einerseits betont, dass das wahrgenommene
+        Situationsbewusstsein entscheidend für die Handlungsregulation ist,
+        stellt sie auch fest, dass die Korrelation zwischen wahrgenommenem (oder
+        subjektivem) Situationsbewusstsein oft gering ist.
+      </p>
+      <p>
+        In der Studie zur User Experience in Digital Contact Tracing (DCT) von
+        <b> Schrills et al. (2024)</b> wurde gezeigt, dass das subjektive
         Situationsbewusstsein der Nutzenden stärker mit der wahrgenommenen
-        Nützlichkeit korreliert als das faktische Situationsbewusstsein. Die
-        <b>Studie II</b> zur Automatisierung bei der Insulinverabreichung ergab,
-        dass eine zu hohe Informationsoffenlegung zu einer Fehlkalibrierung
-        zwischen der subjektiven Wahrnehmung der Nachvollziehbarkeit und der
-        tatsächlichen Systemleistung führen kann.
+        Nützlichkeit zusammenhängt als das faktische Situationsbewusstsein.
       </p>
     </section>,
     <section>
       <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
+      <h4>
+        Schrills & Franke (2023): SIPA (Subjective Information Processing
+        Awareness)
+      </h4>
       <p>
-        Ein gängiges Messinstrument für perceived situation awareness ist{" "}
-        <b>SIPA (Subjective Information Processing Awareness)</b>. Es bewertet
-        die Benutzererfahrung in Bezug auf die Fähigkeit, die
-        Informationsverarbeitung eines Systems zu erfassen, zu verstehen und
-        vorherzusagen.
+        SIPA beschreibt die Erfahrung, durch ein System befähigt zu werden,
+        dessen Informationsverarbeitung wahrzunehmen, zu verstehen und
+        vorherzusagen. Die SIPA-Skala dient zur Bewertung der
+        automationsbezogenen UX auf den drei Ebenen des Situationsbewusstseins:
+        Transparenz, Verständlichkeit und Vorhersehbarkeit.
       </p>
+      <h4>R. M. Taylor (2017): Situation Awareness Rating Technique (SART)</h4>
       <p>
-        Ein nützliches Instrument zur Bewertung des wahrgenommenen
-        Situationsbewusstseins ist die{" "}
-        <b>Situation Awareness Rating Technique (SART)</b>, die 1990 entwickelt
-        wurde. Diese Methode misst die wahrgenommene Situationswahrnehmung der
-        Nutzenden in verschiedenen Kontexten.
+        Die „Situation Awareness Rating Technique“ ist eine Methode zur
+        Bewertung des wahrgenommenen Situationsbewusstseins, die 1990
+        veröffentlicht wurde. Diese umfasst weitere Konstrukte wie die
+        Arbeitsbelastung und unterscheidet sich daher von Endsleys Konzept des
+        Situationsbewusstseins.
       </p>
     </section>,
     <section>
-      <h2>Deisgn-Guidelines zur Förderung des Situationsbewusstseins</h2>
-      <h4>Transparenz sicherstellen</h4>
+      <h2>Design-Guidelines zur Förderung des Situationsbewusstseins</h2>
+      <h3>1. Transparenz sicherstellen</h3>
       <p>
         Systeme sollten alle relevanten Elemente der Informationsverarbeitung
-        offenlegen und den Nutzenden zugänglich machen. <br />{" "}
+        offenlegen und den Nutzenden zugänglich machen.
+      </p>
+      <p>
         <i>
           Beispiel: Ein KI-gestütztes Dashboard für Ärzte zeigt visuell, welche
           Daten zur Diagnosestellung verwendet wurden.
         </i>{" "}
       </p>
-      <h4>Verständlichkeit fördern</h4>
+      <h3>2. Verständlichkeit fördern</h3>
       <p>
         Intuitive Benutzeroberflächen und kontextbezogene Hilfen sollten die
-        Nutzung von Systemen erleichtern. <br />{" "}
+        Nutzung von Systemen erleichtern.
+      </p>
+      <p>
         <i>
           Beispiel: Medizinische Diagnose-Tools heben die wichtigsten
           Informationen hervor und bieten Hilfetexte zur Erklärung komplexer
           Funktionen.
         </i>{" "}
       </p>
-      <h4>Vorhersehbarkeit verbessern</h4>
+      <h3>3. Vorhersehbarkeit verbessern</h3>
       <p>
         Systeme sollten Rückmeldungen geben, die die Auswirkungen von Handlungen
-        aufzeigen, z. B. durch Simulationen oder Vorschauen. <br />
+        aufzeigen, z. B. durch Simulationen oder Vorschauen.
+      </p>
+      <p>
         <i>
           Beispiel: Ein System zur Verkehrssteuerung könnte simulieren, wie sich
           geänderte Ampelphasen auf den Verkehr auswirken, bevor sie tatsächlich
           implementiert werden.
         </i>
       </p>
-      <p>
-        Diese Maßnahmen tragen dazu bei, das Vertrauen und das
-        Situationsbewusstsein der Nutzenden in der Interaktion mit KI-Systemen
-        zu erhöhen und somit effektivere und fundiertere Entscheidungen zu
-        ermöglichen.
-      </p>
     </section>,
     <section>
       <h2>Fazit</h2>
       <p>
-        In dieser Einheit haben wir das Konzept des Situationsbewusstseins (SA)
-        und dessen Bedeutung für die Interaktion mit KI-Systemen behandelt.
-        Situationsbewusstsein umfasst die Wahrnehmung, das Verständnis und die
-        Projektion relevanter Informationen. Die Modelle von Endsley und die
-        SIPA-Facetten betonen die Notwendigkeit von Transparenz,
-        Verständlichkeit und Vorhersehbarkeit für effektives
-        Situationsbewusstsein. Studien zeigen, dass ein hohes Maß an Transparenz
-        und verständlicher Informationsdarstellung das subjektive
-        Situationsbewusstsein verbessert, während übermäßige
-        Informationsoffenlegung zu Fehlinterpretationen führen kann. Die
-        Implementierung von Designrichtlinien, die diese Elemente
-        berücksichtigen, fördert ein besseres Situationsbewusstsein und
-        unterstützt die Nutzer bei fundierten Entscheidungen in der Interaktion
-        mit KI-Systemen.
+        In dieser Einheit haben wir das Konzept des{" "}
+        <b>Situationsbewusstseins (SA)</b> und dessen Bedeutung für die
+        Interaktion mit <b>KI-Systemen</b> untersucht. Situationsbewusstsein
+        umfasst die <b>Wahrnehmung</b>, das <b>Verständnis</b> und die{" "}
+        <b>Projektion</b> relevanter Informationen. Die Modelle von{" "}
+        <b>Endsley</b> und die SIPA-Facetten betonen die Notwendigkeit von{" "}
+        <b>Transparenz</b>, <b>Verständlichkeit</b> und <b>Vorhersehbarkeit</b>{" "}
+        für effektives Situationsbewusstsein.
       </p>
     </section>,
   ],
@@ -1250,7 +1250,7 @@ const Quellen = {
             IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems
             and Humans, 30
           </i>
-          (3), 286–297.
+          (3), 286–297.{" "}
           <a
             href="https://doi.org/10.1109/3468.844354"
             target="_blank"
@@ -1262,7 +1262,7 @@ const Quellen = {
         <li>
           Hopkins, D., & Schwanen, T. (2021). Talking about automated vehicles:
           What do levels of automation do? <i>Technology in Society, 64</i>,
-          101488.
+          101488.{" "}
           <a
             href="https://doi.org/10.1016/j.techsoc.2020.101488"
             target="_blank"
@@ -1279,7 +1279,7 @@ const Quellen = {
             Human Factors: The Journal of the Human Factors and Ergonomics
             Society, 56
           </i>
-          (3), 476–488.
+          (3), 476–488.{" "}
           <a
             href="https://doi.org/10.1177/0018720813501549"
             target="_blank"
@@ -1292,7 +1292,7 @@ const Quellen = {
           Kaber, D. B., & Endsley, M. R. (2004). The effects of level of
           automation and adaptive automation on human performance, situation
           awareness and workload in a dynamic control task.{" "}
-          <i>Theoretical Issues in Ergonomics Science, 5</i>(2), 113–153.
+          <i>Theoretical Issues in Ergonomics Science, 5</i>(2), 113–153.{" "}
           <a
             href="https://doi.org/10.1080/1463922021000054335"
             target="_blank"
@@ -1304,7 +1304,7 @@ const Quellen = {
         <li>
           Rieger, T., Roesler, E., & Manzey, D. (2022). Challenging presumed
           technological superiority when working with (artificial) colleagues.{" "}
-          <i>Scientific Reports, 12</i>, 3768.
+          <i>Scientific Reports, 12</i>, 3768.{" "}
           <a
             href="https://doi.org/10.1038/s41598-022-07808-x"
             target="_blank"
@@ -1320,7 +1320,7 @@ const Quellen = {
         </li>
         <li>
           Zoubir, M. (2024). <i>Preference for Automation Types Scale (PATS)</i>
-          .
+          .{" "}
           <a
             href="https://doi.org/10.13140/RG.2.2.22149.97769"
             target="_blank"
@@ -1332,13 +1332,130 @@ const Quellen = {
         <li>
           Moradbakhti, L., Leichtmann, B., & Mara, M. (2024). Development and
           validation of a basic psychological needs scale for technology use.{" "}
-          <i>Psychological Test Adaptation and Development, 5</i>(1), 26–45.
+          <i>Psychological Test Adaptation and Development, 5</i>(1), 26–45.{" "}
           <a
             href="https://doi.org/10.1027/2698-1866/a000062"
             target="_blank"
             rel="noopener noreferrer"
           >
             https://doi.org/10.1027/2698-1866/a000062
+          </a>
+        </li>
+      </ul>
+      <h4>Literatur zu Wahrgenommenem Situationsbewusstsein (SA)</h4>
+      <ul>
+        <li>
+          Edgar, G. K., Catherwood, D., Baker, S., Sallis, G., Bertels, M.,
+          Edgar, H. E., Nikolla, D., Buckle, S., Goodwin, C. & Whelan, A.
+          (2018). Quantitative Analysis of Situation Awareness (QASA): Modelling
+          and measuring situation awareness using signal detection theory.{" "}
+          <i>Ergonomics, 61</i>(6), 762–777.{" "}
+          <a
+            href="https://doi.org/10.1080/00140139.2017.1420238"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1080/00140139.2017.1420238
+          </a>
+        </li>
+
+        <li>
+          Endsley, M., Sollenberger, R. & Stein, E. (2000). Situation awareness:
+          A comparison of measures. In{" "}
+          <i>
+            Proceedings of the Human Performance, Situation Awareness and
+            Automation: User-Centered Design for the New Millennium
+          </i>
+          , Savannah, GA.
+        </li>
+
+        <li>
+          Endsley, M. R. (1995). Toward a Theory of Situation Awareness in
+          Dynamic Systems. <i>Human Factors, 37</i>(1), 32–64.{" "}
+          <a
+            href="https://doi.org/10.1518/001872095779049543"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1518/001872095779049543
+          </a>
+        </li>
+
+        <li>
+          Endsley, M. R. (2017). From Here to Autonomy: Lessons Learned From
+          Human–Automation Research.{" "}
+          <i>
+            Human Factors: The Journal of the Human Factors and Ergonomics
+            Society, 59
+          </i>
+          (1), 5–27.{" "}
+          <a
+            href="https://doi.org/10.1177/0018720816681350"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1177/0018720816681350
+          </a>
+        </li>
+
+        <li>
+          Endsley, M. R., Selcon, S. J., Hardiman, T. D. & Croft, D. G. (1998).
+          A Comparative Analysis of Sagat and Sart for Evaluations of Situation
+          Awareness. In{" "}
+          <i>
+            Proceedings of the Human Factors and Ergonomics Society Annual
+            Meeting, 42
+          </i>
+          (1), 82–86.{" "}
+          <a
+            href="https://doi.org/10.1177/154193129804200119"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1177/154193129804200119
+          </a>
+        </li>
+        <li>
+          Schrills, T., & Franke, T. (2023). Wie erleben Nutzer die
+          Nachvollziehbarkeit von KI-Systemen? Untersuchung des subjektiven
+          Informationsverarbeitungsbewusstseins in automatisierten
+          Insulinabgabesystemen (AID-Systemen).{" "}
+          <em>ACM Transactions on Interactive Intelligent Systems, 13</em>(4),
+          25:1–25:34.{" "}
+          <a
+            href="https://doi.org/10.1145/3588594"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1145/3588594
+          </a>
+        </li>
+
+        <li>
+          Schrills, T., Kojan, L., Gruner, M., Calero Valdez, A. & Franke, T.
+          (2024). Effects of User Experience in Automated Information Processing
+          on Perceived Usefulness of Digital Contact-Tracing Apps:
+          Cross-Sectional Survey Study. <i>JMIR Human Factors, 11</i>, e53940.{" "}
+          <a
+            href="https://doi.org/10.2196/53940"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.2196/53940
+          </a>
+        </li>
+
+        <li>
+          Taylor, R. M. (2017). Situational Awareness Rating Technique (Sart):
+          The Development of a Tool for Aircrew Systems Design. In E. Salas
+          (Hrsg.), <i>Situational Awareness</i> (1. Aufl., S. 111–128).
+          Routledge.{" "}
+          <a
+            href="https://doi.org/10.4324/9781315087924-8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.4324/9781315087924-8
           </a>
         </li>
       </ul>

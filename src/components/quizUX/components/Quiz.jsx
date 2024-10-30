@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useContext } from "react";
 import QuizContext from "./QuizContext";
-import quizData from "../data/Quizinhalte_Testseminar.json";
 import feedbackImg from "../../../assets/quizUX/images/feedback.png";
 import Header from "./Header";
 import Popup from "./Popup";
@@ -12,7 +11,6 @@ import styles from "./Quiz.module.css";
 // main component that handles quiz state and renders quiz board
 const Quiz = () => {
   const {
-    topics,
     colors,
     showPopup,
     setShowPopup,
@@ -20,51 +18,50 @@ const Quiz = () => {
     setSoundOn,
     currentContent,
     setCurrentContent,
+    topicData,
+    topicTitles,
+    exercises,
+    setExercises,
   } = useContext(QuizContext);
+  console.log("ye: ", exercises);
 
   // save all circles in a graph-like structure (directed); with their topic, x and y position (in svg) and what circle is reachable
   const pathGraph = {
     szenario1: { next: "circle1", topic: "szenario1", x: "150", y: "140" },
-    circle1: { next: "circle2", topic: topics[0], x: "305", y: "170" },
-    circle2: { next: "circle3", topic: topics[0], x: "370", y: "270" },
-    circle3: { next: "circle4", topic: topics[0], x: "290", y: "350" },
-    circle4: { next: "circle5", topic: topics[0], x: "170", y: "390" },
-    circle5: { next: "circle6", topic: topics[0], x: "110", y: "500" },
-    circle6: { next: "circle7", topic: topics[0], x: "140", y: "620" },
-    circle7: { next: "circle8", topic: topics[0], x: "250", y: "690" },
-    circle8: { next: "feedback1", topic: topics[0], x: "380", y: "710" },
+    circle1: { next: "circle2", topic: topicTitles[0], x: "305", y: "170" },
+    circle2: { next: "circle3", topic: topicTitles[0], x: "370", y: "270" },
+    circle3: { next: "circle4", topic: topicTitles[0], x: "290", y: "350" },
+    circle4: { next: "circle5", topic: topicTitles[0], x: "170", y: "390" },
+    circle5: { next: "circle6", topic: topicTitles[0], x: "110", y: "500" },
+    circle6: { next: "circle7", topic: topicTitles[0], x: "140", y: "620" },
+    circle7: { next: "circle8", topic: topicTitles[0], x: "250", y: "690" },
+    circle8: { next: "feedback1", topic: topicTitles[0], x: "380", y: "710" },
     feedback1: { next: "szenario2", topic: "feedback", x: "496", y: "680" },
     szenario2: { next: "circle9", topic: "szenario2", x: "660", y: "680" },
-    circle9: { next: "circle10", topic: topics[1], x: "810", y: "650" },
-    circle10: { next: "circle11", topic: topics[1], x: "890", y: "570" },
-    circle11: { next: "circle12", topic: topics[1], x: "850", y: "460" },
-    circle12: { next: "circle13", topic: topics[1], x: "740", y: "400" },
-    circle13: { next: "circle14", topic: topics[1], x: "640", y: "320" },
-    circle14: { next: "circle15", topic: topics[1], x: "630", y: "200" },
-    circle15: { next: "circle16", topic: topics[1], x: "730", y: "150" },
-    circle16: { next: "feedback2", topic: topics[1], x: "860", y: "140" },
+    circle9: { next: "circle10", topic: topicTitles[1], x: "810", y: "650" },
+    circle10: { next: "circle11", topic: topicTitles[1], x: "890", y: "570" },
+    circle11: { next: "circle12", topic: topicTitles[1], x: "850", y: "460" },
+    circle12: { next: "circle13", topic: topicTitles[1], x: "740", y: "400" },
+    circle13: { next: "circle14", topic: topicTitles[1], x: "640", y: "320" },
+    circle14: { next: "circle15", topic: topicTitles[1], x: "630", y: "200" },
+    circle15: { next: "circle16", topic: topicTitles[1], x: "730", y: "150" },
+    circle16: { next: "feedback2", topic: topicTitles[1], x: "860", y: "140" },
     feedback2: { next: "szenario3", topic: "feedback", x: "992", y: "140" },
     szenario3: { next: "circle17", topic: "szenario3", x: "1160", y: "150" },
-    circle17: { next: "circle18", topic: topics[2], x: "1310", y: "190" },
-    circle18: { next: "circle19", topic: topics[2], x: "1390", y: "270" },
-    circle19: { next: "circle20", topic: topics[2], x: "1330", y: "370" },
-    circle20: { next: "circle21", topic: topics[2], x: "1210", y: "410" },
-    circle21: { next: "circle22", topic: topics[2], x: "1110", y: "490" },
-    circle22: { next: "circle23", topic: topics[2], x: "1100", y: "620" },
-    circle23: { next: "circle24", topic: topics[2], x: "1190", y: "710" },
-    circle24: { next: "feedback3", topic: topics[2], x: "1310", y: "750" },
+    circle17: { next: "circle18", topic: topicTitles[2], x: "1310", y: "190" },
+    circle18: { next: "circle19", topic: topicTitles[2], x: "1390", y: "270" },
+    circle19: { next: "circle20", topic: topicTitles[2], x: "1330", y: "370" },
+    circle20: { next: "circle21", topic: topicTitles[2], x: "1210", y: "410" },
+    circle21: { next: "circle22", topic: topicTitles[2], x: "1110", y: "490" },
+    circle22: { next: "circle23", topic: topicTitles[2], x: "1100", y: "620" },
+    circle23: { next: "circle24", topic: topicTitles[2], x: "1190", y: "710" },
+    circle24: { next: "feedback3", topic: topicTitles[2], x: "1310", y: "750" },
     feedback3: { next: "circle1", topic: "feedback", x: "1430", y: "769" },
   };
 
   const [state, setState] = useState("DEFAULT");
   const [hasStarted, setHasStarted] = useState(false);
   const [completedAtLeastOnce, setCompletedAtLeastOnce] = useState(false);
-
-  const [exercises, setExercises] = useState({
-    [topics[0]]: [],
-    [topics[1]]: [],
-    [topics[2]]: [],
-  });
 
   const [activeCircle, setActiveCircle] = useState("szenario1"); // which circle is next
   const [lastClicked, setLastClicked] = useState("");
@@ -77,7 +74,7 @@ const Quiz = () => {
   const [hoveredCircle, setHoveredCircle] = useState("");
   const [correctCircles, setCorrectCircles] = useState([]); // correctly answered
 
-  const [currentTopic, setCurrentTopic] = useState(topics[0]);
+  const [currentTopic, setCurrentTopic] = useState(topicTitles[0]);
   const [currentExercise, setCurrentExercise] = useState(null); // currently selected exercise
 
   const [jokerMap, setJokerMap] = useState({}); // which joker was used at which circle
@@ -85,19 +82,19 @@ const Quiz = () => {
 
   // save amount of used joker, completed exercises and correctly completed exercises per topic
   const [jokerInTopic, setJokerInTopic] = useState({
-    [topics[0]]: 0,
-    [topics[1]]: 0,
-    [topics[2]]: 0,
+    [topicTitles[0]]: 0,
+    [topicTitles[1]]: 0,
+    [topicTitles[2]]: 0,
   });
   const [doneInTopic, setDoneInTopic] = useState({
-    [topics[0]]: 0,
-    [topics[1]]: 0,
-    [topics[2]]: 0,
+    [topicTitles[0]]: 0,
+    [topicTitles[1]]: 0,
+    [topicTitles[2]]: 0,
   });
   const [correctInTopic, setCorrectInTopic] = useState({
-    [topics[0]]: 0,
-    [topics[1]]: 0,
-    [topics[2]]: 0,
+    [topicTitles[0]]: 0,
+    [topicTitles[1]]: 0,
+    [topicTitles[2]]: 0,
   });
 
   const [completedExercises, setCompletedExercises] = useState({});
@@ -107,8 +104,8 @@ const Quiz = () => {
     const initializeExercises = () => {
       // save exercises according to topic and randomize order for each topic
       const topicExercises = {};
-      [topics[0], topics[1], topics[2]].forEach((topic) => {
-        const currExercises = quizData.filter((q) => q.topic === topic);
+      [topicTitles[0], topicTitles[1], topicTitles[2]].forEach((topic) => {
+        const currExercises = topicData.filter((q) => q.topic === topic);
         shuffleArray(currExercises);
         topicExercises[topic] = currExercises;
       });
@@ -165,7 +162,12 @@ const Quiz = () => {
     if (hasStarted === false) setHasStarted(true); // start quiz here if user ignored start popup
 
     const topic = pathGraph[circle].topic;
-    const isExercise = [topics[0], topics[1], topics[2]].includes(topic);
+    console.log("topic: ", topic);
+    const isExercise = [
+      topicTitles[0],
+      topicTitles[1],
+      topicTitles[2],
+    ].includes(topic);
     const szenarioActive = ["szenario1", "szenario2", "szenario3"].includes(
       activeCircle
     );
@@ -216,7 +218,7 @@ const Quiz = () => {
   // helper function: set review content
   const prepareReviewContent = (circle) => {
     // search for exercise completed at this circle by using stored exercise id
-    const exercise = quizData.find(
+    const exercise = topicData.find(
       (exercise) => exercise.id === completedExercises[circle].id
     );
     const answer = completedExercises[circle].answers;
@@ -236,7 +238,7 @@ const Quiz = () => {
     } else {
       console.log("reshuffled exercise pool of topic: ", topic);
       // reshuffle exercise pool for exhausted topic
-      const newExercisePool = quizData.filter(
+      const newExercisePool = topicData.filter(
         (exercise) => exercise.topic === topic
       );
       shuffleArray(newExercisePool);
@@ -308,15 +310,24 @@ const Quiz = () => {
     let isFinished = false;
     switch (activeCircle) {
       case "circle8":
-        if (doneInTopic[topics[1]] === 8 && doneInTopic[topics[2]] === 8)
+        if (
+          doneInTopic[topicTitles[1]] === 8 &&
+          doneInTopic[topicTitles[2]] === 8
+        )
           isFinished = true;
         break;
       case "circle16":
-        if (doneInTopic[topics[0]] === 8 && doneInTopic[topics[2]] === 8)
+        if (
+          doneInTopic[topicTitles[0]] === 8 &&
+          doneInTopic[topicTitles[2]] === 8
+        )
           isFinished = true;
         break;
       case "circle24":
-        if (doneInTopic[topics[0]] === 8 && doneInTopic[topics[1]] === 8)
+        if (
+          doneInTopic[topicTitles[0]] === 8 &&
+          doneInTopic[topicTitles[1]] === 8
+        )
           isFinished = true;
         break;
       default:
@@ -346,7 +357,9 @@ const Quiz = () => {
     // check what type of circle was clicked
     const topic = pathGraph[lastClicked].topic;
     const isExercise =
-      topic === topics[0] || topic === topics[1] || topic === topics[2];
+      topic === topicTitles[0] ||
+      topic === topicTitles[1] ||
+      topic === topicTitles[2];
 
     if (!isExercise) {
       // if exercise, board has already been updated
@@ -359,7 +372,7 @@ const Quiz = () => {
     }
 
     if (topic === "feedback") {
-      if (completedAtLeastOnce || currentTopic === topics[2]) {
+      if (completedAtLeastOnce || currentTopic === topicTitles[2]) {
         setState("REENTER");
         // add 1st circle of each topic to possible (can now start any topic)
         setPossibleCircles((possibleCircles) => [
@@ -369,7 +382,9 @@ const Quiz = () => {
       } else {
         handleCircleClick(pathGraph[lastClicked].next, true); // automatically render next szenario
         setActiveCircle(pathGraph[pathGraph[lastClicked].next].next); // 1st circle of new topic will be active
-        setCurrentTopic(currentTopic === topics[0] ? topics[1] : topics[2]); // next topic
+        setCurrentTopic(
+          currentTopic === topicTitles[0] ? topicTitles[1] : topicTitles[2]
+        ); // next topic
         return;
       }
     }
@@ -406,7 +421,11 @@ const Quiz = () => {
 
     // set active circle to first circle of repeated topic
     const initialCircle = `circle${
-      repeatTopic === topics[0] ? "1" : repeatTopic === topics[1] ? "9" : "17"
+      repeatTopic === topicTitles[0]
+        ? "1"
+        : repeatTopic === topicTitles[1]
+        ? "9"
+        : "17"
     }`;
     setActiveCircle(initialCircle);
 
@@ -456,11 +475,11 @@ const Quiz = () => {
   // helper function: get topic number
   const getTopicNumber = (topic) => {
     switch (topic) {
-      case topics[0]:
+      case topicTitles[0]:
         return 1;
-      case topics[1]:
+      case topicTitles[1]:
         return 2;
-      case topics[2]:
+      case topicTitles[2]:
         return 3;
       default:
         console.log("error in getTopicNumber");
@@ -503,13 +522,25 @@ const Quiz = () => {
     setCompletedCircles([]);
     setPossibleCircles(["szenario1", "szenario2", "szenario3"]);
     setCompletedAtLeastOnce(false);
-    setCurrentTopic(topics[0]);
+    setCurrentTopic(topicTitles[0]);
     setActiveCircle("szenario1");
     setCorrectCircles([]);
-    setCorrectInTopic({ [topics[0]]: 0, [topics[1]]: 0, [topics[2]]: 0 });
-    setJokerInTopic({ [topics[0]]: 0, [topics[1]]: 0, [topics[2]]: 0 });
+    setCorrectInTopic({
+      [topicTitles[0]]: 0,
+      [topicTitles[1]]: 0,
+      [topicTitles[2]]: 0,
+    });
+    setJokerInTopic({
+      [topicTitles[0]]: 0,
+      [topicTitles[1]]: 0,
+      [topicTitles[2]]: 0,
+    });
     setJokerUsed("");
-    setDoneInTopic({ [topics[0]]: 0, [topics[1]]: 0, [topics[2]]: 0 });
+    setDoneInTopic({
+      [topicTitles[0]]: 0,
+      [topicTitles[1]]: 0,
+      [topicTitles[2]]: 0,
+    });
     Object.keys(jokerMap).forEach((circle) => {
       jokerMap[circle] = "";
     });
@@ -522,18 +553,18 @@ const Quiz = () => {
   // renders board with all circles, icons and text elements
   const renderBoard = () => {
     const circleColors = {
-      [topics[0]]: colors.pink,
-      [topics[1]]: colors.purple,
-      [topics[2]]: colors.turquoise,
+      [topicTitles[0]]: colors.pink,
+      [topicTitles[1]]: colors.purple,
+      [topicTitles[2]]: colors.turquoise,
       szenario1: colors.pink,
       szenario2: colors.purple,
       szenario3: colors.turquoise,
       feedback: colors.grey,
     };
     const circleTexts = {
-      szenario1: [topics[0]],
-      szenario2: [topics[1]],
-      szenario3: [topics[2]],
+      szenario1: [topicTitles[0]],
+      szenario2: [topicTitles[1]],
+      szenario3: [topicTitles[2]],
     };
 
     const handleCircleHover = (circle) => {
@@ -680,7 +711,7 @@ const Quiz = () => {
             textAnchor="middle"
             fill={colors.pink}
             className="h3">
-            {topics[0]}
+            {topicTitles[0]}
           </text>
           <text
             x={744}
@@ -688,7 +719,7 @@ const Quiz = () => {
             textAnchor="middle"
             fill={colors.purple}
             className="h3">
-            {topics[1]}
+            {topicTitles[1]}
           </text>
           <text
             x={1240}
@@ -696,7 +727,7 @@ const Quiz = () => {
             textAnchor="middle"
             fill={colors.turquoise}
             className="h3">
-            {topics[2]}
+            {topicTitles[2]}
           </text>
           <line
             x1={496}

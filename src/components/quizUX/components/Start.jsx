@@ -8,7 +8,7 @@ import styles from "./Quiz.module.css";
 
 // popup content when start circle is clicked; displays welcome text and explains some main features
 const Start = ({ onUpdate, popupType }) => {
-  const { topics, colors } = useContext(QuizContext); // get static topic and color variables from context
+  const { topicTitles, colors } = useContext(QuizContext); // get static topic and color variables from context
   const [content, setContent] = useState(1);
 
   // render content to distinguish between first (welcome text) and second part (explanations) of popup content
@@ -22,10 +22,10 @@ const Start = ({ onUpdate, popupType }) => {
               <p className="pb-3 text-ux_dark">
                 Im <b className="text-inherit">Wegweiser.UX-für-KI Quiz</b>{" "}
                 kannst du dich selbstständig zu den Themen{" "}
-                <b className={styles.pink}>{topics[0]}</b>,{" "}
-                <b className={styles.lila}>{topics[1]}</b> und{" "}
-                <b className={styles.türkis}>{topics[2]}</b> testen. Zu jedem
-                Thema erhältst du zunächst ein kurzes{" "}
+                <b className={styles.pink}>{topicTitles[0]}</b>,{" "}
+                <b className={styles.lila}>{topicTitles[1]}</b> und{" "}
+                <b className={styles.türkis}>{topicTitles[2]}</b> testen. Zu
+                jedem Thema erhältst du zunächst ein kurzes{" "}
                 <b className="text-inherit">Szenario</b>, in das du dich
                 reinversetzen sollst. Zum Abschluss jedes Wegabschnitts erhältst
                 du ein kurzes <b className="text-inherit">Feedback</b>.
@@ -88,11 +88,12 @@ const Start = ({ onUpdate, popupType }) => {
               <p className="w-7/12 text-ux_dark">
                 Der <b className="text-inherit">Fortschrittsbalken</b> zeigt an,
                 wie weit du jeweils in den drei Themenabschnitten{" "}
-                <b className={styles.pink}>{topics[0]}</b>,{" "}
-                <b className={styles.lila}>{topics[1]}</b> und{" "}
-                <b className={styles.türkis}>{topics[2]}</b> fortgeschritten
-                bist. Die dunklere Farbe zeigt, wieviele der Fragen du{" "}
-                <b className="text-inherit">korrekt</b> beantwortet hast.
+                <b className={styles.pink}>{topicTitles[0]}</b>,{" "}
+                <b className={styles.lila}>{topicTitles[1]}</b> und{" "}
+                <b className={styles.türkis}>{topicTitles[2]}</b>{" "}
+                fortgeschritten bist. Die dunklere Farbe zeigt, wieviele der
+                Fragen du <b className="text-inherit">korrekt</b> beantwortet
+                hast.
               </p>
             </div>
             <div className="flex row justify-between items-center mr-5 ml-5">
@@ -151,9 +152,9 @@ const Start = ({ onUpdate, popupType }) => {
             <div className="w-9/12 mt-8">
               <p className="pb-3 text-ux_dark">
                 Du kannst dich hier selbstständig zu den Themen{" "}
-                <b className={styles.pink}>{topics[0]}</b>,{" "}
-                <b className={styles.lila}>{topics[1]}</b> und{" "}
-                <b className={styles.türkis}>{topics[2]}</b> testen.
+                <b className={styles.pink}>{topicTitles[0]}</b>,{" "}
+                <b className={styles.lila}>{topicTitles[1]}</b> und{" "}
+                <b className={styles.türkis}>{topicTitles[2]}</b> testen.
               </p>
               <p className="text-ux_dark">
                 Zu jedem Thema erhältst du zunächst ein kurzes{" "}

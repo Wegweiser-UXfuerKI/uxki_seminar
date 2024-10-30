@@ -24,7 +24,7 @@ const Exercise = ({
   jokerUsed,
   soundOn,
 }) => {
-  const { topics } = useContext(QuizContext); // get static topic and color variables from context
+  const { topicTitles } = useContext(QuizContext); // get static topic and color variables from context
 
   const [checkClicked, setCheckClicked] = useState(false);
   const [exerciseNr, setExerciseNr] = useState("");
@@ -46,19 +46,19 @@ const Exercise = ({
 
     // set correct avatar (with correct color elements) depending on exercise topic
     switch (exercise.topic) {
-      case topics[0]:
+      case topicTitles[0]:
         setTipAvatar(avatarPink);
         break;
-      case topics[1]:
+      case topicTitles[1]:
         setTipAvatar(avatarLila);
         break;
-      case topics[2]:
+      case topicTitles[2]:
         setTipAvatar(avatarTürkis);
         break;
       default:
         console.log("error setting avatar");
     }
-  }, [exercise, topics]);
+  }, [exercise, topicTitles]);
 
   useEffect(() => {
     // exerciseNr only possible if active circle is an exercise

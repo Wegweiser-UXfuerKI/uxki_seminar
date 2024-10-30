@@ -5,7 +5,7 @@ import styles from "./Quiz.module.css";
 
 // popup content when exercise is of type 'sort'
 const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
-  const { topics, colors } = useContext(QuizContext); // get static topic and color variables from context
+  const { topicTitles, colors } = useContext(QuizContext); // get static topic and color variables from context
 
   const [firstCategory, setFirstCategory] = useState("");
   const [secondCategory, setSecondCategory] = useState("");
@@ -31,19 +31,19 @@ const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
     setSecondCategory(exercise.secondContainer);
 
     switch (exercise.topic) {
-      case topics[0]:
+      case topicTitles[0]:
         setColor(colors.pink);
         break;
-      case topics[1]:
+      case topicTitles[1]:
         setColor(colors.purple);
         break;
-      case topics[2]:
+      case topicTitles[2]:
         setColor(colors.turquoise);
         break;
       default:
         setColor(colors.grey);
     }
-  }, [exercise, topics, colors]);
+  }, [exercise, topicTitles, colors]);
 
   // check if it's review content, if so mark exercise as completed
   useEffect(() => {

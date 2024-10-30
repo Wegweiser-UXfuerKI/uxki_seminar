@@ -6,7 +6,7 @@ import styles from "./Quiz.module.css";
 
 // popup content when exercise is of type 'match'
 const MatchingExercise = ({ exercise, onAnswer, answersUser = null }) => {
-  const { topics, colors } = useContext(QuizContext); // get static topic and color variables from context
+  const { topicTitles, colors } = useContext(QuizContext); // get static topic and color variables from context
 
   const [allMatched, setAllMatched] = useState(false);
   const [checkClicked, setCheckClicked] = useState(false);
@@ -24,15 +24,15 @@ const MatchingExercise = ({ exercise, onAnswer, answersUser = null }) => {
   useEffect(() => {
     // set design colors depending on topic
     switch (exercise.topic) {
-      case topics[0]:
+      case topicTitles[0]:
         setColor(colors.pink);
         setContainerColor("#EECCE3");
         break;
-      case topics[1]:
+      case topicTitles[1]:
         setColor(colors.purple);
         setContainerColor("#D1CCEE");
         break;
-      case topics[2]:
+      case topicTitles[2]:
         setColor(colors.turquoise);
         setContainerColor("#CCEEEC");
         break;
@@ -66,7 +66,7 @@ const MatchingExercise = ({ exercise, onAnswer, answersUser = null }) => {
     setContainers(initialContainers);
     setTerms(newTerms);
     setCorrectPairs(newCorrectPairs);
-  }, [exercise, topics, colors]);
+  }, [exercise, topicTitles, colors]);
 
   // for review, create containers with answers user has selected
   useEffect(() => {

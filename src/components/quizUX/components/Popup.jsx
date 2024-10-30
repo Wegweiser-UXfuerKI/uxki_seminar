@@ -30,7 +30,7 @@ const Popup = ({
   reviewContent = null,
   onReviewClick,
 }) => {
-  const { topics } = useContext(QuizContext); // get static topic variables from context
+  const { topicTitles } = useContext(QuizContext); // get static topic variables from context
 
   const [bgColor, setBgColor] = useState("#F6F5FC");
   const isExercise =
@@ -53,19 +53,19 @@ const Popup = ({
     }
 
     switch (topic) {
-      case topics[0]:
+      case topicTitles[0]:
         setBgColor("#E8BBD9");
         break;
-      case topics[1]:
+      case topicTitles[1]:
         setBgColor("#C1BBE8");
         break;
-      case topics[2]:
+      case topicTitles[2]:
         setBgColor("#BBE8E5");
         break;
       default:
         setBgColor("#F6F5FC");
     }
-  }, [content, reviewContent, isExercise, topics]);
+  }, [content, reviewContent, isExercise, topicTitles]);
 
   // renders popup content depending on popup type
   const renderPopupContent = (content) => {

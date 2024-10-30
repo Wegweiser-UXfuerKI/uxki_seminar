@@ -1,5 +1,6 @@
 import imageElement from "../../assets/svg/ki_placeholder.svg";
 import DosAndDonts from "../dosdonts/DosAndDonts";
+import QuizContainer from "../quizUX/components/QuizContainer";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import { Link } from "react-router-dom";
@@ -141,6 +142,10 @@ const Fazit = {
       <div className="w-full rounded-xl">
         <DosAndDonts />
       </div>
+    </section>,
+    <section>
+      <h2>Quiz zur Selbstüberprüfung</h2>
+      <QuizContainer />
     </section>,
   ],
 };

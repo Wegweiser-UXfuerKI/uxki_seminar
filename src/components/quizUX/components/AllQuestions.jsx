@@ -1,18 +1,17 @@
 import { useContext, useState } from "react";
 import QuizContext from "./QuizContext";
-import quizData from "../data/Quizinhalte_Testseminar.json";
 import arrow_left from "../../../assets/quizUX/images/arrow_left.png";
 import arrow_right from "../../../assets/quizUX/images/arrow_right.png";
 import styles from "./Quiz.module.css";
 
 // popup content that displays all exercises with their solutions
 const AllQuestions = () => {
-  const { topics, colors } = useContext(QuizContext); // get static topic and color variables from context
+  const { colors, topicData, topicTitles } = useContext(QuizContext); // get static topic and color variables from context
 
   // save exercises according to topic
-  const firstTopic = quizData.filter((q) => q.topic === topics[0]);
-  const secondTopic = quizData.filter((q) => q.topic === topics[1]);
-  const thirdTopic = quizData.filter((q) => q.topic === topics[2]);
+  const firstTopic = topicData.filter((q) => q.topic === topicTitles[0]);
+  const secondTopic = topicData.filter((q) => q.topic === topicTitles[1]);
+  const thirdTopic = topicData.filter((q) => q.topic === topicTitles[2]);
 
   // save all exercises in one array in topic order, start with first
   const allExercises = firstTopic.concat(secondTopic).concat(thirdTopic);
@@ -140,9 +139,9 @@ const AllQuestions = () => {
   // helper function: returns color depending on topic
   const getColor = (topic) => {
     switch (topic) {
-      case topics[0]:
+      case topicTitles[0]:
         return colors.pink;
-      case topics[1]:
+      case topicTitles[1]:
         return colors.purple;
       default:
         return colors.turquoise;

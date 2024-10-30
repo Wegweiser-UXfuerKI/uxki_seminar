@@ -18,7 +18,7 @@ const Feedback = ({
   jokerAmount,
   onRepeat,
 }) => {
-  const { topics } = useContext(QuizContext); // get static topic variables from context
+  const { topicTitles } = useContext(QuizContext); // get static topic variables from context
 
   const [button1, setButton1] = useState(null); // button on the left
   const [button2, setButton2] = useState(null); // button on the right
@@ -32,11 +32,11 @@ const Feedback = ({
   // display correct buttons depending on current topic
   const selectButtons = (currentTopic) => {
     setTopic(currentTopic); // set displayed topic
-    if (currentTopic === topics[0]) {
+    if (currentTopic === topicTitles[0]) {
       setButton1(wdh_topic1);
       setButton2(weiter_topic2);
       setClassColor("styles.pink");
-    } else if (currentTopic === topics[1]) {
+    } else if (currentTopic === topicTitles[1]) {
       setButton1(wdh_topic2);
       setButton2(weiter_topic3);
       setClassColor("styles.lila");

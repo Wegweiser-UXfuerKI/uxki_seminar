@@ -1,8 +1,7 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 const QuizContext = createContext();
 
-const topics = ["Der EU AI Act", "International", "In der Praxis"];
 const colors = {
   pink: "#D177B3",
   purple: "#8377D1",
@@ -17,9 +16,21 @@ export const QuizProvider = ({ children }) => {
   const [showPopup, setShowPopup] = useState(true);
   const [soundOn, setSoundOn] = useState(true);
   const [currentContent, setCurrentContent] = useState("start");
+  const [topicData, setTopicData] = useState([]);
+  const [topicTitles, setTopicTitles] = useState([]);
+  const [topicTexts, setTopicTexts] = useState([]);
+  const [exercises, setExercises] = useState({});
+  useEffect(() => {
+    if (topicTitles.length > 0) {
+      setExercises({
+        [topicTitles[0]]: [],
+        [topicTitles[1]]: [],
+        [topicTitles[2]]: [],
+      });
+    }
+  }, [topicTitles]);
 
   const contextValues = {
-    topics,
     colors,
     showPopup,
     setShowPopup,
@@ -27,6 +38,14 @@ export const QuizProvider = ({ children }) => {
     setSoundOn,
     currentContent,
     setCurrentContent,
+    topicData,
+    setTopicData,
+    topicTitles,
+    setTopicTitles,
+    exercises,
+    setExercises,
+    topicTexts,
+    setTopicTexts,
   };
 
   return (

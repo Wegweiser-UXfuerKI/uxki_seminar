@@ -7,7 +7,7 @@ import styles from "./Quiz.module.css";
 
 // popup content when szenario circles are clicked; displays szenario text for current topic
 const Szenario = ({ whichSzenario, onUpdate }) => {
-  const { topics, colors } = useContext(QuizContext); // get static topic and color variables from context
+  const { topicTitles, colors, topicTexts } = useContext(QuizContext); // get static topic and color variables from context
   const [color, setColor] = useState("");
   const [topic, setTopic] = useState("");
   const [szenarioNr, setSzenarioNr] = useState(1);
@@ -17,39 +17,27 @@ const Szenario = ({ whichSzenario, onUpdate }) => {
   useEffect(() => {
     switch (whichSzenario) {
       case "szenario1":
-        setTopic(topics[0]);
+        setTopic(topicTitles[0]);
         setSzenarioNr("1");
         setColor(colors.pink);
         setButton(start_topic1);
-        setSzenarioText(
-          "Der EU AI Act ist ein umfassendes Regelwerk der Europäischen Union, das den Umgang mit Künstlicher Intelligenz (KI) regelt.\n" +
-            "Ziel ist es, die Sicherheit, Transparenz und Verantwortlichkeit von KI-Systemen zu gewährleisten und gleichzeitig Innovationen zu fördern.\n" +
-            "Der EU AI Act kategorisiert KI-Systeme nach ihrem Risikopotential und legt spezifische Anforderungen und Pflichten für die verschiedenen Kategorien fest.\n" +
-            "Du erhältst nun einige Aufgaben dazu, um dein Wissen über die Grundlagen des EU AI Acts zu testen."
-        );
+        setSzenarioText(topicTexts[0]);
         break;
       case "szenario2":
-        setTopic(topics[1]);
+        setTopic(topicTitles[1]);
         setSzenarioNr("2");
         setColor(colors.purple);
         setButton(start_topic2);
-        setSzenarioText(
-          "In diesem Bereich betrachten wir, wie verschiedene Länder und Regionen die Regulierung von Künstlicher Intelligenz angehen.\n" +
-            "Jedes Land hat unterschiedliche Ansätze und Prioritäten, um die Chancen und Risiken von KI zu managen. Der Vergleich hilft, die Stärken und Schwächen der verschiedenen Regulierungsansätze zu verstehen.\n" +
-            "Du erhältst nun einige Aufgaben dazu, um dein Wissen über die internationalen Unterschiede in der KI-Regulierung zu testen."
-        );
+        setSzenarioText(topicTexts[1]);
         break;
       default:
-        setTopic(topics[2]);
+        setTopic(topicTitles[2]);
         setSzenarioNr("3");
         setColor(colors.turquoise);
         setButton(start_topic3);
-        setSzenarioText(
-          "Dieser Bereich bezieht sich auf die konkreten Maßnahmen und Verfahren, die zur Einhaltung des Gesetzes erforderlich sind.\n" +
-            "Du erhältst nun einige Aufgaben dazu, um dein Wissen über die praktischen Aspekte der Implementierung und Überwachung des EU AI Acts zu testen."
-        );
+        setSzenarioText(topicTexts[2]);
     }
-  }, [whichSzenario, topics, colors]);
+  }, [whichSzenario, topicTitles, colors, topicTexts]);
 
   return (
     <div className="h-full w-full flex flex-col items-center justify-between cursor-default">

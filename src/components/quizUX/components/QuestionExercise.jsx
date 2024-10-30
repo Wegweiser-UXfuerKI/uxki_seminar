@@ -5,7 +5,7 @@ import styles from "./Quiz.module.css";
 
 // popup content when exercise is of type 'question'
 const QuestionExercise = ({ exercise, onAnswer, answerUser = null }) => {
-  const { topics, colors } = useContext(QuizContext); // get static topic and color variables from context
+  const { topicTitles, colors } = useContext(QuizContext); // get static topic and color variables from context
 
   const [answers, setAnswers] = useState([]);
   const [hovered, setHovered] = useState("");
@@ -22,19 +22,19 @@ const QuestionExercise = ({ exercise, onAnswer, answerUser = null }) => {
     randomizeAnswers(exercise);
 
     switch (exercise.topic) {
-      case topics[0]:
+      case topicTitles[0]:
         setColor(colors.pink);
         break;
-      case topics[1]:
+      case topicTitles[1]:
         setColor(colors.purple);
         break;
-      case topics[2]:
+      case topicTitles[2]:
         setColor(colors.turquoise);
         break;
       default:
         setColor(colors.grey);
     }
-  }, [exercise, topics, colors]);
+  }, [exercise, topicTitles, colors]);
 
   // check if it's review content, if so mark exercise as completed
   useEffect(() => {

@@ -21,7 +21,7 @@ import task3Dont from "./task3-dont.webp";
 export const grundlagenUXTasks = [
   {
     id: 1,
-    taskDescription: "Wähle die App aus alla:",
+    taskDescription: "Wähle die App aus in ux:",
     guidelineText: "Klarstellung der Interaktion mit KI-Systemen",
     referencedArticle: {
       title: "KI verdeutlichen",

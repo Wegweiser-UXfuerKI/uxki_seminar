@@ -537,56 +537,68 @@ const WahrgenommenesSituationsbewusstsein = {
 
 const WahrgenommeneInformationOverload = {
   linkName: "mental-workload",
-  name: "Mental Workload",
+  name: "Mentale Arbeitsbelastung",
   description:
     "Dieser Aspekt umfasst den kognitiven Aufwand, der erforderlich ist, um Informationen zu verarbeiten und Entscheidungen zu treffen, und die potenzielle Überlastung durch zu viele Informationen.",
   content: [
-    <ChapterHeader text={"Mental Workload"} number={4} />,
+    <ChapterHeader text={"Mentale Arbeitsbelastung"} number={4} />,
     <section>
       <VideoContainer
         link={
           "https://www.youtube-nocookie.com/embed/dXiEQZShiCM?rel=0&modestbranding=1"
         }
-        title={"Mental Workload"}
+        title={"Mentale Arbeitsbelastung"}
       />
     </section>,
     <section>
-      <h2>1. Definition: Mentale Arbeitsbelastung</h2>
+      <h2>1. Definition Mentale Arbeitsbelastung</h2>
       <p>
-        <i>Mentale Arbeitsbelastung</i> beschreibt den kognitiven Aufwand, der
-        nötig ist, um eine Aufgabe zu erledigen. Sie umfasst die geistigen
-        Anstrengungen, die notwendig sind, um Informationen zu verarbeiten,
-        Entscheidungen zu treffen und Aktionen durchzuführen.
+        Mentale Arbeitsbelastung (Mental Workload) beschreibt den kognitiven
+        Aufwand, der nötig ist, um eine Aufgabe zu erledigen. Sie umfasst die
+        geistigen Anstrengungen, die notwendig sind, um Informationen zu
+        verarbeiten, Entscheidungen zu treffen und Aktionen durchzuführen.
       </p>
     </section>,
     <section>
-      <h2>2. Konzepte und Modelle</h2>
+      <h2>2. Relevante Konzepte und Modelle</h2>
       <p>
-        Ein wichtiges Konzept in diesem Zusammenhang ist die Irony of
-        Automation. Dieses Konzept beschreibt den paradoxen Effekt, dass
-        Automatisierungssysteme zwar darauf ausgelegt sind, Aufgaben zu
-        vereinfachen, sie aber durch umfangreiche Erklärungen und
-        Zusatzinformationen die mentale Arbeitsbelastung der Nutzenden erhöhen
-        können.
+        Mentale Arbeitsbelastung ist ein zentrales Konstrukt im Bereich der
+        Automatisierung. Für erklärbare KI (XAI) spielt sie eine besonders
+        wichtige Rolle, da Erklärungen einen paradoxen Effekt haben können:
+        Während KI durch Automatisierung eigentlich eine effizientere
+        Informationsverarbeitung ermöglichen soll, können Erklärungen die
+        mentale Arbeitsbelastung wieder erhöhen. Sie ist daher eine wichtige
+        Metrik für die Bewertung von XAI.
+      </p>
+      <p>
+        Wenn Menschen durch kognitive Zwänge bewusster über Entscheidungen
+        nachdenken sollen, kann das zwar positive Effekte haben, aber die höhere
+        mentale Anstrengung könnte dazu führen, dass sie diese Methode weniger
+        gerne nutzen – besonders, wenn eine einfachere direkte Empfehlung
+        verfügbar ist.
       </p>
     </section>,
     <section>
-      <h2>3. Existierende Studien zu UX und KI</h2>
+      <h2>3. Studien zur User Experience und KI</h2>
       <p>
-        Eine Studie zur Automatisierung von Insulinverabreichungssystemen
-        (AID-Systeme) zeigt, dass zu viele oder zu detaillierte Erklärungen in
-        diesen Systemen zu einer Überlastung der Nutzenden führen können. Dies
-        beeinträchtigt die Entscheidungsfindung und erhöht die kognitive
-        Belastung. Insbesondere zeigte sich, dass Systeme mit hoher
-        Informationsoffenlegung nicht immer zu besseren Ergebnissen führten,
-        sondern manchmal genau das Gegenteil bewirkten.
+        Ergebnisse mehrerer Studien z. B. von <b>Sewnath und Crijnen (2021)</b>{" "}
+        und
+        <b>Tsai et al. (2021)</b> sowie eine Studie zur Automatisierung von
+        Insulinverabreichungssystemen (AID-Systeme) von{" "}
+        <b>Schrills und Franke (2023)</b> zeigten, dass der Einsatz von
+        Erklärungen zu einer Informationsüberlastung führen könnte. Zu viele
+        oder zu detaillierte Erklärungen in diesen Systemen beeinträchtigen die
+        Entscheidungsfindung und erhöhen die kognitive Belastung. Insbesondere
+        zeigte sich, dass Systeme mit hoher Informationsoffenlegung nicht immer
+        zu besseren Ergebnissen führten, sondern manchmal genau das Gegenteil
+        bewirken.
       </p>
     </section>,
     <section>
-      <h2>4. Operationalisierung: Messinstrumente</h2>
+      <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
+      <h4>Hart (2006): NASA Task Load Index (NASA-TLX) </h4>
       <p>
-        Eine weit verbreitete Methode zur Messung der{" "}
-        <i>perceived mental workload</i>
+        Eine weit verbreitete Methode zur Messung der mentale Arbeitsbelastung
         ist der <b>NASA Task Load Index (NASA-TLX)</b>. Dieser Fragebogen
         bewertet verschiedene Dimensionen der Arbeitsbelastung, darunter:
       </p>
@@ -606,86 +618,66 @@ const WahrgenommeneInformationOverload = {
     </section>,
     <section>
       <h2>5. Design-Guidelines zur Reduktion der kognitiven Belastung</h2>
-      <h4>Vereinfachung von Informationen</h4>
+      <h4>1. Vereinfachung von Informationen</h4>
       <p>
         Informationen sollten minimalistisch dargestellt und nur schrittweise
-        offengelegt werden, um die kognitive Belastung zu reduzieren. <br />
+        offengelegt werden, um die kognitive Belastung zu reduzieren.
+      </p>
+      <p>
         <i>
           Beispiel: Ein KI-gestütztes Dashboard zeigt nur die wesentlichen
           Informationen und blendet zusätzliche Details bei Bedarf ein.
         </i>
       </p>
-      <h4>Anpassbarkeit der Informationsmenge</h4>
+      <h4>2. Anpassbarkeit der Informationsmenge</h4>
       <p>
         Systeme sollten es den Nutzenden ermöglichen, die Menge an Informationen
-        anzupassen, die sie benötigen, um Entscheidungen zu treffen. <br />
+        anzupassen, die sie benötigen, um Entscheidungen zu treffen.
+      </p>
+      <p>
         <i>
           Beispiel: Personalisierte Einstellungen, die es den Nutzenden
           erlauben, festzulegen, wie viele Details sie sehen möchten.
         </i>
       </p>
-      <h4>Fokussierung auf kritische Informationen</h4>
+      <h4>3. Fokussierung auf kritische Informationen</h4>
       <p>
         Das System sollte kontextbezogen die wichtigsten Informationen
-        priorisieren. <br />
+        priorisieren.{" "}
+      </p>
+      <p>
         <i>
           Beispiel: In einem Verkehrsleitsystem werden in einer Notfallsituation
           nur die kritischsten Daten hervorgehoben, wie z. B. gesperrte Straßen
           oder gefährliche Wetterbedingungen.
         </i>
       </p>
-      <h4>Reduktion der kognitiven Belastung durch Automatisierung</h4>
+      <h4>4. Reduktion der kognitiven Belastung durch Automatisierung</h4>
       <p>
         Routinetätigkeiten sollten automatisiert werden, um die geistige
-        Anstrengung der Nutzenden zu minimieren. <br />
+        Anstrengung der Nutzenden zu minimieren.{" "}
+      </p>
+      <p>
         <i>
           Beispiel: Ein KI-System im Verwaltungsbereich könnte die automatische
           Überprüfung von Anträgen übernehmen, sodass sich Mitarbeitende auf
           Ausnahmen und komplexe Fälle konzentrieren können.
         </i>
       </p>
-      <h4>Berücksichtigung der "Irony of Automation"</h4>
-      <p>
-        KI-Systeme sollten vermeiden, die Nutzenden mit unnötig vielen
-        Erklärungen oder Informationen zu überfordern. <br />
-        <i>
-          Beispiel: Ein Gesundheitssystem sollte nur die wichtigsten Erklärungen
-          anzeigen und die Möglichkeit bieten, weitere Details auf Wunsch
-          einzublenden.
-        </i>
-      </p>
-      <h4>Kontextsensitives Feedback</h4>
-      <p>
-        Systeme sollten erkennen, wenn die Nutzenden überfordert sind, und
-        Hilfestellungen oder eine reduzierte Informationsmenge anbieten. <br />
-        <i>
-          Beispiel: Ein KI-gestütztes Support-System könnte bei längeren
-          Wartezeiten oder wiederholtem Suchen nach denselben Informationen ein
-          Pop-up mit Hilfe anbieten.
-        </i>
-      </p>
-      <p>
-        Durch die Anwendung dieser Designrichtlinien kann die mentale
-        Arbeitsbelastung in KI-Systemen signifikant reduziert werden, was sowohl
-        die Effizienz als auch das Wohlbefinden der Nutzenden verbessert.
-      </p>
     </section>,
     <section>
       <h2>Fazit</h2>
       <p>
-        In dieser Einheit haben wir die Konzepte der mentalen Arbeitsbelastung
-        und Information Overload im Kontext von KI-Systemen behandelt. Mentale
-        Arbeitsbelastung bezieht sich auf den kognitiven Aufwand, der zur
-        Bearbeitung von Aufgaben erforderlich ist. Die Irony of Automation
-        zeigt, dass Automatisierung nicht immer zu einer Reduzierung der
-        kognitiven Belastung führt, sondern diese durch übermäßige Informationen
-        erhöhen kann. Messinstrumente wie der NASA Task Load Index helfen, diese
-        Belastung zu bewerten. Designrichtlinien zur Reduzierung der kognitiven
-        Belastung umfassen die Vereinfachung von Informationen, Anpassbarkeit
-        der Informationsmenge, Fokussierung auf kritische Daten und die
-        Berücksichtigung der Ironie der Automatisierung. Durch die Anwendung
-        dieser Prinzipien kann die Effizienz der Nutzerinteraktion mit
-        KI-Systemen verbessert werden.
+        Die Lerneinheit verdeutlicht, dass <b>mentale Arbeitsbelastung</b>{" "}
+        besonders in der <b>erklärbaren KI (XAI)</b> eine wichtige Rolle spielt:
+        Während <b>Automatisierung</b> die Verarbeitung erleichtern soll, können
+        zusätzliche <b>Erklärungen</b> die kognitive Belastung erhöhen und zu{" "}
+        <b>Informationsüberlastung</b> führen. Studien betonen daher die
+        Bedeutung eines gut gestalteten Systems, das Informationen{" "}
+        <b>reduziert</b>, <b>anpassbar</b> macht und <b>priorisiert</b>, um
+        Nutzer effektiv zu entlasten. Der <b>NASA-TLX</b> ist hierbei ein
+        nützliches Instrument zur Bewertung der Arbeitsbelastung und Optimierung
+        der Benutzerfreundlichkeit.
       </p>
     </section>,
   ],
@@ -1456,6 +1448,100 @@ const Quellen = {
             rel="noopener noreferrer"
           >
             https://doi.org/10.4324/9781315087924-8
+          </a>
+        </li>
+      </ul>
+      <h4>Literatur zu Wahrgenommene Mentale Arbeitsbelastung</h4>
+      <ul>
+        <li>
+          Miller, T. (2023). Explainable AI is Dead, Long Live Explainable AI!:
+          Hypothesis-driven Decision Support using Evaluative AI.{" "}
+          <i>
+            2023 ACM Conference on Fairness, Accountability, and Transparency
+          </i>
+          , 333–342.{" "}
+          <a
+            href="https://doi.org/10.1145/3593013.3594001"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1145/3593013.3594001
+          </a>
+        </li>
+        <li>
+          Vidulich, M. A., & Tsang, P. S. (2012). Mental Workload and Situation
+          Awareness. In G. Salvendy (Hrsg.),{" "}
+          <i>Handbook of Human Factors and Ergonomics</i> (1. Aufl., S.
+          243–273). Wiley.{" "}
+          <a
+            href="https://doi.org/10.1002/9781118131350.ch8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1002/9781118131350.ch8
+          </a>
+        </li>
+        <li>
+          Longo, L., Wickens, C. D., Hancock, G., & Hancock, P. A. (2022). Human
+          Mental Workload: A Survey and a Novel Inclusive Definition.{" "}
+          <i>Frontiers in Psychology</i>, 13, 883321.{" "}
+          <a
+            href="https://doi.org/10.3389/fpsyg.2022.883321"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.3389/fpsyg.2022.883321
+          </a>
+        </li>
+        <li>
+          Sewnath, G., & Crijnen, J. (2021). <i>How much is too much? Levels of AI
+          Explainability within Decision Support Systems’ User Interfaces for
+          improved decision-making performance.</i>
+        </li>
+        <li>
+          Tsai, C.-H., You, Y., Gui, X., Kou, Y., & Carroll, J. M. (2021).
+          Exploring and Promoting Diagnostic Transparency and Explainability in
+          Online Symptom Checkers.{" "}
+          <i>
+            Proceedings of the 2021 CHI Conference on Human Factors in Computing
+            Systems
+          </i>
+          , 1–17.{" "}
+          <a
+            href="https://doi.org/10.1145/3411764.3445101"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1145/3411764.3445101
+          </a>
+        </li>
+        <li>
+          Schrills, T., & Franke, T. (2023). How Do Users Experience
+          Traceability of AI Systems? Examining Subjective Information
+          Processing Awareness in Automated Insulin Delivery (AID) Systems.{" "}
+          <i>ACM Transactions on Interactive Intelligent Systems</i>, 13(4),
+          1–34.{" "}
+          <a
+            href="https://doi.org/10.1145/3588594"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1145/3588594
+          </a>
+        </li>
+        <li>
+          Hart, S. G. (2006). NASA-Task Load Index (NASA-TLX); 20 Years Later.{" "}
+          <i>
+            Proceedings of the Human Factors and Ergonomics Society Annual
+            Meeting
+          </i>
+          , 50 (9), 904–908.{" "}
+          <a
+            href="https://doi.org/10.1177/154193120605000909"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1177/154193120605000909
           </a>
         </li>
       </ul>

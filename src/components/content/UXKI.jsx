@@ -537,21 +537,21 @@ const WahrgenommenesSituationsbewusstsein = {
 
 const WahrgenommeneInformationOverload = {
   linkName: "mental-workload",
-  name: "Mentale Arbeitsbelastung",
+  name: "Wahrgenommene Mentale Belastung",
   description:
     "Dieser Aspekt umfasst den kognitiven Aufwand, der erforderlich ist, um Informationen zu verarbeiten und Entscheidungen zu treffen, und die potenzielle Überlastung durch zu viele Informationen.",
   content: [
-    <ChapterHeader text={"Mentale Arbeitsbelastung"} number={4} />,
+    <ChapterHeader text={"Wahrgenommene Mentale Belastung"} number={4} />,
     <section>
       <VideoContainer
         link={
           "https://www.youtube-nocookie.com/embed/dXiEQZShiCM?rel=0&modestbranding=1"
         }
-        title={"Mentale Arbeitsbelastung"}
+        title={"Wahrgenommene Mentale Belastung"}
       />
     </section>,
     <section>
-      <h2>1. Definition Mentale Arbeitsbelastung</h2>
+      <h2>1. Definition Mentale Belastung</h2>
       <p>
         Mentale Arbeitsbelastung (Mental Workload) beschreibt den kognitiven
         Aufwand, der nötig ist, um eine Aufgabe zu erledigen. Sie umfasst die
@@ -685,242 +685,216 @@ const WahrgenommeneInformationOverload = {
 
 const PerceivedTrustworthiness = {
   linkName: "perceived-trustworthiness",
-  name: "Perceived Trustworthiness",
+  name: "Wahrgenommene Vertrauenswürdigkeit",
   description:
     "Damit ist das Vertrauen gemeint, das Nutzende in ein KI-System haben, basierend auf dessen Handlungen.",
   content: [
-    <ChapterHeader text={"Perceived Trustworthiness"} number={5} />,
+    <ChapterHeader text={"Wahrgenommene Vertrauenswürdigkeit"} number={5} />,
     <section>
       <VideoContainer
         link={
           "https://www.youtube-nocookie.com/embed/ZGpk3LJDTzg?rel=0&modestbranding=1"
         }
-        title={"Perceived Trustworthiness"}
+        title={"Wahrgenommene Vertrauenswürdigkeit"}
       />
     </section>,
     <section>
-      <h2>1. Definition: Perceived Trustworthiness</h2>
+      <h2>1. Definition Wahrgenommene Vertrauenswürdigkeit</h2>
       <p>
-        Im Kontext von KI-Systemen bezieht sich <i>perceived trustworthiness</i>{" "}
-        auf das Vertrauen, das Nutzende in ein KI-System haben, basierend auf
-        ihrer Wahrnehmung von dessen Zuverlässigkeit, Verständlichkeit und
-        ethischen Handlungen. Vertrauen wird dabei definiert als die
-        Bereitschaft, sich auf die Handlungen eines Systems zu verlassen, ohne
-        die Möglichkeit, das System direkt zu überwachen oder zu kontrollieren.
-        Vertrauen ist eine zentrale Komponente bei der Akzeptanz von KI-Systemen
-        und beeinflusst maßgeblich die Nutzung. Besonders im Bereich der
-        Künstlichen Intelligenz (KI) und der Erklärbaren Künstlichen Intelligenz
-        (XAI) spielen ethische und soziale Überlegungen eine große Rolle.
+        Im Kontext von KI-Systemen beschreibt die wahrgenommene
+        Vertrauenswürdigkeit (perceived trustworthiness) das Vertrauen, das
+        Nutzende einem KI-System entgegenbringen, basierend auf ihrer
+        Wahrnehmung von dessen Zuverlässigkeit, Verständlichkeit und ethischen
+        Prinzipien. Vertrauen wird als die Bereitschaft definiert, sich auf die
+        Entscheidungen eines Systems zu verlassen, ohne es direkt überwachen
+        oder kontrollieren zu können. Es ist eine Schlüsselfaktoren für die
+        Akzeptanz und Nutzung von KI-Systemen. Besonders im Bereich der
+        Erklärbaren Künstlichen Intelligenz (XAI) sind ethische und soziale
+        Überlegungen entscheidend und prägen die Vertrauenswürdigkeit
+        maßgeblich.
       </p>
     </section>,
     <section>
-      <h2>2. Konzepte und Modelle</h2>
-      <h4>a) Mayer et al. (1995)</h4>
-      <p>Drei Schlüsselfaktoren des Vertrauens in Systeme:</p>
-      <ul>
+      <h2>2. Relevante Konzepte und Modelle</h2>
+      <h4>
+        Drei Schlüsselfaktoren des Vertrauens in Systeme nach Mayer et al.
+        (1995):
+      </h4>
+      <ol>
         <li>
-          Fähigkeit (Ability): Die Kompetenz und Fertigkeiten des Systems, seine
+          <b>Fähigkeit:</b> Die Kompetenz und Fertigkeiten des Systems, seine
           Aufgaben korrekt auszuführen.
         </li>
         <li>
-          Wohlwollen (Benevolence): Das Maß, in dem das System im besten
-          Interesse des Nutzers handelt.
+          <b>Wohlwollen:</b> Das Maß, in dem das System im besten Interesse des
+          Nutzenden handelt.
         </li>
         <li>
-          Integrität (Integrity): Das Vertrauen, dass das System nach ethischen
+          <b>Integrität:</b> Das Vertrauen, dass das System nach ethischen
           Prinzipien und Regeln handelt.
         </li>
-      </ul>
-      <h4>b) Lee (2004)</h4>
+      </ol>
+      <h4>Vertrauen als eine Einstellung nach Lee & See (2004):</h4>
       <p>
-        Vertrauen wird als die Einstellung beschrieben, dass ein System dabei
-        hilft, die Ziele einer Person in einer unsicheren Situation zu
-        erreichen. Er unterteilt es in:
+        Vertrauen wird als die Einstellung beschrieben, dass ein Agent/System
+        dazu beitragen wird, die Ziele einer Person in einer Situation zu
+        erreichen, die durch Unsicherheit und Verwundbarkeit gekennzeichnet ist.
+        Es ist wichtig zu beachten, dass Vertrauen als eine Einstellung und
+        nicht als ein Verhalten konzeptualisiert werden sollte. Dabei sind drei
+        Faktoren entscheiden:
       </p>
-      <ul>
+      <ol>
         <li>
-          Leistung (Performance): Die Genauigkeit und Zuverlässigkeit des
-          Systems.
+          <b>Leistung:</b> Die Genauigkeit und Zuverlässigkeit des Systems.
         </li>
         <li>
-          Zweck (Purpose): Die Ziele und Absichten, die das System verfolgt.
+          <b>Zweck:</b> Die Ziele und Absichten, die das System verfolgt.
         </li>
         <li>
-          Prozess (Process): Die Methoden und Verfahren, die das System
-          verwendet.
+          <b>Prozess:</b> Die Methoden und Verfahren, die das System verwendet.
         </li>
-      </ul>
-      <h4>c) Madsen und Gregor (2000)</h4>
+      </ol>
+      <h4>
+        Kognitives vs. affektives Vertrauen nach Madsen und Gregor (2000):
+      </h4>
+      <p>
+        Sie beschreiben Vertrauen als „das Ausmaß, in dem ein Nutzer Vertrauen
+        in die Empfehlungen, Handlungen und Entscheidungen einer künstlichen
+        Entscheidungsunterstützung hat und bereit ist, auf deren Basis zu
+        handeln.“
+      </p>
       <p>Sie unterscheiden zwischen:</p>
-      <ul>
+      <ol>
         <li>
-          Kognitionsbasiertes Vertrauen: Basierend auf den wahrgenommenen
+          <b>Kognitives Vertrauen:</b> Basierend auf den wahrgenommenen
           Eigenschaften des Systems, wie Zuverlässigkeit und Verständlichkeit.
           Wenn das System beispielsweise transparent ist und nachvollziehbare
           Entscheidungen trifft, steigt das Vertrauen.{" "}
         </li>
         <li>
-          Affektives Vertrauen: Emotionale Bindungen oder persönliche
+          <b>Affektives Vertrauen:</b> Emotionale Bindungen oder persönliche
           Erfahrungen mit dem System fördern das Vertrauen, besonders bei
           sprachbasierten Assistenzsystemen oder Robotern.
         </li>
-      </ul>
-      <h4>d) Hoff und Bashir (2015)</h4>
+      </ol>
+      <h4>
+        Drei Dimensionen des Vertrauens in der Automatisierung nach Hoff und
+        Bashir (2015):
+      </h4>
+      <ol>
+        <li>
+          <b>Dispositionelles Vertrauen:</b> bezieht sich auf die generelle
+          Tendenz eines Nutzers, Automatisierung zu vertrauen, basierend auf
+          Persönlichkeit und bisherigen Erfahrungen.
+        </li>
+        <li>
+          <b>Situatives Vertrauen:</b> wird durch den spezifischen Kontext
+          beeinflusst, in dem die Automatisierung verwendet wird, einschließlich
+          Aufgabenmerkmalen und Umweltfaktoren.
+        </li>
+        <li>
+          <b>Erlerntes Vertrauen:</b> entwickelt sich über die Zeit durch
+          Interaktionen mit dem System, wobei positive Erfahrungen das Vertrauen
+          stärken und negative es schwächen.
+        </li>
+      </ol>
       <p>
-        Das Modell des Vertrauens in die Automatisierung beschreibt drei
-        Dimensionen:
+        Dieses Modell ist besonders wertvoll, da es die dynamische Natur von
+        Vertrauen und die Bedeutung der Nutzererfahrungen im Zeitverlauf
+        hervorhebt.
       </p>
-      <ul>
-        <li>
-          Dispositionelles Vertrauen: Eine allgemeine Neigung des Nutzers,
-          Automatisierung aufgrund von Persönlichkeit oder früheren Erfahrungen
-          zu vertrauen.
-        </li>
-        <li>
-          Situatives Vertrauen: Durch den Kontext der Nutzung beeinflusst.
-        </li>
-        <li>
-          Erlerntes Vertrauen: Entwickelt sich über die Zeit durch die
-          Interaktionen mit dem System.
-        </li>
-      </ul>
-      <p>
-        Ein zentrales Konzept hier ist die Rolle von Transparenz und
-        Nachvollziehbarkeit. Ein Mangel an diesen Eigenschaften führt zu
-        Misstrauen, während sie das Vertrauen stärken, wenn sie vorhanden sind.
-      </p>
-      <h4>e) Weitere Modelle:</h4>
-      <ul>
-        <li>
-          Schlicker und Langer zeigen, dass externe Hinweise, wie der Ruf des
-          Herstellers oder das Verhalten anderer Nutzer, das Vertrauen
-          beeinflussen.
-        </li>
-        <li>
-          Vertrauen kann durch die wahrgenommene Validität der Daten,
-          Übereinstimmung mit den Zielen des Nutzers und die Diagnostik der
-          Ergebnisse gestärkt oder geschwächt werden. Fehlt Transparenz in
-          diesen Bereichen, kann das Situationsbewusstsein beeinträchtigt und
-          das Vertrauen geschwächt werden.
-        </li>
-      </ul>
     </section>,
     <section>
-      <h2>3. Existierende Studien zu UX und KI</h2>
+      <h2>3. Studien zur User Experience und KI</h2>
       <p>
-        Studien im Bereich der User Experience und KI beleuchten, wie das
-        Vertrauen in automatisierte Systeme beeinflusst wird. Beispielsweise
-        zeigen Untersuchungen zu kontaktverfolgenden Apps (Digital Contact
+        Untersuchungen zeigen zu kontaktverfolgenden Apps (Digital Contact
         Tracing) und automatisierten Insulinverabreichungssystemen (AID), dass
         Vertrauen oft von der Transparenz der Entscheidungen und der
-        Verständlichkeit der Systeme abhängt. Eine Studie von Abbaspour Onari et
-        al. (2023) zeigt, wie mentaler Modelle von Nutzenden zur Messung des
-        Vertrauens in XAI-Systeme beitragen können.
+        Verständlichkeit der Systeme abhängt.
+      </p>
+      <p>
+        Eine Studie von Abbaspour Onari et al. (2023) zeigt, wie mentaler
+        Modelle von Nutzenden zur Messung des Vertrauens in XAI-Systeme
+        beitragen können.
       </p>
     </section>,
     <section>
-      <h2>4. Operationalisierung (Fragebögen / Messinstrumente)</h2>
-      <ul>
+      <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
+      <h4>Jian et al. (2001): Trust in Automation (TiA)-Skala</h4>
+      <p>Misst das Vertrauen in Systeme anhand von drei Subskalen:</p>
+      <ol>
         <li>
-          NASA-TLX: Misst die kognitive Belastung und hilft zu verstehen, wie
-          sich diese auf das Vertrauen auswirkt.
+          <b>Datengültigkeit:</b> Wie valide und zuverlässig sind die zugrunde
+          liegenden Daten?
         </li>
         <li>
-          Trust in Automation (TiA)-Skala von Jian et al. (2001): Misst das
-          Vertrauen in Systeme anhand von drei Subskalen:
-          <ul>
-            <li>
-              Datengültigkeit: Wie valide und zuverlässig sind die zugrunde
-              liegenden Daten?
-            </li>
-            <li>
-              Zielkongruenz: Verfolgt das System dieselben Ziele wie der Nutzer?
-            </li>
-            <li>
-              Ergebnisdiagnostik: Wie genau sind die Ergebnisse, die das System
-              liefert?
-            </li>
-          </ul>
+          <b>Zielkongruenz:</b> Verfolgt das System dieselben Ziele wie der
+          Nutzer?
         </li>
-      </ul>
-      <p>
-        Weitere Messinstrumente bewerten, wie gut das System die Erwartungen
-        erfüllt und wie kontrollierbar es erscheint.
-      </p>
+        <li>
+          <b>Ergebnisdiagnostik:</b> Wie genau sind die Ergebnisse, die das
+          System liefert?
+        </li>
+      </ol>
     </section>,
     <section>
-      <h2>5. Design-Guidelines</h2>
-      <p>
-        Um das Vertrauen in KI-Systeme zu fördern, sollten folgende
-        Designprinzipien beachtet werden:
-      </p>
-      <h4>Förderung von Transparenz und Verständlichkeit</h4>
+      <h2>5. Design-Guidelines zur Förderung der Vertrauenswürdigkeit</h2>
+      <h4>1. Förderung von Transparenz und Verständlichkeit</h4>
       <p>
         Erklärbare KI (XAI) sorgt dafür, dass die Entscheidungen des Systems
-        klar und nachvollziehbar sind. <br />
+        klar und nachvollziehbar sind.{" "}
+      </p>
+      <p>
         <i>
           Beispiel: Ein Finanzplanungssystem, das seine Berechnungen offenlegt
           und erklärt, welche Parameter berücksichtigt wurden.
         </i>
       </p>
-      <h4>Sicherstellung von Systemleistung und Zuverlässigkeit</h4>
+      <h4>2. Sicherstellung von Systemleistung und Zuverlässigkeit</h4>
       <p>
         Systeme müssen verlässlich arbeiten und in Echtzeit Rückmeldungen geben.
-        <br />
+      </p>
+      <p>
         <i>
           Beispiel: Ein medizinisches KI-System sollte bei der Diagnose klare
           Fehlerindikatoren und Bestätigungen anzeigen, um Vertrauen in die
           Ergebnisse zu schaffen.
         </i>
       </p>
-      <h4>Stärkung des dispositionellen Vertrauens</h4>
+      <h4>3. Stärkung des dispositionellen Vertrauens</h4>
       <p>
         Schulungen und Einführungen in die Nutzung eines Systems helfen,
         dispositionelles Vertrauen aufzubauen.
-        <br />
+      </p>
+      <p>
         <i>
           Beispiel: Nutzerfreundliche Tutorials für ein neues KI-gestütztes
           Verwaltungssystem.
         </i>
       </p>
-      <h4>Förderung von affektivem Vertrauen</h4>
+      <h4>4. Förderung von affektivem Vertrauen</h4>
       <p>
         Personalisierung der Nutzererfahrung und eine positive User Experience
         (UX) tragen dazu bei, affektives Vertrauen zu fördern.
-        <br />
+      </p>
+      <p>
         <i>
           Beispiel: Ein Sprachassistenzsystem, das auf personalisierte
           Präferenzen eingeht, um eine emotionalere Bindung zu fördern.
         </i>
       </p>
-      <h4>Integration sozialer Hinweise</h4>
-      <p>
-        Social Proof und der Ruf des Herstellers beeinflussen das Vertrauen.
-        <br />
-        <i>
-          Beispiel: Wenn ein Unternehmen für seine ethischen Prinzipien bekannt
-          ist, steigt das Vertrauen der Nutzenden in dessen Systeme.
-        </i>
-      </p>
-      <p>
-        Durch die Anwendung dieser Designrichtlinien kann die wahrgenommene
-        Vertrauenswürdigkeit von KI-Systemen erheblich gesteigert werden, was
-        letztlich die Akzeptanz und Nutzung dieser Systeme fördert.
-      </p>
     </section>,
     <section>
       <h2>Fazit</h2>
       <p>
-        In dieser Lerneinheit haben wir die Bedeutung von Perceived
-        Trustworthiness in KI-Systemen untersucht. Vertrauen ist entscheidend
-        für die Akzeptanz von KI und basiert auf der Wahrnehmung der
-        Zuverlässigkeit, Transparenz und ethischen Integrität des Systems.
-        Schlüsselfaktoren wie die Kompetenz des Systems, das Wohlwollen und die
-        Integrität spielen eine zentrale Rolle. Um das Vertrauen zu stärken,
-        sollten Entwickler auf Transparenz, Systemzuverlässigkeit und positive
-        Nutzererfahrungen achten. Gute Designpraktiken und klare Kommunikation
-        sind entscheidend, um das Vertrauen der Nutzer zu gewinnen und zu
-        erhalten.
+        Vertrauen ist entscheidend für die Akzeptanz von KI und basiert auf der
+        Wahrnehmung der Zuverlässigkeit, Transparenz und ethischen Integrität
+        des Systems. Schlüsselfaktoren wie die Kompetenz des Systems, das
+        Wohlwollen und die Integrität spielen eine zentrale Rolle. Um das
+        Vertrauen zu stärken, sollten Entwickler auf Transparenz,
+        Systemzuverlässigkeit und positive Nutzererfahrungen achten. Gute
+        Designpraktiken und klare Kommunikation sind entscheidend, um das
+        Vertrauen der Nutzer zu gewinnen und zu erhalten.
       </p>
     </section>,
   ],
@@ -1494,9 +1468,12 @@ const Quellen = {
           </a>
         </li>
         <li>
-          Sewnath, G., & Crijnen, J. (2021). <i>How much is too much? Levels of AI
-          Explainability within Decision Support Systems’ User Interfaces for
-          improved decision-making performance.</i>
+          Sewnath, G., & Crijnen, J. (2021).{" "}
+          <i>
+            How much is too much? Levels of AI Explainability within Decision
+            Support Systems’ User Interfaces for improved decision-making
+            performance.
+          </i>
         </li>
         <li>
           Tsai, C.-H., You, Y., Gui, X., Kou, Y., & Carroll, J. M. (2021).
@@ -1545,6 +1522,97 @@ const Quellen = {
           </a>
         </li>
       </ul>
+      <h4>Literatur zu Wahrgenommene Vertrauenswürdigkeit</h4>
+      <ul>
+        <li>
+          Mayer, R. C., Davis, J. H., & Schoorman, F. D. (1995). An Integrative
+          Model of Organizational Trust.{" "}
+          <i>The Academy of Management Review, 20</i>(3), 709.{" "}
+          <a
+            href="https://doi.org/10.2307/258792"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.2307/258792
+          </a>
+        </li>
+        <li>
+          Lee, J. D., & See, K. A. (2004). Trust in Automation: Designing for
+          Appropriate Reliance.{" "}
+          <i>
+            Human Factors: The Journal of the Human Factors and Ergonomics
+            Society , 46
+          </i>
+          (1), 50–80.{" "}
+          <a
+            href="https://doi.org/10.1518/hfes.46.1.50_30392"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1518/hfes.46.1.50_30392
+          </a>
+        </li>
+        <li>
+          Madsen, M., & Gregor, S. (2000). Measuring human-computer trust.{" "}
+          <i>11th australasian conference on information systems , 53</i>, 6–8.
+        </li>
+        <li>
+          Hoff, K. A., & Bashir, M. (2015). Trust in Automation: Integrating
+          Empirical Evidence on Factors That Influence Trust.{" "}
+          <i>
+            Human Factors: The Journal of the Human Factors and Ergonomics
+            Society , 57
+          </i>
+          (3), 407–434.{" "}
+          <a
+            href="https://doi.org/10.1177/0018720814547570"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1177/0018720814547570
+          </a>
+        </li>
+        <li>
+          Schrills, T., & Franke, T. (2023). How Do Users Experience
+          Traceability of AI Systems? Examining Subjective Information
+          Processing Awareness in Automated Insulin Delivery (AID) Systems.{" "}
+          <i>ACM Transactions on Interactive Intelligent Systems, 13</i>(4),
+          1–34.{" "}
+          <a
+            href="https://doi.org/10.1145/3588594"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1145/3588594
+          </a>
+        </li>
+        <li>
+          Onari, M. A., Grau, I., Nobile, M. S., & Zhang, Y. (2023). Measuring
+          Perceived Trust in XAI-Assisted Decision-Making by Eliciting a Mental
+          Model (Version 1). <i>arXiv</i>.{" "}
+          <a
+            href="https://doi.org/10.48550/ARXIV.2307.11765"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.48550/ARXIV.2307.11765
+          </a>
+        </li>
+        <li>
+          Kohn, S. C., de Visser, E. J., Wiese, E., Lee, Y.-C., & Shaw, T. H.
+          (2021). Measurement of trust in automation: A narrative review and
+          reference guide. <i>Frontiers in psychology</i>, 12, 604977.{" "}
+          <a
+            href="https://doi.org/10.3389/fpsyg.2021.604977"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.3389/fpsyg.2021.604977
+          </a>
+        </li>
+      </ul>
+
+      <h4>Literatur zu Wahrgenommene Confidence / Diagnosticity</h4>
     </section>,
   ],
 };
@@ -1650,10 +1718,10 @@ const EinführungUXKI = {
       <p>
         In den folgenden Kapiteln werden wir detailliert untersuchen, wie diese
         fünf Aspekte – Wahrgenommene Autonomie, Situationsbewusstsein, Mentale
-        Arbeitsbelastung, Trustworthiness und Confidence/Diagnosticity – die
-        Gestaltung und Nutzung von KI-Systemen beeinflussen. Wir werden sehen,
-        wie diese Aspekte in der Praxis umgesetzt werden können und welche
-        Designrichtlinien helfen, eine positive und effektive
+        Arbeitsbelastung, Vertrauenswürdigkeit und Confidence/Diagnosticity –
+        die Gestaltung und Nutzung von KI-Systemen beeinflussen. Wir werden
+        sehen, wie diese Aspekte in der Praxis umgesetzt werden können und
+        welche Designrichtlinien helfen, eine positive und effektive
         Mensch-KI-Interaktion zu fördern. Freuen Sie sich auf eine tiefere
         Auseinandersetzung mit den Herausforderungen und Chancen der
         KI-bezogenen UX!

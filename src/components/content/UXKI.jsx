@@ -1183,65 +1183,107 @@ const Zusammenfassung = {
         }
         title={"Outro"}
       />
+       <p className="pt-5">
+        In dieser Lektion haben wir uns eingehend mit den spezifischen Aspekten
+        der User Experience (UX) auseinandergesetzt, die im Kontext von
+        KI-Systemen eine besondere Rolle spielen.
+      </p>
     </section>,
     <section>
-      <p>
-        In dieser Lektion haben wir uns intensiv mit den spezifischen User
-        Experience (UX) Aspekten beschäftigt, die für KI-Systeme besonders
-        relevant sind. Wir haben die folgenden fünf Kernaspekte betrachtet:
-      </p>
-      <h4>Wahrgenommene Autonomie</h4>
+     
+      <h2>Die 5 UX-Kernaspekte und deren Designrichtlinien</h2>
+      <h3>1. Adaptive Automatisierung für wahrgenommene Autonomie</h3>
       <p>
         Wie sehr fühlen sich Nutzende in der Lage, selbstständig Entscheidungen
         zu treffen und zu handeln, während sie mit einem KI-System interagieren?
+        Nutzende sollten die Kontrolle darüber haben, wie stark sie das System
+        automatisieren oder manuell bedienen möchten. Dies fördert das Gefühl
+        der Autonomie und gibt ihnen die Flexibilität, sich bei Bedarf stärker
+        auf ihre eigenen Entscheidungen zu verlassen.
       </p>
-      <h4>Wahrgenommenes Situationsbewusstsein</h4>
       <p>
-        Das Verständnis und die Wahrnehmung der Nutzer über die aktuelle
-        Umgebung und die Auswirkungen der KI auf diese.
+        <i>
+          Bieten Sie Nutzenden die Möglichkeit, zwischen verschiedenen
+          Automatisierungsstufen zu wechseln, sodass sie je nach Präferenz oder
+          Aufgabenanforderung selbst entscheiden können, wie viel Kontrolle sie
+          dem System überlassen.
+        </i>
       </p>
-      <h4>Wahrgenommene mentale Belastung</h4>
+      <h3>2. Transparenz zur Unterstützung des Situationsbewusstseins </h3>
       <p>
-        Der kognitive Aufwand, der durch die Verarbeitung von Informationen
-        entsteht und die potenzielle Überlastung durch zu viele Daten.
+        Situationsbewusstsein ist das Verständnis und die Wahrnehmung der
+        Nutzenden über die aktuelle Umgebung und die Auswirkungen der KI auf
+        diese. Ein hohes Maß an Situationsbewusstsein erfordert, dass Nutzende
+        jederzeit relevante Informationen über das System und dessen
+        Entscheidungen erhalten. Transparenz fördert das Verständnis für die
+        Funktionsweise und Entscheidungsgrundlagen des Systems.
       </p>
-      <h4>Wahrgenommene Vertrauenswürdigkeit</h4>
       <p>
-        Das Vertrauen der Nutzenden in die Zuverlässigkeit und Ethik des
-        KI-Systems sowie seine Fähigkeit, ihre Bedürfnisse zu erfüllen.
+        <i>
+          Stellen Sie sicher, dass das System die Datenquellen, Prozesse und
+          Faktoren, die eine Entscheidung beeinflussen, klar kommuniziert.
+          Nutzen Sie visuelle Darstellungen oder erklärende Hinweise, um
+          komplexe Abläufe verständlicher zu machen.
+        </i>
       </p>
-      <h4>Wahrgenommene Diagnostizität</h4>
+      <h3>
+        3. Flexibilität bei der Informationsverarbeitung zur Reduzierung der
+        mentalen Belastung
+      </h3>
       <p>
-        Die Fähigkeit eines Systems, Nutzende mit präzisen Informationen bei
-        fundierten Entscheidungen zu unterstützen.
+        Mentale Belastung beschriebt den kognitive Aufwand, der durch die
+        Verarbeitung von Informationen entsteht und die potenzielle Überlastung
+        durch zu viele Daten. Da zu viele oder unstrukturierte Informationen zu
+        kognitiver Überlastung führen können, ist es entscheidend, Nutzende die
+        Kontrolle über die Art und Menge der angezeigten Informationen zu geben.
+        Dies hilft, die wahrgenommene mentale Belastung zu reduzieren.
       </p>
-    </section>,
-    <section>
-      <h2>Zusammenfassung der Design-Guidelines</h2>
-      <h4>Adaptive Automatisierung ermöglichen</h4>
       <p>
-        Geben Sie den Nutzern die Möglichkeit, die Automatisierungsstufen nach
-        Bedarf anzupassen.
+        <i>
+          Integrieren Sie Funktionen, die es Nutzende ermöglichen, die Anzeige
+          von Informationen nach Bedarf zu filtern, zu kategorisieren oder zu
+          priorisieren. Zum Beispiel kann eine Zusammenfassungsansicht für
+          weniger erfahrene Nutzer und eine Detailansicht für Experten angeboten
+          werden.
+        </i>
       </p>
-      <h4>Situationsbewusstsein unterstützen</h4>
+      <h3>
+        4. Zuverlässigkeit und klare Darstellung zur Förderung der
+        wahrgenommenen Vertrauenswürdigkeit
+      </h3>
       <p>
-        Stellen Sie sicher, dass das System die Nutzer über relevante
-        Informationen und deren Bedeutung informiert.
+        Vertrauen entsteht, wenn das System nicht nur zuverlässig und präzise
+        arbeitet, sondern diese Eigenschaften auch klar vermittelt. Nutzende
+        müssen darauf vertrauen können, dass das System korrekt und ethisch
+        agiert.
       </p>
-      <h4>Flexibilität bei der Informationsverarbeitung</h4>
       <p>
-        Ermöglichen Sie Nutzern, die Menge und Art der Informationen nach ihren
-        Bedürfnissen zu steuern.
+        <i>
+          Verwenden Sie visuelle Indikatoren, die die Zuverlässigkeit und
+          Erfolgsquote des Systems darstellen, und bieten Sie Erklärungen, die
+          das ethische und technische Verhalten des Systems untermauern.
+        </i>
       </p>
-      <h4>Transparenz sicherstellen</h4>
+      <h3>
+        5. Nutzerzentrierte Anpassung zur Unterstützung der wahrgenommenen
+        Diagnostizität
+      </h3>
       <p>
-        Gewährleisten Sie, dass die Nutzer nachvollziehen können, wie das System
-        zu seinen Ergebnissen gelangt.
+        Diagnostizität ist die Fähigkeit eines Systems, Nutzende mit präzisen
+        Informationen bei fundierten Entscheidungen zu unterstützen. Nutzende
+        sollten das System an ihre individuellen Präferenzen und
+        Informationsbedürfnisse anpassen können, damit es sie optimal bei der
+        Entscheidungsfindung unterstützt. Dies stärkt die Fähigkeit des Systems,
+        genaue und hilfreiche Informationen bereitzustellen.
       </p>
-      <h4>Nutzerzentrierte Anpassung</h4>
       <p>
-        Bieten Sie Funktionen, die es den Nutzern ermöglichen, die
-        Systemausgaben an ihre individuellen Präferenzen anzupassen.
+        <i>
+          Ermöglichen Sie personalisierte Einstellungen, durch die Nutzenden
+          entscheiden können, welche Art von Informationen angezeigt werden und
+          wie detailliert diese sein sollen. Ein personalisiertes Dashboard oder
+          konfigurierbare Berichte können helfen, das System effizienter zu
+          nutzen.
+        </i>
       </p>
     </section>,
     <section>

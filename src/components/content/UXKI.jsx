@@ -129,7 +129,7 @@ const WahrgenommeneAutonomie = {
       </p>
       <ol>
         <li>
-         <h4>Anpassbare Automatisierung:</h4>
+          <h4>Anpassbare Automatisierung:</h4>
           <ul>
             <li>
               Der Benutzer hat die Kontrolle über die Auswahl des
@@ -145,7 +145,7 @@ const WahrgenommeneAutonomie = {
           </ul>
         </li>
         <li>
-        <h4>Selbstanpassende Automatisierung:</h4>
+          <h4>Selbstanpassende Automatisierung:</h4>
           <ul>
             <li>
               Das System überwacht den Benutzer (z. B. Arbeitsbelastung) und
@@ -466,11 +466,13 @@ const WahrgenommenesSituationsbewusstsein = {
         Awareness)
       </h4>
       <p>
-        SIPA beschreibt die Erfahrung, durch ein System befähigt zu werden,
-        dessen Informationsverarbeitung wahrzunehmen, zu verstehen und
-        vorherzusagen. Die SIPA-Skala dient zur Bewertung der
-        automationsbezogenen UX auf den drei Ebenen des Situationsbewusstseins:
-        Transparenz, Verständlichkeit und Vorhersehbarkeit.
+        Die SIPA-Skala ist ein Werkzeug, mit dem man beurteilen kann, wie
+        Erklärungen in der erklärbaren Künstlichen Intelligenz (XAI) auf die
+        Nutzenden wirken. Sie basiert auf den drei Ebenen des
+        Situationsbewusstseins: Transparenz, Verständlichkeit und
+        Vorhersehbarkeit. Mit der SIPA-Skala lässt sich analysieren, wie gut ein
+        System die Nutzenden dabei unterstützt, das Verhalten und die
+        Informationsverarbeitung des Systems nachzuvollziehen.
       </p>
       <h4>R. M. Taylor (2017): Situation Awareness Rating Technique (SART)</h4>
       <p>
@@ -707,11 +709,12 @@ const PerceivedTrustworthiness = {
         Wahrnehmung von dessen Zuverlässigkeit, Verständlichkeit und ethischen
         Prinzipien. Vertrauen wird als die Bereitschaft definiert, sich auf die
         Entscheidungen eines Systems zu verlassen, ohne es direkt überwachen
-        oder kontrollieren zu können. Es ist eine Schlüsselfaktoren für die
-        Akzeptanz und Nutzung von KI-Systemen. Besonders im Bereich der
-        Erklärbaren Künstlichen Intelligenz (XAI) sind ethische und soziale
-        Überlegungen entscheidend und prägen die Vertrauenswürdigkeit
-        maßgeblich.
+        oder kontrollieren zu können.
+      </p>
+      <p>
+        Vertrauen ist zentral für die Akzeptanz und Nutzung von KI-Systemen,
+        insbesondere im Bereich der erklärbaren Künstlichen Intelligenz (XAI),
+        wo ethische und soziale Aspekte besonders relevant sind.
       </p>
     </section>,
     <section>
@@ -803,99 +806,166 @@ const PerceivedTrustworthiness = {
         Vertrauen und die Bedeutung der Nutzererfahrungen im Zeitverlauf
         hervorhebt.
       </p>
+      <h4>Vertrauenswürdigkeits-Hinweisen nach Schlicker et al. (2022): </h4>
+      <p>
+        Vertrauenswürdigkeits-Hinweise sind entscheidend für die wahrgenommene
+        Vertrauenswürdigkeit eines Systems. Hinweise zur
+        Informationsverarbeitung zeigen nicht nur, wie zuverlässig das System
+        ist, sondern helfen den Nutzern auch, dessen Funktionsweise besser zu
+        verstehen und seine Fähigkeit zur Aufgabenbewältigung einzuschätzen.
+        Hinweise, die nicht mit den Merkmalen der Informationsverarbeitung des
+        Systems zusammenhängen, z. B. die Reputation des Herstellers oder
+        soziale Hinweise wie das Nutzungsverhalten von Personen im eigenen
+        Umfeld können ebenfalls relevant sein.
+      </p>
     </section>,
     <section>
       <h2>3. Studien zur User Experience und KI</h2>
+      <h4>
+        Schrills (2024): Einfluss der Systemzuverlässigkeit auf Nutzervertrauen
+        in KI-Systeme
+      </h4>
       <p>
-        Untersuchungen zeigen zu kontaktverfolgenden Apps (Digital Contact
-        Tracing) und automatisierten Insulinverabreichungssystemen (AID), dass
-        Vertrauen oft von der Transparenz der Entscheidungen und der
-        Verständlichkeit der Systeme abhängt.
+        Die Studie zeigt, dass die Selbsteinschätzung des Vertrauens in ein
+        KI-System keinen direkten Einfluss auf das tatsächliche Vertrauen in
+        dessen Empfehlungen hat. Stattdessen erwies sich die angegebene
+        Zuverlässigkeit des Systems als der stärkste Einflussfaktor auf das
+        Verhalten der Nutzenden. Das bedeutet, dass Nutzende ihr Vertrauen eher
+        auf die wahrgenommene Zuverlässigkeit des Systems stützen als auf ihr
+        eigenes, subjektives Vertrauensempfinden. Dieses Ergebnis legt nahe,
+        dass die Kommunikation und Darstellung der Zuverlässigkeit eines
+        KI-Systems einen größeren Einfluss auf die Nutzung hat als traditionelle
+        Methoden zur Messung von Vertrauen.
       </p>
-      <p>
-        Eine Studie von Abbaspour Onari et al. (2023) zeigt, wie mentaler
-        Modelle von Nutzenden zur Messung des Vertrauens in XAI-Systeme
-        beitragen können.
-      </p>
+      <h4>
+        Vereschak et al. (2024): Menschliche Einflüsse und
+        Stakeholder-spezifische Anforderungen
+      </h4>
+      <ol>
+        <li>
+          <b>Vertrauensanforderungen:</b> Die Teilnehmenden identifizierten
+          wesentliche Elemente für Vertrauen und unterschieden es von Konzepten
+          wie Vertrauenswürdigkeit, Verlass und Befolgung. Positive Erwartungen
+          und wahrgenommenes Risiko waren dabei entscheidende Faktoren, wobei
+          die Komplexität der Aufgabe als zusätzliche Voraussetzung für
+          Vertrauen in KI-gestützte Entscheidungsprozesse hervorgehoben wurde.{" "}
+        </li>{" "}
+        <li>
+          <b>Menschlicher Einfluss auf Vertrauen:</b> Vertrauen in KI-Systeme
+          wurde stark von menschlichen Akteuren beeinflusst, etwa von den
+          Personen, die das System entwickeln und einsetzen, und nicht nur von
+          den technischen Merkmalen des Systems.{" "}
+        </li>
+        <li>
+          <b>Stakeholderspezifische Vertrauensfaktoren:</b> Die Faktoren, die
+          das Vertrauen zwischen Mensch und KI beeinflussen, variieren je nach
+          Stakeholder. Zum Beispiel legen Entscheidungsträger, die das System
+          nutzen, und diejenigen, die von den Entscheidungen betroffen sind (z.
+          B. Patienten im medizinischen Kontext), auf unterschiedliche
+          Vertrauensaspekte Wert.
+        </li>
+      </ol>
     </section>,
     <section>
       <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
       <h4>Jian et al. (2001): Trust in Automation (TiA)-Skala</h4>
-      <p>Misst das Vertrauen in Systeme anhand von drei Subskalen:</p>
-      <ol>
-        <li>
-          <b>Datengültigkeit:</b> Wie valide und zuverlässig sind die zugrunde
-          liegenden Daten?
-        </li>
-        <li>
-          <b>Zielkongruenz:</b> Verfolgt das System dieselben Ziele wie der
-          Nutzer?
-        </li>
-        <li>
-          <b>Ergebnisdiagnostik:</b> Wie genau sind die Ergebnisse, die das
-          System liefert?
-        </li>
-      </ol>
+      <p>
+        Die Skala ist eine der am häufigsten verwendeten Skalen zur
+        Selbsteinschätzung von Vertrauen. Sie bewertet, wie sehr Nutzer die
+        Leistungsfähigkeit und Zuverlässigkeit automatisierter Systeme
+        einschätzen und unterscheidet dabei zwischen Mensch-Mensch- und
+        Mensch-Maschine-Vertrauen. Die Skala erfasst zentrale Vertrauensfaktoren
+        und hilft, das Vertrauen der Nutzer in Automation und dessen Einfluss
+        auf die Nutzung zu verstehen.
+      </p>
     </section>,
     <section>
       <h2>5. Design-Guidelines zur Förderung der Vertrauenswürdigkeit</h2>
       <h4>1. Förderung von Transparenz und Verständlichkeit</h4>
       <p>
-        Erklärbare KI (XAI) sorgt dafür, dass die Entscheidungen des Systems
-        klar und nachvollziehbar sind.{" "}
+        Erklärbare KI (XAI) ermöglicht, dass die Entscheidungen des Systems klar
+        und nachvollziehbar sind, was das Vertrauen der Nutzer stärkt.
       </p>
       <p>
         <i>
           Beispiel: Ein Finanzplanungssystem, das seine Berechnungen offenlegt
-          und erklärt, welche Parameter berücksichtigt wurden.
+          und erklärt, welche Parameter berücksichtigt wurden, hilft Nutzern,
+          die Entscheidungsprozesse nachzuvollziehen.
         </i>
       </p>
       <h4>2. Sicherstellung von Systemleistung und Zuverlässigkeit</h4>
       <p>
-        Systeme müssen verlässlich arbeiten und in Echtzeit Rückmeldungen geben.
+        ysteme sollten verlässlich arbeiten und klare Rückmeldungen geben, um
+        Vertrauen aufzubauen und Unsicherheiten zu reduzieren.
       </p>
       <p>
         <i>
-          Beispiel: Ein medizinisches KI-System sollte bei der Diagnose klare
-          Fehlerindikatoren und Bestätigungen anzeigen, um Vertrauen in die
-          Ergebnisse zu schaffen.
+          Beispiel: Ein medizinisches KI-System, das bei der Diagnose
+          Fehlerindikatoren und Bestätigungen anzeigt, schafft Vertrauen in die
+          Genauigkeit und Zuverlässigkeit der Ergebnisse.
         </i>
       </p>
-      <h4>3. Stärkung des dispositionellen Vertrauens</h4>
+      <h4>3. Stärkung des erlernten Vertrauens</h4>
       <p>
-        Schulungen und Einführungen in die Nutzung eines Systems helfen,
-        dispositionelles Vertrauen aufzubauen.
+        Einführungen und Schulungen können dispositionelles Vertrauen fördern,
+        indem sie das Verständnis und die Vertrautheit mit dem System
+        verbessern.
       </p>
       <p>
         <i>
           Beispiel: Nutzerfreundliche Tutorials für ein neues KI-gestütztes
-          Verwaltungssystem.
+          Verwaltungssystem fördern das grundlegende Vertrauen der Nutzer in das
+          System.
         </i>
       </p>
       <h4>4. Förderung von affektivem Vertrauen</h4>
       <p>
-        Personalisierung der Nutzererfahrung und eine positive User Experience
-        (UX) tragen dazu bei, affektives Vertrauen zu fördern.
+        Eine personalisierte Nutzererfahrung und positive User Experience (UX)
+        tragen zur Entwicklung von affektivem Vertrauen bei.
       </p>
       <p>
         <i>
-          Beispiel: Ein Sprachassistenzsystem, das auf personalisierte
-          Präferenzen eingeht, um eine emotionalere Bindung zu fördern.
+          Beispiel: Ein Sprachassistenzsystem, das personalisierte Präferenzen
+          berücksichtigt, stärkt die emotionale Bindung und das Vertrauen der
+          Nutzer in das System.
+        </i>
+      </p>
+      <h4>5. Kontextbezogene Erklärungen für Empfehlungen geben</h4>
+      <p>
+        Um situatives Vertrauen zu fördern, sollten Systeme kontextabhängige
+        Erklärungen liefern, die auf die spezifische Entscheidungssituation der
+        Nutzer eingehen.
+      </p>
+      <p>
+        <i>
+          Beispiel: Ein Personalplanungssystem für das Gesundheitswesen erklärt,
+          warum bestimmte Dienstpläne vorgeschlagen werden, z. B. basierend auf
+          Arbeitslasten oder Personalverfügbarkeit.
         </i>
       </p>
     </section>,
     <section>
       <h2>Fazit</h2>
-      <p>
-        Vertrauen ist entscheidend für die Akzeptanz von KI und basiert auf der
-        Wahrnehmung der Zuverlässigkeit, Transparenz und ethischen Integrität
-        des Systems. Schlüsselfaktoren wie die Kompetenz des Systems, das
-        Wohlwollen und die Integrität spielen eine zentrale Rolle. Um das
-        Vertrauen zu stärken, sollten Entwickler auf Transparenz,
-        Systemzuverlässigkeit und positive Nutzererfahrungen achten. Gute
-        Designpraktiken und klare Kommunikation sind entscheidend, um das
-        Vertrauen der Nutzer zu gewinnen und zu erhalten.
-      </p>
+      <ul>
+        <li>
+          <b>Vertrauen ist entscheidend</b>: <b>Vertrauenswürdigkeit</b> fördert
+          die Akzeptanz von KI-Systemen.
+        </li>
+        <li>
+          <b>Unterschiedliche Vertrauensfaktoren</b>: <b>Fähigkeit</b>,{" "}
+          <b>Integrität</b> und <b>Wohlwollen</b> sind grundlegende Faktoren für
+          Vertrauen.
+        </li>
+        <li>
+          <b>Menschliche Einflüsse berücksichtigen</b>: Vertrauen wird nicht nur
+          durch das System, sondern auch durch menschliche Interaktionen und den{" "}
+          <b>sozialen Kontext</b> beeinflusst.
+        </li>
+        <li>
+          <b>Zuverlässigkeit sichtbar machen</b>: <b>Nutzervertrauen</b> basiert
+          stark auf der wahrgenommenen Zuverlässigkeit des Systems.
+        </li>
+      </ul>
     </section>,
   ],
 };
@@ -968,7 +1038,10 @@ const PerceivedConfidence = {
     </section>,
     <section>
       <h2>3. Studien zur User Experience und KI</h2>
-      <h4>KI-gestützte UX  in Kontaktverfolgungs-Apps: Studie zu diagnostischen Informationen</h4>
+      <h4>
+        KI-gestützte UX in Kontaktverfolgungs-Apps: Studie zu diagnostischen
+        Informationen
+      </h4>
       <p>
         Ein Beispiel für den Einsatz von KI in der Nutzererfahrung ist die
         Untersuchung der Automatisierungsbezogenen UX bei digitalen
@@ -1569,6 +1642,22 @@ const Quellen = {
           </a>
         </li>
         <li>
+          Schlicker, N., Baum, K., Uhde, A., Sterz, S., Hirsch, M. C., & Langer,
+          M. (2022).{" "}
+          <i>
+            How Do We Assess the Trustworthiness of AI? Introducing the
+            Trustworthiness Assessment Model (TrAM).
+          </i>
+          <a
+            href="
+          https://doi.org/10.31234/osf.io/qhwvx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.31234/osf.io/qhwvx
+          </a>
+        </li>
+        <li>
           Schrills, T., & Franke, T. (2023). How Do Users Experience
           Traceability of AI Systems? Examining Subjective Information
           Processing Awareness in Automated Insulin Delivery (AID) Systems.{" "}
@@ -1583,15 +1672,20 @@ const Quellen = {
           </a>
         </li>
         <li>
-          Onari, M. A., Grau, I., Nobile, M. S., & Zhang, Y. (2023). Measuring
-          Perceived Trust in XAI-Assisted Decision-Making by Eliciting a Mental
-          Model (Version 1). <i>arXiv</i>.{" "}
+          Vereschak, O., Alizadeh, F., Bailly, G., & Caramiaux, B. (2024). Trust
+          in AI-assisted Decision Making: Perspectives from Those Behind the
+          System and Those for Whom the Decision is Made.{" "}
+          <i>
+            Proceedings of the CHI Conference on Human Factors in Computing
+            Systems
+          </i>
+          , 1–14.
           <a
-            href="https://doi.org/10.48550/ARXIV.2307.11765"
+            href="https://doi.org/10.1145/3613904.3642018"
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://doi.org/10.48550/ARXIV.2307.11765
+            https://doi.org/10.1145/3613904.3642018
           </a>
         </li>
         <li>

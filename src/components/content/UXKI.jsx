@@ -997,6 +997,19 @@ const PerceivedConfidence = {
         sind, desto mehr steigt die diagnostische Qualität des Systems und
         stärkt damit das Vertrauen der Nutzenden.
       </p>
+    </section>,
+    <section>
+      <h2>2. Relevante Konzepte und Modelle</h2>
+      <h3>Auswahl von Handlungsmöglichkeiten</h3>
+      <p>
+        Aus psychologischer Sicht ist Diagnostizität entscheidend, weil sie die
+        Auswahl einer Handlung erleichtert. Informationen mit hoher
+        Diagnostizität unterstützen Menschen dabei, gezielte Entscheidungen zu
+        treffen. So kann ein diagnostisches System im Gesundheitswesen dazu
+        beitragen, zwischen wenigen klaren Hypothesen zu unterscheiden, was
+        letztlich Unsicherheit reduziert und die Entscheidungsfindung
+        erleichtert.
+      </p>
       <p>
         Ein Beispiel dafür ist ein KI-System im Gesundheitswesen, das bei
         Symptomen wie Fieber die Wahrscheinlichkeiten für mögliche Erkrankungen
@@ -1004,53 +1017,66 @@ const PerceivedConfidence = {
         spezifischer Informationen hilft das System, die Entscheidung über den
         nächsten Schritt gezielt zu erleichtern.
       </p>
-    </section>,
-    <section>
-      <h2>2. Relevante Konzepte und Modelle</h2>
-      <h4>Einfluss der Diagnostizität auf Vertrauen und Nutzungsabsicht</h4>
+      <h3>
+        Unterschied zwischen wahrgenommener und tatsächlicher Diagnostizität
+      </h3>
       <p>
-        Schrills und Franke (2023) betonen, dass die wahrgenommene
-        Diagnostizität entscheidend für die Vertrauenswürdigkeit und Nutzung von
-        Systemen ist. Bei Digital Contact Tracing (DCT)-Apps zur
-        Pandemiekontaktverfolgung bevorzugen Nutzer detaillierte und klare
-        Informationen, da dies ihr Vertrauen in die Genauigkeit und Nützlichkeit
-        der App stärkt.
+        Manchmal schätzen Nutzende bestimmte Informationen als sehr hilfreich
+        für eine Entscheidung ein, obwohl diese Infos gar nicht wirklich dabei
+        helfen, zwischen verschiedenen Möglichkeiten zu unterscheiden. Dies kann
+        dazu führen, dass unwichtige Details überbewertet werden und dadurch
+        Fehlentscheidungen entstehen (Nelson, 2005) Beispielsweise hat das
+        Symptom „Fieber“ bei der Unterscheidung zwischen COVID-19 und Grippe nur
+        einen geringen diagnostischen Wert, auch wenn es allgemein zur
+        Krankheitsdiagnose beiträgt.
       </p>
-      <h4>Förderung von Entscheidungsfähigkeit und Vertrauen</h4>
       <p>
-        Miller (2023) betont, dass intelligente Systeme Nutzenden dabei helfen
-        sollen, besser auf Informationen zuzugreifen und sie sinnvoll zu nutzen.
-        Statt nur Ergebnisse anzuzeigen, sollten die Informationen so
-        aufbereitet sein, dass sie die Entscheidungsfindung unterstützen und die
-        verschiedenen Optionen deutlich zeigen. Dadurch wird sowohl das
-        Vertrauen in das System als auch die Qualität der Entscheidungen
-        verbessert.
+        Dieser Effekt führt zu sogenannten „Pseudo-Diagnosen“, bei denen
+        Menschen diagnostisch wenig hilfreiche Daten auswählen und diese für
+        ihre Entscheidung nutzen (Kern & Doherty, 1982). Ähnlich wie bei der
+        „Illusion of Explanatory Depth“ (Chromik et al., 2021) können dadurch
+        Fehleinschätzungen der eigenen Leistung und eine falsche Bewertung des
+        Systems entstehen.
       </p>
-      <h4>Einfluss auf das Vertrauen</h4>
+      <h3>Unterschied zwischen Informationswert und Diagnostizität</h3>
       <p>
-        Studien zeigen, dass die Diagnostizität eines KI-Systems das Vertrauen
-        der Nutzenden maßgeblich beeinflusst. Wenn die bereitgestellten
-        Informationen klar und unterscheidbar sind, neigen die Nutzer eher dazu,
-        der KI zu vertrauen und ihre Vorschläge anzunehmen. Fehlt diese
-        Klarheit, wird das Vertrauen geschwächt, was die Akzeptanz des Systems
-        gefährdet.
+        Der Begriff „Informationswert“ bezieht sich darauf, wie stark eine
+        Information generell Unsicherheit verringert. „Diagnostizität“ hingegen
+        ist spezifischer: Sie hilft, zwischen bestimmten Möglichkeiten (z. B.
+        Grippe vs. Erkältung) zu unterscheiden. Wenn es nur wenige klare
+        Optionen gibt, ist Diagnostizität wichtiger. Wenn es viele mögliche
+        Optionen gibt, hilft der allgemeine Informationswert mehr.
       </p>
     </section>,
     <section>
       <h2>3. Studien zur User Experience und KI</h2>
       <h4>
-        KI-gestützte UX in Kontaktverfolgungs-Apps: Studie zu diagnostischen
-        Informationen
+        Schrills und Franke (2023): Einfluss der Diagnostizität auf Vertrauen
+        und Nutzungsabsicht
       </h4>
       <p>
-        Ein Beispiel für den Einsatz von KI in der Nutzererfahrung ist die
-        Untersuchung der Automatisierungsbezogenen UX bei digitalen
-        Kontaktverfolgungs-Apps von Schrills und Franke (2023). Die Studie
-        zeigt, dass Nutzende detaillierte Informationen zu potenziellen
-        Kontakten bevorzugen, besonders diagnostische Details wie das Tragen
-        einer Maske während einer Pandemie. Je präziser und hilfreicher die
-        Informationen, desto höher sind Zufriedenheit und Vertrauen der
-        Nutzenden.
+        Schrills und Franke (2023) betonen, dass die wahrgenommene
+        Diagnostizität entscheidend für die Vertrauenswürdigkeit und Nutzung von
+        Systemen ist. Bei Digital Contact Tracing (DCT)-Apps zur
+        Pandemiekontaktverfolgung bevorzugen Nutzende detaillierte und klare
+        Informationen, besonders diagnostische Details wie das Tragen einer
+        Maske während einer Pandemie. Dies stärkt ihr Vertrauen in die
+        Genauigkeit und Nützlichkeit der App und erhöht somit auch
+        Zufriedenheit. Das Fehlen diagnostischer Hinweise beeinflusst das
+        Verhalten der Nutzende und bringt sie dazu, eher allgemeine, weniger
+        gezielte Informationen zu nutzen.
+      </p>
+      <h4>
+        Bartlett und McCarley (2017): Suboptimale Entscheidungen durch fehlende
+        Diagnostizität
+      </h4>
+      <p>
+        Wenn eine KI keine spezifisch diagnostischen Informationen liefert,
+        neigen Nutzenden oft dazu, alternative Strategien anzuwenden, die nicht
+        immer optimal sind. Die Studie beschreibt, dass Menschen in solchen
+        Situationen oft eine Strategie namens „probability matching“ verwenden.
+        Dabei passen sie ihre Entscheidungen an die allgemeine Zuverlässigkeit
+        der KI an, anstatt auf gezielte, diagnostische Hinweise zu achten.{" "}
       </p>
     </section>,
     <section>
@@ -1072,86 +1098,53 @@ const PerceivedConfidence = {
     </section>,
     <section>
       <h2>5. Design-Guidelines</h2>
-      <h4>1. Bereitstellung relevanter Informationen</h4>
       <p>
-        Die bereitgestellten Informationen sollten direkt auf die
-        Entscheidungsfindung der Nutzenden abzielen, insbesondere in Bereichen
-        wie Gesundheitsvorsorge oder öffentliche Sicherheit. Die Informationen
-        müssen präzise und nachvollziehbar sein.
+        Um Nutzer das Verständnis und Vertrauen in die Entscheidungen einer
+        Künstlichen Intelligenz (KI) zu erleichtern, gibt es verschiedene
+        Techniken in der Erklärbaren KI (XAI). Diese Techniken helfen,
+        Entscheidungen der KI verständlicher und transparenter zu machen.
       </p>
+      <h4>1. Kontrafaktische Erklärungen – „Was wäre wenn“-Szenarien</h4>
       <p>
-        <i>
-          Beispiel: Ein System zur Kontaktverfolgung könnte genaue Details zu
-          Risikokontakten (z.B. Maskennutzung oder Dauer des Kontakts)
-          bereitstellen, um die Diagnosequalität zu erhöhen.
-        </i>
+        Kontrafaktische Erklärungen zeigen, wie eine kleine Änderung an den
+        Eingabedaten zu einer anderen Entscheidung der KI führen könnte. Zum
+        Beispiel: Wenn eine Kreditbewilligung abgelehnt wird, könnte die KI
+        erklären, dass eine Erhöhung des Einkommens um einen bestimmten Betrag
+        zur Bewilligung geführt hätte. Solche „Was wäre wenn“-Erklärungen helfen
+        den Nutzenden, die Entscheidungsgrenzen der KI zu verstehen (Warren et
+        al., 2022)
       </p>
-      <h4>2. Visuelle Unterstützung nutzen</h4>
+      <h4>
+        2. Semantische Anreicherung und Heatmaps – Verständlichere
+        Visualisierungen
+      </h4>
       <p>
-        Informationen sollten visuell klar dargestellt werden, sodass auch
-        Menschen mit Beeinträchtigungen Zugang zu präzisen Daten haben.
-        Barrierefreie Darstellungen helfen dabei, die diagnostische Information
-        verständlich zu vermitteln.
+        Durch semantische Anreicherung, also durch das Hinzufügen von
+        zusätzlichen Erklärungen, werden Heatmaps (visuelle Darstellungen)
+        verständlicher. Zum Beispiel in der medizinischen Bildgebung können
+        Heatmaps aufzeigen, welche Bildbereiche für eine Diagnose besonders
+        wichtig waren. Diese zusätzlichen Details helfen den Nutzenden, die
+        Entscheidungslogik der KI besser nachzuvollziehen und das Vertrauen zu
+        stärken (Gianfagna & Di Cecco, 2021; Tonekaboni et al., 2019).
       </p>
+      <h4>3. Konfidenzbewertungen – Vertrauen durch Unsicherheitsangaben</h4>
       <p>
-        <i>
-          Beispiel: Ein Gesundheitsmonitor könnte durch Diagramme und Symbole
-          zeigen, wie sich bestimmte Symptome auf die Diagnosewahrscheinlichkeit
-          auswirken.
-        </i>
+        Konfidenzbewertungen zeigen, wie sicher oder unsicher die KI bei ihren
+        Vorhersagen ist. Diese Informationen sind besonders wichtig in Bereichen
+        wie Gesundheit und Finanzen, wo Entscheidungen große Auswirkungen haben
+        können. Wenn die KI ihre Unsicherheit angibt, können Nutzende besser
+        einschätzen, ob sie der Entscheidung vertrauen möchten oder nicht
+        (Gianfagna and Di Cecco, 2021; T. Le et al., 2023).
       </p>
-      <h4>3. Transparente Erklärungen bieten</h4>
+      <h4>4. Lokale Feature-Relevanz – Bedeutung einzelner Merkmale</h4>
       <p>
-        Es ist entscheidend, dass die bereitgestellten Informationen klar
-        erklärt werden. Nutzer sollten verstehen, warum eine bestimmte
-        Information relevant ist und wie sie zu einer fundierten Entscheidung
-        beiträgt.
-      </p>
-      <p>
-        <i>
-          Beispiel: Eine Gesundheitsanwendung, die erklärt, wie und warum
-          Symptome wie Fieber auf eine bestimmte Krankheit hinweisen, erhöht die
-          Klarheit der Diagnose.
-        </i>
-      </p>
-      <h4>4. Kontextualisierte Hilfe bieten</h4>
-      <p>
-        Personalisierte Unterstützung, die auf die spezifischen Bedürfnisse der
-        Gemeinschaft oder der Nutzenden abgestimmt ist, kann die Diagnostizität
-        verbessern.
-      </p>
-      <p>
-        <i>
-          Beispiel: Ein Notfallsystem, das spezifische Handlungsempfehlungen auf
-          Basis lokaler Gesundheitsdaten gibt.
-        </i>
-      </p>
-      <h4>5. Feedback-Mechanismen integrieren</h4>
-      <p>
-        Nutzer sollten die Möglichkeit haben, Feedback zu geben, insbesondere in
-        Bereichen wie Gesundheit oder Sicherheit, wo präzise Informationen
-        entscheidend sind. Dies ermöglicht eine kontinuierliche Verbesserung der
-        Diagnostizität.
-      </p>
-      <p>
-        <i>
-          Beispiel: Ein Kontaktverfolgungssystem könnte Nutzern die Möglichkeit
-          bieten, die Genauigkeit der bereitgestellten Risikoinformationen zu
-          bewerten.
-        </i>
-      </p>
-      <h4>6. Nutzerzentrierte Anpassungen ermöglichen</h4>
-      <p>
-        Systeme sollten anpassbar sein, um den individuellen Bedürfnissen und
-        Präferenzen der Nutzenden gerecht zu werden. Personalisierte
-        Empfehlungen oder maßgeschneiderte Informationen erhöhen das Vertrauen
-        in die Diagnosen des Systems.
-      </p>
-      <p>
-        <i>
-          Beispiel: Gesundheits-Apps, die Empfehlungen auf Basis der
-          persönlichen Gesundheitsgeschichte anpassen.
-        </i>
+        Die lokale Feature-Relevanz zeigt an, welche spezifischen
+        Eingabemerkmale zu einer bestimmten Entscheidung der KI geführt haben.
+        Beispielsweise könnte in einem System zur Betrugserkennung hervorgehoben
+        werden, dass ungewöhnliche Transaktionsbeträge oder -orte eine große
+        Rolle gespielt haben. Diese Detailinformationen helfen den Nutzenden,
+        die Entscheidungen der KI mit ihrem eigenen Wissen zu vergleichen und zu
+        validieren (Doshi-Velez and Kim, 2017; Lundberg et al., 2019).
       </p>
     </section>,
     <section>
@@ -1183,14 +1176,13 @@ const Zusammenfassung = {
         }
         title={"Outro"}
       />
-       <p className="pt-5">
+      <p className="pt-5">
         In dieser Lektion haben wir uns eingehend mit den spezifischen Aspekten
         der User Experience (UX) auseinandergesetzt, die im Kontext von
         KI-Systemen eine besondere Rolle spielen.
       </p>
     </section>,
     <section>
-     
       <h2>Die 5 UX-Kernaspekte und deren Designrichtlinien</h2>
       <h3>1. Adaptive Automatisierung für wahrgenommene Autonomie</h3>
       <p>
@@ -1747,9 +1739,58 @@ const Quellen = {
       <h4>Literatur zu Wahrgenommene Confidence / Diagnosticity</h4>
       <ul>
         <li>
-          Schrills, T., & Franke, T. (2023). How do users experience
-          traceability of AI systems? Examining subjective information
-          processing awareness in automated insulin delivery (AID) systems.{" "}
+          Wickens, C. D., & Scott, B. D. (1983). A comparison of verbal and
+          graphical information presentation in a complex information
+          integration decision task. In Tech. Rep. EPL-83-1/ONR-83-1.
+          Engineering-Psychology Research Laboratory, University of Illinois
+          Urbana.
+        </li>
+
+        <li>
+          Nelson, J. D. (2005). Finding Useful Questions: On Bayesian
+          Diagnosticity, Probability, Impact, and Information Gain.{" "}
+          <i>Psychological Review, 112</i>(4), 979–999.{" "}
+          <a
+            href="https://doi.org/10.1037/0033-295X.112.4.979"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1037/0033-295X.112.4.979
+          </a>
+        </li>
+
+        <li>
+          Kern, L., & Doherty, M. E. (1982). ‘Pseudodiagnosticity’ in an
+          idealized medical problem-solving environment.{" "}
+          <i>Academic Medicine, 57</i>(2), 100–104.{" "}
+          <a
+            href="https://doi.org/10.1097/00001888-198202000-00004"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1097/00001888-198202000-00004
+          </a>
+        </li>
+
+        <li>
+          Chromik, M., Eiband, M., Buchner, F., Krüger, A., & Butz, A. (2021). I
+          Think I Get Your Point, AI! The Illusion of Explanatory Depth in
+          Explainable AI.{" "}
+          <i>26th International Conference on Intelligent User Interfaces</i>,
+          307–317.{" "}
+          <a
+            href="https://doi.org/10.1145/3397481.3450644"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1145/3397481.3450644
+          </a>
+        </li>
+
+        <li>
+          Schrills, T., & Franke, T. (2023). How Do Users Experience
+          Traceability of AI Systems? Examining Subjective Information
+          Processing Awareness in Automated Insulin Delivery (AID) Systems.{" "}
           <i>ACM Transactions on Interactive Intelligent Systems, 13</i>(4),
           1–34.{" "}
           <a
@@ -1762,18 +1803,113 @@ const Quellen = {
         </li>
 
         <li>
-          Miller, T. (2023). Explainable AI is dead, long live explainable AI!:
-          Hypothesis-driven decision support using evaluative AI.{" "}
+          Bartlett, M. L., & McCarley, J. S. (2017). Benchmarking Aided Decision
+          Making in a Signal Detection Task.{" "}
           <i>
-            2023 ACM Conference on Fairness, Accountability, and Transparency
+            Human Factors: The Journal of the Human Factors and Ergonomics
+            Society, 59
           </i>
-          , 333–342.{" "}
+          (6), 881–900.{" "}
           <a
-            href="https://doi.org/10.1145/3593013.3594001"
+            href="https://doi.org/10.1177/0018720817700258"
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://doi.org/10.1145/3593013.3594001
+            https://doi.org/10.1177/0018720817700258
+          </a>
+        </li>
+
+        <li>
+          Warren, G., Smyth, B., & Keane, M. T. (2022). “Better”
+          Counterfactuals, Ones People Can Understand: Psychologically-Plausible
+          Case-Based Counterfactuals Using Categorical Features for Explainable
+          AI (XAI). In M. T. Keane & N. Wiratunga (Eds.),{" "}
+          <i>Case-Based Reasoning Research and Development</i> (Vol. 13405, pp.
+          63–78). Springer International Publishing.{" "}
+          <a
+            href="https://doi.org/10.1007/978-3-031-14923-8_5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1007/978-3-031-14923-8_5
+          </a>
+        </li>
+
+        <li>
+          Gianfagna, L., & Di Cecco, A. (2021). Explainable AI: Needs,
+          Opportunities, and Challenges. In L. Gianfagna & A. Di Cecco,{" "}
+          <i>Explainable AI with Python</i> (pp. 27–46). Springer International
+          Publishing.{" "}
+          <a
+            href="https://doi.org/10.1007/978-3-030-68640-6_2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1007/978-3-030-68640-6_2
+          </a>
+        </li>
+
+        <li>
+          Tonekaboni, S., Joshi, S., McCradden, M. D., & Goldenberg, A. (2019).
+          What clinicians want: Contextualizing explainable machine learning for
+          clinical end use. In F. Doshi-Velez, J. Fackler, K. Jung, D. Kale, R.
+          Ranganath, B. Wallace, & J. Wiens (Eds.),{" "}
+          <i>
+            Proceedings of the 4th Machine Learning for Healthcare Conference
+          </i>{" "}
+          (Vol. 106, pp. 359–380). PMLR.{" "}
+          <a
+            href="https://proceedings.mlr.press/v106/tonekaboni19a.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://proceedings.mlr.press/v106/tonekaboni19a.html
+          </a>
+        </li>
+
+        <li>
+          Le, T., Miller, T., Singh, R., & Sonenberg, L. (2023). Explaining
+          Model Confidence Using Counterfactuals.{" "}
+          <i>
+            Proceedings of the AAAI Conference on Artificial Intelligence, 37
+          </i>
+          (10), 11856–11864.{" "}
+          <a
+            href="https://doi.org/10.1609/aaai.v37i10.26399"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://doi.org/10.1609/aaai.v37i10.26399
+          </a>
+        </li>
+
+        <li>
+          Doshi-Velez, F., & Kim, B. (2017).{" "}
+          <i>Towards A Rigorous Science of Interpretable Machine Learning</i>{" "}
+          (No. arXiv:1702.08608). arXiv.{" "}
+          <a
+            href="http://arxiv.org/abs/1702.08608"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            http://arxiv.org/abs/1702.08608
+          </a>
+        </li>
+
+        <li>
+          Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M.,
+          Nair, B., Katz, R., Himmelfarb, J., Bansal, N., & Lee, S.-I. (2019).
+          <i>
+            Explainable AI for Trees: From Local Explanations to Global
+            Understanding
+          </i>{" "}
+          (No. arXiv:1905.04610). arXiv.{" "}
+          <a
+            href="http://arxiv.org/abs/1905.04610"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            http://arxiv.org/abs/1905.04610
           </a>
         </li>
       </ul>

@@ -698,7 +698,7 @@ const Quiz = () => {
 
   return (
     <div
-      className={`${styles.Quiz} rounded-xl overflow-hidden bg-[#77a9d1] bg-opacity-5`}>
+      className={`${styles.Quiz} rounded-xl overflow-hidden bg-[#545166] bg-opacity-90`}>
       <Header
         onReset={handleReset}
         doneInTopic={doneInTopic}

@@ -1,4 +1,4 @@
-import imageElement from "../../assets/svg/ki_placeholder.svg";
+import imageElement from "../../assets/svg/verarbeitung_icon.svg";
 
 const Verarbeitung = {
   linkName: "verarbeitung",

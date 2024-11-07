@@ -1,4 +1,4 @@
-import imageElement from "../../assets/svg/ki_placeholder.svg";
+import imageElement from "../../assets/svg/dateninput_icon.svg";
 
 const Dateninput = {
   linkName: "dateninput",

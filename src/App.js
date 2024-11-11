@@ -8,6 +8,14 @@ import { AppProvider } from "./AppContext";
 import { TextLayout } from "./components/TextLayout";
 import { ReactComponent as RightArrow } from "./assets/images/right-arrow.svg";
 import "./assets/css/App.css";
+import formbricks from "@formbricks/js";
+
+if (typeof window !== "undefined") {
+  formbricks.init({
+    environmentId: "cm3c1kkl20006ly53qugirfmu",
+    apiHost: "https://app.formbricks.com",
+  });
+}
 
 function App() {
   const [showToTopBtn, setShowToTopBtn] = useState(false);

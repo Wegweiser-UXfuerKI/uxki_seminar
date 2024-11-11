@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f4a3003f.css",
-    "main.js": "/static/js/main.a4de85ec.js",
+    "main.js": "/static/js/main.65e6009a.js",
     "static/media/avatar_girl.png": "/static/media/avatar_girl.7601c71f27f447ccb627.png",
     "static/media/OpenSans-Italic.ttf": "/static/media/OpenSans-Italic.582284c873c3f85ba4f8.ttf",
     "static/media/OpenSans.ttf": "/static/media/OpenSans.19ba637387f1d6142f55.ttf",
@@ -21,6 +21,7 @@
     "static/media/bulb.png": "/static/media/bulb.0edda8e42069b9250904.png",
     "static/media/soundOn.png": "/static/media/soundOn.824035f39fb6496ea88d.png",
     "static/media/new_topic.png": "/static/media/new_topic.49f62cd1132a4273dc77.png",
+    "static/media/verarbeitung_icon.svg": "/static/media/verarbeitung_icon.42b9539c90515944abf3ee7494a15a95.svg",
     "static/media/start_topic2.png": "/static/media/start_topic2.7c9fc49bf1ff07a8c6c4.png",
     "static/media/wiederholen_topic2.png": "/static/media/wiederholen_topic2.34078ac5d375be509a12.png",
     "static/media/start_topic3.png": "/static/media/start_topic3.ca67b0304b3a5fad07af.png",
@@ -43,21 +44,23 @@
     "static/media/euaiact_icon.svg": "/static/media/euaiact_icon.7fccce2bde170b9d58e61bff1d424b89.svg",
     "static/media/article-nutzerverhalten-thumbnail-80x80.webp": "/static/media/article-nutzerverhalten-thumbnail-80x80.a93fd930077c43e68c0c.webp",
     "static/media/informationText.md": "/static/media/informationText.4d57e9a02b346c605988.md",
+    "static/media/uxus_icon.svg": "/static/media/uxus_icon.b09c4539b376fcf30b7ffb5ba6cd7708.svg",
     "static/media/uxbezkieig_icon.svg": "/static/media/uxbezkieig_icon.50f4053ee2756f92bbce49b64d78d6fc.svg",
     "static/media/ki_placeholder.svg": "/static/media/ki_placeholder.3884b2c721435df68c56ff18565ede71.svg",
     "static/media/idea-icon-on.svg": "/static/media/idea-icon-on.6ee369a748e0725df1ab.svg",
     "static/media/idea-icon.svg": "/static/media/idea-icon.e7318f7072b7652131ea399ab6de70a9.svg",
     "static/media/uxki_icon.svg": "/static/media/uxki_icon.92f6b0f89e894950c3fc011dc521113e.svg",
+    "static/media/dateninput_icon.svg": "/static/media/dateninput_icon.30a64bce1cbfa1bee2bbde87ac3a3c06.svg",
     "static/media/sparkle-icon.svg": "/static/media/sparkle-icon.0e8ae97f78a0ae59dcdd0bfa054b7192.svg",
     "index.html": "/index.html",
     "static/media/cross-icon.svg": "/static/media/cross-icon.17648e90379eb58fc516694bef79f83d.svg",
     "static/media/check-icon.svg": "/static/media/check-icon.721d68647ede2f838e805e7ca81a1970.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.5b05a247aa326306ecde9370dc152c7d.svg",
     "main.f4a3003f.css.map": "/static/css/main.f4a3003f.css.map",
-    "main.a4de85ec.js.map": "/static/js/main.a4de85ec.js.map"
+    "main.65e6009a.js.map": "/static/js/main.65e6009a.js.map"
   },
   "entrypoints": [
     "static/css/main.f4a3003f.css",
-    "static/js/main.a4de85ec.js"
+    "static/js/main.65e6009a.js"
   ]
 }

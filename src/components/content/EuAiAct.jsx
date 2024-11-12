@@ -71,7 +71,8 @@ const Einleitung = {
           href="https://artificialintelligenceact.eu/de/entwicklungen/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inlineLink">
+          className="inlineLink"
+        >
           https://artificialintelligenceact.eu/de/entwicklungen/
         </a>
         .
@@ -420,12 +421,16 @@ const RisikostufenAnwendungsbeispiele = {
         eigene Idee einfach mal auf
         https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/
         oder mit einem Klick auf die unten befindliche Einbindung zu testen.
+      </p>
+
+      <p>
         <a
           href="https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/"
           style={{ position: "relative", display: "inline-block" }}
           className="rounded-xl overflow-hidden"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           <GraphicContainer
             type={"image"}
             src={ComlianceCheckerImg}
@@ -439,7 +444,8 @@ const RisikostufenAnwendungsbeispiele = {
               width: "100%",
               height: "100%",
             }}
-            className="bg-black bg-opacity-15 hover:bg-opacity-20"></div>
+            className="bg-black bg-opacity-15 hover:bg-opacity-20"
+          ></div>
         </a>
       </p>
       <p>
@@ -679,16 +685,18 @@ const RisikostufenAuswirkungen = {
         dass KI-Systeme ethisch und verantwortungsvoll entwickelt, eingesetzt
         und genutzt werden.
       </p>
-      Zusammenfassend lässt sich sagen, dass die KIVO einen umfassenden Rahmen
-      für die Entwicklung, den Einsatz und die Nutzung von KI-Systemen schafft,
-      diese in verschiedene Risikostufen einteilt und spezifische Anforderungen
-      für jede Kategorie festlegt. Insbesondere Hochrisiko-KI-Systeme
-      unterliegen strengen regulatorischen Anforderungen, um ihre Sicherheit und
-      ethische Nutzung zu gewährleisten. Durch die Implementierung eines
-      KI-Managementsystems gemäß der KIVO und DIN 42001:2023 können
-      Organisationen effektiv KI-bezogene Aktivitäten verwalten, Compliance
-      sicherstellen, verantwortungsvollen Einsatz fördern und Innovation in
-      KI-Technologien vorantreiben.
+      <p>
+        Zusammenfassend lässt sich sagen, dass die KIVO einen umfassenden Rahmen
+        für die Entwicklung, den Einsatz und die Nutzung von KI-Systemen
+        schafft, diese in verschiedene Risikostufen einteilt und spezifische
+        Anforderungen für jede Kategorie festlegt. Insbesondere
+        Hochrisiko-KI-Systeme unterliegen strengen regulatorischen
+        Anforderungen, um ihre Sicherheit und ethische Nutzung zu gewährleisten.
+        Durch die Implementierung eines KI-Managementsystems gemäß der KIVO und
+        DIN 42001:2023 können Organisationen effektiv KI-bezogene Aktivitäten
+        verwalten, Compliance sicherstellen, verantwortungsvollen Einsatz
+        fördern und Innovation in KI-Technologien vorantreiben.
+      </p>
     </section>,
   ],
 };

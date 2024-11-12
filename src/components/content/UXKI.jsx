@@ -43,7 +43,8 @@ const WahrgenommeneAutonomie = {
         <b>wie Menschen mit automatisierten Systemen interagieren</b> und
         beschreibt, welche Aufgaben entweder vom Menschen oder von der Maschine
         übernommen werden.
-        <p></p>
+      </p>
+      <p>
         Das LOA-Modell nach Parasuraman et al. (2000) umfasst{" "}
         <b>zehn Stufen der Aufgabenteilung</b> und Verantwortlichkeit zwischen
         Mensch und Maschine. Je nach Modell und Anwendungsbereich können die

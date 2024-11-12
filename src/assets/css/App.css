@@ -206,9 +206,6 @@ p,
 li {
   font-size: calc(8px + 1vmin);
   line-height: 1.8;
-  text-align: justify;
-  hyphens: auto;
-  word-wrap: break-word;
   margin-bottom: 20px;
 }
 

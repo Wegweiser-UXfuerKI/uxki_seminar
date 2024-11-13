@@ -70,7 +70,7 @@ const Home = () => {
                           to={`/${module[0]}/${subLink}`}
                           className="h-fit w-[48%]">
                           <UXButton
-                            text={subName}
+                            text={`${pairIndex * 2 + subIndex + 1}: ${subName}`}
                             bgColor="--lightgrey"
                             textColor="--darkgrey"
                             arrowColor="--darkgrey"

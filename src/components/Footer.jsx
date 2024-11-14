@@ -5,7 +5,20 @@ import imis from "../assets/images/IMIS_Logo.png";
 const Footer = () => {
   return (
     <footer className="relative flex justify-between items-center bg-white p-3 px-20">
-      <a href="https://ux-fuer-ki.de/impressum.html">Impressum</a>
+      <div className="h-full flex flex-col justify-between">
+        <a
+          href="https://projekt.ux-fuer-ki.de"
+          target="_blank"
+          rel="noreferrer">
+          Projektseite
+        </a>
+        <a
+          href="https://ux-fuer-ki.de/impressum.html"
+          target="_blank"
+          rel="noreferrer">
+          Impressum
+        </a>
+      </div>
       <a
         href="https://www.bmfsfj.de/bmfsfj"
         target="_blank"

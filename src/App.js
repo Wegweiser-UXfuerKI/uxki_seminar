@@ -9,6 +9,7 @@ import { TextLayout } from "./components/TextLayout";
 import { ReactComponent as RightArrow } from "./assets/images/right-arrow.svg";
 import "./assets/css/App.css";
 import formbricks from "@formbricks/js";
+import MobilePopUp from "./components/MobilePopUp";
 
 if (typeof window !== "undefined") {
   formbricks.init({
@@ -36,6 +37,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <AppProvider>
+          <MobilePopUp />
           <Header />
           <main className="flex flex-col">
             <Routes>

@@ -35,8 +35,7 @@ const Usability = {
         Work in progress...
         <Link
           to={"/"}
-          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white"
-        >
+          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
           Zurück zur Kursübersicht
         </Link>
       </div>
@@ -56,8 +55,7 @@ const Nutzungskontext = {
         Work in progress...
         <Link
           to={"/"}
-          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white"
-        >
+          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
           Zurück zur Kursübersicht
         </Link>
       </div>
@@ -117,8 +115,7 @@ const Evaluation = {
         Work in progress...
         <Link
           to={"/"}
-          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white"
-        >
+          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
           Zurück zur Kursübersicht
         </Link>
       </div>
@@ -131,7 +128,7 @@ const Fazit = {
   name: "Fazit",
   description: "Hier wird ein allgemeines Fazit geschlossen.",
   content: [
-    <ChapterHeader text={"Fazit"} number={8} />,
+    <ChapterHeader text={"Fazit"} number={7} />,
     <section>
       <VideoContainer
         link={
@@ -159,14 +156,13 @@ const Quellen = {
   description:
     "Hier befinden sich die verwendeten Quellen in Reihenfolge des ersten Auftretens",
   content: [
-    <ChapterHeader text={"Quellen"} number={9} />,
+    <ChapterHeader text={"Quellen"} number={8} />,
     <section>
       <div className="text-center p-10 pb-0 bg-slate-200 rounded-xl text-ux_dark flex flex-col justify-center items-center">
         Work in progress...
         <Link
           to={"/"}
-          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white"
-        >
+          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
           Zurück zur Kursübersicht
         </Link>
       </div>

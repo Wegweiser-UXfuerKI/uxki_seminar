@@ -10,7 +10,7 @@ import UXButton from "../UXButton";
 import { AppContext } from "../../AppContext";
 
 const Home = () => {
-  // tmp solution to show unfinished modules
+  // tmp deactivation for modules
   const disabledModules = [
     "ux-bezogene-ki-eigenschaften",
     "dateninput",
@@ -18,6 +18,17 @@ const Home = () => {
     "ki-ergebnisse",
     "identifikation-prozesse",
   ];
+
+  const disabledSubtopics = {
+    "ux-und-usability": [
+      "usability",
+      "nutzungskontext",
+      "user-experience",
+      "mensch-computer-interaktion",
+      "evaluation",
+      "quellen",
+    ],
+  };
 
   const modulesData = getModuleLinksAndNames();
   const { scrollToChapter, setScrollToChapter } = useContext(AppContext);
@@ -81,22 +92,37 @@ const Home = () => {
                       <div
                         key={pairIndex}
                         className="w-full flex gap-5 items-center">
-                        {pair.map(([subLink, subName], subIndex) => (
-                          <Link
-                            key={subIndex}
-                            to={isDisabled ? "#" : `/${module[0]}/${subLink}`}
-                            className="h-fit w-[48%]"
-                            onClick={(e) => isDisabled && e.preventDefault()}>
-                            <UXButton
-                              text={`${
-                                pairIndex * 2 + subIndex + 1
-                              }: ${subName}`}
-                              bgColor="--lightgrey"
-                              textColor="--darkgrey"
-                              arrowColor="--darkgrey"
-                            />
-                          </Link>
-                        ))}
+                        {pair.map(([subLink, subName], subIndex) => {
+                          const isSubtopicDisabled =
+                            disabledSubtopics[module[0]]?.includes(subLink);
+                          return (
+                            <Link
+                              key={subIndex}
+                              to={
+                                isSubtopicDisabled || isDisabled
+                                  ? "#"
+                                  : `/${module[0]}/${subLink}`
+                              }
+                              className={`h-fit w-[48%] ${
+                                isSubtopicDisabled
+                                  ? "opacity-50 pointer-events-none"
+                                  : ""
+                              }`}
+                              onClick={(e) =>
+                                (isSubtopicDisabled || isDisabled) &&
+                                e.preventDefault()
+                              }>
+                              <UXButton
+                                text={`${
+                                  pairIndex * 2 + subIndex + 1
+                                }: ${subName}`}
+                                bgColor="--lightgrey"
+                                textColor="--darkgrey"
+                                arrowColor="--darkgrey"
+                              />
+                            </Link>
+                          );
+                        })}
                       </div>
                     ))}
                 </div>

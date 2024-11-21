@@ -1,6 +1,4 @@
 import imageElement from "../../assets/svg/uxus_icon.svg";
-import DosAndDonts from "../dosdonts/DosAndDonts";
-import QuizContainer from "../quizUX/components/QuizContainer";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import { Link } from "react-router-dom";
@@ -136,16 +134,6 @@ const Fazit = {
         }
         title={"Outro"}
       />
-    </section>,
-    <section>
-      <h2>Lernspiel praktische Anwendung</h2>
-      <div className="w-full rounded-xl">
-        <DosAndDonts />
-      </div>
-    </section>,
-    <section>
-      <h2>Quiz zur Selbstüberprüfung</h2>
-      <QuizContainer />
     </section>,
   ],
 };

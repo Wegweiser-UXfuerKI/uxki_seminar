@@ -53,15 +53,17 @@ const Feedback = ({
   return (
     <div className="flex flex-col items-center text-center justify-center">
       {completedAtLeastOnce && (
-        <h4 className="mb-5">
-          <b>Glückwunsch!</b> Du hast alle Abschnitte abgeschlossen!
+        <h4 className="mb-5 text-black">
+          <b className="text-black">Glückwunsch!</b> Du hast alle Abschnitte
+          abgeschlossen!
         </h4>
       )}
-      <h4 className="mb-4">Im Abschnitt</h4>
-      <h2 className={classColor}>{topic}</h2>
-      <h4 className="w-10/12 mt-4">
-        hast du <b>{correctAmount}/8 Fragen</b> richtig beantwortet und{" "}
-        <b>{jokerAmount} Joker</b> verwendet.
+      <h4 className="mb-4 text-black">Im Abschnitt</h4>
+      <h2 className={`${classColor} text-black`}>{topic}</h2>
+      <h4 className="w-10/12 mt-4 text-black">
+        hast du <b className="text-black">{correctAmount}/8 Fragen</b> richtig
+        beantwortet und <b className="text-black">{jokerAmount} Joker</b>{" "}
+        verwendet.
       </h4>
       <div className="flex row justify-between w-10/12 items-center mt-16">
         <div

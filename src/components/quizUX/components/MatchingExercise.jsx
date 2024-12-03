@@ -311,11 +311,11 @@ const DropContainer = ({
         <div
           className={`${styles.drop_container} flex flex-col items-center`}
           style={isDefault ? { width: "100%" } : { width: "45%" }}>
-          <p
+          <div
             className="mb-0"
             style={!isDefault ? { ...term_style, background: color } : {}}>
             {!isDefault && id}
-          </p>
+          </div>
           <div
             style={
               isDefault
@@ -415,6 +415,12 @@ const term_style = {
   cursor: "default",
   color: "black",
   width: "100%",
+  minHeight: "70px",
+  fontSize: `calc(8px + 1vmin)`,
+  lineHeight: "1.8",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 };
 
 const defaultContainer_style = {
@@ -431,7 +437,7 @@ const defaultContainer_style = {
 };
 
 const draggable_style = {
-  background: "green",
+  background: "#e0e0e0",
   width: "25em",
   height: "auto",
   padding: "4px",

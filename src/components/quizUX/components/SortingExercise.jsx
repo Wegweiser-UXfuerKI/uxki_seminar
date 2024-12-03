@@ -147,9 +147,9 @@ const SortingExercise = ({ exercise, onAnswer, answersUser = null }) => {
       <div className="flex flex-col">
         {Object.keys(userSelections).map((item) => (
           <div key={item} className="flex justify-between mb-3 items-center">
-            <p style={item_style} className="sm mb-0">
+            <div style={item_style} className="sm mb-0">
               {item}
-            </p>
+            </div>
             <div className="flex">
               <div
                 onClick={() => handleButtonClick(item, firstCategory)}
@@ -271,6 +271,8 @@ const item_style = {
   width: "80%",
   padding: "5px 10px 5px 15px",
   color: "black",
+  fontSize: `calc(8px + 1vmin)`,
+  lineHeight: "1.8",
 };
 
 const button_style = {

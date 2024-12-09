@@ -10,7 +10,6 @@ import Timeline from "../Timeline";
 import ContainerSixteenNine from "../ContainerSixteenNine";
 
 import imageElement from "../../assets/svg/euaiact_icon.svg";
-import APASourceEntry from "../texts/APASourceEntry";
 
 const Einleitung = {
   linkName: "einleitung",
@@ -974,75 +973,6 @@ const Fazit = {
   ],
 };
 
-// currently supported types: buch, artikel, website, bild, buchKapitel
-const Sources = {
-  literatur: [
-    {
-      typ: "Artikel",
-      autor: "Future of Life Institute",
-      jahr: "2024",
-      titel: "Entwicklungen des EU AI Act",
-      verlag: "Artificial Intelligence Act",
-      url: "https://artificialintelligenceact.eu/de/entwicklungen/",
-    },
-    {
-      typ: "Artikel",
-      autor: "Pinsent Masons",
-      jahr: "2023",
-      titel: "EU AI Act takes latest step through European Parliament",
-      verlag: "Pinsent Masons (Out-Law)",
-      url: "https://www.pinsentmasons.com/out-law/news/eu-ai-act-takes-latest-step-through-european-parliament",
-    },
-    {
-      typ: "Artikel",
-      autor: "Simon, D., Chiruvola, P., Kerr-Shaw, N. & Werry, S.",
-      jahr: "2024",
-      titel: "Latest Text of EU AI Act Proposes Expanding Obligation",
-      verlag: "Skadden",
-      url: "https://www.skadden.com/insights/publications/2024/02/latest-text-of-eu-ai-act-proposes-expanding-obligation",
-    },
-    {
-      typ: "Artikel",
-      autor: "Future of Life Institute",
-      jahr: "2024",
-      titel: "EU AI Act Compliance Checker",
-      verlag: "Artificial Intelligence Act",
-      url: "https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/",
-    },
-    {
-      typ: "Rechtsdokument",
-      autor: "High-Level Expert Group on Artificial Intelligence (AI HLEG)",
-      jahr: "2020a",
-      titel: "The Ethics Guidelines for Trustworthy AI",
-      verlag: "European Commission",
-      url: "https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai",
-      herausgeber: "European Commission",
-    },
-    {
-      typ: "Rechtsdokument",
-      autor: "European Commission",
-      jahr: "2020b",
-      titel:
-        "The EU AI Act: Regulatory framework proposal for Artificial Intelligence",
-      verlag: "European Commission",
-      url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206",
-      herausgeber: "European Commission",
-    },
-  ],
-  bilder: [
-    {
-      typ: "bild",
-      autor: "Future of Life Institute",
-      jahr: "2024",
-      titel: "EU AI Act Compliance Checker",
-      verlag: "Artificial Intelligence Act",
-      url: "https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/",
-      format: "Screenshot",
-    },
-  ],
-  sonstiges: [],
-};
-
 // Content section in this should always stay the same
 const Quellen = {
   linkName: "quellen",
@@ -1051,36 +981,6 @@ const Quellen = {
     "Hier befinden sich die verwendeten Quellen in Reihenfolge des ersten Auftretens",
   content: [
     <ChapterHeader text={"Quellen"} number={6} />,
-    Sources.literatur.length > 0 && (
-      <section>
-        <h2>Literatur:</h2>
-        <ul>
-          {Sources.literatur.map((quelle, index) => (
-            <APASourceEntry key={index} {...quelle} />
-          ))}
-        </ul>
-      </section>
-    ),
-    Sources.bilder.length > 0 && (
-      <section>
-        <h2>Bilder und Grafiken:</h2>
-        <ul>
-          {Sources.bilder.map((quelle, index) => (
-            <APASourceEntry key={index} {...quelle} />
-          ))}
-        </ul>
-      </section>
-    ),
-    Sources.sonstiges.length > 0 && (
-      <section>
-        <h2>Sonstige Quellen:</h2>
-        <ul>
-          {Sources.sonstiges.map((quelle, index) => (
-            <APASourceEntry key={index} {...quelle} />
-          ))}
-        </ul>
-      </section>
-    ),
   ],
 };
 

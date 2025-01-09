@@ -21,11 +21,11 @@ const ModulePage = () => {
   };
 
   return (
-    <div className="Modulepage flex flex-col items-center">
-      <h1 className="mainTitle text-center mt-24 mb-16">
-        {selectedModuleName}
-      </h1>
-      <div className="flex justify-center flex-wrap max-w-screen-xl mb-24">
+    <div className="flex flex-col justify-center items-center gap-10 my-40 m-auto max-w-[1280px]">
+      <h1 className="pt-10">{selectedModuleName}</h1>
+
+      {/* Container for subtopics, responsive to the screen size */}
+      <div className="flex justify-center flex-wrap">
         {subtopicData && subtopicData.length > 0 ? (
           subtopicData.map((subtopic, index) => {
             const isSubtopicDisabled = disabledSubtopics[
@@ -37,7 +37,8 @@ const ModulePage = () => {
                 key={subtopic.name}
                 className={
                   isSubtopicDisabled ? "opacity-50 pointer-events-none" : ""
-                }>
+                }
+              >
                 <SubTopic
                   topicName={subtopic.name}
                   link={isSubtopicDisabled ? "#" : subtopic.link}
@@ -48,11 +49,9 @@ const ModulePage = () => {
             );
           })
         ) : (
-          <div className="text-center p-10 pb-0 bg-slate-200 rounded-xl text-ux_dark flex flex-col justify-center items-center">
+          <div className="glassy-box text-center p-10 pb-0 flex flex-col justify-center items-center">
             Work in progress...
-            <Link
-              to={"/"}
-              className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
+            <Link to={"/"} className="my-10  p-5 rounded-lg">
               Zurück zur Kursübersicht
             </Link>
           </div>

@@ -41,7 +41,7 @@ function App() {
         <AppProvider>
           <MobilePopUp />
           <Header />
-          <main className="flex flex-col">
+          <main>
             <circle className="circle"></circle>
             <Routes>
               <Route index element={<Home />} />

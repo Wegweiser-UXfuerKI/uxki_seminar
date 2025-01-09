@@ -14,18 +14,10 @@ const SubTopic = ({ topicName, link, description, number }) => {
   );
 
   return (
-    <div className="subTopicCard rounded-xl">
-      <Link to={`/${selectedModuleLink}/${link}`} className="w-full h-full">
-        <div className="topSection relative overflow-hidden h-32">
-          <h2
-            className="thirdTitle absolute left-0 bottom-0 mb-0 px-[33px]"
-            topic-number={String(number + 1).padStart(2, "0")}>
-            {topicName}
-          </h2>
-        </div>
-        <div className="text-ux_dark px-[33px] w-full smallTextSize mb-5 mt-3">
-          {description}
-        </div>
+    <div className="subTopicCard glassy-box p-8 flex flex-col items-center justify-end m-4">
+      <Link to={`/${selectedModuleLink}/${link}`}>
+        <h3 topic-number={String(number + 1).padStart(2, "0")}>{topicName}</h3>
+        <p className="text-base mt-2">{description}</p>
       </Link>
     </div>
   );

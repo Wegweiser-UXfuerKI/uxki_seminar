@@ -15,7 +15,7 @@ const HomeModulCard = ({
 }) => {
   return (
     <div
-      className={`moduleCard glassy-box w-10/12 h-fit min-h-[350px] ${
+      className={`moduleCard glassy-box w-full h-fit min-h-[350px] ${
         isDisabled ? "opacity-50 pointer-events-none" : ""
       }`}
       key={index}
@@ -24,18 +24,18 @@ const HomeModulCard = ({
       {/* Link to the module, disabled if `isDisabled` is true */}
       <Link
         to={`/${module[0]}`} // Target URL for the module
-        className="w-full flex flex-grow flex-wrap justify-between"
+        className="w-full flex flex-grow flex-wrap justify-between p-16"
         onClick={(e) => isDisabled && e.preventDefault()}
         aria-disabled={isDisabled ? "true" : "false"}
       >
         {/* Left section: module icon and title */}
-        <div className="w-full md:w-1/3 flex flex-col flex-wrap justify-center gap-5 md:gap-10">
+        <div className="w-full md:w-1/3 flex flex-col flex-wrap justify-center gap-5">
             <img
               src={getModuleImageByLink(module[0])}
               alt={`Icon repräsentiert die  ${module[0]} Lektion`}
               className="max-h-[150px] max-w-[150px] object-contain"
             />
-            <h2 className="md:w-2/3 mb-0">{module[1]}</h2>
+            <h2 className="mb-0">{module[1]}</h2>
         </div>
 
         {/* Right section: subtopics */}

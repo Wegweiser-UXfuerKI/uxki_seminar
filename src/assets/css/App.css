@@ -124,7 +124,6 @@ svg {
 /* Layout */
 header,
 footer,
-.Modulepage,
 .SubTopicPage {
   width: 100%;
 }
@@ -183,7 +182,6 @@ header nav a:first-child {
 
 .glassy-box {
   position: relative;
-  padding: 2% 4%;
   background: var(--box);
   box-shadow: var(--shadow);
   border-radius: 40px;

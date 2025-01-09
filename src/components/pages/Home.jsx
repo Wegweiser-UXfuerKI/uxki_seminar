@@ -47,8 +47,8 @@ const Home = () => {
   }, [scrollToChapter, modulesData, setScrollToChapter]);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-10 my-40">
-      <h1 className="pt-10 pb-5">Kursübersicht</h1>
+    <div className="flex flex-col justify-center items-center gap-10 my-40 m-auto max-w-[1600px]">
+      <h1 className="pt-10">Kursübersicht</h1>
 
       {/* Render module cards if module data exists */}
       {modulesData &&

@@ -1,16 +1,10 @@
 import React, { useContext, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import styles from "../Home.module.css";
-import {
-  getModuleLinksAndNames,
-  getSubtopicLinksAndNamesByModulelink,
-  getModuleImageByLink,
-} from "../ContentHandler";
-import UXButton from "../UXButton";
+import { getModuleLinksAndNames } from "../ContentHandler";
+import HomeModulCard from "../HomeModulCard";
 import { AppContext } from "../../AppContext";
 
 const Home = () => {
-  // tmp deactivation for modules
+  // Temporarily deactivated modules
   const disabledModules = [
     "ux-bezogene-ki-eigenschaften",
     "dateninput",
@@ -19,6 +13,7 @@ const Home = () => {
     "identifikation-prozesse",
   ];
 
+  // Disabled subtopics for specific modules
   const disabledSubtopics = {
     "ux-und-usability": [
       "usability",
@@ -34,6 +29,7 @@ const Home = () => {
   const { scrollToChapter, setScrollToChapter } = useContext(AppContext);
   const moduleRefs = useRef([]);
 
+  // Smooth scrolling to the specific chapter if scrollToChapter is set
   useEffect(() => {
     if (scrollToChapter && modulesData) {
       const targetIndex = modulesData.findIndex(
@@ -51,83 +47,22 @@ const Home = () => {
   }, [scrollToChapter, modulesData, setScrollToChapter]);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center my-20">
+    <div className="w-full flex flex-col justify-center items-center gap-10 my-40">
+      <h1 className="pt-10 pb-5">Kursübersicht</h1>
+
+      {/* Render module cards if module data exists */}
       {modulesData &&
         modulesData.map((module, index) => {
           const isDisabled = disabledModules.includes(module[0]);
-
           return (
-            <div
-              className={`${
-                styles.moduleCard
-              } w-10/12 rounded-3xl h-fit min-h-[400px] ${
-                isDisabled ? "opacity-50 pointer-events-none" : ""
-              }`}
+            <HomeModulCard
               key={index}
-              ref={(el) => (moduleRefs.current[index] = el)}>
-              <Link
-                to={`/${module[0]}`}
-                className="w-full flex flex-grow justify-between p-14"
-                onClick={(e) => isDisabled && e.preventDefault()}>
-                <div className="relative flex flex-col-reverse h-full w-1/3">
-                  <div className="absolute top-0 left-0 z-10">
-                    <img
-                      src={getModuleImageByLink(module[0])}
-                      alt={`module icon: ${module[0]}`}
-                      className="w-auto max-h-[150px] max-w-[150px] object-contain fill-ux_lightgrey"
-                    />
-                  </div>
-                  <div className="h-1/3 w-full flex flex-col-reverse">
-                    <h2 className="text-ux_dark">{module[1]}</h2>
-                  </div>
-                </div>
-                <div className="h-full w-2/3 flex flex-col items-center justify-center gap-5">
-                  {getSubtopicLinksAndNamesByModulelink(module[0])
-                    .reduce((result, value, index, array) => {
-                      if (index % 2 === 0)
-                        result.push(array.slice(index, index + 2));
-                      return result;
-                    }, [])
-                    .map((pair, pairIndex) => (
-                      <div
-                        key={pairIndex}
-                        className="w-full flex gap-5 items-center">
-                        {pair.map(([subLink, subName], subIndex) => {
-                          const isSubtopicDisabled =
-                            disabledSubtopics[module[0]]?.includes(subLink);
-                          return (
-                            <Link
-                              key={subIndex}
-                              to={
-                                isSubtopicDisabled || isDisabled
-                                  ? "#"
-                                  : `/${module[0]}/${subLink}`
-                              }
-                              className={`h-fit w-[48%] ${
-                                isSubtopicDisabled
-                                  ? "opacity-50 pointer-events-none"
-                                  : ""
-                              }`}
-                              onClick={(e) =>
-                                (isSubtopicDisabled || isDisabled) &&
-                                e.preventDefault()
-                              }>
-                              <UXButton
-                                text={`${
-                                  pairIndex * 2 + subIndex + 1
-                                }: ${subName}`}
-                                bgColor="--lightgrey"
-                                textColor="--darkgrey"
-                                arrowColor="--darkgrey"
-                              />
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    ))}
-                </div>
-              </Link>
-            </div>
+              module={module}
+              index={index}
+              isDisabled={isDisabled}
+              disabledSubtopics={disabledSubtopics}
+              moduleRefs={moduleRefs}
+            />
           );
         })}
     </div>

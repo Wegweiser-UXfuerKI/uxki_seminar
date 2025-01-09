@@ -1,0 +1,15 @@
+.ux-button {
+  background: var(--bg);
+}
+
+.ux-button:hover,
+.ux-button:focus {
+  background: var(--text);
+  color: var(--bg);
+}
+
+
+.ux-button:hover > svg,
+.ux-button:focus > svg {
+    fill: var(--bg);
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import bmfsfjLogo from "../assets/images/BMFSFJ_Logo.jpg";
-import imis from "../assets/images/IMIS_Logo.png";
+import bmfsfjLogo from "../../assets/images/BMFSFJ_Logo.jpg";
+import imis from "../../assets/images/IMIS_Logo.png";
 
 const Footer = () => {
   return (

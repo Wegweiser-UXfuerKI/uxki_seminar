@@ -9,7 +9,7 @@
   transform: translateY(-5px);
 }
 
-.subTopicCard  h3::before {
+.subTopicCard h3::before {
   content: attr(topic-number);
   font-size: 160px;
   line-height: 1;

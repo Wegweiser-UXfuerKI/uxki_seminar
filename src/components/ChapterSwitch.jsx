@@ -5,9 +5,7 @@ import {
   getNextSubtopicLink,
   getSubtopicNameByLink,
 } from "./ContentHandler";
-import { Link } from "react-router-dom";
-import { ReactComponent as RightArrow } from "../assets/images/right-arrow.svg";
-import styles from "./ChapterSwitch.module.css";
+import UXButton from "./UXButton";
 
 export const ChapterSwitch = () => {
   const { selectedModuleLink, selectedSubtopicLink } = useContext(AppContext);
@@ -43,32 +41,25 @@ export const ChapterSwitch = () => {
     }
   }, [prevChapterLink, nextChapterLink, selectedModuleLink]);
 
-  const handleNavigation = () => {
-    window.scrollTo(0, 0);
-  };
-
   return (
-    <section className="flex justify-between">
-      <div className="w-1/2">
+    <section className="flex w-full gap-10 justify-between">
+      <div className="md:w-1/2">
         {prevChapterLink && (
-          <Link
+          <UXButton
+            text={prevChapterName}
+            arrowPosition="left"
+            useGlassyBox={true}
             to={`/${selectedModuleLink}/${prevChapterLink}`}
-            onClick={handleNavigation}
-            className={`flex justify-between items-center gap-[10px] w-4/5 p-5 rounded-xl ${styles.linkBox}`}>
-            <RightArrow className={styles.rotated} />
-            <h3 className="my-0">{prevChapterName}</h3>
-          </Link>
+          />
         )}
       </div>
-      <div className="w-1/2 flex justify-end">
+      <div className="md:w-1/2">
         {nextChapterLink && (
-          <Link
+          <UXButton
+            text={nextChapterName}
+            useGlassyBox={true}
             to={`/${selectedModuleLink}/${nextChapterLink}`}
-            onClick={handleNavigation}
-            className={`flex justify-between items-center gap-[10px] w-4/5 p-5 rounded-xl ${styles.linkBox}`}>
-            <h3 className="my-0">{nextChapterName}</h3>
-            <RightArrow />
-          </Link>
+          />
         )}
       </div>
     </section>

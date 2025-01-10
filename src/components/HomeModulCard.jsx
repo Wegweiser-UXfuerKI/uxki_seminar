@@ -47,27 +47,23 @@ const HomeModulCard = ({
                   const isSubtopicDisabled =
                     disabledSubtopics[module[0]]?.includes(subLink);
                   return (
-                    <Link
+                    <div
                       key={subIndex}
-                      to={
-                        isSubtopicDisabled || isDisabled
-                          ? "#"
-                          : `/${module[0]}/${subLink}`
-                      }
                       className={`w-[48%] ${
                         isSubtopicDisabled
                           ? "opacity-50 pointer-events-none"
                           : ""
                       }`}
-                      onClick={(e) =>
-                        (isSubtopicDisabled || isDisabled) && e.preventDefault()
-                      }
-                      aria-disabled={isSubtopicDisabled ? "true" : "false"}
                     >
                       <UXButton
                         text={`${pairIndex * 2 + subIndex + 1}: ${subName}`}
+                        to={
+                          isSubtopicDisabled || isDisabled
+                            ? "#"
+                            : `/${module[0]}/${subLink}`
+                        }
                       />
-                    </Link>
+                    </div>
                   );
                 })}
               </div>

@@ -9,14 +9,18 @@ const UXButton = ({
   useGlassyBox = false,
   to,
 }) => {
+  // Assigns the correct CSS class to position the arrow (left or right)
   const arrowClass =
     arrowPosition === "left"
       ? "order-first transform scale-x-[-1]"
       : "order-last";
   const layoutClass =
     arrowPosition === "left" ? "justify-start" : "justify-between";
+
+  // Adds a glassy box style if `useGlassyBox` is true
   const glassyClass = useGlassyBox ? "glassy-box py-6" : "";
 
+  // Scroll to the top of the page when navigating
   const handleNavigation = () => {
     window.scrollTo(0, 0);
   };

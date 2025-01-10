@@ -1972,7 +1972,13 @@ const EinführungUXKI = {
       <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
       <div className="flex flex-wrap justify-center">
         {linksAndNames.map((item, index) => (
-          <SubTopic topicName={item.name} link={item.link} description={item.description} number={index} />
+          <SubTopic
+            key={item.link || index}
+            topicName={item.name}
+            link={item.link}
+            description={item.description}
+            number={index}
+          />
         ))}
       </div>
     </section>,

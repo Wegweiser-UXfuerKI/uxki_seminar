@@ -1,4 +1,4 @@
-import imageElement from "../../assets/svg/uxbezkieig_icon.svg";
+import { ReactComponent as imageElement } from "../../assets/icons/ux-bezogen.svg";
 
 const UXKIEigenschaften = {
   linkName: "ux-bezogene-ki-eigenschaften",

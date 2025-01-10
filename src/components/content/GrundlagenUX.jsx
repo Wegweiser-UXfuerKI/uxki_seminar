@@ -1,4 +1,4 @@
-import imageElement from "../../assets/svg/uxus_icon.svg";
+import { ReactComponent as imageElement } from "../../assets/icons/usability.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import { Link } from "react-router-dom";

@@ -42,13 +42,13 @@ function App() {
           <MobilePopUp />
           <Header />
           <main>
-            <circle className="circle"></circle>
+            <div className="circle"></div>
             <Routes>
               <Route index element={<Home />} />
               <Route path=":module" element={<ModulePage />} />
               <Route path=":module/:subtopicId" element={<TextLayout />} />
             </Routes>
-            <circle className="circle2"></circle>
+            <div className="circle2"></div>
             {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}
           </main>
           <Footer />

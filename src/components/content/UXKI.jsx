@@ -1,8 +1,6 @@
-import imageElement from "../../assets/svg/uxki_icon.svg";
+import { ReactComponent as imageElement } from "../../assets/icons/ux-ki.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
-import { Link } from "react-router-dom";
-import "../SubTopic.css";
 import SubTopic from "../SubTopic";
 
 const moduleLink = "ki-bezogene-ux";

@@ -1,4 +1,4 @@
-import imageElement from "../../assets/svg/dateninput_icon.svg";
+import { ReactComponent as imageElement } from "../../assets/icons/dateninput.svg";
 
 const Dateninput = {
   linkName: "dateninput",

@@ -57,7 +57,7 @@
   :root {
     --bg: var(--br);
     --text: var(--w);
-    --box: rgba(84, 80, 106, 0.72);
+    --box: rgba(84, 80, 106, 0.64);
     --hover: var(--w);
     --glasBorder: linear-gradient(80deg, var(--fg), var(--ev) 40%);
   }
@@ -66,7 +66,7 @@
   :root {
     --bg: var(--la);
     --text: var(--br);
-    --box: rgba(241, 240, 244, 0.64);
+    --box: rgba(241, 240, 244, 0.48);
     --hover: var(--ev);
     --glasBorder: linear-gradient(80deg, #ffffff, var(--fg) 40%);
   }
@@ -87,7 +87,6 @@ body {
   background-color: var(--bg);
 }
 
-img,
 svg {
   fill: var(--text);
 }
@@ -142,7 +141,7 @@ footer a:hover {
 section {
   padding: 96px 0px;
   width: 60vw;
-  max-width: 1080px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -251,7 +250,7 @@ h4 {
 
 p,
 li {
-  font-size: calc(8px + 1vmin);
+  font-size: calc(16px + 0.25vmin);
   line-height: 1.8;
 }
 /* Abstand nach jedem <p> Element, wenn danach etwas anderes als <p>, <ul> oder <ol> folgt */

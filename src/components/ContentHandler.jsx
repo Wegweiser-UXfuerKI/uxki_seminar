@@ -46,11 +46,12 @@ export function getModuleByLink(moduleLink) {
   return modules.find((module) => module.linkName === moduleLink);
 }
 
-// gets the image for a module by its link
+// gets the svgs for a module by its link
 export function getModuleImageByLink(moduleLink) {
   const module = getModuleByLink(moduleLink);
-  if (!module) return null;
-  return module.moduleImage;
+  if (!module) return null; 
+  const ModuleIcon = module.moduleImage;
+  return <ModuleIcon className="max-h-[150px] max-w-[150px]" />;
 }
 
 // gets a list of all subtopics of a module by its link

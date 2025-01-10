@@ -1,4 +1,4 @@
-import imageElement from "../../assets/svg/verarbeitung_icon.svg";
+import { ReactComponent as imageElement } from "../../assets/icons/verarbeitung.svg";
 
 const Verarbeitung = {
   linkName: "verarbeitung",

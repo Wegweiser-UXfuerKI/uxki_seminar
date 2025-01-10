@@ -15,7 +15,7 @@ const HomeModulCard = ({
 }) => {
   return (
     <div
-      className={`moduleCard glassy-box w-full h-fit min-h-[350px] ${
+      className={`moduleCard glassy-box w-10/12 h-fit min-h-[350px] ${
         isDisabled ? "opacity-50 pointer-events-none" : ""
       }`}
       key={index}
@@ -30,12 +30,8 @@ const HomeModulCard = ({
       >
         {/* Left section: module icon and title */}
         <div className="w-full md:w-1/3 flex flex-col flex-wrap justify-center gap-5">
-            <img
-              src={getModuleImageByLink(module[0])}
-              alt={`Icon repräsentiert die  ${module[0]} Lektion`}
-              className="max-h-[150px] max-w-[150px] object-contain"
-            />
-            <h2 className="mb-0">{module[1]}</h2>
+          {getModuleImageByLink(module[0]) || <div>Kein Icon verfügbar</div>}
+          <h2 className="mb-0">{module[1]}</h2>
         </div>
 
         {/* Right section: subtopics */}
@@ -66,7 +62,7 @@ const HomeModulCard = ({
                       onClick={(e) =>
                         (isSubtopicDisabled || isDisabled) && e.preventDefault()
                       }
-                      aria-disabled={isSubtopicDisabled ? "true" : "false"} 
+                      aria-disabled={isSubtopicDisabled ? "true" : "false"}
                     >
                       <UXButton
                         text={`${pairIndex * 2 + subIndex + 1}: ${subName}`}

@@ -82,8 +82,10 @@
 * {
   font-family: "Lexend", Verdana, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--scale2);
   color: var(--text);
+  letter-spacing: calc(0.012 * var(--base-size));
+  word-spacing: calc(0.16 * var(--base-size));
   box-sizing: border-box;
 }
 
@@ -300,7 +302,9 @@ p,
 li {
   font-size: calc(var(--scale2) + 0.25vmin);
   line-height: calc(var(--line-height-base) * 1.2);
+  font-weight: 300;
 }
+
 
 /* Adjust spacing after <p>, <ul>, <ol> unless another of the same follows */
 p:not(:last-child):not(:has(+ p)):not(:has(+ ul)):not(:has(+ ol)),
@@ -310,7 +314,7 @@ ul:not(:last-child):not(:has(+ p)):not(:has(+ ul)):not(:has(+ ol)) {
 }
 
 p + p {
-  margin-top: var(--scale2);
+  margin-top: var(--scale3);
 }
 
 .textSize {
@@ -322,8 +326,10 @@ p + p {
 }
 
 b,
-strong {
+strong,
+i {
   font-weight: 600;
+  font-style: normal;
   font-size: inherit;
 }
 

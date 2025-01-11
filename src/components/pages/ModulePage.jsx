@@ -22,7 +22,7 @@ const ModulePage = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-10 my-40 m-auto max-w-[1280px]">
-      <h1 className="pt-10">{selectedModuleName}</h1>
+      <h1>{selectedModuleName}</h1>
 
       {/* Container for subtopics, responsive to the screen size */}
       <div className="flex justify-center flex-wrap">

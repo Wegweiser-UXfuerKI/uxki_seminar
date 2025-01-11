@@ -9,7 +9,7 @@ const SubTopic = ({ topicName, link, description, number }) => {
   return (
     <Link to={`/${selectedModuleLink}/${link}`}>
       <div className="subTopicCard glassy-box p-8 flex flex-col justify-end m-4">
-        <h3 className="mb-0" topic-number={String(number + 1).padStart(2, "0")}>{topicName}</h3>
+        <h3 className="fourthTitle" topic-number={String(number + 1).padStart(2, "0")}>{topicName}</h3>
         <p className="text-base mt-2">{description}</p>
       </div>
     </Link>

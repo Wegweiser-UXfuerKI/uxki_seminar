@@ -48,7 +48,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-10 my-40 m-auto max-w-[1600px]">
-      <h1 className="pt-10">Kursübersicht</h1>
+      <h1>Kursübersicht</h1>
 
       {/* Render module cards if module data exists */}
       {modulesData &&

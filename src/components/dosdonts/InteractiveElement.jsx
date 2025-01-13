@@ -616,9 +616,9 @@ function InteractiveElement() {
             </div>
 
             <div id="guideline-container" className="fly-in-left">
-              <h2 id="guideline-text" className="text-gradient-animation">
+              <h4 id="guideline-text" className="text-gradient-animation">
                 {task.guidelineText}
-              </h2>
+              </h4>
               <img
                 id="quote-icon"
                 src={quoteMark}

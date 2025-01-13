@@ -8,8 +8,7 @@ import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import Timeline from "../Timeline";
 import ContainerSixteenNine from "../ContainerSixteenNine";
-
-import imageElement from "../../assets/svg/euaiact_icon.svg";
+import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";
 
 const Einleitung = {
   linkName: "einleitung",

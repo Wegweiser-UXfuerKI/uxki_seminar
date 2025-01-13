@@ -2,7 +2,7 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   margin-bottom: 40px;
-  font-size: calc(130px + 1vmin);
+  font-size: calc(var(--scale10) * 1.5);
 }
 
 .date-block {
@@ -17,6 +17,6 @@
 }
 
 .hidden-text {
-  transition: right 0.5s ease;
-  font-size: calc(5px + 1vmin);
+  transition: right 0.3s ease;
+  font-size: 0.9rem;
 }

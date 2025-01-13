@@ -1,23 +1,42 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ReactComponent as RightArrow } from "../../src/assets/images/right-arrow.svg";
+import "./UXButton.css";
 
-const UXButton = ({ text, bgColor, textColor, arrowColor }) => {
+const UXButton = ({
+  text,
+  arrowPosition = "right",
+  useGlassyBox = false,
+  to,
+}) => {
+  // Assigns the correct CSS class to position the arrow (left or right)
+  const arrowClass =
+    arrowPosition === "left"
+      ? "order-first transform scale-x-[-1]"
+      : "order-last";
+
+  // Adds a glassy box style if `useGlassyBox` is true
+  const glassyClass = useGlassyBox ? "glassy-box py-6" : "";
+
+  // Scroll to the top of the page when navigating
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <button
-      className="px-4 py-3 rounded-xl flex flex-row h-fit w-full justify-between items-center transition ease-in-out duration-[390ms] transform hover:scale-105 hover:shadow-lg"
-      style={{ backgroundColor: `var(${bgColor})` }} // Nutzung der CSS-Variable für Hintergrundfarbe
+    <Link
+      to={to}
+      onClick={handleNavigation}
+      aria-label={`Navigiere zu ${text}`}
+      role="link"
     >
       <div
-        className="text-left flex-grow"
-        style={{ color: `var(${textColor})` }}
+        className={`ux-button px-6 py-4 flex flex-row justify-between h-fit items-center gap-[10px] transition ease-in-out duration-[390ms] transform hover:shadow-lg ${glassyClass}`}
       >
         {text}
+        <RightArrow className={arrowClass} />
       </div>
-      <RightArrow
-        className="flex-shrink-0"
-        style={{ fill: `var(${arrowColor})` }}
-      />
-    </button>
+    </Link>
   );
 };
 

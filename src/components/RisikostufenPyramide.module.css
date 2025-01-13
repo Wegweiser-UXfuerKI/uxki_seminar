@@ -1,50 +1,50 @@
 /* left polygons */
 .clip_triangle_1 {
   clip-path: polygon(0 0, 15% 0, 20% 100%, 0% 100%);
-  background-color: #77d1cb;
+  background-color: var(--tb);
 }
 
 .clip_triangle_2 {
   clip-path: polygon(0 0, 20% 0, 25% 100%, 0% 100%);
-  background-color: #77a9d1;
+  background-color: var(--cb);
 }
 
 .clip_triangle_3 {
   clip-path: polygon(0 0, 25% 0, 30% 100%, 0% 100%);
-  background-color: #bc6ba1;
+  background-color: var(--fm);
 }
 
 .clip_triangle_4 {
   clip-path: polygon(0 0, 30% 0, 35% 100%, 0% 100%);
-  background-color: #d177b3;
+  background-color: var(--sm);
 }
 
 /* right polygons */
 .clip_text_triangle_1 {
   clip-path: polygon(20% 0, 100% 0, 100% 100%, 25% 100%);
-  background-color: #77d1cb;
+  background-color: var(--tb);
 }
 
 .clip_text_triangle_2 {
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 30% 100%);
-  background-color: #77a9d1;
+  background-color: var(--cb);
 }
 
 .clip_text_triangle_3 {
   clip-path: polygon(30% 0, 100% 0, 100% 100%, 35% 100%);
-  background-color: #bc6ba1;
+  background-color: var(--fm);
 }
 
 .clip_text_triangle_4 {
   clip-path: polygon(35% 0, 100% 0, 100% 100%, 40% 100%);
-  background-color: #d177b3;
+  background-color: var(--sm);
 }
 
 .clip_text_triangle_1,
 .clip_text_triangle_2,
 .clip_text_triangle_3,
 .clip_text_triangle_4 {
-  transition: left 0.5s ease-in-out;
+  transition: left 0.3s ease-in-out;
   position: absolute;
   top: 0;
   left: 100%;

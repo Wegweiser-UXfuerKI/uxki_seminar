@@ -1,10 +1,10 @@
 import React from "react";
-import bmfsfjLogo from "../assets/images/BMFSFJ_Logo.jpg";
-import imis from "../assets/images/IMIS_Logo.png";
+import bmfsfjLogo from "../../assets/images/BMFSFJ_Logo.jpg";
+import imis from "../../assets/images/IMIS_Logo.png";
 
 const Footer = () => {
   return (
-    <footer className="relative flex justify-between items-center bg-white p-3 px-20">
+    <footer className="relative flex justify-between items-center bg-white p-4 px-8">
       <div className="h-full flex flex-col justify-between">
         <a
           href="https://projekt.ux-fuer-ki.de"

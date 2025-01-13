@@ -1,8 +1,7 @@
-import imageElement from "../../assets/svg/uxki_icon.svg";
+import { ReactComponent as imageElement } from "../../assets/icons/ux-ki.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
-import { Link } from "react-router-dom";
-import "../SubTopic.css";
+import SubTopic from "../SubTopic";
 
 const moduleLink = "ki-bezogene-ux";
 const moduleName = "KI-bezogene UX";
@@ -1973,21 +1972,13 @@ const EinführungUXKI = {
       <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
       <div className="flex flex-wrap justify-center">
         {linksAndNames.map((item, index) => (
-          <div className="subTopicCard rounded-xl">
-            <Link to={`/${moduleLink}/${item.link}`} className="w-full h-full">
-              <div className="topSection relative overflow-hidden h-32">
-                <h2
-                  className="thirdTitle absolute left-0 bottom-0 mb-0 px-[33px]"
-                  topic-number={String(index + 2).padStart(2, "0")}
-                >
-                  {item.name}
-                </h2>
-              </div>
-              <div className="text-ux_dark px-[33px] w-full smallTextSize mb-5 mt-3">
-                {item.description}
-              </div>
-            </Link>
-          </div>
+          <SubTopic
+            key={item.link || index}
+            topicName={item.name}
+            link={item.link}
+            description={item.description}
+            number={index}
+          />
         ))}
       </div>
     </section>,

@@ -19,7 +19,7 @@ export const TextLayout = () => {
   }, [subtopicContent]);
 
   return (
-    <div className="mt-20">
+    <div className="flex flex-col">
       {subtopicContent &&
       subtopicContent.content &&
       Array.isArray(subtopicContent.content) ? (

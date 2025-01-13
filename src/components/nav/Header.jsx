@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as RightArrow } from "../assets/images/right-arrow.svg";
-import wegweiserLogo from "../assets/images/Wegweiser_logo.png";
-import { AppContext } from "../AppContext";
+import { ReactComponent as RightArrow } from "../../assets/images/right-arrow.svg";
+import wegweiserLogo from "../../assets/images/Wegweiser_logo.png";
+import { AppContext } from "../../AppContext";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -67,7 +67,7 @@ const Header = () => {
       </nav>
     </div>
   ) : (
-    <header className="relative flex items-center pt-3 pl-1">
+    <header className="fixed flex items-center p-3 z-50">
       <div className="img-container w-16 ml-2 mr-2">
         <Link to="/">
           <img src={wegweiserLogo} alt="Wegweiser.UX-für-KI Logo" />

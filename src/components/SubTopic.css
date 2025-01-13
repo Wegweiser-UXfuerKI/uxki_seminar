@@ -1,135 +1,25 @@
 /* Topic Cards */
 .subTopicCard {
-  background: white;
-  color: var(--dark);
   width: 320px;
   min-height: 320px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .subTopicCard:hover {
-  background: var(--white);
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-.subTopicCard:hover>.arrow-btn {
-  background: white;
-}
-
-.subTopicCard h2 {
-  color: var(--dark);
-  padding-bottom: 10px;
-  margin: 0;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
-}
-
-.subTopicCard:hover h2 {
-  color: var(--purple);
   transform: translateY(-5px);
 }
 
-.subTopicCard .img-container {
-  padding: 0px 33px;
-}
-
-.subTopicCard .thirdTitle::before {
+.subTopicCard h3::before {
   content: attr(topic-number);
-  font-size: 180px;
+  font-size: 160px;
   line-height: 1;
   font-weight: 800;
   position: absolute;
-  right: 40px;
-  bottom: -20px;
+  right: 16px;
+  top: -8px;
   opacity: 0.1;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
-}
-
-.subTopicCard:hover .thirdTitle::before {
-  transform: translateY(5px) translateX(15px);
-}
-
-.subTopicCard .thirdTitle::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 320px;
-  height: 100px;
-  background: linear-gradient(to top, white, transparent 20%);
-  transition: all 0.3s ease-in-out;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.subTopicCard:hover .thirdTitle::after {
-  background: linear-gradient(to top, var(--white), transparent 20%);
-  transform: translateY(5px);
-}
-
-/* Topic Cards Buttons */
-.arrow-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--white);
-  padding: 10px;
-  margin: 10px;
-  width: 85%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.arrow-btn>.arrow {
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid #21202b;
-  border-bottom: 2px solid #21202b;
-  position: relative;
-  transform: rotate(-45deg);
-  margin: 0 6px;
-  transition: all 0.3s ease;
-}
-
-.arrow-btn>.arrow::before {
-  display: block;
-  background-color: currentColor;
-  width: 3px;
-  transform-origin: bottom right;
-  height: 2px;
-  position: absolute;
-  opacity: 0;
-  bottom: calc(-2px / 2);
-  transform: rotate(45deg);
-  transition: all 0.3s ease;
-  content: "";
-  right: 0;
-}
-
-.arrow-btn:hover>.arrow {
-  transform: rotate(-45deg) translate(5px, 5px);
-}
-
-.arrow-btn:hover>.arrow::before {
-  opacity: 1;
-  width: 10px;
-  border-radius: 10px;
-}
-
-.arrow-btn:hover {
-  color: var(--purple);
-}
-
-.arrow-btn:last-child {
-  margin-bottom: 1.4rem;
 }
 
 /* Tablets (Landscape) */
@@ -142,7 +32,7 @@
 
 /* Smartphones (Portrait) */
 @media screen and (max-width: 768px) {
-  .subTopicCard .thirdTitle::before {
+  .subTopicCard h3::before {
     font-size: 140px;
     right: 20px;
   }

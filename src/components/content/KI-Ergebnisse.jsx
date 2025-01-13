@@ -1,4 +1,4 @@
-import imageElement from "../../assets/svg/ki_placeholder.svg";
+import { ReactComponent as imageElement } from "../../assets/icons/ux-placeholder.svg";
 
 const KIErgebnisse = {
   linkName: "ki-ergebnisse",

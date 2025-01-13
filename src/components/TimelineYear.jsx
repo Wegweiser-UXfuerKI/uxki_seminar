@@ -17,7 +17,7 @@ export default function TimelineYear({ year, color, dates, isActive }) {
   return (
     <div className="w-full h-full absolute left-0 right-0 flex overflow-hidden">
       <div className="min-w-[220px] max-w-[200px] flex items-end">
-        <div className="year font-bold text-lightText w-full h-full" style={{ lineHeight: "1.7"}}>{year}</div>
+        <div className="year font-bold text-lightText w-full h-full" style={{ lineHeight: "1.8"}}>{year}</div>
       </div>
       <div className="w-full h-full relative flex flex-col justify-evenly overflow-hidden">
         <div
@@ -48,7 +48,7 @@ export default function TimelineYear({ year, color, dates, isActive }) {
                 flexDirection: index % 2 !== 0 ? "column-reverse" : "column",
                 alignItems: "end",
                 paddingRight: "10px",
-                fontSize: "calc(10px + 1vmin)",
+                fontSize: "var(--scale3)",
                 fontWeight: "bold",
                 borderRight: `3px solid ${
                   isSpecialYear ? "#f0f0f0" : "#21202b"
@@ -76,6 +76,7 @@ export default function TimelineYear({ year, color, dates, isActive }) {
               height: "40%",
               maxWidth: (year === 2024 && index === 0) ? "300px" : "400px",
               overflow: "hidden",
+              hyphens: "auto",
             }}>
             <div
               className={`hidden-text ${

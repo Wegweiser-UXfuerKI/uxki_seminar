@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Home from "./components/pages/Home";
 import ModulePage from "./components/pages/ModulePage";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/nav/Header";
+import Footer from "./components/nav/Footer";
 import { AppProvider } from "./AppContext";
 import { TextLayout } from "./components/TextLayout";
 import { ReactComponent as RightArrow } from "./assets/images/right-arrow.svg";
@@ -41,12 +41,14 @@ function App() {
         <AppProvider>
           <MobilePopUp />
           <Header />
-          <main className="flex flex-col">
+          <main>
+            <div className="circle"></div>
             <Routes>
               <Route index element={<Home />} />
               <Route path=":module" element={<ModulePage />} />
               <Route path=":module/:subtopicId" element={<TextLayout />} />
             </Routes>
+            <div className="circle2"></div>
             {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}
           </main>
           <Footer />

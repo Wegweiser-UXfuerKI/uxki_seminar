@@ -65,7 +65,11 @@
     --text: var(--w);
     --box: rgba(84, 80, 106, 0.56);
     --hover: var(--w);
-    --glasBorder: linear-gradient(145deg, var(--fg), var(--ev) 40%);
+    --glasBorder: linear-gradient(145deg, var(--fg) 0%, var(--ev));
+    --glasBoxShadow: inset 1px 1.2px 2px var(--fg), 
+    inset 1px -0.5px 2px var(--box),
+    2px 4px 16px rgba(0, 0, 0, 0.16),
+    1px 2px 2px -2px var(--bg);
   }
 }
 @media (prefers-color-scheme: light) {
@@ -74,7 +78,11 @@
     --text: var(--br);
     --box: rgba(241, 240, 244, 0.56);
     --hover: var(--ev);
-    --glasBorder: linear-gradient(145deg, #ffffff, var(--fg) 40%);
+    --glasBorder: linear-gradient(145deg, #ffffff 0%, var(--fg));
+    --glasBoxShadow: inset 1px 1.2px 2px #ffffff, 
+    inset 1px -0.5px 2px var(--box),
+    2px 4px 16px rgba(0, 0, 0, 0.16),
+    1px 2px 2px -2px var(--fg);
   }
 }
 
@@ -200,7 +208,7 @@ section.titleSubtopic {
 
 /* Navigation */
 header {
-  border-bottom: 2px solid transparent;
+  border-bottom: 1.6px solid transparent;
   border-image: var(--glasBorder) 1;
   background-color: var(--box);
   backdrop-filter: var(--blur);
@@ -231,26 +239,8 @@ header nav a:first-child {
 .glassy-box {
   position: relative;
   background: var(--box);
-  box-shadow: var(--shadow);
   border-radius: 40px;
-  overflow: hidden;
-}
-
-.glassy-box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  background: var(--glasBorder);
-  z-index: -1;
-  padding: 2px;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  box-shadow: var(--glasBoxShadow);
 }
 
 /* Typographie */
@@ -400,7 +390,7 @@ a {
 #toTopBtn:hover {
   background-color: var(--la);
   transform: translateX(5px);
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .bar1,

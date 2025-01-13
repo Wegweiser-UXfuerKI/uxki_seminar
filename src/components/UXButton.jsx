@@ -14,8 +14,6 @@ const UXButton = ({
     arrowPosition === "left"
       ? "order-first transform scale-x-[-1]"
       : "order-last";
-  const layoutClass =
-    arrowPosition === "left" ? "justify-start" : "justify-between";
 
   // Adds a glassy box style if `useGlassyBox` is true
   const glassyClass = useGlassyBox ? "glassy-box py-6" : "";
@@ -33,7 +31,7 @@ const UXButton = ({
       role="link"
     >
       <div
-        className={`ux-button px-6 py-4 flex flex-row h-fit items-center gap-[10px] transition ease-in-out duration-[390ms] transform hover:shadow-lg ${layoutClass} ${glassyClass}`}
+        className={`ux-button px-6 py-4 flex flex-row justify-between h-fit items-center gap-[10px] transition ease-in-out duration-[390ms] transform hover:shadow-lg ${glassyClass}`}
       >
         {text}
         <RightArrow className={arrowClass} />

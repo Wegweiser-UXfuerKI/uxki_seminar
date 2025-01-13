@@ -141,7 +141,7 @@ const Start = ({ onUpdate, popupType }) => {
       );
     } else {
       return (
-        <div className="flex flex-col justify-between cursor-default">
+        <div className="flex flex-col h-full justify-between cursor-default">
           <div></div>
           <div className="flex flex-col items-center text-center text-ux_dark">
             <h2 className="text-inherit">Willkommen beim Wegweiser.UX-für-KI Quiz

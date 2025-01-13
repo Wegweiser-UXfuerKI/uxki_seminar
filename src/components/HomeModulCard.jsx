@@ -24,7 +24,7 @@ const HomeModulCard = ({
       {/* Link to the module, disabled if `isDisabled` is true */}
       <Link
         to={`/${module[0]}`} // Target URL for the module
-        className="w-full flex flex-grow flex-wrap justify-between p-16"
+        className="w-full flex flex-grow flex-wrap justify-between md:p-16 sm:p-12 p-8"
         onClick={(e) => isDisabled && e.preventDefault()}
         aria-disabled={isDisabled ? "true" : "false"}
       >
@@ -42,14 +42,14 @@ const HomeModulCard = ({
               return result;
             }, [])
             .map((pair, pairIndex) => (
-              <div key={pairIndex} className="w-full flex gap-5">
+              <div key={pairIndex} className="w-full flex flex-col sm:flex-row gap-5">
                 {pair.map(([subLink, subName], subIndex) => {
                   const isSubtopicDisabled =
                     disabledSubtopics[module[0]]?.includes(subLink);
                   return (
                     <div
                       key={subIndex}
-                      className={`w-[48%] ${
+                      className={`sm:w-[48%] w-full ${
                         isSubtopicDisabled
                           ? "opacity-50 pointer-events-none"
                           : ""

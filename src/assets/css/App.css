@@ -50,6 +50,8 @@
   /* Typography Styles */
   --base-size: 8px; /* Define base size */
   --scale10: calc(var(--base-size) * 10); /* 80px */
+  --scale9: calc(var(--base-size) * 8); /* 72px */
+  --scale8: calc(var(--base-size) * 8); /* 64px */
   --scale7: calc(var(--base-size) * 7); /* 56px */
   --scale6: calc(var(--base-size) * 6); /* 48px */
   --scale5: calc(var(--base-size) * 5); /* 40px */
@@ -211,6 +213,7 @@ header {
   border-bottom: 1.6px solid transparent;
   border-image: var(--glasBorder) 1;
   background-color: var(--box);
+  -webkit-backdrop-filter: var(--blur);
   backdrop-filter: var(--blur);
 }
 
@@ -449,7 +452,8 @@ a {
   .outerContainer,
   section {
     width: 100%;
-    padding: 36px 24px;
+    padding: var(--scale4) var(--scale2);
+    margin: var(--scale6) auto;
   }
 }
 
@@ -458,22 +462,22 @@ a {
   p,
   li,
   .smallTextSize {
-    font-size: 16px !important;
+    font-size: var(--scale2) !important;
   }
 
   h1 {
-    font-size: calc(26px + 1vmin) !important;
+    font-size: var(--scale5) !important;
   }
 
   h2 {
-    font-size: calc(18px + 1vmin) !important;
+    font-size: var(--scale4) !important;
   }
 
   h3 {
-    font-size: calc(14px + 1vmin) !important;
+    font-size: var(--scale3) !important;
   }
 
   h4 {
-    font-size: calc(12px + 1vmin) !important;
+    font-size: var(--scale2) !important;
   }
 }

@@ -23,7 +23,7 @@
   overflow: hidden;
   white-space: nowrap;
 
-  z-index: 9999;
+  z-index: 102;
 
   width: 100%;
   /* Removed fixed position */

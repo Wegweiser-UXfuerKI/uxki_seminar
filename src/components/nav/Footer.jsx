@@ -2,6 +2,13 @@ import React from "react";
 import bmfsfjLogo from "../../assets/images/BMFSFJ_Logo.jpg";
 import imis from "../../assets/images/IMIS_Logo.png";
 
+/**
+ * A footer component displaying links to the project website, legal notice,
+ * and logos of the associated institutions.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered footer component containing links and logos.
+ */
 const Footer = () => {
   return (
     <footer className="relative flex justify-between items-center bg-white p-4 px-8">

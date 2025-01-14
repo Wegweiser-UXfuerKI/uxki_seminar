@@ -3,20 +3,25 @@ import { AppContext } from "../AppContext";
 import { ChapterSwitch } from "./ChapterSwitch";
 import { getSubtopicContentByLink } from "./ContentHandler";
 
+/**
+ * A component that renders the content of a selected subtopic and provides navigation between chapters.
+ * The content is fetched based on the currently selected module and subtopic links from the `AppContext`.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered TextLayout component.
+ */
 export const TextLayout = () => {
   const { selectedModuleLink, selectedSubtopicLink } = useContext(AppContext);
   const [subtopicContent, setSubtopicContent] = useState(null);
 
+  /**
+   * Updates `subtopicContent` whenever `selectedModuleLink` or `selectedSubtopicLink` changes.
+   */
   useEffect(() => {
     setSubtopicContent(
       getSubtopicContentByLink(selectedModuleLink, selectedSubtopicLink)
     );
   }, [selectedModuleLink, selectedSubtopicLink]);
-
-  useEffect(() => {
-    console.log("subtopic Content: ", subtopicContent);
-    console.log("subtopiccontent.content: ", subtopicContent?.content);
-  }, [subtopicContent]);
 
   return (
     <div className="flex flex-col">

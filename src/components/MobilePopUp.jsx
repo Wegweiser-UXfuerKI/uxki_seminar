@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 import noSmartphonesImage from "../assets/images/no-smartphones.png";
 
+/**
+ * A component that shows a warning when the user is on a mobile device.
+ * The warning informs the user that the site is not optimized for mobile devices.
+ * Once the warning is acknowledged, it won't show again until the page is refreshed.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered mobile pop-up warning and a fixed circle icon.
+ */
 function MobilePopUp() {
   const [isMobile, setIsMobile] = useState(false);
   const [showWarning, setShowWarning] = useState(false);
@@ -8,17 +16,19 @@ function MobilePopUp() {
     localStorage.getItem("hasSeenWarning") === "true"
   );
 
-  // Funktion zum Überprüfen, ob es sich um ein mobiles Gerät handelt
+  /**
+   * Checks if the user's device is mobile based on the user agent.
+   *
+   * @returns {boolean} True if the device is mobile, false otherwise.
+   */
   const checkIfMobile = () => {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
     return /android|iPad|iPhone|iPod/i.test(userAgent);
   };
 
   useEffect(() => {
-    // Überprüfen, ob es sich um ein mobiles Gerät handelt
     if (checkIfMobile()) {
       setIsMobile(true);
-      // Nur anzeigen, wenn der Benutzer das Pop-up noch nicht gesehen hat
       if (!hasSeenWarning) {
         setShowWarning(true);
         localStorage.setItem("hasSeenWarning", "true");
@@ -26,20 +36,23 @@ function MobilePopUp() {
     }
   }, [hasSeenWarning]);
 
-  // Funktion zum Schließen des Pop-ups
+  /**
+   * Closes the warning pop-up and marks the warning as seen.
+   */
   const closeWarning = () => {
     setShowWarning(false);
-    setHasSeenWarning(true); // Setze auf true, damit der fixe Kreis angezeigt wird
+    setHasSeenWarning(true);
   };
 
-  // Funktion zum erneuten Öffnen des Pop-ups beim Klick auf das fixe Element
+  /**
+   * Reopens the warning pop-up.
+   */
   const reopenWarning = () => {
     setShowWarning(true);
   };
 
   return (
     <div>
-      {/* Pop-up für die Warnung */}
       {isMobile && showWarning && (
         <div style={popupOverlayStyle}>
           <div style={popupContentStyle}>
@@ -54,7 +67,6 @@ function MobilePopUp() {
         </div>
       )}
 
-      {/* Fixer Kreis mit Bild-Icon */}
       {isMobile && hasSeenWarning && (
         <div style={fixedCircleStyle} onClick={reopenWarning}>
           <img
@@ -68,7 +80,10 @@ function MobilePopUp() {
   );
 }
 
-// Stile für das Pop-up und den fixierten Kreis
+/**
+ * Inline style for the overlay background of the pop-up.
+ * @constant {Object}
+ */
 const popupOverlayStyle = {
   position: "fixed",
   top: 0,
@@ -82,16 +97,24 @@ const popupOverlayStyle = {
   zIndex: 1000,
 };
 
+/**
+ * Inline style for the content of the pop-up.
+ * @constant {Object}
+ */
 const popupContentStyle = {
   backgroundColor: "white",
   padding: "20px",
   borderRadius: "8px",
   textAlign: "center",
-  maxWidth: "90%", // Stellt sicher, dass es auf kleinen Bildschirmen gut passt
-  margin: "0 10px", // Abstand zu den Rändern
+  maxWidth: "90%",
+  margin: "0 10px",
   boxSizing: "border-box",
 };
 
+/**
+ * Inline style for the close button of the pop-up.
+ * @constant {Object}
+ */
 const closeButtonStyle = {
   marginTop: "15px",
   padding: "8px 16px",
@@ -102,6 +125,10 @@ const closeButtonStyle = {
   cursor: "pointer",
 };
 
+/**
+ * Inline style for the fixed circle icon shown after the warning is acknowledged.
+ * @constant {Object}
+ */
 const fixedCircleStyle = {
   position: "fixed",
   top: "10px",
@@ -117,9 +144,13 @@ const fixedCircleStyle = {
   cursor: "pointer",
 };
 
+/**
+ * Inline style for the image displayed in the fixed circle icon.
+ * @constant {Object}
+ */
 const imageStyle = {
-  width: "60%", // Bild so skalieren, dass es gut in den Kreis passt
-  height: "60%", // Bild so skalieren, dass es gut in den Kreis passt
+  width: "60%",
+  height: "60%",
   objectFit: "contain",
 };
 

@@ -4,10 +4,33 @@ import { ReactComponent as RightArrow } from "../../assets/images/right-arrow.sv
 import wegweiserLogo from "../../assets/images/Wegweiser_logo.png";
 import { AppContext } from "../../AppContext";
 
+/**
+ * Header component that adapts its layout based on the screen size.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered header component.
+ */
 const Header = () => {
+  /**
+   * Tracks if the current screen size is considered mobile.
+   * @type {[boolean, Function]}
+   */
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  /**
+   * State for tracking whether the mobile navigation menu is open.
+   * @type {[boolean, Function]}
+   */
   const [navOpen, setNavOpen] = useState(false);
 
+  /**
+   * App context values for navigation.
+   * @property {string} selectedModuleLink - Link to the selected module.
+   * @property {string} selectedModuleName - Name of the selected module.
+   * @property {string} selectedSubtopicLink - Link to the selected subtopic.
+   * @property {string} selectedSubtopicName - Name of the selected subtopic.
+   * @property {Function} setScrollToChapter - Function to set the scroll-to position for a chapter.
+   */
   const {
     selectedModuleLink,
     selectedModuleName,
@@ -16,6 +39,9 @@ const Header = () => {
     setScrollToChapter,
   } = useContext(AppContext);
 
+  /**
+   * Handles window resize events to update the `isMobile` state.
+   */
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -27,6 +53,9 @@ const Header = () => {
     };
   }, []);
 
+  /**
+   * Toggles the state of the mobile navigation menu.
+   */
   const toggleNavbar = () => {
     setNavOpen(!navOpen);
   };

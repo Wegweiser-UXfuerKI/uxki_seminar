@@ -20,6 +20,26 @@ if (typeof window !== "undefined") {
 }
   */
 
+/**
+ * The main App component.
+ *
+ * This component renders the main layout of the app, including the header, main
+ * content, and footer. It also sets up the routing for the app using the
+ * BrowserRouter and Routes components.
+ *
+ * The main content of the app is rendered as a Routes component, which contains
+ * three routes: one for the home page, one for the module pages, and one for the
+ * text layout pages. The text layout pages are rendered with the TextLayout
+ * component, which is a custom component that renders the text layout for each
+ * subtopic.
+ *
+ * The App component also renders a "to top" button that appears when the user
+ * scrolls more than 20 pixels down the page. This button is rendered with the
+ * RightArrow component, which is a custom component that renders an arrow
+ * icon.
+ *
+ * @returns {React.ReactElement} The App component.
+ */
 function App() {
   const [showToTopBtn, setShowToTopBtn] = useState(false);
 

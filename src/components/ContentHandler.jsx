@@ -7,7 +7,7 @@ import UXKISections from "./content/UXKI";
 import UXKIEigenschaften from "./content/UXKIEigenschaften";
 import Verarbeitung from "./content/Verarbeitung";
 
-// List of all Modules ~ auto import?
+// List of all Modules
 const modules = [
   UXBasics,
   UXKISections,
@@ -19,63 +19,102 @@ const modules = [
   EuAiActSections,
 ];
 
-// gets a list af all module links
+/**
+ * Gets a list of all module links.
+ * @returns {string[]} An array of module link names.
+ */
 export function getModuleLinks() {
   return modules.map((module) => module.linkName);
 }
 
-// gets a list a fll module names
+/**
+ * Gets a list of all module names.
+ * @returns {string[]} An array of module names.
+ */
 export function getModuleNames() {
   return modules.map((module) => module.name);
 }
 
-// gets the name of a module by the link of it
+/**
+ * Gets the name of a module by its link.
+ * @param {string} moduleLink - The link of the module.
+ * @returns {string|null} The name of the module, or null if not found.
+ */
 export function getModuleNameByLink(moduleLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return null;
   return module.name;
 }
 
-// gets a list of all modules links and names
+/**
+ * Gets a list of all module links and names.
+ * @returns {Array<[string, string]>} An array of pairs containing link and name.
+ */
 export function getModuleLinksAndNames() {
   return modules.map((module) => [module.linkName, module.name]);
 }
 
-// gets a module by its link
+/**
+ * Gets a module by its link.
+ * @param {string} moduleLink - The link of the module.
+ * @returns {Object|null} The module object, or null if not found.
+ */
 export function getModuleByLink(moduleLink) {
   return modules.find((module) => module.linkName === moduleLink);
 }
 
-// gets the svgs for a module by its link
+/**
+ * Gets the svgs for a module by its link.
+ * @param {string} moduleLink - The link of the module.
+ * @returns {string|null} The image URL of the module, or null if not found.
+ */
 export function getModuleImageByLink(moduleLink) {
   const module = getModuleByLink(moduleLink);
-  if (!module) return null; 
+  if (!module) return null;
   const ModuleIcon = module.moduleImage;
   return <ModuleIcon className="max-h-[150px] max-w-[150px]" />;
 }
 
-// gets a list of all subtopics of a module by its link
+/**
+ * Gets a list of all subtopics of a module by its link.
+ * @param {string} moduleLink - The link of the module.
+ * @returns {string[]} An array of subtopic link names.
+ */
 export function getSubtopicLinksByModule(moduleLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return [];
   return module.content.map((entry) => entry.linkName);
 }
 
-// gets a list of all linsk and names of a subtopic by its module link
+/**
+ * Gets a list of all subtopic links and names by a module link.
+ * @param {string} moduleLink - The link of the module.
+ * @returns {Array<[string, string]>} An array of pairs containing subtopic link and name.
+ */
 export function getSubtopicLinksAndNamesByModulelink(moduleLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return [];
   return module.content.map((entry) => [entry.linkName, entry.name]);
 }
 
-// gets the name of a subtopic
+/**
+ * Gets the name of a subtopic by its link.
+ * @param {string} moduleLink - The link of the module.
+ * @param {string} subtopicLink - The link of the subtopic.
+ * @returns {string|null} The name of the subtopic, or null if not found.
+ */
 export function getSubtopicNameByLink(moduleLink, subtopicLink) {
   const content = getSubtopicContentByLink(moduleLink, subtopicLink);
   if (!content) return null;
   return content.name;
 }
 
-// gets a subtopic from a module with th subtopics link
+/**
+ * Gets a subtopic by its link within a module.
+ * @param {string} moduleLink - The link of the module.
+ * @param {string} subtopicLink - The link of the subtopic.
+ * @returns {Object|null} The subtopic object, or null if not found.
+ */
 export function getSubtopicByLink(moduleLink, subtopicLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return null;
@@ -84,7 +123,11 @@ export function getSubtopicByLink(moduleLink, subtopicLink) {
   );
 }
 
-// gets subtopic data regarding module overview
+/**
+ * Gets subtopic data for a module overview.
+ * @param {string} moduleLink - The link of the module.
+ * @returns {Array<Object>|null} An array of subtopic data objects, or null if module not found.
+ */
 export function getSubtopicData(moduleLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return null;
@@ -95,7 +138,12 @@ export function getSubtopicData(moduleLink) {
   }));
 }
 
-// gets the link of prev chapter
+/**
+ * Gets the link of the previous subtopic in a module.
+ * @param {string} moduleLink - The link of the module.
+ * @param {string} subtopicLink - The link of the current subtopic.
+ * @returns {string|null} The link of the previous subtopic, or null if not found.
+ */
 export function getPreviousSubtopicLink(moduleLink, subtopicLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return null;
@@ -108,7 +156,12 @@ export function getPreviousSubtopicLink(moduleLink, subtopicLink) {
   return null;
 }
 
-// gets the link of next chapter
+/**
+ * Gets the link of the next subtopic in a module.
+ * @param {string} moduleLink - The link of the module.
+ * @param {string} subtopicLink - The link of the current subtopic.
+ * @returns {string|null} The link of the next subtopic, or null if not found.
+ */
 export function getNextSubtopicLink(moduleLink, subtopicLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return null;
@@ -121,7 +174,12 @@ export function getNextSubtopicLink(moduleLink, subtopicLink) {
   return null;
 }
 
-// gets subtopic content by link
+/**
+ * Gets subtopic content by its link.
+ * @param {string} moduleLink - The link of the module.
+ * @param {string} subtopicLink - The link of the subtopic.
+ * @returns {Object|null} The subtopic content, or null if not found.
+ */
 export function getSubtopicContentByLink(moduleLink, subtopicLink) {
   const subtopic = getSubtopicByLink(moduleLink, subtopicLink);
   const module = getModuleByLink(moduleLink);

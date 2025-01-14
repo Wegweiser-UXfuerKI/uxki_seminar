@@ -86,9 +86,21 @@ const dateContent = [
   ],
 ];
 
+/**
+ * A component that renders a timeline with clickable years. Each year displays events related to the EU AI Act.
+ * The user can click on a year to expand it and view more details about the events that took place during that year.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered timeline component.
+ */
 export default function Timeline() {
   const [activeYear, setActiveYear] = useState(null);
 
+  /**
+   * Handles the click event on a year. If the clicked year is already active, it collapses it, otherwise it expands it.
+   *
+   * @param {number} year - The year clicked by the user.
+   */
   const handleClick = (year) => {
     setActiveYear(year === activeYear ? null : year);
   };
@@ -100,15 +112,18 @@ export default function Timeline() {
         const isLeftNeighbor = activeYear && years[index + 1] === activeYear;
         const isRightNeighbor = activeYear && years[index - 1] === activeYear;
 
+        /**
+         * Determines the position and style of the year section based on whether it's active, a neighbor, or inactive.
+         *
+         * @returns {Object} The style object that defines the position and appearance of the year section.
+         */
         const getPositionStyle = () => {
-          // if wanted left to go back: left: year === 2018 ? '0%' : '16.67%',
           if (isActive)
             return {
               left: "0%",
               right: year === 2024 ? "0%" : "16.67%",
               zIndex: 2,
             };
-          // no active year
           if (!activeYear)
             return {
               right: "unset",
@@ -134,6 +149,11 @@ export default function Timeline() {
           };
         };
 
+        /**
+         * Gets the timeline object for the current year, including its color and associated events.
+         *
+         * @returns {Object} The timeline object containing the year, its color, and associated events.
+         */
         const getTimelineObject = () => {
           const colorIndex = (index + 1) % colors.length;
           return {
@@ -159,7 +179,6 @@ export default function Timeline() {
             style={{ ...getPositionStyle(), backgroundColor: colors[index] }}>
             <div className="year-content">
               <TimelineYear {...timelineYearProps} />{" "}
-              {/* prop with dates, texts, ... best would be an object */}
               {isActive && (
                 <div className="expanded-content">
                   {isRightNeighbor && (

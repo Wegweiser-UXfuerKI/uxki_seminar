@@ -8,7 +8,7 @@ import bild6 from "../../assets/images/demo/Bild6.png";
 import bild7 from "../../assets/images/demo/Bild7.png";
 import bild8 from "../../assets/images/demo/Bild8.png";
 import bild9 from "../../assets/images/demo/Bild9.png";
-import bild10 from "../../assets/images/demo/Bild10.png";
+//import bild10 from "../../assets/images/demo/Bild10.png";
 
 export const AnimationData = {
   Einleitung: {

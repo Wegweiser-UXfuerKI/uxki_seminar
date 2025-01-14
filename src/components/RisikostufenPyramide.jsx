@@ -1,9 +1,23 @@
 import React, { useEffect, useState } from "react";
 import styles from "./RisikostufenPyramide.module.css";
 
+/**
+ * A component that displays a pyramid of risk levels for AI technology.
+ * Each level can be clicked to show or hide additional information.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered risk pyramid with clickable levels and toggleable text.
+ */
 export const RisikostufenPyramide = () => {
   const [visibleText, setVisibleText] = useState([]);
 
+  /**
+   * Toggles the visibility of the text for a specific risk level.
+   * Adds the index to the visibleText array if it's not already included,
+   * or removes it if it's already there.
+   *
+   * @param {number} index - The index of the clicked risk level.
+   */
   const handleClick = (index) => {
     setVisibleText((prevState) =>
       prevState.includes(index)

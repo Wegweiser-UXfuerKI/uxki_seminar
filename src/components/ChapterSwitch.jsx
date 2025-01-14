@@ -7,6 +7,13 @@ import {
 } from "./ContentHandler";
 import UXButton from "./UXButton";
 
+/**
+ * A React component for navigating between chapters of a module.
+ * Displays links to the previous and next chapters if available.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered ChapterSwitch component.
+ */
 export const ChapterSwitch = () => {
   const { selectedModuleLink, selectedSubtopicLink } = useContext(AppContext);
   const [prevChapterLink, setPrevChapterLink] = useState(null);
@@ -14,6 +21,9 @@ export const ChapterSwitch = () => {
   const [prevChapterName, setPrevChapterName] = useState(null);
   const [nextChapterName, setNextChapterName] = useState(null);
 
+  /**
+   * Updates the links for the previous and next chapters whenever the selected module or subtopic changes.
+   */
   useEffect(() => {
     setPrevChapterLink(
       getPreviousSubtopicLink(selectedModuleLink, selectedSubtopicLink)
@@ -23,6 +33,9 @@ export const ChapterSwitch = () => {
     );
   }, [selectedModuleLink, selectedSubtopicLink]);
 
+  /**
+   * Updates the names of the previous and next chapters based on their links.
+   */
   useEffect(() => {
     if (prevChapterLink) {
       setPrevChapterName(

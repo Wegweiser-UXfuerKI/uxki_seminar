@@ -9,6 +9,21 @@ import {
 
 const AppContext = createContext();
 
+/**
+ * Context provider component for managing and providing application-wide state related to modules and subtopics.
+ *
+ * This component utilizes the React Context API to supply state and state mutators for the currently selected module
+ * and subtopic, as well as navigation functionality based on the current URL path.
+ *
+ * @param {ReactNode} children - The child components that will have access to the context values provided.
+ *
+ * Context values:
+ * - selectedModuleLink: The link identifier of the currently selected module.
+ * - selectedModuleName: The name of the currently selected module.
+ * - selectedSubtopicLink: The link identifier of the currently selected subtopic.
+ * - selectedSubtopicName: The name of the currently selected subtopic.
+ * - scrollToChapter: A state used for scrolling to a specific chapter.
+ */
 const AppProvider = ({ children }) => {
   const [selectedModuleLink, setSelectedModuleLink] = useState(null);
   const [selectedModuleName, setSelectedModuleName] = useState(null);
@@ -18,7 +33,12 @@ const AppProvider = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // checking and setting for subpages
+  /**
+   * If the location is a direct link to a subtopic, check if the subtopic exists
+   * and navigate to the subtopic if it does, or the module if it doesn't.
+   * If the location is not a subtopic, set the selectedModuleLink to null and
+   * the selectedModuleName to null.
+   */
   useEffect(() => {
     const pathSegments = location.pathname.split("/").filter(Boolean);
     const module = pathSegments[0];

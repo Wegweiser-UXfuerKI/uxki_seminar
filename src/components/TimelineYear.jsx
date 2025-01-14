@@ -1,8 +1,20 @@
-// TimelineYear.jsx
 import React, { useState } from "react";
 import "./TimelineYear.css";
 import { DocumentIcon, InfoIcon, SignIcon } from "./svg/Icons";
 
+/**
+ * A component that displays the events for a specific year in a timeline.
+ * The component renders the year, date blocks with associated icons and texts, and handles hover effects for revealing additional details.
+ *
+ * @component
+ * @param {Object} props - The props for the TimelineYear component.
+ * @param {number} props.year - The year being displayed in the timeline.
+ * @param {string} props.color - The color associated with the year (used for styling).
+ * @param {Array<Object>} props.dates - The events for the year, each containing `date`, `text`, `pos`, and `icon`.
+ * @param {boolean} props.isActive - Whether the year is currently active in the timeline.
+ *
+ * @returns {JSX.Element} The rendered TimelineYear component.
+ */
 export default function TimelineYear({ year, color, dates, isActive }) {
   const [hovered, setHovered] = useState(null);
 
@@ -17,7 +29,11 @@ export default function TimelineYear({ year, color, dates, isActive }) {
   return (
     <div className="w-full h-full absolute left-0 right-0 flex overflow-hidden">
       <div className="min-w-[220px] max-w-[200px] flex items-end">
-        <div className="year font-bold text-lightText w-full h-full" style={{ lineHeight: "1.8"}}>{year}</div>
+        <div
+          className="year font-bold text-lightText w-full h-full"
+          style={{ lineHeight: "1.8" }}>
+          {year}
+        </div>
       </div>
       <div className="w-full h-full relative flex flex-col justify-evenly overflow-hidden">
         <div
@@ -74,7 +90,7 @@ export default function TimelineYear({ year, color, dates, isActive }) {
               justifyContent: "start",
               alignItems: index % 2 === 0 ? "start" : "end",
               height: "40%",
-              maxWidth: (year === 2024 && index === 0) ? "300px" : "400px",
+              maxWidth: year === 2024 && index === 0 ? "300px" : "400px",
               overflow: "hidden",
               hyphens: "auto",
             }}>

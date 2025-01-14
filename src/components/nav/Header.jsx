@@ -103,8 +103,8 @@ const Header = () => {
           <img src={wegweiserLogo} alt="Wegweiser.UX-für-KI Logo" />
         </Link>
       </div>
-      <nav className="w-full flex items-center justify-between">
-        <>
+      <nav className="w-full flex items-center justify-between py-5">
+        <div className="flex justify-start items-center">
           <Link
             to="/"
             onClick={() => {
@@ -134,7 +134,7 @@ const Header = () => {
               )}
             </>
           )}
-        </>
+        </div>
         <ThemeToggle />
       </nav>
     </header>

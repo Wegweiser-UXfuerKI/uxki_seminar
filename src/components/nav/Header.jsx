@@ -103,36 +103,38 @@ const Header = () => {
           <img src={wegweiserLogo} alt="Wegweiser.UX-für-KI Logo" />
         </Link>
       </div>
-      <nav className="flex items-center">
-        <Link
-          to="/"
-          onClick={() => {
-            if (selectedModuleLink) {
-              setScrollToChapter(selectedModuleLink);
-            }
-          }}>
-          Kursübersicht
-        </Link>
-        {selectedModuleLink && (
-          <>
-            <RightArrow />
-            <Link
-              to={`/${selectedModuleLink}`}
-              className={selectedSubtopicName ? "" : "active"}>
-              {selectedModuleName}
-            </Link>
-            {selectedSubtopicName && (
-              <>
-                <RightArrow />
-                <Link
-                  to={`/${selectedModuleLink}/${selectedSubtopicLink}`}
-                  className="active">
-                  {selectedSubtopicName}
-                </Link>
-              </>
-            )}
-          </>
-        )}
+      <nav className="w-full flex items-center justify-between">
+        <>
+          <Link
+            to="/"
+            onClick={() => {
+              if (selectedModuleLink) {
+                setScrollToChapter(selectedModuleLink);
+              }
+            }}>
+            Kursübersicht
+          </Link>
+          {selectedModuleLink && (
+            <>
+              <RightArrow />
+              <Link
+                to={`/${selectedModuleLink}`}
+                className={selectedSubtopicName ? "" : "active"}>
+                {selectedModuleName}
+              </Link>
+              {selectedSubtopicName && (
+                <>
+                  <RightArrow />
+                  <Link
+                    to={`/${selectedModuleLink}/${selectedSubtopicLink}`}
+                    className="active">
+                    {selectedSubtopicName}
+                  </Link>
+                </>
+              )}
+            </>
+          )}
+        </>
         <ThemeToggle />
       </nav>
     </header>

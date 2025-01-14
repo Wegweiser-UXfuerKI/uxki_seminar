@@ -1,0 +1,28 @@
+import React, { useContext } from "react";
+import { AppContext } from "../AppContext";
+
+export const ThemeToggle = () => {
+  const { theme, setTheme } = useContext(AppContext);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  return (
+    <div className="flex items-center gap-2">
+      <button
+        onClick={toggleTheme}
+        className="relative inline-flex h-6 w-11 items-center rounded-full transition-colors"
+        style={{
+          backgroundColor: theme === "light" ? "#facc15" : "#1e293b",
+        }}>
+        <span className="sr-only">Toggle theme</span>
+        <div
+          className={`${
+            theme === "light" ? "translate-x-1" : "translate-x-6"
+          } inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ease-in-out`}
+        />
+      </button>
+    </div>
+  );
+};

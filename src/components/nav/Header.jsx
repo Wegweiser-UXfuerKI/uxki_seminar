@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as RightArrow } from "../../assets/images/right-arrow.svg";
 import wegweiserLogo from "../../assets/images/Wegweiser_logo.png";
 import { AppContext } from "../../AppContext";
+import { ThemeToggle } from "../ThemeToggle";
 
 /**
  * Header component that adapts its layout based on the screen size.
@@ -132,6 +133,7 @@ const Header = () => {
             )}
           </>
         )}
+        <ThemeToggle />
       </nav>
     </header>
   );

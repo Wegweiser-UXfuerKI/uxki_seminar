@@ -14,7 +14,7 @@ export const ThemeToggle = () => {
         onClick={toggleTheme}
         className="relative inline-flex h-6 w-11 items-center rounded-full transition-colors"
         style={{
-          backgroundColor: theme === "light" ? "#facc15" : "#1e293b",
+          backgroundColor: theme === "light" ? "var(--fg)" : "var(--bg)",
         }}>
         <span className="sr-only">Toggle theme</span>
         <div

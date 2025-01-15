@@ -71,7 +71,8 @@ const Einleitung = {
           href="https://artificialintelligenceact.eu/de/entwicklungen/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inlineLink">
+          className="inlineLink"
+        >
           https://artificialintelligenceact.eu/de/entwicklungen/
         </a>
         .
@@ -428,7 +429,8 @@ const RisikostufenAnwendungsbeispiele = {
           style={{ position: "relative", display: "inline-block" }}
           className="rounded-xl overflow-hidden"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           <GraphicContainer
             type={"image"}
             src={ComlianceCheckerImg}
@@ -442,7 +444,8 @@ const RisikostufenAnwendungsbeispiele = {
               width: "100%",
               height: "100%",
             }}
-            className="bg-black bg-opacity-15 hover:bg-opacity-20"></div>
+            className="bg-black bg-opacity-15 hover:bg-opacity-20"
+          ></div>
         </a>
       </p>
       <p>
@@ -904,15 +907,6 @@ const HLEG = {
         technologisch fortschrittlich, sondern auch sozial und ethisch
         verantwortungsvoll ist.
       </p>
-      <p>
-        European Commission. (2020a). The Ethics Guidelines for Trustworthy AI.
-        Abgerufen von
-        https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai.
-        <br></br>
-        European Commission. (2020b). The EU AI Act: Regulatory framework
-        proposal for Artificial Intelligence. Abgerufen von
-        https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206.
-      </p>
     </section>,
   ],
 };
@@ -981,6 +975,32 @@ const Quellen = {
     <ChapterHeader text={"Quellen"} number={6} />,
     <section>
       <Sources />
+      <li>
+        European Commission. (2020a).{" "}
+        <i>The Ethics Guidelines for Trustworthy AI</i>. Abgerufen von {" "}
+        <a
+          href="https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai
+        </a>
+      </li>
+      <li>
+        European Commission. (2020b).{" "}
+        <i>
+          The EU AI Act: Regulatory framework proposal for Artificial
+          Intelligence
+        </i>
+        . Abgerufen von {" "}
+        <a
+          href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206
+        </a>
+      </li>
     </section>,
   ],
 };

@@ -136,7 +136,7 @@ svg {
 .glassy-box {
   position: relative;
   background: var(--box);
-  border-radius: 40px;
+  border-radius: var(--scale5);
   box-shadow: var(--glasBoxShadow);
 }
 
@@ -218,7 +218,7 @@ footer {
 
 footer a {
   color: var(--br);
-  width: 10rem;
+  width: 16rem;
   transition: all 0.3s ease-in-out;
 }
 
@@ -228,6 +228,7 @@ footer a:hover {
 
 main {
   padding-top: 90px;
+  min-height: 85vh;
 }
 
 .outerContainer,
@@ -341,10 +342,13 @@ p + p {
 }
 
 b,
-strong,
-i {
+strong {
   font-weight: 600;
   font-style: normal;
+  font-size: inherit;
+}
+
+i {
   font-size: inherit;
 }
 
@@ -373,13 +377,20 @@ ol li::marker {
 a {
   font-size: inherit;
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
 }
 
+header nav a,
+main p a,
+main li a,
 .inlineLink {
   position: relative;
   text-decoration: none;
 }
 
+header nav a::after,
+main p a::after,
+main li a::after,
 .inlineLink::after {
   content: "";
   position: absolute;
@@ -387,9 +398,13 @@ a {
   height: 2px;
   bottom: 0;
   left: 0;
+  background-color: var(--text);
   transition: width 0.3s ease-in-out;
 }
 
+header nav a:hover::after,
+main p a:hover::after,
+main li a:hover::after,
 .inlineLink:hover::after {
   width: 100%;
 }

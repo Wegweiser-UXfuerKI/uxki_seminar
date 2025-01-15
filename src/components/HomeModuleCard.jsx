@@ -5,8 +5,8 @@ import {
 } from "./ContentHandler";
 import UXButton from "./UXButton";
 
-// `HomeModulCard` is a component that displays a single module with its details and subtopics
-const HomeModulCard = ({
+// `HomeModuleCard` is a component that displays a single module with its details and subtopics
+const HomeModuleCard = ({
   module,
   index,
   isDisabled,
@@ -74,4 +74,4 @@ const HomeModulCard = ({
   );
 };
 
-export default HomeModulCard;
+export default HomeModuleCard;

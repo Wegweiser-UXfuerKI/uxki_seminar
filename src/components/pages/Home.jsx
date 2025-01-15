@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { getModuleLinksAndNames } from "../ContentHandler";
-import HomeModulCard from "../HomeModulCard";
+import HomeModuleCard from "../HomeModuleCard";
 import { AppContext } from "../../AppContext";
 
 const Home = () => {
@@ -55,7 +55,7 @@ const Home = () => {
         modulesData.map((module, index) => {
           const isDisabled = disabledModules.includes(module[0]);
           return (
-            <HomeModulCard
+            <HomeModuleCard
               key={index}
               module={module}
               index={index}

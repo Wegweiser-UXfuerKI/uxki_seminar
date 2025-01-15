@@ -418,12 +418,18 @@ const RisikostufenAnwendungsbeispiele = {
         Möglichkeit verschiedene Varianten durchzuspielen, um herauszufinden
         welche Regelungen für das eigene System gelten. Wir empfehlen daher es
         einmal selbst auszuprobieren und die oben genannten Beispiele oder
-        eigene Idee einfach mal auf
-        https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/
+        eigene Idee einfach mal auf{" "}
+        <a
+          href="https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/
+        </a>{" "}
         oder mit einem Klick auf die unten befindliche Einbindung zu testen.
       </p>
 
-      <p>
+      <div>
         <a
           href="https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/"
           style={{ position: "relative", display: "inline-block" }}
@@ -447,7 +453,8 @@ const RisikostufenAnwendungsbeispiele = {
             className="bg-black bg-opacity-15 hover:bg-opacity-20"
           ></div>
         </a>
-      </p>
+      </div>
+      <section></section>
       <p>
         Im nächsten Abschnitt gehen wir dann noch mal konkret auf die
         Auswirkungen der Risikostufen auf mögliche Entwicklungsprozesse ein.
@@ -977,7 +984,7 @@ const Quellen = {
       <Sources />
       <li>
         European Commission. (2020a).{" "}
-        <i>The Ethics Guidelines for Trustworthy AI</i>. Abgerufen von {" "}
+        <i>The Ethics Guidelines for Trustworthy AI</i>. Abgerufen von{" "}
         <a
           href="https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai"
           target="_blank"
@@ -992,7 +999,7 @@ const Quellen = {
           The EU AI Act: Regulatory framework proposal for Artificial
           Intelligence
         </i>
-        . Abgerufen von {" "}
+        . Abgerufen von{" "}
         <a
           href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206"
           target="_blank"

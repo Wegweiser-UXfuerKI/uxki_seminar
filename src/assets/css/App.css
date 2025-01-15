@@ -219,7 +219,7 @@ footer {
 footer a {
   color: var(--br);
   width: 16rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.24s ease-in-out;
 }
 
 footer a:hover {
@@ -254,7 +254,7 @@ header {
 header nav a {
   margin: 0 0.75rem;
   font-weight: 600;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.24s ease-in-out;
 }
 
 header nav a:first-child {
@@ -377,7 +377,7 @@ ol li::marker {
 a {
   font-size: inherit;
   font-weight: 600;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.24s ease-in-out;
 }
 
 header nav a,
@@ -399,7 +399,7 @@ main li a::after,
   bottom: 0;
   left: 0;
   background-color: var(--text);
-  transition: width 0.3s ease-in-out;
+  transition: width 0.24s ease-in-out;
 }
 
 header nav a:hover::after,
@@ -412,25 +412,24 @@ main li a:hover::after,
 /* to Top Button */
 #toTopBtn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: var(--scale2);
+  right: var(--scale2);
   background-color: var(--text);
   fill: var(--bg);
   cursor: pointer;
-  padding: 9px;
+  padding: var(--scale2);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  box-shadow: var(--glasBoxShadow);
+  width: var(--scale7);
+  height: var(--scale7);
   rotate: -90deg;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.24s ease-in-out;
   z-index: 1;
 }
 
 #toTopBtn:hover {
-  background-color: var(--la);
-  transform: translateX(5px);
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateX(4px);
+  box-shadow: var(--shadow);
 }
 
 .bar1,
@@ -441,7 +440,7 @@ main li a:hover::after,
   border-radius: 5px;
   background-color: white;
   margin: 6px 0;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.24s ease-in-out;
 }
 
 .change .bar1 {
@@ -456,13 +455,8 @@ main li a:hover::after,
   transform: translate(0, -11px) rotate(45deg);
 }
 
-/* Custom transitions for the nav */
-.transition-transform {
-  transition: transform 0.4s;
-}
-
 .transition-opacity {
-  transition: opacity 0.4s;
+  transition: opacity 0.24s;
 }
 
 .special-text {

@@ -1,8 +1,7 @@
 /* Topic Cards */
 .subTopicCard {
-  width: 320px;
   min-height: 320px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.24s ease-in-out;
 }
 
 .subTopicCard:hover {
@@ -19,7 +18,7 @@
   top: -8px;
   opacity: 0.1;
   pointer-events: none;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.24s ease-in-out;
 }
 
 /* Tablets (Landscape) */
@@ -33,7 +32,7 @@
 /* Smartphones (Portrait) */
 @media screen and (max-width: 768px) {
   .subTopicCard h3::before {
-    font-size: 140px;
+    font-size: 124px;
     right: 20px;
   }
 }

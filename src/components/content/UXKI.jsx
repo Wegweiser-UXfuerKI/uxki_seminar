@@ -411,7 +411,7 @@ const WahrgenommenesSituationsbewusstsein = {
         </li>
       </ol>
       <p>
-        Das <i>HASO-Modell</i> von Endsley betont ebenfalls diese drei
+        Das <b>HASO-Modell</b> von Endsley betont ebenfalls diese drei
         wesentlichen Eigenschaften von Automatisierungssystemen, da sie direkt
         mit der Situationswahrnehmung der Nutzenden verknüpft sind.
       </p>
@@ -491,10 +491,10 @@ const WahrgenommenesSituationsbewusstsein = {
         offenlegen und den Nutzenden zugänglich machen.
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Ein KI-gestütztes Dashboard für Ärzte zeigt visuell, welche
           Daten zur Diagnosestellung verwendet wurden.
-        </i>{" "}
+        </b>{" "}
       </p>
       <h3>2. Verständlichkeit fördern</h3>
       <p>
@@ -502,11 +502,11 @@ const WahrgenommenesSituationsbewusstsein = {
         Nutzung von Systemen erleichtern.
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Medizinische Diagnose-Tools heben die wichtigsten
           Informationen hervor und bieten Hilfetexte zur Erklärung komplexer
           Funktionen.
-        </i>{" "}
+        </b>{" "}
       </p>
       <h3>3. Vorhersehbarkeit verbessern</h3>
       <p>
@@ -514,11 +514,11 @@ const WahrgenommenesSituationsbewusstsein = {
         aufzeigen, z. B. durch Simulationen oder Vorschauen.
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Ein System zur Verkehrssteuerung könnte simulieren, wie sich
           geänderte Ampelphasen auf den Verkehr auswirken, bevor sie tatsächlich
           implementiert werden.
-        </i>
+        </b>
       </p>
     </section>,
     <section>
@@ -626,10 +626,10 @@ const WahrgenommeneInformationOverload = {
         offengelegt werden, um die kognitive Belastung zu reduzieren.
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Ein KI-gestütztes Dashboard zeigt nur die wesentlichen
           Informationen und blendet zusätzliche Details bei Bedarf ein.
-        </i>
+        </b>
       </p>
       <h4>2. Anpassbarkeit der Informationsmenge</h4>
       <p>
@@ -637,10 +637,10 @@ const WahrgenommeneInformationOverload = {
         anzupassen, die sie benötigen, um Entscheidungen zu treffen.
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Personalisierte Einstellungen, die es den Nutzenden
           erlauben, festzulegen, wie viele Details sie sehen möchten.
-        </i>
+        </b>
       </p>
       <h4>3. Fokussierung auf kritische Informationen</h4>
       <p>
@@ -648,11 +648,11 @@ const WahrgenommeneInformationOverload = {
         priorisieren.{" "}
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: In einem Verkehrsleitsystem werden in einer Notfallsituation
           nur die kritischsten Daten hervorgehoben, wie z. B. gesperrte Straßen
           oder gefährliche Wetterbedingungen.
-        </i>
+        </b>
       </p>
       <h4>4. Reduktion der kognitiven Belastung durch Automatisierung</h4>
       <p>
@@ -660,11 +660,11 @@ const WahrgenommeneInformationOverload = {
         Anstrengung der Nutzenden zu minimieren.{" "}
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Ein KI-System im Verwaltungsbereich könnte die automatische
           Überprüfung von Anträgen übernehmen, sodass sich Mitarbeitende auf
           Ausnahmen und komplexe Fälle konzentrieren können.
-        </i>
+        </b>
       </p>
     </section>,
     <section>
@@ -887,11 +887,11 @@ const PerceivedTrustworthiness = {
         und nachvollziehbar sind, was das Vertrauen der Nutzer stärkt.
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Ein Finanzplanungssystem, das seine Berechnungen offenlegt
           und erklärt, welche Parameter berücksichtigt wurden, hilft Nutzern,
           die Entscheidungsprozesse nachzuvollziehen.
-        </i>
+        </b>
       </p>
       <h4>2. Sicherstellung von Systemleistung und Zuverlässigkeit</h4>
       <p>
@@ -899,11 +899,11 @@ const PerceivedTrustworthiness = {
         Vertrauen aufzubauen und Unsicherheiten zu reduzieren.
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Ein medizinisches KI-System, das bei der Diagnose
           Fehlerindikatoren und Bestätigungen anzeigt, schafft Vertrauen in die
           Genauigkeit und Zuverlässigkeit der Ergebnisse.
-        </i>
+        </b>
       </p>
       <h4>3. Stärkung des erlernten Vertrauens</h4>
       <p>
@@ -912,11 +912,11 @@ const PerceivedTrustworthiness = {
         verbessern.
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Nutzerfreundliche Tutorials für ein neues KI-gestütztes
           Verwaltungssystem fördern das grundlegende Vertrauen der Nutzer in das
           System.
-        </i>
+        </b>
       </p>
       <h4>4. Förderung von affektivem Vertrauen</h4>
       <p>
@@ -924,11 +924,11 @@ const PerceivedTrustworthiness = {
         tragen zur Entwicklung von affektivem Vertrauen bei.
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Ein Sprachassistenzsystem, das personalisierte Präferenzen
           berücksichtigt, stärkt die emotionale Bindung und das Vertrauen der
           Nutzer in das System.
-        </i>
+        </b>
       </p>
       <h4>5. Kontextbezogene Erklärungen für Empfehlungen geben</h4>
       <p>
@@ -937,11 +937,11 @@ const PerceivedTrustworthiness = {
         Nutzer eingehen.
       </p>
       <p>
-        <i>
+        <b>
           Beispiel: Ein Personalplanungssystem für das Gesundheitswesen erklärt,
           warum bestimmte Dienstpläne vorgeschlagen werden, z. B. basierend auf
           Arbeitslasten oder Personalverfügbarkeit.
-        </i>
+        </b>
       </p>
     </section>,
     <section>
@@ -1150,7 +1150,7 @@ const PerceivedConfidence = {
     <section>
       <h2>Fazit</h2>
       <p>
-        Die <i>Perceived Confidence / Diagnosticity</i> eines KI-Systems ist
+        Die <b>Perceived Confidence / Diagnosticity</b> eines KI-Systems ist
         entscheidend, um fundierte und präzise Entscheidungen zu treffen.
         Systeme, die klar diagnostische Informationen bereitstellen, stärken das
         Vertrauen der Nutzenden und fördern die Akzeptanz und effektive Nutzung
@@ -1194,12 +1194,12 @@ const Zusammenfassung = {
         auf ihre eigenen Entscheidungen zu verlassen.
       </p>
       <p>
-        <i>
+        <b>
           Bieten Sie Nutzenden die Möglichkeit, zwischen verschiedenen
           Automatisierungsstufen zu wechseln, sodass sie je nach Präferenz oder
           Aufgabenanforderung selbst entscheiden können, wie viel Kontrolle sie
           dem System überlassen.
-        </i>
+        </b>
       </p>
       <h3>2. Transparenz zur Unterstützung des Situationsbewusstseins </h3>
       <p>
@@ -1211,12 +1211,12 @@ const Zusammenfassung = {
         Funktionsweise und Entscheidungsgrundlagen des Systems.
       </p>
       <p>
-        <i>
+        <b>
           Stellen Sie sicher, dass das System die Datenquellen, Prozesse und
           Faktoren, die eine Entscheidung beeinflussen, klar kommuniziert.
           Nutzen Sie visuelle Darstellungen oder erklärende Hinweise, um
           komplexe Abläufe verständlicher zu machen.
-        </i>
+        </b>
       </p>
       <h3>
         3. Flexibilität bei der Informationsverarbeitung zur Reduzierung der
@@ -1231,13 +1231,13 @@ const Zusammenfassung = {
         Dies hilft, die wahrgenommene mentale Belastung zu reduzieren.
       </p>
       <p>
-        <i>
+        <b>
           Integrieren Sie Funktionen, die es Nutzende ermöglichen, die Anzeige
           von Informationen nach Bedarf zu filtern, zu kategorisieren oder zu
           priorisieren. Zum Beispiel kann eine Zusammenfassungsansicht für
           weniger erfahrene Nutzer und eine Detailansicht für Experten angeboten
           werden.
-        </i>
+        </b>
       </p>
       <h3>
         4. Zuverlässigkeit und klare Darstellung zur Förderung der
@@ -1250,11 +1250,11 @@ const Zusammenfassung = {
         agiert.
       </p>
       <p>
-        <i>
+        <b>
           Verwenden Sie visuelle Indikatoren, die die Zuverlässigkeit und
           Erfolgsquote des Systems darstellen, und bieten Sie Erklärungen, die
           das ethische und technische Verhalten des Systems untermauern.
-        </i>
+        </b>
       </p>
       <h3>
         5. Nutzerzentrierte Anpassung zur Unterstützung der wahrgenommenen
@@ -1269,13 +1269,13 @@ const Zusammenfassung = {
         genaue und hilfreiche Informationen bereitzustellen.
       </p>
       <p>
-        <i>
+        <b>
           Ermöglichen Sie personalisierte Einstellungen, durch die Nutzenden
           entscheiden können, welche Art von Informationen angezeigt werden und
           wie detailliert diese sein sollen. Ein personalisiertes Dashboard oder
           konfigurierbare Berichte können helfen, das System effizienter zu
           nutzen.
-        </i>
+        </b>
       </p>
     </section>,
     <section>
@@ -1315,10 +1315,10 @@ const Quellen = {
         <li>
           Parasuraman, R., Sheridan, T., & Wickens, C. (2000). A model for types
           and levels of human interaction with automation.{" "}
-          <i>
+          <b>
             IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems
             and Humans, 30
-          </i>
+          </b>
           (3), 286–297.{" "}
           <a
             href="https://doi.org/10.1109/3468.844354"
@@ -1330,7 +1330,7 @@ const Quellen = {
         </li>
         <li>
           Hopkins, D., & Schwanen, T. (2021). Talking about automated vehicles:
-          What do levels of automation do? <i>Technology in Society, 64</i>,
+          What do levels of automation do? <b>Technology in Society, 64</b>,
           101488.{" "}
           <a
             href="https://doi.org/10.1016/j.techsoc.2020.101488"
@@ -1344,10 +1344,10 @@ const Quellen = {
           Onnasch, L., Wickens, C. D., Li, H., & Manzey, D. (2014). Human
           performance consequences of stages and levels of automation: An
           integrated meta-analysis.{" "}
-          <i>
+          <b>
             Human Factors: The Journal of the Human Factors and Ergonomics
             Society, 56
-          </i>
+          </b>
           (3), 476–488.{" "}
           <a
             href="https://doi.org/10.1177/0018720813501549"
@@ -1361,7 +1361,7 @@ const Quellen = {
           Kaber, D. B., & Endsley, M. R. (2004). The effects of level of
           automation and adaptive automation on human performance, situation
           awareness and workload in a dynamic control task.{" "}
-          <i>Theoretical Issues in Ergonomics Science, 5</i>(2), 113–153.{" "}
+          <b>Theoretical Issues in Ergonomics Science, 5</b>(2), 113–153.{" "}
           <a
             href="https://doi.org/10.1080/1463922021000054335"
             target="_blank"
@@ -1373,7 +1373,7 @@ const Quellen = {
         <li>
           Rieger, T., Roesler, E., & Manzey, D. (2022). Challenging presumed
           technological superiority when working with (artificial) colleagues.{" "}
-          <i>Scientific Reports, 12</i>, 3768.{" "}
+          <b>Scientific Reports, 12</b>, 3768.{" "}
           <a
             href="https://doi.org/10.1038/s41598-022-07808-x"
             target="_blank"
@@ -1385,10 +1385,10 @@ const Quellen = {
         <li>
           Deci, E. L., & Ryan, R. M. (2000). The "what" and "why" of goal
           pursuits: Human needs and the self-determination of behavior.{" "}
-          <i>Psychological Inquiry, 11</i>(4), 227–268.
+          <b>Psychological Inquiry, 11</b>(4), 227–268.
         </li>
         <li>
-          Zoubir, M. (2024). <i>Preference for Automation Types Scale (PATS)</i>
+          Zoubir, M. (2024). <b>Preference for Automation Types Scale (PATS)</b>
           .{" "}
           <a
             href="https://doi.org/10.13140/RG.2.2.22149.97769"
@@ -1401,7 +1401,7 @@ const Quellen = {
         <li>
           Moradbakhti, L., Leichtmann, B., & Mara, M. (2024). Development and
           validation of a basic psychological needs scale for technology use.{" "}
-          <i>Psychological Test Adaptation and Development, 5</i>(1), 26–45.{" "}
+          <b>Psychological Test Adaptation and Development, 5</b>(1), 26–45.{" "}
           <a
             href="https://doi.org/10.1027/2698-1866/a000062"
             target="_blank"
@@ -1418,7 +1418,7 @@ const Quellen = {
           Edgar, H. E., Nikolla, D., Buckle, S., Goodwin, C. & Whelan, A.
           (2018). Quantitative Analysis of Situation Awareness (QASA): Modelling
           and measuring situation awareness using signal detection theory.{" "}
-          <i>Ergonomics, 61</i>(6), 762–777.{" "}
+          <b>Ergonomics, 61</b>(6), 762–777.{" "}
           <a
             href="https://doi.org/10.1080/00140139.2017.1420238"
             target="_blank"
@@ -1431,16 +1431,16 @@ const Quellen = {
         <li>
           Endsley, M., Sollenberger, R. & Stein, E. (2000). Situation awareness:
           A comparison of measures. In{" "}
-          <i>
+          <b>
             Proceedings of the Human Performance, Situation Awareness and
             Automation: User-Centered Design for the New Millennium
-          </i>
+          </b>
           , Savannah, GA.
         </li>
 
         <li>
           Endsley, M. R. (1995). Toward a Theory of Situation Awareness in
-          Dynamic Systems. <i>Human Factors, 37</i>(1), 32–64.{" "}
+          Dynamic Systems. <b>Human Factors, 37</b>(1), 32–64.{" "}
           <a
             href="https://doi.org/10.1518/001872095779049543"
             target="_blank"
@@ -1453,10 +1453,10 @@ const Quellen = {
         <li>
           Endsley, M. R. (2017). From Here to Autonomy: Lessons Learned From
           Human–Automation Research.{" "}
-          <i>
+          <b>
             Human Factors: The Journal of the Human Factors and Ergonomics
             Society, 59
-          </i>
+          </b>
           (1), 5–27.{" "}
           <a
             href="https://doi.org/10.1177/0018720816681350"
@@ -1471,10 +1471,10 @@ const Quellen = {
           Endsley, M. R., Selcon, S. J., Hardiman, T. D. & Croft, D. G. (1998).
           A Comparative Analysis of Sagat and Sart for Evaluations of Situation
           Awareness. In{" "}
-          <i>
+          <b>
             Proceedings of the Human Factors and Ergonomics Society Annual
             Meeting, 42
-          </i>
+          </b>
           (1), 82–86.{" "}
           <a
             href="https://doi.org/10.1177/154193129804200119"
@@ -1504,7 +1504,7 @@ const Quellen = {
           Schrills, T., Kojan, L., Gruner, M., Calero Valdez, A. & Franke, T.
           (2024). Effects of User Experience in Automated Information Processing
           on Perceived Usefulness of Digital Contact-Tracing Apps:
-          Cross-Sectional Survey Study. <i>JMIR Human Factors, 11</i>, e53940.{" "}
+          Cross-Sectional Survey Study. <b>JMIR Human Factors, 11</b>, e53940.{" "}
           <a
             href="https://doi.org/10.2196/53940"
             target="_blank"
@@ -1517,7 +1517,7 @@ const Quellen = {
         <li>
           Taylor, R. M. (2017). Situational Awareness Rating Technique (Sart):
           The Development of a Tool for Aircrew Systems Design. In E. Salas
-          (Hrsg.), <i>Situational Awareness</i> (1. Aufl., S. 111–128).
+          (Hrsg.), <b>Situational Awareness</b> (1. Aufl., S. 111–128).
           Routledge.{" "}
           <a
             href="https://doi.org/10.4324/9781315087924-8"
@@ -1533,9 +1533,9 @@ const Quellen = {
         <li>
           Miller, T. (2023). Explainable AI is Dead, Long Live Explainable AI!:
           Hypothesis-driven Decision Support using Evaluative AI.{" "}
-          <i>
+          <b>
             2023 ACM Conference on Fairness, Accountability, and Transparency
-          </i>
+          </b>
           , 333–342.{" "}
           <a
             href="https://doi.org/10.1145/3593013.3594001"
@@ -1548,7 +1548,7 @@ const Quellen = {
         <li>
           Vidulich, M. A., & Tsang, P. S. (2012). Mental Workload and Situation
           Awareness. In G. Salvendy (Hrsg.),{" "}
-          <i>Handbook of Human Factors and Ergonomics</i> (1. Aufl., S.
+          <b>Handbook of Human Factors and Ergonomics</b> (1. Aufl., S.
           243–273). Wiley.{" "}
           <a
             href="https://doi.org/10.1002/9781118131350.ch8"
@@ -1561,7 +1561,7 @@ const Quellen = {
         <li>
           Longo, L., Wickens, C. D., Hancock, G., & Hancock, P. A. (2022). Human
           Mental Workload: A Survey and a Novel Inclusive Definition.{" "}
-          <i>Frontiers in Psychology</i>, 13, 883321.{" "}
+          <b>Frontiers in Psychology</b>, 13, 883321.{" "}
           <a
             href="https://doi.org/10.3389/fpsyg.2022.883321"
             target="_blank"
@@ -1572,20 +1572,20 @@ const Quellen = {
         </li>
         <li>
           Sewnath, G., & Crijnen, J. (2021).{" "}
-          <i>
+          <b>
             How much is too much? Levels of AI Explainability within Decision
             Support Systems’ User Interfaces for improved decision-making
             performance.
-          </i>
+          </b>
         </li>
         <li>
           Tsai, C.-H., You, Y., Gui, X., Kou, Y., & Carroll, J. M. (2021).
           Exploring and Promoting Diagnostic Transparency and Explainability in
           Online Symptom Checkers.{" "}
-          <i>
+          <b>
             Proceedings of the 2021 CHI Conference on Human Factors in Computing
             Systems
-          </i>
+          </b>
           , 1–17.{" "}
           <a
             href="https://doi.org/10.1145/3411764.3445101"
@@ -1599,7 +1599,7 @@ const Quellen = {
           Schrills, T., & Franke, T. (2023). How Do Users Experience
           Traceability of AI Systems? Examining Subjective Information
           Processing Awareness in Automated Insulin Delivery (AID) Systems.{" "}
-          <i>ACM Transactions on Interactive Intelligent Systems</i>, 13(4),
+          <b>ACM Transactions on Interactive Intelligent Systems</b>, 13(4),
           1–34.{" "}
           <a
             href="https://doi.org/10.1145/3588594"
@@ -1611,10 +1611,10 @@ const Quellen = {
         </li>
         <li>
           Hart, S. G. (2006). NASA-Task Load Index (NASA-TLX); 20 Years Later.{" "}
-          <i>
+          <b>
             Proceedings of the Human Factors and Ergonomics Society Annual
             Meeting
-          </i>
+          </b>
           , 50 (9), 904–908.{" "}
           <a
             href="https://doi.org/10.1177/154193120605000909"
@@ -1630,7 +1630,7 @@ const Quellen = {
         <li>
           Mayer, R. C., Davis, J. H., & Schoorman, F. D. (1995). An Integrative
           Model of Organizational Trust.{" "}
-          <i>The Academy of Management Review, 20</i>(3), 709.{" "}
+          <b>The Academy of Management Review, 20</b>(3), 709.{" "}
           <a
             href="https://doi.org/10.2307/258792"
             target="_blank"
@@ -1642,10 +1642,10 @@ const Quellen = {
         <li>
           Lee, J. D., & See, K. A. (2004). Trust in Automation: Designing for
           Appropriate Reliance.{" "}
-          <i>
+          <b>
             Human Factors: The Journal of the Human Factors and Ergonomics
             Society , 46
-          </i>
+          </b>
           (1), 50–80.{" "}
           <a
             href="https://doi.org/10.1518/hfes.46.1.50_30392"
@@ -1657,15 +1657,15 @@ const Quellen = {
         </li>
         <li>
           Madsen, M., & Gregor, S. (2000). Measuring human-computer trust.{" "}
-          <i>11th australasian conference on information systems , 53</i>, 6–8.
+          <b>11th australasian conference on information systems , 53</b>, 6–8.
         </li>
         <li>
           Hoff, K. A., & Bashir, M. (2015). Trust in Automation: Integrating
           Empirical Evidence on Factors That Influence Trust.{" "}
-          <i>
+          <b>
             Human Factors: The Journal of the Human Factors and Ergonomics
             Society , 57
-          </i>
+          </b>
           (3), 407–434.{" "}
           <a
             href="https://doi.org/10.1177/0018720814547570"
@@ -1678,10 +1678,10 @@ const Quellen = {
         <li>
           Schlicker, N., Baum, K., Uhde, A., Sterz, S., Hirsch, M. C., & Langer,
           M. (2022).{" "}
-          <i>
+          <b>
             How Do We Assess the Trustworthiness of AI? Introducing the
             Trustworthiness Assessment Model (TrAM).
-          </i>
+          </b>
           <a
             href="
           https://doi.org/10.31234/osf.io/qhwvx"
@@ -1695,7 +1695,7 @@ const Quellen = {
           Schrills, T., & Franke, T. (2023). How Do Users Experience
           Traceability of AI Systems? Examining Subjective Information
           Processing Awareness in Automated Insulin Delivery (AID) Systems.{" "}
-          <i>ACM Transactions on Interactive Intelligent Systems, 13</i>(4),
+          <b>ACM Transactions on Interactive Intelligent Systems, 13</b>(4),
           1–34.{" "}
           <a
             href="https://doi.org/10.1145/3588594"
@@ -1709,10 +1709,10 @@ const Quellen = {
           Vereschak, O., Alizadeh, F., Bailly, G., & Caramiaux, B. (2024). Trust
           in AI-assisted Decision Making: Perspectives from Those Behind the
           System and Those for Whom the Decision is Made.{" "}
-          <i>
+          <b>
             Proceedings of the CHI Conference on Human Factors in Computing
             Systems
-          </i>
+          </b>
           , 1–14.
           <a
             href="https://doi.org/10.1145/3613904.3642018"
@@ -1725,7 +1725,7 @@ const Quellen = {
         <li>
           Kohn, S. C., de Visser, E. J., Wiese, E., Lee, Y.-C., & Shaw, T. H.
           (2021). Measurement of trust in automation: A narrative review and
-          reference guide. <i>Frontiers in psychology</i>, 12, 604977.{" "}
+          reference guide. <b>Frontiers in psychology</b>, 12, 604977.{" "}
           <a
             href="https://doi.org/10.3389/fpsyg.2021.604977"
             target="_blank"
@@ -1749,7 +1749,7 @@ const Quellen = {
         <li>
           Nelson, J. D. (2005). Finding Useful Questions: On Bayesian
           Diagnosticity, Probability, Impact, and Information Gain.{" "}
-          <i>Psychological Review, 112</i>(4), 979–999.{" "}
+          <b>Psychological Review, 112</b>(4), 979–999.{" "}
           <a
             href="https://doi.org/10.1037/0033-295X.112.4.979"
             target="_blank"
@@ -1762,7 +1762,7 @@ const Quellen = {
         <li>
           Kern, L., & Doherty, M. E. (1982). ‘Pseudodiagnosticity’ in an
           idealized medical problem-solving environment.{" "}
-          <i>Academic Medicine, 57</i>(2), 100–104.{" "}
+          <b>Academic Medicine, 57</b>(2), 100–104.{" "}
           <a
             href="https://doi.org/10.1097/00001888-198202000-00004"
             target="_blank"
@@ -1776,7 +1776,7 @@ const Quellen = {
           Chromik, M., Eiband, M., Buchner, F., Krüger, A., & Butz, A. (2021). I
           Think I Get Your Point, AI! The Illusion of Explanatory Depth in
           Explainable AI.{" "}
-          <i>26th International Conference on Intelligent User Interfaces</i>,
+          <b>26th International Conference on Intelligent User Interfaces</b>,
           307–317.{" "}
           <a
             href="https://doi.org/10.1145/3397481.3450644"
@@ -1791,7 +1791,7 @@ const Quellen = {
           Schrills, T., & Franke, T. (2023). How Do Users Experience
           Traceability of AI Systems? Examining Subjective Information
           Processing Awareness in Automated Insulin Delivery (AID) Systems.{" "}
-          <i>ACM Transactions on Interactive Intelligent Systems, 13</i>(4),
+          <b>ACM Transactions on Interactive Intelligent Systems, 13</b>(4),
           1–34.{" "}
           <a
             href="https://doi.org/10.1145/3588594"
@@ -1805,10 +1805,10 @@ const Quellen = {
         <li>
           Bartlett, M. L., & McCarley, J. S. (2017). Benchmarking Aided Decision
           Making in a Signal Detection Task.{" "}
-          <i>
+          <b>
             Human Factors: The Journal of the Human Factors and Ergonomics
             Society, 59
-          </i>
+          </b>
           (6), 881–900.{" "}
           <a
             href="https://doi.org/10.1177/0018720817700258"
@@ -1824,7 +1824,7 @@ const Quellen = {
           Counterfactuals, Ones People Can Understand: Psychologically-Plausible
           Case-Based Counterfactuals Using Categorical Features for Explainable
           AI (XAI). In M. T. Keane & N. Wiratunga (Eds.),{" "}
-          <i>Case-Based Reasoning Research and Development</i> (Vol. 13405, pp.
+          <b>Case-Based Reasoning Research and Development</b> (Vol. 13405, pp.
           63–78). Springer International Publishing.{" "}
           <a
             href="https://doi.org/10.1007/978-3-031-14923-8_5"
@@ -1838,7 +1838,7 @@ const Quellen = {
         <li>
           Gianfagna, L., & Di Cecco, A. (2021). Explainable AI: Needs,
           Opportunities, and Challenges. In L. Gianfagna & A. Di Cecco,{" "}
-          <i>Explainable AI with Python</i> (pp. 27–46). Springer International
+          <b>Explainable AI with Python</b> (pp. 27–46). Springer International
           Publishing.{" "}
           <a
             href="https://doi.org/10.1007/978-3-030-68640-6_2"
@@ -1854,9 +1854,9 @@ const Quellen = {
           What clinicians want: Contextualizing explainable machine learning for
           clinical end use. In F. Doshi-Velez, J. Fackler, K. Jung, D. Kale, R.
           Ranganath, B. Wallace, & J. Wiens (Eds.),{" "}
-          <i>
+          <b>
             Proceedings of the 4th Machine Learning for Healthcare Conference
-          </i>{" "}
+          </b>{" "}
           (Vol. 106, pp. 359–380). PMLR.{" "}
           <a
             href="https://proceedings.mlr.press/v106/tonekaboni19a.html"
@@ -1870,9 +1870,9 @@ const Quellen = {
         <li>
           Le, T., Miller, T., Singh, R., & Sonenberg, L. (2023). Explaining
           Model Confidence Using Counterfactuals.{" "}
-          <i>
+          <b>
             Proceedings of the AAAI Conference on Artificial Intelligence, 37
-          </i>
+          </b>
           (10), 11856–11864.{" "}
           <a
             href="https://doi.org/10.1609/aaai.v37i10.26399"
@@ -1885,7 +1885,7 @@ const Quellen = {
 
         <li>
           Doshi-Velez, F., & Kim, B. (2017).{" "}
-          <i>Towards A Rigorous Science of Interpretable Machine Learning</i>{" "}
+          <b>Towards A Rigorous Science of Interpretable Machine Learning</b>{" "}
           (No. arXiv:1702.08608). arXiv.{" "}
           <a
             href="http://arxiv.org/abs/1702.08608"
@@ -1899,10 +1899,10 @@ const Quellen = {
         <li>
           Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M.,
           Nair, B., Katz, R., Himmelfarb, J., Bansal, N., & Lee, S.-I. (2019).
-          <i>
+          <b>
             Explainable AI for Trees: From Local Explanations to Global
             Understanding
-          </i>{" "}
+          </b>{" "}
           (No. arXiv:1905.04610). arXiv.{" "}
           <a
             href="http://arxiv.org/abs/1905.04610"

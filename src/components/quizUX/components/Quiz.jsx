@@ -23,7 +23,6 @@ const Quiz = () => {
     exercises,
     setExercises,
   } = useContext(QuizContext);
-  console.log("ye: ", exercises);
 
   // save all circles in a graph-like structure (directed); with their topic, x and y position (in svg) and what circle is reachable
   const pathGraph = {
@@ -65,11 +64,7 @@ const Quiz = () => {
 
   const [activeCircle, setActiveCircle] = useState("szenario1"); // which circle is next
   const [lastClicked, setLastClicked] = useState("");
-  const [possibleCircles, setPossibleCircles] = useState([
-    "szenario1",
-    "szenario2",
-    "szenario3",
-  ]); // which circles can also be clicked currently
+  const [possibleCircles, setPossibleCircles] = useState(["szenario1"]); // which circles can also be clicked currently
   const [completedCircles, setCompletedCircles] = useState([]);
   const [hoveredCircle, setHoveredCircle] = useState("");
   const [correctCircles, setCorrectCircles] = useState([]); // correctly answered
@@ -520,7 +515,7 @@ const Quiz = () => {
   // resets everything back to start state
   const handleReset = () => {
     setCompletedCircles([]);
-    setPossibleCircles(["szenario1", "szenario2", "szenario3"]);
+    setPossibleCircles(["szenario1"]);
     setCompletedAtLeastOnce(false);
     setCurrentTopic(topicTitles[0]);
     setActiveCircle("szenario1");
@@ -619,7 +614,7 @@ const Quiz = () => {
             stroke={isReachable ? "white" : color}
             className={`${
               isReachable && isHovered ? styles.circle_active_hover : ""
-            } ${isSzenario && isHovered ? "opacity-80" : ""}`}
+            } ${isReachable && isSzenario && isHovered ? "opacity-80" : ""}`}
             strokeWidth="2px"
             strokeDasharray={
               isSzenario

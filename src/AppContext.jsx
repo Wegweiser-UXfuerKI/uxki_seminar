@@ -39,6 +39,27 @@ const AppProvider = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Temporarily deactivated modules
+  const disabledModules = [
+    "ux-bezogene-ki-eigenschaften",
+    "dateninput",
+    "verarbeitung",
+    "ki-ergebnisse",
+    "identifikation-prozesse",
+  ];
+
+  // Disabled subtopics for specific modules
+  const disabledSubtopics = {
+    "ux-und-usability": [
+      "usability",
+      "nutzungskontext",
+      "user-experience",
+      "mensch-computer-interaktion",
+      "evaluation",
+      "quellen",
+    ],
+  };
+
   /**
    * If the location is a direct link to a subtopic, check if the subtopic exists
    * and navigate to the subtopic if it does, or the module if it doesn't.
@@ -119,6 +140,8 @@ const AppProvider = ({ children }) => {
     setScrollToChapter,
     theme,
     setTheme,
+    disabledModules,
+    disabledSubtopics,
   };
 
   return (

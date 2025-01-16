@@ -15,7 +15,8 @@ import UXButton from "./UXButton";
  * @returns {JSX.Element} The rendered ChapterSwitch component.
  */
 export const ChapterSwitch = () => {
-  const { selectedModuleLink, selectedSubtopicLink } = useContext(AppContext);
+  const { selectedModuleLink, selectedSubtopicLink, disabledSubtopics } =
+    useContext(AppContext);
   const [prevChapterLink, setPrevChapterLink] = useState(null);
   const [nextChapterLink, setNextChapterLink] = useState(null);
   const [prevChapterName, setPrevChapterName] = useState(null);
@@ -25,13 +26,31 @@ export const ChapterSwitch = () => {
    * Updates the links for the previous and next chapters whenever the selected module or subtopic changes.
    */
   useEffect(() => {
-    setPrevChapterLink(
-      getPreviousSubtopicLink(selectedModuleLink, selectedSubtopicLink)
-    );
-    setNextChapterLink(
-      getNextSubtopicLink(selectedModuleLink, selectedSubtopicLink)
-    );
-  }, [selectedModuleLink, selectedSubtopicLink]);
+    const findValidChapterLink = (direction) => {
+      let currentLink =
+        direction === "previous"
+          ? getPreviousSubtopicLink(selectedModuleLink, selectedSubtopicLink)
+          : getNextSubtopicLink(selectedModuleLink, selectedSubtopicLink);
+
+      while (
+        currentLink &&
+        disabledSubtopics[selectedModuleLink]?.includes(currentLink)
+      ) {
+        currentLink =
+          direction === "previous"
+            ? getPreviousSubtopicLink(selectedModuleLink, currentLink)
+            : getNextSubtopicLink(selectedModuleLink, currentLink);
+      }
+
+      return currentLink;
+    };
+
+    const prevLink = findValidChapterLink("previous");
+    const nextLink = findValidChapterLink("next");
+
+    setPrevChapterLink(prevLink);
+    setNextChapterLink(nextLink);
+  }, [selectedModuleLink, selectedSubtopicLink, disabledSubtopics]);
 
   /**
    * Updates the names of the previous and next chapters based on their links.

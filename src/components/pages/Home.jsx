@@ -4,29 +4,13 @@ import HomeModuleCard from "../HomeModuleCard";
 import { AppContext } from "../../AppContext";
 
 const Home = () => {
-  // Temporarily deactivated modules
-  const disabledModules = [
-    "ux-bezogene-ki-eigenschaften",
-    "dateninput",
-    "verarbeitung",
-    "ki-ergebnisse",
-    "identifikation-prozesse",
-  ];
-
-  // Disabled subtopics for specific modules
-  const disabledSubtopics = {
-    "ux-und-usability": [
-      "usability",
-      "nutzungskontext",
-      "user-experience",
-      "mensch-computer-interaktion",
-      "evaluation",
-      "quellen",
-    ],
-  };
-
   const modulesData = getModuleLinksAndNames();
-  const { scrollToChapter, setScrollToChapter } = useContext(AppContext);
+  const {
+    scrollToChapter,
+    setScrollToChapter,
+    disabledModules,
+    disabledSubtopics,
+  } = useContext(AppContext);
   const moduleRefs = useRef([]);
 
   // Smooth scrolling to the specific chapter if scrollToChapter is set

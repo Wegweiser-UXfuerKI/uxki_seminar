@@ -61,7 +61,7 @@
   --line-height-base: 1.5;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --bg: var(--br);
     --text: var(--w);
@@ -84,7 +84,7 @@
       inset 1px -0.5px 2px var(--box), 2px 4px 16px rgba(0, 0, 0, 0.16),
       1px 2px 2px -2px var(--fg);
   }
-}
+} */
 
 :root.dark {
   --bg: var(--br);
@@ -114,7 +114,7 @@
   font-size: var(--scale2);
   line-height: var(--line-height-base);
   color: var(--text);
-  letter-spacing: calc(0.012 * var(--base-size));
+  letter-spacing: calc(0.05 * var(--base-size));
   word-spacing: calc(0.16 * var(--base-size));
   box-sizing: border-box;
 }
@@ -276,8 +276,8 @@ header nav a:first-child {
 /* Typographie */
 .mainTitle,
 h1 {
-  font-size: var(--scale7);
-  line-height: var(--line-height-base);
+  font-size: var(--scale8);
+  line-height: calc(0.8 * var(--line-height-base));
   font-weight: bold;
   position: relative;
 }
@@ -289,7 +289,7 @@ h1 {
   line-height: 1;
   position: absolute;
   left: 0;
-  bottom: -8px;
+  bottom: -14px;
   opacity: 0.24;
   pointer-events: none;
 }
@@ -297,7 +297,6 @@ h1 {
 .secondTitle,
 h2 {
   font-size: var(--scale5);
-  line-height: var(--line-height-base);
   font-weight: bold;
   margin-bottom: var(--scale4);
 }
@@ -305,7 +304,6 @@ h2 {
 .thirdTitle,
 h3 {
   font-size: var(--scale4);
-  line-height: var(--line-height-base);
   font-weight: 600;
   margin-bottom: var(--scale2);
 }
@@ -313,8 +311,7 @@ h3 {
 .fourthTitle,
 h4 {
   font-size: var(--scale3);
-  line-height: var(--line-height-base);
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: var(--base-size);
 }
 
@@ -323,6 +320,11 @@ li {
   font-size: calc(var(--scale2) + 0.24vmin);
   line-height: calc(var(--line-height-base) * 1.2);
   font-weight: 300;
+}
+
+:root.dark p,
+:root.dark li {
+  font-weight: 250;
 }
 
 /* Adjust spacing after <p>, <ul>, <ol> unless another of the same follows */
@@ -338,7 +340,6 @@ p + p {
 
 .smallTextSize {
   font-size: calc(var(--base-size) + 0.4vmin);
-  line-height: var(--line-height-base);
 }
 
 b,
@@ -346,6 +347,12 @@ strong {
   font-weight: 600;
   font-style: normal;
   font-size: inherit;
+}
+
+:root.dark b,
+:root.dark strong {
+  font-weight: 700;
+  color: white;
 }
 
 i {

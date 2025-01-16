@@ -61,7 +61,7 @@
   --line-height-base: 1.5;
 }
 
-/* @media (prefers-color-scheme: dark) {
+ @media (prefers-color-scheme: dark) {
   :root {
     --bg: var(--br);
     --text: var(--w);
@@ -84,7 +84,7 @@
       inset 1px -0.5px 2px var(--box), 2px 4px 16px rgba(0, 0, 0, 0.16),
       1px 2px 2px -2px var(--fg);
   }
-} */
+}
 
 :root.dark {
   --bg: var(--br);
@@ -349,10 +349,9 @@ strong {
   font-size: inherit;
 }
 
-:root.dark b,
-:root.dark strong {
+:root.dark section b,
+:root.dark section strong {
   font-weight: 700;
-  color: white;
 }
 
 i {
@@ -505,10 +504,12 @@ main li a:hover::after,
 
   h1 {
     font-size: var(--scale5) !important;
+    hyphens: auto;
   }
 
   h2 {
     font-size: var(--scale4) !important;
+    hyphens: auto;
   }
 
   h3 {

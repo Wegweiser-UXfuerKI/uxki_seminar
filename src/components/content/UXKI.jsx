@@ -2,6 +2,7 @@ import { ReactComponent as imageElement } from "../../assets/icons/ux-ki.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import SubTopic from "../SubTopic";
+import List from "../texts/List";
 
 const moduleLink = "ki-bezogene-ux";
 const moduleName = "KI-bezogene UX";
@@ -21,7 +22,7 @@ const WahrgenommeneAutonomie = {
         title={"Perceived Autonomy"}
       />
     </section>,
-    <section>
+    <section id="definition">
       <h2>1. Definition wahrgenommener Autonomie</h2>
       <p>
         Die <b>wahrgenommene Autonomie</b> beschreibt, inwiefern Nutzende eines
@@ -32,7 +33,7 @@ const WahrgenommeneAutonomie = {
         wahrgenommen wird oder ob es lediglich als ausführendes Werkzeug dient.
       </p>
     </section>,
-    <section>
+    <section id="konzepte">
       <h2>2. Relevante Konzepte und Modelle</h2>
       <h3>Automatisierungsstufen (Levels of Automation)</h3>
       <p>
@@ -163,7 +164,7 @@ const WahrgenommeneAutonomie = {
         </li>
       </ol>
     </section>,
-    <section>
+    <section id="studie">
       <h2>3. Studien zur User Experience und KI</h2>
       <h4>
         Kaber & Endsley (2004): The effects of level of automation and adaptive
@@ -221,7 +222,7 @@ const WahrgenommeneAutonomie = {
         </ol>
       </p>
     </section>,
-    <section>
+    <section id="operationalisierung">
       <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
       <h4>Zoubir (2024): Preference for Automation Types Scale (PATS)</h4>
       <p>
@@ -242,7 +243,7 @@ const WahrgenommeneAutonomie = {
         entscheidend für das Wohlbefinden und die autonome Motivation.
       </p>
     </section>,
-    <section>
+    <section id="guidelines">
       <h2>5. Design-Guidelines für eine gute UX</h2>
       <h3>1. Adaptive Automatisierung ermöglichen</h3>
       <h4>Beispiel: Verkehrsmanagementsysteme für städtischen Verkehr</h4>
@@ -254,7 +255,7 @@ const WahrgenommeneAutonomie = {
         Verkehrsaufkommen und speziellen Ereignissen die Automatisierungsstufe
         flexibel anpassen.
       </p>
-      <p>
+      <p className="specialText">
         Diese Anpassungsmöglichkeit erlaubt eine präzise und flexible Steuerung
         des Verkehrsflusses, reduziert Staus und priorisiert den öffentlichen
         Verkehr. Die Nutzenden behalten dabei die Kontrolle und können den
@@ -269,7 +270,7 @@ const WahrgenommeneAutonomie = {
         automatisierte Empfehlungen für Evakuierungsrouten und Einsatzplanungen,
         die Einsatzleiter bei Bedarf manuell anpassen können.
       </p>
-      <p>
+      <p className="specialText">
         Dank der Echtzeitinformationen können Einsatzkräfte schnell und präzise
         Entscheidungen treffen. Die Kombination aus automatisierten Vorschlägen
         und menschlichem Eingriff auf mittleren Automatisierungsstufen sorgt für
@@ -284,7 +285,7 @@ const WahrgenommeneAutonomie = {
         den Fokus je nach Dringlichkeit und Prioritäten anpassen und die
         Detailtiefe der Analysen steuern.
       </p>
-      <p>
+      <p className="specialText">
         Diese Flexibilität ermöglicht es den Nutzenden, auf spezifische
         Umweltfaktoren einzugehen und die Überwachung an aktuelle Bedürfnisse
         anzupassen. Dadurch wird eine maßgeschneiderte Umweltpolitik möglich,
@@ -299,7 +300,7 @@ const WahrgenommeneAutonomie = {
         visualisiert, und das System erklärt, warum bestimmte Diagnosen
         vorgeschlagen wurden.
       </p>
-      <p>
+      <p className="specialText">
         Diese Transparenz stärkt das Vertrauen der Ärzte in die KI, da sie genau
         nachvollziehen können, wie die Empfehlungen zustande kommen. Dies
         fördert einen effizienteren und informierten Entscheidungsprozess.
@@ -310,7 +311,7 @@ const WahrgenommeneAutonomie = {
         transparent, wie Ampelschaltungen optimiert oder bestimmte Routen
         priorisiert werden.
       </p>
-      <p>
+      <p className="specialText">
         Durch die klare Kommunikation der Algorithmen und Entscheidungsprozesse
         wird das Vertrauen der Öffentlichkeit gestärkt. Nutzende können
         nachvollziehen, wie Entscheidungen getroffen wurden, was ihre Akzeptanz
@@ -327,7 +328,7 @@ const WahrgenommeneAutonomie = {
         oder Fahrgemeinschaften, die den individuellen Präferenzen der Nutzenden
         entsprechen.
       </p>
-      <p>
+      <p className="specialText">
         Diese nutzerzentrierte Anpassung gibt den Bürgern das Gefühl der
         Kontrolle über ihre Mobilitätsentscheidungen. Das Ergebnis ist eine
         höhere Zufriedenheit, da die Plattform auf persönliche Vorlieben
@@ -335,21 +336,16 @@ const WahrgenommeneAutonomie = {
         Förderung nachhaltiger Mobilität.
       </p>
     </section>,
-    <section>
-      <h2>Fazit</h2>
-      <p>
-        Die <b>wahrgenommene Autonomie</b> in der Interaktion mit KI-Systemen
-        ist entscheidend für die Nutzerzufriedenheit und das Vertrauen. Die
-        Konzepte und Modelle zeigen, dass unterschiedliche Stufen der
-        Automatisierung und Anpassungsfähigkeit Einfluss auf die psychologische
-        Wahrnehmung haben. Studien verdeutlichen, dass <b>Transparenz</b>,{" "}
-        <b>Flexibilität</b> und die Möglichkeit zur Anpassung der
-        Automatisierungsgrade die wahrgenommene Autonomie stärken. Die Anwendung
-        entsprechender Designrichtlinien, wie adaptive Automatisierung und{" "}
-        <b>transparente Entscheidungsprozesse</b>, fördert ein Gefühl der
-        Kontrolle und Selbstbestimmung, was zu einer effektiveren und
-        zufriedenstellenderen Nutzung von KI-Systemen führt.
-      </p>
+    <section id="fazit">
+      <h2>6. Fazit</h2>
+      <List
+        items={[
+          "Die <b>wahrgenommene Autonomie</b>e in der Interaktion mit KI-Systemen beeinflusst <b>Nutzerzufriedenheit</b> und <b>Vertrauen</b>.",
+          "<b>Automatisierungsstufen</b> und <b>Anpassungsfähigkeit</b> haben Einfluss auf die psychologische Wahrnehmung.",
+          "<b>Transparenz</b>, <b>Flexibilität</b> und <b>Anpassung der Automatisierungsgrade</b> stärken die wahrgenommene Autonomie.",
+          "<b>Adaptive Automatisierung</b> und <b>transparente Entscheidungsprozesse</b> fördern <b>Kontrolle</b> und <b>Selbstbestimmung</b>, was zu effektiverer und zufriedenstellender Nutzung führt.",
+        ]}
+      ></List>
     </section>,
   ],
 };
@@ -360,10 +356,7 @@ const WahrgenommenesSituationsbewusstsein = {
   description:
     "Dies bezieht sich auf das Verständnis der Nutzende über ihre Umgebung und die Änderungen, die durch das KI-System verursacht werden.",
   content: [
-    <ChapterHeader
-      text={"Wahrgenommenes Situationsbewusstsein (SA)"}
-      number={3}
-    />,
+    <ChapterHeader text={"Wahrgenommenes Situationsbewusstsein"} number={3} />,
     <section>
       <VideoContainer
         link={
@@ -372,8 +365,8 @@ const WahrgenommenesSituationsbewusstsein = {
         title={"Perceived Situationawareness"}
       />
     </section>,
-    <section>
-      <h2>1. Definition Situationsbewusstsein (SA)</h2>
+    <section id="definition">
+      <h2>1. Definition Situationsbewusstsein</h2>
       <p>
         Situationsbewusstsein (Situational Awareness, SA) bedeutet, die Umgebung
         und ihre wichtigsten Details zu verstehen. Es umfasst auch das Erkennen
@@ -392,7 +385,7 @@ const WahrgenommenesSituationsbewusstsein = {
         title={"Definition Situationawareness"}
       />
     </section>,
-    <section>
+    <section id="konzepte">
       <h2>2. Relevante Konzepte und Modelle</h2>
       <h3>Drei Ebenen des Situationsbewusstsein laut Endsley (2000):</h3>
       <ol>
@@ -430,7 +423,7 @@ const WahrgenommenesSituationsbewusstsein = {
         </li>
       </ol>
     </section>,
-    <section>
+    <section id="studien">
       <h2>3. Studien zur User Experience und KI</h2>
       <p>
         Studien wie die von <b>Edgar et al. (2018)</b> untersuchen das
@@ -459,7 +452,7 @@ const WahrgenommenesSituationsbewusstsein = {
         Nützlichkeit zusammenhängt als das faktische Situationsbewusstsein.
       </p>
     </section>,
-    <section>
+    <section id="operationalisierung">
       <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
       <h4>
         Schrills & Franke (2023): SIPA (Subjective Information Processing
@@ -483,56 +476,46 @@ const WahrgenommenesSituationsbewusstsein = {
         Situationsbewusstseins.
       </p>
     </section>,
-    <section>
-      <h2>Design-Guidelines zur Förderung des Situationsbewusstseins</h2>
+    <section id="guidelines">
+      <h2>5. Design-Guidelines zur Förderung des Situationsbewusstseins</h2>
       <h3>1. Transparenz sicherstellen</h3>
       <p>
         Systeme sollten alle relevanten Elemente der Informationsverarbeitung
         offenlegen und den Nutzenden zugänglich machen.
       </p>
-      <p>
-        <b>
-          Beispiel: Ein KI-gestütztes Dashboard für Ärzte zeigt visuell, welche
-          Daten zur Diagnosestellung verwendet wurden.
-        </b>{" "}
+      <p className="specialText">
+        Beispiel: Ein KI-gestütztes Dashboard für Ärzte zeigt visuell, welche
+        Daten zur Diagnosestellung verwendet wurden.
       </p>
       <h3>2. Verständlichkeit fördern</h3>
       <p>
         Intuitive Benutzeroberflächen und kontextbezogene Hilfen sollten die
         Nutzung von Systemen erleichtern.
       </p>
-      <p>
-        <b>
-          Beispiel: Medizinische Diagnose-Tools heben die wichtigsten
-          Informationen hervor und bieten Hilfetexte zur Erklärung komplexer
-          Funktionen.
-        </b>{" "}
+      <p className="specialText">
+        Beispiel: Medizinische Diagnose-Tools heben die wichtigsten
+        Informationen hervor und bieten Hilfetexte zur Erklärung komplexer
+        Funktionen.
       </p>
       <h3>3. Vorhersehbarkeit verbessern</h3>
       <p>
         Systeme sollten Rückmeldungen geben, die die Auswirkungen von Handlungen
         aufzeigen, z. B. durch Simulationen oder Vorschauen.
       </p>
-      <p>
-        <b>
-          Beispiel: Ein System zur Verkehrssteuerung könnte simulieren, wie sich
-          geänderte Ampelphasen auf den Verkehr auswirken, bevor sie tatsächlich
-          implementiert werden.
-        </b>
+      <p className="specialText">
+        Beispiel: Ein System zur Verkehrssteuerung könnte simulieren, wie sich
+        geänderte Ampelphasen auf den Verkehr auswirken, bevor sie tatsächlich
+        implementiert werden.
       </p>
     </section>,
-    <section>
-      <h2>Fazit</h2>
-      <p>
-        In dieser Einheit haben wir das Konzept des{" "}
-        <b>Situationsbewusstseins (SA)</b> und dessen Bedeutung für die
-        Interaktion mit <b>KI-Systemen</b> untersucht. Situationsbewusstsein
-        umfasst die <b>Wahrnehmung</b>, das <b>Verständnis</b> und die{" "}
-        <b>Projektion</b> relevanter Informationen. Die Modelle von{" "}
-        <b>Endsley</b> und die SIPA-Facetten betonen die Notwendigkeit von{" "}
-        <b>Transparenz</b>, <b>Verständlichkeit</b> und <b>Vorhersehbarkeit</b>{" "}
-        für effektives Situationsbewusstsein.
-      </p>
+    <section id="fazit">
+      <h2>6. Fazit</h2>
+      <List
+        items={[
+          "<b>Situationsbewusstseins (SA)</b> umfasst die <b>Wahrnehmung</b>, das <b>Verständnis</b> und die <b>Projektion</b> relevanter Informationen.",
+          "<b>Endsley</b> und die SIPA-Facetten betonen die Notwendigkeit von <b>Transparenz</b>, <b>Verständlichkeit</b> und <b>Vorhersehbarkeit</b> für effektives SA.",
+        ]}
+      ></List>
     </section>,
   ],
 };
@@ -552,7 +535,7 @@ const WahrgenommeneInformationOverload = {
         title={"Wahrgenommene Mentale Belastung"}
       />
     </section>,
-    <section>
+    <section id="definition">
       <h2>1. Definition Mentale Belastung</h2>
       <p>
         Mentale Arbeitsbelastung (Mental Workload) beschreibt den kognitiven
@@ -561,7 +544,7 @@ const WahrgenommeneInformationOverload = {
         verarbeiten, Entscheidungen zu treffen und Aktionen durchzuführen.
       </p>
     </section>,
-    <section>
+    <section id="konzepte">
       <h2>2. Relevante Konzepte und Modelle</h2>
       <p>
         Mentale Arbeitsbelastung ist ein zentrales Konstrukt im Bereich der
@@ -572,7 +555,7 @@ const WahrgenommeneInformationOverload = {
         mentale Arbeitsbelastung wieder erhöhen. Sie ist daher eine wichtige
         Metrik für die Bewertung von XAI.
       </p>
-      <p>
+      <p className="specialText">
         Wenn Menschen durch kognitive Zwänge bewusster über Entscheidungen
         nachdenken sollen, kann das zwar positive Effekte haben, aber die höhere
         mentale Anstrengung könnte dazu führen, dass sie diese Methode weniger
@@ -580,7 +563,7 @@ const WahrgenommeneInformationOverload = {
         verfügbar ist.
       </p>
     </section>,
-    <section>
+    <section id="studie">
       <h2>3. Studien zur User Experience und KI</h2>
       <p>
         Ergebnisse mehrerer Studien z. B. von <b>Sewnath und Crijnen (2021)</b>{" "}
@@ -596,7 +579,7 @@ const WahrgenommeneInformationOverload = {
         bewirken.
       </p>
     </section>,
-    <section>
+    <section id="operationalisierung">
       <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
       <h4>Hart (2006): NASA Task Load Index (NASA-TLX) </h4>
       <p>
@@ -612,75 +595,63 @@ const WahrgenommeneInformationOverload = {
         <li>Anstrengung</li>
         <li>Frustration</li>
       </ul>
-      <p>
+      <p className="specialText">
         Der NASA-TLX ist eine hilfreiche Methode, um die kognitive Belastung in
         verschiedenen Arbeitsumgebungen, einschließlich der Nutzung von
         KI-Systemen, zu erfassen.
       </p>
     </section>,
-    <section>
+    <section id="guidelines">
       <h2>5. Design-Guidelines zur Reduktion der kognitiven Belastung</h2>
       <h4>1. Vereinfachung von Informationen</h4>
       <p>
         Informationen sollten minimalistisch dargestellt und nur schrittweise
         offengelegt werden, um die kognitive Belastung zu reduzieren.
       </p>
-      <p>
-        <b>
-          Beispiel: Ein KI-gestütztes Dashboard zeigt nur die wesentlichen
-          Informationen und blendet zusätzliche Details bei Bedarf ein.
-        </b>
+      <p className="specialText">
+        Beispiel: Ein KI-gestütztes Dashboard zeigt nur die wesentlichen
+        Informationen und blendet zusätzliche Details bei Bedarf ein.
       </p>
       <h4>2. Anpassbarkeit der Informationsmenge</h4>
       <p>
         Systeme sollten es den Nutzenden ermöglichen, die Menge an Informationen
         anzupassen, die sie benötigen, um Entscheidungen zu treffen.
       </p>
-      <p>
-        <b>
-          Beispiel: Personalisierte Einstellungen, die es den Nutzenden
-          erlauben, festzulegen, wie viele Details sie sehen möchten.
-        </b>
+      <p className="specialText">
+        Beispiel: Personalisierte Einstellungen, die es den Nutzenden erlauben,
+        festzulegen, wie viele Details sie sehen möchten.
       </p>
       <h4>3. Fokussierung auf kritische Informationen</h4>
       <p>
         Das System sollte kontextbezogen die wichtigsten Informationen
-        priorisieren.{" "}
+        priorisieren.
       </p>
-      <p>
-        <b>
-          Beispiel: In einem Verkehrsleitsystem werden in einer Notfallsituation
-          nur die kritischsten Daten hervorgehoben, wie z. B. gesperrte Straßen
-          oder gefährliche Wetterbedingungen.
-        </b>
+      <p className="specialText">
+        Beispiel: In einem Verkehrsleitsystem werden in einer Notfallsituation
+        nur die kritischsten Daten hervorgehoben, wie z. B. gesperrte Straßen
+        oder gefährliche Wetterbedingungen.
       </p>
       <h4>4. Reduktion der kognitiven Belastung durch Automatisierung</h4>
       <p>
         Routinetätigkeiten sollten automatisiert werden, um die geistige
-        Anstrengung der Nutzenden zu minimieren.{" "}
+        Anstrengung der Nutzenden zu minimieren.
       </p>
-      <p>
-        <b>
-          Beispiel: Ein KI-System im Verwaltungsbereich könnte die automatische
-          Überprüfung von Anträgen übernehmen, sodass sich Mitarbeitende auf
-          Ausnahmen und komplexe Fälle konzentrieren können.
-        </b>
+      <p className="specialText">
+        Beispiel: Ein KI-System im Verwaltungsbereich könnte die automatische
+        Überprüfung von Anträgen übernehmen, sodass sich Mitarbeitende auf
+        Ausnahmen und komplexe Fälle konzentrieren können.
       </p>
     </section>,
-    <section>
-      <h2>Fazit</h2>
-      <p>
-        Die Lerneinheit verdeutlicht, dass <b>mentale Arbeitsbelastung</b>{" "}
-        besonders in der <b>erklärbaren KI (XAI)</b> eine wichtige Rolle spielt:
-        Während <b>Automatisierung</b> die Verarbeitung erleichtern soll, können
-        zusätzliche <b>Erklärungen</b> die kognitive Belastung erhöhen und zu{" "}
-        <b>Informationsüberlastung</b> führen. Studien betonen daher die
-        Bedeutung eines gut gestalteten Systems, das Informationen{" "}
-        <b>reduziert</b>, <b>anpassbar</b> macht und <b>priorisiert</b>, um
-        Nutzer effektiv zu entlasten. Der <b>NASA-TLX</b> ist hierbei ein
-        nützliches Instrument zur Bewertung der Arbeitsbelastung und Optimierung
-        der Benutzerfreundlichkeit.
-      </p>
+    <section id="fazit">
+      <h2>6. Fazit</h2>
+      <List
+        items={[
+          "<b>Mentale Arbeitsbelastung</b> ist in der <b>erklärbaren KI (XAI)</b> entscheidend.",
+          "Automatisierung erleichtert die Verarbeitung, <b>Erklärungen</b> können jedoch <b>Informationsüberlastung</b> verursachen.",
+          "Wichtige Systemmerkmale: <b>Reduzierung, Anpassbarkeit und Priorisierung von Informationen</b>, um Nutzer effektiv zu entlasten.",
+          "Der <b>NASA-TLX</b> hilft bei der Bewertung der Arbeitsbelastung und Verbesserung der Benutzerfreundlichkeit.",
+        ]}
+      ></List>
     </section>,
   ],
 };
@@ -700,7 +671,7 @@ const PerceivedTrustworthiness = {
         title={"Wahrgenommene Vertrauenswürdigkeit"}
       />
     </section>,
-    <section>
+    <section id="definition">
       <h2>1. Definition Wahrgenommene Vertrauenswürdigkeit</h2>
       <p>
         Im Kontext von KI-Systemen beschreibt die wahrgenommene
@@ -711,13 +682,13 @@ const PerceivedTrustworthiness = {
         Entscheidungen eines Systems zu verlassen, ohne es direkt überwachen
         oder kontrollieren zu können.
       </p>
-      <p>
+      <p className="specialText">
         Vertrauen ist zentral für die Akzeptanz und Nutzung von KI-Systemen,
         insbesondere im Bereich der erklärbaren Künstlichen Intelligenz (XAI),
         wo ethische und soziale Aspekte besonders relevant sind.
       </p>
     </section>,
-    <section>
+    <section id="konzepte">
       <h2>2. Relevante Konzepte und Modelle</h2>
       <h4>
         Drei Schlüsselfaktoren des Vertrauens in Systeme nach Mayer et al.
@@ -819,7 +790,7 @@ const PerceivedTrustworthiness = {
         Umfeld können ebenfalls relevant sein.
       </p>
     </section>,
-    <section>
+    <section id="studie">
       <h2>3. Studien zur User Experience und KI</h2>
       <h4>
         Schrills (2024): Einfluss der Systemzuverlässigkeit auf Nutzervertrauen
@@ -866,7 +837,7 @@ const PerceivedTrustworthiness = {
         </li>
       </ol>
     </section>,
-    <section>
+    <section id="operationalisierung">
       <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
       <h4>Jian et al. (2001): Trust in Automation (TiA)-Skala</h4>
       <p>
@@ -879,31 +850,27 @@ const PerceivedTrustworthiness = {
         auf die Nutzung zu verstehen.
       </p>
     </section>,
-    <section>
+    <section id="guidelines">
       <h2>5. Design-Guidelines zur Förderung der Vertrauenswürdigkeit</h2>
       <h4>1. Förderung von Transparenz und Verständlichkeit</h4>
       <p>
         Erklärbare KI (XAI) ermöglicht, dass die Entscheidungen des Systems klar
         und nachvollziehbar sind, was das Vertrauen der Nutzer stärkt.
       </p>
-      <p>
-        <b>
-          Beispiel: Ein Finanzplanungssystem, das seine Berechnungen offenlegt
-          und erklärt, welche Parameter berücksichtigt wurden, hilft Nutzern,
-          die Entscheidungsprozesse nachzuvollziehen.
-        </b>
+      <p className="specialText">
+        Beispiel: Ein Finanzplanungssystem, das seine Berechnungen offenlegt und
+        erklärt, welche Parameter berücksichtigt wurden, hilft Nutzern, die
+        Entscheidungsprozesse nachzuvollziehen.
       </p>
       <h4>2. Sicherstellung von Systemleistung und Zuverlässigkeit</h4>
       <p>
-        ysteme sollten verlässlich arbeiten und klare Rückmeldungen geben, um
+        Systeme sollten verlässlich arbeiten und klare Rückmeldungen geben, um
         Vertrauen aufzubauen und Unsicherheiten zu reduzieren.
       </p>
-      <p>
-        <b>
-          Beispiel: Ein medizinisches KI-System, das bei der Diagnose
-          Fehlerindikatoren und Bestätigungen anzeigt, schafft Vertrauen in die
-          Genauigkeit und Zuverlässigkeit der Ergebnisse.
-        </b>
+      <p className="specialText">
+        Beispiel: Ein medizinisches KI-System, das bei der Diagnose
+        Fehlerindikatoren und Bestätigungen anzeigt, schafft Vertrauen in die
+        Genauigkeit und Zuverlässigkeit der Ergebnisse.
       </p>
       <h4>3. Stärkung des erlernten Vertrauens</h4>
       <p>
@@ -911,24 +878,20 @@ const PerceivedTrustworthiness = {
         indem sie das Verständnis und die Vertrautheit mit dem System
         verbessern.
       </p>
-      <p>
-        <b>
-          Beispiel: Nutzerfreundliche Tutorials für ein neues KI-gestütztes
-          Verwaltungssystem fördern das grundlegende Vertrauen der Nutzer in das
-          System.
-        </b>
+      <p className="specialText">
+        Beispiel: Nutzerfreundliche Tutorials für ein neues KI-gestütztes
+        Verwaltungssystem fördern das grundlegende Vertrauen der Nutzer in das
+        System.
       </p>
       <h4>4. Förderung von affektivem Vertrauen</h4>
       <p>
         Eine personalisierte Nutzererfahrung und positive User Experience (UX)
         tragen zur Entwicklung von affektivem Vertrauen bei.
       </p>
-      <p>
-        <b>
-          Beispiel: Ein Sprachassistenzsystem, das personalisierte Präferenzen
-          berücksichtigt, stärkt die emotionale Bindung und das Vertrauen der
-          Nutzer in das System.
-        </b>
+      <p className="specialText">
+        Beispiel: Ein Sprachassistenzsystem, das personalisierte Präferenzen
+        berücksichtigt, stärkt die emotionale Bindung und das Vertrauen der
+        Nutzer in das System.
       </p>
       <h4>5. Kontextbezogene Erklärungen für Empfehlungen geben</h4>
       <p>
@@ -936,36 +899,22 @@ const PerceivedTrustworthiness = {
         Erklärungen liefern, die auf die spezifische Entscheidungssituation der
         Nutzer eingehen.
       </p>
-      <p>
-        <b>
-          Beispiel: Ein Personalplanungssystem für das Gesundheitswesen erklärt,
-          warum bestimmte Dienstpläne vorgeschlagen werden, z. B. basierend auf
-          Arbeitslasten oder Personalverfügbarkeit.
-        </b>
+      <p className="specialText">
+        Beispiel: Ein Personalplanungssystem für das Gesundheitswesen erklärt,
+        warum bestimmte Dienstpläne vorgeschlagen werden, z. B. basierend auf
+        Arbeitslasten oder Personalverfügbarkeit.
       </p>
     </section>,
-    <section>
-      <h2>Fazit</h2>
-      <ul>
-        <li>
-          <b>Vertrauen ist entscheidend</b>: <b>Vertrauenswürdigkeit</b> fördert
-          die Akzeptanz von KI-Systemen.
-        </li>
-        <li>
-          <b>Unterschiedliche Vertrauensfaktoren</b>: <b>Fähigkeit</b>,{" "}
-          <b>Integrität</b> und <b>Wohlwollen</b> sind grundlegende Faktoren für
-          Vertrauen.
-        </li>
-        <li>
-          <b>Menschliche Einflüsse berücksichtigen</b>: Vertrauen wird nicht nur
-          durch das System, sondern auch durch menschliche Interaktionen und den{" "}
-          <b>sozialen Kontext</b> beeinflusst.
-        </li>
-        <li>
-          <b>Zuverlässigkeit sichtbar machen</b>: <b>Nutzervertrauen</b> basiert
-          stark auf der wahrgenommenen Zuverlässigkeit des Systems.
-        </li>
-      </ul>
+    <section id="fazit">
+      <h2>6. Fazit</h2>
+      <List
+        items={[
+          "<b>Vertrauen ist entscheidend</b>: <b>Vertrauenswürdigkeit</b> fördert die Akzeptanz von KI-Systemen.",
+          "<b>Unterschiedliche Vertrauensfaktoren</b>: <b>Fähigkeit</b>, <b>Integrität</b> und <b>Wohlwollen</b> sind grundlegende Faktoren für Vertrauen.",
+          "<b>Menschliche Einflüsse berücksichtigen</b>: Vertrauen wird nicht nur durch das System, sondern auch durch menschliche Interaktionen und den <b>sozialen Kontext</b> beeinflusst.",
+          "<b>Zuverlässigkeit sichtbar machen</b>: <b>Nutzervertrauen</b> basiert stark auf der wahrgenommenen Zuverlässigkeit des Systems.",
+        ]}
+      />
     </section>,
   ],
 };
@@ -985,7 +934,7 @@ const PerceivedConfidence = {
         title={"Perceived Confidence"}
       />
     </section>,
-    <section>
+    <section id="definition">
       <h2>1. Definition wahrgenommene Diagnostizität</h2>
       <p>
         Die wahrgenommene Diagnostizität (Perceived Confidence/Diagnosticity)
@@ -993,12 +942,15 @@ const PerceivedConfidence = {
         Entscheidungen zu treffen. Ein System mit hoher Diagnostizität
         unterstützt die Bewertung verschiedener Optionen, sodass Nutzende auf
         Basis der vom System bereitgestellten Informationen die beste
-        Entscheidung treffen können. Je präziser und hilfreicher die Hinweise
-        sind, desto mehr steigt die diagnostische Qualität des Systems und
-        stärkt damit das Vertrauen der Nutzenden.
+        Entscheidung treffen können.
+      </p>
+      <p className="specialText">
+        Je präziser und hilfreicher die Hinweise sind, desto mehr steigt die
+        diagnostische Qualität des Systems und stärkt damit das Vertrauen der
+        Nutzenden.
       </p>
     </section>,
-    <section>
+    <section id="konzepte">
       <h2>2. Relevante Konzepte und Modelle</h2>
       <h3>Auswahl von Handlungsmöglichkeiten</h3>
       <p>
@@ -1010,7 +962,7 @@ const PerceivedConfidence = {
         letztlich Unsicherheit reduziert und die Entscheidungsfindung
         erleichtert.
       </p>
-      <p>
+      <p className="specialText">
         Ein Beispiel dafür ist ein KI-System im Gesundheitswesen, das bei
         Symptomen wie Fieber die Wahrscheinlichkeiten für mögliche Erkrankungen
         wie Grippe oder Erkältung analysiert. Durch das Bereitstellen
@@ -1030,7 +982,7 @@ const PerceivedConfidence = {
         einen geringen diagnostischen Wert, auch wenn es allgemein zur
         Krankheitsdiagnose beiträgt.
       </p>
-      <p>
+      <p className="specialText">
         Dieser Effekt führt zu sogenannten „Pseudo-Diagnosen“, bei denen
         Menschen diagnostisch wenig hilfreiche Daten auswählen und diese für
         ihre Entscheidung nutzen (Kern & Doherty, 1982). Ähnlich wie bei der
@@ -1048,7 +1000,7 @@ const PerceivedConfidence = {
         Optionen gibt, hilft der allgemeine Informationswert mehr.
       </p>
     </section>,
-    <section>
+    <section id="studie">
       <h2>3. Studien zur User Experience und KI</h2>
       <h4>
         Schrills und Franke (2023): Einfluss der Diagnostizität auf Vertrauen
@@ -1079,7 +1031,7 @@ const PerceivedConfidence = {
         der KI an, anstatt auf gezielte, diagnostische Hinweise zu achten.{" "}
       </p>
     </section>,
-    <section>
+    <section id="operationalisierung">
       <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
       <h4>Wahrgenommene Ergebnisdiagnostik:</h4>
       <p>
@@ -1096,7 +1048,7 @@ const PerceivedConfidence = {
         beeinflussen.
       </p>
     </section>,
-    <section>
+    <section id="guidelines">
       <h2>5. Design-Guidelines</h2>
       <p>
         Um Nutzer das Verständnis und Vertrauen in die Entscheidungen einer
@@ -1112,7 +1064,7 @@ const PerceivedConfidence = {
         erklären, dass eine Erhöhung des Einkommens um einen bestimmten Betrag
         zur Bewilligung geführt hätte. Solche „Was wäre wenn“-Erklärungen helfen
         den Nutzenden, die Entscheidungsgrenzen der KI zu verstehen (Warren et
-        al., 2022)
+        al., 2022).
       </p>
       <h4>
         2. Semantische Anreicherung und Heatmaps – Verständlichere
@@ -1147,17 +1099,16 @@ const PerceivedConfidence = {
         validieren (Doshi-Velez and Kim, 2017; Lundberg et al., 2019).
       </p>
     </section>,
-    <section>
-      <h2>Fazit</h2>
-      <p>
-        Die <b>Perceived Confidence / Diagnosticity</b> eines KI-Systems ist
-        entscheidend, um fundierte und präzise Entscheidungen zu treffen.
-        Systeme, die klar diagnostische Informationen bereitstellen, stärken das
-        Vertrauen der Nutzenden und fördern die Akzeptanz und effektive Nutzung
-        der Technologie. Dies ist besonders wichtig in kritischen Bereichen wie
-        dem Gesundheitswesen, wo diagnostische Qualität einen direkten Einfluss
-        auf das Wohl der Gemeinschaft hat.
-      </p>
+    <section id="fazit">
+      <h2>6. Fazit</h2>
+      <List
+        items={[
+          "<b>Die wahrgenommene Diagnostizität</b> eines KI-Systems ist entscheidend für fundierte und präzise Entscheidungen.",
+          "Systeme, die klare diagnostische Informationen bereitstellen, stärken das <b>Vertrauen</b> der Nutzenden sowie die <b>Akzeptanz</b> und <b>effektive Nutzung</b> der Technologie.",
+          "Besonders wichtig ist dies in kritischen Bereichen wie dem <b>Gesundheitswesen</b>.",
+          "Die diagnostische Qualität eines Systems hat direkten Einfluss auf das <b>Wohl der Gemeinschaft</b>.",
+        ]}
+      ></List>
     </section>,
   ],
 };
@@ -1193,13 +1144,11 @@ const Zusammenfassung = {
         der Autonomie und gibt ihnen die Flexibilität, sich bei Bedarf stärker
         auf ihre eigenen Entscheidungen zu verlassen.
       </p>
-      <p>
-        <b>
-          Bieten Sie Nutzenden die Möglichkeit, zwischen verschiedenen
-          Automatisierungsstufen zu wechseln, sodass sie je nach Präferenz oder
-          Aufgabenanforderung selbst entscheiden können, wie viel Kontrolle sie
-          dem System überlassen.
-        </b>
+      <p className="specialText">
+        Bieten Sie Nutzenden die Möglichkeit, zwischen verschiedenen
+        Automatisierungsstufen zu wechseln, sodass sie je nach Präferenz oder
+        Aufgabenanforderung selbst entscheiden können, wie viel Kontrolle sie
+        dem System überlassen.
       </p>
       <h3>2. Transparenz zur Unterstützung des Situationsbewusstseins </h3>
       <p>
@@ -1210,13 +1159,11 @@ const Zusammenfassung = {
         Entscheidungen erhalten. Transparenz fördert das Verständnis für die
         Funktionsweise und Entscheidungsgrundlagen des Systems.
       </p>
-      <p>
-        <b>
-          Stellen Sie sicher, dass das System die Datenquellen, Prozesse und
-          Faktoren, die eine Entscheidung beeinflussen, klar kommuniziert.
-          Nutzen Sie visuelle Darstellungen oder erklärende Hinweise, um
-          komplexe Abläufe verständlicher zu machen.
-        </b>
+      <p className="specialText">
+        Stellen Sie sicher, dass das System die Datenquellen, Prozesse und
+        Faktoren, die eine Entscheidung beeinflussen, klar kommuniziert. Nutzen
+        Sie visuelle Darstellungen oder erklärende Hinweise, um komplexe Abläufe
+        verständlicher zu machen.
       </p>
       <h3>
         3. Flexibilität bei der Informationsverarbeitung zur Reduzierung der
@@ -1230,14 +1177,11 @@ const Zusammenfassung = {
         Kontrolle über die Art und Menge der angezeigten Informationen zu geben.
         Dies hilft, die wahrgenommene mentale Belastung zu reduzieren.
       </p>
-      <p>
-        <b>
-          Integrieren Sie Funktionen, die es Nutzende ermöglichen, die Anzeige
-          von Informationen nach Bedarf zu filtern, zu kategorisieren oder zu
-          priorisieren. Zum Beispiel kann eine Zusammenfassungsansicht für
-          weniger erfahrene Nutzer und eine Detailansicht für Experten angeboten
-          werden.
-        </b>
+      <p className="specialText">
+        Integrieren Sie Funktionen, die es Nutzende ermöglichen, die Anzeige von
+        Informationen nach Bedarf zu filtern, zu kategorisieren oder zu
+        priorisieren. Zum Beispiel kann eine Zusammenfassungsansicht für weniger
+        erfahrene Nutzer und eine Detailansicht für Experten angeboten werden.
       </p>
       <h3>
         4. Zuverlässigkeit und klare Darstellung zur Förderung der
@@ -1249,12 +1193,10 @@ const Zusammenfassung = {
         müssen darauf vertrauen können, dass das System korrekt und ethisch
         agiert.
       </p>
-      <p>
-        <b>
-          Verwenden Sie visuelle Indikatoren, die die Zuverlässigkeit und
-          Erfolgsquote des Systems darstellen, und bieten Sie Erklärungen, die
-          das ethische und technische Verhalten des Systems untermauern.
-        </b>
+      <p className="specialText">
+        Verwenden Sie visuelle Indikatoren, die die Zuverlässigkeit und
+        Erfolgsquote des Systems darstellen, und bieten Sie Erklärungen, die das
+        ethische und technische Verhalten des Systems untermauern.
       </p>
       <h3>
         5. Nutzerzentrierte Anpassung zur Unterstützung der wahrgenommenen
@@ -1268,14 +1210,12 @@ const Zusammenfassung = {
         Entscheidungsfindung unterstützt. Dies stärkt die Fähigkeit des Systems,
         genaue und hilfreiche Informationen bereitzustellen.
       </p>
-      <p>
-        <b>
-          Ermöglichen Sie personalisierte Einstellungen, durch die Nutzenden
-          entscheiden können, welche Art von Informationen angezeigt werden und
-          wie detailliert diese sein sollen. Ein personalisiertes Dashboard oder
-          konfigurierbare Berichte können helfen, das System effizienter zu
-          nutzen.
-        </b>
+      <p className="specialText">
+        Ermöglichen Sie personalisierte Einstellungen, durch die Nutzenden
+        entscheiden können, welche Art von Informationen angezeigt werden und
+        wie detailliert diese sein sollen. Ein personalisiertes Dashboard oder
+        konfigurierbare Berichte können helfen, das System effizienter zu
+        nutzen.
       </p>
     </section>,
     <section>

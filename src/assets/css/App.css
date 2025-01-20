@@ -50,7 +50,7 @@
   /* Typography Styles */
   --base-size: 8px; /* Define base size */
   --scale10: calc(var(--base-size) * 10); /* 80px */
-  --scale9: calc(var(--base-size) * 8); /* 72px */
+  --scale9: calc(var(--base-size) * 9); /* 72px */
   --scale8: calc(var(--base-size) * 8); /* 64px */
   --scale7: calc(var(--base-size) * 7); /* 56px */
   --scale6: calc(var(--base-size) * 6); /* 48px */
@@ -59,31 +59,6 @@
   --scale3: calc(var(--base-size) * 3); /* 24px */
   --scale2: calc(var(--base-size) * 2); /* 16px */
   --line-height-base: 1.5;
-}
-
- @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: var(--br);
-    --text: var(--w);
-    --box: rgba(84, 80, 106, 0.56);
-    --hover: var(--w);
-    --glasBorder: linear-gradient(145deg, var(--fg) 0%, var(--ev));
-    --glasBoxShadow: inset 1px 1.2px 2px var(--fg),
-      inset 1px -0.5px 2px var(--box), 2px 4px 16px rgba(0, 0, 0, 0.16),
-      1px 2px 2px -2px var(--bg);
-  }
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: var(--la);
-    --text: var(--br);
-    --box: rgba(241, 240, 244, 0.56);
-    --hover: var(--ev);
-    --glasBorder: linear-gradient(145deg, #ffffff 0%, var(--fg));
-    --glasBoxShadow: inset 1px 1.2px 2px #ffffff,
-      inset 1px -0.5px 2px var(--box), 2px 4px 16px rgba(0, 0, 0, 0.16),
-      1px 2px 2px -2px var(--fg);
-  }
 }
 
 :root.dark {
@@ -373,13 +348,21 @@ ol {
 }
 
 li {
-  margin-bottom: var(--base-size) !important;
+  margin-bottom: var(--base-size);
 }
 
 ol li::marker {
   font-weight: bold;
 }
 
+.specialText {
+  background: linear-gradient(to bottom, var(--box) 56%, transparent);
+  border-radius: var(--scale2);
+  padding: var(--scale2);
+  font-weight: 400 !important;
+}
+
+/* Links */
 a {
   font-size: inherit;
   font-weight: 600;
@@ -463,17 +446,6 @@ main li a:hover::after,
 
 .transition-opacity {
   transition: opacity 0.24s;
-}
-
-.special-text {
-  background: linear-gradient(
-    to bottom,
-    rgba(230, 230, 230, 0.4),
-    rgba(230, 230, 230, 0)
-  );
-  border-radius: 20px;
-  padding: 5px 10px 5px 10px;
-  min-height: 50px;
 }
 
 /* responsive */

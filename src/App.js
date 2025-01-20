@@ -61,7 +61,7 @@ function App() {
         <AppProvider>
           <MobilePopUp />
           <Header />
-          <main>
+          <main className="flex justify-center">
             <div className="circle"></div>
             <Routes>
               <Route index element={<Home />} />

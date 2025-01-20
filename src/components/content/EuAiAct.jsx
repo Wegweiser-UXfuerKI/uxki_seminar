@@ -31,7 +31,7 @@ const Einleitung = {
     </section>,
     /* Section 3 */
     <section id="euAIAct">
-      <h2>Was ist der EU AI Act?</h2>
+      <h2>1. Was ist der EU AI Act?</h2>
       <p>
         Nachdem Sie nun ein kurzes Einführungsvideo gesehen haben, wenden wir
         uns nun einer etwas detaillierteren Betrachtung des EU AI Acts zu.
@@ -78,8 +78,8 @@ const Einleitung = {
         .
       </p>
     </section>,
-    <section>
-      <h2>Vergleich mit anderen Ländern / Regionen</h2>
+    <section id="vergleich">
+      <h2>2. Vergleich mit anderen Ländern / Regionen</h2>
       <h3>insbesondere USA, Kanada und England</h3>
       <p>
         Betrachtet man den EU AI Act als groß angelegte Normierung innerhalb des
@@ -175,14 +175,17 @@ const Einleitung = {
         unkontrollierten Auswirkungen haben, im Gegensatz zur EU allerdings
         teilweise noch am Anfang einer konkreten Ausformulierung von Regeln und
         Gesetzen stehen oder generell einen offeneren Ansatz mit Blick auf
-        möglichst freie Innovationsentwicklung verfolgen. Die faktische
-        Umsetzung des EU AI Acts in den Mitgliedstaaten erfordert sorgfältige
-        Planung und Koordination, um die umfassenden Anforderungen des Gesetzes
-        zu erfüllen.
+        möglichst freie Innovationsentwicklung verfolgen.
       </p>
     </section>,
-    <section>
-      <h2>Primäre Inhalte des EU AI Acts</h2>
+    <section id="umsetzung">
+      <h2>3. Umsetzung des Acts in den Mitgliedstaaten</h2>
+      <p>
+        Die faktische Umsetzung des EU AI Acts in den Mitgliedstaaten erfordert
+        sorgfältige Planung und Koordination, um die umfassenden Anforderungen
+        des Gesetzes zu erfüllen.
+      </p>
+      <h3>Primäre Inhalte des EU AI Acts</h3>
       <p>
         Der EU AI Act ist ein umfassendes Regelwerk, das den Einsatz von KI
         innerhalb der EU reguliert. Zu den primären Inhalten gehören die
@@ -232,8 +235,8 @@ const Einleitung = {
         Nutzung von KI sicherstellen sollen.
       </p>
     </section>,
-    <section>
-      <h2>Fazit</h2>
+    <section id="fazit">
+      <h2>4. Fazit</h2>
       <p>
         Zusammenfassend lässt sich sagen, dass der EU AI Act ein umfassendes und
         wegweisendes Regelwerk darstellt, das den Einsatz von KI in der EU
@@ -261,7 +264,7 @@ const RisikostufenAnwendungsbeispiele = {
     /* Section 1 */
     <ChapterHeader text={"Risikostufen - Anwendungsbeispiele"} number={2} />,
     <section id="risikostufen">
-      <h2>Einteilung in Risikostufen anhand Anwendungsbeispielen</h2>
+      <h2>1. Einteilung in Risikostufen anhand Anwendungsbeispielen</h2>
       <p>
         Nachdem wir zuvor einen groben Überblick über die Entwicklung und die
         wichtigsten Aspekte des EU AI Acts gegeben haben, möchten wir nun einen
@@ -278,8 +281,6 @@ const RisikostufenAnwendungsbeispiele = {
         Für eine einfache Übersicht über die verschiedenen Risikostufen schauen
         Sie sich gerne folgendes Video an:
       </p>
-    </section>,
-    <section>
       <VideoContainer
         link={
           "https://www.youtube-nocookie.com/embed/zkfqjX6om8g?si=XKEX_r1jRmViUJkB&rel=0&modestbranding=1"
@@ -287,8 +288,8 @@ const RisikostufenAnwendungsbeispiele = {
         title={"Risikostufen"}
       />
     </section>,
-    <section>
-      <h2>Die Beispiele</h2>
+    <section id="beispiele">
+      <h2>2. Die Beispiele</h2>
       <p>
         Nachdem Sie sich nun mit den Grundlagen der Risikostufen vertraut machen
         konnten, können wir uns nun den Beispielen zuwenden, die praktischen
@@ -314,29 +315,32 @@ const RisikostufenAnwendungsbeispiele = {
         eine Rolle, die das System tut, sondern explizit auch was es nicht tut
         oder kann.
       </p>
-      <h3>Übersicht Beispielsystem 1 - Antrags Assistent</h3>
-      <ul>
-        <li>Unsere Organisation setzt das System nur ein.</li>
-        <li>
-          Wir sind mit unserem Standort in Berlin innerhalb der EU
-          niedergelassen.
-        </li>
-        <li>
-          Wir nutzen das System weder für militärische Zwecke, noch sind wir
-          Teil einer Behörde oder Forschungseinrichtung.
-        </li>
-        <li>
-          Das System wird nicht für Dinge wie Social Scoring, Emotionserkennung
-          oder Verhaltensmanipulation genutzt.
-        </li>
-        <li>
-          Da es sich um ein System handelt, dass potenziell den Zugang zu
-          privaten und öffentlichen Leistungen beeinflusst, könnte dies
-          besondere Auswirkungen auf die Einstufung unseres Tools haben. Wichtig
-          ist dabei vor allem, dass kein erhebliches Risiko für die Gesundheit,
-          die Sicherheit oder die Grundrechte einer Person darstellt.
-        </li>
-      </ul>
+      <div className="specialText">
+        <h4>Übersicht Beispielsystem 1 - Antrags Assistent</h4>
+        <ul>
+          <li>Unsere Organisation setzt das System nur ein.</li>
+          <li>
+            Wir sind mit unserem Standort in Berlin innerhalb der EU
+            niedergelassen.
+          </li>
+          <li>
+            Wir nutzen das System weder für militärische Zwecke, noch sind wir
+            Teil einer Behörde oder Forschungseinrichtung.
+          </li>
+          <li>
+            Das System wird nicht für Dinge wie Social Scoring,
+            Emotionserkennung oder Verhaltensmanipulation genutzt.
+          </li>
+          <li>
+            Da es sich um ein System handelt, dass potenziell den Zugang zu
+            privaten und öffentlichen Leistungen beeinflusst, könnte dies
+            besondere Auswirkungen auf die Einstufung unseres Tools haben.
+            Wichtig ist dabei vor allem, dass kein erhebliches Risiko für die
+            Gesundheit, die Sicherheit oder die Grundrechte einer Person
+            darstellt.
+          </li>
+        </ul>
+      </div>
       <p>
         Prüfen wir basierend auf diesen Informationen unser Assistenzsystem so
         bedeutet das, dass die Anwendung mit hoher Wahrscheinlichkeit der
@@ -369,28 +373,30 @@ const RisikostufenAnwendungsbeispiele = {
         darüber nach welcher Risikostufe so ein System zugeordnet werden könnte.
         Hier noch einmal die wichtigsten Informationen:
       </p>
-      <h3>Übersicht Beispielsystem 2</h3>
-      <ul>
-        <li>
-          Das System wird von unserer Organisation hergestellt und eingesetzt.
-        </li>
-        <li>
-          Wir sind eine amerikanische Organisation mit einem Standort in
-          Deutschland.
-        </li>
-        <li>
-          Wir nutzen das System weder für militärische Zwecke, noch sind wir
-          Teil einer Behörde oder Forschungseinrichtung.
-        </li>
-        <li>
-          Das System wird nicht für Dinge wie Social Scoring, Emotionserkennung
-          oder Verhaltensmanipulation genutzt.
-        </li>
-        <li>
-          Das System wird nicht in einem Hochrisikobereich eingesetzt bspw. bei
-          der Strafverfolgung oder zum Grenzkontrollmanagement.
-        </li>
-      </ul>
+      <div className="specialText">
+        <h4>Übersicht Beispielsystem 2</h4>
+        <ul>
+          <li>
+            Das System wird von unserer Organisation hergestellt und eingesetzt.
+          </li>
+          <li>
+            Wir sind eine amerikanische Organisation mit einem Standort in
+            Deutschland.
+          </li>
+          <li>
+            Wir nutzen das System weder für militärische Zwecke, noch sind wir
+            Teil einer Behörde oder Forschungseinrichtung.
+          </li>
+          <li>
+            Das System wird nicht für Dinge wie Social Scoring,
+            Emotionserkennung oder Verhaltensmanipulation genutzt.
+          </li>
+          <li>
+            Das System wird nicht in einem Hochrisikobereich eingesetzt bspw.
+            bei der Strafverfolgung oder zum Grenzkontrollmanagement.
+          </li>
+        </ul>
+      </div>
       <p>
         Prüfen wir basierend auf diesen Informationen unser Assistenzsystem so
         bedeutet das, dass auch diese Anwendung mit hoher Wahrscheinlichkeit der
@@ -410,8 +416,8 @@ const RisikostufenAnwendungsbeispiele = {
         bin etc.
       </p>
     </section>,
-    <section>
-      <h2>EU AI Act Compliance Checker</h2>
+    <section id="complianceChecker">
+      <h2>3. EU AI Act Compliance Checker</h2>
       <p>
         Um sich einen Überblick über die verschiedenen Möglichkeiten zu
         verschaffen, gibt es den EU-Compliance-Checker. Das Tool bietet die
@@ -429,7 +435,7 @@ const RisikostufenAnwendungsbeispiele = {
         oder mit einem Klick auf die unten befindliche Einbindung zu testen.
       </p>
 
-      <div>
+      <div className="mb-8">
         <a
           href="https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/"
           style={{ position: "relative", display: "inline-block" }}
@@ -454,7 +460,6 @@ const RisikostufenAnwendungsbeispiele = {
           ></div>
         </a>
       </div>
-      <section></section>
       <p>
         Im nächsten Abschnitt gehen wir dann noch mal konkret auf die
         Auswirkungen der Risikostufen auf mögliche Entwicklungsprozesse ein.
@@ -472,7 +477,7 @@ const RisikostufenAuswirkungen = {
     /* Section 1 */
     <ChapterHeader text={"Risikostufen - Auswirkungen"} number={3} />,
     <section id="maßnahmen">
-      <h2>Was muss je nach Risikostufe beachtet werden</h2>
+      <h2>1. Was muss je nach Risikostufe beachtet werden?</h2>
       <p>
         Dieser Text zielt darauf ab, ein tieferes Verständnis der verschiedenen
         Risikokategorien zu vermitteln, die in der KI-Verordnung (KIVO)
@@ -505,7 +510,7 @@ const RisikostufenAuswirkungen = {
         biometrischen Erkennung in öffentlichen Räumen durch
         Strafverfolgungsbehörden ist weitestgehend verboten.
       </p>
-      <p>
+      <p className="specialText">
         <b>Was ist zu tun? </b>In Fällen, in denen KI-Systeme als verboten
         gelten, ist die sofortige Einstellung jeglicher laufender Nutzung
         erforderlich. Rechtliche Durchsetzungsmaßnahmen müssen ergriffen werden,
@@ -538,7 +543,7 @@ const RisikostufenAuswirkungen = {
         biometrische Identifikationssysteme und KI-Systeme zur Risikobewertung
         eine entscheidende Rolle und werden daher als Hochrisiko eingestuft.
       </p>
-      <p>
+      <p className="specialText">
         <b>Was ist zu tun? </b>Die Anforderungen an Hochrisiko-KI-Systeme sind
         in den Artikeln 8 bis 15 der KIVO ausführlich dargelegt. Diese Artikel
         beschreiben die strengen Standards und Prozesse, die eingehalten werden
@@ -627,7 +632,7 @@ const RisikostufenAuswirkungen = {
         Benutzer sich bewusst sind und fundierte Entscheidungen über ihre
         Interaktionen mit solchen Systemen treffen können.
       </p>
-      <p>
+      <p className="specialText">
         <b>Was ist zu tun?</b> Im Kontext von begrenzten Risikostufe-KI-Systemen
         müssen Anbieter Benutzer klar darüber informieren, wenn sie mit einem
         KI-System interagieren, es sei denn, dies ist aus dem Kontext
@@ -644,7 +649,7 @@ const RisikostufenAuswirkungen = {
         Verpflichtungen gemäß der KIVO, müssen jedoch die bestehenden Gesetze
         und Vorschriften einhalten.
       </p>
-      <p>
+      <p className="specialText">
         <b>Was ist zu tun?</b> Für minimale Risikostufe-KI-Systeme ist es
         entscheidend, die allgemeinen gesetzlichen Anforderungen einzuhalten, um
         sicherzustellen, dass die Systeme im Rahmen der bestehenden Gesetze
@@ -658,6 +663,7 @@ const RisikostufenAuswirkungen = {
       </ContainerSixteenNine>
     </section>,
     <section id="videoRisikostufen">
+      <h2>2. Designimplikationen des EU AI Acts</h2>
       <VideoContainer
         link={
           "https://www.youtube-nocookie.com/embed/0rPt4Grl8D4?si=2BKL-W0acY6LRGPu&rel=0&modestbranding=1"
@@ -666,7 +672,7 @@ const RisikostufenAuswirkungen = {
       />
     </section>,
     <section id="KIVO">
-      <h2>KI-Managementsystem laut KIVO und DIN 42001:2023</h2>
+      <h2>3. KI-Managementsystem laut KIVO und DIN 42001:2023</h2>
       <p>
         Ein KI-Managementsystem, wie in der KIVO definiert, umfasst umfassende
         Prozesse und Verfahren, um sicherzustellen, dass KI-Systeme die
@@ -692,7 +698,7 @@ const RisikostufenAuswirkungen = {
         dass KI-Systeme ethisch und verantwortungsvoll entwickelt, eingesetzt
         und genutzt werden.
       </p>
-      <p>
+      <p className="specialText">
         Zusammenfassend lässt sich sagen, dass die KIVO einen umfassenden Rahmen
         für die Entwicklung, den Einsatz und die Nutzung von KI-Systemen
         schafft, diese in verschiedene Risikostufen einteilt und spezifische
@@ -716,11 +722,11 @@ const HLEG = {
   content: [
     /* Section 1 */
     <ChapterHeader text={"High-Level Expert Group"} number={4} />,
-    <section>
-      <h2>Die Rolle der High-Level Expert Group für Trustworthy AI</h2>
-      <h3>
+    <section id="hleg">
+      <h2>1. Die Rolle der High-Level Expert Group für Trustworthy AI</h2>
+      <h4>
         Die High-Level Expert Group on Artificial Intelligence und ihre Ziele
-      </h3>
+      </h4>
       <p>
         Die High-Level Expert Group on Artificial Intelligence (HLEG) wurde im
         Juni 2018 von der Europäischen Kommission ins Leben gerufen. Diese
@@ -761,8 +767,8 @@ const HLEG = {
         Group on Artificial Intelligence, 2019).
       </p>
     </section>,
-    <section>
-      <h2>Die sieben Anforderungen der HLEG</h2>
+    <section id="anforderungen">
+      <h2>2. Die sieben Anforderungen der HLEG</h2>
       <p>
         Um diese Ziele zu erreichen, hat die HLEG sieben zentrale Anforderungen
         definiert:
@@ -850,8 +856,10 @@ const HLEG = {
         Intelligence, 2019).
       </p>
     </section>,
-    <section>
-      <h2>Unterschiede zwischen dem AI Act und den Anforderungen der HLEG</h2>
+    <section id="unterschiede">
+      <h2>
+        3. Unterschiede zwischen dem AI Act und den Anforderungen der HLEG
+      </h2>
       <p>
         Die Arbeit der High-Level Expert Group on AI und der EU AI Act stellen
         wesentliche Schritte dar, um sicherzustellen, dass KI-Systeme im
@@ -892,8 +900,8 @@ const HLEG = {
         (High-Level Expert Group on Artificial Intelligence, 2019).
       </p>
     </section>,
-    <section>
-      <h2>Zusammenfassung der Kriterien und Ziele der HLEG</h2>
+    <section id="fazit">
+      <h2>4. Zusammenfassung der Kriterien und Ziele der HLEG</h2>
       <ul>
         <li>Menschliche Autonomie und Aufsicht</li>
         <li>Technische Robustheit und Sicherheit</li>

@@ -15,7 +15,7 @@ const HomeModuleCard = ({
 }) => {
   return (
     <div
-      className={`moduleCard glassy-box w-10/12 h-fit min-h-[350px] ${
+      className={`moduleCard glassy-box w-full h-fit min-h-[350px] ${
         isDisabled ? "opacity-50 pointer-events-none" : ""
       }`}
       key={index}
@@ -42,7 +42,10 @@ const HomeModuleCard = ({
               return result;
             }, [])
             .map((pair, pairIndex) => (
-              <div key={pairIndex} className="w-full flex flex-col sm:flex-row gap-5">
+              <div
+                key={pairIndex}
+                className="w-full flex flex-col sm:flex-row gap-5"
+              >
                 {pair.map(([subLink, subName], subIndex) => {
                   const isSubtopicDisabled =
                     disabledSubtopics[module[0]]?.includes(subLink);

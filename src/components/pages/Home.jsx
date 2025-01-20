@@ -32,6 +32,27 @@ const Home = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-10 my-40 m-auto max-w-[1600px]">
+      <section>
+        <h2>Willkommen auf der Projektwebsite von Wegweiser UX für KI!</h2>
+        <p>
+          Dieses Projekt bietet Hilfestellungen und praktische Informationen
+          über Künstliche Intelligenz (KI) und User Experience (UX) von
+          KI-Systemen, die auf das Gemeinwohl ausgerichtet sind. Die Inhalte
+          wurden für Entwickler, Projektmanager und KI- oder UX-Interessierte
+          unabhängig von ihrem jeweiligen Erfahrungsniveau erstellt. <br /> In
+          den folgenden lehrreichen Modulen präsentieren wir mithilfe von
+          Videoeinheiten und Texten Inhalte zu relevanten Themen in den
+          Bereichen UX und der Anwendung von KI-Systemen. Die einzelnen
+          Lektionen sind modular aufgebaut, sodass sie unabhängig voneinander
+          konsumiert werden können. Sie können also für Sie interessante Themen
+          wählen und sich die Inhalte dazu ansehen, oder der von uns erdachten
+          Struktur folgen. <br /> Beachten Sie bitte, dass einzelne Lerninhalte
+          dennoch das Wissen aus vorherigen Modulen voraussetzen. Hatten sie zum
+          Beispiel bisher wenig Berührungspunkte mit UX, kann es sinnvoll sein,
+          die entsprechende Lehreinheit zu sehen, bevor Sie sich mit UX
+          bezogenen KI-Eigenschaften auseinandersetzen.
+        </p>
+      </section>
       <h1>Kursübersicht</h1>
 
       {/* Render module cards if module data exists */}

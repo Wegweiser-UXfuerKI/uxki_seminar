@@ -11,6 +11,21 @@ const Einleitung = {
   content: [
     <ChapterHeader text={"Einleitung"} number={1} />,
     <section>
+      <p>
+        In diesem Modul gibt Ihnen Prof. Dr. Hans-Christian Jetter einen
+        Überblick über die Begrie Usability und User Experience — zwei zentrale
+        Aspekte menschzentrierter Designprozesse, die in Forschung und
+        Entwicklung eine wichtige Rolle spielen. Der Fokus auf beide Aspekte
+        während der Entwicklung eines Produkts kann einen starken Einuss auf das
+        Gesamterlebnis von Nutzenden bei der Interaktion haben. Wir erklären
+        Ihnen, wieso ein fehlender Fokus auf diese Aspekte ein Produkt
+        unattraktiver für Kunden und Nutzende machen kann, und welche Punkte Sie
+        beim Design Ihres Produkts beachten sollten. Abschließend erhalten Sie
+        Informationen und Tipps dazu, wie die beiden Aspekte evaluiert werden
+        können.
+      </p>
+    </section>,
+    <section>
       <VideoContainer
         link={
           "https://www.youtube-nocookie.com/embed/9cgmeenl72s?rel=0&modestbranding=1"

@@ -18,9 +18,20 @@ const Einleitung = {
   description:
     "Dieses Kapitel beschäftigt sich damit, was der EU AI Act im Allgemeinen ist, welche Ziele er verfolgt und wie in anderen Ländern gehandelt wird.",
   content: [
-    /* Section 1 */
     <ChapterHeader text={"Einleitung"} number={1} />,
-    /* Section 2 */
+    <section>
+      <p>
+        In diesem Modul haben wir den EU AI Act für Sie aufbereitet — das ist
+        die europäische Verordnung über künstliche Intelligenz, laut derer
+        KI-Systeme künftig vier Risikogruppen zugewiesen werden sollen. Das
+        geschieht in Abhängigkeit vom Nutzungskontext des Systems und kann
+        schwerwiegende Folgen für Unternehmen haben, die KI-Systeme entwickeln.
+        Hier erfahren Sie, was sich durch das Gesetz verändern wird und welche
+        Auswirkungen das neue Gesetz auf Entwickelnde haben kann. Abschließend
+        diskutieren unsere Experten die Chancen und Herausforderungen, die der
+        EU AI Act für Developer und Nutzende von KI-Systemen darstellt.
+      </p>
+    </section>,
     <section id="einleitungsvideo">
       <VideoContainer
         link={
@@ -29,7 +40,6 @@ const Einleitung = {
         title={"Einleitungsvideo"}
       />
     </section>,
-    /* Section 3 */
     <section id="euAIAct">
       <h2>1. Was ist der EU AI Act?</h2>
       <p>
@@ -71,8 +81,7 @@ const Einleitung = {
           href="https://artificialintelligenceact.eu/de/entwicklungen/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inlineLink"
-        >
+          className="inlineLink">
           https://artificialintelligenceact.eu/de/entwicklungen/
         </a>
         .
@@ -428,8 +437,7 @@ const RisikostufenAnwendungsbeispiele = {
         <a
           href="https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           https://artificialintelligenceact.eu/de/bewertung/eu-ai-act-compliance-checker/
         </a>{" "}
         oder mit einem Klick auf die unten befindliche Einbindung zu testen.
@@ -441,8 +449,7 @@ const RisikostufenAnwendungsbeispiele = {
           style={{ position: "relative", display: "inline-block" }}
           className="rounded-xl overflow-hidden"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <GraphicContainer
             type={"image"}
             src={ComlianceCheckerImg}
@@ -456,8 +463,7 @@ const RisikostufenAnwendungsbeispiele = {
               width: "100%",
               height: "100%",
             }}
-            className="bg-black bg-opacity-15 hover:bg-opacity-20"
-          ></div>
+            className="bg-black bg-opacity-15 hover:bg-opacity-20"></div>
         </a>
       </div>
       <p>
@@ -996,8 +1002,7 @@ const Quellen = {
         <a
           href="https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai
         </a>
       </li>
@@ -1011,8 +1016,7 @@ const Quellen = {
         <a
           href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206
         </a>
       </li>

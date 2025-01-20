@@ -3,8 +3,9 @@ import { Cite } from "@citation-js/core";
 import "@citation-js/plugin-csl";
 import DOMPurify from "dompurify";
 import { AppContext } from "../../AppContext";
+import { getSubtopicNameByLink } from "../ContentHandler";
 
-const sourceMap = {
+const sourceMapModule = {
   "ux-und-usability": "uxUsability",
   "ki-bezogene-ux": "kiUX",
   "ux-bezogene-ki-eigenschaften": "uxKIEigenschaften",
@@ -13,6 +14,16 @@ const sourceMap = {
   "ki-ergebnisse": "kiErgebnisse",
   "identifikation-prozesse": "identifikationProzesse",
   "eu-ai-act": "euAIAct",
+};
+
+const moduleMap = {
+  "eu-ai-act": {
+    einleitung: "euAIActEinleitung",
+    "risikostufen-anwendungsbeispiele": "euAIActRisikostufenBeispiele",
+    "risikostufen-auswirkungen": "euAIActRisikostufenAuswirkungen",
+    "high-level-expert-group": "euAIActHLEG",
+    fazit: "euAIActFazit",
+  },
 };
 
 /**
@@ -31,7 +42,71 @@ function Sources() {
    * Utilizes Citation.js to format the citations in APA style and ensures the content is sanitized before rendering.
    */
   useEffect(() => {
-    const fileName = sourceMap[selectedModuleLink];
+    if (!selectedModuleLink || !moduleMap[selectedModuleLink]) {
+      console.error("no module found for:", selectedModuleLink);
+      return;
+    }
+
+    const moduleChapters = moduleMap[selectedModuleLink];
+    const chapterCitations = {};
+
+    const loadCitations = async () => {
+      for (const [chapterKey, chapterFileName] of Object.entries(
+        moduleChapters
+      )) {
+        try {
+          const response = await fetch(`/sources/${chapterFileName}.json`);
+          if (!response.ok) {
+            throw new Error(
+              `HTTP-Error: ${response.status} (${response.statusText})`
+            );
+          }
+          const data = await response.json();
+          const cite = new Cite(data);
+
+          const formattedCitations = cite.format("bibliography", {
+            format: "html",
+            template: "apa",
+            lang: "de-DE",
+          });
+
+          const cleanHTML = DOMPurify.sanitize(formattedCitations);
+
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(cleanHTML, "text/html");
+
+          const citationsArray = Array.from(
+            doc.querySelectorAll(".csl-entry")
+          ).map((entry) => {
+            let outerHTML = entry.innerHTML;
+
+            const httpsLinkMatch = outerHTML.match(/https:\/\/[^\s]+/);
+            if (httpsLinkMatch) {
+              const httpsLink = httpsLinkMatch[0];
+              const anchorTag = `<a href="${httpsLink}" target="_blank">${httpsLink}</a>`;
+              outerHTML = outerHTML.replace(httpsLink, anchorTag);
+            }
+
+            return `<p class="${entry.className}" data-csl-entry-id="${entry.dataset.cslEntryId}">${outerHTML}</p>`;
+          });
+
+          chapterCitations[chapterKey] = citationsArray;
+        } catch (error) {
+          console.error(
+            `Failed to load citations for chapter: ${chapterKey}:`,
+            error
+          );
+        }
+      }
+
+      setCitations(chapterCitations);
+    };
+
+    loadCitations();
+
+    /*
+
+    const fileName = sourceMapModule[selectedModuleLink];
     if (!fileName) {
       console.error("no file found for:", selectedModuleLink);
       return;
@@ -72,20 +147,26 @@ function Sources() {
         setCitations(citationsArray);
       })
       .catch((error) => console.error("Fehler beim Laden der Quellen:", error));
+      */
   }, [selectedModuleLink]);
 
   return (
     <>
       <h2>Literaturverzeichnis</h2>
-      <ul>
-        {citations.map((citation, index) => (
-          <li
-            key={index}
-            className="text-left"
-            dangerouslySetInnerHTML={{ __html: citation }}
-          />
-        ))}
-      </ul>
+      {Object.entries(citations).map(([chapterKey, chapterCitations]) => (
+        <section key={chapterKey} id={chapterKey}>
+          <h3>{getSubtopicNameByLink(selectedModuleLink, chapterKey)}</h3>
+          <ul>
+            {chapterCitations.map((citation, index) => (
+              <li
+                key={index}
+                className="text-left"
+                dangerouslySetInnerHTML={{ __html: citation }}
+              />
+            ))}
+          </ul>
+        </section>
+      ))}
     </>
   );
 }

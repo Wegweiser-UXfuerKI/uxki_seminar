@@ -5,17 +5,6 @@ import DOMPurify from "dompurify";
 import { AppContext } from "../../AppContext";
 import { getSubtopicNameByLink } from "../ContentHandler";
 
-const sourceMapModule = {
-  "ux-und-usability": "uxUsability",
-  "ki-bezogene-ux": "kiUX",
-  "ux-bezogene-ki-eigenschaften": "uxKIEigenschaften",
-  dateninput: "dateninput",
-  verarbeitung: "verarbeitung",
-  "ki-ergebnisse": "kiErgebnisse",
-  "identifikation-prozesse": "identifikationProzesse",
-  "eu-ai-act": "euAIAct",
-};
-
 const moduleMap = {
   "eu-ai-act": {
     einleitung: "euAIActEinleitung",

@@ -39,18 +39,22 @@ const Home = () => {
           über Künstliche Intelligenz (KI) und User Experience (UX) von
           KI-Systemen, die auf das Gemeinwohl ausgerichtet sind. Die Inhalte
           wurden für Entwickler, Projektmanager und KI- oder UX-Interessierte
-          unabhängig von ihrem jeweiligen Erfahrungsniveau erstellt. <br /> In
-          den folgenden lehrreichen Modulen präsentieren wir mithilfe von
-          Videoeinheiten und Texten Inhalte zu relevanten Themen in den
-          Bereichen UX und der Anwendung von KI-Systemen. Die einzelnen
-          Lektionen sind modular aufgebaut, sodass sie unabhängig voneinander
-          konsumiert werden können. Sie können also für Sie interessante Themen
-          wählen und sich die Inhalte dazu ansehen, oder der von uns erdachten
-          Struktur folgen. <br /> Beachten Sie bitte, dass einzelne Lerninhalte
-          dennoch das Wissen aus vorherigen Modulen voraussetzen. Hatten sie zum
-          Beispiel bisher wenig Berührungspunkte mit UX, kann es sinnvoll sein,
-          die entsprechende Lehreinheit zu sehen, bevor Sie sich mit UX
-          bezogenen KI-Eigenschaften auseinandersetzen.
+          unabhängig von ihrem jeweiligen Erfahrungsniveau erstellt.
+        </p>
+        <p>
+          In den folgenden Modulen präsentieren wir mithilfe von Videoeinheiten
+          und Texten Inhalte zu relevanten Themen in den Bereichen UX und der
+          Anwendung von KI-Systemen.
+        </p>
+        <p>
+          Die einzelnen Lektionen können unabhängig voneinander konsumiert
+          werden. Dieser Aufbau erlaubt es Ihnen, für Sie interessante Themen
+          auszuwählen und sich die Inhalte dazu anzusehen, oder aber der von uns
+          erdachten Struktur zu folgen. <br /> Beachten Sie bitte, dass einzelne
+          Lerninhalte das Wissen aus vorherigen Modulen voraussetzen können.
+          Hatten sie zum Beispiel bisher wenig Berührungspunkte mit UX, kann es
+          sinnvoll sein, die entsprechende Lehreinheit zu sehen, bevor Sie sich
+          mit UX bezogenen KI-Eigenschaften auseinandersetzen.
         </p>
       </section>
       <h1>Kursübersicht</h1>

@@ -344,8 +344,7 @@ const WahrgenommeneAutonomie = {
           "<b>Automatisierungsstufen</b> und <b>Anpassungsfähigkeit</b> haben Einfluss auf die psychologische Wahrnehmung.",
           "<b>Transparenz</b>, <b>Flexibilität</b> und <b>Anpassung der Automatisierungsgrade</b> stärken die wahrgenommene Autonomie.",
           "<b>Adaptive Automatisierung</b> und <b>transparente Entscheidungsprozesse</b> fördern <b>Kontrolle</b> und <b>Selbstbestimmung</b>, was zu effektiverer und zufriedenstellender Nutzung führt.",
-        ]}
-      ></List>
+        ]}></List>
     </section>,
   ],
 };
@@ -514,8 +513,7 @@ const WahrgenommenesSituationsbewusstsein = {
         items={[
           "<b>Situationsbewusstseins (SA)</b> umfasst die <b>Wahrnehmung</b>, das <b>Verständnis</b> und die <b>Projektion</b> relevanter Informationen.",
           "<b>Endsley</b> und die SIPA-Facetten betonen die Notwendigkeit von <b>Transparenz</b>, <b>Verständlichkeit</b> und <b>Vorhersehbarkeit</b> für effektives SA.",
-        ]}
-      ></List>
+        ]}></List>
     </section>,
   ],
 };
@@ -650,8 +648,7 @@ const WahrgenommeneInformationOverload = {
           "Automatisierung erleichtert die Verarbeitung, <b>Erklärungen</b> können jedoch <b>Informationsüberlastung</b> verursachen.",
           "Wichtige Systemmerkmale: <b>Reduzierung, Anpassbarkeit und Priorisierung von Informationen</b>, um Nutzer effektiv zu entlasten.",
           "Der <b>NASA-TLX</b> hilft bei der Bewertung der Arbeitsbelastung und Verbesserung der Benutzerfreundlichkeit.",
-        ]}
-      ></List>
+        ]}></List>
     </section>,
   ],
 };
@@ -1107,8 +1104,7 @@ const PerceivedConfidence = {
           "Systeme, die klare diagnostische Informationen bereitstellen, stärken das <b>Vertrauen</b> der Nutzenden sowie die <b>Akzeptanz</b> und <b>effektive Nutzung</b> der Technologie.",
           "Besonders wichtig ist dies in kritischen Bereichen wie dem <b>Gesundheitswesen</b>.",
           "Die diagnostische Qualität eines Systems hat direkten Einfluss auf das <b>Wohl der Gemeinschaft</b>.",
-        ]}
-      ></List>
+        ]}></List>
     </section>,
   ],
 };
@@ -1263,8 +1259,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1109/3468.844354"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1109/3468.844354
           </a>
         </li>
@@ -1275,8 +1270,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1016/j.techsoc.2020.101488"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1016/j.techsoc.2020.101488
           </a>
         </li>
@@ -1292,8 +1286,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1177/0018720813501549"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1177/0018720813501549
           </a>
         </li>
@@ -1305,8 +1298,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1080/1463922021000054335"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1080/1463922021000054335
           </a>
         </li>
@@ -1317,8 +1309,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1038/s41598-022-07808-x"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1038/s41598-022-07808-x
           </a>
         </li>
@@ -1333,8 +1324,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.13140/RG.2.2.22149.97769"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.13140/RG.2.2.22149.97769
           </a>
         </li>
@@ -1345,8 +1335,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1027/2698-1866/a000062"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1027/2698-1866/a000062
           </a>
         </li>
@@ -1362,8 +1351,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1080/00140139.2017.1420238"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1080/00140139.2017.1420238
           </a>
         </li>
@@ -1384,8 +1372,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1518/001872095779049543"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1518/001872095779049543
           </a>
         </li>
@@ -1401,8 +1388,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1177/0018720816681350"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1177/0018720816681350
           </a>
         </li>
@@ -1419,8 +1405,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1177/154193129804200119"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1177/154193129804200119
           </a>
         </li>
@@ -1434,8 +1419,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1145/3588594"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1145/3588594
           </a>
         </li>
@@ -1448,8 +1432,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.2196/53940"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.2196/53940
           </a>
         </li>
@@ -1462,8 +1445,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.4324/9781315087924-8"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.4324/9781315087924-8
           </a>
         </li>
@@ -1480,8 +1462,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1145/3593013.3594001"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1145/3593013.3594001
           </a>
         </li>
@@ -1493,8 +1474,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1002/9781118131350.ch8"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1002/9781118131350.ch8
           </a>
         </li>
@@ -1505,8 +1485,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.3389/fpsyg.2022.883321"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.3389/fpsyg.2022.883321
           </a>
         </li>
@@ -1530,8 +1509,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1145/3411764.3445101"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1145/3411764.3445101
           </a>
         </li>
@@ -1544,8 +1522,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1145/3588594"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1145/3588594
           </a>
         </li>
@@ -1559,8 +1536,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1177/154193120605000909"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1177/154193120605000909
           </a>
         </li>
@@ -1574,8 +1550,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.2307/258792"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.2307/258792
           </a>
         </li>
@@ -1590,8 +1565,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1518/hfes.46.1.50_30392"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1518/hfes.46.1.50_30392
           </a>
         </li>
@@ -1610,8 +1584,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1177/0018720814547570"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1177/0018720814547570
           </a>
         </li>
@@ -1626,8 +1599,7 @@ const Quellen = {
             href="
           https://doi.org/10.31234/osf.io/qhwvx"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.31234/osf.io/qhwvx
           </a>
         </li>
@@ -1640,8 +1612,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1145/3588594"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1145/3588594
           </a>
         </li>
@@ -1657,8 +1628,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1145/3613904.3642018"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1145/3613904.3642018
           </a>
         </li>
@@ -1669,8 +1639,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.3389/fpsyg.2021.604977"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.3389/fpsyg.2021.604977
           </a>
         </li>
@@ -1693,8 +1662,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1037/0033-295X.112.4.979"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1037/0033-295X.112.4.979
           </a>
         </li>
@@ -1706,8 +1674,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1097/00001888-198202000-00004"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1097/00001888-198202000-00004
           </a>
         </li>
@@ -1721,8 +1688,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1145/3397481.3450644"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1145/3397481.3450644
           </a>
         </li>
@@ -1736,8 +1702,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1145/3588594"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1145/3588594
           </a>
         </li>
@@ -1753,8 +1718,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1177/0018720817700258"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1177/0018720817700258
           </a>
         </li>
@@ -1769,8 +1733,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1007/978-3-031-14923-8_5"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1007/978-3-031-14923-8_5
           </a>
         </li>
@@ -1783,8 +1746,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1007/978-3-030-68640-6_2"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1007/978-3-030-68640-6_2
           </a>
         </li>
@@ -1801,8 +1763,7 @@ const Quellen = {
           <a
             href="https://proceedings.mlr.press/v106/tonekaboni19a.html"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://proceedings.mlr.press/v106/tonekaboni19a.html
           </a>
         </li>
@@ -1817,8 +1778,7 @@ const Quellen = {
           <a
             href="https://doi.org/10.1609/aaai.v37i10.26399"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             https://doi.org/10.1609/aaai.v37i10.26399
           </a>
         </li>
@@ -1830,8 +1790,7 @@ const Quellen = {
           <a
             href="http://arxiv.org/abs/1702.08608"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             http://arxiv.org/abs/1702.08608
           </a>
         </li>
@@ -1847,8 +1806,7 @@ const Quellen = {
           <a
             href="http://arxiv.org/abs/1905.04610"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             http://arxiv.org/abs/1905.04610
           </a>
         </li>
@@ -1892,6 +1850,22 @@ const EinführungUXKI = {
     "KI-Systeme machen mehr Aspekte für die User Experience relevant. Hier werden wichtige dieser KI-bezogenen UX Aspekte ein erstes mal angeführt.",
   content: [
     <ChapterHeader text={"Einführung in KI-bezogene UX"} number={1} />,
+    <section>
+      <p>
+        In diesem Modul erläutert Tim Schrills konkretere UX-Aspekte, die beim
+        Design und der Implementierung von KI-Systemen beachtet werden sollten.
+      </p>
+      <p>
+        KI-Systeme greifen tief in unsere Informationsverarbeitung ein, was
+        zusätzliche Aspekte für die User Experience (UX) relevant macht. Diese
+        neuen Dimensionen sind essentiell, da sie direkt beeinussen, wie
+        Menschen mit KI-Systemen interagieren und diese wahrnehmen. Mit der
+        zunehmenden Integration von KI in alltägliche Systeme ist es
+        entscheidend, KI-bezogene Aspekte in der UX zu berücksichtigen. Dazu
+        werden in diesem Modul fünf wichtige Aspekte genannt und deren Relevanz
+        für das Design und die Entwicklung von KI-Systemen erklärt.
+      </p>
+    </section>,
     <section>
       <VideoContainer
         link={

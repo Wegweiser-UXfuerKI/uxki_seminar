@@ -2,10 +2,22 @@ import { ReactComponent as imageElement } from "../../assets/icons/ux-ki.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import SubTopic from "../SubTopic";
+import Accordion from "../texts/Accordion";
 import List from "../texts/List";
 
 const moduleLink = "ki-bezogene-ux";
 const moduleName = "KI-bezogene UX";
+const sections = [
+  { id: "definition", title: "1. Definition" },
+  { id: "konzepte", title: "2. Relevante Konzepte und Modelle" },
+  { id: "studie", title: "3. Studien zur User Experience und KI" },
+  {
+    id: "operationalisierung",
+    title: "4. Operationalisierung: Fragebögen und Messinstrumente",
+  },
+  { id: "guidelines", title: "5. Design-Guidelines für eine gute UX" },
+  { id: "fazit", title: "6. Fazit" },
+];
 
 const WahrgenommeneAutonomie = {
   linkName: "wahrgenommene-autonomie",
@@ -14,6 +26,14 @@ const WahrgenommeneAutonomie = {
     "Dieser Aspekt beschreibt, wie sehr Nutzende das Gefühl haben, selbstständig zu handeln und Entscheidungen zu treffen, während sie mit einem KI-System interagieren.",
   content: [
     <ChapterHeader text={"Wahrgenommene Autonomie"} number={2} />,
+    <section>
+      <p>
+        Dieser Aspekt beschreibt, wie sehr Nutzende das Gefühl haben,
+        selbstständig zu handeln und Entscheidungen zu treffen, während sie mit
+        einem KI-System interagieren.
+      </p>
+      <Accordion sections={sections} />
+    </section>,
     <section>
       <VideoContainer
         link={
@@ -357,6 +377,13 @@ const WahrgenommenesSituationsbewusstsein = {
   content: [
     <ChapterHeader text={"Wahrgenommenes Situationsbewusstsein"} number={3} />,
     <section>
+      <p>
+        Dies bezieht sich auf das Verständnis der Nutzende über ihre Umgebung
+        und die Änderungen, die durch das KI-System verursacht werden.
+      </p>
+      <Accordion sections={sections} />
+    </section>,
+    <section>
       <VideoContainer
         link={
           "https://www.youtube-nocookie.com/embed/mhUXTuMQ5mY?rel=0&modestbranding=1"
@@ -422,7 +449,7 @@ const WahrgenommenesSituationsbewusstsein = {
         </li>
       </ol>
     </section>,
-    <section id="studien">
+    <section id="studie">
       <h2>3. Studien zur User Experience und KI</h2>
       <p>
         Studien wie die von <b>Edgar et al. (2018)</b> untersuchen das
@@ -525,6 +552,14 @@ const WahrgenommeneInformationOverload = {
     "Dieser Aspekt umfasst den kognitiven Aufwand, der erforderlich ist, um Informationen zu verarbeiten und Entscheidungen zu treffen, und die potenzielle Überlastung durch zu viele Informationen.",
   content: [
     <ChapterHeader text={"Wahrgenommene Mentale Belastung"} number={4} />,
+    <section>
+      <p>
+        Dieser Aspekt umfasst den kognitiven Aufwand, der erforderlich ist, um
+        Informationen zu verarbeiten und Entscheidungen zu treffen, und die
+        potenzielle Überlastung durch zu viele Informationen.
+      </p>
+      <Accordion sections={sections} />
+    </section>,
     <section>
       <VideoContainer
         link={
@@ -660,6 +695,13 @@ const PerceivedTrustworthiness = {
     "Damit ist das Vertrauen gemeint, das Nutzende in ein KI-System haben, basierend auf dessen Handlungen.",
   content: [
     <ChapterHeader text={"Wahrgenommene Vertrauenswürdigkeit"} number={5} />,
+    <section>
+      <p>
+        Damit ist das Vertrauen gemeint, das Nutzende in ein KI-System haben,
+        basierend auf dessen Handlungen.
+      </p>
+      <Accordion sections={sections} />
+    </section>,
     <section>
       <VideoContainer
         link={
@@ -920,9 +962,17 @@ const PerceivedConfidence = {
   linkName: "perceived-confidence",
   name: "Wahrgenommene Diagnostizität",
   description:
-    "Dies beschreibt das Vertrauen der Nutzende in die Diagnosen oder Vorschläge des KI-Systems und wie gut diese die gewünschten Ergebnisse liefern. ",
+    "Dies beschreibt das Vertrauen der Nutzende in die Diagnosen oder Vorschläge des KI-Systems und wie gut diese die gewünschten Ergebnisse liefern.",
   content: [
     <ChapterHeader text={"Wahrgenommene Diagnostizität"} number={6} />,
+    <section>
+      <p>
+        Dies beschreibt das Vertrauen der Nutzende in die Diagnosen oder
+        Vorschläge des KI-Systems und wie gut diese die gewünschten Ergebnisse
+        liefern.
+      </p>
+      <Accordion sections={sections} />
+    </section>,
     <section>
       <VideoContainer
         link={

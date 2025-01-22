@@ -9,6 +9,7 @@ import { VideoContainer } from "../texts/VideoContainer";
 import Timeline from "../Timeline";
 import ContainerSixteenNine from "../ContainerSixteenNine";
 import Accordion from "../texts/Accordion";
+import SubNavigation from "../nav/SubNavigation";
 
 import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";
 import Sources from "../texts/Sources";
@@ -40,6 +41,7 @@ const Einleitung = {
         EU AI Act für Developer und Nutzende von KI-Systemen darstellt.
       </p>
       <Accordion sections={sectionEinleitung} />
+      <SubNavigation sections={sectionEinleitung} />
     </section>,
     <section id="einleitungsvideo">
       <VideoContainer
@@ -296,6 +298,7 @@ const RisikostufenAnwendungsbeispiele = {
         Auswirkungen der EU AI Act auf diese hat.
       </p>
       <Accordion sections={sectionRisikostufenAnwendungsbeispiele} />
+      <SubNavigation sections={sectionRisikostufenAnwendungsbeispiele} />
     </section>,
     <section id="risikostufen">
       <h2>1. Einteilung in Risikostufen anhand Anwendungsbeispielen</h2>
@@ -522,6 +525,7 @@ const RisikostufenAuswirkungen = {
         welche Auswirkungen sie auf verschiedene System haben können.
       </p>
       <Accordion sections={sectionRisikostufenAuswirkungen} />
+      <SubNavigation sections={sectionRisikostufenAuswirkungen} />
     </section>,
     <section id="massnahmen">
       <h2>1. Was muss je nach Risikostufe beachtet werden?</h2>
@@ -767,7 +771,10 @@ const sectionHLEG = [
     title: "1. Die Rolle der High-Level Expert Group für Trustworthy AI",
   },
   { id: "anforderungen", title: "2. Die sieben Anforderungen der HLEG" },
-  { id: "unterschiede", title: "3. Unterschiede zwischen dem AI Act und den Anforderungen der HLEG" },
+  {
+    id: "unterschiede",
+    title: "3. Unterschiede zwischen dem AI Act und den Anforderungen der HLEG",
+  },
   { id: "fazit", title: "4. Zusammenfassung der Kriterien und Ziele der HLEG" },
 ];
 
@@ -785,6 +792,7 @@ const HLEG = {
         sie haben.
       </p>
       <Accordion sections={sectionHLEG} />
+      <SubNavigation sections={sectionHLEG} />
     </section>,
     <section id="hleg">
       <h2>1. Die Rolle der High-Level Expert Group für Trustworthy AI</h2>

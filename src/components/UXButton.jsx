@@ -44,7 +44,7 @@ const UXButton = ({
       aria-label={`Navigiere zu ${text}`}
       role="link">
       <div
-        className={`ux-button px-6 py-4 flex flex-row justify-between h-fit items-center gap-[10px] transition ease-in-out duration-[390ms] transform hover:shadow-lg ${glassyClass}`}>
+        className={`ux-button px-6 py-4 flex flex-row justify-between h-full items-center gap-[10px] transition ease-in-out duration-[390ms] transform hover:shadow-lg ${glassyClass}`}>
         {text}
         <RightArrow className={arrowClass} />
       </div>

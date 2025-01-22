@@ -115,6 +115,11 @@ svg {
   box-shadow: var(--glasBoxShadow);
 }
 
+.glassBlur {
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+}
+
 .rounded-xl {
   border-radius: var(--scale2);
 }
@@ -222,8 +227,6 @@ header {
   border-bottom: 1.6px solid transparent;
   border-image: var(--glasBorder) 1;
   background-color: var(--box);
-  -webkit-backdrop-filter: var(--blur);
-  backdrop-filter: var(--blur);
 }
 
 header nav a {

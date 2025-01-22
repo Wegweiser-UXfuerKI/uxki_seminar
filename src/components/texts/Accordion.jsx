@@ -29,6 +29,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
       <div
         onClick={toggleAccordion}
         className="fourthTitle p-4 pl-6 pr-6 flex justify-between items-center"
+        style={{ marginBottom: "0" }}
         role="button"
         aria-expanded={isOpen}
         aria-controls="accordion-content"

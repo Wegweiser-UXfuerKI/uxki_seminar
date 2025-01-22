@@ -68,8 +68,7 @@ const Header = () => {
         className={`fixed z-50 ml-4 mt-2 cursor-pointer ${
           navOpen ? "change" : ""
         }`}
-        onClick={toggleNavbar}
-      >
+        onClick={toggleNavbar}>
         <div className="bar1"></div>
         <div className="bar2"></div>
         <div className="bar3"></div>
@@ -78,31 +77,30 @@ const Header = () => {
         id="nav"
         className={`fixed top-0 left-0 w-48 h-1/2 bg-gray-900 flex flex-col justify-center items-end p-5 z-40 transition-transform transform ${
           navOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
+        }`}>
         <div
           id="inner-nav"
-          className="flex flex-col justify-start space-y-5 w-full h-full pt-10"
-        >
+          className="flex flex-col justify-start space-y-5 w-full h-full pt-10">
           <Link
             to="/"
             className="text-right text-gray-400 font-semibold hover:text-gray-200 focus:outline-none"
-            onClick={toggleNavbar}
-          >
+            onClick={toggleNavbar}>
             Kursübersicht
           </Link>
           <Link
             to="/"
             className="text-right text-gray-400 font-semibold hover:text-gray-200 focus:outline-none"
-            onClick={toggleNavbar}
-          >
+            onClick={toggleNavbar}>
             {selectedModuleName}
           </Link>
         </div>
       </nav>
     </div>
   ) : (
-    <header className="fixed flex items-center p-3 z-50" role="banner" aria-label="Desktop Header">
+    <header
+      className="fixed flex items-center p-3 glassBlur z-50"
+      role="banner"
+      aria-label="Desktop Header">
       <div className="img-container w-16 ml-2 mr-2">
         <Link to="/" aria-label="Zur Startseite">
           <img src={wegweiserLogo} alt="Wegweiser.UX-für-KI Logo" />
@@ -118,8 +116,7 @@ const Header = () => {
               if (selectedModuleLink) {
                 setScrollToChapter(selectedModuleLink);
               }
-            }}
-          >
+            }}>
             Kursübersicht
           </Link>
           {selectedModuleLink && (
@@ -127,8 +124,7 @@ const Header = () => {
               <RightArrow />
               <Link
                 to={`/${selectedModuleLink}`}
-                className={selectedSubtopicName ? "" : "active"}
-              >
+                className={selectedSubtopicName ? "" : "active"}>
                 {selectedModuleName}
               </Link>
               {selectedSubtopicName && (
@@ -136,8 +132,7 @@ const Header = () => {
                   <RightArrow />
                   <Link
                     to={`/${selectedModuleLink}/${selectedSubtopicLink}`}
-                    className="active"
-                  >
+                    className="active">
                     {selectedSubtopicName}
                   </Link>
                 </>

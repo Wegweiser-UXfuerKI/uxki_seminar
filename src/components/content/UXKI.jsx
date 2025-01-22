@@ -2,11 +2,16 @@ import { ReactComponent as imageElement } from "../../assets/icons/ux-ki.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import SubTopic from "../SubTopic";
-import Accordion from "../texts/Accordion";
 import List from "../texts/List";
+
+//TODO: place components globaly for every modul page?
+import Accordion from "../texts/Accordion";
+import SubNavigation from "../nav/SubNavigation";
 
 const moduleLink = "ki-bezogene-ux";
 const moduleName = "KI-bezogene UX";
+
+// TODO: make intro as consistent component for every page?
 const sections = [
   { id: "definition", title: "1. Definition" },
   { id: "konzepte", title: "2. Relevante Konzepte und Modelle" },
@@ -33,6 +38,7 @@ const WahrgenommeneAutonomie = {
         einem KI-System interagieren.
       </p>
       <Accordion sections={sections} />
+      <SubNavigation sections={sections} />
     </section>,
     <section>
       <VideoContainer
@@ -382,6 +388,7 @@ const WahrgenommenesSituationsbewusstsein = {
         und die Änderungen, die durch das KI-System verursacht werden.
       </p>
       <Accordion sections={sections} />
+      <SubNavigation sections={sections} />
     </section>,
     <section>
       <VideoContainer
@@ -559,6 +566,7 @@ const WahrgenommeneInformationOverload = {
         potenzielle Überlastung durch zu viele Informationen.
       </p>
       <Accordion sections={sections} />
+      <SubNavigation sections={sections} />
     </section>,
     <section>
       <VideoContainer
@@ -701,6 +709,7 @@ const PerceivedTrustworthiness = {
         basierend auf dessen Handlungen.
       </p>
       <Accordion sections={sections} />
+      <SubNavigation sections={sections} />
     </section>,
     <section>
       <VideoContainer
@@ -972,6 +981,7 @@ const PerceivedConfidence = {
         liefern.
       </p>
       <Accordion sections={sections} />
+      <SubNavigation sections={sections} />
     </section>,
     <section>
       <VideoContainer

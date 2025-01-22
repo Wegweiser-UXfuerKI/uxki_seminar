@@ -32,8 +32,8 @@ const Home = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-10 my-40 m-auto max-w-[1600px]">
-      <section>
-        <h2>Willkommen auf der Projektwebsite von Wegweiser UX für KI!</h2>
+      <section className="mt-0">
+        <h2>Willkommen auf der Lernplattform von Wegweiser UX für KI!</h2>
         <p>
           Dieses Projekt bietet Hilfestellungen und praktische Informationen
           über Künstliche Intelligenz (KI) und User Experience (UX) von

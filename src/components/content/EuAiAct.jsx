@@ -8,9 +8,17 @@ import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import Timeline from "../Timeline";
 import ContainerSixteenNine from "../ContainerSixteenNine";
+import Accordion from "../texts/Accordion";
 
 import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";
 import Sources from "../texts/Sources";
+
+const sectionEinleitung = [
+  { id: "euAIAct", title: "1. Was ist der EU AI Act?" },
+  { id: "vergleich", title: "2. Vergleich mit anderen Ländern / Regionen" },
+  { id: "umsetzung", title: "3. Umsetzung des Acts in den Mitgliedstaaten" },
+  { id: "fazit", title: "4. Fazit" },
+];
 
 const Einleitung = {
   linkName: "einleitung",
@@ -31,6 +39,7 @@ const Einleitung = {
         diskutieren unsere Experten die Chancen und Herausforderungen, die der
         EU AI Act für Developer und Nutzende von KI-Systemen darstellt.
       </p>
+      <Accordion sections={sectionEinleitung} />
     </section>,
     <section id="einleitungsvideo">
       <VideoContainer
@@ -264,6 +273,15 @@ const Einleitung = {
   ],
 };
 
+const sectionRisikostufenAnwendungsbeispiele = [
+  {
+    id: "risikostufen",
+    title: "1. Einteilung in Risikostufen anhand Anwendungsbeispiele",
+  },
+  { id: "beispiele", title: "2. Die Beispiele" },
+  { id: "complianceChecker", title: "3. EU AI Act Compliance Checker" },
+];
+
 const RisikostufenAnwendungsbeispiele = {
   linkName: "risikostufen-anwendungsbeispiele",
   name: "Risikostufen - Anwendungsbeispiele",
@@ -272,6 +290,13 @@ const RisikostufenAnwendungsbeispiele = {
   content: [
     /* Section 1 */
     <ChapterHeader text={"Risikostufen - Anwendungsbeispiele"} number={2} />,
+    <section>
+      <p>
+        Hier werden mögliche Anwendungen beispielhaft betrachtet und welche
+        Auswirkungen der EU AI Act auf diese hat.
+      </p>
+      <Accordion sections={sectionRisikostufenAnwendungsbeispiele} />
+    </section>,
     <section id="risikostufen">
       <h2>1. Einteilung in Risikostufen anhand Anwendungsbeispielen</h2>
       <p>
@@ -474,6 +499,15 @@ const RisikostufenAnwendungsbeispiele = {
   ],
 };
 
+const sectionRisikostufenAuswirkungen = [
+  {
+    id: "massnahmen",
+    title: "1. Was muss je nach Risikostufe beachtet werden?",
+  },
+  { id: "videoRisikostufen", title: "2. Designimplikationen des EU AI Acts" },
+  { id: "KIVO", title: "3. KI-Managementsystem laut KIVO und DIN 42001:2023" },
+];
+
 const RisikostufenAuswirkungen = {
   linkName: "risikostufen-auswirkungen",
   name: "Risikostufen - Auswirkungen",
@@ -482,7 +516,14 @@ const RisikostufenAuswirkungen = {
   content: [
     /* Section 1 */
     <ChapterHeader text={"Risikostufen - Auswirkungen"} number={3} />,
-    <section id="maßnahmen">
+    <section>
+      <p>
+        In diesem Kapitel werden einzelne Artikel des Acts näher betrachtet und
+        welche Auswirkungen sie auf verschiedene System haben können.
+      </p>
+      <Accordion sections={sectionRisikostufenAuswirkungen} />
+    </section>,
+    <section id="massnahmen">
       <h2>1. Was muss je nach Risikostufe beachtet werden?</h2>
       <p>
         Dieser Text zielt darauf ab, ein tieferes Verständnis der verschiedenen
@@ -720,6 +761,16 @@ const RisikostufenAuswirkungen = {
   ],
 };
 
+const sectionHLEG = [
+  {
+    id: "hleg",
+    title: "1. Die Rolle der High-Level Expert Group für Trustworthy AI",
+  },
+  { id: "anforderungen", title: "2. Die sieben Anforderungen der HLEG" },
+  { id: "unterschiede", title: "3. Unterschiede zwischen dem AI Act und den Anforderungen der HLEG" },
+  { id: "fazit", title: "4. Zusammenfassung der Kriterien und Ziele der HLEG" },
+];
+
 const HLEG = {
   linkName: "high-level-expert-group",
   name: "High-Level Expert Group",
@@ -728,6 +779,13 @@ const HLEG = {
   content: [
     /* Section 1 */
     <ChapterHeader text={"High-Level Expert Group"} number={4} />,
+    <section>
+      <p>
+        Es wird die HLEG betrachtet, was deren Ziele sind und welchen Einfluss
+        sie haben.
+      </p>
+      <Accordion sections={sectionHLEG} />
+    </section>,
     <section id="hleg">
       <h2>1. Die Rolle der High-Level Expert Group für Trustworthy AI</h2>
       <h4>

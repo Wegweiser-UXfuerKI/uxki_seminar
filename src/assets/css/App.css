@@ -359,6 +359,7 @@ ol li::marker {
 }
 
 /* Links */
+header button,
 a {
   font-size: inherit;
   font-weight: 600;

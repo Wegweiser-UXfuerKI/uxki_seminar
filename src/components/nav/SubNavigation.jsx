@@ -23,7 +23,7 @@ const SubNavigation = ({ sections }) => {
           aria-label={`Gehe zur Sektion: ${section.title}`}>
           <span className="font-bold">{index + 1}</span>
           <span
-            className="absolute right-full mr-2 px-2 py-1 text-base rounded opacity-0 group-hover:opacity-100 transition-opacity"
+            className="absolute right-full mr-2 px-2 py-1 text-base rounded opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity"
             style={{
               whiteSpace: "nowrap",
               background: "var(--text)",

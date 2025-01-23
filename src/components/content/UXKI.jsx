@@ -553,7 +553,7 @@ const WahrgenommenesSituationsbewusstsein = {
 };
 
 const WahrgenommeneInformationOverload = {
-  linkName: "mental-workload",
+  linkName: "wahrgenommene-mentale-belastung",
   name: "Wahrgenommene Mentale Belastung",
   description:
     "Dieser Aspekt umfasst den kognitiven Aufwand, der erforderlich ist, um Informationen zu verarbeiten und Entscheidungen zu treffen, und die potenzielle Überlastung durch zu viele Informationen.",
@@ -697,7 +697,7 @@ const WahrgenommeneInformationOverload = {
 };
 
 const PerceivedTrustworthiness = {
-  linkName: "perceived-trustworthiness",
+  linkName: "wahrgenommene-vertrauenswuerdigkeit",
   name: "Wahrgenommene Vertrauenswürdigkeit",
   description:
     "Damit ist das Vertrauen gemeint, das Nutzende in ein KI-System haben, basierend auf dessen Handlungen.",
@@ -968,7 +968,7 @@ const PerceivedTrustworthiness = {
 };
 
 const PerceivedConfidence = {
-  linkName: "perceived-confidence",
+  linkName: "wahrgenommene-diagnostizitaet",
   name: "Wahrgenommene Diagnostizität",
   description:
     "Dies beschreibt das Vertrauen der Nutzende in die Diagnosen oder Vorschläge des KI-Systems und wie gut diese die gewünschten Ergebnisse liefern.",
@@ -1944,7 +1944,7 @@ const EinführungUXKI = {
     </section>,
     <section>
       <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center -mx-4">
         {linksAndNames.map((item, index) => (
           <SubTopic
             key={item.link || index}

@@ -13,7 +13,7 @@ import wegweiserLogo from "../assets/images/Wegweiser_logo.png";
  */
 const Logo = () => {
   return (
-    <div id="logo" className="img-container w-16 ml-2 mr-2">
+    <div id="logo" className="img-container w-16">
       <Link to="/" aria-label="Zur Startseite">
         <img src={wegweiserLogo} alt="Wegweiser.UX-für-KI Logo" />
       </Link>

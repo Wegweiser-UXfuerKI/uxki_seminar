@@ -29,7 +29,7 @@
 
   /* Shadows and Background */
   --shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
-  --blur: blur(16px);
+  --blur: blur(24px);
   --lGradient: linear-gradient(
     to top,
     var(--tb),
@@ -115,6 +115,8 @@ svg {
 }
 
 .glassBlur {
+  -moz-backdrop-filter: var(--blur);
+  -o-backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
   backdrop-filter: var(--blur);
 }
@@ -221,14 +223,6 @@ header {
   border-bottom: 1.6px solid transparent;
   border-image: var(--glasBorder) 1;
   background-color: var(--box);
-}
-
-header nav a {
-  margin: 0 0.75rem;
-}
-
-header nav a:first-child {
-  margin-left: 0;
 }
 
 .bar1,

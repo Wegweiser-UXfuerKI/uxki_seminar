@@ -109,7 +109,6 @@ svg {
 }
 
 .glassy-box {
-  position: relative;
   background: var(--box);
   border-radius: var(--scale5);
   box-shadow: var(--glasBoxShadow);
@@ -206,11 +205,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-main {
-  padding-top: 90px;
-  min-height: 85vh;
-}
-
 .outerContainer,
 section {
   margin: var(--scale10) auto;
@@ -231,24 +225,33 @@ header {
 
 header nav a {
   margin: 0 0.75rem;
-  font-weight: 600;
-  transition: all 0.24s ease-in-out;
 }
 
 header nav a:first-child {
   margin-left: 0;
 }
 
-/* Mobile */
-.nav {
-  background-color: var(--bg);
-  width: 15%;
+.bar1,
+.bar2,
+.bar3 {
+  width: 32px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--text);
+  margin: 6px 0;
+  transition: all 0.24s ease-in-out;
 }
 
-.nav-btn {
-  margin-top: 40px;
-  font-weight: 600;
-  font-size: 14px;
+.change .bar1 {
+  transform: translate(0, 10px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -10px) rotate(45deg);
 }
 
 /* Typographie */
@@ -314,10 +317,6 @@ ul:not(:last-child):not(:has(+ p)):not(:has(+ ul)):not(:has(+ ol)) {
 
 p + p {
   margin-top: var(--scale3);
-}
-
-.smallTextSize {
-  font-size: calc(var(--base-size) + 0.4vmin);
 }
 
 b,
@@ -424,34 +423,14 @@ main li a:hover::after,
   box-shadow: var(--shadow);
 }
 
-.bar1,
-.bar2,
-.bar3 {
-  width: 35px;
-  height: 5px;
-  border-radius: 5px;
-  background-color: white;
-  margin: 6px 0;
-  transition: all 0.24s ease-in-out;
-}
-
-.change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
-}
-
-.change .bar2 {
-  opacity: 0;
-}
-
-.change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
-}
-
-.transition-opacity {
-  transition: opacity 0.24s;
-}
-
 /* responsive */
+@media screen and (min-width: 1024px) {
+  main {
+    padding-top: 90px;
+    min-height: 85vh;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .outerContainer,
   section {

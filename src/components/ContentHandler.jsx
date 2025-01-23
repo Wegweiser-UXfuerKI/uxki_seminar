@@ -72,7 +72,7 @@ export function getModuleImageByLink(moduleLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return null;
   const ModuleIcon = module.moduleImage;
-  return <ModuleIcon className="max-h-[150px] max-w-[150px]" />;
+  return <ModuleIcon className="lg:max-h-[150px] lg:max-w-[150px] max-h-[96px] max-w-[96px]" />;
 }
 
 /**

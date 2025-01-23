@@ -31,7 +31,7 @@ const Home = () => {
   }, [scrollToChapter, modulesData, setScrollToChapter]);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-10 my-40 m-auto max-w-[1600px]">
+    <div className="flex flex-col justify-center items-center gap-10 my-32 px-6 m-auto max-w-[1600px]">
       <section className="mt-0">
         <h2>Willkommen auf der Lernplattform von Wegweiser UX für KI!</h2>
         <p>

@@ -23,14 +23,12 @@ const SubTopic = ({ topicName, link, description, number, isDisabled }) => {
     <div
       className={`lg:w-1/3 sm:w-1/2 w-full mb-10 ${
         isDisabled ? "opacity-50 pointer-events-none" : ""
-      }`}
-    >
+      }`}>
       <Link to={`/${selectedModuleLink}/${link}`}>
-        <div className="subTopicCard glassy-box h-full xl:p-8 p-6 flex flex-col justify-end m-3">
+        <div className="subTopicCard relative glassy-box h-full xl:p-8 p-6 flex flex-col justify-end m-3">
           <h3
             className="fourthTitle mt-10 hyphens-auto"
-            topic-number={String(number + 1).padStart(2, "0")}
-          >
+            topic-number={String(number + 1).padStart(2, "0")}>
             {topicName}
           </h3>
           <p className="text-base">{description}</p>

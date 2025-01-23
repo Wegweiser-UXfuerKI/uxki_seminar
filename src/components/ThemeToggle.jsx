@@ -9,14 +9,13 @@ export const ThemeToggle = () => {
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div id="toggleTheme" className="relative">
       <button
         onClick={toggleTheme}
         className="relative inline-flex h-6 w-11 items-center rounded-xl transition-colors"
         style={{
           backgroundColor: theme === "light" ? "var(--fg)" : "var(--bg)",
-        }}
-      >
+        }}>
         <span className="sr-only">Toggle theme</span>
         <div
           className={`${

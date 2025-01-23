@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   getSubtopicLinksAndNamesByModulelink,
   getModuleImageByLink,
@@ -21,8 +20,8 @@ const HomeModuleCard = ({
       key={index}
       ref={(el) => (moduleRefs.current[index] = el)}>
       {/* Link to the module, disabled if `isDisabled` is true */}
-      <Link
-        to={`/${module[0]}`} // Target URL for the module
+      <div
+        // to={`/${module[0]}`} // Target URL for the module
         className="w-full flex flex-grow flex-wrap justify-between md:p-16 sm:p-12 p-8"
         onClick={(e) => isDisabled && e.preventDefault()}
         aria-disabled={isDisabled ? "true" : "false"}>
@@ -68,7 +67,7 @@ const HomeModuleCard = ({
               </div>
             ))}
         </div>
-      </Link>
+      </div>
     </div>
   );
 };

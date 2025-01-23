@@ -1,7 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Home from "./components/pages/Home";
-import ModulePage from "./components/pages/ModulePage";
 import Header from "./components/nav/Header";
 import Footer from "./components/nav/Footer";
 import { AppProvider } from "./AppContext";
@@ -63,8 +62,8 @@ function App() {
             <div className="circle"></div>
             <Routes>
               <Route index element={<Home />} />
-              <Route path=":module" element={<ModulePage />} />
               <Route path=":module/:subtopicId" element={<TextLayout />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
             <div className="circle2"></div>
             {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}

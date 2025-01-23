@@ -72,19 +72,26 @@ const AppProvider = ({ children }) => {
     const subtopicLink = pathSegments[1];
 
     if (module && getModuleLinks().includes(module)) {
-      setSelectedModuleLink(module);
-      const moduleNames = getModuleNameByLink(module);
-      setSelectedModuleName(moduleNames);
       if (subtopicLink) {
         const subtopic = getSubtopicByLink(module, subtopicLink);
         if (subtopic) {
+          setSelectedModuleLink(module);
+          const moduleNames = getModuleNameByLink(module);
+          setSelectedModuleName(moduleNames);
           setSelectedSubtopicLink(subtopicLink);
           const subtopicName = getSubtopicNameByLink(module, subtopicLink);
           setSelectedSubtopicName(subtopicName);
         } else {
-          navigate(`/${module}`);
+          navigate("/");
+          setScrollToChapter(module);
+          setSelectedModuleLink(null);
+          setSelectedModuleName(null);
         }
       } else {
+        navigate("/");
+        setScrollToChapter(module);
+        setSelectedModuleLink(null);
+        setSelectedModuleName(null);
         setSelectedSubtopicLink(null);
         setSelectedSubtopicName(null);
       }

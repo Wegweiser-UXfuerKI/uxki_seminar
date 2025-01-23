@@ -18,6 +18,13 @@ const DesktopNav = () => {
     setScrollToChapter,
   } = useContext(AppContext);
 
+  const homeScrollCheck = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <nav className="w-full flex items-center justify-between py-5">
       <div className="flex justify-start items-center gap-3">
@@ -25,19 +32,20 @@ const DesktopNav = () => {
         <Link
           to="/"
           aria-label="Zur Startseite"
-          onClick={() => {
-            if (selectedModuleLink) {
-              setScrollToChapter(selectedModuleLink);
-            }
-          }}>
+          onClick={() => homeScrollCheck()}>
           Kursübersicht
         </Link>
         {selectedModuleLink && (
           <>
             <RightArrow />
             <Link
-              to={`/${selectedModuleLink}`}
-              className={selectedSubtopicName ? "" : "active"}>
+              to={"/"}
+              className={selectedSubtopicName ? "" : "active"}
+              onClick={() => {
+                if (selectedModuleLink) {
+                  setScrollToChapter(selectedModuleLink);
+                }
+              }}>
               {selectedModuleName}
             </Link>
             {selectedSubtopicName && (

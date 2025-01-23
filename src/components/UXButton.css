@@ -10,6 +10,11 @@
   color: var(--bg);
 }
 
+:root.light .ux-button:hover,
+:root.light .ux-button:focus {
+  color: var(--w);
+}
+
 .ux-button:hover > svg,
 .ux-button:focus > svg {
   fill: var(--bg);
@@ -23,10 +28,10 @@
   left: -2px;
   background-size: 400%;
   z-index: -1;
-  filter: blur(3px);
-  width: calc(100% + 7px);
-  height: calc(100% + 7px);
-  animation: glowing 30s linear infinite;
+  filter: blur(4px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 40s linear infinite;
   opacity: 0;
   transition: all 0.24s ease-in-out;
   border-radius: 0.75rem;
@@ -51,6 +56,10 @@
 
 .ux-button:hover:after {
   background: var(--text);
+}
+
+:root.light .ux-button:hover:after {
+  background: var(--ev);
 }
 
 @keyframes glowing {

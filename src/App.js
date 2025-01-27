@@ -7,6 +7,7 @@ import { AppProvider } from "./AppContext";
 import { TextLayout } from "./components/TextLayout";
 import { ReactComponent as RightArrow } from "./assets/images/right-arrow.svg";
 import "./assets/css/App.css";
+import "./assets/css/DesignTokens.css";
 //import formbricks from "@formbricks/js";
 
 /*

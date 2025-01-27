@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { ReactComponent as RightArrow } from "../../assets/images/right-arrow.svg";
 import { AppContext } from "../../AppContext";
 import HoverDropDown from "./HoverDropDown";
+import {
+  getModuleLinksAndNames,
+  getSubtopicLinksAndNamesByModulelink,
+} from "../ContentHandler";
 
 /**
  * DesktopNav component to display navigation for desktop screens.
@@ -11,8 +15,18 @@ import HoverDropDown from "./HoverDropDown";
  * @returns {JSX.Element} The rendered desktop navigation component.
  */
 const DesktopNav = () => {
-  const { selectedModuleLink, selectedSubtopicLink, selectedSubtopicName } =
-    useContext(AppContext);
+  const {
+    selectedModuleLink,
+    selectedModuleName,
+    selectedSubtopicLink,
+    selectedSubtopicName,
+    disabledModules,
+    disabledSubtopics,
+  } = useContext(AppContext);
+
+  const moduleItems = getModuleLinksAndNames();
+  const subtopics =
+    getSubtopicLinksAndNamesByModulelink(selectedModuleLink) || [];
 
   const homeScrollCheck = () => {
     window.scrollTo({
@@ -27,21 +41,32 @@ const DesktopNav = () => {
         <Link
           to="/"
           aria-label="Zur Startseite"
-          onClick={() => homeScrollCheck()}>
+          onClick={() => homeScrollCheck()}
+          className="firstLevel">
           Kursübersicht
         </Link>
         {selectedModuleLink && (
           <>
             <RightArrow />
-            <HoverDropDown />
+            <HoverDropDown
+              selectedLink={selectedModuleLink}
+              selectedName={selectedModuleName}
+              items={moduleItems}
+              disabledItems={disabledModules[selectedModuleLink] || []}
+            />
             {selectedSubtopicName && (
               <>
                 <RightArrow />
-                <Link
-                  to={`/${selectedModuleLink}/${selectedSubtopicLink}`}
-                  className="active">
-                  {selectedSubtopicName}
-                </Link>
+                {/* TODO: fix active style here and deactivate disabled items */}
+                <HoverDropDown
+                  selectedLink={`/${selectedModuleLink}/${selectedSubtopicLink}`}
+                  selectedName={selectedSubtopicName}
+                  items={subtopics.map(([subtopicLink, subtopicName]) => [
+                    `${selectedModuleLink}/${subtopicLink}`,
+                    subtopicName,
+                  ])}
+                  disabledItems={disabledSubtopics[selectedSubtopicLink] || []}
+                />
               </>
             )}
           </>

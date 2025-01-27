@@ -6,12 +6,12 @@
 
 .clip_triangle_2 {
   clip-path: polygon(0 0, 20% 0, 25% 100%, 0% 100%);
-  background-color: var(--cb);
+  background-color: var(--vb);
 }
 
 .clip_triangle_3 {
   clip-path: polygon(0 0, 25% 0, 30% 100%, 0% 100%);
-  background-color: var(--fm);
+  background-color: var(--lf);
 }
 
 .clip_triangle_4 {
@@ -27,12 +27,12 @@
 
 .clip_text_triangle_2 {
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 30% 100%);
-  background-color: var(--cb);
+  background-color: var(--vb);
 }
 
 .clip_text_triangle_3 {
   clip-path: polygon(30% 0, 100% 0, 100% 100%, 35% 100%);
-  background-color: var(--fm);
+  background-color: var(--lf);
 }
 
 .clip_text_triangle_4 {

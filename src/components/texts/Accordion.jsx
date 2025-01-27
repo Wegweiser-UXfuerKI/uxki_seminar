@@ -59,9 +59,9 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
           aria-hidden={!isOpen}>
           <ul className="list-none p-0 m-0">
             {sections.map((section, index) => (
-              <li key={index} className="">
+              <li key={section.id}>
                 <a href={`#${section.id}`} className="px-2 py-1">
-                  {section.title}
+                  {`${index + 1}: ${section.title}`}
                 </a>
               </li>
             ))}

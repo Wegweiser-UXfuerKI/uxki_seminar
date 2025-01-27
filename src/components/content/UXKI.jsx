@@ -13,15 +13,15 @@ const moduleName = "KI-bezogene UX";
 
 // TODO: make intro as consistent component for every page?
 const sections = [
-  { id: "definition", title: "1. Definition" },
-  { id: "konzepte", title: "2. Relevante Konzepte und Modelle" },
-  { id: "studie", title: "3. Studien zur User Experience und KI" },
+  { id: "definition", title: "Definition" },
+  { id: "konzepte", title: "Konzepte und Modelle" },
+  { id: "studie", title: "Studien zu UX und KI" },
   {
     id: "operationalisierung",
-    title: "4. Operationalisierung: Fragebögen und Messinstrumente",
+    title: "Fragebögen und Messinstrumente",
   },
-  { id: "guidelines", title: "5. Design-Guidelines für eine gute UX" },
-  { id: "fazit", title: "6. Fazit" },
+  { id: "guidelines", title: "Design-Guidelines" },
+  { id: "fazit", title: "Fazit" },
 ];
 
 const WahrgenommeneAutonomie = {

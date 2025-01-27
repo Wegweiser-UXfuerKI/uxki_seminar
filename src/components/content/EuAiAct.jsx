@@ -15,10 +15,10 @@ import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";
 import Sources from "../texts/Sources";
 
 const sectionEinleitung = [
-  { id: "euAIAct", title: "1. Was ist der EU AI Act?" },
-  { id: "vergleich", title: "2. Vergleich mit anderen Ländern / Regionen" },
-  { id: "umsetzung", title: "3. Umsetzung des Acts in den Mitgliedstaaten" },
-  { id: "fazit", title: "4. Fazit" },
+  { id: "euAIAct", title: "Was ist der EU AI Act?" },
+  { id: "vergleich", title: "Vergleich mit anderen Ländern / Regionen" },
+  { id: "umsetzung", title: "Umsetzung in den Mitgliedstaaten" },
+  { id: "fazit", title: "Fazit" },
 ];
 
 const Einleitung = {
@@ -278,10 +278,10 @@ const Einleitung = {
 const sectionRisikostufenAnwendungsbeispiele = [
   {
     id: "risikostufen",
-    title: "1. Einteilung in Risikostufen anhand Anwendungsbeispiele",
+    title: "Einteilung in Risikostufen",
   },
-  { id: "beispiele", title: "2. Die Beispiele" },
-  { id: "complianceChecker", title: "3. EU AI Act Compliance Checker" },
+  { id: "beispiele", title: "Anwendungsbeispielen" },
+  { id: "complianceChecker", title: "EU AI Act Compliance Checker" },
 ];
 
 const RisikostufenAnwendungsbeispiele = {
@@ -505,10 +505,10 @@ const RisikostufenAnwendungsbeispiele = {
 const sectionRisikostufenAuswirkungen = [
   {
     id: "massnahmen",
-    title: "1. Was muss je nach Risikostufe beachtet werden?",
+    title: "Was muss je nach Risikostufe beachtet werden?",
   },
-  { id: "videoRisikostufen", title: "2. Designimplikationen des EU AI Acts" },
-  { id: "KIVO", title: "3. KI-Managementsystem laut KIVO und DIN 42001:2023" },
+  { id: "videoRisikostufen", title: "Designimplikationen des EU AI Acts" },
+  { id: "KIVO", title: "KI-Managementsystem laut KIVO und DIN 42001:2023" },
 ];
 
 const RisikostufenAuswirkungen = {
@@ -768,14 +768,14 @@ const RisikostufenAuswirkungen = {
 const sectionHLEG = [
   {
     id: "hleg",
-    title: "1. Die Rolle der High-Level Expert Group für Trustworthy AI",
+    title: "Die Rolle der High-Level Expert Group für Trustworthy AI",
   },
-  { id: "anforderungen", title: "2. Die sieben Anforderungen der HLEG" },
+  { id: "anforderungen", title: "Die sieben Anforderungen der HLEG" },
   {
     id: "unterschiede",
-    title: "3. Unterschiede zwischen dem AI Act und den Anforderungen der HLEG",
+    title: "Unterschiede zwischen dem AI Act und den Anforderungen der HLEG",
   },
-  { id: "fazit", title: "4. Zusammenfassung der Kriterien und Ziele der HLEG" },
+  { id: "fazit", title: "Zusammenfassung der Kriterien und Ziele der HLEG" },
 ];
 
 const HLEG = {

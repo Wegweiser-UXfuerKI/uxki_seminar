@@ -51,6 +51,17 @@ svg {
   border-radius: var(--base-size);
 }
 
+:root.dark .glassBox a:hover,
+:root.dark .glassBox a.active {
+  background-color: var(--bg);
+}
+
+:root.light .glassBox a:hover,
+:root.light .glassBox a.active {
+  background-color: var(--ev);
+  color: var(--w);
+}
+
 .glassBlur {
   -moz-backdrop-filter: var(--blur);
   -o-backdrop-filter: var(--blur);
@@ -232,6 +243,10 @@ li {
   font-size: calc(var(--scale2) + 0.24vmin);
   line-height: calc(var(--line-height-base) * 1.2);
   font-weight: 300;
+}
+
+.smallTextSize {
+  font-size: 14px;
 }
 
 :root.dark p,

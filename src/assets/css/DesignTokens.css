@@ -2,9 +2,9 @@
 :root {
   /*Colors*/
   --tb: #77d1cb; /* tiffanyBlue */
-  --cb: #7aa2cd; /* vistaBlue */
+  --vb: #7aa2cd; /* vistaBlue */
   --ti: #8377d1; /* tropicalIndigo */
-  --fm: #aa77c2; /* lavenderFloral */
+  --lf: #aa77c2; /* lavenderFloral */
   --sm: #d177b3; /* skyMagenta */
 
   --br: #292734; /* raisinBlack */
@@ -15,21 +15,21 @@
 
   /* Shadows and Background */
   --shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
-  --blur: blur(var(--scale10));
+  --blur: blur(96px);
   --lGradient: linear-gradient(
     to top,
     var(--tb),
-    var(--cb),
+    var(--vb),
     var(--ti),
-    var(--fm),
+    var(--lf),
     var(--sm)
   );
   --rGradient: radial-gradient(
     circle,
     var(--tb),
-    var(--cb),
+    var(--vb),
     var(--ti),
-    var(--fm),
+    var(--lf),
     var(--sm)
   );
 

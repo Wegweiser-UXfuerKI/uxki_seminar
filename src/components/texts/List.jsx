@@ -12,7 +12,7 @@ const List = ({ items }) => {
       {items.map((item, index) => (
         <li key={index} className="flex items-center mb-[32px]">
           <div
-            className="thirdTitle glassy-box"
+            className="thirdTitle glassBox"
             style={{
               width: "64px",
               height: "64px",

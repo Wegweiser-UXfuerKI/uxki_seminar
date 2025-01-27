@@ -19,7 +19,7 @@ const SubNavigation = ({ sections }) => {
         <a
           key={section.id}
           href={`#${section.id}`}
-          className="relative group w-10 h-10 flex items-center justify-center rounded-full glassy-box glassBlur"
+          className="relative group w-10 h-10 flex items-center justify-center rounded-full glassBox glassBlur"
           aria-label={`Gehe zur Sektion: ${section.title}`}>
           <span className="font-bold">{index + 1}</span>
           <span

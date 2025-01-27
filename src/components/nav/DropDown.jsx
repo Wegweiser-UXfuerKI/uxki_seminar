@@ -115,7 +115,7 @@ const DropDown = ({
         <div
           id={dropdownId}
           role="menu"
-          className="absolute top-6 left-0 glassy-box glassBlur rounded-xl min-w-[320px]"
+          className="absolute top-6 left-0 glassBox glassBlur rounded-xl min-w-[320px]"
           style={{background:"var(--bg)"}}>
           <ul className="list-none">
             {items.map(([linkName, moduleName], index) => (

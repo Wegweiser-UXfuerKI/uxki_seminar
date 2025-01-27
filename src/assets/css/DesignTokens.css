@@ -1,0 +1,70 @@
+/* Root Variables - Color Scheme and Design Variables */
+:root {
+  /*Colors*/
+  --tb: #77d1cb; /* tiffanyBlue */
+  --cb: #7aa2cd; /* vistaBlue */
+  --ti: #8377d1; /* tropicalIndigo */
+  --fm: #aa77c2; /* lavenderFloral */
+  --sm: #d177b3; /* skyMagenta */
+
+  --br: #292734; /* raisinBlack */
+  --ev: #54506a; /* englishViolet */
+  --fg: #b7b4c7; /* frenchGray */
+  --la: #d4d2dd; /* lavenderWeb */
+  --w: #f1f0f4; /* anti-flashWhite */
+
+  /* Shadows and Background */
+  --shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+  --blur: blur(var(--scale10));
+  --lGradient: linear-gradient(
+    to top,
+    var(--tb),
+    var(--cb),
+    var(--ti),
+    var(--fm),
+    var(--sm)
+  );
+  --rGradient: radial-gradient(
+    circle,
+    var(--tb),
+    var(--cb),
+    var(--ti),
+    var(--fm),
+    var(--sm)
+  );
+
+  /* Typography Styles */
+  --base-size: 8px; /* Define base size */
+  --scale10: calc(var(--base-size) * 10); /* 80px */
+  --scale9: calc(var(--base-size) * 9); /* 72px */
+  --scale8: calc(var(--base-size) * 8); /* 64px */
+  --scale7: calc(var(--base-size) * 7); /* 56px */
+  --scale6: calc(var(--base-size) * 6); /* 48px */
+  --scale5: calc(var(--base-size) * 5); /* 40px */
+  --scale4: calc(var(--base-size) * 4); /* 32px */
+  --scale3: calc(var(--base-size) * 3); /* 24px */
+  --scale2: calc(var(--base-size) * 2); /* 16px */
+  --line-height-base: 1.5;
+}
+
+/* Theme Styles */
+:root.dark {
+  --bg: var(--br);
+  --text: var(--w);
+  --box: rgba(84, 80, 106, 0.56);
+  --hover: var(--w);
+  --glasBorder: linear-gradient(145deg, var(--fg) 0%, var(--ev));
+  --glasBoxShadow: inset 1px 1.2px 2px var(--fg),
+    inset 1px -0.5px 2px var(--box), 2px 4px 16px rgba(0, 0, 0, 0.16),
+    1px 2px 2px -2px var(--bg);
+}
+
+:root.light {
+  --bg: var(--la);
+  --text: var(--br);
+  --box: rgba(241, 240, 244, 0.56);
+  --hover: var(--ev);
+  --glasBorder: linear-gradient(145deg, #ffffff 0%, var(--fg));
+  --glasBoxShadow: inset 1px 1.2px 2px #ffffff, inset 1px -0.5px 2px var(--box),
+    2px 4px 16px rgba(0, 0, 0, 0.16), 1px 2px 2px -2px var(--fg);
+}

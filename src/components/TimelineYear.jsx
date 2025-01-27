@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./TimelineYear.css";
-import { DocumentIcon, InfoIcon, SignIcon } from "./svg/Icons";
+import { DocumentIcon, InfoIcon, SignIcon } from "../assets/icons/iconsTimeline";
 
 /**
  * A component that displays the events for a specific year in a timeline.

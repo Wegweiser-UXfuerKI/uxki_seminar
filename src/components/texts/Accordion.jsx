@@ -24,7 +24,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
   };
 
   return (
-    <div className="glassy-box w-full rounded-xl mb-6">
+    <div className="glassBox w-full rounded-xl mb-6">
       {/* Accordion Title */}
       <div
         onClick={toggleAccordion}
@@ -57,10 +57,12 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
           }}
           role="region"
           aria-hidden={!isOpen}>
-          <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
+          <ul className="list-none p-0 m-0">
             {sections.map((section, index) => (
-              <li key={index} style={{ margin: "8px 0" }}>
-                <a href={`#${section.id}`}>{section.title}</a>
+              <li key={index} className="">
+                <a href={`#${section.id}`} className="px-2 py-1">
+                  {section.title}
+                </a>
               </li>
             ))}
           </ul>

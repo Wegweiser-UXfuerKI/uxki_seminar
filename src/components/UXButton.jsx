@@ -30,7 +30,7 @@ const UXButton = ({
       : "order-last";
 
   // Adds a glassy box style if `useGlassyBox` is true
-  const glassyClass = useGlassyBox ? "glassy-box py-6" : "";
+  const glassyClass = useGlassyBox ? "glassBox py-6" : "";
 
   // Scroll to the top of the page when navigating
   const handleNavigation = () => {

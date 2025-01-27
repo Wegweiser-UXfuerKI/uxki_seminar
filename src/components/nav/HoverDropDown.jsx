@@ -58,7 +58,7 @@ const HoverDropDown = () => {
         initial="exit"
         animate={isHovered ? "enter" : "exit"}
         variants={subMenuAnimate}
-        className="absolute flex-col glassy-box gap-y-2 p-5">
+        className="absolute flex-col glassy-box gap-y-2 p-8">
         {moduleLinksNames.map(([link, name]) => (
           <Link
             key={link}

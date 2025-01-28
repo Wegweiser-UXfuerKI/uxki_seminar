@@ -30,10 +30,6 @@ body {
   background-color: var(--bg);
 }
 
-svg {
-  fill: var(--text);
-}
-
 .img-container {
   overflow: hidden;
 }
@@ -71,6 +67,10 @@ svg {
 
 .rounded-xl {
   border-radius: var(--scale2);
+}
+
+.svgFill {
+  fill: var(--text);
 }
 
 .circle,

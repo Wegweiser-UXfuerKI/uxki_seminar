@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ReactComponent as RightArrow } from "../../../src/assets/images/right-arrow.svg";
+import RightArrow from "../1_elements/RightArrow";
 
 /**
  * A customizable Accordion component to display a collapsible section with a title and a list of links.
@@ -28,7 +28,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
       {/* Accordion Title */}
       <div
         onClick={toggleAccordion}
-        className="fourthTitle p-4 pl-6 pr-6 flex justify-between items-center"
+        className="fourthTitle flex justify-between items-center px-6 py-4"
         style={{ marginBottom: "0" }}
         role="button"
         aria-expanded={isOpen}
@@ -49,7 +49,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
       {isOpen && (
         <div
           id="accordion-content"
-          className="p-6"
+          className="px-6 py-4"
           style={{
             borderTop: "1.48px solid transparent",
             borderImage: "var(--glasBorder) 1",

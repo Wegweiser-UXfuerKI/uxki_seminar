@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as RightArrow } from "../../assets/images/right-arrow.svg";
+import RightArrow from "../1_elements/RightArrow";
 import { AppContext } from "../../AppContext";
 import HoverDropDown from "./HoverDropDown";
 import {

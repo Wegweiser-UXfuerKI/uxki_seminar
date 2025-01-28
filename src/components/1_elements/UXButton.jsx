@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as RightArrow } from "../../../src/assets/images/right-arrow.svg";
+import RightArrow from "./RightArrow";
 import "./UXButton.css";
 
 /**
@@ -23,12 +23,6 @@ const UXButton = ({
   useGlassyBox = false,
   to,
 }) => {
-  // Assigns the correct CSS class to position the arrow (left or right)
-  const arrowClass =
-    arrowPosition === "left"
-      ? "order-first transform scale-x-[-1]"
-      : "order-last";
-
   // Adds a glassy box style if `useGlassyBox` is true
   const glassyClass = useGlassyBox ? "glassBox py-6" : "";
 
@@ -42,12 +36,10 @@ const UXButton = ({
       to={to}
       onClick={handleNavigation}
       aria-label={`Navigiere zu ${text}`}
-      role="link">
-      <div
-        className={`ux-button px-6 py-4 flex flex-row justify-between h-full items-center gap-[10px] transition ease-in-out duration-[390ms] transform hover:shadow-lg ${glassyClass}`}>
-        {text}
-        <RightArrow className={arrowClass} />
-      </div>
+      role="link"
+      className={`ux-button px-6 py-4 flex justify-between h-full items-center gap-2 transform ${glassyClass}`}>
+      {text}
+      <RightArrow arrowPosition={arrowPosition} />
     </Link>
   );
 };

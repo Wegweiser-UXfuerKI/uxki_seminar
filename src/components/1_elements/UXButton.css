@@ -1,6 +1,6 @@
 .ux-button {
   background: var(--bg);
-  border-radius: 0.75rem !important;
+  border-radius: var(--scale2) !important;
   transition: all 0.24s ease-in-out;
 }
 
@@ -10,9 +10,8 @@
   color: var(--bg);
 }
 
-:root.light .ux-button:hover,
-:root.light .ux-button:focus {
-  color: var(--w);
+a.ux-button:hover {
+  padding: 1rem 1.5rem !important;
 }
 
 .ux-button:hover > svg,
@@ -22,11 +21,11 @@
 
 .ux-button:before {
   content: "";
-  background: var(--rGradient);
   position: absolute;
   top: -2px;
   left: -2px;
   background-size: 400%;
+  background: var(--rGradient);
   z-index: -1;
   filter: blur(4px);
   width: calc(100% + 4px);
@@ -34,7 +33,7 @@
   animation: glowing 40s linear infinite;
   opacity: 0;
   transition: all 0.24s ease-in-out;
-  border-radius: 0.75rem;
+  border-radius: var(--scale2);
 }
 
 .ux-button:hover:before {
@@ -42,7 +41,6 @@
 }
 
 .ux-button:after {
-  z-index: -1;
   content: "";
   position: absolute;
   width: 100%;
@@ -50,7 +48,8 @@
   background: transparent;
   left: 0;
   top: 0;
-  border-radius: 0.75rem;
+  border-radius: var(--scale2);
+  z-index: -1;
   transition: all 0.24s ease-in-out;
 }
 
@@ -62,16 +61,17 @@
   background: var(--ev);
 }
 
+:root.light .ux-button:hover,
+:root.light .ux-button:focus {
+  color: var(--w);
+}
+
 @keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 400% 0;
-  }
-
+  0%,
   100% {
     background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
   }
 }

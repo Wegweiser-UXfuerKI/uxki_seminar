@@ -1,5 +1,5 @@
 import { ReactComponent as imageElement } from "../../assets/icons/usability.svg";
-import { ChapterHeader } from "../2_molecule/ChapterHeader";
+import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { VideoContainer } from "../1_elements/VideoContainer";
 import { Link } from "react-router-dom";
 

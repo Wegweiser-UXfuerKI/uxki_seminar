@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../AppContext";
-import { ChapterSwitch } from "../2_molecule/ChapterSwitch";
+import { ChapterSwitch } from "../3_organism/ChapterSwitch";
 import { getSubtopicContentByLink } from "../ContentHandler";
 
 /**

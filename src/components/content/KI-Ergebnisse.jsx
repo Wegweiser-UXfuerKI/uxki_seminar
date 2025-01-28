@@ -1,5 +1,5 @@
 import { ReactComponent as imageElement } from "../../assets/icons/ux-placeholder.svg";
-import { ChapterHeader } from "../2_molecule/ChapterHeader";
+import { ChapterHeader } from "../3_organism/ChapterHeader";
 
 const Einleitung = {
   linkName: "einleitung",

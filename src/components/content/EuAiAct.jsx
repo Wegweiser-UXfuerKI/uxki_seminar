@@ -4,7 +4,7 @@ import DosAndDonts from "../dosdonts/DosAndDonts";
 import { GraphicContainer } from "../1_elements/GraphicContainer";
 import QuizContainer from "../quizUX/components/QuizContainer";
 import { RisikostufenPyramide } from "../interactive/RisikostufenPyramide";
-import { ChapterHeader } from "../2_molecule/ChapterHeader";
+import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { VideoContainer } from "../1_elements/VideoContainer";
 import Timeline from "../interactive/Timeline";
 import ContainerSixteenNine from "../1_elements/ContainerSixteenNine";

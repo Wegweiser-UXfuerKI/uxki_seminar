@@ -2,7 +2,7 @@ import { ReactComponent as imageElement } from "../../assets/icons/ux-ki.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import SubTopic from "../2_molecule/SubTopic";
-import List from "../texts/List";
+import List from "../2_molecule/List";
 
 //TODO: place components globaly for every modul page?
 import Accordion from "../2_molecule/nav/Accordion";

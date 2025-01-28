@@ -1,35 +1,60 @@
+import { useState, useEffect } from "react";
+import "./SubNavigation.css";
+
 /**
- * A fixed SubNavigation component displaying a vertical list of items as numbered circles.
- * The component is positioned on the right side of the screen and includes hover functionality
- * to display the titles of the sections.
+ * A fixed SubNavigation component that displays a vertical list of items as numbered circles.
+ * The component is positioned on the right side of the screen. Each item has hover functionality
+ * to reveal the title of the corresponding section, and the active section is visually highlighted.
  *
  * @component
  * @param {Object} props - The props for the SubNavigation component.
- * @param {Array} props.sections - An array of section objects, each with an `id` and `title`.
+ * @param {Array} props.sections - An array of section objects, where each object contains:
+ *   @param {string} props.sections.id - The unique identifier of the section. Used as the `id` in the URL hash.
+ *   @param {string} props.sections.title - The title of the section, displayed on hover.
  *
  * @returns {JSX.Element} The rendered SubNavigation component.
+ *
+ * @example
+ * // Example usage:
+ * const sections = [
+ *   { id: 'section1', title: 'Introduction' },
+ *   { id: 'section2', title: 'Chapter 1' },
+ *   { id: 'section3', title: 'Chapter 2' },
+ *   { id: 'section4', title: 'Conclusion' },
+ * ];
+ *
+ * <SubNavigation sections={sections} />
  */
 const SubNavigation = ({ sections }) => {
+  // State to track the active section
+  const [activeSection, setActiveSection] = useState("");
+
+  // Check the active section based on the URL hash
+  useEffect(() => {
+    const handleHashChange = () => {
+      setActiveSection(window.location.hash);
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    handleHashChange(); // to check on initial load
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   return (
     <nav
       aria-label="Section Navigation"
-      className="fixed top-[40%] right-4 flex flex-col space-y-4"
-      style={{ zIndex: 1000 }}>
+      id="sectionNavi"
+      className="fixed top-[40%] right-4 flex flex-col items-end space-y-4 z-20">
       {sections.map((section, index) => (
         <a
           key={section.id}
           href={`#${section.id}`}
-          className="relative group w-10 h-10 flex items-center justify-center rounded-full glassBox glassBlur"
+          className={`relative group w-fit h-10 flex items-center justify-center rounded-full glassBox glassBlur px-4 py-1 transition-all ease-in-out ${
+            activeSection === `#${section.id}` ? "active" : ""
+          }`}
           aria-label={`Gehe zur Sektion: ${section.title}`}>
-          <span className="font-bold">{index + 1}</span>
-          <span
-            className="absolute right-full mr-2 px-2 py-1 text-base rounded opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity"
-            style={{
-              whiteSpace: "nowrap",
-              background: "var(--text)",
-              color: "var(--bg)",
-            }}>
-            {section.title}
+          {index + 1}
+          <span className="sectionTitle hidden pr-5 group-hover:block group-hover:pr-0 transition">
+            : {section.title}
           </span>
         </a>
       ))}
@@ -38,12 +63,3 @@ const SubNavigation = ({ sections }) => {
 };
 
 export default SubNavigation;
-
-// Example usage:
-// const sections = [
-//   { id: 'section1', title: 'Introduction' },
-//   { id: 'section2', title: 'Chapter 1' },
-//   { id: 'section3', title: 'Chapter 2' },
-//   { id: 'section4', title: 'Conclusion' },
-// ];
-// <SubNavigation sections={sections} />

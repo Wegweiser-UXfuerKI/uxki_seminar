@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * A component that renders a chapter header with a title and a chapter number.
  *

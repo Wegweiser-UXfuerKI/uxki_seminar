@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { AppContext } from "../../AppContext";
+import { AppContext } from "../../../AppContext";
+import "./DropDownMenu.css";
 
 /**
- * HoverDropDown component to display a dropdown menu on hover.
+ * DropDownMenu component to display a dropdown menu on hover.
  * It renders a list of items in a dropdown, which are passed as props.
  * The dropdown menu appears when the user hovers over the parent link.
  *
@@ -16,7 +17,7 @@ import { AppContext } from "../../AppContext";
  *   ["module3", "Module 3"]
  * ];
  *
- * <HoverDropDown
+ * <DropDownMenu
  *   selectedLink="/module1"
  *   selectedName="Module 1"
  *   items={items}
@@ -31,7 +32,7 @@ import { AppContext } from "../../AppContext";
  *
  * @returns {JSX.Element} The rendered dropdown menu component
  */
-const HoverDropDown = ({
+const DropDownMenu = ({
   selectedLink,
   selectedName,
   items,
@@ -85,7 +86,7 @@ const HoverDropDown = ({
         animate={isHovered ? "enter" : "exit"}
         variants={subMenuAnimate}
         id="dropDown"
-        className="absolute flex flex-col glassBox rounded-xl gap-y-2 py-6 px-4 overflow-hidden">
+        className="absolute flex flex-col glassBox rounded-xl gap-y-2 py-6 px-4">
         {items?.map(([link, name], index) => {
           // TODO: Check if the item is disabled
           const isDisabled = disabledItems.includes(link);
@@ -99,12 +100,8 @@ const HoverDropDown = ({
                   setScrollToChapter(link);
                 }
               }}
-              className={`${
-                isDisabled
-                  ? "opacity-50 pointer-events-none text-gray-400 line-through"
-                  : link === selectedLink
-                  ? "active"
-                  : "secondLevel px-2 py-1"
+              className={`secondLevel rounded-lg px-2 py-1 ${
+                isDisabled ? "disabled" : link === selectedLink ? "active" : ""
               }`}>
               {`${index + 1}: ${name}`}
             </Link>
@@ -115,4 +112,4 @@ const HoverDropDown = ({
   );
 };
 
-export default HoverDropDown;
+export default DropDownMenu;

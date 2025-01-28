@@ -40,24 +40,6 @@ body {
   box-shadow: var(--glasBoxShadow);
 }
 
-.glassBox a:hover,
-.glassBox a.active {
-  background-color: var(--bg);
-  padding: 4px var(--base-size);
-  border-radius: var(--base-size);
-}
-
-:root.dark .glassBox a:hover,
-:root.dark .glassBox a.active {
-  background-color: var(--bg);
-}
-
-:root.light .glassBox a:hover,
-:root.light .glassBox a.active {
-  background-color: var(--ev);
-  color: var(--w);
-}
-
 .glassBlur {
   -moz-backdrop-filter: var(--blur);
   -o-backdrop-filter: var(--blur);
@@ -71,6 +53,15 @@ body {
 
 .svgFill {
   fill: var(--text);
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.transition {
+  transform: 0.24s ease-in-out;
 }
 
 .circle,

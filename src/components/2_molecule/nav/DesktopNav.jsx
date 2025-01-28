@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import RightArrow from "../1_elements/RightArrow";
-import { AppContext } from "../../AppContext";
-import HoverDropDown from "./HoverDropDown";
+import RightArrow from "../../1_elements/RightArrow";
+import { AppContext } from "../../../AppContext";
+import DropDownMenu from "./DropDownMenu";
 import {
   getModuleLinksAndNames,
   getSubtopicLinksAndNamesByModulelink,
-} from "../ContentHandler";
+} from "../../ContentHandler";
 
 /**
  * DesktopNav component to display navigation for desktop screens.
@@ -48,7 +48,7 @@ const DesktopNav = () => {
         {selectedModuleLink && (
           <>
             <RightArrow />
-            <HoverDropDown
+            <DropDownMenu
               selectedLink={selectedModuleLink}
               selectedName={selectedModuleName}
               items={moduleItems}
@@ -58,7 +58,7 @@ const DesktopNav = () => {
               <>
                 <RightArrow />
                 {/* TODO: fix active style here and deactivate disabled items */}
-                <HoverDropDown
+                <DropDownMenu
                   selectedLink={`/${selectedModuleLink}/${selectedSubtopicLink}`}
                   selectedName={selectedSubtopicName}
                   items={subtopics.map(([subtopicLink, subtopicName]) => [

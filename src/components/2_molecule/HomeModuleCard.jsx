@@ -1,8 +1,8 @@
 import {
   getSubtopicLinksAndNamesByModulelink,
   getModuleImageByLink,
-} from "./ContentHandler";
-import UXButton from "./1_elements/UXButton";
+} from "../ContentHandler";
+import UXButton from "../1_elements/UXButton";
 
 /**
  * `HomeModuleCard` is a component that displays a single module with its details, 
@@ -46,7 +46,7 @@ const HomeModuleCard = ({
   return (
     <div
       className={`moduleCard glassBox w-full h-fit min-h-[350px] ${
-        isDisabled ? "opacity-50 pointer-events-none" : ""
+        isDisabled ? "disabled" : ""
       }`}
       key={index}
       ref={(el) => (moduleRefs.current[index] = el)}>
@@ -81,7 +81,7 @@ const HomeModuleCard = ({
                       key={subIndex}
                       className={`sm:w-[48%] w-full ${
                         isSubtopicDisabled
-                          ? "opacity-50 pointer-events-none"
+                          ? "disabled"
                           : ""
                       }`}>
                       <UXButton

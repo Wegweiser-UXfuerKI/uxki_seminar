@@ -1,0 +1,19 @@
+#dropDown a:hover,
+#dropDown a:focus,
+#dropDown a.active {
+  padding: 4px var(--base-size);
+  border-radius: var(--base-size);
+}
+
+:root.dark #dropDown a:hover,
+:root.dark #dropDown a:focus,
+:root.dark #dropDown a.active {
+  background-color: var(--bg);
+}
+
+:root.light #dropDown a:hover,
+:root.light #dropDown a:focus,
+:root.light #dropDown a.active {
+  background-color: var(--ev);
+  color: var(--w);
+}

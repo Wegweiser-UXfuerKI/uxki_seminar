@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AppContext } from "../AppContext";
+import { AppContext } from "../../AppContext";
 import "./SubTopic.css";
 
 /**
@@ -22,7 +22,7 @@ const SubTopic = ({ topicName, link, description, number, isDisabled }) => {
   return (
     <div
       className={`lg:w-1/3 sm:w-1/2 w-full mb-10 ${
-        isDisabled ? "opacity-50 pointer-events-none" : ""
+        isDisabled ? "disabled" : ""
       }`}>
       <Link to={`/${selectedModuleLink}/${link}`}>
         <div className="subTopicCard relative glassBox h-full xl:p-8 p-6 flex flex-col justify-end m-3">

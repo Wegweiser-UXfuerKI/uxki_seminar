@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import RightArrow from "../1_elements/RightArrow";
+import RightArrow from "../../1_elements/RightArrow";
+import "./Accordion.css";
 
 /**
  * A customizable Accordion component to display a collapsible section with a title and a list of links.
@@ -24,7 +25,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
   };
 
   return (
-    <div className="glassBox w-full rounded-xl mb-6">
+    <div id="accordion" className="glassBox w-full rounded-xl mb-6 transition">
       {/* Accordion Title */}
       <div
         onClick={toggleAccordion}
@@ -39,8 +40,9 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
         }}>
         {title}
         <span
-          className={`chevron ${isOpen ? "rotate-[-90deg]" : "rotate-90"}`}
-          style={{ transition: "transform 0.4s ease-in-out" }}>
+          className={`chevron transition ${
+            isOpen ? "rotate-[-90deg]" : "rotate-90"
+          }`}>
           <RightArrow />
         </span>
       </div>
@@ -48,13 +50,8 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
       {/* Accordion Content */}
       {isOpen && (
         <nav
-          id="accordion-content"
-          className="px-6 py-4"
-          style={{
-            borderTop: "1.48px solid transparent",
-            borderImage: "var(--glasBorder) 1",
-            transition: "transform 0.4s ease-in-out",
-          }}
+          id="accordionContent"
+          className="px-6 py-4 transition"
           role="region"
           aria-hidden={!isOpen}>
           <ul className="list-none p-0 m-0">

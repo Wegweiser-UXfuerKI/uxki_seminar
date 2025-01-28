@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { AppContext } from "../../AppContext";
+import { AppContext } from "../../../AppContext";
 
 /**
  * MobileNav component to display navigation for mobile screens.

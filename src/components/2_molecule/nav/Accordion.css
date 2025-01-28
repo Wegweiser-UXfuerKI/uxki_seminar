@@ -1,0 +1,32 @@
+#accordionContent {
+  border-top: 1.48px solid transparent;
+  border-image: var(--glasBorder) 1;
+}
+
+:root.dark #accordion:hover {
+  background-color: var(--ev);
+}
+
+:root.light #accordion:hover {
+  background-color: var(--w);
+}
+
+#accordionContent a:hover,
+#accordionContent a:focus,
+#accordionContent a.active {
+  padding: 4px var(--base-size);
+  border-radius: var(--base-size);
+}
+
+:root.dark #accordionContent a:hover,
+:root.dark #accordionContent a:focus,
+:root.dark #accordionContent a.active {
+  background-color: var(--bg);
+}
+
+:root.light #accordionContent a:hover,
+:root.light #accordionContent a:focus,
+:root.light #accordionContent a.active {
+  background-color: var(--ev);
+  color: var(--w);
+}

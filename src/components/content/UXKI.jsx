@@ -1,12 +1,12 @@
 import { ReactComponent as imageElement } from "../../assets/icons/ux-ki.svg";
 import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
-import SubTopic from "../SubTopic";
+import SubTopic from "../2_molecule/SubTopic";
 import List from "../texts/List";
 
 //TODO: place components globaly for every modul page?
-import Accordion from "../2_molecule/Accordion";
-import SubNavigation from "../nav/SubNavigation";
+import Accordion from "../2_molecule/nav/Accordion";
+import SubNavigation from "../2_molecule/nav/SubNavigation";
 
 const moduleLink = "ki-bezogene-ux";
 const moduleName = "KI-bezogene UX";

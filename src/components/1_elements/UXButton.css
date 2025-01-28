@@ -10,10 +10,6 @@
   color: var(--bg);
 }
 
-a.ux-button:hover {
-  padding: 1rem 1.5rem !important;
-}
-
 .ux-button:hover > svg,
 .ux-button:focus > svg {
   fill: var(--bg);

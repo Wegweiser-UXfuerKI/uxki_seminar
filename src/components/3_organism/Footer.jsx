@@ -11,7 +11,7 @@ import imis from "../../assets/images/IMIS_Logo.png";
  */
 const Footer = () => {
   return (
-    <footer className="relative flex justify-between items-center bg-white p-4 px-8">
+    <footer className="relative flex justify-between items-center bg-white w-full p-4 px-8">
       <div className="h-full flex flex-col justify-between">
         <a
           href="https://projekt.ux-fuer-ki.de"

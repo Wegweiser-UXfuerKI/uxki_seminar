@@ -13,15 +13,12 @@ const moduleName = "KI-bezogene UX";
 
 // TODO: make intro as consistent component for every page?
 const sections = [
-  { id: "definition", title: "Definition" },
-  { id: "konzepte", title: "Konzepte und Modelle" },
-  { id: "studie", title: "Studien zu UX und KI" },
-  {
-    id: "operationalisierung",
-    title: "Fragebögen und Messinstrumente",
-  },
-  { id: "guidelines", title: "Design-Guidelines" },
-  { id: "fazit", title: "Fazit" },
+  { id: "3", title: "Definition" },
+  { id: "4", title: "Konzepte und Modelle" },
+  { id: "5", title: "Studien zu UX und KI" },
+  { id: "6", title: "Fragebögen und Messinstrumente" },
+  { id: "7", title: "Design-Guidelines" },
+  { id: "8", title: "Fazit" },
 ];
 
 const WahrgenommeneAutonomie = {
@@ -31,7 +28,7 @@ const WahrgenommeneAutonomie = {
     "Dieser Aspekt beschreibt, wie sehr Nutzende das Gefühl haben, selbstständig zu handeln und Entscheidungen zu treffen, während sie mit einem KI-System interagieren.",
   content: [
     <ChapterHeader text={"Wahrgenommene Autonomie"} number={2} />,
-    <section>
+    <section className="m-0">
       <p>
         Dieser Aspekt beschreibt, wie sehr Nutzende das Gefühl haben,
         selbstständig zu handeln und Entscheidungen zu treffen, während sie mit
@@ -382,7 +379,7 @@ const WahrgenommenesSituationsbewusstsein = {
     "Dies bezieht sich auf das Verständnis der Nutzende über ihre Umgebung und die Änderungen, die durch das KI-System verursacht werden.",
   content: [
     <ChapterHeader text={"Wahrgenommenes Situationsbewusstsein"} number={3} />,
-    <section>
+    <section className="m-0">
       <p>
         Dies bezieht sich auf das Verständnis der Nutzende über ihre Umgebung
         und die Änderungen, die durch das KI-System verursacht werden.
@@ -559,7 +556,7 @@ const WahrgenommeneInformationOverload = {
     "Dieser Aspekt umfasst den kognitiven Aufwand, der erforderlich ist, um Informationen zu verarbeiten und Entscheidungen zu treffen, und die potenzielle Überlastung durch zu viele Informationen.",
   content: [
     <ChapterHeader text={"Wahrgenommene Mentale Belastung"} number={4} />,
-    <section>
+    <section className="m-0">
       <p>
         Dieser Aspekt umfasst den kognitiven Aufwand, der erforderlich ist, um
         Informationen zu verarbeiten und Entscheidungen zu treffen, und die
@@ -703,7 +700,7 @@ const PerceivedTrustworthiness = {
     "Damit ist das Vertrauen gemeint, das Nutzende in ein KI-System haben, basierend auf dessen Handlungen.",
   content: [
     <ChapterHeader text={"Wahrgenommene Vertrauenswürdigkeit"} number={5} />,
-    <section>
+    <section className="m-0">
       <p>
         Damit ist das Vertrauen gemeint, das Nutzende in ein KI-System haben,
         basierend auf dessen Handlungen.
@@ -974,7 +971,7 @@ const PerceivedConfidence = {
     "Dies beschreibt das Vertrauen der Nutzende in die Diagnosen oder Vorschläge des KI-Systems und wie gut diese die gewünschten Ergebnisse liefern.",
   content: [
     <ChapterHeader text={"Wahrgenommene Diagnostizität"} number={6} />,
-    <section>
+    <section className="m-0">
       <p>
         Dies beschreibt das Vertrauen der Nutzende in die Diagnosen oder
         Vorschläge des KI-Systems und wie gut diese die gewünschten Ergebnisse

@@ -30,7 +30,12 @@ const Header = () => {
 
   return (
     <header
-      className="fixed flex items-center lg:p-3 p-2 glassBlur z-40"
+      className="fixed flex items-center p-2 w-full glassBlur z-40"
+      style={{
+        borderBottom: "1.6px solid transparent",
+        borderImage: "var(--glasBorder) 1",
+        backgroundColor: "var(--box)",
+      }}
       role="banner"
       aria-label="Header">
       <Logo />

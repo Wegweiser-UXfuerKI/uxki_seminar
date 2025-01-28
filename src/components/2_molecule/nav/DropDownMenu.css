@@ -1,3 +1,11 @@
+:root.light #dropDown {
+  background-color: var(--la);
+}
+
+:root.dark #dropDown {
+  background-color: var(--ev);
+}
+
 #dropDown a:hover,
 #dropDown a:focus,
 #dropDown a.active {

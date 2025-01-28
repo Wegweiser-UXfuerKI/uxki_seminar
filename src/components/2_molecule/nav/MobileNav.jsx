@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../../AppContext";
+import "./MobileNav.css";
 
 /**
  * MobileNav component to display navigation for mobile screens.
@@ -27,7 +28,7 @@ const MobileNav = () => {
       {/* Burger Menu */}
       <button
         id="burger"
-        className={`z-50 cursor-pointer ${navOpen ? "change" : ""}`}
+        className={`z-40 cursor-pointer ${navOpen ? "change" : ""}`}
         onClick={toggleNavbar}
         aria-expanded={navOpen}
         aria-label={navOpen ? "Navigation schließen" : "Navigation öffnen"}>
@@ -56,24 +57,16 @@ const MobileNav = () => {
               }}>
               Kursübersicht
             </Link>
-            {selectedModuleLink && (
-              <>
-                <Link
-                  to={`/${selectedModuleLink}`}
-                  className={selectedSubtopicName ? "" : "active"}>
-                  {selectedModuleName}
-                </Link>
-                {selectedSubtopicName && (
-                  <>
-                    <Link
-                      to={`/${selectedModuleLink}/${selectedSubtopicLink}`}
-                      className="active">
-                      {selectedSubtopicName}
-                    </Link>
-                  </>
-                )}
-              </>
-            )}
+            <Link
+              to={`/${selectedModuleLink}`}
+              className={selectedSubtopicName ? "" : "active"}>
+              {selectedModuleName}
+            </Link>
+            <Link
+              to={`/${selectedModuleLink}/${selectedSubtopicLink}`}
+              className="active">
+              {selectedSubtopicName}
+            </Link>
           </div>
         </nav>
       </button>

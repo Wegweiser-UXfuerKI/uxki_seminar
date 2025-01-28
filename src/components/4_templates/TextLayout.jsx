@@ -24,21 +24,15 @@ export const TextLayout = () => {
   }, [selectedModuleLink, selectedSubtopicLink]);
 
   return (
-    <div className="flex flex-col">
+    <div id="content" className="flex flex-col gap-y-20">
       {subtopicContent &&
       subtopicContent.content &&
       Array.isArray(subtopicContent.content) ? (
         subtopicContent.content.map((section, sectionIndex) => {
-          let bgColorClass;
-          if (sectionIndex === 0) {
-            bgColorClass = "bg-color-0";
-          } else {
-            bgColorClass = `bg-color-${((sectionIndex - 1) % 5) + 1}`;
-          }
           return (
             <div
               key={`kapitel-${sectionIndex}-section-${sectionIndex}`}
-              className={bgColorClass}>
+              id={sectionIndex}>
               {section}
             </div>
           );

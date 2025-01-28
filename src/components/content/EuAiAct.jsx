@@ -15,10 +15,10 @@ import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";
 import Sources from "../Sources";
 
 const sectionEinleitung = [
-  { id: "euAIAct", title: "Was ist der EU AI Act?" },
-  { id: "vergleich", title: "Vergleich mit anderen Ländern / Regionen" },
-  { id: "umsetzung", title: "Umsetzung in den Mitgliedstaaten" },
-  { id: "fazit", title: "Fazit" },
+  { id: "3", title: "Was ist der EU AI Act?" },
+  { id: "4", title: "Vergleich mit anderen Ländern / Regionen" },
+  { id: "5", title: "Umsetzung in den Mitgliedstaaten" },
+  { id: "6", title: "Fazit" },
 ];
 
 const Einleitung = {
@@ -28,7 +28,7 @@ const Einleitung = {
     "Dieses Kapitel beschäftigt sich damit, was der EU AI Act im Allgemeinen ist, welche Ziele er verfolgt und wie in anderen Ländern gehandelt wird.",
   content: [
     <ChapterHeader text={"Einleitung"} number={1} />,
-    <section>
+    <section className="m-0">
       <p>
         In diesem Modul haben wir den EU AI Act für Sie aufbereitet — das ist
         die europäische Verordnung über künstliche Intelligenz, laut derer
@@ -276,12 +276,9 @@ const Einleitung = {
 };
 
 const sectionRisikostufenAnwendungsbeispiele = [
-  {
-    id: "risikostufen",
-    title: "Einteilung in Risikostufen",
-  },
-  { id: "beispiele", title: "Anwendungsbeispielen" },
-  { id: "complianceChecker", title: "EU AI Act Compliance Checker" },
+  { id: "2", title: "Einteilung in Risikostufen" },
+  { id: "3", title: "Anwendungsbeispielen" },
+  { id: "4", title: "EU AI Act Compliance Checker" },
 ];
 
 const RisikostufenAnwendungsbeispiele = {
@@ -292,7 +289,7 @@ const RisikostufenAnwendungsbeispiele = {
   content: [
     /* Section 1 */
     <ChapterHeader text={"Risikostufen - Anwendungsbeispiele"} number={2} />,
-    <section>
+    <section className="m-0">
       <p>
         Hier werden mögliche Anwendungen beispielhaft betrachtet und welche
         Auswirkungen der EU AI Act auf diese hat.
@@ -503,12 +500,9 @@ const RisikostufenAnwendungsbeispiele = {
 };
 
 const sectionRisikostufenAuswirkungen = [
-  {
-    id: "massnahmen",
-    title: "Was muss je nach Risikostufe beachtet werden?",
-  },
-  { id: "videoRisikostufen", title: "Designimplikationen des EU AI Acts" },
-  { id: "KIVO", title: "KI-Managementsystem laut KIVO und DIN 42001:2023" },
+  { id: "2", title: "Was muss je nach Risikostufe beachtet werden?" },
+  { id: "4", title: "Designimplikationen des EU AI Acts" },
+  { id: "5", title: "KI-Managementsystem laut KIVO und DIN 42001:2023" },
 ];
 
 const RisikostufenAuswirkungen = {
@@ -519,7 +513,7 @@ const RisikostufenAuswirkungen = {
   content: [
     /* Section 1 */
     <ChapterHeader text={"Risikostufen - Auswirkungen"} number={3} />,
-    <section>
+    <section className="m-0">
       <p>
         In diesem Kapitel werden einzelne Artikel des Acts näher betrachtet und
         welche Auswirkungen sie auf verschiedene System haben können.
@@ -767,15 +761,15 @@ const RisikostufenAuswirkungen = {
 
 const sectionHLEG = [
   {
-    id: "hleg",
+    id: "2",
     title: "Die Rolle der High-Level Expert Group für Trustworthy AI",
   },
-  { id: "anforderungen", title: "Die sieben Anforderungen der HLEG" },
+  { id: "3", title: "Die sieben Anforderungen der HLEG" },
   {
-    id: "unterschiede",
+    id: "4",
     title: "Unterschiede zwischen dem AI Act und den Anforderungen der HLEG",
   },
-  { id: "fazit", title: "Zusammenfassung der Kriterien und Ziele der HLEG" },
+  { id: "5", title: "Zusammenfassung der Kriterien und Ziele der HLEG" },
 ];
 
 const HLEG = {
@@ -786,7 +780,7 @@ const HLEG = {
   content: [
     /* Section 1 */
     <ChapterHeader text={"High-Level Expert Group"} number={4} />,
-    <section>
+    <section className="m-0">
       <p>
         Es wird die HLEG betrachtet, was deren Ziele sind und welchen Einfluss
         sie haben.
@@ -1006,7 +1000,7 @@ const Fazit = {
   content: [
     /* Section 1 */
     <ChapterHeader text={"Fazit"} number={5} />,
-    <section>
+    <section className="m-0">
       <p>
         In diesem Abschnitt finden Sie nun noch einige interaktive Möglichkeiten
         das gelernte zu überprüfen, sowie ein kurzes Diskussionsvideo zur Rolle

@@ -4,7 +4,7 @@ import Home from "./components/5_pages/Home";
 import Header from "./components/3_organism/Header";
 import Footer from "./components/3_organism/Footer";
 import { AppProvider } from "./AppContext";
-import { TextLayout } from "./components/TextLayout";
+import { TextLayout } from "./components/4_templates/TextLayout";
 import { ReactComponent as RightArrow } from "./assets/icons/right-arrow.svg";
 import "./assets/css/DesignTokens.css";
 import "./assets/css/App.css";

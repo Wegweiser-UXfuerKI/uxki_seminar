@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { Cite } from "@citation-js/core";
 import "@citation-js/plugin-csl";
 import DOMPurify from "dompurify";
-import { AppContext } from "../../AppContext";
-import { getSubtopicNameByLink } from "../ContentHandler";
+import { AppContext } from "../AppContext";
+import { getSubtopicNameByLink } from "./ContentHandler";
 
 const moduleMap = {
   "eu-ai-act": {

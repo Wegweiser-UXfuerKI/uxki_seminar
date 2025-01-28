@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { getModuleLinksAndNames } from "../ContentHandler";
-import HomeModuleCard from "../2_molecule/HomeModuleCard";
+import HomeModuleCard from "../2_molecule/cards/HomeModuleCard";
 import { AppContext } from "../../AppContext";
 
 /**

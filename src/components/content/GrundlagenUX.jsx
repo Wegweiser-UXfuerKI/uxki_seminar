@@ -1,6 +1,6 @@
 import { ReactComponent as imageElement } from "../../assets/icons/usability.svg";
-import { ChapterHeader } from "../texts/ChapterHeader";
-import { VideoContainer } from "../texts/VideoContainer";
+import { ChapterHeader } from "../2_molecule/ChapterHeader";
+import { VideoContainer } from "../1_elements/VideoContainer";
 import { Link } from "react-router-dom";
 
 const Einleitung = {

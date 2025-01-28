@@ -1,7 +1,7 @@
 import { ReactComponent as imageElement } from "../../assets/icons/ux-ki.svg";
-import { ChapterHeader } from "../texts/ChapterHeader";
-import { VideoContainer } from "../texts/VideoContainer";
-import SubTopic from "../2_molecule/SubTopic";
+import { ChapterHeader } from "../2_molecule/ChapterHeader";
+import { VideoContainer } from "../1_elements/VideoContainer";
+import SubTopic from "../2_molecule/cards/SubTopic";
 import List from "../2_molecule/List";
 
 //TODO: place components globaly for every modul page?

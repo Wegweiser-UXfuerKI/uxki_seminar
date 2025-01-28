@@ -1,11 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
-import { AppContext } from "../AppContext";
+import { AppContext } from "../../AppContext";
 import {
   getPreviousSubtopicLink,
   getNextSubtopicLink,
   getSubtopicNameByLink,
-} from "./ContentHandler";
-import UXButton from "./1_elements/UXButton";
+} from "../ContentHandler";
+import UXButton from "../1_elements/UXButton";
 
 /**
  * A React component for navigating between chapters of a module.

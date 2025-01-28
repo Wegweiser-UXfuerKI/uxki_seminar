@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AppContext } from "../AppContext";
-import { ChapterSwitch } from "./ChapterSwitch";
-import { getSubtopicContentByLink } from "./ContentHandler";
+import { AppContext } from "../../AppContext";
+import { ChapterSwitch } from "../2_molecule/ChapterSwitch";
+import { getSubtopicContentByLink } from "../ContentHandler";
 
 /**
  * A component that renders the content of a selected subtopic and provides navigation between chapters.

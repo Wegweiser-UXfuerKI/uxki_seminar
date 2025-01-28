@@ -1,18 +1,18 @@
 import React from "react";
 import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.png";
 import DosAndDonts from "../dosdonts/DosAndDonts";
-import { GraphicContainer } from "../GraphicContainer";
+import { GraphicContainer } from "../1_elements/GraphicContainer";
 import QuizContainer from "../quizUX/components/QuizContainer";
 import { RisikostufenPyramide } from "../interactive/RisikostufenPyramide";
-import { ChapterHeader } from "../texts/ChapterHeader";
-import { VideoContainer } from "../texts/VideoContainer";
+import { ChapterHeader } from "../2_molecule/ChapterHeader";
+import { VideoContainer } from "../1_elements/VideoContainer";
 import Timeline from "../interactive/Timeline";
-import ContainerSixteenNine from "../ContainerSixteenNine";
+import ContainerSixteenNine from "../1_elements/ContainerSixteenNine";
 import Accordion from "../2_molecule/nav/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 
 import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";
-import Sources from "../texts/Sources";
+import Sources from "../Sources";
 
 const sectionEinleitung = [
   { id: "euAIAct", title: "Was ist der EU AI Act?" },

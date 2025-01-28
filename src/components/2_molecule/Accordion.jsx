@@ -47,7 +47,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
 
       {/* Accordion Content */}
       {isOpen && (
-        <div
+        <nav
           id="accordion-content"
           className="px-6 py-4"
           style={{
@@ -66,7 +66,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
       )}
     </div>
   );

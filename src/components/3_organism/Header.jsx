@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import MobileNav from "./MobileNav";
-import DesktopNav from "./DesktopNav";
+import MobileNav from "../nav/MobileNav";
+import DesktopNav from "../nav/DesktopNav";
 import { ThemeToggle } from "../2_molecule/ThemeToggle";
 import Logo from "../1_elements/Logo";
 

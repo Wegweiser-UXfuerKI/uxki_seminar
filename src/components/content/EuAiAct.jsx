@@ -8,7 +8,7 @@ import { ChapterHeader } from "../texts/ChapterHeader";
 import { VideoContainer } from "../texts/VideoContainer";
 import Timeline from "../interactive/Timeline";
 import ContainerSixteenNine from "../ContainerSixteenNine";
-import Accordion from "../3_organism/Accordion";
+import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../nav/SubNavigation";
 
 import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";

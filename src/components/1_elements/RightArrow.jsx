@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as RightArrowSVG } from "../../../src/assets/images/right-arrow.svg";
+import { ReactComponent as RightArrowSVG } from "../../../src/assets/icons/right-arrow.svg";
 
 /**
  * RightArrow Component

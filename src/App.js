@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Home from "./components/5_pages/Home";
-import Header from "./components/nav/Header";
-import Footer from "./components/nav/Footer";
+import Header from "./components/3_organism/Header";
+import Footer from "./components/3_organism/Footer";
 import { AppProvider } from "./AppContext";
 import { TextLayout } from "./components/TextLayout";
-import { ReactComponent as RightArrow } from "./assets/images/right-arrow.svg";
+import { ReactComponent as RightArrow } from "./assets/icons/right-arrow.svg";
 import "./assets/css/DesignTokens.css";
 import "./assets/css/App.css";
 

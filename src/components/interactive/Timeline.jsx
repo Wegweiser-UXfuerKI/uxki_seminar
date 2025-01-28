@@ -4,12 +4,12 @@ import TimelineYear from "./TimelineYear";
 
 const years = [2018, 2020, 2021, 2022, 2023, 2024];
 const colors = [
-  "#77D1CB",
-  "#77A9D1",
-  "#8377D1",
-  "#C177D1",
-  "#D177B3",
-  "#54506A",
+  "var(--tb)",
+  "var(--vb)",
+  "var(--ti)",
+  "var(--lf)",
+  "var(--sm)",
+  "var(--ev)",
 ];
 const dateContent = [
   [

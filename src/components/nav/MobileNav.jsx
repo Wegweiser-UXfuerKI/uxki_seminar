@@ -38,7 +38,7 @@ const MobileNav = () => {
         {/* Navigation Menu */}
         <nav
           id="nav"
-          className={`fixed top-[64px] right-4 w-4/5 h-fit glassy-box glassBlur rounded-xl transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-[64px] right-4 w-4/5 h-fit glassBox glassBlur rounded-xl transform transition-transform duration-300 ease-in-out ${
             navOpen ? "translate-y-0 opacity-1" : "opacity-0 translate-y-full"
           }`}
           aria-hidden={!navOpen}

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
-import { ThemeToggle } from "../ThemeToggle";
-import Logo from "../Logo";
+import { ThemeToggle } from "../2_molecule/ThemeToggle";
+import Logo from "../1_elements/Logo";
 
 /**
  * Header component that adapts its layout based on the screen size.

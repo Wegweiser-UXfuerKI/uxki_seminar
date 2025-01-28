@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as RightArrow } from "../../src/assets/images/right-arrow.svg";
+import { ReactComponent as RightArrow } from "../../../src/assets/images/right-arrow.svg";
 import "./UXButton.css";
 
 /**

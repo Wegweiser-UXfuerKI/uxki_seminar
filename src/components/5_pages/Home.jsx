@@ -3,6 +3,17 @@ import { getModuleLinksAndNames } from "../ContentHandler";
 import HomeModuleCard from "../HomeModuleCard";
 import { AppContext } from "../../AppContext";
 
+/**
+ * Home component that serves as the landing page for the learning platform.
+ * It displays an introduction to the course, followed by the list of available modules.
+ * It handles smooth scrolling to a specific chapter when `scrollToChapter` is set.
+ *
+ * @component
+ * @example
+ * return (
+ *   <Home />
+ * )
+ */
 const Home = () => {
   const modulesData = getModuleLinksAndNames();
   const {
@@ -13,7 +24,15 @@ const Home = () => {
   } = useContext(AppContext);
   const moduleRefs = useRef([]);
 
-  // Smooth scrolling to the specific chapter if scrollToChapter is set
+  /**
+   * Effect hook that listens for changes in the `scrollToChapter` state.
+   * If a chapter is specified, it will scroll to the corresponding module card.
+   *
+   * @function
+   * @param {string|null} scrollToChapter - The chapter to scroll to, if specified.
+   * @param {Array} modulesData - Array of module data containing module links and names.
+   * @param {Function} setScrollToChapter - Function to reset the `scrollToChapter` state after scrolling.
+   */
   useEffect(() => {
     if (scrollToChapter && modulesData) {
       const targetIndex = modulesData.findIndex(

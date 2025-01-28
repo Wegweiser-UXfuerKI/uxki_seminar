@@ -4,6 +4,17 @@ import { AppContext } from "../../AppContext";
 import { getSubtopicData } from "../ContentHandler";
 import { Link } from "react-router-dom";
 
+/**
+ * ModulePage component renders the details of a selected module including its subtopics.
+ * It displays the module's name and a list of subtopics.
+ * Disabled subtopics for a specific module are rendered with a disabled state.
+ *
+ * @component
+ * @example
+ * return (
+ *   <ModulePage />
+ * )
+ */
 const ModulePage = () => {
   const { selectedModuleLink, selectedModuleName } = useContext(AppContext);
 
@@ -44,7 +55,7 @@ const ModulePage = () => {
             );
           })
         ) : (
-          <div className="glassy-box text-center p-10 pb-0 flex flex-col justify-center items-center">
+          <div className="glassBox text-center p-10 pb-0 flex flex-col justify-center items-center">
             Work in progress...
             <Link to={"/"} className="my-10 p-5 rounded-lg">
               Zurück zur Kursübersicht

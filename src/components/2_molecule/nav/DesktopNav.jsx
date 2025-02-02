@@ -59,13 +59,13 @@ const DesktopNav = () => {
                 <RightArrow />
                 {/* TODO: fix active style here and deactivate disabled items */}
                 <DropDownMenu
-                  selectedLink={`/${selectedModuleLink}/${selectedSubtopicLink}`}
+                  selectedLink={`${selectedModuleLink}/${selectedSubtopicLink}`}
                   selectedName={selectedSubtopicName}
                   items={subtopics.map(([subtopicLink, subtopicName]) => [
                     `${selectedModuleLink}/${subtopicLink}`,
                     subtopicName,
                   ])}
-                  disabledItems={disabledSubtopics[selectedSubtopicLink] || []}
+                  disabledItems={disabledSubtopics[selectedModuleLink] || []}
                 />
               </>
             )}

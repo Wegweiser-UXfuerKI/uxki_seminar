@@ -88,8 +88,9 @@ const DropDownMenu = ({
         id="dropDown"
         className="absolute flex flex-col glassBox rounded-xl gap-y-2 py-6 px-4">
         {items?.map(([link, name], index) => {
-          // TODO: Check if the item is disabled
-          const isDisabled = disabledItems.includes(link);
+          const isDisabled = disabledItems.some((disabledLink) =>
+            link.endsWith(`/${disabledLink}`)
+          );
 
           return (
             <Link

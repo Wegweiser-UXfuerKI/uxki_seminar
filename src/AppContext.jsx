@@ -82,13 +82,17 @@ const AppProvider = ({ children }) => {
           const subtopicName = getSubtopicNameByLink(module, subtopicLink);
           setSelectedSubtopicName(subtopicName);
         } else {
-          navigate("/");
+          if (location.pathname !== "/") {
+            navigate("/", { replace: true });
+          }
           setScrollToChapter(module);
           setSelectedModuleLink(null);
           setSelectedModuleName(null);
         }
       } else {
-        navigate("/");
+        if (location.pathname !== "/") {
+          navigate("/", { replace: true });
+        }
         setScrollToChapter(module);
         setSelectedModuleLink(null);
         setSelectedModuleName(null);
@@ -96,7 +100,9 @@ const AppProvider = ({ children }) => {
         setSelectedSubtopicName(null);
       }
     } else {
-      navigate("/");
+      if (location.pathname !== "/") {
+        navigate("/", { replace: true });
+      }
       setSelectedModuleLink(null);
       setSelectedModuleName(null);
     }

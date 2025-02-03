@@ -64,8 +64,10 @@ body {
   transform: all 0.24s ease-in-out;
 }
 
-.circle,
-.circle2 {
+/* Background Circles */
+.BgCircle::before,
+.BgCircle::after {
+  content: '';
   position: fixed;
   border-radius: 100%;
   filter: blur(100px);
@@ -76,7 +78,7 @@ body {
     irregularRotate 60s infinite ease-in-out;
 }
 
-.circle {
+.BgCircle:before {
   right: 0;
   top: -10vw;
   width: 40vw;
@@ -84,7 +86,7 @@ body {
   background: var(--rGradient);
 }
 
-.circle2 {
+.BgCircle:after {
   left: 0;
   bottom: -5vw;
   width: 35vw;

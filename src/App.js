@@ -60,14 +60,12 @@ function App() {
       <BrowserRouter>
         <AppProvider>
           <Header />
-          <main className="flex justify-center">
-            <div className="circle"></div>
+          <main className="flex justify-center BgCircle">
             <Routes>
               <Route index element={<Home />} />
               <Route path=":module/:subtopicId" element={<TextLayout />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
-            <div className="circle2"></div>
             {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}
           </main>
           <Footer />

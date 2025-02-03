@@ -23,6 +23,7 @@ export const TextLayout = () => {
     );
   }, [selectedModuleLink, selectedSubtopicLink]);
 
+  //TODO: make section navigations with smooth scroll
   return (
     <div id="content" className="flex flex-col gap-y-20">
       {subtopicContent &&

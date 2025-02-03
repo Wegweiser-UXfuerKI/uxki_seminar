@@ -68,6 +68,7 @@ const DropDownMenu = ({
     },
   };
 
+  // TODO: scroll to top when changing to another chapter
   return (
     <motion.div onMouseEnter={toggleMouseOver} onMouseLeave={toggleMouseOver}>
       <Link

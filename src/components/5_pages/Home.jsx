@@ -52,21 +52,23 @@ const Home = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-10 my-32 px-6 m-auto max-w-[1600px]">
       <section className="mt-0">
-        <h2>Willkommen auf der Lehrplattform von Wegweiser.UX-für-KI!</h2>
+        <h1 className="secondTitle">Willkommen auf der Lehrplattform von Wegweiser.UX-für-KI!</h1>
         <p>
           Dieses Projekt bietet Hilfestellungen und praktische Informationen
-          über Künstliche Intelligenz (KI) und User Experience (UX) von
-          KI-Systemen, die auf das Gemeinwohl ausgerichtet sind. Die Inhalte
-          wurden für Entwickler:innen, Projektmanager:innen und KI- oder UX-Interessierte
+          über <b>Künstliche Intelligenz (KI) und User Experience (UX) von
+          KI-Systemen</b>, die auf das Gemeinwohl ausgerichtet sind. Die Inhalte
+          wurden für <b>Entwickler:innen, Projektmanager:innen und KI- oder UX-Interessierte </b> 
           unabhängig von ihrem jeweiligen Erfahrungsniveau erstellt.
         </p>
+        <h4>Was erwartet Sie?</h4>
         <p>
-          In den folgenden Modulen präsentieren wir mithilfe von Videoeinheiten
-          und Texten Inhalte zu relevanten Themen in den Bereichen UX und der
+          In den folgenden Modulen präsentieren wir mithilfe von <b>Videoeinheiten
+          und Texten</b> Inhalte zu relevanten Themen in den Bereichen UX und der
           Anwendung von KI-Systemen.
-        </p>
+          </p>
+        <h4>Wie nutzen Sie die Plattform optimal?</h4>
         <p>
-          Die einzelnen Lektionen können unabhängig voneinander konsumiert
+          Die einzelnen Lektionen können <b>unabhängig voneinander</b> konsumiert
           werden. Dieser Aufbau erlaubt es Ihnen, für Sie interessante Themen
           auszuwählen und sich die Inhalte dazu anzusehen, oder aber der von uns
           erdachten Struktur zu folgen. <br /> Beachten Sie bitte, dass einzelne
@@ -76,7 +78,7 @@ const Home = () => {
           mit UX bezogenen KI-Eigenschaften auseinandersetzen.
         </p>
       </section>
-      <h1>Kursübersicht</h1>
+      <h2 className="mainTitle mb-0">Modulübersicht</h2>
 
       {/* Render module cards if module data exists */}
       {modulesData &&

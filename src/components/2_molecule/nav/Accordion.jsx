@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import RightArrow from "../../1_elements/RightArrow";
 import "./Accordion.css";
 
@@ -16,12 +17,31 @@ import "./Accordion.css";
  */
 const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // Get current page location
+
+  /**
+   * Closes the accordion when the user navigates to a new page.
+   */
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]); // Run when pathname changes
 
   /**
    * Toggles the open/closed state of the accordion.
    */
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
+  };
+
+  /**
+   * Handles smooth scrolling to a section when clicking a link.
+   * @param {string} id - The ID of the target section.
+   */
+  const handleSmoothScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -57,9 +77,15 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
           <ul className="list-none p-0 m-0">
             {sections.map((section, index) => (
               <li key={section.id}>
-                <a href={`#${section.id}`} className="px-2 py-1">
+                <Link
+                  to={`#${section.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSmoothScroll(section.id);
+                  }}
+                  className="px-2 py-1">
                   {`${index + 1}: ${section.title}`}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

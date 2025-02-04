@@ -1,3 +1,5 @@
+import Breadcrumbs from "../2_molecule/nav/Breadcrumbs";
+
 /**
  * A component that renders a chapter header with a title and a chapter number.
  *
@@ -9,10 +11,11 @@
  */
 export const ChapterHeader = ({ text, number }) => {
   return (
-    <section className="titleSubtopic mt-60 mb-0">
+    <section className="titleSubtopic mt-60">
       <h1 className="relative" data-number={String(number).padStart(2, "0")}>
         {text}
       </h1>
+      <Breadcrumbs/>
     </section>
   );
 };

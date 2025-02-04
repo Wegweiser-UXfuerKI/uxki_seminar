@@ -56,7 +56,7 @@ body {
 }
 
 .disabled {
-  opacity: 0.5;
+  opacity: 0.48;
   pointer-events: none;
 }
 
@@ -67,7 +67,7 @@ body {
 /* Background Circles */
 .BgCircle::before,
 .BgCircle::after {
-  content: '';
+  content: "";
   position: fixed;
   border-radius: 100%;
   filter: blur(100px);

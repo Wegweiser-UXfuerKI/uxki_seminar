@@ -10,7 +10,7 @@ import { getSubtopicContentByLink } from "../ContentHandler";
  * @component
  * @returns {JSX.Element} The rendered TextLayout component.
  */
-export const TextLayout = () => {
+export const ChapterLayout = () => {
   const { selectedModuleLink, selectedSubtopicLink } = useContext(AppContext);
   const [subtopicContent, setSubtopicContent] = useState(null);
 

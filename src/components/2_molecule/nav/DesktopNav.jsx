@@ -57,7 +57,6 @@ const DesktopNav = () => {
             {selectedSubtopicName && (
               <>
                 <RightArrow />
-                {/* TODO: fix active style here and deactivate disabled items */}
                 <DropDownMenu
                   selectedLink={`${selectedModuleLink}/${selectedSubtopicLink}`}
                   selectedName={selectedSubtopicName}

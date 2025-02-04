@@ -1,11 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import React, { useEffect, useState } from "react";
 import Home from "./components/5_pages/Home";
 import Header from "./components/3_organism/Header";
 import Footer from "./components/3_organism/Footer";
 import { AppProvider } from "./AppContext";
-import { TextLayout } from "./components/4_templates/TextLayout";
-import { ReactComponent as RightArrow } from "./assets/icons/right-arrow.svg";
+import { ChapterLayout } from "./components/4_templates/ChapterLayout";
+import ToTopButton from "./components/2_molecule/ToTopButton";
 import "./assets/css/DesignTokens.css";
 import "./assets/css/App.css";
 
@@ -29,7 +28,7 @@ if (typeof window !== "undefined") {
  *
  * The main content of the app is rendered as a Routes component, which contains
  * three routes: one for the home page, one for the module pages, and one for the
- * text layout pages. The text layout pages are rendered with the TextLayout
+ * text layout pages. The text layout pages are rendered with the ChapterLayout
  * component, which is a custom component that renders the text layout for each
  * subtopic.
  *
@@ -41,20 +40,6 @@ if (typeof window !== "undefined") {
  * @returns {React.ReactElement} The App component.
  */
 function App() {
-  const [showToTopBtn, setShowToTopBtn] = useState(false);
-
-  // check scroll behavior for toTopBtn
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowToTopBtn(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -63,24 +48,16 @@ function App() {
           <main className="flex justify-center BgCircle">
             <Routes>
               <Route index element={<Home />} />
-              <Route path=":module/:subtopicId" element={<TextLayout />} />
+              <Route path=":module/:subtopicId" element={<ChapterLayout />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
-            {showToTopBtn && <RightArrow onClick={scrollToTop} id="toTopBtn" />}
+            <ToTopButton />
           </main>
           <Footer />
         </AppProvider>
       </BrowserRouter>
     </div>
   );
-}
-
-// Function to scroll to top
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
 }
 
 export default App;

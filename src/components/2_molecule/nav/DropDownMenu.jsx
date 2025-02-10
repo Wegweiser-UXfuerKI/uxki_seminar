@@ -37,6 +37,7 @@ const DropDownMenu = ({
   selectedName,
   items,
   disabledItems = [],
+  isSubtopic = false,
 }) => {
   const { setScrollToChapter } = useContext(AppContext);
   const [isHovered, setIsHovered] = useState(false);
@@ -71,16 +72,29 @@ const DropDownMenu = ({
   // TODO: scroll to top when changing to another chapter
   return (
     <motion.div onMouseEnter={toggleMouseOver} onMouseLeave={toggleMouseOver}>
-      <Link
-        to="/"
-        className="firstLevel relative"
-        onClick={() => {
-          if (selectedLink) {
-            setScrollToChapter(selectedLink);
-          }
-        }}>
-        {selectedName}
-      </Link>
+      {!isSubtopic ? (
+        <Link
+          to="/"
+          className="firstLevel relative"
+          onClick={() => {
+            if (selectedLink) {
+              setScrollToChapter(selectedLink);
+            }
+          }}>
+          {selectedName}
+        </Link>
+      ) : (
+        <Link
+          to="#"
+          className="firstLevel relative"
+          onClick={() => {
+            if (selectedLink) {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}>
+          {selectedName}
+        </Link>
+      )}
 
       <motion.div
         initial="exit"
@@ -98,7 +112,9 @@ const DropDownMenu = ({
               key={link}
               to={`/${link}`}
               onClick={() => {
-                if (!isDisabled && selectedLink) {
+                if (!isDisabled && isSubtopic && selectedLink) {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                } else if (!isDisabled && selectedLink) {
                   setScrollToChapter(link);
                 }
               }}

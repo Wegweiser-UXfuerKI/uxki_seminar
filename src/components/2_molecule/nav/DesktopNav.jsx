@@ -65,6 +65,7 @@ const DesktopNav = () => {
                     subtopicName,
                   ])}
                   disabledItems={disabledSubtopics[selectedModuleLink] || []}
+                  isSubtopic={true}
                 />
               </>
             )}

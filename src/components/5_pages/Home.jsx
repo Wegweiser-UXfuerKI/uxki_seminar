@@ -50,8 +50,8 @@ const Home = () => {
   }, [scrollToChapter, modulesData, setScrollToChapter]);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-10 my-32 px-6 max-w-[1600px]">
-      <section className="lg:w-[70vw] sm:w-[90vw] w-full max-w-[960px] lg:my-20 my-10">
+    <div className="flex flex-col justify-center items-center gap-10 py-32 px-6 max-w-[1600px]">
+      <section className="md:w-[70vw] sm:w-[80vw] w-full max-w-[960px] mb-10">
         <h1 className="secondTitle">Willkommen auf der Lehrplattform von Wegweiser.UX-für-KI!</h1>
         <p>
           Dieses Projekt bietet Hilfestellungen und praktische Informationen

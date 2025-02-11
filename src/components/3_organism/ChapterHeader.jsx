@@ -11,7 +11,7 @@ import Breadcrumbs from "../2_molecule/nav/Breadcrumbs";
  */
 export const ChapterHeader = ({ text, number }) => {
   return (
-    <section className="titleSubtopic mt-40 mb-0">
+    <section className="titleSubtopic mt-40 lg:mt-8 mb-0">
       <h1 className="relative" data-number={String(number).padStart(2, "0")}>
         {text}
       </h1>

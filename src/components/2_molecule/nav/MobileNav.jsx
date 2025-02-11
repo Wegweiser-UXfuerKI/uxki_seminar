@@ -16,7 +16,6 @@ const MobileNav = () => {
     selectedModuleName,
     selectedSubtopicLink,
     selectedSubtopicName,
-    setScrollToChapter,
   } = useContext(AppContext);
 
   const toggleNavbar = () => {
@@ -38,8 +37,8 @@ const MobileNav = () => {
 
         {/* Navigation Menu */}
         <nav
-          id="nav"
-          className={`fixed top-[64px] right-4 w-4/5 h-fit glassBox glassBlur rounded-xl transform transition-transform duration-300 ease-in-out ${
+          id="dropDown"
+          className={`fixed top-[64px] right-4 w-4/5 h-fit glassBox rounded-xl z-40 transform transition-transform duration-300 ease-in-out ${
             navOpen ? "translate-y-0 opacity-1" : "opacity-0 translate-y-full"
           }`}
           aria-hidden={!navOpen}
@@ -48,23 +47,13 @@ const MobileNav = () => {
           {/* TODO: add dropdown with all courses */}
           <div className="flex flex-col justify-center items-start p-4">
             <Link
-              to="/"
-              aria-label="Zur Startseite"
-              onClick={() => {
-                if (selectedModuleLink) {
-                  setScrollToChapter(selectedModuleLink);
-                }
-              }}>
-              Kursübersicht
-            </Link>
-            <Link
               to={`/${selectedModuleLink}`}
-              className={selectedSubtopicName ? "" : "active"}>
+              className={selectedSubtopicName ? "px-2 py-1" : "active"}>
               {selectedModuleName}
             </Link>
             <Link
               to={`/${selectedModuleLink}/${selectedSubtopicLink}`}
-              className="active">
+              className="active px-2 py-1">
               {selectedSubtopicName}
             </Link>
           </div>

@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import Home from "./components/5_pages/Home";
+import HeaderLeft from "./components/3_organism/HeaderLeft";
 import Header from "./components/3_organism/Header";
 import Footer from "./components/3_organism/Footer";
 import { AppProvider } from "./AppContext";
@@ -40,12 +42,14 @@ if (typeof window !== "undefined") {
  * @returns {React.ReactElement} The App component.
  */
 function App() {
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
+
   return (
     <div className="App">
       <BrowserRouter>
         <AppProvider>
-          <Header />
-          <main className="flex justify-center BgCircle">
+          {isDesktop ? <HeaderLeft /> : <Header />}
+          <main className="flex justify-center lg:pl-20 w-full BgCircle">
             <Routes>
               <Route index element={<Home />} />
               <Route path=":module/:subtopicId" element={<ChapterLayout />} />

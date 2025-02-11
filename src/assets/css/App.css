@@ -138,7 +138,6 @@ h1 {
   font-size: var(--scale8);
   line-height: calc(0.8 * var(--line-height-base));
   font-weight: bold;
-  position: relative;
 }
 
 .titleSubtopic h1::after {
@@ -327,7 +326,9 @@ footer a:hover {
 
 /* Tablets (Landscape) */
 @media screen and (max-width: 1024px) {
-
+  .titleSubtopic h1::after {
+    font-size: calc(var(--scale7) * 3.5);
+  }
 }
 
 /* Smartphones (Portrait) */
@@ -352,5 +353,13 @@ footer a:hover {
 
   h4 {
     font-size: var(--scale2) !important;
+  }
+
+  .titleSubtopic h1::after {
+    font-size: calc(var(--scale7) * 3);
+  }
+
+  footer a {
+    width: 33%;
   }
 }

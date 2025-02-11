@@ -35,6 +35,7 @@ const DropDownMenu = ({
   disabledItems = [],
   triggerElement = selectedName,
   position = "right",
+  title,
 }) => {
   const { setScrollToChapter } = useContext(AppContext);
   const [isHovered, setIsHovered] = useState(false);
@@ -106,14 +107,18 @@ const DropDownMenu = ({
         {typeof triggerElement === "function" ? triggerElement() : selectedName}
       </Link>
 
-
       <motion.div
         initial="exit"
         animate={isHovered ? "enter" : "exit"}
         variants={subMenuAnimate}
         id="dropDown"
-        className="absolute flex flex-col glassBox rounded-xl gap-y-2 py-6 px-4 min-w-[280px] z-50"
+        className="absolute flex flex-col glassBox rounded-xl gap-y-1 py-4 px-4 min-w-[280px] z-50"
         style={positionStyle}>
+        {title && (
+          <h4>
+            <b>{title}</b>
+          </h4>
+        )}
         {items?.map(([link, name], index) => {
           const isDisabled = disabledItems.some((disabledLink) =>
             link.endsWith(`/${disabledLink}`)

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import MobileNav from "../2_molecule/nav/MobileNav";
 import DesktopNav from "../2_molecule/nav/DesktopNav";
 import { ThemeToggle } from "../2_molecule/ThemeToggle";
@@ -39,6 +39,7 @@ const Header = () => {
       role="banner"
       aria-label="Header">
       <Logo />
+
       {isMobile ? (
         <div className="flex items-center justify-end w-full gap-4 pr-3">
           <ThemeToggle />

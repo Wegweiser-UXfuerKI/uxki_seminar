@@ -16,7 +16,7 @@ const HeaderLeft = () => {
   return (
     // TODO: make responsive
     <header
-      className="fixed left-0 flex flex-col items-center justify-between gap-8 p-4 pb-8 w-fit h-full glassBlur z-40"
+      className="fixed left-0 flex flex-col items-center justify-between gap-6 px-2 py-4 pb-8 w-fit h-full glassBlur z-40"
       style={{
         borderRight: "1.6px solid transparent",
         borderImage: "var(--glasBorder) 1",

@@ -53,6 +53,7 @@ const DesktopNav = () => {
               selectedName={selectedModuleName}
               items={moduleItems}
               disabledItems={disabledModules[selectedModuleLink] || []}
+              position="bottom"
             />
             {selectedSubtopicName && (
               <>
@@ -65,7 +66,7 @@ const DesktopNav = () => {
                     subtopicName,
                   ])}
                   disabledItems={disabledSubtopics[selectedModuleLink] || []}
-                  isSubtopic={true}
+                  position="bottom"
                 />
               </>
             )}

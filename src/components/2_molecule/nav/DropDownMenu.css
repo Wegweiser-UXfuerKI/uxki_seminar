@@ -11,7 +11,7 @@
 }
 
 #dropDown a.active {
-  font-weight: 600; 
+  font-weight: 600;
 }
 
 #dropDown a:hover,
@@ -32,4 +32,18 @@
 :root.light #dropDown a.active {
   background-color: var(--ev);
   color: var(--w);
+}
+
+#iconNav .firstLevel:hover:before,
+#iconNav .firstLevel:focus:before,
+#iconNav .iconWrapper.active::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  background: var(--bg);
+  width: 52px;
+  height: 52px;
+  border-radius: var(--base-size);
+  z-index: -1;
 }

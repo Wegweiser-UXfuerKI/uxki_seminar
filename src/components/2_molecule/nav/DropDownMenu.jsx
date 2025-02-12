@@ -107,8 +107,7 @@ const DropDownMenu = ({
         to="#"
         className="firstLevel relative"
         onClick={() => handleChapterChange(selectedLink)}
-        tabIndex={0} 
-      >
+        tabIndex={0}>
         {typeof triggerElement === "function" ? triggerElement() : selectedName}
       </Link>
 
@@ -132,19 +131,18 @@ const DropDownMenu = ({
           return (
             <Link
               key={link}
-              to={isDisabled ? "#" : `/${link}`} 
+              to={isDisabled ? "#" : `/${link}`}
               onClick={(e) => {
-                if (!isDisabled && selectedLink) {
+                if (isDisabled) {
+                  e.preventDefault();
+                } else {
                   handleChapterChange(link);
-                } else if (!isDisabled && selectedLink) {
-                  setScrollToChapter(link);
                 }
               }}
               className={`secondLevel rounded-lg px-2 py-1 ${
                 isDisabled ? "disabled" : link === selectedLink ? "active" : ""
               }`}
-              tabIndex={0}
-            >
+              tabIndex={0}>
               {`${index + 1}: ${name}`}
             </Link>
           );

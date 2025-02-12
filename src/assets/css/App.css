@@ -363,4 +363,16 @@ footer a:hover {
   footer a {
     width: 33%;
   }
+
+  .BgCircle:before {
+    top: 0vw;
+    width: 350px;
+    height: 350px;
+  }
+  
+  .BgCircle:after {
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+  }
 }

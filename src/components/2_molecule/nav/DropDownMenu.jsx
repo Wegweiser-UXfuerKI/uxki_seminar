@@ -44,7 +44,7 @@ const DropDownMenu = ({
    * Toggles the hover state of the dropdown menu.
    * @param {boolean} state - The hover state
    */
-  const toggleMouseOver = (state) => {
+  const toggleMenu = (state) => {
     setIsHovered(state);
   };
 
@@ -98,12 +98,17 @@ const DropDownMenu = ({
 
   return (
     <motion.div
-      onMouseEnter={() => toggleMouseOver(true)}
-      onMouseLeave={() => toggleMouseOver(false)}>
+      onMouseEnter={() => toggleMenu(true)}
+      onMouseLeave={() => toggleMenu(false)}
+      onFocus={() => toggleMenu(true)} // Open on focus
+      onBlur={() => toggleMenu(false)} // Close when losing focus
+    >
       <Link
-        to={selectedLink}
+        to="#"
         className="firstLevel relative"
-        onClick={() => handleChapterChange(selectedLink)}>
+        onClick={() => handleChapterChange(selectedLink)}
+        tabIndex={0} 
+      >
         {typeof triggerElement === "function" ? triggerElement() : selectedName}
       </Link>
 
@@ -127,7 +132,7 @@ const DropDownMenu = ({
           return (
             <Link
               key={link}
-              to={`/${link}`}
+              to={isDisabled ? "#" : `/${link}`} 
               onClick={(e) => {
                 if (!isDisabled && selectedLink) {
                   handleChapterChange(link);
@@ -137,7 +142,9 @@ const DropDownMenu = ({
               }}
               className={`secondLevel rounded-lg px-2 py-1 ${
                 isDisabled ? "disabled" : link === selectedLink ? "active" : ""
-              }`}>
+              }`}
+              tabIndex={0}
+            >
               {`${index + 1}: ${name}`}
             </Link>
           );

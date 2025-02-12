@@ -15,7 +15,7 @@
 /* General Styles */
 * {
   font-family: "Lexend", Verdana, Helvetica, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: var(--scale2);
   line-height: var(--line-height-base);
   color: var(--text);
@@ -137,7 +137,7 @@ body {
 h1 {
   font-size: var(--scale8);
   line-height: calc(0.8 * var(--line-height-base));
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .titleSubtopic h1::after {
@@ -155,7 +155,7 @@ h1 {
 .secondTitle,
 h2 {
   font-size: var(--scale5);
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: var(--scale4);
 }
 
@@ -169,7 +169,7 @@ h3 {
 .fourthTitle,
 h4 {
   font-size: var(--scale3);
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: var(--base-size);
 }
 
@@ -202,14 +202,14 @@ p + p {
 
 b,
 strong {
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-size: inherit;
 }
 
 :root.dark section b,
 :root.dark section strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 i {
@@ -235,7 +235,7 @@ li {
 }
 
 ol li::marker {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .specialText {
@@ -243,12 +243,14 @@ ol li::marker {
   border-radius: var(--scale2);
   padding: var(--scale2);
   font-weight: 400 !important;
+  margin-bottom: var(--scale2);
 }
 
 /* Links */
 a {
   font-size: inherit;
-  font-weight: 600;
+  font-weight: 500;
+  text-decoration: none;
   transition: all 0.24s ease-in-out;
 }
 
@@ -256,7 +258,6 @@ header nav a.firstLevel,
 main p a,
 .inlineLink {
   position: relative;
-  text-decoration: none;
 }
 
 header nav a.firstLevel::after,

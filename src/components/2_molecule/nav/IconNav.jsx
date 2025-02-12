@@ -18,7 +18,7 @@ import {
  * @returns {JSX.Element} The rendered navigation component with module icons and dropdown menus.
  */
 const IconNav = () => {
-  const { disabledModules, disabledSubtopics } =
+  const { selectedSubtopicLink, disabledModules, disabledSubtopics } =
     useContext(AppContext);
   const modules = getModuleLinksAndNames();
 
@@ -38,7 +38,7 @@ const IconNav = () => {
           return (
             <DropDownMenu
               key={moduleLink}
-              selectedLink={moduleLink}
+              selectedLink={`${moduleLink}/${selectedSubtopicLink}`}
               selectedName={moduleName}
               items={subtopics.map(([subtopicLink, subtopicName]) => [
                 `${moduleLink}/${subtopicLink}`,

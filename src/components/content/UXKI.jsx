@@ -93,12 +93,14 @@ const WahrgenommeneAutonomie = {
         Automatisierungsstufen mit vier grundlegenden Funktionen, die auf einem
         Modell der menschlichen Informationsverarbeitung basieren und in einem
         Mensch-Maschine-System unterstützt werden sollen:
-        <ol>
-          <li>Informationsbeschaffung,</li>
-          <li>Informationsanalyse,</li>
-          <li>Entscheidungsfindung</li>
-          <li>Handlungsausführung.</li>
-        </ol>
+      </p>
+      <ol>
+        <li>Informationsbeschaffung,</li>
+        <li>Informationsanalyse,</li>
+        <li>Entscheidungsfindung</li>
+        <li>Handlungsausführung.</li>
+      </ol>
+      <p>
         Dieses Modell bietet eine strukturierte Herangehensweise zur
         Klassifizierung von Aufgaben, bei denen Automatisierung den Menschen
         unterstützen kann.
@@ -229,21 +231,21 @@ const WahrgenommeneAutonomie = {
         Die Selbstbestimmungstheorie (Self-Determination Theory) definiert drei
         universelle grundlegende psychologische Bedürfnisse (Basic Psychological
         Needs, BPNs):
-        <ol>
-          <li>
-            <b>Autonomie:</b> das Gefühl, Kontrolle über eigene Entscheidungen
-            und Handlungen zu haben
-          </li>
-          <li>
-            <b>Kompetenz:</b> das Erleben von Wirksamkeit und Beherrschung einer
-            Aufgaben
-          </li>
-          <li>
-            <b>soziale Verbundenheit:</b> sich um andere zu kümmern und im
-            Gegenzug Fürsorge zu erfahren
-          </li>
-        </ol>
       </p>
+      <ol>
+        <li>
+          <b>Autonomie:</b> das Gefühl, Kontrolle über eigene Entscheidungen und
+          Handlungen zu haben
+        </li>
+        <li>
+          <b>Kompetenz:</b> das Erleben von Wirksamkeit und Beherrschung einer
+          Aufgaben
+        </li>
+        <li>
+          <b>soziale Verbundenheit:</b> sich um andere zu kümmern und im
+          Gegenzug Fürsorge zu erfahren
+        </li>
+      </ol>
     </section>,
     <section id="operationalisierung">
       <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>

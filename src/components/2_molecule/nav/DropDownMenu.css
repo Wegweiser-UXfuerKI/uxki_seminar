@@ -6,6 +6,14 @@
   background-color: var(--ev);
 }
 
+#dropDown a {
+  font-weight: 400;
+}
+
+#dropDown a.active {
+  font-weight: 600; 
+}
+
 #dropDown a:hover,
 #dropDown a:focus,
 #dropDown a.active {

@@ -11,11 +11,16 @@
   background-color: var(--w);
 }
 
+#accordionContent a {
+  font-weight: 400;
+}
+
 #accordionContent a:hover,
 #accordionContent a:focus,
 #accordionContent a.active {
   padding: 4px var(--base-size);
   border-radius: var(--base-size);
+  font-weight: 600;
 }
 
 :root.dark #accordionContent a:hover,

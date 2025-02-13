@@ -43,7 +43,7 @@ const IconNav = () => {
           return (
             <DropDownMenu
               key={moduleLink}
-              selectedLink={`${moduleLink}/${selectedSubtopicLink}`}
+              selectedLink={`${selectedModuleLink}/${selectedSubtopicLink}`}
               selectedName={moduleName}
               items={subtopics.map(([subtopicLink, subtopicName]) => [
                 `${moduleLink}/${subtopicLink}`,

@@ -128,6 +128,8 @@ const DropDownMenu = ({
             link.endsWith(`/${disabledLink}`)
           );
 
+          const isActive = link === selectedLink;
+
           return (
             <Link
               key={link}
@@ -140,7 +142,7 @@ const DropDownMenu = ({
                 }
               }}
               className={`secondLevel rounded-lg px-2 py-1 ${
-                isDisabled ? "disabled" : link === selectedLink ? "active" : ""
+                isDisabled ? "disabled" : isActive ? "active" : ""
               }`}
               tabIndex={0}>
               {`${index + 1}: ${name}`}

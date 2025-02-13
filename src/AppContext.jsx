@@ -58,6 +58,11 @@ const AppProvider = ({ children }) => {
       "evaluation",
       "quellen",
     ],
+    "ux-bezogene-ki-eigenschaften": ["einleitung"],
+    dateninput: ["einleitung"],
+    verarbeitung: ["einleitung"],
+    "ki-ergebnisse": ["einleitung"],
+    "identifikation-prozesse": ["einleitung"],
   };
 
   /**

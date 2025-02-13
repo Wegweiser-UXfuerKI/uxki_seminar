@@ -45,6 +45,7 @@ const IconNav = () => {
               key={moduleLink}
               selectedLink={`${selectedModuleLink}/${selectedSubtopicLink}`}
               selectedName={moduleName}
+              selectedModule={moduleLink}
               items={subtopics.map(([subtopicLink, subtopicName]) => [
                 `${moduleLink}/${subtopicLink}`,
                 subtopicName,

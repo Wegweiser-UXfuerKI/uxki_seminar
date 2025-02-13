@@ -36,6 +36,7 @@ const DropDownMenu = ({
   triggerElement = selectedName,
   position = "right",
   title,
+  selectedModule,
 }) => {
   const { setScrollToChapter } = useContext(AppContext);
   const [isHovered, setIsHovered] = useState(false);
@@ -54,8 +55,8 @@ const DropDownMenu = ({
    * @param {string} link - The chapter link
    */
   const handleChapterChange = (link) => {
+    console.log("link for scroll: ", link);
     setScrollToChapter(link);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Dynamic positioning of the dropdown menu
@@ -104,9 +105,11 @@ const DropDownMenu = ({
       onBlur={() => toggleMenu(false)} // Close when losing focus
     >
       <Link
-        to="#"
+        to="/"
         className="firstLevel relative"
-        onClick={() => handleChapterChange(selectedLink)}
+        onClick={() => {
+          setScrollToChapter(selectedModule);
+        }}
         tabIndex={0}>
         {typeof triggerElement === "function" ? triggerElement() : selectedName}
       </Link>

@@ -14,7 +14,10 @@ import wegweiserLogo from "../../assets/images/Wegweiser_logo.png";
 const Logo = () => {
   return (
     <div id="logo" className="img-container w-16">
-      <Link to="/" aria-label="Zur Startseite">
+      <Link
+        to="/"
+        aria-label="Zur Startseite"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
         <img src={wegweiserLogo} alt="Wegweiser.UX-für-KI Logo" />
       </Link>
     </div>

@@ -1,18 +1,20 @@
 import React from "react";
-import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.png";
-import DosAndDonts from "../dosdonts/DosAndDonts";
-import { GraphicContainer } from "../1_elements/GraphicContainer";
-import QuizContainer from "../quizUX/components/QuizContainer";
-import { RisikostufenPyramide } from "../interactive/RisikostufenPyramide";
+import Accordion from "../2_molecule/nav/Accordion";
+import ContainerSixteenNine from "../1_elements/ContainerSixteenNine";
+import Sources from "../Sources";
+import SubNavigation from "../2_molecule/nav/SubNavigation";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { VideoContainer } from "../1_elements/VideoContainer";
+import { GraphicContainer } from "../1_elements/GraphicContainer";
+import { RisikostufenPyramide } from "../interactive/RisikostufenPyramide";
 import Timeline from "../interactive/Timeline";
-import ContainerSixteenNine from "../1_elements/ContainerSixteenNine";
-import Accordion from "../2_molecule/nav/Accordion";
-import SubNavigation from "../2_molecule/nav/SubNavigation";
+import InteractiveModalWrapper from "../1_elements/InteractiveModalWrapper";
+import DosAndDonts from "../dosdonts/DosAndDonts";
+import QuizContainer from "../quizUX/components/QuizContainer";
 
+import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.png";
 import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";
-import Sources from "../Sources";
+import WegweiserLogo from "../../assets/images/Wegweiser_logo.png";
 
 const sectionEinleitung = [
   { id: "3", title: "Was ist der EU AI Act?" },
@@ -1036,7 +1038,25 @@ const Fazit = {
     <section>
       <h2>Lernspiel praktische Anwendung</h2>
       <div className="w-full rounded-xl">
-        <DosAndDonts />
+        <InteractiveModalWrapper
+          closedModalContent={
+            <ContainerSixteenNine>
+              <div className="w-full h-full glassBox flex justify-between items-center text-2xl">
+                <div className="w-1/3">
+                  <img src={WegweiserLogo} alt="Logo Wegweiser" />
+                </div>
+                <div>
+                  <h2>Wegweiser Interaktiver Inhalt:</h2>
+                  <h3>Do's and Dont's</h3>
+                  <p>
+                    <i>Klicken um Inhalt zu starten</i>
+                  </p>
+                </div>
+              </div>
+            </ContainerSixteenNine>
+          }
+          openModalContent={<DosAndDonts />}
+        />
       </div>
     </section>,
     <section>

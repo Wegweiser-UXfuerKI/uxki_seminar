@@ -82,7 +82,6 @@ header {
   overflow-x: hidden;
   box-sizing: border-box;
   display: flex;
-  min-height: 842px;
 }
 
 #left-pane,
@@ -333,7 +332,6 @@ header {
   position: absolute;
   top: -20px;
   left: -35px;
-  z-index: 1;
 }
 
 .fly-in-left {
@@ -495,11 +493,6 @@ header {
 .cassette-btn-illustration:active:not(:disabled) {
   border-bottom: 5px solid #1cb0f6;
   margin-top: 5px;
-}
-
-#app1,
-#app2 {
-  z-index: 10;
 }
 
 #app1:hover:not(#app1.selected):not(#app2.selected):not(.unselected-contracted),
@@ -770,7 +763,7 @@ mark {
 
   right: var(--distance-to-edge);
   bottom: var(--distance-to-edge);
-  z-index: 100;
+  z-index: 3;
   transition: background-color 0.3s ease, margin-bottom 0.1s linear;
   box-shadow: var(--flat-drop-shadow);
 }

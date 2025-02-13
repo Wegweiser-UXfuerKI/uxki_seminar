@@ -271,6 +271,7 @@ const term_style = {
   padding: "3px",
   background: "#D4D2DD",
   boxShadow: "2px 2px 7px #999",
+  color: "black",
 };
 const definition_style = {
   background: "white",
@@ -285,6 +286,7 @@ const definition_style = {
   borderRadius: "10px",
   fontSize: "16px",
   boxShadow: "2px 2px 7px #999",
+  color: "black",
 };
 
 export default AllQuestions;

@@ -584,7 +584,7 @@ function InteractiveElement() {
 
   return (
     <>
-      <main
+      <div
         id="main-wrapper"
         className={`split-container w-full h-full relative ${
           view === ViewStates.EXPLAIN ? "right-visible" : ""
@@ -886,7 +886,7 @@ function InteractiveElement() {
           </div>
         </div>
         <Help />
-      </main>
+      </div>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 // Components
 import NavBar from "./components/NavBar";
@@ -12,30 +12,11 @@ import { TaskDataProvider } from "./Context.jsx";
 */
 function DosAndDonts() {
   const [currentView, setCurrentView] = useState("interaktiv");
-  const [containerHeight, setContainerHeight] = useState(0);
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const calcContainerHeight = () => {
-      if (containerRef.current) {
-        const width = containerRef.current.offsetWidth;
-        const height = width / 1.5;
-        setContainerHeight(height);
-      }
-    };
-
-    calcContainerHeight();
-    window.addEventListener("resize", calcContainerHeight);
-    return () => {
-      window.removeEventListener("resize", calcContainerHeight);
-    };
-  });
 
   return (
     <div
-      className="w-full base-background flex flex-col overflow-hidden"
-      style={{ borderRadius: "20px", height: `${containerHeight + 100}px` }}
-      ref={containerRef}>
+      className="w-full h-full base-background flex flex-col overflow-hidden"
+      style={{ borderRadius: "20px" }}>
       <TaskDataProvider>
         <div className="w-full h-full relative">
           <NavBar currentView={currentView} setCurrentView={setCurrentView} />

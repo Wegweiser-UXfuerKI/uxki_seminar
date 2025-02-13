@@ -28,14 +28,14 @@ const IconNav = () => {
 
   return (
     <div id="iconNav" className="relative flex">
-      <div className="flex flex-col items-center gap-4 2xl:gap-6 relative">
+      <div className="flex flex-col items-center gap-5 xl:gap-6 relative">
         {modules.map(([moduleLink, moduleName]) => {
           const module = getModuleByLink(moduleLink);
           const ModuleIcon = module?.moduleImage;
           const subtopics =
             getSubtopicLinksAndNamesByModulelink(moduleLink) || [];
           const isActive = moduleLink === selectedModuleLink;
-          
+
           //TODO: fix that dropdown is not shown when module is disabled
           const isDisabled = disabledModules[moduleLink];
           if (isDisabled) return null;
@@ -57,7 +57,7 @@ const IconNav = () => {
                     className={`iconWrapper relative ${
                       isActive ? "active" : ""
                     }`}>
-                    <ModuleIcon className="w-9 h-9 svgFill" />
+                    <ModuleIcon className="w-8 h-8 xl:w-9 xl:h-9 svgFill" />
                   </div>
                 ) : (
                   <div className="w-10 h-10" />

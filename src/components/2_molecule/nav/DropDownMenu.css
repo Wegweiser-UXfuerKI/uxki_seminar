@@ -6,11 +6,16 @@
   background-color: var(--ev);
 }
 
-#dropDown a {
+:root.light #dropDown a {
   font-weight: 400;
 }
 
-#dropDown a.active {
+:root.dark #dropDown a {
+  font-weight: 350;
+}
+
+:root.light #dropDown a.active,
+:root.dark #dropDown a.active {
   font-weight: 600;
 }
 

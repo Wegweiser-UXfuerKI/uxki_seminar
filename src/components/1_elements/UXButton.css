@@ -17,16 +17,16 @@
 
 .ux-button:before {
   content: "";
+  background: var(--rGradient);
   position: absolute;
   top: -2px;
   left: -2px;
   background-size: 400%;
-  background: var(--rGradient);
   z-index: -1;
   filter: blur(4px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  animation: glowing 40s linear infinite;
+  animation: glowing 30s linear infinite;
   opacity: 0;
   transition: all 0.24s ease-in-out;
   border-radius: var(--scale2);

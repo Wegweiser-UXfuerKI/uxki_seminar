@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.f6580a2e.css",
-    "main.js": "/static/js/main.50a99b95.js",
+    "main.css": "/static/css/main.89b4b4f6.css",
+    "main.js": "/static/js/main.ae5e9fab.js",
     "static/media/avatar_girl.png": "/static/media/avatar_girl.7601c71f27f447ccb627.png",
     "static/media/avatar_pink.png": "/static/media/avatar_pink.7433c8a70377d696fb6d.png",
     "static/media/avatar_türkis.png": "/static/media/avatar_türkis.5faca530f00e489244f9.png",
     "static/media/avatar_lila.png": "/static/media/avatar_lila.df83d9538dcabc8ab1c1.png",
     "static/media/correct_answer.wav": "/static/media/correct_answer.a673b70c68f18f662b4c.wav",
-    "static/media/EUAICheckerCropped.png": "/static/media/EUAICheckerCropped.2c9507e445636b15a0b5.png",
     "static/media/Lexend-VariableFont_wght.ttf": "/static/media/Lexend-VariableFont_wght.a910812ec2ceb829f4e9.ttf",
     "static/media/IMIS_Logo.png": "/static/media/IMIS_Logo.c211272b25ff7f4c187b.png",
+    "static/media/EUAICheckerCropped.png": "/static/media/EUAICheckerCropped.260b3811de1df19313ae.png",
     "static/media/feedback.png": "/static/media/feedback.1302d0725fc7b98a963d.png",
     "static/media/taskA-do.png": "/static/media/taskA-do.24f9dd835c2b17236688.png",
     "static/media/taskA-dont.png": "/static/media/taskA-dont.a6a068aa07cba4e55833.png",
@@ -55,11 +55,11 @@
     "static/media/cross-icon.svg": "/static/media/cross-icon.17648e90379eb58fc516694bef79f83d.svg",
     "static/media/check-icon.svg": "/static/media/check-icon.721d68647ede2f838e805e7ca81a1970.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.164cedbd36f8d732060026564168596d.svg",
-    "main.f6580a2e.css.map": "/static/css/main.f6580a2e.css.map",
-    "main.50a99b95.js.map": "/static/js/main.50a99b95.js.map"
+    "main.89b4b4f6.css.map": "/static/css/main.89b4b4f6.css.map",
+    "main.ae5e9fab.js.map": "/static/js/main.ae5e9fab.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6580a2e.css",
-    "static/js/main.50a99b95.js"
+    "static/css/main.89b4b4f6.css",
+    "static/js/main.ae5e9fab.js"
   ]
 }

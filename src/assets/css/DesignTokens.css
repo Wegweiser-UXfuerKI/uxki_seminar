@@ -52,6 +52,7 @@
   --bg: var(--br);
   --text: var(--w);
   --box: rgba(84, 80, 106, 0.56);
+  --boxHover: rgba(84, 80, 106, 0.8);
   --hover: var(--w);
   --bgHover: rgb(41 39 52 / 48%);
   --glasBorder: linear-gradient(145deg, var(--fg) 0%, var(--ev));
@@ -64,6 +65,7 @@
   --bg: var(--la);
   --text: var(--br);
   --box: rgba(241, 240, 244, 0.56);
+  --boxHover: rgba(241, 240, 244, 0.8);
   --hover: var(--ev);
   --bgHover: rgb(84 80 106 / 64%);
   --glasBorder: linear-gradient(145deg, #ffffff 0%, var(--fg));

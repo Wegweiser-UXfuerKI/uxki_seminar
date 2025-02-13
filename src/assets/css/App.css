@@ -10,6 +10,7 @@
   font-optical-sizing: auto;
   font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
 }
 
 /* General Styles */
@@ -37,7 +38,16 @@ body {
 .glassBox {
   background: var(--box);
   border-radius: var(--scale5);
+  -webkit-box-shadow: var(--glasBoxShadow);
+  -moz-box-shadow: var(--glasBoxShadow);
   box-shadow: var(--glasBoxShadow);
+  -webkit-transition: all 0.24s ease-in-out;
+  -moz-transition: all 0.24s ease-in-out;
+  transition: all 0.24s ease-in-out;
+}
+
+.glassBox:hover {
+  background: var(--boxHover);
 }
 
 .glassBlur {
@@ -60,8 +70,11 @@ body {
   pointer-events: none;
 }
 
+/* Smooth Transitions & Performance */
 .transition {
-  transform: all 0.24s ease-in-out;
+  -webkit-transition: all 0.24s ease-in-out;
+  -moz-transition: all 0.24s ease-in-out;
+  transition: all 0.24s ease-in-out;
 }
 
 /* Background Circles */
@@ -70,10 +83,16 @@ body {
   content: "";
   position: fixed;
   border-radius: 100%;
-  filter: blur(100px);
+  -webkit-filter: var(--blur);
+  -moz-filter: var(--blur);
+  filter: var(--blur);
   opacity: 40%;
   z-index: -1;
   pointer-events: none;
+  -webkit-animation: irregularPulse 10s infinite ease-in-out,
+    irregularRotate 60s infinite ease-in-out;
+  -moz-animation: irregularPulse 10s infinite ease-in-out,
+    irregularRotate 60s infinite ease-in-out;
   animation: irregularPulse 10s infinite ease-in-out,
     irregularRotate 60s infinite ease-in-out;
 }
@@ -132,7 +151,7 @@ body {
   }
 }
 
-/* Typographie */
+/* Typography */
 .mainTitle,
 h1 {
   font-size: var(--scale8);
@@ -251,6 +270,8 @@ a {
   font-size: inherit;
   font-weight: 500;
   text-decoration: none;
+  -webkit-transition: all 0.24s ease-in-out;
+  -moz-transition: all 0.24s ease-in-out;
   transition: all 0.24s ease-in-out;
 }
 
@@ -282,7 +303,6 @@ main p a:hover::after,
 footer a {
   color: var(--br);
   width: 16rem;
-  transition: all 0.24s ease-in-out;
 }
 
 footer a:hover {
@@ -299,20 +319,28 @@ footer a:hover {
   cursor: pointer;
   padding: var(--scale2);
   border-radius: 50%;
+  -webkit-box-shadow: var(--glasBoxShadow);
+  -moz-box-shadow: var(--glasBoxShadow);
   box-shadow: var(--glasBoxShadow);
   width: var(--scale7);
   height: var(--scale7);
   rotate: -90deg;
+  -webkit-transition: all 0.24s ease-in-out;
+  -moz-transition: all 0.24s ease-in-out;
   transition: all 0.24s ease-in-out;
   z-index: 1;
 }
 
 #toTopBtn:hover {
+  -webkit-transform: translateX(4px);
+  -moz-transform: translateX(4px);
   transform: translateX(4px);
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
   box-shadow: var(--shadow);
 }
 
-/* responsive */
+/* Responsive */
 @media screen and (max-width: 1280px) {
   h1,
   h2 {
@@ -369,7 +397,7 @@ footer a:hover {
     width: 350px;
     height: 350px;
   }
-  
+
   .BgCircle:after {
     bottom: 0;
     width: 300px;

@@ -50,11 +50,15 @@
 #iconNav .iconWrapper.active::before {
   content: "";
   position: absolute;
-  top: -8px;
-  left: -8px;
-  background: var(--bg);
-  width: 52px;
-  height: 52px;
+  top: 0;
+  left: 0;
+  background: var(--boxHover);
+  width: 100%;
+  height: 100%;
   border-radius: var(--base-size);
   z-index: -1;
+}
+
+#iconNav .iconWrapper.active::before {
+  background: var(--bg);
 }

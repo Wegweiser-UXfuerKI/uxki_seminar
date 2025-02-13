@@ -28,7 +28,7 @@ const IconNav = () => {
 
   return (
     <div id="iconNav" className="relative flex">
-      <div className="flex flex-col items-center gap-5 xl:gap-6 relative">
+      <div className="flex flex-col items-center gap-3 2xl:gap-2 relative">
         {modules.map(([moduleLink, moduleName]) => {
           const module = getModuleByLink(moduleLink);
           const ModuleIcon = module?.moduleImage;
@@ -57,7 +57,7 @@ const IconNav = () => {
                     className={`iconWrapper relative ${
                       isActive ? "active" : ""
                     }`}>
-                    <ModuleIcon className="w-8 h-8 xl:w-9 xl:h-9 svgFill" />
+                    <ModuleIcon className="w-10 h-10 2xl:w-12 2xl:h-12 svgFill p-1 2xl:p-2" />
                   </div>
                 ) : (
                   <div className="w-10 h-10" />

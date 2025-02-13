@@ -1,4 +1,4 @@
-import { useMediaQuery } from "react-responsive";
+import { useState, useEffect } from "react";
 import HeaderLeft from "../3_organism/HeaderLeft";
 import HeaderTop from "../3_organism/HeaderTop";
 
@@ -14,11 +14,16 @@ import HeaderTop from "../3_organism/HeaderTop";
  * @returns {JSX.Element} The responsive header component.
  */
 function Header() {
-    const isDesktop = useMediaQuery({ minWidth: 1024 });
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
 
-    return (
-        isDesktop ? <HeaderLeft /> : <HeaderTop />
-    );
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isDesktop ? <HeaderLeft /> : <HeaderTop />;
 }
 
 export default Header;

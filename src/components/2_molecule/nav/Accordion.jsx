@@ -49,6 +49,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
       {/* Accordion Title */}
       <div
         onClick={toggleAccordion}
+        id="accordionTitle"
         className="fourthTitle flex justify-between items-center px-6 py-4"
         style={{ marginBottom: "0" }}
         role="button"
@@ -71,7 +72,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
       {isOpen && (
         <nav
           id="accordionContent"
-          className="px-6 py-4 transition"
+          className="px-4 py-4 transition"
           role="region"
           aria-hidden={!isOpen}>
           <ul className="list-none p-0 m-0">
@@ -83,7 +84,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
                     e.preventDefault();
                     handleSmoothScroll(section.id);
                   }}
-                  className="px-2 py-1">
+                  className="block px-2 py-1">
                   {`${index + 1}: ${section.title}`}
                 </Link>
               </li>

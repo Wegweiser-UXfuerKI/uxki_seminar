@@ -1,11 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
 import Home from "./components/5_pages/Home";
-import HeaderLeft from "./components/3_organism/HeaderLeft";
-import Header from "./components/3_organism/Header";
-import Footer from "./components/3_organism/Footer";
+import Header from "./components/4_templates/Header";
+import Footer from "./components/4_templates/Footer";
 import { AppProvider } from "./AppContext";
-import { ChapterLayout } from "./components/4_templates/ChapterLayout";
+import { ChapterLayout } from "./components/5_pages/ChapterLayout";
 import ToTopButton from "./components/2_molecule/ToTopButton";
 import "./assets/css/DesignTokens.css";
 import "./assets/css/App.css";
@@ -42,13 +40,11 @@ if (typeof window !== "undefined") {
  * @returns {React.ReactElement} The App component.
  */
 function App() {
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
-
   return (
     <div className="App">
       <BrowserRouter>
         <AppProvider>
-          {isDesktop ? <HeaderLeft /> : <Header />}
+          <Header />
           <main className="flex justify-center lg:pl-20 w-full BgCircle">
             <Routes>
               <Route index element={<Home />} />

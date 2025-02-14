@@ -11,11 +11,11 @@ import Accordion from "../2_molecule/nav/Accordion";
 /**
  * Home component that serves as the landing page for the Wegweiser.UX-für-KI learning platform.
  * It displays an introduction to the course, including the purpose of the platform, what users can expect,
- * and the list of available modules. The component also handles smooth scrolling to specific chapters when 
+ * and the list of available modules. The component also handles smooth scrolling to specific chapters when
  * `scrollToChapter` is set.
  *
  * The sections and modules are dynamically rendered based on the content fetched from `getModuleLinksAndNames`.
- * It also contains buttons that allow users to navigate to different sections of the site and provides 
+ * It also contains buttons that allow users to navigate to different sections of the site and provides
  * an accordion to explain how to use the platform optimally.
  *
  * @component
@@ -23,7 +23,7 @@ import Accordion from "../2_molecule/nav/Accordion";
  * return (
  *   <Home />
  * )
- * 
+ *
  * @returns {JSX.Element} The Home component containing sections for introduction, project expectations, and module overview.
  */
 const Home = () => {
@@ -72,7 +72,9 @@ const Home = () => {
     <div className="flex flex-col justify-center items-center gap-20 py-28 px-6 w-full max-w-[1280px]">
       <SubNavigation sections={sections} />
 
-      <section id="intro" className="flex sm:flex-row flex-col items-center lg:gap-20 md:gap-10 gap-6">
+      <section
+        id="intro"
+        className="flex sm:flex-row flex-col items-center lg:gap-20 md:gap-10 gap-6">
         <div className="sm:w-[66%] w-full">
           <h1 className="mb-8">Die Lehrplattform von Wegweiser.UX-für-KI</h1>
           <p>
@@ -113,6 +115,7 @@ const Home = () => {
             type={"image"}
             src={WegweiserPng}
             className="max-w-[450px] w-full"
+            alt="Wegweiser.UX-für-KI Plattform Logo"
           />
         </div>
       </section>

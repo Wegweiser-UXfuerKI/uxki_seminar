@@ -69,14 +69,14 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center gap-20 py-28 px-6 w-full max-w-[1280px]">
-      <SubNavigation sections={sections} />
+    <div className="flex flex-col justify-center items-center gap-24 xl:pt-20 py-28 px-6 w-full max-w-[1280px]">
+    <SubNavigation sections={sections} />
 
       <section
         id="intro"
-        className="flex sm:flex-row flex-col items-center lg:gap-20 md:gap-10 gap-6">
-        <div className="sm:w-[66%] w-full">
-          <h1 className="mb-8">Die Lehrplattform von Wegweiser.UX-für-KI</h1>
+        className="flex sm:flex-row flex-col items-end lg:gap-16 md:gap-10 gap-6">
+        <div className="sm:w-[60%] w-full">
+          <h1 className="mb-8">Lehrplattform von Wegweiser.UX-für-KI</h1>
           <p>
             Unser Projekt bietet Hilfestellungen und praktische Informationen
             über{" "}
@@ -92,7 +92,7 @@ const Home = () => {
             </b>
             unabhängig von ihrem jeweiligen Erfahrungsniveau erstellt.
           </p>
-          <div className="flex lg:flex-row flex-col w-full lg:gap-10 gap-4 justify-between">
+          <div className="flex lg:flex-row flex-col w-full lg:gap-10 gap-4 mb-4 justify-between">
             <div className="lg:w-1/2 w-full">
               <UXButton
                 text={"Alle Module ansehen"}
@@ -102,7 +102,7 @@ const Home = () => {
             </div>
             <div className="lg:w-1/2 w-full">
               <UXButton
-                text={"Erfahren Sie mehr zum Projekt"}
+                text={"Mehr zum Projekt erfahren"}
                 useGlassyBox={true}
                 to={"https://projekt.ux-fuer-ki.de/"}
                 target="_blank"
@@ -110,11 +110,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="sm:w-[33%] w-full rotate-6 -translate-x-6">
+        <div className="sm:w-[40%] w-[98%] rotate-6">
           <img
             type={"image"}
             src={WegweiserPng}
-            className="max-w-[450px] w-full"
+            className="max-w-[360px] w-full"
             alt="Wegweiser.UX-für-KI Plattform Logo"
           />
         </div>
@@ -122,7 +122,7 @@ const Home = () => {
 
       <section
         id="vorstellung"
-        className="flex md:flex-row flex-col items-center lg:gap-20 md:gap-10 gap-6">
+        className="flex md:flex-row flex-col items-center lg:gap-16 md:gap-10 gap-6">
         <div className="md:w-[50%] w-full">
           <VideoContainer
             link={

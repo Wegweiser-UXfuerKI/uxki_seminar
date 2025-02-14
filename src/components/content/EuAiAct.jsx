@@ -12,9 +12,9 @@ import InteractiveModalWrapper from "../1_elements/InteractiveModalWrapper";
 import DosAndDonts from "../dosdonts/DosAndDonts";
 import QuizContainer from "../quizUX/components/QuizContainer";
 
-import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.png";
+import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.webp";
 import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";
-import WegweiserLogo from "../../assets/images/Wegweiser_logo.png";
+import WegweiserLogo from "../../assets/images/Wegweiser_logo.webp";
 
 const sectionEinleitung = [
   { id: "3", title: "Was ist der EU AI Act?" },

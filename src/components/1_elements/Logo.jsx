@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import wegweiserLogo from "../../assets/images/Wegweiser_logo.png";
+import wegweiserLogo from "../../assets/images/Wegweiser_logo.webp";
 
 /**
  * Logo component for consistent branding across the application.

@@ -1,4 +1,4 @@
-import logo from "../../../assets/images/Wegweiser_logo.png";
+import logo from "../../../assets/images/Wegweiser_logo.webp";
 import "./NavBar.css";
 
 /*

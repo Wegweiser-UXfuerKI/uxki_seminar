@@ -607,7 +607,7 @@ const WahrgenommeneInformationOverload = {
       <h2>3. Studien zur User Experience und KI</h2>
       <p>
         Ergebnisse mehrerer Studien z. B. von <b>Sewnath und Crijnen (2021)</b>{" "}
-        und
+        und{" "}
         <b>Tsai et al. (2021)</b> sowie eine Studie zur Automatisierung von
         Insulinverabreichungssystemen (AID-Systeme) von{" "}
         <b>Schrills und Franke (2023)</b> zeigten, dass der Einsatz von

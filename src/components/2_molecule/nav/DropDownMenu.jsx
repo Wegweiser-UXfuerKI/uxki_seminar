@@ -62,7 +62,7 @@ const DropDownMenu = ({
   // Dynamic positioning of the dropdown menu
   const positionStyle =
     position === "right"
-      ? { left: "100%", marginTop: -52, marginLeft: 10 }
+      ? { left: "100%", marginTop: -56, marginLeft: 10 }
       : { top: "100%", marginTop: 0 };
 
   // Different animations for dropdown positioning

@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.3d6216a3.css",
-    "main.js": "/static/js/main.dcbd9d8f.js",
+    "main.js": "/static/js/main.f45f30ea.js",
     "static/media/avatar_girl.png": "/static/media/avatar_girl.7601c71f27f447ccb627.png",
     "static/media/avatar_pink.png": "/static/media/avatar_pink.7433c8a70377d696fb6d.png",
     "static/media/avatar_türkis.png": "/static/media/avatar_türkis.5faca530f00e489244f9.png",
     "static/media/avatar_lila.png": "/static/media/avatar_lila.df83d9538dcabc8ab1c1.png",
     "static/media/correct_answer.wav": "/static/media/correct_answer.a673b70c68f18f662b4c.wav",
     "static/media/Lexend-VariableFont_wght.ttf": "/static/media/Lexend-VariableFont_wght.a910812ec2ceb829f4e9.ttf",
-    "static/media/IMIS_Logo.png": "/static/media/IMIS_Logo.c211272b25ff7f4c187b.png",
-    "static/media/EUAICheckerCropped.png": "/static/media/EUAICheckerCropped.260b3811de1df19313ae.png",
+    "static/media/EUAICheckerCropped.webp": "/static/media/EUAICheckerCropped.4b03aa52d885a46a5a47.webp",
     "static/media/feedback.png": "/static/media/feedback.1302d0725fc7b98a963d.png",
     "static/media/taskA-do.png": "/static/media/taskA-do.24f9dd835c2b17236688.png",
+    "static/media/IMIS_Logo.webp": "/static/media/IMIS_Logo.5c64032ef707fc1496f7.webp",
     "static/media/taskA-dont.png": "/static/media/taskA-dont.a6a068aa07cba4e55833.png",
     "static/media/article-nutzerverhalten-cover.webp": "/static/media/article-nutzerverhalten-cover.804cba43c54f7b08f062.webp",
     "static/media/lernplattform_button.png": "/static/media/lernplattform_button.4fffb215f0caeb8e7532.png",
@@ -28,6 +28,7 @@
     "static/media/wiederholen_topic3.png": "/static/media/wiederholen_topic3.64ca326e0c4c76ffdfed.png",
     "static/media/swap.png": "/static/media/swap.e110b0fc5b71642bb702.png",
     "static/media/soundOff.png": "/static/media/soundOff.445c58086e30573e0156.png",
+    "static/media/Wegweiser_logo.webp": "/static/media/Wegweiser_logo.23bb3597ae77ff9095e1.webp",
     "static/media/task3-do.webp": "/static/media/task3-do.c6d445e92fc58a06ec50.webp",
     "static/media/continue_logo.png": "/static/media/continue_logo.f3a8be2fc2eefad3ef62.png",
     "static/media/task2-dont.webp": "/static/media/task2-dont.43002b8f71e9944299b1.webp",
@@ -46,6 +47,7 @@
     "static/media/ux-ki.svg": "/static/media/ux-ki.3408425ef229c343f78702af257c3f44.svg",
     "static/media/dateninput.svg": "/static/media/dateninput.8858fd9b403d22079b4595faf6a4a99f.svg",
     "static/media/ux-placeholder.svg": "/static/media/ux-placeholder.0e3ffb2b3da88e27579d96c236ddde4f.svg",
+    "static/media/BMFSFJ_Logo.webp": "/static/media/BMFSFJ_Logo.8a3bd9831a1937da78af.webp",
     "static/media/article-nutzerverhalten-thumbnail-80x80.webp": "/static/media/article-nutzerverhalten-thumbnail-80x80.a93fd930077c43e68c0c.webp",
     "static/media/informationText.md": "/static/media/informationText.4d57e9a02b346c605988.md",
     "static/media/idea-icon-on.svg": "/static/media/idea-icon-on.6ee369a748e0725df1ab.svg",
@@ -56,10 +58,10 @@
     "static/media/check-icon.svg": "/static/media/check-icon.721d68647ede2f838e805e7ca81a1970.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.164cedbd36f8d732060026564168596d.svg",
     "main.3d6216a3.css.map": "/static/css/main.3d6216a3.css.map",
-    "main.dcbd9d8f.js.map": "/static/js/main.dcbd9d8f.js.map"
+    "main.f45f30ea.js.map": "/static/js/main.f45f30ea.js.map"
   },
   "entrypoints": [
     "static/css/main.3d6216a3.css",
-    "static/js/main.dcbd9d8f.js"
+    "static/js/main.f45f30ea.js"
   ]
 }

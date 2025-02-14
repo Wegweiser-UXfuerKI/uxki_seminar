@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3d6216a3.css",
-    "main.js": "/static/js/main.f45f30ea.js",
+    "main.css": "/static/css/main.b737aea6.css",
+    "main.js": "/static/js/main.ee7b04a8.js",
     "static/media/avatar_girl.png": "/static/media/avatar_girl.7601c71f27f447ccb627.png",
     "static/media/avatar_pink.png": "/static/media/avatar_pink.7433c8a70377d696fb6d.png",
     "static/media/avatar_türkis.png": "/static/media/avatar_türkis.5faca530f00e489244f9.png",
@@ -27,6 +27,7 @@
     "static/media/start_topic1.png": "/static/media/start_topic1.5eb123a05e868bec67ca.png",
     "static/media/wiederholen_topic3.png": "/static/media/wiederholen_topic3.64ca326e0c4c76ffdfed.png",
     "static/media/swap.png": "/static/media/swap.e110b0fc5b71642bb702.png",
+    "static/media/Wegweiser.webp": "/static/media/Wegweiser.73494d3a6c09097bf2ae.webp",
     "static/media/soundOff.png": "/static/media/soundOff.445c58086e30573e0156.png",
     "static/media/Wegweiser_logo.webp": "/static/media/Wegweiser_logo.23bb3597ae77ff9095e1.webp",
     "static/media/task3-do.webp": "/static/media/task3-do.c6d445e92fc58a06ec50.webp",
@@ -57,11 +58,11 @@
     "static/media/cross-icon.svg": "/static/media/cross-icon.17648e90379eb58fc516694bef79f83d.svg",
     "static/media/check-icon.svg": "/static/media/check-icon.721d68647ede2f838e805e7ca81a1970.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.164cedbd36f8d732060026564168596d.svg",
-    "main.3d6216a3.css.map": "/static/css/main.3d6216a3.css.map",
-    "main.f45f30ea.js.map": "/static/js/main.f45f30ea.js.map"
+    "main.b737aea6.css.map": "/static/css/main.b737aea6.css.map",
+    "main.ee7b04a8.js.map": "/static/js/main.ee7b04a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d6216a3.css",
-    "static/js/main.f45f30ea.js"
+    "static/css/main.b737aea6.css",
+    "static/js/main.ee7b04a8.js"
   ]
 }

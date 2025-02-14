@@ -4,27 +4,29 @@ import RightArrow from "../../1_elements/RightArrow";
 import "./Accordion.css";
 
 /**
- * A customizable Accordion component to display a collapsible section with a title and a list of links.
- * The accordion features smooth transitions for expanding and collapsing content.
- * Accessibility (ARIA) features are included to make it more user-friendly.
+ * Accordion Component
+ *
+ * A customizable and accessible accordion component with smooth transitions.
+ * It can display either a list of section links or arbitrary JSX content.
  *
  * @component
- * @param {Object} props - The props for the Accordion component.
- * @param {Array} props.sections - An array of section objects, each with an `id` and `title`.
- * @param {string} [props.title="Inhaltsverzeichnis"] - The title displayed for the accordion.
+ * @param {Object} props - The properties of the component.
+ * @param {Array} [props.sections] - Optional array of section objects, each containing an `id` and `title`.
+ * @param {string} [props.title="Inhaltsverzeichnis"] - The title of the accordion.
+ * @param {JSX.Element} [props.children] - Optional JSX content to display when `sections` is not provided.
  *
- * @returns {JSX.Element} The rendered Accordion component.
+ * @returns {JSX.Element} A collapsible accordion with smooth animations.
  */
-const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
+const Accordion = ({ sections, title = "Inhaltsverzeichnis", children }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // Get current page location
+  const location = useLocation();
 
   /**
    * Closes the accordion when the user navigates to a new page.
    */
   useEffect(() => {
     setIsOpen(false);
-  }, [location.pathname]); // Run when pathname changes
+  }, [location.pathname]);
 
   /**
    * Toggles the open/closed state of the accordion.
@@ -47,10 +49,10 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
   return (
     <div id="accordion" className="glassBox w-full rounded-xl mb-6 transition">
       {/* Accordion Title */}
-      <div
+      <h4
         onClick={toggleAccordion}
         id="accordionTitle"
-        className="fourthTitle flex justify-between items-center px-6 py-4"
+        className="flex justify-between items-center px-6 py-4"
         style={{ marginBottom: "0" }}
         role="button"
         aria-expanded={isOpen}
@@ -66,43 +68,38 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis" }) => {
           }`}>
           <RightArrow />
         </span>
-      </div>
+      </h4>
 
       {/* Accordion Content */}
       {isOpen && (
-        <nav
+        <div
           id="accordionContent"
-          className="px-4 py-4 transition"
+          className="p-4 transition"
           role="region"
           aria-hidden={!isOpen}>
-          <ul className="list-none p-0 m-0">
-            {sections.map((section, index) => (
-              <li key={section.id}>
-                <Link
-                  to={`#${section.id}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleSmoothScroll(section.id);
-                  }}
-                  className="block px-2 py-1">
-                  {`${index + 1}: ${section.title}`}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+          {sections ? (
+            <ul className="list-none p-0 m-0">
+              {sections.map((section, index) => (
+                <li key={section.id}>
+                  <Link
+                    to={`#${section.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleSmoothScroll(section.id);
+                    }}
+                    className="block px-2 py-1">
+                    {`${index + 1}: ${section.title}`}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div>{children}</div>
+          )}
+        </div>
       )}
     </div>
   );
 };
 
 export default Accordion;
-
-// Example usage:
-// const sections = [
-//   { id: 'section1', title: 'Introduction' },
-//   { id: 'section2', title: 'Chapter 1' },
-//   { id: 'section3', title: 'Chapter 2' },
-//   { id: 'section4', title: 'Conclusion' },
-// ];
-// <Accordion sections={sections} title="Table of Contents" />

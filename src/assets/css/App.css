@@ -347,6 +347,11 @@ footer a:hover {
     hyphens: auto;
   }
 
+  .fourthTitle,
+  h4 {
+    font-size: var(--scale2);
+  }
+
   p,
   li {
     font-size: var(--scale2);
@@ -357,13 +362,6 @@ footer a:hover {
 @media screen and (max-width: 1024px) {
   .titleSubtopic h1::after {
     font-size: calc(var(--scale7) * 3.5);
-  }
-}
-
-/* Smartphones (Portrait) */
-@media screen and (max-width: 768px) {
-  .smallTextSize {
-    font-size: var(--scale2) !important;
   }
 
   h1 {
@@ -379,8 +377,11 @@ footer a:hover {
   h3 {
     font-size: var(--scale3) !important;
   }
+}
 
-  h4 {
+/* Smartphones (Portrait) */
+@media screen and (max-width: 768px) {
+  .smallTextSize {
     font-size: var(--scale2) !important;
   }
 

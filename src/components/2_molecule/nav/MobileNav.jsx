@@ -39,7 +39,7 @@ const MobileNav = () => {
         <nav
           id="dropDown"
           className={`fixed top-[64px] right-4 w-4/5 h-fit glassBox rounded-xl z-40 transform transition-transform duration-300 ease-in-out ${
-            navOpen ? "translate-y-0 opacity-1" : "opacity-0 translate-y-full"
+            navOpen ? "translate-y-0 opacity-1" : "opacity-0 pointer-events-none translate-y-full"
           }`}
           aria-hidden={!navOpen}
           role="dialog"

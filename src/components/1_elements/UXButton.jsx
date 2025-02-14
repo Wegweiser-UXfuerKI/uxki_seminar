@@ -4,18 +4,20 @@ import RightArrow from "./RightArrow";
 import "./UXButton.css";
 
 /**
- * A customizable button component with text and an arrow icon.
- * The button can be styled using background color, text color, and arrow color properties.
- * The button features a hover effect that scales and adds a shadow.
+ * UXButton Component
+ *
+ * A customizable and accessible button component with an optional arrow icon.
+ * It supports navigation both internally (`react-router` links) and externally (`<a>` links).
+ * If a hash link (`#id`) is provided, it smoothly scrolls to the target section instead of navigating.
  *
  * @component
- * @param {Object} props - The props for the UXButton component.
- * @param {string} props.text - The text to display inside the button.
- * @param {string} props.bgColor - The background color of the button, passed as a CSS variable.
- * @param {string} props.textColor - The text color of the button, passed as a CSS variable.
- * @param {string} props.arrowColor - The color of the arrow icon, passed as a CSS variable.
+ * @param {Object} props - The properties of the UXButton component.
+ * @param {string} props.text - The text displayed inside the button.
+ * @param {string} [props.to] - The destination URL or anchor link (`#id`). If omitted, the button acts as a normal button.
+ * @param {string} [props.arrowPosition="right"] - The position of the arrow (`"left"` or `"right"`).
+ * @param {boolean} [props.useGlassyBox=false] - If true, applies a glassy effect (`glassBox` class).
  *
- * @returns {JSX.Element} The rendered UXButton component.
+ * @returns {JSX.Element} A button element that supports smooth scrolling, internal navigation, or external linking.
  */
 const UXButton = ({
   text,
@@ -26,12 +28,30 @@ const UXButton = ({
   // Adds a glassy box style if `useGlassyBox` is true
   const glassyClass = useGlassyBox ? "glassBox py-6" : "";
 
-  // Scroll to the top of the page when navigating
-  const handleNavigation = () => {
-    window.scrollTo(0, 0);
+// Scroll to the top of the page when navigating
+  const handleNavigation = (event) => {
+    if (to?.startsWith("#")) {
+      event.preventDefault();
+      const targetElement = document.getElementById(to.substring(1));
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (!to?.startsWith("http")) {
+      window.scrollTo(0, 0);
+    }
   };
 
-  return (
+  return to?.startsWith("http") ? (
+    <a
+      href={to}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`ux-button px-6 py-4 flex justify-between h-full items-center gap-2 transform ${glassyClass}`}
+    >
+      {text}
+      <RightArrow arrowPosition={arrowPosition} />
+    </a>
+  ) : (
     <Link
       to={to}
       onClick={handleNavigation}

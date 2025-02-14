@@ -76,11 +76,12 @@ const SubNavigation = ({ sections }) => {
     <nav
       aria-label="Section Navigation"
       id="sectionNavi"
-      className="fixed top-[40%] right-4 flex flex-col items-end space-y-4 z-20">
+      className="fixed top-[40%] right-3 flex flex-col items-end space-y-4 z-20">
       {sections.map((section, index) => (
         <Link
           key={section.id}
           to={`#${section.id}`}
+          role="button"
           onClick={(e) => {
             e.preventDefault();
             handleSmoothScroll(section.id);

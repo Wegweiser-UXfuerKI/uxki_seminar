@@ -69,7 +69,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center gap-20 py-28 px-6 w-full max-w-[1600px]">
+    <div className="flex flex-col justify-center items-center gap-20 py-28 px-6 w-full max-w-[1280px]">
       <SubNavigation sections={sections} />
 
       <section id="intro" className="flex sm:flex-row flex-col items-center lg:gap-20 md:gap-10 gap-6">
@@ -90,7 +90,7 @@ const Home = () => {
             </b>
             unabhängig von ihrem jeweiligen Erfahrungsniveau erstellt.
           </p>
-          <div className="flex lg:flex-row flex-col w-full lg:gap-10 gap-4 justify-between 2xl:pr-12">
+          <div className="flex lg:flex-row flex-col w-full lg:gap-10 gap-4 justify-between">
             <div className="lg:w-1/2 w-full">
               <UXButton
                 text={"Alle Module ansehen"}
@@ -129,7 +129,7 @@ const Home = () => {
           />
         </div>
         <div className="md:w-[50%] w-full">
-          <h4>Was erwartet Sie?</h4>
+          <h3>Was erwartet Sie?</h3>
           <p>
             In den folgenden Modulen präsentieren wir mithilfe von{" "}
             <b>Videoeinheiten und Texten</b> Inhalte zu relevanten Themen in den

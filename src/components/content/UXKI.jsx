@@ -607,8 +607,7 @@ const WahrgenommeneInformationOverload = {
       <h2>3. Studien zur User Experience und KI</h2>
       <p>
         Ergebnisse mehrerer Studien z. B. von <b>Sewnath und Crijnen (2021)</b>{" "}
-        und{" "}
-        <b>Tsai et al. (2021)</b> sowie eine Studie zur Automatisierung von
+        und <b>Tsai et al. (2021)</b> sowie eine Studie zur Automatisierung von
         Insulinverabreichungssystemen (AID-Systeme) von{" "}
         <b>Schrills und Franke (2023)</b> zeigten, dass der Einsatz von
         Erklärungen zu einer Informationsüberlastung führen könnte. Zu viele
@@ -1168,6 +1167,12 @@ const PerceivedConfidence = {
   ],
 };
 
+const sectionsFazit = [
+  { id: "outro", title: "Outro" },
+  { id: "kernaspekte", title: "Fünf UX-Kernaspekte" },
+  { id: "ausblick", title: "Ausblick nächste Lektion" },
+];
+
 const Zusammenfassung = {
   linkName: "zusammenfassung-ausblick",
   name: "Zusammenfassung und Ausblick",
@@ -1175,7 +1180,8 @@ const Zusammenfassung = {
     "Hier findet man eine kurze Zusammenfassung der wichtigsten Aspekte, sowie einen Ausblick auf das nächste Modul.",
   content: [
     <ChapterHeader text={"Zusammenfassung und Ausblick"} number={7} />,
-    <section>
+    <section id="outro">
+      <SubNavigation sections={sectionsFazit} />
       <VideoContainer
         link={
           "https://www.youtube-nocookie.com/embed/Qmg1FlFCSMw?rel=0&modestbranding=1"
@@ -1188,7 +1194,7 @@ const Zusammenfassung = {
         KI-Systemen eine besondere Rolle spielen.
       </p>
     </section>,
-    <section>
+    <section id="kernaspekte">
       <h2>Die 5 UX-Kernaspekte und deren Designrichtlinien</h2>
       <h3>1. Adaptive Automatisierung für wahrgenommene Autonomie</h3>
       <p>
@@ -1273,7 +1279,7 @@ const Zusammenfassung = {
         nutzen.
       </p>
     </section>,
-    <section>
+    <section id="ausblick">
       <h2>Ausblick auf die nächste Einheit: "UX-bezogene KI-Eigenschaften"</h2>
       <p>
         In der kommenden Einheit werden wir uns mit spezifischen Eigenschaften
@@ -1902,6 +1908,13 @@ const linksAndNames = [
   },
 ];
 
+const sectionsIntro = [
+  { id: "einleitung", title: "Einleitung" },
+  { id: "aspekte", title: "Aspekte KI-bezogenen UX" },
+  { id: "relevanz", title: "Warum diese relevant?" },
+  { id: "ausblick", title: "Ausblick" },
+];
+
 const EinführungUXKI = {
   linkName: "einfuehrung-ki-bezogene-ux",
   name: "Einführung KI-bezogene UX",
@@ -1909,7 +1922,8 @@ const EinführungUXKI = {
     "KI-Systeme machen mehr Aspekte für die User Experience relevant. Hier werden wichtige dieser KI-bezogenen UX Aspekte ein erstes mal angeführt.",
   content: [
     <ChapterHeader text={"Einführung in KI-bezogene UX"} number={1} />,
-    <section>
+    <section id="einleitung">
+      <SubNavigation sections={sectionsIntro} />
       <p>
         In diesem Modul erläutert Tim Schrills konkretere UX-Aspekte, die beim
         Design und der Implementierung von KI-Systemen beachtet werden sollten.
@@ -1941,7 +1955,7 @@ const EinführungUXKI = {
         mit KI-Systemen interagieren und diese wahrnehmen.
       </p>
     </section>,
-    <section>
+    <section id="aspekte">
       <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
       <div className="flex flex-wrap justify-center -mx-4">
         {linksAndNames.map((item, index) => (
@@ -1955,7 +1969,7 @@ const EinführungUXKI = {
         ))}
       </div>
     </section>,
-    <section>
+    <section id="relevanz">
       <h3>Warum sind diese Aspekte wichtig für die Automation-Related UX?</h3>
       <p>
         Mit der zunehmenden Integration von KI in alltägliche Systeme ist es
@@ -1978,7 +1992,7 @@ const EinführungUXKI = {
         Automatisierung aufbaut.
       </p>
     </section>,
-    <section>
+    <section id="ausblick">
       <h3>Was können Sie von dieser Lektion erwarten?</h3>
       <p>
         In den folgenden Kapiteln werden wir detailliert untersuchen, wie diese

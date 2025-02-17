@@ -57,6 +57,7 @@ const DropDownMenu = ({
   const handleChapterChange = (link) => {
     console.log("link for scroll: ", link);
     setScrollToChapter(link);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Dynamic positioning of the dropdown menu

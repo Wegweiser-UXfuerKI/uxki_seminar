@@ -1014,7 +1014,7 @@ const Fazit = {
     <section id="diskussion">
       <VideoContainer
         link={
-          "https://www.youtube-nocookie.com/embed/PZAkt-EuKn0?si=g-hnbptFXBW6kajx&amp;rel=0&amp;modestbranding=1"
+          "https://www.youtube-nocookie.com/embed/076omxJ2CBY?si=hMlJ3JZaM7rAnfhW"
         }
         title={"Diskussion"}
       />

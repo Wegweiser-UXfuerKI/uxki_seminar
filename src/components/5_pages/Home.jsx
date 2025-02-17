@@ -63,7 +63,7 @@ const Home = () => {
   }, [scrollToChapter, modulesData, setScrollToChapter]);
 
   const sections = [
-    { id: "intro", title: "Wegweiser.UX-für-KI Lehrplattform" },
+    { id: "intro", title: "Lehrplattform Wegweiser.UX-für-KI" },
     { id: "vorstellung", title: "Was erwartet Sie?" },
     { id: "module", title: "Zur Modulübersicht" },
   ];

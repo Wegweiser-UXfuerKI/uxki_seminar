@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AppContext } from "../../../AppContext";
+import { getSubtopicLinksByModule } from "../../ContentHandler";
 import "./DropDownMenu.css";
 
 /**
@@ -25,6 +26,8 @@ import "./DropDownMenu.css";
  * @param {Array} [props.disabledItems=[]] - An array of disabled items
  * @param {Function|string} [props.triggerElement=selectedName] - The element that triggers the dropdown
  * @param {string} [props.position="right"] - Defines the dropdown position ("right" or "bottom")
+ * @param {string} props.selectedModule - The link for the selected/rendered module
+ * @param {boolean} props.isDisabledModule - State whether the selected/rendered module is disabled
  *
  * @returns {JSX.Element} The rendered dropdown menu component
  */
@@ -37,9 +40,15 @@ const DropDownMenu = ({
   position = "right",
   title,
   selectedModule,
+  isDisabledModule,
 }) => {
   const { setScrollToChapter } = useContext(AppContext);
   const [isHovered, setIsHovered] = useState(false);
+
+  /**
+   * The first subtopic link from the rendered module icon
+   */
+  const firstSubtopicFromModule = getSubtopicLinksByModule(selectedModule)[0];
 
   /**
    * Toggles the hover state of the dropdown menu.
@@ -106,10 +115,18 @@ const DropDownMenu = ({
       onBlur={() => toggleMenu(false)} // Close when losing focus
     >
       <Link
-        to="/"
+        to={
+          isDisabledModule
+            ? "/"
+            : `/${selectedModule}/${firstSubtopicFromModule}`
+        }
         className="firstLevel relative"
         onClick={() => {
-          setScrollToChapter(selectedModule);
+          if (isDisabledModule) {
+            setScrollToChapter(selectedModule);
+          } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
         }}
         tabIndex={0}>
         {typeof triggerElement === "function" ? triggerElement() : selectedName}
@@ -127,32 +144,33 @@ const DropDownMenu = ({
             <b>{title}</b>
           </h4>
         )}
-        {items?.map(([link, name], index) => {
-          const isDisabled = disabledItems.some((disabledLink) =>
-            link.endsWith(`/${disabledLink}`)
-          );
+        {!isDisabledModule &&
+          items?.map(([link, name], index) => {
+            const isDisabled = disabledItems.some((disabledLink) =>
+              link.endsWith(`/${disabledLink}`)
+            );
 
-          const isActive = link === selectedLink;
+            const isActive = link === selectedLink;
 
-          return (
-            <Link
-              key={link}
-              to={isDisabled ? "#" : `/${link}`}
-              onClick={(e) => {
-                if (isDisabled) {
-                  e.preventDefault();
-                } else {
-                  handleChapterChange(link);
-                }
-              }}
-              className={`secondLevel rounded-lg px-2 py-1 ${
-                isDisabled ? "disabled" : isActive ? "active" : ""
-              }`}
-              tabIndex={0}>
-              {`${index + 1}: ${name}`}
-            </Link>
-          );
-        })}
+            return (
+              <Link
+                key={link}
+                to={isDisabled ? "#" : `/${link}`}
+                onClick={(e) => {
+                  if (isDisabled) {
+                    e.preventDefault();
+                  } else {
+                    handleChapterChange(link);
+                  }
+                }}
+                className={`secondLevel rounded-lg px-2 py-1 ${
+                  isDisabled ? "disabled" : isActive ? "active" : ""
+                }`}
+                tabIndex={0}>
+                {`${index + 1}: ${name}`}
+              </Link>
+            );
+          })}
       </motion.div>
     </motion.div>
   );

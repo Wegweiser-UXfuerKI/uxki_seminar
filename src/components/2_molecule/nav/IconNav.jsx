@@ -26,6 +26,8 @@ const IconNav = () => {
   } = useContext(AppContext);
   const modules = getModuleLinksAndNames();
 
+  console.log(disabledModules);
+
   return (
     <div id="iconNav" className="relative flex">
       <div className="flex flex-col items-center gap-3 2xl:gap-2 relative">
@@ -36,9 +38,7 @@ const IconNav = () => {
             getSubtopicLinksAndNamesByModulelink(moduleLink) || [];
           const isActive = moduleLink === selectedModuleLink;
 
-          //TODO: fix that dropdown is not shown when module is disabled
-          const isDisabled = disabledModules[moduleLink];
-          if (isDisabled) return null;
+          const isDisabled = disabledModules.includes(moduleLink);
 
           return (
             <DropDownMenu
@@ -51,6 +51,7 @@ const IconNav = () => {
                 subtopicName,
               ])}
               disabledItems={disabledSubtopics[moduleLink] || []}
+              isDisabledModule={isDisabled}
               title={moduleName}
               triggerElement={() =>
                 ModuleIcon ? (

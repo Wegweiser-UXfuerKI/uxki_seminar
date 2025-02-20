@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ContainerSixteenNine from "./ContainerSixteenNine";
 
 const InteractiveModalWrapper = ({ closedModalContent, openModalContent }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,18 +24,21 @@ const InteractiveModalWrapper = ({ closedModalContent, openModalContent }) => {
             transition={{ duration: 0.3 }}
             onClick={toggleModal}>
             <motion.div
-              className="glassBox p-6 m-6 mt-24 w-3/4 flex flex-col items-end"
+              className="glassBox no-hover p-6 w-full flex flex-col items-end"
+              style={{
+                aspectRatio: "16 / 10",
+                maxWidth: "calc(80vw - 3rem)",
+                maxHeight: "calc(100vh - 3rem)",
+              }}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}>
               <div className="rounded-xl w-full h-full overflow-hidden">
-                <ContainerSixteenNine>
-                  {openModalContent || (
-                    <div className="w-full h-full bg-neutral-600"></div>
-                  )}
-                </ContainerSixteenNine>
+                {openModalContent || (
+                  <div className="w-full h-full bg-neutral-600"></div>
+                )}
               </div>
             </motion.div>
           </motion.div>

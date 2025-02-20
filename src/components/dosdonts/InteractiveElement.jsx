@@ -616,7 +616,9 @@ function InteractiveElement() {
             </div>
 
             <div id="guideline-container" className="fly-in-left">
-              <h4 id="guideline-text" className="text-gradient-animation">
+              <h4
+                id="guideline-text"
+                className="text-gradient-animation text-3xl">
                 {task.guidelineText}
               </h4>
               <img
@@ -639,8 +641,8 @@ function InteractiveElement() {
             className="flex flex-col justify-center items-center gap-y-4 content-distribute">
             <div
               id="app-container"
-              className="flex justify-center uniform-x-gap pt-to-viewport">
-              <div className="w-1/2 flex justify-center px-3">
+              className="flex justify-around uniform-x-gap pt-to-viewport">
+              <div className="w-2/5 flex justify-center">
                 <button
                   ref={app1Ref}
                   id="app1"
@@ -663,7 +665,7 @@ function InteractiveElement() {
                   />
                 </button>
               </div>
-              <div className="w-1/2 flex justify-center px-3">
+              <div className="w-2/5 flex justify-center">
                 <button
                   ref={app2Ref}
                   id="app2"
@@ -718,10 +720,10 @@ function InteractiveElement() {
               {/* Only show in view EXPLAIN */}
               <div
                 id="dos-and-donts"
-                className="flex justify-center uniform-x-gap text-ux_white">
+                className="w-full flex justify-around uniform-x-gap">
                 <div
                   id={`${task.answer === 1 ? "do-side" : "dont-side"}`}
-                  className="flex flex-col justify-start items-center app-width px-3">
+                  className="w-2/5 flex flex-col justify-start items-center">
                   <div
                     id={`${task.answer === 1 ? "do-label" : "dont-label"}`}
                     className="flex justify-center items-center py-1 mb-3 gap-x-2 text-ux_white">
@@ -731,7 +733,7 @@ function InteractiveElement() {
                       alt=""
                       loading="lazy"
                     />
-                    <h3 className="text-inherit p-0 my-3">{`${
+                    <h3 className="text-inherit p-0 my-3 text-xl">{`${
                       task.answer === 1 ? "Berücksichtige" : "Vermeide"
                     }`}</h3>
                   </div>
@@ -741,7 +743,7 @@ function InteractiveElement() {
                 </div>
                 <div
                   id={`${task.answer === 1 ? "dont-side" : "do-side"}`}
-                  className="flex flex-col justify-start items-center app-width px-3">
+                  className="w-2/5 flex flex-col justify-start items-center">
                   <div
                     id={`${task.answer === 1 ? "dont-label" : "do-label"}`}
                     className="flex justify-center items-center py-1 mb-3 gap-x-2 text-ux_white">
@@ -751,7 +753,7 @@ function InteractiveElement() {
                       alt=""
                       loading="lazy"
                     />
-                    <h3 className="text-inherit p-0 my-3">{`${
+                    <h3 className="text-inherit p-0 my-3 text-xl">{`${
                       task.answer === 1 ? "Vermeide" : "Berücksichtige"
                     }`}</h3>
                   </div>
@@ -794,9 +796,11 @@ function InteractiveElement() {
                   <button
                     ref={revealButton}
                     id="tip-reveal-button"
-                    className="flex justify-start items-center mb-2"
+                    className="flex justify-center items-center mb-2 w-4/5"
                     aria-label="Auflösen-Button">
-                    <p className="p-0 m-0">Zur Auflösung</p>
+                    <p className="p-0 m-0" style={{ marginBottom: 0 }}>
+                      Zur Auflösung
+                    </p>
                     <img
                       className="w-[22px]"
                       src={forwardIcon}

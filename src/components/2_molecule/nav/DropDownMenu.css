@@ -7,11 +7,11 @@
 }
 
 :root.light #dropDown a {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 :root.dark #dropDown a {
-  font-weight: 350;
+  font-weight: 250;
 }
 
 :root.light #dropDown a.active,

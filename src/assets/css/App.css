@@ -37,7 +37,6 @@ body {
 
 .glassBox {
   background: var(--box);
-  border-radius: var(--scale5);
   -webkit-box-shadow: var(--glasBoxShadow);
   -moz-box-shadow: var(--glasBoxShadow);
   box-shadow: var(--glasBoxShadow);
@@ -95,14 +94,14 @@ li {
 
 .mainTitle,
 h1 {
-  font-size: var(--scale8);
+  font-size: calc(var(--scale4) * 2);
   line-height: 1.2;
   font-weight: 700;
 }
 
 .titleSubtopic h1::after {
   content: attr(data-number);
-  font-size: calc(var(--scale7) * 4); /* 224px */
+  font-size: calc(var(--scale2) * 14); /* 224px */
   font-weight: 800;
   line-height: 1;
   position: absolute;
@@ -185,7 +184,7 @@ ol li::marker {
 p:not(:last-child):not(:has(+ p)):not(:has(+ ul)):not(:has(+ ol)),
 ol:not(:last-child):not(:has(+ p)):not(:has(+ ul)):not(:has(+ ol)),
 ul:not(:last-child):not(:has(+ p)):not(:has(+ ul)):not(:has(+ ol)) {
-  margin-bottom: var(--scale7);
+  margin-bottom: 56px;
 }
 
 p + p {
@@ -273,11 +272,11 @@ main p a:hover::after,
     opacity: 0.5;
   }
   50% {
-    transform: scale(0.95);
+    transform: scale(0.96);
     opacity: 0.35;
   }
   75% {
-    transform: scale(1.1);
+    transform: scale(1.2);
     opacity: 0.45;
   }
   100% {
@@ -322,7 +321,7 @@ main p a:hover::after,
 /* Tablets (Landscape)  - Tailwind (lg) */
 @media screen and (max-width: 1024px) {
   .titleSubtopic h1::after {
-    font-size: calc(var(--scale7) * 3.5);
+    font-size: calc(var(--scale2) * 10);
   }
 
   h1 {
@@ -346,19 +345,15 @@ main p a:hover::after,
     font-size: var(--scale2) !important;
   }
 
-  .titleSubtopic h1::after {
-    font-size: calc(var(--scale7) * 3);
-  }
-
   .BgCircle:before {
     top: 0vw;
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
   }
 
   .BgCircle:after {
     bottom: 0;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
   }
 }

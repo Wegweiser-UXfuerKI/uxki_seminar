@@ -45,7 +45,7 @@ const HomeModuleCard = ({
 }) => {
   return (
     <div
-      className={`moduleCard glassBox w-full h-fit min-h-[350px] ${
+      className={`moduleCard glassBox w-full md:rounded-[48px] rounded-3xl h-fit min-h-[350px] ${
         isDisabled ? "disabled" : ""
       }`}
       key={index}

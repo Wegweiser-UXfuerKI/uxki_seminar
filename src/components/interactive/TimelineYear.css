@@ -2,7 +2,7 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   margin-bottom: 40px;
-  font-size: calc(var(--scale10) * 1.5);
+  font-size: calc(var(--base-size) * 15);
 }
 
 .date-block {

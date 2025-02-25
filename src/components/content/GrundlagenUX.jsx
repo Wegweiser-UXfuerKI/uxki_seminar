@@ -2,6 +2,7 @@ import { ReactComponent as imageElement } from "../../assets/icons/usability.svg
 import { Link } from "react-router-dom";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { VideoContainer } from "../1_elements/VideoContainer";
+import Accordion from "../2_molecule/nav/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 import List from "../2_molecule/List";
 
@@ -81,6 +82,14 @@ const Einleitung = {
   ],
 };
 
+const sectionsUsability = [
+  { id: "2", title: "Definition" },
+  { id: "3", title: "Drei Faktoren" },
+  { id: "4", title: "Unterschied: Effektivität & Effizienz" },
+  { id: "5", title: "Fazit aus Fallbeispielen" },
+  { id: "6", title: "Ausblick" },
+];
+
 const Usability = {
   linkName: "usability",
   name: "Usability",
@@ -89,14 +98,179 @@ const Usability = {
   content: [
     <ChapterHeader text={"Usability"} number={2} />,
     <section>
-      <div className="text-center p-10 pb-0 bg-slate-200 rounded-xl text-ux_dark flex flex-col justify-center items-center">
-        Work in progress...
-        <Link
-          to={"/"}
-          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
-          Zurück zur Kursübersicht
-        </Link>
-      </div>
+      <p>
+        Beschreibt, wie effektiv, effizient und zufriedenstellend Nutzende ihre
+        Ziele mit einem System erreichen. Eine gute Usability ist entscheidend
+        für Akzeptanz und Erfolg eines Produkts.
+      </p>
+      <Accordion sections={sectionsUsability} />
+      <SubNavigation sections={sectionsUsability} />
+    </section>,
+    <section>
+      <h2>Definition Usability</h2>
+      <p>
+        <b>Usability</b>, im Fachjargon auch als „Gebrauchstauglichkeit“
+        bezeichnet, beschreibt die Qualität der Interaktion zwischen Menschen
+        und interaktiven Systemen. In Alltagssprache würden wir am ehesten von
+        „Benutzerfreundlichkeit“ oder von einer „intuitiven Bedienung“ sprechen.
+      </p>
+      <p>
+        Gute Usability ist eine Grundvoraussetzung für erfolgreiche
+        Mensch-Computer-Interaktion. Undurchdachte oder schlecht gestaltete
+        Systeme führen dagegen schnell zu Bedienproblemen, kognitiver
+        Überlastung und Frustration bei den Nutzer*innen – also zu einer
+        schlechten Usability.
+      </p>
+      <p>
+        Schon seit den 1980er Jahren wissen wir, dass gute Usability über den
+        Erfolg und die Akzeptanz eines neuen Systems oder Produkts entscheidet.
+        Digitale Systeme müssen schlicht und einfach eine gute Usability haben,
+        um überhaupt in der Praxis akzeptiert und verwendet werden zu können.
+      </p>
+    </section>,
+    <section>
+      <h2>Drei Faktoren der Usability</h2>
+      <p>
+        Um Usability gezielter gestalten und messen zu können, definiert die
+        Industrienorm DIN EN ISO 9241-11 drei Faktoren der Usability:{" "}
+        <b>Effektivität</b>, <b>Effizienz</b> und <b>Zufriedenstellung</b>.
+      </p>
+      <List
+        items={[
+          "<b>Effektivität</b> bedeutet, dass Nutzer*innen mit einem System ihre Aufgaben erfolgreich bewältigen können.",
+          "<b>Effizienz</b> beschreibt, dass dies mit einem angemessenen Aufwand geschieht.",
+          "<b>Zufriedenstellung</b> bezieht sich darauf, dass die Verwendung des Systems für ihre Aufgaben bei den Nutzer*innen keine starken negativen Emotionen wie Frustration oder Ärger auslöst.",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
+      <p>
+        In unserem alltäglichen Sprachgebrauch differenzieren wir dabei
+        typischerweise nicht zwischen Effektivität und Effizienz. Dies ist aber
+        sinnvoll, wenn wir von der Usability eines interaktiven Systems
+        sprechen.
+      </p>
+    </section>,
+    <section>
+      <h2>Unterschied: Effektivität und Effizienz</h2>
+      <p>
+        Ein einfaches Beispiel macht den Unterschied klar: Stellen Sie sich vor,
+        Sie verwenden ein interaktives System, um einen dreiseitigen Brief an
+        eine Behörde zu schreiben und als PDF hochzuladen.
+      </p>
+      <h3>
+        Fall 1: Sie verwenden dazu einen PC oder Laptop mit einer gängigen
+        Textverarbeitung.
+      </h3>
+      <p>
+        Durch die Verwendung einer grafischen Oberfläche mit
+        Textverarbeitungsprogramm, Maus und Tastatur werden Sie es mit großer
+        Sicherheit schaffen, den Brief ohne Tippfehler, im erwünschten Layout
+        und mit der gewünschten Länge zu verfassen. Damit ist das System für
+        diese Aufgabe schon einmal grundsätzlich <b>effektiv</b>, denn Sie
+        erreichen damit Ihr Ziel.
+      </p>
+      <p>
+        Mit etwas Übung sollte das Ganze auch innerhalb von 1-2 Stunden erledigt
+        sein und der kognitive Aufwand ist für Sie überschaubar. Das setzt
+        natürlich voraus, dass Sie der Sprache des Briefes mächtig sind,
+        einigermaßen Übung im Schreiben und Tippen haben und mit dem Programm
+        einigermaßen vertraut sind. Damit ist das System für diese Aufgabe{" "}
+        <b>effizient</b>, da der Aufwand angemessen ist.
+      </p>
+      <p>
+        Es ist auch nicht zu erwarten, dass das System Sie dabei erheblich
+        stresst oder ärgert. Es ist also im Großen und Ganzen{" "}
+        <b>zufriedenstellend</b>.
+      </p>
+      <p>
+        Unterm Strich ist damit eine <b>gute Usability</b> erreicht.
+      </p>
+      <h3>
+        Fall 2: Sie verwenden dazu ein Mobiltelefon und verfassen den Text über
+        die Texteingabe auf dem Touchscreen in einer einfachen Notizen-App.
+      </h3>
+      <p>
+        Auch hier werden Sie es letztendlich irgendwann schaffen, den Brief ohne
+        Tippfehler und weitgehend im erwünschten Layout und in der erwünschten
+        Länge zu schreiben. Das System ist also für Ihre Aufgabe grundsätzlich{" "}
+        <b>effektiv</b>.
+      </p>
+      <p>
+        Allerdings wird dies aufgrund des kleinen Bildschirms, des umständlichen
+        Einrückens von Text über Leerzeichen, der mangelnden
+        Rechtschreibkorrektur, etc. wahrscheinlich ein sehr langsamer und
+        kognitiv anstrengender Prozess. Das System ist also{" "}
+        <b>nicht effizient</b>.
+      </p>
+      <p>
+        Man kann sogar davon ausgehen, dass Sie der Prozess belasten wird und es
+        auch Phasen geben wird, in der Sie die Bearbeitung der Aufgabe mit dem
+        System frustriert und ärgert. Somit entsteht dann auch eine{" "}
+        <b>schlechte Zufriedenstellung</b>.
+      </p>
+      <p>
+        Unterm Strich ist es damit eine <b>schlechte Usability</b> – trotz
+        prinzipieller Effektivität.
+      </p>
+      <h3>
+        Fall 3: Sie haben bedingt durch Ihre Sehfähigkeit oder durch die
+        Beweglichkeit ihrer Finger, Hände und Arme besondere Anforderungen im
+        Bereich der Barrierefreiheit.
+      </h3>
+      <p>
+        Beispielsweise könnten Sie vielleicht den Text des Briefes weder auf dem
+        PC-Bildschirm noch dem Telefon-Bildschirm gut lesen. Oder die
+        Texteingabe über eine physische PC-Tastatur oder eine Bildschirmtastatur
+        auf dem Touchscreen ist für Sie faktisch unbedienbar. Für Sie persönlich
+        sind die Systeme aus Fall 1 und 2 somit <b>nicht effektiv</b>,{" "}
+        <b>nicht effizient</b> und <b>nicht zufriedenstellend</b> ist, wobei sie
+        es für andere Personen sein mögen.
+      </p>
+    </section>,
+    <section>
+      <h2>Fazit aus den Fallbeispielen</h2>
+      <p>
+        Es ist wichtig zu verstehen, dass ein System nicht „eine“ Usability hat,
+        sondern dass Effektivität, Effizienz und Zufriedenstellung immer davon
+        abhängig sind, wer ein System verwendet, zu welchem Zweck es verwendet
+        wird und wie und wo damit interagiert wird.{" "}
+        <b>
+          Usability ist also keine Systemeigenschaft, sondern ergibt sich immer
+          aus dem Kontext der Verwendung.
+        </b>
+      </p>
+      <p>
+        Im Bezug auf Usability gibt es daher keine inhärent „guten“ oder
+        „schlechten“ Systeme, sondern es hängt immer davon, für was und von wem
+        etwas verwendet wird. Oder wie es der vielbeachtete Usability-Experte
+        und UX-Designer Bill Buxton auf den Punkt bringt:
+      </p>
+      <p>
+        <b>„Everything is best for something and worst for something else.“</b>
+      </p>
+      <p>
+        Usability ist immer die Verwendbarkeit und Praxistauglichkeit eines
+        Systems durch eine bestimmte Person und für eine bestimmte Aufgabe. Die
+        genaue Definition in der DIN EN ISO 9241-11 bringt dies zum Ausdruck:
+      </p>
+      <p className="specialText">
+        „Die Gebrauchstauglichkeit ist das Ausmaß, in dem ein System, ein
+        Produkt oder eine Dienstleistung durch bestimmte Benutzer genutzt werden
+        kann, um in einem bestimmten Nutzungskontext bestimmte Ziele effektiv,
+        effizient und zufriedenstellend zu erreichen.“
+      </p>
+    </section>,
+    <section>
+      <h2>Ausblick</h2>
+      <p>
+        Usability ist dabei eine notwendige Grundanforderung für den Erfolg
+        eines Systems oder Produkts. Ganz entscheidend ist dafür, dass der reale{" "}
+        <b>Nutzungskontext</b> schon frühzeitig bei der Konzeption, Gestaltung
+        und Entwicklung des Systems berücksichtigt wird. <br /> Was sich genau
+        hinter diesem Begriff verbirgt, werden wir in der nächsten Lektion
+        thematisieren.
+      </p>
     </section>,
   ],
 };
@@ -224,14 +398,21 @@ const Quellen = {
   content: [
     <ChapterHeader text={"Quellen"} number={8} />,
     <section>
-      <div className="text-center p-10 pb-0 bg-slate-200 rounded-xl text-ux_dark flex flex-col justify-center items-center">
-        Work in progress...
-        <Link
-          to={"/"}
-          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
-          Zurück zur Kursübersicht
-        </Link>
-      </div>
+      <h2>Literaturverzeichnis</h2>
+      <ul>
+        <li>
+          Jetter, H.-C. (2023). D3 Mensch-Computer-Interaktion, Usability und
+          User Experience. In R. Kuhlen, D. Lewandowski, W. Semar & C.
+          Womser-Hacker (Hrsg.), <i>Grundlagen der Informationswissenschaft</i>{" "}
+          (S. 525–534). De Gruyter Saur.{" "}
+          <a
+            href="https://doi.org/10.1515/9783110769043-045"
+            target="_blank"
+            rel="noreferrer">
+            https://doi.org/10.1515/9783110769043-045
+          </a>
+        </li>
+      </ul>
     </section>,
   ],
 };

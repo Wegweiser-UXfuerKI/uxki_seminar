@@ -25,7 +25,7 @@ const SubTopic = ({ topicName, link, description, number, isDisabled }) => {
         isDisabled ? "disabled" : ""
       }`}>
       <Link to={`/${selectedModuleLink}/${link}`}>
-        <div className="subTopicCard relative glassBox h-full xl:p-8 p-6 flex flex-col justify-end m-3">
+        <div className="subTopicCard relative glassBox rounded-3xl h-full xl:p-8 p-6 flex flex-col justify-end m-3">
           <h3
             className="fourthTitle mt-10 hyphens-auto"
             topic-number={String(number + 1).padStart(2, "0")}>

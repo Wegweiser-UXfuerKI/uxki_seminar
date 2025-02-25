@@ -24,7 +24,7 @@ const InteractiveModalWrapper = ({ closedModalContent, openModalContent }) => {
             transition={{ duration: 0.3 }}
             onClick={toggleModal}>
             <motion.div
-              className="glassBox no-hover p-6 w-full flex flex-col items-end"
+              className="glassBox no-hover rounded-xl p-6 w-full flex flex-col items-end"
               style={{
                 aspectRatio: "16 / 10",
                 maxWidth: "calc(80vw - 3rem)",

@@ -5,11 +5,14 @@ import starten_logo from "../../../assets/quizUX/images/Quiz_starten.png";
 import bulbIcon from "../../../assets/quizUX/images/bulb.png";
 import swapIcon from "../../../assets/quizUX/images/swap.png";
 import styles from "./Quiz.module.css";
+import { AppContext } from "../../../AppContext";
 
 // popup content when start circle is clicked; displays welcome text and explains some main features
 const Start = ({ onUpdate, popupType }) => {
   const { topicTitles, colors } = useContext(QuizContext); // get static topic and color variables from context
   const [content, setContent] = useState(1);
+
+  const { selectedModuleName } = useContext(AppContext);
 
   // render content to distinguish between first (welcome text) and second part (explanations) of popup content
   const renderContent = (content) => {
@@ -21,7 +24,9 @@ const Start = ({ onUpdate, popupType }) => {
             <div className="flex flex-col items-center self-center text-center w-5/6">
               <p className="pb-3 text-ux_dark">
                 Im <b className="text-inherit">Wegweiser.UX-für-KI Quiz</b>{" "}
-                kannst du dich selbstständig zu den Themen{" "}
+                kannst du dich im Modul{" "}
+                <b className="text-inherit">{selectedModuleName}</b>{" "}
+                selbstständig zu den Themen{" "}
                 <b className={styles.pink}>{topicTitles[0]}</b>,{" "}
                 <b className={styles.lila}>{topicTitles[1]}</b> und{" "}
                 <b className={styles.türkis}>{topicTitles[2]}</b> testen. Zu
@@ -144,12 +149,14 @@ const Start = ({ onUpdate, popupType }) => {
         <div className="flex flex-col h-full justify-between cursor-default">
           <div></div>
           <div className="flex flex-col items-center text-center text-ux_dark">
-            <h2 className="text-inherit">Willkommen beim Wegweiser.UX-für-KI Quiz
+            <h2 className="text-inherit">
+              Willkommen beim Wegweiser.UX-für-KI Quiz
             </h2>
             <div className="w-9/12">
               <p className="pb-3 text-ux_dark">
-                Du kannst dich hier selbstständig zu den Themen{" "}
-                <b className={styles.pink}>{topicTitles[0]}</b>,{" "}
+                Du kannst dich hier selbstständig im Modul{" "}
+                <b className="text-inherit">{selectedModuleName}</b> zu den
+                Themen <b className={styles.pink}>{topicTitles[0]}</b>,{" "}
                 <b className={styles.lila}>{topicTitles[1]}</b> und{" "}
                 <b className={styles.türkis}>{topicTitles[2]}</b> testen.
               </p>

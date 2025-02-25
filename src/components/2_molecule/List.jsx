@@ -12,7 +12,7 @@ const List = ({ items }) => {
   return (
     <ul style={{ listStyleType: "none", padding: 0 }}>
       {items.map((item, index) => (
-        <li key={index} className="flex gap-6 mb-[32px]">
+        <li key={index} className="flex lg:gap-6 gap-4 mb-[32px]">
           <Circle content={index + 1} size="medium" />
           <p dangerouslySetInnerHTML={{ __html: item }}></p>
         </li>

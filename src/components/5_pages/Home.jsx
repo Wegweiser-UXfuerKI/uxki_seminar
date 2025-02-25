@@ -69,7 +69,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center gap-24 xl:pt-20 py-28 px-6 w-full max-w-[1280px]">
+    <div className="flex flex-col justify-center items-center w-full max-w-[1280px] xl:my-20 my-28 px-6 lg:gap-y-24 gap-y-10">
     <SubNavigation sections={sections} />
 
       <section

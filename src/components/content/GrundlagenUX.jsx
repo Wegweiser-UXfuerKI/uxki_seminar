@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { VideoContainer } from "../1_elements/VideoContainer";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
+import List from "../2_molecule/List";
 
 const sectionsIntro = [
   { id: "1", title: "Intro" },
@@ -181,8 +182,8 @@ const Evaluation = {
 };
 
 const sectionsOutro = [
-  { id: "1", title: "Fazit" },
-  { id: "2", title: "Warum fünf Grundbegriffe" },
+  { id: "1", title: "Outro" },
+  { id: "2", title: "Warum fünf Grundbegriffe?" },
 ];
 
 const Fazit = {
@@ -202,59 +203,15 @@ const Fazit = {
     </section>,
     <section>
       <h2>Die 5 Grundbegriffe und ihre Relevanz:</h2>
-      <h4>Warum ist Usability wichtig für gemeinwohlorientierte KI? </h4>
-      <p>
-        Usability entspricht ungefähr dem, was viele unter
-        „Benutzerfreundlichkeit“ verstehen. Sie stellt sicher, dass möglichst
-        alle Menschen, unabhängig von ihrem technischen Wissen, die KI-Systeme
-        effektiv, effizient und ohne große Hürden nutzen können. Dies ist
-        entscheidend, um den Zugang zu gemeinwohlorientierten Diensten für eine
-        breite Bevölkerungsschicht zu ermöglichen.
-      </p>
-      <h4>
-        Warum ist es wichtig, den Nutzungskontext gemeinwohlorientierter KI zu
-        analysieren und zu verstehen?
-      </h4>
-      <p>
-        Die Analyse des Nutzungskontexts hilft, die Bedürfnisse, Fähigkeiten und
-        Herausforderungen der Zielgruppen zu verstehen. Gerade in
-        gemeinwohlorientierten Projekten sind Kenntnisse über soziale
-        Hintergründe, Sprachkenntnisse, Ausbildungsniveau, Barrierefreiheit und
-        die technische Ausstattung der Nutzer:innen essenziell, um die KI
-        inklusiv und gerecht zu gestalten.
-      </p>
-      <h4>
-        Welche Rolle spielt User Experience (UX) für gemeinwohlorientierte KI?
-      </h4>
-      <p>
-        Eine positive UX fördert das Vertrauen in die KI und sorgt dafür, dass
-        Menschen die Systeme gerne und regelmäßig nutzen. Gerade bei
-        gemeinwohlorientierten Anwendungen kann eine intuitive und ansprechende
-        UX die Akzeptanz und Wirksamkeit erheblich steigern.
-      </p>
-      <h4>
-        Was hat Mensch-Computer-Interaktion mit gemeinwohlorientierter KI zu
-        tun?
-      </h4>
-      <p>
-        Die Mensch-Computer-Interaktion (MCI) oder Human-Computer Interaction
-        (HCI) ist eine Forschungsdisziplin und liefert uns die notwendigen
-        Methoden und Modelle, um die Interaktion zwischen Mensch und KI zu
-        verbessern. Sie hilft, die Schnittstellen gebrauchstauglich,
-        verständlich, aufgabenangemessen und barrierefrei zu gestalten.
-        Besonders bei gemeinwohlorientierten Projekten ist es wichtig, die
-        Bedürfnisse vielfältiger Nutzergruppen – etwa Senioren, Menschen mit
-        Behinderungen oder technikferne Personen – zu berücksichtigen.
-      </p>
-      <h4>Wieso sollte man die UX gemeinwohlorientierter KI evaluieren?</h4>
-      <p>
-        Eine Evaluation macht sichtbar, ob die gemeinwohlorientierte KI
-        tatsächlich ihren Zweck erfüllt und von den Menschen akzeptiert wird.
-        Durch Tests, Nutzerfeedback und Datenauswertungen kann man
-        sicherstellen, dass die Systeme inklusiv, effizient und nachhaltig sind.
-        Evaluationen helfen außerdem dabei, mögliche Diskriminierungen durch die
-        Bedienkonzepte oder die KI frühzeitig zu erkennen und zu beheben.
-      </p>
+      <List
+        items={[
+          "<h4>Warum ist Usability wichtig für gemeinwohlorientierte KI?</h4> <p>Usability entspricht ungefähr dem, was viele unter „Benutzerfreundlichkeit“ verstehen. Sie stellt sicher, dass möglichst alle Menschen, unabhängig von ihrem technischen Wissen, die KI-Systeme effektiv, effizient und ohne große Hürden nutzen können. Dies ist entscheidend, um den Zugang zu gemeinwohlorientierten Diensten für eine breite Bevölkerungsschicht zu ermöglichen.</p>",
+          "<h4>Warum ist es wichtig, den Nutzungskontext gemeinwohlorientierter KI zu analysieren und zu verstehen?</h4> <p>Die Analyse des Nutzungskontexts hilft, die Bedürfnisse, Fähigkeiten und Herausforderungen der Zielgruppen zu verstehen. Gerade in gemeinwohlorientierten Projekten sind Kenntnisse über soziale Hintergründe, Sprachkenntnisse, Ausbildungsniveau, Barrierefreiheit und die technische Ausstattung der Nutzer:innen essenziell, um die KI inklusiv und gerecht zu gestalten.</p>",
+          "<h4>Welche Rolle spielt User Experience (UX) für gemeinwohlorientierte KI?</h4> <p>Eine positive UX fördert das Vertrauen in die KI und sorgt dafür, dass Menschen die Systeme gerne und regelmäßig nutzen. Gerade bei gemeinwohlorientierten Anwendungen kann eine intuitive und ansprechende UX die Akzeptanz und Wirksamkeit erheblich steigern.</p>",
+          "<h4>Was hat Mensch-Computer-Interaktion mit gemeinwohlorientierter KI zu tun?</h4> <p>Die Mensch-Computer-Interaktion (MCI) oder Human-Computer Interaction (HCI) ist eine Forschungsdisziplin und liefert uns die notwendigen Methoden und Modelle, um die Interaktion zwischen Mensch und KI zu verbessern. Sie hilft, die Schnittstellen gebrauchstauglich, verständlich, aufgabenangemessen und barrierefrei zu gestalten. Besonders bei gemeinwohlorientierten Projekten ist es wichtig, die Bedürfnisse vielfältiger Nutzergruppen – etwa Senioren, Menschen mit Behinderungen oder technikferne Personen – zu berücksichtigen.</p>",
+          "<h4>Wieso sollte man die UX gemeinwohlorientierter KI evaluieren?</h4> <p>Eine Evaluation macht sichtbar, ob die gemeinwohlorientierte KI tatsächlich ihren Zweck erfüllt und von den Menschen akzeptiert wird. Durch Tests, Nutzerfeedback und Datenauswertungen kann man  sicherstellen, dass die Systeme inklusiv, effizient und nachhaltig sind. Evaluationen helfen außerdem dabei, mögliche Diskriminierungen durch die Bedienkonzepte oder die KI frühzeitig zu erkennen und zu beheben.</p>",
+        ]}
+      />
     </section>,
   ],
 };

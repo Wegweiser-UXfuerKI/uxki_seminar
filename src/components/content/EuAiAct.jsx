@@ -1041,16 +1041,14 @@ const Fazit = {
         <InteractiveModalWrapper
           closedModalContent={
             <ContainerSixteenNine>
-              <div className="w-full h-full glassBox flex justify-between items-center text-2xl">
+              <div className="w-full h-full glassBox rounded-xl flex justify-between items-center text-2xl">
                 <div className="w-1/3">
                   <img src={WegweiserLogo} alt="Logo Wegweiser" />
                 </div>
                 <div>
                   <h2>Wegweiser Interaktiver Inhalt:</h2>
                   <h3>Do's and Dont's</h3>
-                  <p>
-                    <i>Klicken um Inhalt zu starten</i>
-                  </p>
+                  <p>Klicken um Inhalt zu starten</p>
                 </div>
               </div>
             </ContainerSixteenNine>

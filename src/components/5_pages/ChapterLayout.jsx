@@ -24,7 +24,7 @@ export const ChapterLayout = () => {
   }, [selectedModuleLink, selectedSubtopicLink]);
 
   return (
-    <div id="content" className="flex flex-col lg:w-[70vw] sm:w-[90vw] w-full max-w-[960px] lg:my-40 my-20 px-6 lg:gap-y-24 gap-y-10">
+    <div id="content" className="flex flex-col lg:w-[70vw] sm:w-[90vw] w-full max-w-[960px] lg:my-20 my-28 px-6 lg:gap-y-24 gap-y-10">
       {subtopicContent &&
       subtopicContent.content &&
       Array.isArray(subtopicContent.content) ? (

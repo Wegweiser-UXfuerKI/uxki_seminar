@@ -10,8 +10,8 @@
   -webkit-box-shadow: var(--glasBoxShadow);
   -moz-box-shadow: var(--glasBoxShadow);
   box-shadow: var(--glasBoxShadow);
-  width: var(--scale7);
-  height: var(--scale7);
+  width: 56px;
+  height: 56px;
   rotate: -90deg;
   -webkit-transition: all 0.24s ease-in-out;
   -moz-transition: all 0.24s ease-in-out;
@@ -31,7 +31,7 @@
 /* Smartphones (Portrait) */
 @media screen and (max-width: 768px) {
   #toTopBtn {
-    width: var(--scale6);
-    height: var(--scale6);
+    width: var(--scale5);
+    height: var(--scale5);
   }
 }

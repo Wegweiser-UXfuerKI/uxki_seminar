@@ -40,6 +40,12 @@ body {
   -webkit-box-shadow: var(--glasBoxShadow);
   -moz-box-shadow: var(--glasBoxShadow);
   box-shadow: var(--glasBoxShadow);
+
+  -moz-backdrop-filter: var(--blur);
+  -o-backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  
   -webkit-transition: all 0.24s ease-in-out;
   -moz-transition: all 0.24s ease-in-out;
   transition: all 0.24s ease-in-out;
@@ -99,14 +105,14 @@ h1 {
   font-weight: 700;
 }
 
-.titleSubtopic h1::after {
+.titleSubtopic h1::before {
   content: attr(data-number);
-  font-size: calc(var(--scale2) * 14); /* 224px */
-  font-weight: 800;
-  line-height: 1;
   position: absolute;
   left: 0;
   bottom: -14px;
+  font-size: calc(var(--scale2) * 15); /* 240px */
+  font-weight: 800;
+  line-height: 1;
   opacity: 0.24;
   pointer-events: none;
 }
@@ -300,7 +306,7 @@ main p a:hover::after,
   }
 }
 
-/* Responsive Desktop - Tailwind (xl) */
+/* Responsive Small Desktop - Tailwind (xl) */
 @media screen and (max-width: 1280px) {
   h1,
   h2 {
@@ -320,7 +326,7 @@ main p a:hover::after,
 
 /* Tablets (Landscape)  - Tailwind (lg) */
 @media screen and (max-width: 1024px) {
-  .titleSubtopic h1::after {
+  .titleSubtopic h1::before {
     font-size: calc(var(--scale2) * 10);
   }
 

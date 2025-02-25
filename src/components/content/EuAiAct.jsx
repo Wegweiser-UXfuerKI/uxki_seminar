@@ -1061,7 +1061,31 @@ const Fazit = {
     </section>,
     <section>
       <h2>Quiz zur Selbstüberprüfung</h2>
-      <QuizContainer />
+      <div className="w-full rounded-xl">
+        <InteractiveModalWrapper
+          closedModalContent={
+            <ContainerSixteenNine>
+              <div className="w-full h-full glassBox flex flex-col">
+                <div className="w-full h-full flex justify-between items-center text-2xl">
+                  <div className="w-1/3">
+                    <img src={WegweiserLogo} alt="Logo Wegweiser" />
+                  </div>
+                  <div className="p-6 pl-0 h-full flex flex-col justify-center">
+                    <h4>Wegweiser Interaktiver Inhalt:</h4>
+                    <h2>Wegweiser.UX-für-KI Quiz</h2>
+                  </div>
+                </div>
+                <div className="w-full mb-3 flex justify-center">
+                  <p>
+                    <i>Klicken um Inhalt zu starten</i>
+                  </p>
+                </div>
+              </div>
+            </ContainerSixteenNine>
+          }
+          openModalContent={<QuizContainer />}
+        />
+      </div>
     </section>,
   ],
 };

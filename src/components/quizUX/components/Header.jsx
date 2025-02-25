@@ -22,7 +22,7 @@ const Header = ({ doneInTopic, correctInTopic }) => {
     <div className={styles.header_bg}>
       <div className={styles.header}>
         <div className="flex row w-1/3 justify-start items-center">
-          <h2 className="mb-0">Das</h2>
+          <h2 className="mb-0 text-[#f1f0f4]">Das</h2>
           <div className={`${styles.header_logo} ${styles.img_container}`}>
             <img
               src={logo}
@@ -30,11 +30,11 @@ const Header = ({ doneInTopic, correctInTopic }) => {
               alt="Wegweiser.UX-für-KI Logo"
             />
           </div>
-          <h2 className="mb-0">Quiz</h2>
+          <h2 className="mb-0 text-[#f1f0f4]">Quiz</h2>
         </div>
         <div className="flex row justify-around items-center">
-          <div className="flex flex-col">
-            <p className="text-ux_white mr-4 mb-1">Fortschritt:</p>
+          <div className="flex flex-col justify-center">
+            <div className="text-ux_white mr-4 mb-1">Fortschritt:</div>
             <ProgressBar
               doneInTopic={doneInTopic}
               correctInTopic={correctInTopic}

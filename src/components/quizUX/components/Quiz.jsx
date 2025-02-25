@@ -47,15 +47,15 @@ const Quiz = () => {
     circle16: { next: "feedback2", topic: topicTitles[1], x: "860", y: "140" },
     feedback2: { next: "szenario3", topic: "feedback", x: "992", y: "140" },
     szenario3: { next: "circle17", topic: "szenario3", x: "1160", y: "150" },
-    circle17: { next: "circle18", topic: topicTitles[2], x: "1310", y: "190" },
-    circle18: { next: "circle19", topic: topicTitles[2], x: "1390", y: "270" },
-    circle19: { next: "circle20", topic: topicTitles[2], x: "1330", y: "370" },
-    circle20: { next: "circle21", topic: topicTitles[2], x: "1210", y: "410" },
-    circle21: { next: "circle22", topic: topicTitles[2], x: "1110", y: "490" },
-    circle22: { next: "circle23", topic: topicTitles[2], x: "1100", y: "620" },
-    circle23: { next: "circle24", topic: topicTitles[2], x: "1190", y: "710" },
-    circle24: { next: "feedback3", topic: topicTitles[2], x: "1310", y: "750" },
-    feedback3: { next: "circle1", topic: "feedback", x: "1430", y: "769" },
+    circle17: { next: "circle18", topic: topicTitles[2], x: "1310", y: "160" },
+    circle18: { next: "circle19", topic: topicTitles[2], x: "1390", y: "240" },
+    circle19: { next: "circle20", topic: topicTitles[2], x: "1330", y: "340" },
+    circle20: { next: "circle21", topic: topicTitles[2], x: "1215", y: "380" },
+    circle21: { next: "circle22", topic: topicTitles[2], x: "1110", y: "440" },
+    circle22: { next: "circle23", topic: topicTitles[2], x: "1100", y: "550" },
+    circle23: { next: "circle24", topic: topicTitles[2], x: "1170", y: "645" },
+    circle24: { next: "feedback3", topic: topicTitles[2], x: "1275", y: "685" },
+    feedback3: { next: "circle1", topic: "feedback", x: "1390", y: "700" },
   };
 
   const [state, setState] = useState("DEFAULT");
@@ -692,8 +692,7 @@ const Quiz = () => {
   };
 
   return (
-    <div
-      className={`${styles.Quiz} rounded-xl overflow-hidden bg-[#545166] bg-opacity-90`}>
+    <div className={`${styles.Quiz} rounded-xl overflow-hidden bg-[#545166]`}>
       <Header
         onReset={handleReset}
         doneInTopic={doneInTopic}
@@ -702,7 +701,7 @@ const Quiz = () => {
         <svg id="board" viewBox="0 0 1470 820">
           <text
             x={248}
-            y={50}
+            y={75}
             textAnchor="middle"
             fill={colors.pink}
             className="h3">
@@ -710,15 +709,15 @@ const Quiz = () => {
           </text>
           <text
             x={744}
-            y={50}
+            y={75}
             textAnchor="middle"
             fill={colors.purple}
-            className="h3">
+            className="h3 mb-0">
             {topicTitles[1]}
           </text>
           <text
             x={1240}
-            y={50}
+            y={75}
             textAnchor="middle"
             fill={colors.turquoise}
             className="h3">

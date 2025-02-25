@@ -139,11 +139,7 @@ const DropDownMenu = ({
         id="dropDown"
         className="absolute flex flex-col glassBox rounded-xl gap-y-1 py-4 px-4 min-w-[280px] z-50"
         style={positionStyle}>
-        {title && (
-          <h4>
-            <b>{title}</b>
-          </h4>
-        )}
+        {title && <h4>{title}</h4>}
         {!isDisabledModule &&
           items?.map(([link, name], index) => {
             const isDisabled = disabledItems.some((disabledLink) =>

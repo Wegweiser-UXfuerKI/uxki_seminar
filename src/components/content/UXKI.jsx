@@ -365,11 +365,12 @@ const WahrgenommeneAutonomie = {
       <h2>6. Fazit</h2>
       <List
         items={[
-          "Die <b>wahrgenommene Autonomie</b>e in der Interaktion mit KI-Systemen beeinflusst <b>Nutzerzufriedenheit</b> und <b>Vertrauen</b>.",
+          "Die <b>wahrgenommene Autonomie</b> in der Interaktion mit KI-Systemen beeinflusst <b>Nutzerzufriedenheit</b> und <b>Vertrauen</b>.",
           "<b>Automatisierungsstufen</b> und <b>Anpassungsfähigkeit</b> haben Einfluss auf die psychologische Wahrnehmung.",
           "<b>Transparenz</b>, <b>Flexibilität</b> und <b>Anpassung der Automatisierungsgrade</b> stärken die wahrgenommene Autonomie.",
           "<b>Adaptive Automatisierung</b> und <b>transparente Entscheidungsprozesse</b> fördern <b>Kontrolle</b> und <b>Selbstbestimmung</b>, was zu effektiverer und zufriedenstellender Nutzung führt.",
-        ]}></List>
+        ]}
+      />
     </section>,
   ],
 };
@@ -546,7 +547,8 @@ const WahrgenommenesSituationsbewusstsein = {
         items={[
           "<b>Situationsbewusstseins (SA)</b> umfasst die <b>Wahrnehmung</b>, das <b>Verständnis</b> und die <b>Projektion</b> relevanter Informationen.",
           "<b>Endsley</b> und die SIPA-Facetten betonen die Notwendigkeit von <b>Transparenz</b>, <b>Verständlichkeit</b> und <b>Vorhersehbarkeit</b> für effektives SA.",
-        ]}></List>
+        ]}
+      />
     </section>,
   ],
 };
@@ -689,7 +691,8 @@ const WahrgenommeneInformationOverload = {
           "Automatisierung erleichtert die Verarbeitung, <b>Erklärungen</b> können jedoch <b>Informationsüberlastung</b> verursachen.",
           "Wichtige Systemmerkmale: <b>Reduzierung, Anpassbarkeit und Priorisierung von Informationen</b>, um Nutzer effektiv zu entlasten.",
           "Der <b>NASA-TLX</b> hilft bei der Bewertung der Arbeitsbelastung und Verbesserung der Benutzerfreundlichkeit.",
-        ]}></List>
+        ]}
+      />
     </section>,
   ],
 };
@@ -1162,7 +1165,8 @@ const PerceivedConfidence = {
           "Systeme, die klare diagnostische Informationen bereitstellen, stärken das <b>Vertrauen</b> der Nutzenden sowie die <b>Akzeptanz</b> und <b>effektive Nutzung</b> der Technologie.",
           "Besonders wichtig ist dies in kritischen Bereichen wie dem <b>Gesundheitswesen</b>.",
           "Die diagnostische Qualität eines Systems hat direkten Einfluss auf das <b>Wohl der Gemeinschaft</b>.",
-        ]}></List>
+        ]}
+      />
     </section>,
   ],
 };

@@ -28,17 +28,6 @@
       "tip": "Überlege, welche Reihenfolge die Elemente im Prozess haben."
     },
     {
-      "id": 23,
-      "type": "match",
-      "topic": "In der Praxis",
-      "question": "Ordne die Begriffe den entsprechenden Verpflichtungen zu.",
-      "correctPair1": "Transparenzpflicht;Offenlegung von Informationen über die Funktionsweise von KI-Systemen",
-      "correctPair2": "Sicherheitsüberprüfung;Überprüfung der Konformität und Sicherheit eines KI-Systems vor Markteinführung",
-      "correctPair4": "Risikoabschätzung;Analyse und Bewertung der potenziellen Risiken eines KI-Systems",
-      "correctPair3": "Audit;Regelmäßige Kontrolle und Bewertung von Hochrisiko-KI-Systemen",
-      "tip": "Ein \"Audit\" ist eine systematische Überprüfung, ob bestimmte Standards eingehalten werden."
-    },
-    {
       "id": 9,
       "type": "match",
       "topic": "International",
@@ -48,6 +37,17 @@
       "correctPair4": "Blueprint for an AI Bill of Rights;Schlägt Prinzipien zum Schutz von Bürgerrechten im Zusammenhang mit KI vor",
       "correctPair3": "AI and Data Act;Soll KI-Systeme regulieren, die ein Risiko für die Sicherheit von Menschen oder ihrer Grundrechte darstellen",
       "tip": "Die Bletchley Declaration wurde von 28 Ländern unterzeichnet."
+    },
+    {
+      "id": 23,
+      "type": "match",
+      "topic": "In der Praxis",
+      "question": "Ordne die Begriffe den entsprechenden Verpflichtungen zu.",
+      "correctPair1": "Transparenzpflicht;Offenlegung von Informationen über die Funktionsweise von KI-Systemen",
+      "correctPair2": "Sicherheitsüberprüfung;Überprüfung der Konformität und Sicherheit eines KI-Systems vor Markteinführung",
+      "correctPair4": "Risikoabschätzung;Analyse und Bewertung der potenziellen Risiken eines KI-Systems",
+      "correctPair3": "Audit;Regelmäßige Kontrolle und Bewertung von Hochrisiko-KI-Systemen",
+      "tip": "Ein \"Audit\" ist eine systematische Überprüfung, ob bestimmte Standards eingehalten werden."
     },
     {
       "id": 10,

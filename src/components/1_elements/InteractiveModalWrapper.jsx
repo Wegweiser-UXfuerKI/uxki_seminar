@@ -35,7 +35,7 @@ const InteractiveModalWrapper = ({ closedModalContent, openModalContent }) => {
               exit={{ scale: 0 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}>
-              <div className="rounded-xl w-full h-full overflow-hidden">
+              <div className="rounded-lg w-full h-full overflow-hidden">
                 {openModalContent || (
                   <div className="w-full h-full bg-neutral-600"></div>
                 )}

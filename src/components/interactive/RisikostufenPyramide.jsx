@@ -32,7 +32,7 @@ export const RisikostufenPyramide = () => {
 
   return (
     <div
-      className="w-full h-full relative min-h-96 rounded-xl hyphens-auto"
+      className="w-full h-full relative min-h-96 hyphens-auto"
       style={{ overflow: "hidden" }}>
       <div className="w-full absolute top-0 bottom-[75%] z-40">
         <div

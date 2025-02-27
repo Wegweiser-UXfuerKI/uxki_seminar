@@ -14,9 +14,7 @@ function DosAndDonts() {
   const [currentView, setCurrentView] = useState("interaktiv");
 
   return (
-    <div
-      className="w-full h-full base-background flex flex-col overflow-hidden"
-      style={{ borderRadius: "20px" }}>
+    <div className="w-full h-full base-background flex flex-col overflow-hidden">
       <TaskDataProvider>
         <div className="w-full h-full relative">
           <NavBar currentView={currentView} setCurrentView={setCurrentView} />

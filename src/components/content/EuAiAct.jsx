@@ -1,6 +1,5 @@
 import React from "react";
 import Accordion from "../2_molecule/nav/Accordion";
-import ContainerSixteenNine from "../1_elements/ContainerSixteenNine";
 import Sources from "../Sources";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
@@ -8,13 +7,12 @@ import { VideoContainer } from "../1_elements/VideoContainer";
 import { GraphicContainer } from "../1_elements/GraphicContainer";
 import { RisikostufenPyramide } from "../interactive/RisikostufenPyramide";
 import Timeline from "../interactive/Timeline";
-import InteractiveModalWrapper from "../1_elements/InteractiveModalWrapper";
 import DosAndDonts from "../dosdonts/DosAndDonts";
 import QuizContainer from "../quizUX/components/QuizContainer";
 
 import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.webp";
 import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";
-import WegweiserLogo from "../../assets/images/Wegweiser_logo.webp";
+import InteractiveModal from "../2_molecule/InteractiveModal";
 
 const sectionEinleitung = [
   { id: "3", title: "Was ist der EU AI Act?" },
@@ -81,10 +79,10 @@ const Einleitung = {
         entwickelte, sondern auch große Teile des parlamentarischen EU-Apparats
         durchlaufen hat.
       </p>
-      <div className="w-full flex justify-center items-center my-10 p-1 bg-lightText rounded-xl">
-        <ContainerSixteenNine>
+      <div className="w-full rounded-xl">
+        <InteractiveModal title={"Timeline zum EU AI Act"}>
           <Timeline />
-        </ContainerSixteenNine>
+        </InteractiveModal>
       </div>
       <p>
         Eine vollständige Übersicht des zeitlichen Verlaufs des
@@ -705,9 +703,16 @@ const RisikostufenAuswirkungen = {
       </p>
     </section>,
     <section>
-      <ContainerSixteenNine>
-        <RisikostufenPyramide />
-      </ContainerSixteenNine>
+      <h2>Risikostufen-Pyramide</h2>
+      <p>
+        Hier können Sie sich noch einmal die unterschiedlichen Stufen
+        zusammengefasst ansehen.
+      </p>
+      <div className="w-full rounded-xl">
+        <InteractiveModal title={"Pyramide der Risikostufen"}>
+          <RisikostufenPyramide />
+        </InteractiveModal>
+      </div>
     </section>,
     <section id="videoRisikostufen">
       <h2>2. Designimplikationen des EU AI Acts</h2>
@@ -1038,45 +1043,17 @@ const Fazit = {
     <section>
       <h2>Lernspiel praktische Anwendung</h2>
       <div className="w-full rounded-xl">
-        <InteractiveModalWrapper
-          closedModalContent={
-            <ContainerSixteenNine>
-              <div className="w-full h-full glassBox rounded-xl flex justify-between items-center text-2xl">
-                <div className="w-1/3">
-                  <img src={WegweiserLogo} alt="Logo Wegweiser" />
-                </div>
-                <div>
-                  <h2>Wegweiser Interaktiver Inhalt:</h2>
-                  <h3>Do's and Dont's</h3>
-                  <p>Klicken um Inhalt zu starten</p>
-                </div>
-              </div>
-            </ContainerSixteenNine>
-          }
-          openModalContent={<DosAndDonts />}
-        />
+        <InteractiveModal title={"Do's and Dont's"}>
+          <DosAndDonts />
+        </InteractiveModal>
       </div>
     </section>,
     <section>
       <h2>Quiz zur Selbstüberprüfung</h2>
       <div className="w-full rounded-xl">
-        <InteractiveModalWrapper
-          closedModalContent={
-            <ContainerSixteenNine>
-              <div className="w-full h-full glassBox rounded-xl flex justify-between items-center text-2xl">
-                <div className="w-1/3">
-                  <img src={WegweiserLogo} alt="Logo Wegweiser" />
-                </div>
-                <div>
-                  <h2>Wegweiser Interaktiver Inhalt:</h2>
-                  <h3>Wegweiser.UX-für-KI Quiz</h3>
-                  <p>Klicken um Inhalt zu starten</p>
-                </div>
-              </div>
-            </ContainerSixteenNine>
-          }
-          openModalContent={<QuizContainer />}
-        />
+        <InteractiveModal title={"Wegweiser.UX-für-KI Quiz"}>
+          <QuizContainer />
+        </InteractiveModal>
       </div>
     </section>,
   ],

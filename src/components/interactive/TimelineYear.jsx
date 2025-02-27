@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./TimelineYear.css";
-import { DocumentIcon, InfoIcon, SignIcon } from "../../assets/icons/iconsTimeline";
+import {
+  DocumentIcon,
+  InfoIcon,
+  SignIcon,
+} from "../../assets/icons/iconsTimeline";
 
 /**
  * A component that displays the events for a specific year in a timeline.
@@ -28,7 +32,7 @@ export default function TimelineYear({ year, color, dates, isActive }) {
 
   return (
     <div className="w-full h-full absolute left-0 right-0 flex overflow-hidden">
-      <div className="min-w-[220px] max-w-[200px] flex items-end">
+      <div className="min-w-[250px] max-w-[200px] flex items-end">
         <div
           className="year font-bold text-lightText w-full h-full"
           style={{ lineHeight: "1.8" }}>

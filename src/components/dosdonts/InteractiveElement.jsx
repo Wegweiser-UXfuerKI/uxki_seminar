@@ -863,18 +863,21 @@ function InteractiveElement() {
                 }`}>
                 <p
                   id="end-box-title"
-                  className="flex justify-center items-center">
+                  className="flex justify-center items-center"
+                  style={{
+                    marginBottom: 0,
+                  }}>
                   Richtig beantwortet
                 </p>
                 <div
                   id="end-box-content"
                   className="flex justify-center items-center">
-                  <>
+                  <div>
                     <span ref={scoreRef} className="text-ux_dark">
-                      {0}
+                      {0}ye
                     </span>
                     <span className="text-ux_dark">/{tasks.length}</span>
-                  </>
+                  </div>
                 </div>
               </div>
               <button

@@ -10,13 +10,6 @@
 #accordionContent a:hover,
 #accordionContent a:focus,
 #accordionContent a.active {
-  padding: 4px var(--scale2);
   border-radius: var(--base-size);
-  background-color: var(--bgHover);
-}
-
-:root.light #accordionContent a:hover,
-:root.light #accordionContent a:focus,
-:root.light #accordionContent a.active {
-  color: var(--w);
+  background-color: var(--bg);
 }

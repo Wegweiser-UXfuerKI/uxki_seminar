@@ -122,7 +122,7 @@ const Home = () => {
 
       <section
         id="vorstellung"
-        className="flex md:flex-row flex-col items-center lg:gap-16 md:gap-10 gap-6">
+        className="flex md:flex-row flex-col items-start lg:gap-16 md:gap-10 gap-6">
         <div className="md:w-[50%] w-full">
           <VideoContainer
             link={

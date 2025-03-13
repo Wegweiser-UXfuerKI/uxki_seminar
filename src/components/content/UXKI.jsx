@@ -401,7 +401,7 @@ const WahrgenommenesSituationsbewusstsein = {
     <section id="definition">
       <h2>1. Definition Situationsbewusstsein</h2>
       <p>
-        Situationsbewusstsein (Situational Awareness, SA) bedeutet, die Umgebung
+        Situationsbewusstsein (Situation Awareness, SA) bedeutet, die Umgebung
         und ihre wichtigsten Details zu verstehen. Es umfasst auch das Erkennen
         von Veränderungen, die im Laufe der Zeit oder durch äußere Einflüsse
         auftreten können. Diese Fähigkeit ist wichtig, um gute Entscheidungen in

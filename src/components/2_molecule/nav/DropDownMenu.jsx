@@ -83,12 +83,10 @@ const DropDownMenu = ({
             opacity: 1,
             marginLeft: 12,
             display: "flex",
-            transition: { duration: 0.3 },
           },
           exit: {
             opacity: 0,
             marginLeft: 0,
-            transition: { duration: 0.3, delay: 0.2 },
             transitionEnd: { display: "none" },
           },
         }
@@ -97,12 +95,10 @@ const DropDownMenu = ({
             opacity: 1,
             marginTop: 0,
             display: "flex",
-            transition: { duration: 0.3 },
           },
           exit: {
             opacity: 0,
             marginTop: -10,
-            transition: { duration: 0.3, delay: 0.2 },
             transitionEnd: { display: "none" },
           },
         };
@@ -137,7 +133,7 @@ const DropDownMenu = ({
         animate={isHovered ? "enter" : "exit"}
         variants={subMenuAnimate}
         id="dropDown"
-        className="absolute flex flex-col glassBox rounded-xl gap-y-1 py-4 px-4 min-w-[280px] z-50"
+        className="absolute flex flex-col glassBox rounded-xl gap-y-1 py-4 px-4 min-w-[280px] z-50 transition"
         style={positionStyle}>
         {title && <h4>{title}</h4>}
         {!isDisabledModule &&

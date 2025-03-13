@@ -4,5 +4,9 @@
 }
 
 a.active .sectionTitle {
-    color: var(--bg);
+  color: var(--bg);
+}
+
+:root.light #sectionNavi a.active {
+  background-color: var(--ev);
 }

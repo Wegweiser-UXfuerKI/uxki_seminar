@@ -100,7 +100,7 @@ const Einleitung = {
     </section>,
     <section id="vergleich">
       <h2>2. Vergleich mit anderen Ländern / Regionen</h2>
-      <h3>insbesondere USA, Kanada und England</h3>
+      <h3>insbesondere England, USA und Kanada</h3>
       <p>
         Betrachtet man den EU AI Act als groß angelegte Normierung innerhalb des
         europäischen Raums, drängt sich schnell die Frage auf, welche

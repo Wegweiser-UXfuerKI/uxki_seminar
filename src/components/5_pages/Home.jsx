@@ -70,7 +70,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-[1280px] xl:my-20 my-28 px-6 lg:gap-y-24 gap-y-10">
-    <SubNavigation sections={sections} />
+      <SubNavigation sections={sections} />
 
       <section
         id="intro"
@@ -114,6 +114,8 @@ const Home = () => {
           <img
             type={"image"}
             src={WegweiserPng}
+            width={360}
+            height={610}
             className="max-w-[360px] w-full"
             alt="Wegweiser.UX-für-KI Plattform Logo"
           />
@@ -132,13 +134,15 @@ const Home = () => {
           />
         </div>
         <div className="md:w-[50%] w-full">
-          <h3>Was erwartet Sie?</h3>
+          <h2>Was erwartet Sie?</h2>
           <p>
             In den folgenden Modulen präsentieren wir mithilfe von{" "}
             <b>Videoeinheiten und Texten</b> Inhalte zu relevanten Themen in den
             Bereichen UX und der Anwendung von KI-Systemen.
           </p>
-          <Accordion title="Wie nutzen Sie die Plattform optimal?">
+          <Accordion
+            title="Wie nutzen Sie die Plattform optimal?"
+            initiallyOpen={false}>
             <p>
               Die einzelnen Lektionen können <b>unabhängig voneinander</b>{" "}
               konsumiert werden. Dieser Aufbau erlaubt es Ihnen, für Sie

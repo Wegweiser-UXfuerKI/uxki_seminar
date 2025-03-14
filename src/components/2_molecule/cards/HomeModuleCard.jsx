@@ -59,7 +59,7 @@ const HomeModuleCard = ({
         {/* Left section: module icon and title */}
         <div className="w-full md:w-1/3 flex flex-col flex-wrap justify-center svgFill gap-5">
           {getModuleImageByLink(module[0]) || <div>Kein Icon verfügbar</div>}
-          <h2 className="thirdTitle mb-0">{module[1]}</h2>
+          <h3 className="mb-0">{module[1]}</h3>
         </div>
 
         {/* Right section: subtopics */}

@@ -14,25 +14,27 @@ import "./Accordion.css";
  * @param {Array} [props.sections] - Optional array of section objects, each containing an `id` and `title`.
  * @param {string} [props.title="Inhaltsverzeichnis"] - The title of the accordion.
  * @param {JSX.Element} [props.children] - Optional JSX content to display when `sections` is not provided.
+ * @param {boolean} [props.initiallyOpen=true] - Controls whether the accordion starts open or closed.
+ * @param {boolean} [props.useGlassBox=true] - Controls whether the glassBox styling is applied.
  *
  * @returns {JSX.Element} A collapsible accordion with smooth animations.
  */
-const Accordion = ({ sections, title = "Inhaltsverzeichnis", children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Accordion = ({ sections, title = "Inhaltsverzeichnis", children, initiallyOpen = true, useGlassBox = true }) => {
+  const [isOpen, setIsOpen] = useState(initiallyOpen);
   const location = useLocation();
 
   /**
    * Closes the accordion when the user navigates to a new page.
    */
   useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
+    setIsOpen(initiallyOpen);
+  }, [location.pathname, initiallyOpen]);
 
   /**
    * Toggles the open/closed state of the accordion.
    */
   const toggleAccordion = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   /**
@@ -43,11 +45,12 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis", children }) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
+      element.focus();
     }
   };
 
   return (
-    <div id="accordion" className="glassBox w-full rounded-xl mb-6 transition">
+    <div id="accordion" className={`${useGlassBox ? "glassBox" : ""} w-full rounded-xl mb-6 transition`}>
       {/* Accordion Title */}
       <h4
         onClick={toggleAccordion}

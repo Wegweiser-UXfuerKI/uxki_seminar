@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import wegweiserLogo from "../../assets/images/Wegweiser_logo.webp";
 
 /**
@@ -9,16 +9,25 @@ import wegweiserLogo from "../../assets/images/Wegweiser_logo.webp";
  * and maintains a responsive design.
  *
  * @component
- * @returns {JSX.Element} The rendered logo component.
+ * @returns {JSX.Element} The accessible logo component.
  */
 const Logo = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
-    <div id="logo" className="img-container w-16">
+    <div id="logo">
       <Link
         to="/"
-        aria-label="Zur Startseite"
+        aria-label="Zur Startseite: Wegweiser UX für KI"
+        aria-current={isHome ? "page" : undefined}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-        <img src={wegweiserLogo} alt="Wegweiser.UX-für-KI Logo" />
+        <img
+          src={wegweiserLogo}
+          alt="Logo von Wegweiser UX für KI"
+          width={64}
+          height={64}
+        />
       </Link>
     </div>
   );

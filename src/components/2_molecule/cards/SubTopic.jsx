@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../../AppContext";
-import styled from "styled-components";
 
 /**
  * A component representing a subtopic card.
@@ -17,30 +16,6 @@ import styled from "styled-components";
  * @returns {JSX.Element} The rendered SubTopic component.
  *
  */
-const SubTopicCard = styled.div`
-  &:hover {
-    transform: translateY(-8px);
-  }
-
-  h3::before {
-    content: attr(data-topic-number);
-    font-size: 160px;
-    line-height: 1;
-    font-weight: 800;
-    position: absolute;
-    right: 16px;
-    top: -8px;
-    opacity: 0.1;
-    pointer-events: none;
-  }
-
-  @media (max-width: 768px) {
-    h3::before {
-      font-size: 124px;
-    }
-  }
-`;
-
 const SubTopic = ({ topicName, link, description, number, isDisabled }) => {
   const { selectedModuleLink } = useContext(AppContext);
   const topicNumber = String(number + 1).padStart(2, "0");
@@ -53,15 +28,17 @@ const SubTopic = ({ topicName, link, description, number, isDisabled }) => {
       <Link
         to={`/${selectedModuleLink}/${link}`}
         aria-disabled={isDisabled}
-        tabIndex={isDisabled ? -1 : 0}>
-        <SubTopicCard className="relative glassBox rounded-3xl h-full p-6 flex flex-col justify-top m-2 transition  overflow-hidden">
-          <h3
-            className="fourthTitle lg:mt-20 mt-10 hyphens-auto"
-            data-topic-number={topicNumber}>
-            {topicName}
-          </h3>
-          <p className="text-base">{description}</p>
-        </SubTopicCard>
+        tabIndex={isDisabled ? -1 : 0}
+        className="relative glassBox rounded-3xl h-full p-6 flex flex-col justify-top m-2 transition overflow-hidden hover:-translate-y-2">
+        <h3
+          className="fourthTitle lg:mt-20 mt-10 hyphens-auto relative"
+          data-topic-number={topicNumber}>
+          {topicName}
+          <span className="absolute -right-2 -top-24 md:-top-36 text-[124px] font-extrabold opacity-10 pointer-events-none md:text-[140px]">
+            {topicNumber}
+          </span>
+        </h3>
+        <p className="text-base">{description}</p>
       </Link>
     </div>
   );

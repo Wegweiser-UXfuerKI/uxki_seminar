@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import MobileNav from "../2_molecule/nav/MobileNav";
 import DesktopNav from "../2_molecule/nav/DesktopNav";
-import { ThemeToggle } from "../2_molecule/ThemeToggle";
+import { ThemeToggle } from "../1_elements/ThemeToggle";
 import Logo from "../1_elements/Logo";
 
 /**

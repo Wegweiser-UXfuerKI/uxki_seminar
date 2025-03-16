@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import RightArrow from "../../1_elements/RightArrow";
-import "./Accordion.css";
 
 /**
  * Accordion Component
@@ -11,15 +10,21 @@ import "./Accordion.css";
  *
  * @component
  * @param {Object} props - The properties of the component.
- * @param {Array} [props.sections] - Optional array of section objects, each containing an `id` and `title`.
+ * @param {Array} [props.sections] - Optional array of section objects.
  * @param {string} [props.title="Inhaltsverzeichnis"] - The title of the accordion.
- * @param {JSX.Element} [props.children] - Optional JSX content to display when `sections` is not provided.
- * @param {boolean} [props.initiallyOpen=true] - Controls whether the accordion starts open or closed.
- * @param {boolean} [props.useGlassBox=true] - Controls whether the glassBox styling is applied.
+ * @param {JSX.Element} [props.children] - Optional JSX content.
+ * @param {boolean} [props.initiallyOpen=true] - Controls whether it starts open or closed.
+ * @param {boolean} [props.useGlassBox=true] - Enables glassBox styling.
  *
  * @returns {JSX.Element} A collapsible accordion with smooth animations.
  */
-const Accordion = ({ sections, title = "Inhaltsverzeichnis", children, initiallyOpen = true, useGlassBox = true }) => {
+const Accordion = ({
+  sections,
+  title = "Inhaltsverzeichnis",
+  children,
+  initiallyOpen = true,
+  useGlassBox = true,
+}) => {
   const [isOpen, setIsOpen] = useState(initiallyOpen);
   const location = useLocation();
 
@@ -50,13 +55,16 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis", children, initially
   };
 
   return (
-    <div id="accordion" className={`${useGlassBox ? "glassBox" : ""} w-full rounded-xl mb-6 transition`}>
+    <div
+      id="accordion"
+      className={`w-full rounded-xl mb-6 transition ${
+        useGlassBox ? "glassBox" : ""
+      }`}>
       {/* Accordion Title */}
       <h4
         onClick={toggleAccordion}
         id="accordionTitle"
-        className="flex justify-between items-center px-6 py-4"
-        style={{ marginBottom: "0" }}
+        className="flex justify-between items-center mb-0 px-6 py-4 cursor-pointer"
         role="button"
         aria-expanded={isOpen}
         aria-controls="accordion-content"
@@ -66,7 +74,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis", children, initially
         }}>
         {title}
         <span
-          className={`chevron transition ${
+          className={`chevron transition transform ${
             isOpen ? "rotate-[-90deg]" : "rotate-90"
           }`}>
           <RightArrow />
@@ -77,7 +85,8 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis", children, initially
       {isOpen && (
         <div
           id="accordionContent"
-          className="p-4 transition"
+          className="p-4 transition border-t-[1.48px] border-transparent"
+          style={{ borderImage: "var(--glasBorder) 1" }}
           role="region"
           aria-hidden={!isOpen}>
           {sections ? (
@@ -90,7 +99,7 @@ const Accordion = ({ sections, title = "Inhaltsverzeichnis", children, initially
                       e.preventDefault();
                       handleSmoothScroll(section.id);
                     }}
-                    className="block px-2 py-1">
+                    className="block px-2 py-1 font-light rounded-[var(--base-size)] hover:bg-[var(--bg)] focus:bg-[var(--bg)] active:bg-[var(--bg)]">
                     {`${index + 1}: ${section.title}`}
                   </Link>
                 </li>

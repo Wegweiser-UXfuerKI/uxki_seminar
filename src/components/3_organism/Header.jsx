@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import HeaderLeft from "../3_organism/HeaderLeft";
-import HeaderTop from "../3_organism/HeaderTop";
+import HeaderLeft from "./HeaderLeft";
+import HeaderTop from "./HeaderTop";
 
 /**
  * Header component that renders different header layouts based on screen size.

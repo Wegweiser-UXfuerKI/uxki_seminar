@@ -128,7 +128,7 @@ const Home = () => {
         <div className="md:w-[50%] w-full">
           <VideoContainer
             link={
-              "https://www.youtube-nocookie.com/embed/LDvVRvG7OB0?si=rc3QSVpraKQsQlE8"
+              "https://www.youtube-nocookie.com/embed/LDvVRvG7OB0?si=rc3QSVpraKQsQlE8&rel=0&modestbranding=1"
             }
             title={"Projektvorstellungsvideo"}
           />

@@ -1,5 +1,5 @@
 import IconNav from "../2_molecule/nav/IconNav";
-import { ThemeToggle } from "../2_molecule/ThemeToggle";
+import { ThemeToggle } from "../1_elements/ThemeToggle";
 import Logo from "../1_elements/Logo";
 
 /**

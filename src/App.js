@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AppProvider } from "./AppContext";
 import Home from "./components/5_pages/Home";
-import Header from "./components/4_templates/Header";
-import Footer from "./components/4_templates/Footer";
-import { ChapterLayout } from "./components/5_pages/ChapterLayout";
+import Header from "./components/3_organism/Header";
+import Footer from "./components/3_organism/Footer";
+import { ChapterLayout } from "./components/4_templates/ChapterLayout";
 import ToTopButton from "./components/2_molecule/ToTopButton";
 import "./assets/css/DesignTokens.css";
 import "./assets/css/App.css";

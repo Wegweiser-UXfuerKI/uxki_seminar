@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../AppContext";
 
 /**
@@ -28,16 +28,18 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      id="toggleTheme"
-      className="relative inline-flex h-6 w-11 items-center rounded-xl transition-colors"
+      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+      role="switch"
+      aria-checked={theme === "dark"}
+      className="relative inline-flex h-7 w-12 items-center rounded-xl transition-colors"
       style={{
         backgroundColor: theme === "light" ? "var(--fg)" : "var(--bg)",
       }}>
       <span className="sr-only">Toggle theme</span>
       <div
-        className={`${
+        className={`h-5 w-5 transform rounded-full transition ${
           theme === "light" ? "translate-x-1" : "translate-x-6"
-        } inline-block h-4 w-4 transform rounded-full transition duration-200 ease-in-out`}
+        }`}
         style={{
           backgroundColor: "var(--text)",
         }}

@@ -201,10 +201,6 @@ p + p {
 a {
   font-size: inherit;
   font-weight: 600;
-  text-decoration: none;
-  -webkit-transition: all 0.24s ease-in-out;
-  -moz-transition: all 0.24s ease-in-out;
-  transition: all 0.24s ease-in-out;
 }
 
 header nav a.firstLevel,
@@ -222,7 +218,7 @@ main p a::after,
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--text);
+  background-color: var(--tb);
   transition: width 0.24s ease-in-out;
 }
 

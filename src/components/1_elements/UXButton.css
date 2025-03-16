@@ -1,7 +1,6 @@
 .ux-button {
   background: var(--bg);
   border-radius: var(--scale2) !important;
-  transition: all 0.24s ease-in-out;
 }
 
 .ux-button:hover,
@@ -28,7 +27,6 @@
   height: calc(100% + 4px);
   animation: glowing 30s linear infinite;
   opacity: 0;
-  transition: all 0.24s ease-in-out;
   border-radius: var(--scale2);
 }
 
@@ -46,7 +44,6 @@
   top: 0;
   border-radius: var(--scale2);
   z-index: -1;
-  transition: all 0.24s ease-in-out;
 }
 
 .ux-button:hover:after {

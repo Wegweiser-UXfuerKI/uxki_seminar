@@ -2,18 +2,20 @@ import { Link, useLocation } from "react-router-dom";
 import wegweiserLogo from "../../assets/images/Wegweiser_logo.webp";
 
 /**
- * Logo component for consistent branding across the application.
+ * Logo Component
  *
- * This component renders the logo of the application inside a link
- * that navigates back to the homepage. It ensures accessibility
- * and maintains a responsive design.
+ * Renders the application logo inside a link that navigates back to the homepage.
+ * Ensures accessibility and smooth scrolling while maintaining a responsive design.
  *
  * @component
  * @returns {JSX.Element} The accessible logo component.
+ *
+ * @example
+ * <Logo />
  */
 const Logo = () => {
-  const location = useLocation();
-  const isHome = location.pathname === "/";
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
 
   return (
     <div id="logo">

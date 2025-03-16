@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { getModuleLinksAndNames } from "../ContentHandler";
 import HomeModuleCard from "../2_molecule/cards/HomeModuleCard";
 import { AppContext } from "../../AppContext";
@@ -51,7 +51,6 @@ const Home = () => {
       const targetIndex = modulesData.findIndex(
         (module) => module[0] === scrollToChapter
       );
-
       if (targetIndex !== -1 && moduleRefs.current[targetIndex]) {
         moduleRefs.current[targetIndex].scrollIntoView({
           behavior: "smooth",
@@ -69,7 +68,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center w-full max-w-[1280px] xl:my-20 my-28 px-6 lg:gap-y-24 gap-y-10">
+    <div className="flex flex-col items-center w-full max-w-[1280px] xl:my-20 my-28 px-6 lg:gap-y-24 gap-y-10">
       <SubNavigation sections={sections} />
 
       <section
@@ -88,35 +87,27 @@ const Home = () => {
             wurden für{" "}
             <b>
               Entwickler:innen, Projektmanager:innen und KI- oder
-              UX-Interessierte{" "}
-            </b>
+              UX-Interessierte
+            </b>{" "}
             unabhängig von ihrem jeweiligen Erfahrungsniveau erstellt.
           </p>
-          <div className="flex lg:flex-row flex-col w-full lg:gap-10 gap-4 mb-4 justify-between">
-            <div className="lg:w-1/2 w-full">
-              <UXButton
-                text={"Alle Module ansehen"}
-                useGlassyBox={true}
-                to={"#module"}
-              />
-            </div>
-            <div className="lg:w-1/2 w-full">
-              <UXButton
-                text={"Mehr zum Projekt erfahren"}
-                useGlassyBox={true}
-                to={"https://projekt.ux-fuer-ki.de/"}
-                target="_blank"
-              />
-            </div>
+          <div className="flex lg:flex-row flex-col w-full lg:gap-10 gap-4 mb-4">
+            <UXButton text="Alle Module ansehen" useGlassyBox to="#module" />
+            <UXButton
+              text="Mehr zum Projekt erfahren"
+              useGlassyBox
+              to="https://projekt.ux-fuer-ki.de/"
+              target="_blank"
+            />
           </div>
         </div>
-        <div className="sm:w-[40%] w-[98%] rotate-6">
+        <div className="sm:w-[40%] w-full">
           <img
             type={"image"}
             src={WegweiserPng}
-            width={360}
+            width={350}
             height={610}
-            className="max-w-[360px] w-full"
+            className="max-w-[350px] w-full md:-translate-x-2 rotate-6"
             alt="Wegweiser.UX-für-KI Plattform Logo"
           />
         </div>
@@ -127,10 +118,8 @@ const Home = () => {
         className="flex md:flex-row flex-col items-start lg:gap-16 md:gap-10 gap-6">
         <div className="md:w-[50%] w-full">
           <VideoContainer
-            link={
-              "https://www.youtube-nocookie.com/embed/LDvVRvG7OB0?si=rc3QSVpraKQsQlE8&rel=0&modestbranding=1"
-            }
-            title={"Projektvorstellungsvideo"}
+            link="https://www.youtube-nocookie.com/embed/LDvVRvG7OB0?si=rc3QSVpraKQsQlE8&rel=0&modestbranding=1"
+            title="Projektvorstellungsvideo"
           />
         </div>
         <div className="md:w-[50%] w-full">
@@ -147,12 +136,13 @@ const Home = () => {
               Die einzelnen Lektionen können <b>unabhängig voneinander</b>{" "}
               konsumiert werden. Dieser Aufbau erlaubt es Ihnen, für Sie
               interessante Themen auszuwählen und sich die Inhalte dazu
-              anzusehen, oder aber der von uns erdachten Struktur zu folgen.{" "}
-              <br /> Beachten Sie bitte, dass einzelne Lehrinhalte das Wissen
-              aus vorherigen Modulen voraussetzen können. Hatten sie zum
-              Beispiel bisher wenig Berührungspunkte mit UX, kann es sinnvoll
-              sein, die entsprechende Lehreinheit zu sehen, bevor Sie sich mit
-              UX bezogenen KI-Eigenschaften auseinandersetzen.
+              anzusehen, oder aber der von uns erdachten Struktur zu folgen.
+              <br />
+              Beachten Sie bitte, dass einzelne Lehrinhalte das Wissen aus
+              vorherigen Modulen voraussetzen können. Hatten Sie zum Beispiel
+              bisher wenig Berührungspunkte mit UX, kann es sinnvoll sein, die
+              entsprechende Lehreinheit zu sehen, bevor Sie sich mit UX
+              bezogenen KI-Eigenschaften auseinandersetzen.
             </p>
           </Accordion>
         </div>
@@ -165,19 +155,16 @@ const Home = () => {
 
         {/* Render module cards if module data exists */}
         {modulesData &&
-          modulesData.map((module, index) => {
-            const isDisabled = disabledModules.includes(module[0]);
-            return (
-              <HomeModuleCard
-                key={index}
-                module={module}
-                index={index}
-                isDisabled={isDisabled}
-                disabledSubtopics={disabledSubtopics}
-                moduleRefs={moduleRefs}
-              />
-            );
-          })}
+          modulesData.map((module, index) => (
+            <HomeModuleCard
+              key={index}
+              module={module}
+              index={index}
+              isDisabled={disabledModules.includes(module[0])}
+              disabledSubtopics={disabledSubtopics}
+              moduleRefs={moduleRefs}
+            />
+          ))}
       </section>
     </div>
   );

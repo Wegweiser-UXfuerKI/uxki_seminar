@@ -7,17 +7,21 @@ import "./UXButton.css";
  * UXButton Component
  *
  * A customizable and accessible button component with an optional arrow icon.
- * It supports navigation both internally (`react-router` links) and externally (`<a>` links).
- * If a hash link (`#id`) is provided, it smoothly scrolls to the target section instead of navigating.
+ * Supports internal navigation (`react-router` links), external links, and smooth scrolling for hash links.
  *
  * @component
  * @param {Object} props - The properties of the UXButton component.
- * @param {string} props.text - The text displayed inside the button.
+ * @param {string} props.text - The button text.
  * @param {string} [props.to] - The destination URL or anchor link (`#id`). If omitted, the button acts as a normal button.
- * @param {string} [props.arrowPosition="right"] - The position of the arrow (`"left"` or `"right"`).
+ * @param {string} [props.arrowPosition="right"] - The arrow position (`"left"` or `"right"`).
  * @param {boolean} [props.useGlassyBox=false] - If true, applies a glassy effect (`glassBox` class).
  *
- * @returns {JSX.Element} A button element that supports smooth scrolling, internal navigation, or external linking.
+ * @returns {JSX.Element} A button element with smooth scrolling, internal navigation, or external linking.
+ *
+ * @example
+ * <UXButton text="Learn More" to="/about" />
+ * <UXButton text="Go to Section" to="#features" />
+ * <UXButton text="Visit Website" to="https://example.com" />
  */
 const UXButton = ({
   text,
@@ -25,10 +29,11 @@ const UXButton = ({
   useGlassyBox = false,
   to,
 }) => {
-  // Adds a glassy box style if `useGlassyBox` is true
   const glassyClass = useGlassyBox ? "glassBox py-6" : "";
 
-// Scroll to the top of the page when navigating
+  /**
+   * Handles navigation behavior for internal links and smooth scrolling for hash links.
+   */
   const handleNavigation = (event) => {
     if (to?.startsWith("#")) {
       event.preventDefault();
@@ -37,7 +42,7 @@ const UXButton = ({
         targetElement.scrollIntoView({ behavior: "smooth" });
       }
     } else if (!to?.startsWith("http")) {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 

@@ -20,6 +20,7 @@
     "react-tooltip": "^5.27.1",
     "reading-time-estimator": "^1.9.4",
     "showdown": "^2.1.0",
+    "styled-components": "^6.1.15",
     "tippy.js": "^6.3.7",
     "ux-ki-app": "file:",
     "web-vitals": "^2.1.4",

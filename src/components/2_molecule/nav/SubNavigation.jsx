@@ -1,23 +1,22 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./SubNavigation.css";
 
 /**
- * A fixed SubNavigation component that displays a vertical list of items as numbered circles.
- * The component is positioned on the right side of the screen. Each item has hover functionality
- * to reveal the title of the corresponding section, and the active section is visually highlighted.
- * Smooth scrolling is implemented for better user experience.
+ * SubNavigation Component
+ *
+ * A fixed navigation component displaying a vertical list of numbered circles.
+ * Each item highlights the active section and reveals its title on hover.
+ * Smooth scrolling ensures a better user experience.
  *
  * @component
- * @param {Object} props - The props for the SubNavigation component.
- * @param {Array} props.sections - An array of section objects, where each object contains:
- *   @param {string} props.sections.id - The unique identifier of the section. Used as the `id` in the URL hash.
- *   @param {string} props.sections.title - The title of the section, displayed on hover.
+ * @param {Object} props - The component properties.
+ * @param {Array} props.sections - An array of section objects.
+ *   @param {string} props.sections.id - The unique identifier for each section.
+ *   @param {string} props.sections.title - The section title, shown on hover.
  *
  * @returns {JSX.Element} The rendered SubNavigation component.
  *
  * @example
- * // Example usage:
  * const sections = [
  *   { id: 'section1', title: 'Introduction' },
  *   { id: 'section2', title: 'Chapter 1' },
@@ -57,13 +56,13 @@ const SubNavigation = ({ sections }) => {
 
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Check on initial load
-    // Cleanup function to remove event listener when component unmounts
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [sections]);
 
   /**
-   * Handles smooth scrolling to a section.
-   * @param {string} id - The ID of the target section.
+   * Handles smooth scrolling to the selected section.
+   * @param {string} id - The target section ID.
    */
   const handleSmoothScroll = (id) => {
     const element = document.getElementById(id);
@@ -75,7 +74,7 @@ const SubNavigation = ({ sections }) => {
   return (
     <nav
       aria-label="Section Navigation"
-      id="sectionNavi"
+      id="sectionNav"
       className="fixed top-[40%] right-3 flex flex-col items-end space-y-4 z-20">
       {sections.map((section, index) => (
         <Link

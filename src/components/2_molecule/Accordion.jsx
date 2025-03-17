@@ -90,21 +90,20 @@ const Accordion = ({
           role="region"
           aria-hidden={!isOpen}>
           {sections ? (
-            <ul className="list-none p-0 m-0">
+            <nav className="menuList">
               {sections.map((section, index) => (
-                <li key={section.id}>
-                  <Link
-                    to={`#${section.id}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleSmoothScroll(section.id);
-                    }}
-                    className="block px-2 py-1 font-light rounded-[var(--base-size)] hover:bg-[var(--bg)] focus:bg-[var(--bg)] active:bg-[var(--bg)]">
-                    {`${index + 1}: ${section.title}`}
-                  </Link>
-                </li>
+                <Link
+                  key={section.id}
+                  to={`#${section.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSmoothScroll(section.id);
+                  }}
+                  className="block px-2 py-1 mb-1 rounded-lg">
+                  {`${index + 1}: ${section.title}`}
+                </Link>
               ))}
-            </ul>
+            </nav>
           ) : (
             <div>{children}</div>
           )}

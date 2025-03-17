@@ -215,13 +215,11 @@ a {
   font-weight: 600;
 }
 
-header nav a.firstLevel,
 main p a,
 .inlineLink {
   position: relative;
 }
 
-header nav a.firstLevel::after,
 main p a::after,
 .inlineLink::after {
   content: "";
@@ -234,10 +232,47 @@ main p a::after,
   transition: width 0.24s ease-in-out;
 }
 
-header nav a.firstLevel:hover::after,
 main p a:hover::after,
 .inlineLink:hover::after {
   width: 100%;
+}
+
+:root.dark a.active {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+:root.light a.active {
+  background-color: var(--ev);
+  color: var(--w);
+}
+
+.menuList a:hover,
+.menuList a:focus,
+#iconNav .iconWrapper.active,
+#iconNav .iconWrapper:hover,
+a.firstLevel:hover {
+  background-color: var(--bg);
+}
+
+:root.dark .menuList a {
+  font-weight: 250;
+}
+
+:root.light .menuList a {
+  font-weight: 300;
+}
+
+:root.light #dropDown {
+  background-color: var(--w);
+}
+
+:root.dark #dropDown {
+  background-color: var(--ev);
+}
+
+a.active {
+  font-weight: 600 !important;
 }
 
 /* Background Circles */

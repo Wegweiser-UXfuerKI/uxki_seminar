@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AppContext } from "../../../AppContext";
 import { getSubtopicLinksByModule } from "../../ContentHandler";
-import "./DropDownMenu.css";
 
 /**
  * DropDownMenu component that displays a dropdown menu on hover.
@@ -116,7 +115,7 @@ const DropDownMenu = ({
             ? "/"
             : `/${selectedModule}/${firstSubtopicFromModule}`
         }
-        className="firstLevel relative"
+        className="firstLevel flex px-2 py-1 lg:p-0 rounded-lg"
         onClick={() => {
           if (isDisabledModule) {
             setScrollToChapter(selectedModule);
@@ -133,7 +132,7 @@ const DropDownMenu = ({
         animate={isHovered ? "enter" : "exit"}
         variants={subMenuAnimate}
         id="dropDown"
-        className="absolute flex flex-col glassBox rounded-xl gap-y-1 py-4 px-4 min-w-[280px] z-50 transition"
+        className="menuList absolute flex flex-col glassBox rounded-xl gap-y-1 py-4 px-4 min-w-[280px] z-50 transition"
         style={positionStyle}>
         {title && <h4>{title}</h4>}
         {!isDisabledModule &&

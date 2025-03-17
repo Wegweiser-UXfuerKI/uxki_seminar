@@ -1,23 +1,30 @@
 import { useState, useEffect } from "react";
 import MobileNav from "../2_molecule/nav/MobileNav";
-import DesktopNav from "../2_molecule/nav/DesktopNav";
+import TopNav from "../2_molecule/nav/TopNav";
 import { ThemeToggle } from "../1_elements/ThemeToggle";
 import Logo from "../1_elements/Logo";
 
 /**
- * Header component that adapts its layout based on the screen size.
+ * HeaderTop component that adapts its layout based on the screen size.
+ *
+ * Displays a responsive navigation bar with a theme toggle and logo.
+ * Switches between MobileNav and TopNav based on screen width.
  *
  * @component
- * @returns {JSX.Element} The rendered header component.
+ * @returns {JSX.Element} The rendered HeaderTop component.
  */
-const Header = () => {
+const HeaderTop = () => {
   /**
    * Tracks if the current screen size is considered mobile.
-   * @type {[boolean, Function]}
+   * @constant {boolean} isMobile - State determining if the viewport is mobile.
+   * @function setIsMobile - Updates the isMobile state.
    */
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
+    /**
+     * Updates isMobile state on window resize.
+     */
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -37,7 +44,7 @@ const Header = () => {
         backgroundColor: "var(--box)",
       }}
       role="banner"
-      aria-label="Header">
+      aria-label="HeaderTop">
       <Logo />
 
       {isMobile ? (
@@ -47,7 +54,7 @@ const Header = () => {
         </div>
       ) : (
         <>
-          <DesktopNav />
+          <TopNav />
           <ThemeToggle />
         </>
       )}
@@ -55,4 +62,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderTop;

@@ -10,7 +10,8 @@ import {
 /**
  * IconNav Component
  *
- * Renders a vertical navigation menu with module icons. When hovered or focused, a dropdown menu displays related subtopics.
+ * Renders a vertical navigation menu with module icons. When hovered or focused,
+ * a dropdown menu displays related subtopics.
  * This component supports keyboard accessibility and screen reader-friendly labels.
  *
  * @component
@@ -23,50 +24,75 @@ const IconNav = () => {
     disabledModules,
     disabledSubtopics,
   } = useContext(AppContext);
+
+  /**
+   * Retrieves all available modules with their links and names.
+   * @constant {Array} modules - List of module links and names.
+   */
   const modules = getModuleLinksAndNames();
 
   return (
-    <div id="iconNav" className="relative flex" aria-label="Modul-Navigation">
-      <div className="flex flex-col items-center gap-3 2xl:gap-2 relative">
-        {modules.map(([moduleLink, moduleName]) => {
-          const module = getModuleByLink(moduleLink);
-          const ModuleIcon = module?.moduleImage;
-          const subtopics =
-            getSubtopicLinksAndNamesByModulelink(moduleLink) || [];
-          const isActive = moduleLink === selectedModuleLink;
-          const isDisabled = disabledModules.includes(moduleLink);
+    <div
+      id="iconNav"
+      aria-label="Module Navigation"
+      className="flex flex-col justify-start items-center gap-2">
+      {modules.map(([moduleLink, moduleName]) => {
+        /**
+         * Retrieves module details by its link.
+         * @constant {Object} module - The module data including its image.
+         */
+        const module = getModuleByLink(moduleLink);
+        const ModuleIcon = module?.moduleImage;
 
-          return (
-              <DropDownMenu
-              key={moduleLink}
-                selectedLink={`${selectedModuleLink}/${selectedSubtopicLink}`}
-                selectedName={moduleName}
-                selectedModule={moduleLink}
-                items={subtopics.map(([subtopicLink, subtopicName]) => [
-                  `${moduleLink}/${subtopicLink}`,
-                  subtopicName,
-                ])}
-                disabledItems={disabledSubtopics[moduleLink] || []}
-                isDisabledModule={isDisabled}
-                title={moduleName}
-                triggerElement={() =>
-                  ModuleIcon ? (
-                  <span
-                    className={`iconWrapper relative ${
-                        isActive ? "active" : ""
-                    }`}>
-                      <ModuleIcon className="w-10 h-10 2xl:w-12 2xl:h-12 svgFill p-1 2xl:p-2" />
-                  </span>
-                  ) : (
-                    <span className="w-10 h-10 flex items-center justify-center">
-                      {moduleName[0]}
-                    </span>
-                  )
-                }
-              />
-          );
-        })}
-      </div>
+        /**
+         * Retrieves subtopics related to the current module.
+         * @constant {Array} subtopics - List of subtopic links and names.
+         */
+        const subtopics =
+          getSubtopicLinksAndNamesByModulelink(moduleLink) || [];
+
+        /**
+         * Checks if the current module is active.
+         * @constant {boolean} isActive - Whether the module is currently selected.
+         */
+        const isActive = moduleLink === selectedModuleLink;
+
+        /**
+         * Checks if the current module is disabled.
+         * @constant {boolean} isDisabled - Whether the module is disabled.
+         */
+        const isDisabled = disabledModules.includes(moduleLink);
+
+        return (
+          <DropDownMenu
+            key={moduleLink}
+            selectedLink={`${selectedModuleLink}/${selectedSubtopicLink}`}
+            selectedName={moduleName}
+            selectedModule={moduleLink}
+            items={subtopics.map(([subtopicLink, subtopicName]) => [
+              `${moduleLink}/${subtopicLink}`,
+              subtopicName,
+            ])}
+            disabledItems={disabledSubtopics[moduleLink] || []}
+            isDisabledModule={isDisabled}
+            title={moduleName}
+            triggerElement={() =>
+              ModuleIcon ? (
+                <div
+                  className={`iconWrapper rounded-lg p-1 ${
+                    isActive ? "active" : ""
+                  }`}>
+                  <ModuleIcon className="w-10 h-10 svgFill p-1" />
+                </div>
+              ) : (
+                <span className="w-10 h-10 flex items-center justify-center">
+                  {moduleName[0]}
+                </span>
+              )
+            }
+          />
+        );
+      })}
     </div>
   );
 };

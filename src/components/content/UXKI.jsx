@@ -5,7 +5,7 @@ import SubTopic from "../2_molecule/cards/SubTopic";
 import List from "../2_molecule/List";
 
 //TODO: place components globaly for every modul page?
-import Accordion from "../2_molecule/nav/Accordion";
+import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 
 const moduleLink = "ki-bezogene-ux";

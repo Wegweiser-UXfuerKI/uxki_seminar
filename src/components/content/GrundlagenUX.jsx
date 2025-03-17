@@ -2,7 +2,7 @@ import { ReactComponent as imageElement } from "../../assets/icons/usability.svg
 import { Link } from "react-router-dom";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { VideoContainer } from "../1_elements/VideoContainer";
-import Accordion from "../2_molecule/nav/Accordion";
+import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 import List from "../2_molecule/List";
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import RightArrow from "../../1_elements/RightArrow";
+import RightArrow from "../1_elements/RightArrow";
 
 /**
  * Accordion Component

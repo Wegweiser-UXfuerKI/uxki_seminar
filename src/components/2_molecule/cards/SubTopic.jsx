@@ -34,7 +34,7 @@ const SubTopic = ({ topicName, link, description, number, isDisabled }) => {
           className="fourthTitle lg:mt-20 mt-10 hyphens-auto relative"
           data-topic-number={topicNumber}>
           {topicName}
-          <span className="absolute -right-2 -top-24 md:-top-36 text-[124px] font-extrabold opacity-10 pointer-events-none md:text-[140px]">
+          <span className="absolute -right-2 -top-24 lg:-top-36 text-[124px] font-extrabold opacity-10 pointer-events-none lg:text-[140px]">
             {topicNumber}
           </span>
         </h3>

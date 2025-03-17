@@ -5,7 +5,7 @@ import {
   getNextSubtopicLink,
   getSubtopicNameByLink,
 } from "../ContentHandler";
-import UXButton from "../1_elements/UXButton";
+import UXButton from "../2_molecule/nav/UXButton";
 
 /**
  * A React component for navigating between chapters of a module.

@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "../2_molecule/nav/Accordion";
+import Accordion from "../2_molecule/Accordion";
 import Sources from "../Sources";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 import { ChapterHeader } from "../3_organism/ChapterHeader";

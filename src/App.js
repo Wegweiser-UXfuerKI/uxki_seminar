@@ -4,7 +4,7 @@ import Home from "./components/5_pages/Home";
 import Header from "./components/3_organism/Header";
 import Footer from "./components/3_organism/Footer";
 import { ChapterLayout } from "./components/4_templates/ChapterLayout";
-import ToTopButton from "./components/2_molecule/ToTopButton";
+import ToTopButton from "./components/2_molecule/nav/ToTopButton";
 import "./assets/css/DesignTokens.css";
 import "./assets/css/App.css";
 

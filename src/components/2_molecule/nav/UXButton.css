@@ -1,6 +1,5 @@
 .ux-button {
   background: var(--bg);
-  border-radius: var(--scale2) !important;
 }
 
 .ux-button:hover,

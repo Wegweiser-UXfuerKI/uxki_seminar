@@ -3,10 +3,10 @@ import { getModuleLinksAndNames } from "../ContentHandler";
 import HomeModuleCard from "../2_molecule/cards/HomeModuleCard";
 import { AppContext } from "../../AppContext";
 import { VideoContainer } from "../1_elements/VideoContainer";
-import UXButton from "../1_elements/UXButton";
+import UXButton from "../2_molecule/nav/UXButton";
 import WegweiserPng from "../../assets/images/Wegweiser.webp";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
-import Accordion from "../2_molecule/nav/Accordion";
+import Accordion from "../2_molecule/Accordion";
 
 /**
  * Home component that serves as the landing page for the Wegweiser.UX-für-KI learning platform.
@@ -97,7 +97,6 @@ const Home = () => {
               text="Mehr zum Projekt erfahren"
               useGlassyBox
               to="https://projekt.ux-fuer-ki.de/"
-              target="_blank"
             />
           </div>
         </div>

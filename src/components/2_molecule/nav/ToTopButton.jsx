@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RightArrow from "../1_elements/RightArrow";
-import "./ToTopButton.css";
+import RightArrow from "../../1_elements/RightArrow";
 
 /**
  * ToTopButton Component
@@ -46,11 +45,10 @@ const ToTopButton = () => {
     show && (
       <button
         onClick={scrollToTop}
-        id="toTopBtn"
-        className="flex justify-center items-center"
+        className="fixed right-4 bottom-4 flex justify-center items-center p-2 w-10 h-10 md:w-14 md:h-14 transition -rotate-90 rounded-full z-10 hover:-translate-y-1 cursor-pointer"
+        style={{ backgroundColor: "var(--text)" }}
         aria-label="Nach oben scrollen"
-        tabIndex="0"
-      >
+        tabIndex="0">
         <RightArrow style={{ fill: "var(--bg)" }} />
       </button>
     )

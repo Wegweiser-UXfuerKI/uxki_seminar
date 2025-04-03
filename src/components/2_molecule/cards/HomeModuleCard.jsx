@@ -2,7 +2,7 @@ import {
   getSubtopicLinksAndNamesByModulelink,
   getModuleImageByLink,
 } from "../../ContentHandler";
-import UXButton from "../nav/UXButton";
+import UXButton from "../UXButton";
 
 /**
  * `HomeModuleCard` is a component that displays a single module with its details, 

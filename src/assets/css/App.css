@@ -35,18 +35,6 @@ body {
   overflow: hidden;
 }
 
-.shadow {
-  -webkit-box-shadow: var(--glasBoxShadow);
-  -moz-box-shadow: var(--glasBoxShadow);
-  box-shadow: var(--glasBoxShadow);
-}
-
-.shadow:hover {
-  -webkit-box-shadow: var(--shadow);
-  -moz-box-shadow: var(--shadow);
-  box-shadow: var(--shadow);
-}
-
 .glassBox {
   background: var(--box);
   -webkit-box-shadow: var(--glasBoxShadow);
@@ -72,6 +60,18 @@ body {
   -o-backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
   backdrop-filter: var(--blur);
+}
+
+.shadow {
+  -webkit-box-shadow: var(--glasBoxShadow);
+  -moz-box-shadow: var(--glasBoxShadow);
+  box-shadow: var(--glasBoxShadow);
+}
+
+.shadow:hover {
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
 }
 
 .rounded-xl {
@@ -103,11 +103,6 @@ li {
 
 .smallTextSize {
   font-size: 14px;
-}
-
-:root.dark p,
-:root.dark li {
-  font-weight: 200;
 }
 
 .mainTitle,
@@ -151,6 +146,11 @@ h4 {
 }
 
 /* Font Styles */
+:root.dark p,
+:root.dark li {
+  font-weight: 250;
+}
+
 :root.light b,
 :root.light strong {
   font-weight: 500;

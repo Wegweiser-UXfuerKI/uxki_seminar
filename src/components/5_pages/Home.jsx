@@ -3,7 +3,7 @@ import { getModuleLinksAndNames } from "../ContentHandler";
 import HomeModuleCard from "../2_molecule/cards/HomeModuleCard";
 import { AppContext } from "../../AppContext";
 import { VideoContainer } from "../1_elements/VideoContainer";
-import UXButton from "../2_molecule/nav/UXButton";
+import UXButton from "../2_molecule/UXButton";
 import WegweiserPng from "../../assets/images/Wegweiser.webp";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 import Accordion from "../2_molecule/Accordion";

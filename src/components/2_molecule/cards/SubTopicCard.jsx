@@ -13,10 +13,10 @@ import { AppContext } from "../../../AppContext";
  * @param {string} props.description - A brief description of the subtopic.
  * @param {number} props.number - The order number of the subtopic.
  * @param {boolean} props.isDisabled - If true, disables the subtopic link.
- * @returns {JSX.Element} The rendered SubTopic component.
+ * @returns {JSX.Element} The rendered SubTopicCard component.
  *
  */
-const SubTopic = ({ topicName, link, description, number, isDisabled }) => {
+const SubTopicCard = ({ topicName, link, description, number, isDisabled }) => {
   const { selectedModuleLink } = useContext(AppContext);
   const topicNumber = String(number + 1).padStart(2, "0");
 
@@ -44,4 +44,4 @@ const SubTopic = ({ topicName, link, description, number, isDisabled }) => {
   );
 };
 
-export default SubTopic;
+export default SubTopicCard;

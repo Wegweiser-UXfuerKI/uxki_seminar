@@ -71,8 +71,8 @@ const DropDownMenu = ({
   // Dynamic positioning of the dropdown menu
   const positionStyle =
     position === "right"
-      ? { left: "100%", marginTop: -56, marginLeft: 10 }
-      : { top: "100%", marginTop: 0 };
+      ? { left: "100%", marginTop: -56, marginLeft: 8 }
+      : { top: "100%", marginTop: 8 };
 
   // Different animations for dropdown positioning
   const subMenuAnimate =
@@ -80,7 +80,7 @@ const DropDownMenu = ({
       ? {
           enter: {
             opacity: 1,
-            marginLeft: 12,
+            marginLeft: 8,
             display: "flex",
           },
           exit: {
@@ -92,12 +92,12 @@ const DropDownMenu = ({
       : {
           enter: {
             opacity: 1,
-            marginTop: 0,
+            marginTop: 8,
             display: "flex",
           },
           exit: {
             opacity: 0,
-            marginTop: -10,
+            marginTop: 0,
             transitionEnd: { display: "none" },
           },
         };
@@ -108,7 +108,7 @@ const DropDownMenu = ({
       onMouseLeave={() => toggleMenu(false)}
       onFocus={() => toggleMenu(true)} // Open on focus
       onBlur={() => toggleMenu(false)} // Close when losing focus
-    >
+      className="relative">
       <Link
         to={
           isDisabledModule
@@ -116,6 +116,10 @@ const DropDownMenu = ({
             : `/${selectedModule}/${firstSubtopicFromModule}`
         }
         className="firstLevel flex px-2 py-1 lg:p-0 rounded-lg"
+        aria-haspopup="true"
+        aria-controls={`dropdown-${selectedModule}`}
+        aria-expanded={isHovered}
+        aria-label={`Öffne Menü für ${title}`}
         onClick={() => {
           if (isDisabledModule) {
             setScrollToChapter(selectedModule);
@@ -133,14 +137,14 @@ const DropDownMenu = ({
         variants={subMenuAnimate}
         id="dropDown"
         className="menuList absolute flex flex-col glassBox rounded-xl gap-y-1 py-4 px-4 min-w-[280px] z-50 transition"
-        style={positionStyle}>
+        style={positionStyle}
+        aria-label={`Untermenü für ${title}`}>
         {title && <h4>{title}</h4>}
         {!isDisabledModule &&
           items?.map(([link, name], index) => {
             const isDisabled = disabledItems.some((disabledLink) =>
               link.endsWith(`/${disabledLink}`)
             );
-
             const isActive = link === selectedLink;
 
             return (
@@ -157,7 +161,9 @@ const DropDownMenu = ({
                 className={`secondLevel rounded-lg px-2 py-1 ${
                   isDisabled ? "disabled" : isActive ? "active" : ""
                 }`}
-                tabIndex={0}>
+                tabIndex={isDisabled ? -1 : 0}
+                role="menuitem"
+                aria-disabled={isDisabled}>
                 {`${index + 1}: ${name}`}
               </Link>
             );

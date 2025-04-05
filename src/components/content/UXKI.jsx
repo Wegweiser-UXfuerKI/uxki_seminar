@@ -1,7 +1,7 @@
 import { ReactComponent as imageElement } from "../../assets/icons/ux-ki.svg";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { VideoContainer } from "../1_elements/VideoContainer";
-import SubTopic from "../2_molecule/cards/SubTopic";
+import SubTopicCard from "../2_molecule/cards/SubTopicCard";
 import List from "../2_molecule/List";
 
 //TODO: place components globaly for every modul page?
@@ -1963,7 +1963,7 @@ const EinführungUXKI = {
       <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
       <div className="flex flex-wrap justify-center -mx-4">
         {linksAndNames.map((item, index) => (
-          <SubTopic
+          <SubTopicCard
             key={item.link || index}
             topicName={item.name}
             link={item.link}

@@ -78,12 +78,14 @@ const IconNav = () => {
             title={moduleName}
             triggerElement={() =>
               ModuleIcon ? (
-                <div
+                <span
                   className={`iconWrapper rounded-lg p-1 ${
                     isActive ? "active" : ""
-                  }`}>
+                  }`}
+                  role="img"
+                  aria-label={`Modul Icon für ${moduleName}`}>
                   <ModuleIcon className="w-10 h-10 svgFill p-1" />
-                </div>
+                </span>
               ) : (
                 <span className="w-10 h-10 flex items-center justify-center">
                   {moduleName[0]}

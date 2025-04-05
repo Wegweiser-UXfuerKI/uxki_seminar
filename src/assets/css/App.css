@@ -349,6 +349,13 @@ a.active {
   }
 }
 
+@media (prefers-reduced-motion) {
+  .BgCircle::before,
+  .BgCircle::after {
+    animation: none;
+  }
+}
+
 /* Responsive Small Desktop - Tailwind (xl) */
 @media screen and (max-width: 1280px) {
   h1,

@@ -67,3 +67,9 @@
     background-position: 400% 0;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .ux-button:before {
+    animation: none;
+  }
+}

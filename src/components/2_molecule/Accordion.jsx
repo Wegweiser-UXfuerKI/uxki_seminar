@@ -61,25 +61,27 @@ const Accordion = ({
         useGlassBox ? "glassBox" : ""
       }`}>
       {/* Accordion Title */}
-      <h4
+      <div
         onClick={toggleAccordion}
         id="accordionTitle"
         className="flex justify-between items-center mb-0 px-6 py-4 cursor-pointer"
         role="button"
         aria-expanded={isOpen}
-        aria-controls="accordion-content"
+        aria-controls="accordionContent"
         tabIndex={0}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") toggleAccordion();
         }}>
-        {title}
+        <span className="fourthTitle" style={{ marginBottom: "0" }}>
+          {title}
+        </span>
         <span
           className={`chevron transition transform ${
             isOpen ? "rotate-[-90deg]" : "rotate-90"
           }`}>
           <RightArrow />
         </span>
-      </h4>
+      </div>
 
       {/* Accordion Content */}
       {isOpen && (

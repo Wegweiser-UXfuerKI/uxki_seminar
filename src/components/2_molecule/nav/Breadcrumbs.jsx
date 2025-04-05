@@ -27,7 +27,7 @@ const Breadcrumbs = () => {
   };
 
   return (
-    <nav className="flex items-center justify-start pt-8 gap-2">
+    <nav className="flex items-center justify-start pt-8 gap-2" aria-label="Breadcrumbs Navigation">
       {/* Home Link */}
       <Link
         to="/"

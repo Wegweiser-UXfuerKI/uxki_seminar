@@ -7,6 +7,7 @@ import { ChapterLayout } from "./components/4_templates/ChapterLayout";
 import ToTopButton from "./components/2_molecule/nav/ToTopButton";
 import "./assets/css/DesignTokens.css";
 import "./assets/css/App.css";
+import DevTestPage from "./components/5_pages/DevTestPage";
 
 //import formbricks from "@formbricks/js";
 
@@ -50,6 +51,7 @@ function App() {
               <Route index element={<Home />} />
               <Route path=":module/:subtopicId" element={<ChapterLayout />} />
               <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="dev" element={<DevTestPage />} />
             </Routes>
             <ToTopButton />
           </main>

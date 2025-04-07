@@ -74,6 +74,15 @@ const AppProvider = ({ children }) => {
     const module = pathSegments[0];
     const subtopicLink = pathSegments[1];
 
+    // Sepcial case for dev page
+    if (module === "dev") {
+      setSelectedModuleLink(null);
+      setSelectedModuleName(null);
+      setSelectedSubtopicLink(null);
+      setSelectedSubtopicName(null);
+      return;
+    }
+
     if (module && getModuleLinks().includes(module)) {
       if (subtopicLink) {
         const subtopic = getSubtopicByLink(module, subtopicLink);

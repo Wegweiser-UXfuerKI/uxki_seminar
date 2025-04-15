@@ -1,5 +1,4 @@
 import React from "react";
-import bmfsfjLogo from "../../assets/images/BMFSFJ_Logo.webp";
 import imis from "../../assets/images/IMIS_Logo.webp";
 import bmfsfjLogoSVG from "../../assets/images/BMFSFJ_Gefoerdert.svg";
 

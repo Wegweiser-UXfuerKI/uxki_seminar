@@ -1,5 +1,5 @@
 import React from "react";
-import imis from "../../assets/images/IMIS_Logo.webp";
+import imisSVG from "../../assets/images/IMIS_Logo.svg";
 import bmfsfjLogoSVG from "../../assets/images/BMFSFJ_Gefoerdert.svg";
 
 /**
@@ -10,7 +10,7 @@ import bmfsfjLogoSVG from "../../assets/images/BMFSFJ_Gefoerdert.svg";
  */
 const Footer = () => (
   <footer
-    className="relative flex justify-between items-center md:flex-row flex-col gap-6 bg-white w-full lg:py-2 py-6 lg:pl-28 pl-6 pr-6"
+    className="relative flex justify-between md:items-center md:flex-row flex-col gap-6 bg-white w-full lg:py-2 py-6 lg:pl-28 pl-8 pr-8"
     role="contentinfo"
     aria-label="Website Footer">
     <nav className="h-full flex flex-col" aria-label="Footer navigation">
@@ -28,15 +28,15 @@ const Footer = () => (
       href="https://www.bmfsfj.de/bmfsfj"
       src={bmfsfjLogoSVG}
       alt="Logo des Bundesministeriums für Familie, Senioren, Frauen und Jugend"
-      width={300}
+      width={320}
       height={170}
     />
 
     <FooterLogo
       href="https://www.uni-luebeck.de/universitaet/universitaet.html"
-      src={imis}
+      src={imisSVG}
       alt="Logo des Instituts für Multimedia und Interaktive Systeme"
-      width={280}
+      width={310}
       height={80}
     />
   </footer>
@@ -51,7 +51,7 @@ const FooterLink = ({ href, title, children }) => (
     target="_blank"
     rel="noreferrer"
     title={title}
-    className="text-[var(--br)] w-64 inlineLink sm:w-full">
+    className="text-[var(--br)] min-w-48 inlineLink sm:w-full">
     {children}
   </a>
 );

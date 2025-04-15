@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fb308a64.css",
-    "main.js": "/static/js/main.d6dbe1fa.js",
+    "main.css": "/static/css/main.cd3db74d.css",
+    "main.js": "/static/js/main.1c5b1565.js",
     "static/media/avatar_girl.png": "/static/media/avatar_girl.7601c71f27f447ccb627.png",
     "static/media/avatar_pink.png": "/static/media/avatar_pink.7433c8a70377d696fb6d.png",
     "static/media/avatar_türkis.png": "/static/media/avatar_türkis.5faca530f00e489244f9.png",
@@ -17,6 +17,7 @@
     "static/media/lernplattform_button.png": "/static/media/lernplattform_button.4fffb215f0caeb8e7532.png",
     "static/media/Wegweiser_logo.png": "/static/media/Wegweiser_logo.a2f94986069c1895cf6e.png",
     "static/media/AlleFragen.png": "/static/media/AlleFragen.d20e0ec327d2dba747f6.png",
+    "static/media/BMFSFJ_Gefoerdert.svg": "/static/media/BMFSFJ_Gefoerdert.d0186b27222349e0038eb02fab20a256.svg",
     "static/media/bulb.png": "/static/media/bulb.0edda8e42069b9250904.png",
     "static/media/soundOn.png": "/static/media/soundOn.824035f39fb6496ea88d.png",
     "static/media/new_topic.png": "/static/media/new_topic.49f62cd1132a4273dc77.png",
@@ -48,7 +49,6 @@
     "static/media/ux-ki.svg": "/static/media/ux-ki.3408425ef229c343f78702af257c3f44.svg",
     "static/media/dateninput.svg": "/static/media/dateninput.8858fd9b403d22079b4595faf6a4a99f.svg",
     "static/media/ux-placeholder.svg": "/static/media/ux-placeholder.0e3ffb2b3da88e27579d96c236ddde4f.svg",
-    "static/media/BMFSFJ_Logo.webp": "/static/media/BMFSFJ_Logo.8a3bd9831a1937da78af.webp",
     "static/media/article-nutzerverhalten-thumbnail-80x80.webp": "/static/media/article-nutzerverhalten-thumbnail-80x80.a93fd930077c43e68c0c.webp",
     "static/media/informationText.md": "/static/media/informationText.4d57e9a02b346c605988.md",
     "static/media/idea-icon-on.svg": "/static/media/idea-icon-on.6ee369a748e0725df1ab.svg",
@@ -58,11 +58,11 @@
     "static/media/cross-icon.svg": "/static/media/cross-icon.17648e90379eb58fc516694bef79f83d.svg",
     "static/media/check-icon.svg": "/static/media/check-icon.721d68647ede2f838e805e7ca81a1970.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.164cedbd36f8d732060026564168596d.svg",
-    "main.fb308a64.css.map": "/static/css/main.fb308a64.css.map",
-    "main.d6dbe1fa.js.map": "/static/js/main.d6dbe1fa.js.map"
+    "main.cd3db74d.css.map": "/static/css/main.cd3db74d.css.map",
+    "main.1c5b1565.js.map": "/static/js/main.1c5b1565.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb308a64.css",
-    "static/js/main.d6dbe1fa.js"
+    "static/css/main.cd3db74d.css",
+    "static/js/main.1c5b1565.js"
   ]
 }

@@ -10,10 +10,10 @@ import bmfsfjLogoSVG from "../../assets/images/BMFSFJ_Gefoerdert.svg";
  */
 const Footer = () => (
   <footer
-    className="relative flex justify-between md:items-center md:flex-row flex-col gap-6 bg-white w-full lg:py-2 py-6 lg:pl-28 pl-8 pr-8"
+    className="relative flex justify-between md:items-center md:flex-row flex-col gap-6 bg-white lg:py-2 py-6 lg:pl-28 pl-8 pr-8"
     role="contentinfo"
     aria-label="Website Footer">
-    <nav className="h-full flex flex-col" aria-label="Footer navigation">
+    <nav className="h-full flex flex-col md:mr-32 w-max" aria-label="Footer navigation">
       <FooterLink href="https://projekt.ux-fuer-ki.de" title="Zur Projektseite">
         Projektseite
       </FooterLink>
@@ -51,7 +51,7 @@ const FooterLink = ({ href, title, children }) => (
     target="_blank"
     rel="noreferrer"
     title={title}
-    className="text-[var(--br)] min-w-48 inlineLink sm:w-full">
+    className="text-[var(--br)] inlineLink">
     {children}
   </a>
 );

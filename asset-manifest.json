@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cd3db74d.css",
-    "main.js": "/static/js/main.1c5b1565.js",
+    "main.css": "/static/css/main.dc11e679.css",
+    "main.js": "/static/js/main.49a64cfe.js",
     "static/media/avatar_girl.png": "/static/media/avatar_girl.7601c71f27f447ccb627.png",
     "static/media/avatar_pink.png": "/static/media/avatar_pink.7433c8a70377d696fb6d.png",
     "static/media/avatar_türkis.png": "/static/media/avatar_türkis.5faca530f00e489244f9.png",
@@ -11,9 +11,9 @@
     "static/media/EUAICheckerCropped.webp": "/static/media/EUAICheckerCropped.4b03aa52d885a46a5a47.webp",
     "static/media/feedback.png": "/static/media/feedback.1302d0725fc7b98a963d.png",
     "static/media/taskA-do.png": "/static/media/taskA-do.24f9dd835c2b17236688.png",
-    "static/media/IMIS_Logo.webp": "/static/media/IMIS_Logo.5c64032ef707fc1496f7.webp",
     "static/media/taskA-dont.png": "/static/media/taskA-dont.a6a068aa07cba4e55833.png",
     "static/media/article-nutzerverhalten-cover.webp": "/static/media/article-nutzerverhalten-cover.804cba43c54f7b08f062.webp",
+    "static/media/IMIS_Logo.svg": "/static/media/IMIS_Logo.28c453a2c95cf1e52640c03d4562c408.svg",
     "static/media/lernplattform_button.png": "/static/media/lernplattform_button.4fffb215f0caeb8e7532.png",
     "static/media/Wegweiser_logo.png": "/static/media/Wegweiser_logo.a2f94986069c1895cf6e.png",
     "static/media/AlleFragen.png": "/static/media/AlleFragen.d20e0ec327d2dba747f6.png",
@@ -58,11 +58,11 @@
     "static/media/cross-icon.svg": "/static/media/cross-icon.17648e90379eb58fc516694bef79f83d.svg",
     "static/media/check-icon.svg": "/static/media/check-icon.721d68647ede2f838e805e7ca81a1970.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.164cedbd36f8d732060026564168596d.svg",
-    "main.cd3db74d.css.map": "/static/css/main.cd3db74d.css.map",
-    "main.1c5b1565.js.map": "/static/js/main.1c5b1565.js.map"
+    "main.dc11e679.css.map": "/static/css/main.dc11e679.css.map",
+    "main.49a64cfe.js.map": "/static/js/main.49a64cfe.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd3db74d.css",
-    "static/js/main.1c5b1565.js"
+    "static/css/main.dc11e679.css",
+    "static/js/main.49a64cfe.js"
   ]
 }

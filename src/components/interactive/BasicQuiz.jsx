@@ -1,5 +1,10 @@
 import React, { useState, useCallback, useMemo, useEffect } from "react";
 
+/**
+ * Function to shuffle a array using the Fisher-Yates algorithm.
+ * @param {Array} array - Array to shuffle
+ * @returns {Array} - shuffled array
+ */
 function shuffleArray(array) {
   let currentIndex = array.length,
     randomIndex;
@@ -15,6 +20,16 @@ function shuffleArray(array) {
   return newArray;
 }
 
+/**
+ * Renders a single quiz question with selectable answer options
+ * @param {Object} props
+ * @param {Object} props.questionData - The question data, including question text and answer options
+ * @param {Array} props.shuffledOptions - The shuffled answer options for the question
+ * @param {number|number[]} props.selectedAnswer - The currently selected answer(s)
+ * @param {Function} props.onAnswerSelect - Callback function to handle answer selection
+ * @param {boolean} props.showAnswerState - Flag to indicate whether to show the correct answer state
+ * @returns {JSX.Element}
+ */
 const Question = ({
   questionData,
   shuffledOptions,
@@ -66,7 +81,7 @@ const Question = ({
         </i>
       </div>
       <fieldset
-        className="mt-4 p-4 rounded-md"
+        className="mt-4 py-4 rounded-md"
         aria-labelledby={legendId}
         role={!isMultipleChoice ? "radiogroup" : undefined}>
         <legend className="text-sm font-medium text-gray-600 dark:text-gray-400 px-1 sr-only">
@@ -131,13 +146,13 @@ const Question = ({
                         : handleRadioChange(originalIndex)
                     }
                     disabled={showAnswerState}
-                    className={`h-4 w-4 appearance-auto mr-3 ${
+                    className={`h-4 w-4 ux-button appearance-auto mr-3 ${
                       isMultipleChoice ? "rounded" : "rounded-full"
                     } text-blue-600 dark:text-blue-500 focus:ring-0 focus:outline-none hover:bg-transparent hover:border-transparent dark:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed`}
                   />
                   <span
-                    className={`text-sm font-medium select-none flex-grow flex items-center justify-between transition-colors duration-200 ${textStyleClasses} ${hoverTextColor}`}>
-                    <span>{item.text}</span>
+                    className={`text-sm font-medium select-none flex-grow flex items-center justify-between ${textStyleClasses} ${hoverTextColor}`}>
+                    <span className="text-inherit">{item.text}</span>
                     <span className="ml-2 w-4 text-center">
                       {showAnswerState && isCorrect && (
                         <span className="text-green-600 dark:text-green-400">
@@ -165,6 +180,15 @@ const Question = ({
   );
 };
 
+/**
+ * A component that displays the result of a quiz and offers a button to restart.
+ *
+ * @param {Object} props
+ * @param {number} props.score - The number of correct answers.
+ * @param {number} props.totalQuestions - The total number of questions in the quiz.
+ * @param {function} props.onRestart - A function to be called when wished to restart the quiz.
+ * @returns {JSX.Element}
+ */
 const QuizResult = ({ score, totalQuestions, onRestart }) => {
   return (
     <div className="text-center">
@@ -183,6 +207,18 @@ const QuizResult = ({ score, totalQuestions, onRestart }) => {
   );
 };
 
+/**
+ * Main component for rendering the quiz interface and mangeing state.
+ *
+ * @param {Object} props
+ * @param {Array} props.quizData - The array of quiz questions.
+ *   Each question object should have the following properties:
+ *   - `options`: An array of strings representing the answer options.
+ *   - `correctAnswer`: A string or an array of strings representing the correct
+ *     answer(s). If `correctAnswer` is an array, it will be treated as a
+ *     multiple-choice question with multiple correct answers.
+ * @returns {JSX.Element}
+ */
 const BasicQuiz = ({ quizData }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);

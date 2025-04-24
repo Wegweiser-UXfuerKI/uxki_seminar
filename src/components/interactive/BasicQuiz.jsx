@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useMemo, useEffect } from "react";
+import BaseButton from "../1_elements/BaseButton";
 
 /**
  * Function to shuffle a array using the Fisher-Yates algorithm.
@@ -75,13 +76,11 @@ const Question = ({
         {questionText}
       </h2>
       <div className="smallTextSize">
-        <i>
-          Wähle die{" "}
-          {isMultipleChoice ? "richtigen Antworten" : "richtige Antwort"} aus
-        </i>
+        Wähle die{" "}
+        {isMultipleChoice ? "richtigen Antworten" : "richtige Antwort"} aus
       </div>
       <fieldset
-        className="mt-4 py-4 rounded-md"
+        className="mt-4 py-4"
         aria-labelledby={legendId}
         role={!isMultipleChoice ? "radiogroup" : undefined}>
         <legend className="text-sm font-medium text-gray-600 dark:text-gray-400 px-1 sr-only">
@@ -108,14 +107,14 @@ const Question = ({
             if (showAnswerState) {
               if (isCorrect) {
                 optionStyleClasses =
-                  "border bg-green-100 dark:bg-green-900/50 border-green-500 dark:border-green-700";
+                  "border bg-[#c9e8e2] dark:bg-[#1e3b3a] border-[#77d1cb] dark:border-[#77d1cb]";
                 textStyleClasses =
-                  "text-green-800 dark:text-green-200 font-semibold";
+                  "text-[#2e5f5c] dark:text-[#c9e8e2] font-semibold";
               } else if (isSelected && !isCorrect) {
                 optionStyleClasses =
-                  "border bg-red-100 dark:bg-red-900/50 border-red-500 dark:border-red-700";
+                  "border bg-[#f6d3dd] dark:bg-[#3f2a32] border-[#d1779a] dark:border-[#d1779a]";
                 textStyleClasses =
-                  "text-red-800 dark:text-red-200 font-semibold";
+                  "text-[#5f2e3d] dark:text-[#f6d3dd] font-semibold";
               } else {
                 optionStyleClasses =
                   "border border-gray-200 dark:border-gray-700 opacity-75";
@@ -125,12 +124,12 @@ const Question = ({
             return (
               <div
                 key={originalIndex}
-                className={`group rounded-md transition-colors duration-200 ${
+                className={`group rounded-md transition-colors ${
                   !showAnswerState ? "" : "cursor-default"
                 }`}>
                 <label
                   htmlFor={inputId}
-                  className={`ux-button flex items-center p-2 relative w-full h-full rounded-md ${optionStyleClasses} ${
+                  className={`ux-button flex items-center px-6 py-3 rounded-xl relative w-full h-full ${optionStyleClasses} ${
                     !showAnswerState ? "cursor-pointer" : "cursor-default"
                   }`}
                   style={showAnswerState ? { pointerEvents: "none" } : {}}>
@@ -148,19 +147,19 @@ const Question = ({
                     disabled={showAnswerState}
                     className={`h-4 w-4 ux-button appearance-auto mr-3 ${
                       isMultipleChoice ? "rounded" : "rounded-full"
-                    } text-blue-600 dark:text-blue-500 focus:ring-0 focus:outline-none hover:bg-transparent hover:border-transparent dark:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed`}
+                    } accent-[var(--vb)] hover:accent-[var(--vb)] focus:accent-[var(--vb)] checked:accent-[var(--vb)] text-[var(--vb)] focus:ring-2 focus:ring-[var(--vb)] hover:border-[var(--vb)] border-2 dark:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed`}
                   />
                   <span
                     className={`text-sm font-medium select-none flex-grow flex items-center justify-between ${textStyleClasses} ${hoverTextColor}`}>
                     <span className="text-inherit">{item.text}</span>
                     <span className="ml-2 w-4 text-center">
                       {showAnswerState && isCorrect && (
-                        <span className="text-green-600 dark:text-green-400">
+                        <span className="text-[#2e5f5c] dark:text-[#c9e8e2]">
                           ✓
                         </span>
                       )}
                       {showAnswerState && isSelected && !isCorrect && (
-                        <span className="text-red-600 dark:text-red-400">
+                        <span className="text-[#5f2e3d] dark:text-[#f6d3dd]">
                           ✗
                         </span>
                       )}
@@ -191,18 +190,18 @@ const Question = ({
  */
 const QuizResult = ({ score, totalQuestions, onRestart }) => {
   return (
-    <div className="text-center">
+    <div className="text-center flex flex-col justify-center items-center">
       <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">
         Quiz beendet!
       </h2>
       <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
         Dein Ergebnis: {score} von {totalQuestions} richtig beantwortet.
       </p>
-      <button
+      <BaseButton
         onClick={onRestart}
-        className="ux-button relative font-medium px-6 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 dark:focus:ring-offset-gray-900">
+        className="relative font-medium px-6 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 dark:focus:ring-offset-gray-900">
         Quiz neu starten
-      </button>
+      </BaseButton>
     </div>
   );
 };
@@ -317,30 +316,25 @@ const BasicQuiz = ({ quizData }) => {
     setHasScoredCurrentQuestion(false);
   };
 
-  const getButtonProps = () => {
-    if (questionState === "answering") {
-      return {
-        text: "Antworten prüfen",
-        onClick: handleCheckAnswer,
-        disabled: !isAnswerSelected(),
-      };
-    } else {
-      return {
-        text: isLastQuestion ? "Ergebnis anzeigen" : "Nächste Frage",
-        onClick: handleProceed,
-        disabled: false,
-      };
-    }
-  };
-
-  const buttonProps = getButtonProps();
-
   if (!currentQuestion || (shuffledOptions.length === 0 && !showResults)) {
     return <div className="text-center p-8">Lade Quiz...</div>;
   }
 
+  const buttonConfig =
+    questionState === "answering"
+      ? {
+          text: "Antworten prüfen",
+          action: handleCheckAnswer,
+          disabled: !isAnswerSelected(),
+        }
+      : {
+          text: isLastQuestion ? "Ergebnis anzeigen" : "Nächste Frage",
+          action: handleProceed,
+          disabled: false,
+        };
+
   return (
-    <div className="max-w-[960px] mx-auto my-8 px-6 md:p-8 glassBox no-hover rounded-xl overflow-hidden shadow-lg">
+    <div className="max-w-[960px] mx-auto my-8 md:p-16 sm:p-12 p-88 glassBox no-hover rounded-[48px] overflow-hidden shadow-lg">
       {!showResults ? (
         <>
           <Question
@@ -356,17 +350,15 @@ const BasicQuiz = ({ quizData }) => {
               <span className="mx-2"></span>
               Korrekte Antworten bisher: {score}
             </div>
-            <button
-              onClick={buttonProps.onClick}
-              disabled={buttonProps.disabled}
-              style={{
-                pointerEvents: buttonProps.disabled ? "none" : undefined,
-              }}
-              className={`ux-button relative font-medium px-5 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900 ${
-                buttonProps.disabled ? "opacity-50 cursor-not-allowed" : ""
-              }`}>
-              {buttonProps.text}
-            </button>
+            <BaseButton
+              onClick={buttonConfig.action}
+              disabled={buttonConfig.disabled}
+              className={`relative font-medium px-6 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900 ${
+                buttonConfig.disabled ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+              ariaLabel={buttonConfig.text}>
+              {buttonConfig.text}
+            </BaseButton>
           </div>
         </>
       ) : (

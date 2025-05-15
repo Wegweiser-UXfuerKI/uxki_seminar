@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "questionText": "Welchem Zweck dient die Klassifikation von KI-Systemen im EU AI Act?",
+    "options": [
+      "Dem Schutz öffentlicher Interessen wie Gesundheit, Sicherheit und Grundrechten",
+      "Der Förderung von Wettbewerb unter Anbietern",
+      "Der Vereinfachung von Produkttests",
+      "Der Kontrolle durch nationale Polizeibehörden"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Welche Merkmale kennzeichnen verbotene KI-Praktiken?",
+    "options": [
+      "Manipulation menschlichen Verhaltens mit potenziellem Schaden",
+      "Einsatz für Social Scoring durch Regierungen",
+      "Verwendung zur biometrischen Erkennung im öffentlichen Raum durch Strafverfolgung",
+      "Automatisierte Empfehlungen für Online-Shops"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 3,
+    "questionText": "Was muss bei der Feststellung einer verbotenen KI-Praxis geschehen?",
+    "options": [
+      "Die Nutzung muss sofort eingestellt werden",
+      "Das System darf in der EU nicht weiterentwickelt werden",
+      "Eine EU-Zertifizierung muss beantragt werden",
+      "Der Quellcode muss offengelegt werden"
+    ],
+    "correctAnswer": [0, 1]
+  },
+  {
+    "id": 4,
+    "questionText": "Worin liegt das Risiko bei Hochrisiko-KI-Systemen?",
+    "options": [
+      "Sie können Gesundheit, Sicherheit und Grundrechte erheblich beeinträchtigen",
+      "Sie beeinträchtigen ausschließlich wirtschaftliche Interessen",
+      "Sie erhöhen den Energieverbrauch signifikant",
+      "Sie ersetzen menschliche Arbeitskraft vollständig"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 5,
+    "questionText": "In welchen Bereichen gelten KI-Systeme typischerweise als hochriskant?",
+    "options": [
+      "Kritische Infrastrukturen, Bildung, Beschäftigung, Strafverfolgung",
+      "Freizeitgestaltung und Tourismus",
+      "Online-Werbung und Marketing",
+      "Digitale Unterhaltungssysteme"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 6,
+    "questionText": "Welche Anforderungen nennt Artikel 8 für Hochrisiko-KI-Systeme?",
+    "options": [
+      "Einhaltung von Standards unter Berücksichtigung des Systemzwecks und des Stands der Technik",
+      "Einsatz von Open-Source-Software",
+      "Begrenzung auf EU-Nutzer",
+      "Reduktion der Energieaufnahme"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 7,
+    "questionText": "Welche Maßnahmen verlangt Artikel 9 zum Risikomanagement?",
+    "options": [
+      "Kontinuierliche, iterative Risikoanalyse über den gesamten Lebenszyklus",
+      "Monatliche Statusberichte an die EU-Kommission",
+      "Verpflichtende Outsourcing-Kontrollen",
+      "Zufallstests mit realen Nutzerdaten"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 8,
+    "questionText": "Welche Anforderungen an Daten stellt Artikel 10?",
+    "options": [
+      "Daten müssen relevant, repräsentativ, fehlerfrei und vollständig sein",
+      "Daten dürfen ausschließlich aus EU-Ländern stammen",
+      "Nutzerfeedback muss regelmäßig einfließen",
+      "Daten müssen einmal jährlich erneuert werden"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 9,
+    "questionText": "Worum geht es in Artikel 11?",
+    "options": [
+      "Umfassende technische Dokumentation zur Demonstration der Einhaltung",
+      "Cybersicherheitsrichtlinien für Cloud-Anbieter",
+      "Verpflichtung zur Open-Source-Veröffentlichung",
+      "Einbindung von Nutzerforen in die Systementwicklung"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 10,
+    "questionText": "Was verlangt Artikel 12 von Betreibern hochriskanter KI-Systeme?",
+    "options": [
+      "Detaillierte Aufzeichnungen über Betrieb und Leistung",
+      "Tägliche Berichterstattung an nationale Behörden",
+      "Verpflichtende Videoüberwachung während der Nutzung",
+      "Automatisierte Selbstabschaltung bei Fehlern"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 11,
+    "questionText": "Welche Anforderung stellt Artikel 13 an den Umgang mit Nutzern?",
+    "options": [
+      "Bereitstellung klarer und verständlicher Informationen über das KI-System",
+      "Verzicht auf Erläuterungen zur Systemnutzung",
+      "Standardisierte Antwortzeiten von unter 1 Sekunde",
+      "Automatisierte Kontaktaufnahme mit Nutzern"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 12,
+    "questionText": "Was regelt Artikel 14 in Bezug auf Hochrisiko-KI-Systeme?",
+    "options": [
+      "Angemessene menschliche Aufsicht zur Überwachung der Systemleistung",
+      "Verpflichtung zur vollständigen Automatisierung",
+      "Reduktion des menschlichen Einflusses auf Entscheidungsprozesse",
+      "Vorrang maschineller Analyse bei Rechtsfragen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 13,
+    "questionText": "Welche Anforderungen formuliert Artikel 15?",
+    "options": [
+      "Hohe Genauigkeit, Robustheit und Cybersicherheit über den gesamten Lebenszyklus",
+      "Einheitliche Benutzeroberfläche in allen EU-Sprachen",
+      "Einschränkung der Nutzung auf EU-Staatsbürger",
+      "Tägliche Updates mit Sicherheitsdaten"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 14,
+    "questionText": "Welche Transparenzpflicht besteht für Systeme mit begrenztem Risiko?",
+    "options": [
+      "Benutzer müssen klar erkennen können, dass sie mit einem KI-System interagieren",
+      "Alle Funktionsweisen müssen veröffentlicht werden",
+      "Das System muss als Open Source verfügbar sein",
+      "Die Interaktion darf ausschließlich durch Sprache erfolgen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 15,
+    "questionText": "Was gilt für Systeme mit minimalem Risiko?",
+    "options": [
+      "Sie müssen nur bestehende Gesetze einhalten",
+      "Sie unterliegen vollständiger Regulierungsfreiheit",
+      "Sie benötigen eine vereinfachte Zertifizierung",
+      "Sie dürfen nur in privaten Haushalten eingesetzt werden"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 14,
+    "questionText": "Was ist Ziel eines KI-Managementsystems nach KIVO?",
+    "options": [
+      "Sicherstellung der regulatorischen Anforderungen und Risikomanagement",
+      "Reduzierung der Steuerlast für KI-Unternehmen",
+      "Maximierung der Gewinne durch KI-Automatisierung",
+      "Ausschluss menschlicher Einflussnahme"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 15,
+    "questionText": "Welche Anforderungen stellt ein KI-Managementsystem gemäß DIN 42001:2023?",
+    "options": [
+      "Systematischer und kontinuierlicher Ansatz zur Verwaltung von KI-Technologien",
+      "Monatliche Prüfung durch externe Prüfer",
+      "Vollständige Auslagerung an Drittanbieter",
+      "Ausschließliche Nutzung von Open-Source-Lösungen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 16,
+    "questionText": "Welche Elemente sind wesentliche Bestandteile eines KI-Managementsystems laut KIVO und DIN 42001:2023?",
+    "options": [
+      "Integration in bestehende Managementprozesse",
+      "Förderung von Verantwortung und Rechenschaftspflicht",
+      "Systematischer Umgang mit Risiken und Änderungen",
+      "Reduktion des Personalaufwands auf ein Minimum"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 17,
+    "questionText": "Warum ist die Definition von Rollen und Verantwortlichkeiten im KI-Managementsystem wichtig?",
+    "options": [
+      "Zur Förderung einer Kultur der Verantwortung und Rechenschaftspflicht",
+      "Um Verantwortlichkeiten vollständig auf externe Partner zu übertragen",
+      "Damit keine internen Kontrollen mehr nötig sind",
+      "Zur Umgehung rechtlicher Auflagen"
+    ],
+    "correctAnswer": [0]
+  }
+]

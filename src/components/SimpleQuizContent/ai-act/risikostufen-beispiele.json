@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "questionText": "Wie viele Risikostufen sieht der EU AI Act grundsätzlich für KI-Systeme vor?",
+    "options": ["Vier", "Drei", "Fünf", "Zwei"],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Welche Kategorie beschreibt ein System, das eine Gefahr für Sicherheit oder Grundrechte darstellen kann?",
+    "options": [
+      "Hohes Risiko",
+      "Unzulässig",
+      "Begrenztes Risiko",
+      "Minimales Risiko"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 3,
+    "questionText": "Welche Eigenschaften führen dazu, dass ein KI-System der niedrigsten Risikostufe zugeordnet wird?",
+    "options": [
+      "Es stellt keine signifikante Gefahr für Grundrechte oder Sicherheit dar",
+      "Es wird nicht für militärische Zwecke eingesetzt",
+      "Es wird nur zur Unterstützung und nicht zur Entscheidung genutzt",
+      "Es wird von einer Organisation innerhalb der EU eingesetzt"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 4,
+    "questionText": "Welche Pflichten ergeben sich für Anbieter eines Systems mit niedrigem Risiko?",
+    "options": [
+      "Registrierung des Systems in einer EU-Datenbank",
+      "Bereitstellung gesicherter Anfragen zur Einsicht durch EU-Behörden",
+      "Verpflichtung zu regelmäßigen externen Audits",
+      "Zulassung durch nationale Behörden vor der Markteinführung"
+    ],
+    "correctAnswer": [0, 1]
+  },
+  {
+    "id": 5,
+    "questionText": "Welche der folgenden Kriterien treffen auf einen Antrags-Assistenten zu?",
+    "options": [
+      "Das System trifft keine eigenständigen Entscheidungen",
+      "Das System beeinflusst potenziell den Zugang zu Leistungen",
+      "Das System wird für Social Scoring eingesetzt",
+      "Die Organisation nutzt das System innerhalb der EU"
+    ],
+    "correctAnswer": [0, 1, 3]
+  },
+  {
+    "id": 6,
+    "questionText": "In welche Risikostufe fällt ein Antrags-Assistent gemäß EU AI Act?",
+    "options": [
+      "Minimales Risiko",
+      "Begrenztes Risiko",
+      "Hohes Risiko",
+      "Unzulässig"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 7,
+    "questionText": "Welche Aussagen treffen auf das KI-Tiersystem aus Beispiel 2 zu?",
+    "options": [
+      "Die Datenverarbeitung findet außerhalb der EU statt",
+      "Das System wird nicht für Grenzkontrollmanagement verwendet",
+      "Es handelt sich um ein System mit hohem Risiko",
+      "Die Organisation unterliegt trotzdem Transparenzpflichten in der EU"
+    ],
+    "correctAnswer": [0, 1, 3]
+  },
+  {
+    "id": 8,
+    "questionText": "Was ist bei der Risikoeinstufung von KI-Systemen besonders zu beachten?",
+    "options": [
+      "Ob der Anbieter und der Nutzende dieselbe juristische Einheit sind",
+      "Ob das System für emotionale Beeinflussung entwickelt wurde",
+      "Alleinig der Einsatzzweck des Systems",
+      "Der geografische Einsatzort und regulatorische Rahmenbedingungen"
+    ],
+    "correctAnswer": [0, 3]
+  },
+  {
+    "id": 9,
+    "questionText": "Welche Pflichten bestehen für ein Unternehmen außerhalb der EU, das KI-Systeme innerhalb der EU einsetzt?",
+    "options": [
+      "Einhalten der Transparenzpflichten des EU AI Acts",
+      "Registrierung des Systems in der EU",
+      "Anwendung der DSGVO-Regeln",
+      "Entwicklung von Open-Source-Modellen"
+    ],
+    "correctAnswer": [0, 1]
+  }
+]

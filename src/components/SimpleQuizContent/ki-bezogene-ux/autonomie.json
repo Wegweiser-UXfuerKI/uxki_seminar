@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was beschreibt die wahrgenommene Autonomie bei der Nutzung eines KI-Systems?",
+    "options": [
+      "Die Fähigkeit des Systems, Entscheidungen ohne den Nutzer zu treffen",
+      "Das Gefühl des Nutzers, selbstständig handeln und entscheiden zu können",
+      "Die Geschwindigkeit, mit der das System arbeitet",
+      "Die Anzahl der Funktionen, die das System bietet"
+    ],
+    "correctAnswer": [1]
+  },
+  {
+    "id": 2,
+    "questionText": "Was sind die vier Stufen der Informationsverarbeitung laut Parasuraman, Sheridan und Wickens (2000)?",
+    "options": [
+      "Informationsbeschaffung",
+      "Entscheidungsfindung",
+      "Kommunikation",
+      "Handlungsausführung",
+      "Informationsanalyse"
+    ],
+    "correctAnswer": [0, 1, 3, 4]
+  },
+  {
+    "id": 3,
+    "questionText": "Welche Faktoren beeinflussen laut Parasuraman et al. (2000) die menschliche Leistung bei der Automatisierung?",
+    "options": [
+      "Situationsbewusstsein",
+      "Vertrauen",
+      "Abbau von Fähigkeiten",
+      "Arbeitsbelastung",
+      "Soziale Interaktion"
+    ],
+    "correctAnswer": [0, 1, 2, 3]
+  },
+  {
+    "id": 4,
+    "questionText": "Was ist ein Vorteil der anpassbaren Automatisierung?",
+    "options": [
+      "Das System entscheidet selbstständig",
+      "Sie passt sich automatisch an Umweltbedingungen an",
+      "Der Benutzer kann das Automatisierungsniveau manuell wählen",
+      "Sie reduziert die Arbeitsbelastung"
+    ],
+    "correctAnswer": [2]
+  },
+  {
+    "id": 5,
+    "questionText": "Welche Aussage beschreibt eine potenzielle Schwäche der selbstanpassenden Automatisierung?",
+    "options": [
+      "Sie kann zu höherer Arbeitsbelastung führen",
+      "Der Nutzer verliert möglicherweise die Kontrolle",
+      "Sie ist nur in medizinischen Kontexten einsetzbar",
+      "Sie ignoriert den Zustand des Benutzers"
+    ],
+    "correctAnswer": [1]
+  },
+  {
+    "id": 6,
+    "questionText": "Wodurch kann laut Kaber & Endsley (2004) das Situationsbewusstsein verbessert werden?",
+    "options": [
+      "Durch vollständige Automatisierung",
+      "Durch mittleres Automatisierungsniveau",
+      "Durch vollständige Kontrolle des Nutzers",
+      "Durch adaptive Automatisierung in dynamischen Umgebungen"
+    ],
+    "correctAnswer": [1, 3]
+  },
+  {
+    "id": 7,
+    "questionText": "Was zeigt die Studie von Rieger et al. (2022) über die Wahrnehmung von klassischen und KI-basierten Automatisierungssystemen?",
+    "options": [
+      "Menschen bevorzugen grundsätzlich klassische Systeme gegenüber KI-Systemen.",
+      "KI-Systeme werden als vollständig transparent wahrgenommen.",
+      "Beide Systeme werden häufig als Black Boxes wahrgenommen.",
+      "Klassische Systeme gelten als objektiver als KI-Systeme."
+    ],
+    "correctAnswer": [2]
+  },
+  {
+    "id": 8,
+    "questionText": "Welche Aussage trifft auf die Self-Determination Theory (SDT) nach Deci & Ryan zu?",
+    "options": [
+      "Sie betont technische Effizienz als Hauptziel",
+      "Sie beschreibt Bedürfnisse wie Autonomie, Kompetenz und Verbundenheit",
+      "Sie zielt nur auf Arbeitskontexte ab",
+      "Sie lehnt Automatisierung grundsätzlich ab"
+    ],
+    "correctAnswer": [1]
+  },
+  {
+    "id": 9,
+    "questionText": "Welche Bedürfnisse umfasst die Selbstbestimmungstheorie (SDT)?",
+    "options": [
+      "Autonomie",
+      "Kompetenz",
+      "Verbundenheit",
+      "Effizienz",
+      "Transparenz"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 10,
+    "questionText": "Was misst die BPN-TU Skala?",
+    "options": [
+      "Die Befriedigung psychologischer Grundbedürfnisse bei der Nutzung von Technologie",
+      "Die technische Reife eines KI-Systems",
+      "Die Präferenz für bestimmte Automatisierungstypen",
+      "Den Energieverbrauch von KI-Systemen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 22,
+    "questionText": "Welche der folgenden gehören zu den fünf Design-Guidelines für eine gute User Experience in Mensch-KI-Systemen?",
+    "options": [
+      "Adaptive Automatisierung ermöglichen",
+      "Situationsbewusstsein unterstützen",
+      "Flexibilität bei der Informationsverarbeitung",
+      "Transparenz sicherstellen",
+      "Nutzerzentrierte Anpassung",
+      "Nutzer durch Automatisierung ersetzen"
+    ],
+    "correctAnswer": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 24,
+    "questionText": "Wie könnte ein Verkehrsmanagementsystem adaptive Automatisierung unterstützen?",
+    "options": [
+      "Indem es verschiedene Automatisierungsstufen bietet, die flexibel angepasst werden können",
+      "Indem es ausschließlich manuell gesteuert wird",
+      "Indem es automatisch ohne menschlichen Eingriff operiert",
+      "Indem es alle Entscheidungen an eine KI delegiert"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 25,
+    "questionText": "Welche Funktionen könnten Notfallmanagementsysteme bereitstellen, um das Situationsbewusstsein zu unterstützen?",
+    "options": [
+      "Echtzeitdaten und anpassbare Handlungsempfehlungen",
+      "Reine Datenprotokollierung für spätere Analysen",
+      "Manuelle Kontrolle ohne automatisierte Hilfestellung",
+      "Standardisierte Abläufe ohne Kontextinformationen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 23,
+    "questionText": "Was könnten sinnvolle Mittel sein, um bei Umweltüberwachungssystemen Flexibilität bei der Informationsverarbeitung zu ermöglichen?",
+    "options": [
+      "Benutzerdefinierbare Datenkategorien und Analyseebenen",
+      "Feste Datenformate und automatische Auswertung",
+      "Standardisierte Berichterstattung ohne Nutzereingriff",
+      "Echtzeitverarbeitung ohne Anpassungsmöglichkeiten"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 26,
+    "questionText": "Was könnte ein medizinisches Diagnosetool tun, um mehr Transparenz und Vertrauen zu schaffen?",
+    "options": [
+      "Die Entscheidungslogik und zugrundeliegenden Daten offenlegen",
+      "Nur das Endergebnis anzeigen",
+      "Diagnosen ausschließlich auf Basis externer Gutachten generieren",
+      "Diagnosevorschläge zufällig variieren"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 27,
+    "questionText": "Wie könnte eine Smart City Mobilitätsplattform nutzerzentrierte Anpassung fördern?",
+    "options": [
+      "Indem sie auf individuelle Präferenzen und Ziele eingeht",
+      "Indem sie pauschale Routen für alle Nutzer empfiehlt",
+      "Indem sie nur umweltfreundliche Optionen bereitstellt",
+      "Indem sie automatisch die schnellste Route auswählt"
+    ],
+    "correctAnswer": [0]
+  }
+]

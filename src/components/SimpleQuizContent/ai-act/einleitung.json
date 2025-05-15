@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was ist das Hauptziel des EU AI Acts?",
+    "options": [
+      "Einen vertrauenswürdigen und rechtskonformen Umgang mit KI-Systemen in der EU zu ermöglichen",
+      "Den Ausbau der militärischen Nutzung von KI innerhalb der EU zu fördern",
+      "Nur wirtschaftliche Interessen europäischer Unternehmen zu schützen",
+      "Ein weltweites Monopol für europäische KI-Unternehmen zu schaffen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Welchen internationalen Anspruch verfolgt der EU AI Act?",
+    "options": [
+      "Er soll als globaler Standard ähnlich der DSGVO fungieren",
+      "Er richtet sich ausschließlich an europäische Unternehmen",
+      "Er soll nur innerhalb der EU gültig sein",
+      "Er soll bestehende US-amerikanische Gesetze ersetzen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 3,
+    "questionText": "Wie geht das Vereinigte Königreich mit der Regulierung von KI um?",
+    "options": [
+      "Es setzt auf internationale Leitlinien und freiwillige Vereinbarungen wie die Bletchley Declaration",
+      "Es hat den EU AI Act vollständig übernommen",
+      "Es hat noch keinerlei Regelungen zur KI getroffen",
+      "Es verwendet ausschließlich chinesische KI-Regelungen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 4,
+    "questionText": "Was sind sogenannte 'Frontier-Systeme'?",
+    "options": [
+      "KI-Grundlagenmodelle, die universell einsetzbar sind",
+      "Veraltete KI-Systeme mit geringer Leistung",
+      "KI-Systeme, die nur militärisch genutzt werden dürfen",
+      "Chatbots mit geringem Risiko"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 5,
+    "questionText": "Welche Haltung zeigt die USA derzeit zur KI-Regulierung?",
+    "options": [
+      "Es gibt bisher keine einheitliche nationale Gesetzgebung, nur sektorale und bundesstaatliche Initiativen",
+      "Die USA haben ein umfassendes KI-Gesetz verabschiedet, das dem EU AI Act gleicht",
+      "KI-Regulierung ist in den USA verboten",
+      "Die USA folgen ausschließlich den Regeln der EU"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 6,
+    "questionText": "Was ist der 'Blueprint for an AI Bill of Rights' in den USA?",
+    "options": [
+      "Ein Leitlinienpapier zum Schutz der Bürgerrechte im Zusammenhang mit KI",
+      "Ein Gesetz zur Überwachung von KI-Nutzer:innen",
+      "Ein internationales Handelsabkommen für KI-Produkte",
+      "Ein Vorschlag zur Einschränkung von KI-Forschung"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 7,
+    "questionText": "Welches Ziel verfolgt Kanada mit dem AIDA (Artificial Intelligence and Data Act)?",
+    "options": [
+      "Die Regulierung risikoreicher KI-Systeme zur Wahrung der Sicherheit und Grundrechte",
+      "Den Export von KI-Systemen zu fördern",
+      "Alle KI-Systeme vollständig zu verbieten",
+      "Nur KI im Finanzsektor zu regulieren"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 8,
+    "questionText": "Was unterscheidet den kanadischen Regulierungsansatz vom EU AI Act?",
+    "options": [
+      "Er ist flexibler und stärker auf Kooperation und Innovation ausgelegt",
+      "Er ist restriktiver und verbietet fast alle Hochrisiko-KI-Anwendungen",
+      "Er basiert ausschließlich auf UN-Richtlinien",
+      "Er ist identisch mit dem US-amerikanischen Ansatz"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 9,
+    "questionText": "Welche Risikokategorien für KI-Systeme sieht der EU AI Act vor?",
+    "options": [
+      "Unzulässig, hoch, begrenzt, minimal",
+      "Niedrig, mittel, hoch, kritisch",
+      "Empfohlen, bedenklich, neutral",
+      "Genehmigt, geprüft, gesperrt"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 10,
+    "questionText": "Was ist ein Beispiel für ein Hochrisiko-KI-System laut dem EU AI Act?",
+    "options": [
+      "Ein KI-Diagnosetool in einem Krankenhaus",
+      "Ein Chatbot auf einer Spieleseite",
+      "Ein automatisiertes Musikvorschlagsystem",
+      "Ein Rechtschreibprüfungsprogramm"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 11,
+    "questionText": "Wer ist laut EU AI Act verpflichtet, die Anforderungen zu erfüllen?",
+    "options": [
+      "Entwickler:innen, Anbieter:innen und Anwender:innen von KI-Technologien innerhalb der EU",
+      "Nur Endnutzer:innen von KI-Systemen wie ChatGPT",
+      "Ausschließlich Großkonzerne aus der IT-Branche",
+      "Nur Behörden und öffentliche Institutionen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 12,
+    "questionText": "Was droht bei Verstößen gegen den EU AI Act?",
+    "options": [
+      "Bußgelder von bis zu 35 Millionen Euro oder 7% des weltweiten Jahresumsatzes",
+      "Die sofortige Stilllegung der gesamten IT-Infrastruktur",
+      "Gefängnisstrafen für Endnutzer:innen",
+      "Ein Exportverbot für KI-Produkte"
+    ],
+    "correctAnswer": [0]
+  }
+]

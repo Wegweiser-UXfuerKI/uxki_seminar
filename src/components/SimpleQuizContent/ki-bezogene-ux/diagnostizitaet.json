@@ -1,0 +1,113 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was beschreibt die wahrgenommene Diagnostizität eines Systems?",
+    "options": [
+      "Wie nützlich ein System für fundierte Entscheidungen ist",
+      "Wie verständlich die Benutzeroberfläche des Systems ist",
+      "Wie schnell ein System auf Eingaben reagiert",
+      "Wie viele Funktionen ein System anbietet"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Warum ist Diagnostizität aus psychologischer Sicht wichtig?",
+    "options": [
+      "Weil sie hilft, gezielte Entscheidungen zu treffen",
+      "Weil sie die Nutzerfreundlichkeit eines Systems erhöht",
+      "Weil sie die Ladezeit von Systemen verkürzt",
+      "Weil sie komplexe Systeme attraktiver macht"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 3,
+    "questionText": "Was ist laut Nelson (2005) ein potenzielles Problem bei der Einschätzung von Diagnostizität?",
+    "options": [
+      "Nutzer schätzen Informationen als hilfreich ein, obwohl sie nicht diagnostisch sind",
+      "Systeme sind oft zu langsam bei der Informationsverarbeitung",
+      "Nutzer verlassen sich ausschließlich auf ihr Bauchgefühl",
+      "Systeme liefern zu viele Informationen gleichzeitig"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 4,
+    "questionText": "Was versteht man unter 'Pseudo-Diagnosen' nach Kern & Doherty (1982)?",
+    "options": [
+      "Fehlentscheidungen durch scheinbar hilfreiche, aber irrelevante Informationen",
+      "Diagnosen, die ausschließlich KI-basiert erfolgen",
+      "Diagnosen ohne medizinische Grundlage",
+      "Automatisch generierte Diagnosen durch Laien"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 5,
+    "questionText": "Was ist der Unterschied zwischen Informationswert und Diagnostizität?",
+    "options": [
+      "Diagnostizität hilft beim Unterscheiden konkreter Optionen, Informationswert reduziert generelle Unsicherheit",
+      "Informationswert ist ein Maß für das Vertrauen, Diagnostizität für die Verlässlichkeit",
+      "Beide Begriffe meinen exakt dasselbe",
+      "Diagnostizität bezieht sich nur auf Gesundheitsinformationen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 6,
+    "questionText": "Warum ist die wahrgenommene Diagnositzität entscheident für die Vertrauenswürdigkeit und Nutzung von System nach Schrills und Franke (2023)??",
+    "options": [
+      "Detaillierte Informationen fördern Vertrauen und Zufriedenheit",
+      "Technische Ausstattung der App ist entscheidend",
+      "Nutzer bevorzugen allgemeine Informationen gegenüber diagnostischen Details",
+      "Apps mit einfachen Designs erzielen bessere Ergebnisse"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 7,
+    "questionText": "Was bedeutet 'probability matching' laut Bartlett und McCarley (2017)?",
+    "options": [
+      "Anpassung der Entscheidungen an die allgemeine Systemzuverlässigkeit",
+      "Optimierung der Diagnosen auf Basis echter Wahrscheinlichkeiten",
+      "Gleichmäßige Verteilung von Diagnosen",
+      "Ausschließlich auf Symptome bezogene Entscheidungen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 8,
+    "questionText": "Was misst die wahrgenommene Ergebnisdiagnostik?",
+    "options": [
+      "Wie hilfreich bereitgestellte Informationen für Entscheidungen sind",
+      "Wie intuitiv die Oberfläche des Systems gestaltet ist",
+      "Wie effizient Nutzer Daten analysieren",
+      "Wie viele Informationen ein System insgesamt liefert"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 9,
+    "questionText": "Welche Zielsetzung haben Fragebögen zur Diagnostizität und Vertrauenswürdigkeit?",
+    "options": [
+      "Sie erfassen die wahrgenommene Präzision und Klarheit von Systeminformationen",
+      "Sie bewerten die grafische Gestaltung der Benutzeroberfläche",
+      "Sie vergleichen verschiedene KI-Modelle miteinander",
+      "Sie messen die Reaktionsgeschwindigkeit eines Systems"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 10,
+    "questionText": "Welche der folgenden Design-Guidelines helfen in der XAI dabei, Vertrauen in KI zu stärken?",
+    "options": [
+      "Kontrafaktische Erklärungen",
+      "Semantische Anreicherung und Heatmaps",
+      "Konfidenzbewertungen",
+      "Lokale Feature-Relevanz",
+      "Geschwindigkeit des Systems"
+    ],
+    "correctAnswer": [0, 1, 2, 3]
+  }
+]

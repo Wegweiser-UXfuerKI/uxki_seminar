@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was beschreibt mentale Arbeitsbelastung am besten?",
+    "options": [
+      "Den kognitiven Aufwand zur Verarbeitung von Informationen und Durchführung von Aufgaben",
+      "Die Anzahl der erledigten Aufgaben pro Stunde",
+      "Die körperliche Ermüdung nach einem Arbeitstag",
+      "Die Anzahl der Fehlentscheidungen im Arbeitsprozess"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Warum ist mentale Arbeitsbelastung besonders relevant im Kontext erklärbarer KI (XAI)?",
+    "options": [
+      "Erklärungen können die kognitive Belastung erhöhen",
+      "Zu viele Informationen können die Nutzung erschweren",
+      "Sie dient als Metrik zur Bewertung von XAI-Systemen",
+      "Weil KI keine Entscheidungen trifft"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 3,
+    "questionText": "Was könnte passieren, wenn Nutzende gezwungen sind, stärker über Entscheidungen nachzudenken?",
+    "options": [
+      "Sie könnten die Methode meiden, obwohl sie nützlich ist",
+      "Sie nutzen die Methode lieber als einfache Empfehlungen",
+      "Sie treffen immer bessere Entscheidungen",
+      "Ihre Motivation steigt automatisch"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 4,
+    "questionText": "Was zeigte die Studie von Schrills und Franke (2023) zu AID-Systemen?",
+    "options": [
+      "Zu viele Informationen können Entscheidungsfindung beeinträchtigen",
+      "Mehr Erklärungen verbessern immer die Entscheidungsqualität",
+      "Hohe Automatisierung reduziert automatisch die Belastung",
+      "Die Nutzer wünschten sich mehr technische Details"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 5,
+    "questionText": "Welche Dimensionen umfasst der NASA-TLX Fragebogen?",
+    "options": [
+      "Mentale Anforderungen",
+      "Zeitliche Anforderungen",
+      "Frustration",
+      "Erklärungstiefe"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 6,
+    "questionText": "Was ist das Ziel des NASA-TLX?",
+    "options": [
+      "Erfassung der kognitiven Belastung in verschiedenen Arbeitsumgebungen",
+      "Messung von KI-Vertrauen",
+      "Erhebung der Nutzerzufriedenheit bei Softwaretests",
+      "Bestimmung des Energieverbrauchs von IT-Systemen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 7,
+    "questionText": "Welche Design-Guidelines können zur Reduktion kognitiver Belastung angewendet werden?",
+    "options": [
+      "Vereinfachung von Informationen, Anpassbarkeit der Informationsmenge",
+      "Fokussierung auf kritische Informationen, Automatisierung von Routinetätigkeiten",
+      "Erhöhung der Informationsdichte, Förderung manueller Kontrolle",
+      "Maximale Offenlegung aller Daten gleichzeitig, ohne Filter oder Priorisierung"
+    ],
+    "correctAnswer": [0, 1]
+  }
+]

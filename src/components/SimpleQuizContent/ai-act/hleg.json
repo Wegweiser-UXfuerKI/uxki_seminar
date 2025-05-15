@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "questionText": "Welche Ziele verfolgt die High-Level Expert Group on Artificial Intelligence?",
+    "options": [
+      "Stärkung von Vertrauen, Schutz ethischer Prinzipien, Förderung technischer Exzellenz, Wettbewerbsfähigkeit Europas",
+      "Entwicklung militärischer KI-Anwendungen",
+      "Förderung des KI-Markts in Asien",
+      "Abschaffung regulatorischer Standards"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Was sind die drei Hauptkomponenten vertrauenswürdiger KI laut HLEG?",
+    "options": [
+      "Gesetzeskonformität, Ethik, Robustheit",
+      "Autonomie, Transparenz, Effizienz",
+      "Wettbewerbsfähigkeit, Innovation, Offenheit",
+      "Zuverlässigkeit, Datenschutz, Energieverbrauch"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 3,
+    "questionText": "Welche der folgenden Anforderungen gehören zu den sieben Anforderungen der HLEG?",
+    "options": [
+      "Menschliche Autonomie und Aufsicht",
+      "Technische Robustheit und Sicherheit",
+      "Transparenz",
+      "Monetäre Optimierung"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 4,
+    "questionText": "Welche Maßnahmen fördern Transparenz in KI-Systemen?",
+    "options": [
+      "Nachvollziehbare und erklärbare Entscheidungen",
+      "Verwendung geschlossener, nicht überprüfbarer Modelle",
+      "Verzicht auf Erklärungen zur Funktionsweise",
+      "Zentralisierung aller Entscheidungen bei der KI"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 5,
+    "questionText": "Welche Aspekte berücksichtigt die Anforderung zu Vielfalt, Nichtdiskriminierung und Fairness?",
+    "options": [
+      "Vermeidung diskriminierender Effekte",
+      "Inklusive Gestaltung für alle Nutzergruppen",
+      "Berücksichtigung demografischer Unterschiede",
+      "Maximale Reduktion der Modellkomplexität"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 6,
+    "questionText": "Was ist unter Rechenschaftspflicht in Bezug auf KI-Systeme zu verstehen?",
+    "options": [
+      "Klare Verantwortlichkeiten und Überprüfbarkeit",
+      "Ausschluss menschlicher Kontrolle",
+      "Selbstregulierung der Systeme ohne Eingriffsmöglichkeiten",
+      "Verschleierung von Entscheidungswegen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 7,
+    "questionText": "Wodurch unterscheidet sich der Ansatz des EU AI Acts von dem der HLEG?",
+    "options": [
+      "Risikobasierte Regulierung statt allgemeiner ethischer Leitlinien",
+      "Fokus auf religiöse Normen",
+      "Reduktion ethischer Anforderungen",
+      "Abschaffung technischer Standards"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 8,
+    "questionText": "Welche Aspekte betont die HLEG stärker als der EU AI Act?",
+    "options": [
+      "Vielfalt und gesellschaftlich-ökologisches Wohlergehen",
+      "Importregeln für KI-Produkte",
+      "Nutzerfreundlichkeit von Software",
+      "Technische Optimierung von Servern"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 9,
+    "questionText": "Welche Risikokategorien kennt der EU AI Act?",
+    "options": [
+      "Verbotene Praktiken, Hochrisiko, eingeschränktes Risiko, minimales Risiko",
+      "Gefahrgut, Bio-Risiko, automatisierte Fehler",
+      "Sicherheitsrelevante und kreative KI-Systeme",
+      "Wirtschaftsnahe und konsumorientierte Systeme"
+    ],
+    "correctAnswer": [0]
+  }
+]

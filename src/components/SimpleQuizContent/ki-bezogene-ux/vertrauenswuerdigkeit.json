@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was beschreibt die wahrgenommene Vertrauenswürdigkeit in KI-Systemen?",
+    "options": [
+      "Das Vertrauen von Nutzenden basierend auf Wahrnehmung von Zuverlässigkeit, Verständlichkeit und Ethik",
+      "Die Fähigkeit eines Systems, selbstständig Entscheidungen zu treffen",
+      "Die Anzahl der Nutzer eines Systems",
+      "Die Geschwindigkeit der Informationsverarbeitung in KI"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Welche drei Faktoren beschreiben laut Mayer et al. (1995) Vertrauen in Systeme?",
+    "options": [
+      "Fähigkeit, Wohlwollen, Integrität",
+      "Effizienz, Leistung, Transparenz",
+      "Nutzerbindung, Genauigkeit, Fairness",
+      "Reputation, Relevanz, Nutzerfreundlichkeit"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 3,
+    "questionText": "Welche Aspekte beschreiben Vertrauen laut Lee & See (2004)?",
+    "options": [
+      "Leistung, Zweck, Prozess",
+      "Genauigkeit, Sicherheit, Datenschutz",
+      "Verlässlichkeit, Fairness, Geschwindigkeit",
+      "Empathie, Interaktivität, Umfang"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 4,
+    "questionText": "Was ist affektives Vertrauen nach Madsen und Gregor (2000)?",
+    "options": [
+      "Emotionale Bindung basierend auf persönlichen Erfahrungen mit dem System",
+      "Vertrauen basierend auf wahrgenommener Leistung",
+      "Vertrauen, das auf statistischer Genauigkeit beruht",
+      "Vertrauen, das nur bei vollständiger Transparenz entsteht"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 5,
+    "questionText": "Welche Arten von Vertrauen unterscheidet das Modell von Hoff & Bashir (2015)?",
+    "options": [
+      "Dispositionelles Vertrauen, situatives Vertrauen, erlerntes Vertrauen",
+      "Affektives Vertrauen, kognitives Vertrauen, technisches Vertrauen",
+      "Individuelles Vertrauen, gruppenbasiertes Vertrauen, systemisches Vertrauen",
+      "Sofortiges Vertrauen, langfristiges Vertrauen, variables Vertrauen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 6,
+    "questionText": "Was sind laut Schlicker et al. (2022) Vertrauenswürdigkeits-Hinweise?",
+    "options": [
+      "Hinweise, die zeigen, wie zuverlässig ein System ist und wie es funktioniert",
+      "Indikatoren zur Informationsverarbeitung und zur Einschätzung der Systemkompetenz",
+      "Faktoren wie Herstellerreputation oder das Verhalten anderer Nutzer",
+      "Marketingbotschaften, die ein System als innovativ darstellen"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 7,
+    "questionText": "Welche Aussage beschreiben den Einfluss der Systemzuverlässigkeit auf Nutzervertrauen in KI-Systeme nach Schrills (2024)?",
+    "options": [
+      "Die wahrgenommene Zuverlässigkeit hat größeren Einfluss auf das Nutzerverhalten als die subjektive Vertrauenseinschätzung",
+      "Subjektives Vertrauen ist der stärkste Prädiktor für das Verhalten",
+      "Vertrauen in das System ist unabhängig von der Systemleistung",
+      "Nutzer verlassen sich mehr auf Bauchgefühl als auf Systemfeedback"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 8,
+    "questionText": "Was ist laut Vereschak et al. (2024) ein Einflussfaktor auf das Vertrauen in KI?",
+    "options": [
+      "Der menschliche Einfluss durch Entwickler und Stakeholder",
+      "Die Hintergrundfarbe des Interfaces",
+      "Die Dauer der Interaktion mit dem System",
+      "Die Herkunft der Datenquelle"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 9,
+    "questionText": "Welche Funktion erfüllt die Trust in Automation (TiA)-Skala?",
+    "options": [
+      "Sie misst das Vertrauen von Nutzenden in die Leistungsfähigkeit und Zuverlässigkeit automatisierter Systeme",
+      "Sie testet die emotionale Intelligenz von Nutzern im Umgang mit KI",
+      "Sie ermittelt die Reaktionszeit bei Nutzung automatisierter Systeme",
+      "Sie bewertet die Ästhetik von Benutzerschnittstellen in XAI"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 10,
+    "questionText": "Welche Design-Guidelines fördern die Vertrauenswürdigkeit von KI-Systemen?",
+    "options": [
+      "Transparenz und Verständlichkeit, Systemleistung, affektives Vertrauen, kontextbezogene Erklärungen",
+      "Maximale Datenmenge anzeigen, keine Rückmeldung, algorithmische Undurchsichtigkeit",
+      "Unpersönliche Benutzerführung, unregelmäßige Updates, fehlende Erklärungen",
+      "Nur auf technologische Merkmale fokussieren, keine Nutzerbeteiligung"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 11,
+    "questionText": "Welche der folgenden Punkte sind Design-Guidelines zur Förderung von Vertrauen in KI? ",
+    "options": [
+      "Förderung von Transparenz und Verständlichkeit",
+      "Stärkung des erlernten Vertrauens",
+      "Förderung von affektivem Vertrauen",
+      "Vermeidung von Nutzerfeedback"
+    ],
+    "correctAnswer": [0, 1, 2]
+  }
+]

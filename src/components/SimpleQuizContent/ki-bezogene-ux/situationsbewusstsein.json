@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was beschreibt Situationsbewusstsein am besten?",
+    "options": [
+      "Das Verstehen der Umgebung und ihrer Veränderungen zur Unterstützung von Entscheidungen",
+      "Die Fähigkeit, Maschinen zu programmieren",
+      "Das Vertrauen in künstliche Intelligenz",
+      "Die Auswahl effizienter Werkzeuge in der Arbeitsumgebung"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Welche drei Ebenen des Situationsbewusstseins nennt Endsley (2000)?",
+    "options": [
+      "Wahrnehmung, Verständnis, Projektion",
+      "Beobachtung, Verarbeitung, Bewertung",
+      "Reaktion, Planung, Umsetzung",
+      "Erfassung, Speicherung, Analyse"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 3,
+    "questionText": "Welche Eigenschaften sollten laut HASO-Modell automatisierte Systeme aufweisen, um Situationsbewusstsein zu fördern?",
+    "options": [
+      "Transparenz",
+      "Verständlichkeit",
+      "Vorhersehbarkeit",
+      "Autonomie"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 4,
+    "questionText": "Was kritisieren Edgar et al. (2018) an der Gleichsetzung von Vertrauen und wahrgenommenem Situationsbewusstsein?",
+    "options": [
+      "Situationsbewusstsein entwickelt sich über verschiedene Stufen und ist nicht gleich Vertrauen",
+      "Vertrauen ist messbar, Situationsbewusstsein nicht",
+      "Technologische Faktoren haben keinen Einfluss",
+      "Nutzende verstehen die Konzepte nicht"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 5,
+    "questionText": "Was betont Endsley (1995) im Zusammenhang mit Vertrauen in automatisierte Systeme?",
+    "options": [
+      "Transparenz, Verständlichkeit und Vorhersehbarkeit sind entscheidend",
+      "Subjektives Situationsbewusstsein kann für Entscheidungen irreführend sein",
+      "Hohe Automatisierung ersetzt menschliches Bewusstsein",
+      "Verhalten hängt stark vom Situationsbewusstsein ab"
+    ],
+    "correctAnswer": [0, 1]
+  },
+  {
+    "id": 6,
+    "questionText": "Was zeigt die Studie von Schrills et al. (2024) zum subjektiven Situationsbewusstsein bei Digital Contact Tracing?",
+    "options": [
+      "Subjektives Situationsbewusstsein steht stärker mit Nützlichkeit in Verbindung als faktisches",
+      "Faktisches Situationsbewusstsein bestimmt Vertrauen am meisten",
+      "Es gibt keine Relevanz für UX-Forschung",
+      "Nur technische Aspekte beeinflussen die Wahrnehmung"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 7,
+    "questionText": "Was misst die SIPA-Skala von Schrills & Franke (2023)?",
+    "options": [
+      "Wie gut Erklärungen in XAI das Situationsbewusstsein auf den drei Ebenen Transparenz, Verständlichkeit und Vorhersehbarkeit fördern",
+      "Wie effizient Nutzer Aufgaben erledigen",
+      "Das Vertrauen in XAI-Systeme",
+      "Die Rechenleistung von KI-Systemen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 8,
+    "questionText": "Was unterscheidet die SART-Methode laut Taylor (2017) vom Konzept von Endsley?",
+    "options": [
+      "Sie bezieht zusätzlich Aspekte wie Arbeitsbelastung mit ein",
+      "Sie fokussiert nur auf Automatisierung",
+      "Sie bewertet nur Systemleistung",
+      "Sie ignoriert subjektives Bewusstsein"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 9,
+    "questionText": "Welche Guidelines fördern laut dem Text das Situationsbewusstsein in der Systemgestaltung?",
+    "options": [
+      "Transparenz sicherstellen",
+      "Verständlichkeit fördern",
+      "Vorhersehbarkeit verbessern",
+      "Komplexität minimieren"
+    ],
+    "correctAnswer": [0, 1, 2]
+  }
+]

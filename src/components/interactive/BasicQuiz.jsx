@@ -106,11 +106,13 @@ const Question = ({
 
             if (showAnswerState) {
               if (isCorrect) {
+                // green
                 optionStyleClasses =
-                  "border bg-[#c9e8e2] dark:bg-[#1e3b3a] border-[#77d1cb] dark:border-[#77d1cb]";
+                  "border bg-[#A9E5AB] dark:bg-[#1e3b3a] border-[#3ABB3E] dark:border-[#77d1cb]";
                 textStyleClasses =
                   "text-[#2e5f5c] dark:text-[#c9e8e2] font-semibold";
               } else if (isSelected && !isCorrect) {
+                // red
                 optionStyleClasses =
                   "border bg-[#f6d3dd] dark:bg-[#3f2a32] border-[#d1779a] dark:border-[#d1779a]";
                 textStyleClasses =
@@ -216,9 +218,10 @@ const QuizResult = ({ score, totalQuestions, onRestart }) => {
  *   - `correctAnswer`: A string or an array of strings representing the correct
  *     answer(s). If `correctAnswer` is an array, it will be treated as a
  *     multiple-choice question with multiple correct answers.
+ * @param {boolean} [props.shuffleQuestions=false] - whether to shuffle questions
  * @returns {JSX.Element}
  */
-const BasicQuiz = ({ quizData }) => {
+const BasicQuiz = ({ quizData, shuffleQuestions = false }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [score, setScore] = useState(0);
@@ -228,12 +231,33 @@ const BasicQuiz = ({ quizData }) => {
   const [hasScoredCurrentQuestion, setHasScoredCurrentQuestion] =
     useState(false);
 
-  const currentQuestion = quizData[currentQuestionIndex];
+  const [processedQuizData, setProcessedQuizData] = useState([]);
+
+  useEffect(() => {
+    if (!quizData || quizData.length === 0) {
+      setProcessedQuizData([]);
+      return;
+    }
+    let dataToUse = [...quizData];
+    if (shuffleQuestions) {
+      dataToUse = shuffleArray(dataToUse);
+    }
+    setProcessedQuizData(dataToUse);
+    setCurrentQuestionIndex(0);
+    setSelectedAnswer(null);
+    setScore(0);
+    setShowResults(false);
+    setHasScoredCurrentQuestion(false);
+    setQuestionState("answering");
+    setHasScoredCurrentQuestion(false);
+  }, [quizData, shuffleQuestions]);
+
+  const currentQuestion = processedQuizData[currentQuestionIndex];
   const isMultipleChoice = useMemo(
     () => !!currentQuestion && currentQuestion.correctAnswer.length > 1,
     [currentQuestion]
   );
-  const isLastQuestion = currentQuestionIndex === quizData.length - 1;
+  const isLastQuestion = currentQuestionIndex === processedQuizData.length - 1;
 
   useEffect(() => {
     if (currentQuestion) {
@@ -310,14 +334,36 @@ const BasicQuiz = ({ quizData }) => {
   }, [isLastQuestion]);
 
   const handleRestart = () => {
+    // this shuffles again whe restarting
+    if (shuffleQuestions) {
+      setProcessedQuizData(shuffleArray([...quizData]));
+    }
     setCurrentQuestionIndex(0);
     setScore(0);
     setShowResults(false);
     setHasScoredCurrentQuestion(false);
   };
 
-  if (!currentQuestion || (shuffledOptions.length === 0 && !showResults)) {
-    return <div className="text-center p-8">Lade Quiz...</div>;
+  if (
+    processedQuizData.length === 0 ||
+    !currentQuestion ||
+    (shuffledOptions.length === 0 && !showResults)
+  ) {
+    if (
+      quizData &&
+      quizData.length > 0 &&
+      processedQuizData.length === 0 &&
+      !showResults
+    ) {
+      return <div className="text-center p-8">Bereite Quiz vor...</div>;
+    }
+    if (!quizData || quizData.length === 0) {
+      return <div className="text-center p-8">Keine Quizdaten vorhanden.</div>;
+    }
+
+    if (!currentQuestion || (shuffledOptions.length === 0 && !showResults)) {
+      return <div className="text-center p-8">Lade Quiz...</div>;
+    }
   }
 
   const buttonConfig =
@@ -336,35 +382,39 @@ const BasicQuiz = ({ quizData }) => {
   return (
     <div className="max-w-[960px] mx-auto my-8 md:p-16 sm:p-12 p-88 glassBox no-hover rounded-[48px] overflow-hidden shadow-lg">
       {!showResults ? (
-        <>
-          <Question
-            questionData={currentQuestion}
-            shuffledOptions={shuffledOptions}
-            selectedAnswer={selectedAnswer}
-            onAnswerSelect={handleAnswerSelect}
-            showAnswerState={questionState === "showingAnswer"}
-          />
-          <div className="mt-8 flex justify-between items-center">
-            <div className="text-sm text-gray-600 dark:text-gray-400">
-              Frage {currentQuestionIndex + 1} von {quizData.length}
-              <span className="mx-2"></span>
-              Korrekte Antworten bisher: {score}
+        currentQuestion ? (
+          <>
+            <Question
+              questionData={currentQuestion}
+              shuffledOptions={shuffledOptions}
+              selectedAnswer={selectedAnswer}
+              onAnswerSelect={handleAnswerSelect}
+              showAnswerState={questionState === "showingAnswer"}
+            />
+            <div className="mt-8 flex justify-between items-center">
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Frage {currentQuestionIndex + 1} von {processedQuizData.length}
+                <span className="mx-2"></span>
+                Korrekte Antworten bisher: {score}
+              </div>
+              <BaseButton
+                onClick={buttonConfig.action}
+                disabled={buttonConfig.disabled}
+                className={`relative font-medium px-6 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900 ${
+                  buttonConfig.disabled ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                ariaLabel={buttonConfig.text}>
+                {buttonConfig.text}
+              </BaseButton>
             </div>
-            <BaseButton
-              onClick={buttonConfig.action}
-              disabled={buttonConfig.disabled}
-              className={`relative font-medium px-6 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900 ${
-                buttonConfig.disabled ? "opacity-50 cursor-not-allowed" : ""
-              }`}
-              ariaLabel={buttonConfig.text}>
-              {buttonConfig.text}
-            </BaseButton>
-          </div>
-        </>
+          </>
+        ) : (
+          <div className="text-center p-8">Lade nächste Frage...</div>
+        )
       ) : (
         <QuizResult
           score={score}
-          totalQuestions={quizData.length}
+          totalQuestions={processedQuizData.length}
           onRestart={handleRestart}
         />
       )}

@@ -23,7 +23,7 @@ const DevTestPage = () => {
       </h2>
       <BasicQuiz quizData={situationsbewusstseinData} />
       <h2 className="w-full text-center">Wahrgenommene Mentale Belastung</h2>
-      <BasicQuiz quizData={mentaleBelastungData} />
+      <BasicQuiz quizData={mentaleBelastungData} shuffleQuestions />
       <h2 className="w-full text-center">Wahrgenommene Vertrauenswürdigkeit</h2>
       <BasicQuiz quizData={vertrauenswuerdigkeitData} />
       <h2 className="w-full text-center">Wahrgenommene Diagnostizität</h2>

@@ -37,6 +37,7 @@ const Question = ({
   selectedAnswer,
   onAnswerSelect,
   showAnswerState,
+  isReviewing,
 }) => {
   const { id, questionText, correctAnswer } = questionData;
 
@@ -46,13 +47,13 @@ const Question = ({
   );
 
   const handleRadioChange = (originalIndex) => {
-    if (!showAnswerState) {
+    if (!showAnswerState && !isReviewing) {
       onAnswerSelect(originalIndex);
     }
   };
 
   const handleCheckboxChange = (originalIndex, checked) => {
-    if (!showAnswerState) {
+    if (!showAnswerState && !isReviewing) {
       const currentSelected = Array.isArray(selectedAnswer)
         ? selectedAnswer
         : [];
@@ -88,9 +89,8 @@ const Question = ({
         </legend>
         <div className="space-y-3">
           {shuffledOptions.map((item, displayIndex) => {
-            const inputId = `question-${id}-option-${displayIndex}`;
+            const domSpecificInputId = `question-${id}-option-${displayIndex}`;
             const originalIndex = item.originalIndex;
-
             const isCorrect = correctAnswer.includes(originalIndex);
             const isSelected = isMultipleChoice
               ? Array.isArray(selectedAnswer) &&
@@ -99,14 +99,15 @@ const Question = ({
 
             let optionStyleClasses = "border border-transparent";
             let baseTextColor = "text-gray-900 dark:text-gray-100";
-            let hoverTextColor = !showAnswerState
-              ? "group-hover:text-white group-hover:dark:text-gray-900"
-              : "";
+            let hoverTextColor =
+              !showAnswerState && !isReviewing
+                ? "group-hover:text-white group-hover:dark:text-gray-900"
+                : "";
             let textStyleClasses = `${baseTextColor}`;
 
             if (showAnswerState) {
               if (isCorrect) {
-                // green
+                //
                 optionStyleClasses =
                   "border bg-[#A9E5AB] dark:bg-[#1e3b3a] border-[#3ABB3E] dark:border-[#77d1cb]";
                 textStyleClasses =
@@ -120,25 +121,32 @@ const Question = ({
               } else {
                 optionStyleClasses =
                   "border border-gray-200 dark:border-gray-700 opacity-75";
+                textStyleClasses = `${baseTextColor} opacity-75`;
               }
             }
 
             return (
               <div
-                key={originalIndex}
+                key={originalIndex + "-" + displayIndex}
                 className={`group rounded-md transition-colors ${
-                  !showAnswerState ? "" : "cursor-default"
+                  !showAnswerState && !isReviewing ? "" : "cursor-default"
                 }`}>
                 <label
-                  htmlFor={inputId}
+                  htmlFor={domSpecificInputId}
                   className={`ux-button flex items-center px-6 py-3 rounded-xl relative w-full h-full ${optionStyleClasses} ${
-                    !showAnswerState ? "cursor-pointer" : "cursor-default"
+                    !showAnswerState && !isReviewing
+                      ? "cursor-pointer"
+                      : "cursor-default"
                   }`}
-                  style={showAnswerState ? { pointerEvents: "none" } : {}}>
+                  style={
+                    showAnswerState || isReviewing
+                      ? { pointerEvents: "none" }
+                      : {}
+                  }>
                   <input
-                    id={inputId}
+                    id={domSpecificInputId}
                     type={isMultipleChoice ? "checkbox" : "radio"}
-                    name={`question-${id}`}
+                    name={`question-${id}-${isReviewing ? "review" : "active"}`}
                     value={originalIndex}
                     checked={isSelected}
                     onChange={(e) =>
@@ -146,7 +154,7 @@ const Question = ({
                         ? handleCheckboxChange(originalIndex, e.target.checked)
                         : handleRadioChange(originalIndex)
                     }
-                    disabled={showAnswerState}
+                    disabled={showAnswerState || isReviewing}
                     className={`h-4 w-4 ux-button appearance-auto mr-3 ${
                       isMultipleChoice ? "rounded" : "rounded-full"
                     } accent-[var(--vb)] hover:accent-[var(--vb)] focus:accent-[var(--vb)] checked:accent-[var(--vb)] text-[var(--vb)] focus:ring-2 focus:ring-[var(--vb)] hover:border-[var(--vb)] border-2 dark:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed`}
@@ -165,7 +173,10 @@ const Question = ({
                           ✗
                         </span>
                       )}
-                      {!showAnswerState && <span className="invisible">✓</span>}
+                      {!showAnswerState && !isReviewing && (
+                        <span className="invisible">✓</span>
+                      )}{" "}
+                      {/* Placeholder */}
                       {showAnswerState && !isCorrect && !isSelected && (
                         <span className="invisible">✗</span>
                       )}
@@ -222,195 +233,328 @@ const QuizResult = ({ score, totalQuestions, onRestart }) => {
  * @returns {JSX.Element}
  */
 const BasicQuiz = ({ quizData, shuffleQuestions = false }) => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [score, setScore] = useState(0);
-  const [showResults, setShowResults] = useState(false);
-  const [questionState, setQuestionState] = useState("answering");
-  const [shuffledOptions, setShuffledOptions] = useState([]);
-  const [hasScoredCurrentQuestion, setHasScoredCurrentQuestion] =
-    useState(false);
+  const quizInstanceId = useMemo(() => {
+    return `quiz-instance-${Math.random().toString(36).substring(2, 11)}`;
+  }, []);
 
   const [processedQuizData, setProcessedQuizData] = useState([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [viewingQuestionIndex, setViewingQuestionIndex] = useState(0);
+
+  const [liveSelectedAnswer, setLiveSelectedAnswer] = useState(null);
+  const [liveShuffledOptions, setLiveShuffledOptions] = useState([]);
+
+  const [score, setScore] = useState(0);
+  const [showResults, setShowResults] = useState(false);
 
   useEffect(() => {
     if (!quizData || quizData.length === 0) {
       setProcessedQuizData([]);
+      setCurrentQuestionIndex(0);
+      setViewingQuestionIndex(0);
+      setScore(0);
+      setShowResults(false);
+      setLiveSelectedAnswer(null);
+      setLiveShuffledOptions([]);
       return;
     }
     let dataToUse = [...quizData];
     if (shuffleQuestions) {
       dataToUse = shuffleArray(dataToUse);
     }
-    setProcessedQuizData(dataToUse);
+
+    const initialProcessedData = dataToUse.map((q) => ({
+      ...q,
+      id: `${quizInstanceId}-q-${q.id}`,
+      originalQuestionId: q.id,
+      userSelectedAnswer: q.correctAnswer.length > 1 ? [] : null,
+      isScored: false,
+      wasCorrect: false,
+      shuffledOptionsForDisplay: [],
+    }));
+
+    setProcessedQuizData(initialProcessedData);
     setCurrentQuestionIndex(0);
-    setSelectedAnswer(null);
+    setViewingQuestionIndex(0);
     setScore(0);
     setShowResults(false);
-    setHasScoredCurrentQuestion(false);
-    setQuestionState("answering");
-    setHasScoredCurrentQuestion(false);
-  }, [quizData, shuffleQuestions]);
-
-  const currentQuestion = processedQuizData[currentQuestionIndex];
-  const isMultipleChoice = useMemo(
-    () => !!currentQuestion && currentQuestion.correctAnswer.length > 1,
-    [currentQuestion]
-  );
-  const isLastQuestion = currentQuestionIndex === processedQuizData.length - 1;
+  }, [quizData, shuffleQuestions, quizInstanceId]);
 
   useEffect(() => {
-    if (currentQuestion) {
-      const optionsWithOriginalIndex = currentQuestion.options.map(
-        (text, index) => ({
-          text: text,
-          originalIndex: index,
-        })
+    const questionToView = processedQuizData[viewingQuestionIndex];
+    if (
+      questionToView &&
+      viewingQuestionIndex === currentQuestionIndex &&
+      !questionToView.isScored
+    ) {
+      const optionsWithOriginalIndex = questionToView.options.map(
+        (text, index) => ({ text: text, originalIndex: index })
       );
-      setShuffledOptions(shuffleArray(optionsWithOriginalIndex));
-
-      const currentIsMultiple = currentQuestion.correctAnswer.length > 1;
-      setSelectedAnswer(currentIsMultiple ? [] : null);
-
-      setQuestionState("answering");
-      setHasScoredCurrentQuestion(false);
+      setLiveShuffledOptions(shuffleArray(optionsWithOriginalIndex));
+      setLiveSelectedAnswer(
+        questionToView.correctAnswer.length > 1 ? [] : null
+      );
     }
-  }, [currentQuestionIndex, currentQuestion]);
+  }, [viewingQuestionIndex, currentQuestionIndex, processedQuizData]);
 
-  const isAnswerSelected = useCallback(() => {
-    if (isMultipleChoice) {
-      return Array.isArray(selectedAnswer) && selectedAnswer.length > 0;
-    } else {
-      return selectedAnswer !== null && selectedAnswer !== undefined;
-    }
-  }, [isMultipleChoice, selectedAnswer]);
+  const questionToDisplayData = processedQuizData[viewingQuestionIndex];
+  const isViewingActiveUnscoredQuestion =
+    questionToDisplayData &&
+    viewingQuestionIndex === currentQuestionIndex &&
+    !questionToDisplayData.isScored;
+  const isReviewingStoredQuestion =
+    questionToDisplayData && questionToDisplayData.isScored;
 
   const handleAnswerSelect = useCallback(
     (answerValue) => {
-      if (questionState === "answering") {
-        setSelectedAnswer(answerValue);
+      if (isViewingActiveUnscoredQuestion) {
+        setLiveSelectedAnswer(answerValue);
       }
     },
-    [questionState]
+    [isViewingActiveUnscoredQuestion]
   );
 
   const handleCheckAnswer = useCallback(() => {
-    if (isAnswerSelected() && !hasScoredCurrentQuestion) {
-      let isCorrect = false;
-      const correctAnswers = currentQuestion.correctAnswer;
+    if (!questionToDisplayData || !isViewingActiveUnscoredQuestion) return;
 
-      if (isMultipleChoice) {
-        const sortedSelected = Array.isArray(selectedAnswer)
-          ? [...selectedAnswer].sort((a, b) => a - b)
-          : [];
-        const sortedCorrect = [...correctAnswers].sort((a, b) => a - b);
-        isCorrect =
-          JSON.stringify(sortedSelected) === JSON.stringify(sortedCorrect);
-      } else {
-        isCorrect =
-          correctAnswers.length === 1 && selectedAnswer === correctAnswers[0];
-      }
+    const activeQuestionData = processedQuizData[currentQuestionIndex];
+    if (!activeQuestionData) return;
 
-      if (isCorrect) {
-        setScore((prevScore) => prevScore + 1);
-      }
-      setHasScoredCurrentQuestion(true);
-      setQuestionState("showingAnswer");
+    let isCorrect = false;
+    const correctAnswers = activeQuestionData.correctAnswer;
+
+    const currentIsMultiple = correctAnswers.length > 1;
+    let selectedForCheck = liveSelectedAnswer;
+
+    if (currentIsMultiple) {
+      const sortedSelected = Array.isArray(selectedForCheck)
+        ? [...selectedForCheck].sort((a, b) => a - b)
+        : [];
+      const sortedCorrect = [...correctAnswers].sort((a, b) => a - b);
+      isCorrect =
+        JSON.stringify(sortedSelected) === JSON.stringify(sortedCorrect);
+    } else {
+      isCorrect =
+        correctAnswers.length === 1 && selectedForCheck === correctAnswers[0];
     }
+
+    if (isCorrect) {
+      setScore((prevScore) => prevScore + 1);
+    }
+
+    setProcessedQuizData((prevData) =>
+      prevData.map((q, index) =>
+        index === currentQuestionIndex
+          ? {
+              ...q,
+              userSelectedAnswer: liveSelectedAnswer,
+              isScored: true,
+              wasCorrect: isCorrect,
+              shuffledOptionsForDisplay: liveShuffledOptions,
+            }
+          : q
+      )
+    );
   }, [
-    isAnswerSelected,
-    currentQuestion,
-    isMultipleChoice,
-    selectedAnswer,
-    hasScoredCurrentQuestion,
+    currentQuestionIndex,
+    processedQuizData,
+    liveSelectedAnswer,
+    liveShuffledOptions,
+    isViewingActiveUnscoredQuestion,
+    questionToDisplayData,
   ]);
+
+  const isLastQuestion = currentQuestionIndex === processedQuizData.length - 1;
 
   const handleProceed = useCallback(() => {
     if (!isLastQuestion) {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+      setViewingQuestionIndex((prevIndex) => prevIndex + 1);
     } else {
       setShowResults(true);
     }
   }, [isLastQuestion]);
 
   const handleRestart = () => {
-    // this shuffles again whe restarting
+    let dataToRestartWith = [...quizData];
     if (shuffleQuestions) {
-      setProcessedQuizData(shuffleArray([...quizData]));
+      dataToRestartWith = shuffleArray(dataToRestartWith);
     }
+    const initialProcessedData = dataToRestartWith.map((q) => ({
+      ...q,
+      id: `${quizInstanceId}-q-${q.id}`,
+      originalQuestionId: q.id,
+      userSelectedAnswer: q.correctAnswer.length > 1 ? [] : null,
+      isScored: false,
+      wasCorrect: false,
+      shuffledOptionsForDisplay: [],
+    }));
+    setProcessedQuizData(initialProcessedData);
     setCurrentQuestionIndex(0);
+    setViewingQuestionIndex(0);
     setScore(0);
     setShowResults(false);
-    setHasScoredCurrentQuestion(false);
   };
 
-  if (
-    processedQuizData.length === 0 ||
-    !currentQuestion ||
-    (shuffledOptions.length === 0 && !showResults)
-  ) {
-    if (
-      quizData &&
-      quizData.length > 0 &&
-      processedQuizData.length === 0 &&
-      !showResults
+  const handleNavigateQuestion = (direction) => {
+    if (direction === "prev" && viewingQuestionIndex > 0) {
+      setViewingQuestionIndex(viewingQuestionIndex - 1);
+    } else if (
+      direction === "next" &&
+      viewingQuestionIndex < currentQuestionIndex
     ) {
-      return <div className="text-center p-8">Bereite Quiz vor...</div>;
+      // Erlaubt navigation zur nächsten Frage, wenn beantwortet
+      setViewingQuestionIndex(viewingQuestionIndex + 1);
     }
-    if (!quizData || quizData.length === 0) {
-      return <div className="text-center p-8">Keine Quizdaten vorhanden.</div>;
-    }
+  };
 
-    if (!currentQuestion || (shuffledOptions.length === 0 && !showResults)) {
-      return <div className="text-center p-8">Lade Quiz...</div>;
+  const isAnswerSelectedForActiveQuestion = () => {
+    if (!isViewingActiveUnscoredQuestion) return false;
+    const currentIsMultiple = questionToDisplayData.correctAnswer.length > 1;
+    if (currentIsMultiple) {
+      return Array.isArray(liveSelectedAnswer) && liveSelectedAnswer.length > 0;
+    } else {
+      return liveSelectedAnswer !== null && liveSelectedAnswer !== undefined;
     }
+  };
+
+  if (!quizData || quizData.length === 0) {
+    return <div className="text-center p-8">Keine Quizdaten vorhanden.</div>;
+  }
+  if (processedQuizData.length === 0 || !questionToDisplayData) {
+    return <div className="text-center p-8">Lade Quiz...</div>;
   }
 
-  const buttonConfig =
-    questionState === "answering"
-      ? {
-          text: "Antworten prüfen",
-          action: handleCheckAnswer,
-          disabled: !isAnswerSelected(),
-        }
-      : {
-          text: isLastQuestion ? "Ergebnis anzeigen" : "Nächste Frage",
-          action: handleProceed,
-          disabled: false,
-        };
+  let questionComponentProps = {};
+  if (isViewingActiveUnscoredQuestion) {
+    questionComponentProps = {
+      questionData: questionToDisplayData,
+      shuffledOptions: liveShuffledOptions,
+      selectedAnswer: liveSelectedAnswer,
+      onAnswerSelect: handleAnswerSelect,
+      showAnswerState: false,
+      isReviewing: false,
+    };
+  } else if (isReviewingStoredQuestion) {
+    questionComponentProps = {
+      questionData: questionToDisplayData,
+      shuffledOptions: questionToDisplayData.shuffledOptionsForDisplay,
+      selectedAnswer: questionToDisplayData.userSelectedAnswer,
+      onAnswerSelect: () => {},
+      showAnswerState: true,
+      isReviewing: true,
+    };
+  } else {
+    if (viewingQuestionIndex > currentQuestionIndex && !showResults) {
+      return (
+        <div className="text-center p-8">
+          Diese Frage wurde noch nicht erreicht.
+        </div>
+      );
+    }
+    return <div className="text-center p-8">Lade Frageansicht...</div>;
+  }
+
+  const canNavigatePrev = viewingQuestionIndex > 0;
+  const canNavigateNext = viewingQuestionIndex < currentQuestionIndex;
+
+  const showMainActionButton =
+    viewingQuestionIndex === currentQuestionIndex ||
+    (isReviewingStoredQuestion &&
+      viewingQuestionIndex === processedQuizData.length - 1 &&
+      showResults);
+
+  let mainButtonConfig = {};
+  if (viewingQuestionIndex === currentQuestionIndex) {
+    if (!questionToDisplayData.isScored) {
+      mainButtonConfig = {
+        text: "Antworten prüfen",
+        action: handleCheckAnswer,
+        disabled: !isAnswerSelectedForActiveQuestion(),
+      };
+    } else {
+      mainButtonConfig = {
+        text: isLastQuestion ? "Ergebnis anzeigen" : "Nächste Frage",
+        action: handleProceed,
+        disabled: false,
+      };
+    }
+  }
 
   return (
     <div className="max-w-[960px] mx-auto my-8 md:p-16 sm:p-12 p-88 glassBox no-hover rounded-[48px] overflow-hidden shadow-lg">
       {!showResults ? (
-        currentQuestion ? (
-          <>
-            <Question
-              questionData={currentQuestion}
-              shuffledOptions={shuffledOptions}
-              selectedAnswer={selectedAnswer}
-              onAnswerSelect={handleAnswerSelect}
-              showAnswerState={questionState === "showingAnswer"}
-            />
-            <div className="mt-8 flex justify-between items-center">
-              <div className="text-sm text-gray-600 dark:text-gray-400">
-                Frage {currentQuestionIndex + 1} von {processedQuizData.length}
-                <span className="mx-2"></span>
+        <>
+          <Question {...questionComponentProps} />
+
+          <div className="flex  justify-between">
+            <div className="mt-8 flex flex-col justify-between items-start space-y-3">
+              <div className="text-sm text-gray-600 dark:text-gray-400 flex items-center">
+                <BaseButton
+                  onClick={() => handleNavigateQuestion("prev")}
+                  disabled={!canNavigatePrev}
+                  className={`h-6 px-3 rounded-md text-sm ${
+                    !canNavigatePrev ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                  ariaLabel="Vorherige Frage">
+                  &lt;
+                </BaseButton>
+                <div className="text-sm mx-3">
+                  Frage {viewingQuestionIndex + 1} von{" "}
+                  {processedQuizData.length}
+                </div>
+                <BaseButton
+                  onClick={() => handleNavigateQuestion("next")}
+                  disabled={!canNavigateNext}
+                  className={`h-6 px-3 rounded-md text-sm ${
+                    !canNavigateNext ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                  ariaLabel="Nächste Frage">
+                  &gt;
+                </BaseButton>
+                <span className="mx-2">|</span>
                 Korrekte Antworten bisher: {score}
               </div>
-              <BaseButton
-                onClick={buttonConfig.action}
-                disabled={buttonConfig.disabled}
-                className={`relative font-medium px-6 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900 ${
-                  buttonConfig.disabled ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-                ariaLabel={buttonConfig.text}>
-                {buttonConfig.text}
-              </BaseButton>
+              <div className="flex items-center space-x-2">
+                <BaseButton
+                  onClick={() => handleNavigateQuestion("prev")}
+                  disabled={!canNavigatePrev}
+                  className={`h-6 px-3 rounded-md text-sm ${
+                    !canNavigatePrev ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                  ariaLabel="Vorherige Frage">
+                  &lt;
+                </BaseButton>
+                <BaseButton
+                  onClick={() => handleNavigateQuestion("next")}
+                  disabled={!canNavigateNext}
+                  className={`h-6 px-3 rounded-md text-sm ${
+                    !canNavigateNext ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                  ariaLabel="Nächste Frage">
+                  &gt;
+                </BaseButton>
+              </div>
             </div>
-          </>
-        ) : (
-          <div className="text-center p-8">Lade nächste Frage...</div>
-        )
+
+            {showMainActionButton &&
+              Object.keys(mainButtonConfig).length > 0 && (
+                <div className="mt-8 flex justify-end">
+                  <BaseButton
+                    onClick={mainButtonConfig.action}
+                    disabled={mainButtonConfig.disabled}
+                    className={`relative font-medium px-6 py-4 h-min rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900 ${
+                      mainButtonConfig.disabled
+                        ? "opacity-50 cursor-not-allowed"
+                        : ""
+                    }`}
+                    ariaLabel={mainButtonConfig.text}>
+                    {mainButtonConfig.text}
+                  </BaseButton>
+                </div>
+              )}
+          </div>
+        </>
       ) : (
         <QuizResult
           score={score}

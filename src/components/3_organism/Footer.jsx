@@ -1,6 +1,6 @@
 import React from "react";
 import imisSVG from "../../assets/images/IMIS_Logo.svg";
-import bmfsfjLogoSVG from "../../assets/images/BMFSFJ_Gefoerdert.svg";
+import newBmbfsfjLogoSVG from "../../assets/images/BMBFSFJ_de_v1__DTP_CMYK.svg";
 
 /**
  * A footer component displaying links to the project website, legal notice,
@@ -13,7 +13,9 @@ const Footer = () => (
     className="relative flex justify-between md:items-center md:flex-row flex-col gap-6 bg-white lg:py-2 py-6 lg:pl-28 pl-8 pr-8"
     role="contentinfo"
     aria-label="Website Footer">
-    <nav className="h-full flex flex-col md:mr-32 w-max" aria-label="Footer navigation">
+    <nav
+      className="h-full flex flex-col md:mr-32 w-max"
+      aria-label="Footer navigation">
       <FooterLink href="https://projekt.ux-fuer-ki.de" title="Zur Projektseite">
         Projektseite
       </FooterLink>
@@ -24,19 +26,21 @@ const Footer = () => (
       </FooterLink>
     </nav>
 
-    <FooterLogo
-      href="https://www.bmfsfj.de/bmfsfj"
-      src={bmfsfjLogoSVG}
-      alt="Logo des Bundesministeriums für Familie, Senioren, Frauen und Jugend"
-      width={320}
-      height={170}
-    />
+    <div className="my-3">
+      <FooterLogo
+        href="https://www.bmfsfj.de/bmfsfj"
+        src={newBmbfsfjLogoSVG}
+        alt="Logo des Bundesministeriums für Bildung, Familie, Senioren, Frauen und Jugend"
+        width={320}
+        height={150}
+      />
+    </div>
 
     <FooterLogo
       href="https://www.uni-luebeck.de/universitaet/universitaet.html"
       src={imisSVG}
       alt="Logo des Instituts für Multimedia und Interaktive Systeme"
-      width={310}
+      width={300}
       height={80}
     />
   </footer>

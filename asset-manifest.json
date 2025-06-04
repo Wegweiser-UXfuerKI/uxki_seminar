@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.cbfaa986.css",
-    "main.js": "/static/js/main.eb15b100.js",
+    "main.js": "/static/js/main.fe360b6e.js",
     "static/media/avatar_girl.png": "/static/media/avatar_girl.7601c71f27f447ccb627.png",
     "static/media/avatar_pink.png": "/static/media/avatar_pink.7433c8a70377d696fb6d.png",
     "static/media/avatar_türkis.png": "/static/media/avatar_türkis.5faca530f00e489244f9.png",
@@ -15,9 +15,9 @@
     "static/media/article-nutzerverhalten-cover.webp": "/static/media/article-nutzerverhalten-cover.804cba43c54f7b08f062.webp",
     "static/media/IMIS_Logo.svg": "/static/media/IMIS_Logo.28c453a2c95cf1e52640c03d4562c408.svg",
     "static/media/lernplattform_button.png": "/static/media/lernplattform_button.4fffb215f0caeb8e7532.png",
+    "static/media/BMBFSFJ_de_v1__DTP_CMYK.svg": "/static/media/BMBFSFJ_de_v1__DTP_CMYK.3cb6d077c4e86aa2635905ad452160c6.svg",
     "static/media/Wegweiser_logo.png": "/static/media/Wegweiser_logo.a2f94986069c1895cf6e.png",
     "static/media/AlleFragen.png": "/static/media/AlleFragen.d20e0ec327d2dba747f6.png",
-    "static/media/BMFSFJ_Gefoerdert.svg": "/static/media/BMFSFJ_Gefoerdert.d0186b27222349e0038eb02fab20a256.svg",
     "static/media/bulb.png": "/static/media/bulb.0edda8e42069b9250904.png",
     "static/media/soundOn.png": "/static/media/soundOn.824035f39fb6496ea88d.png",
     "static/media/new_topic.png": "/static/media/new_topic.49f62cd1132a4273dc77.png",
@@ -59,10 +59,10 @@
     "static/media/check-icon.svg": "/static/media/check-icon.721d68647ede2f838e805e7ca81a1970.svg",
     "static/media/right-arrow.svg": "/static/media/right-arrow.164cedbd36f8d732060026564168596d.svg",
     "main.cbfaa986.css.map": "/static/css/main.cbfaa986.css.map",
-    "main.eb15b100.js.map": "/static/js/main.eb15b100.js.map"
+    "main.fe360b6e.js.map": "/static/js/main.fe360b6e.js.map"
   },
   "entrypoints": [
     "static/css/main.cbfaa986.css",
-    "static/js/main.eb15b100.js"
+    "static/js/main.fe360b6e.js"
   ]
 }

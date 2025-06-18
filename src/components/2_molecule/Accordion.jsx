@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import RightArrow from "../1_elements/RightArrow";
+import ArrowIcon from "../1_elements/ArrowIcon";
 
 /**
  * Accordion Component
@@ -75,11 +75,11 @@ const Accordion = ({
         <span className="fourthTitle" style={{ marginBottom: "0" }}>
           {title}
         </span>
-        <span
-          className={`chevron transition transform ${
-            isOpen ? "rotate-[-90deg]" : "rotate-90"
-          }`}>
-          <RightArrow />
+        <span className="chevron">
+          <ArrowIcon
+            direction={isOpen ? "up" : "down"}
+            className="transition transform"
+          />
         </span>
       </div>
 

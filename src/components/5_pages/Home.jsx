@@ -3,10 +3,10 @@ import { getModuleLinksAndNames } from "../ContentHandler";
 import HomeModuleCard from "../2_molecule/cards/HomeModuleCard";
 import { AppContext } from "../../AppContext";
 import { VideoContainer } from "../1_elements/VideoContainer";
-import UXButton from "../2_molecule/UXButton";
 import WegweiserPng from "../../assets/images/Wegweiser.webp";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 import Accordion from "../2_molecule/Accordion";
+import LinkButton from "../2_molecule/nav/LinkButton";
 
 /**
  * Home component that serves as the landing page for the Wegweiser.UX-für-KI learning platform.
@@ -92,11 +92,17 @@ const Home = () => {
             unabhängig von ihrem jeweiligen Erfahrungsniveau erstellt.
           </p>
           <div className="flex lg:flex-row flex-col w-full lg:gap-10 gap-4 mb-4">
-            <UXButton text="Alle Module ansehen" useGlassyBox to="#module" />
-            <UXButton
-              text="Mehr zum Projekt erfahren"
+            <LinkButton
+              content="Alle Module ansehen"
               useGlassyBox
-              to="https://projekt.ux-fuer-ki.de/"
+              destination="#module"
+              className="font-bold"
+            />
+            <LinkButton
+              content="Mehr zum Projekt erfahren"
+              useGlassyBox
+              destination="https://projekt.ux-fuer-ki.de/"
+              className="font-bold"
             />
           </div>
         </div>

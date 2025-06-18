@@ -1,4 +1,4 @@
-import { ReactComponent as imageElement } from "../../assets/icons/ux-placeholder.svg";
+import ImageElement from "../../assets/icons/ux-placeholder.svg?react";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 
 const Einleitung = {
@@ -20,7 +20,7 @@ const Einleitung = {
 const IdentifikationProzesse = {
   linkName: "identifikation-prozesse",
   name: "Identifikation passender Prozesse",
-  moduleImage: imageElement,
+  moduleImage: ImageElement,
   content: [Einleitung],
 };
 

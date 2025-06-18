@@ -11,7 +11,7 @@ import DosAndDonts from "../dosdonts/DosAndDonts";
 import QuizContainer from "../quizUX/components/QuizContainer";
 
 import ComlianceCheckerImg from "../../assets/images/EUAICheckerCropped.webp";
-import { ReactComponent as imageElement } from "../../assets/icons/euaiact.svg";
+import ImageElement from "../../assets/icons/euaiact.svg?react";
 import InteractiveModal from "../2_molecule/InteractiveModal";
 
 const sectionEinleitung = [
@@ -1100,7 +1100,7 @@ const Quellen = {
 const EuAiActSections = {
   linkName: "eu-ai-act",
   name: "EU AI Act",
-  moduleImage: imageElement,
+  moduleImage: ImageElement,
   content: [
     Einleitung,
     RisikostufenAnwendungsbeispiele,

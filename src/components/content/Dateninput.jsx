@@ -1,4 +1,4 @@
-import { ReactComponent as imageElement } from "../../assets/icons/dateninput.svg";
+import ImageElement from "../../assets/icons/dateninput.svg?react";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 
 const Einleitung = {
@@ -22,7 +22,7 @@ const Einleitung = {
 const Dateninput = {
   linkName: "dateninput",
   name: "Dateninput",
-  moduleImage: imageElement,
+  moduleImage: ImageElement,
   content: [Einleitung],
 };
 

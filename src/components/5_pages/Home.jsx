@@ -114,6 +114,7 @@ const Home = () => {
             height={610}
             className="max-w-[350px] w-full md:-translate-x-2 rotate-6"
             alt="Wegweiser.UX-für-KI Plattform Logo"
+            loading="eager"
           />
         </div>
       </section>

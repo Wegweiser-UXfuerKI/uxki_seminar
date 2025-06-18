@@ -31,9 +31,14 @@ import checkIcon from "../../assets/dosAndDonts/check-icon.svg";
 import crossIcon from "../../assets/dosAndDonts/cross-icon.svg";
 import ideaIcon from "../../assets/dosAndDonts/idea-icon.svg";
 import forwardIcon from "../../assets/dosAndDonts/forward-icon.png";
-import "../../assets/dosAndDonts/kor_animations/kor-sparkles.js";
 import { getModuleMap } from "./TaskHandler.jsx";
 import { AppContext } from "../../AppContext.jsx";
+
+import $ from "jquery";
+window.$ = $;
+window.jQuery = $;
+
+import "../../assets/dosAndDonts/kor_animations/kor-sparkles.js";
 
 /* 
   Main component for the learning element, containting three main panes:

@@ -1,4 +1,4 @@
-import { ReactComponent as imageElement } from "../../assets/icons/ux-ki.svg";
+import ImageElement from "../../assets/icons/ux-ki.svg?react";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { VideoContainer } from "../1_elements/VideoContainer";
 import SubTopicCard from "../2_molecule/cards/SubTopicCard";
@@ -2016,7 +2016,7 @@ const EinführungUXKI = {
 const UXKISections = {
   linkName: moduleLink,
   name: moduleName,
-  moduleImage: imageElement,
+  moduleImage: ImageElement,
   content: [
     EinführungUXKI,
     WahrgenommeneAutonomie,

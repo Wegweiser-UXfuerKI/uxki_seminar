@@ -11,8 +11,8 @@ import { AppContext } from "../../AppContext";
 import coverImg from "./content/euaiact/article-nutzerverhalten-cover.webp";
 import "./InformationText.css";
 
-import grundlagenuxMDText from "./content/grundlagenUX/informationText.md";
-import euaiactMDText from "./content/euaiact/informationText.md";
+import grundlagenuxMDText from "./content/grundlagenUX/informationText.md?raw";
+import euaiactMDText from "./content/euaiact/informationText.md?raw";
 
 // TMP
 const kiUxMDText = [];

@@ -1,4 +1,4 @@
-import { ReactComponent as imageElement } from "../../assets/icons/ux-bezogen.svg";
+import ImageElement from "../../assets/icons/ux-bezogen.svg?react";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 
 const Einleitung = {
@@ -24,7 +24,7 @@ const Einleitung = {
 const UXKIEigenschaften = {
   linkName: "ux-bezogene-ki-eigenschaften",
   name: "UX-bezogene KI-Eigenschaften",
-  moduleImage: imageElement,
+  moduleImage: ImageElement,
   content: [Einleitung],
 };
 

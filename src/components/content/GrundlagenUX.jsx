@@ -1,4 +1,4 @@
-import { ReactComponent as imageElement } from "../../assets/icons/usability.svg";
+import ImageElement from "../../assets/icons/usability.svg?react";
 import { Link } from "react-router-dom";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { VideoContainer } from "../1_elements/VideoContainer";
@@ -420,7 +420,7 @@ const Quellen = {
 const UXBasicsData = {
   linkName: "ux-und-usability",
   name: "UX und Usability",
-  moduleImage: imageElement,
+  moduleImage: ImageElement,
   content: [
     Einleitung,
     Usability,

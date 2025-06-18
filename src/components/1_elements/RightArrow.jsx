@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as RightArrowSVG } from "../../../src/assets/icons/right-arrow.svg";
+import RightArrowSVG from "../../../src/assets/icons/right-arrow.svg?react";
 
 /**
  * RightArrow Component
@@ -15,12 +15,14 @@ import { ReactComponent as RightArrowSVG } from "../../../src/assets/icons/right
  *
  * @returns {JSX.Element} The rendered RightArrow SVG component.
  */
-const RightArrow = ({ arrowPosition = "right", className = "", style = {} }) => {
+const RightArrow = ({
+  arrowPosition = "right",
+  className = "",
+  style = {},
+}) => {
   // Assigns the correct CSS class to position the arrow (left or right)
   const arrowClass =
-    arrowPosition === "left"
-      ? "order-first transform scale-x-[-1]"
-      : "";
+    arrowPosition === "left" ? "order-first transform scale-x-[-1]" : "";
 
   return (
     <RightArrowSVG

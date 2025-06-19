@@ -39,7 +39,8 @@ const Question = ({
   showAnswerState,
   isReviewing,
 }) => {
-  const { id, questionText, correctAnswer } = questionData;
+  const { id, questionText, correctAnswer, type, image, images, explanation } =
+    questionData;
 
   const isMultipleChoice = useMemo(
     () => correctAnswer.length > 1,
@@ -76,6 +77,40 @@ const Question = ({
         className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
         {questionText}
       </h2>
+
+      {/* Images */}
+      {(type === "img_one" || type === "img_compare") && (
+        <div>
+          {type === "img_one" && image && (
+            <div className="flex justify-center">
+              <img
+                src={`/${image}`}
+                alt={`Fragebild zu: ${questionText}`}
+                className="max-w-full md:max-w-md rounded-lg shadow-md"
+              />
+            </div>
+          )}
+          {type === "img_compare" && images && images.length === 2 && (
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <div className="flex-1">
+                <img
+                  src={`/${images[0]}`}
+                  alt={`Bild 1 zu: ${questionText}`}
+                  className="w-full h-auto rounded-lg shadow-md"
+                />
+              </div>
+              <div className="flex-1">
+                <img
+                  src={`/${images[1]}`}
+                  alt={`Bild 2 zu: ${questionText}`}
+                  className="w-full h-auto rounded-lg shadow-md"
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
       <div className="smallTextSize">
         Wähle die{" "}
         {isMultipleChoice ? "richtigen Antworten" : "richtige Antwort"} aus
@@ -188,6 +223,14 @@ const Question = ({
           })}
         </div>
       </fieldset>
+
+      {/* Erklärungsbereich */}
+      {showAnswerState && explanation && (
+        <div className="mt-6 p-4 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+          <h3>Erklärung:</h3>
+          <p>{explanation}</p>
+        </div>
+      )}
     </div>
   );
 };

@@ -15,7 +15,7 @@ import hlegData from "../SimpleQuizContent/ai-act/hleg.json";
 const DevTestPage = () => {
   return (
     <div className="w-full h-full">
-      <h1 className="w-full text-center">KI-bezogene UX</h1>
+      {/* <h1 className="w-full text-center">KI-bezogene UX</h1>
       <h2 className="w-full text-center">Wahrgenommene Autonomie</h2>
       <BasicQuiz quizData={autonomieData} />
       <h2 className="w-full text-center">
@@ -36,7 +36,7 @@ const DevTestPage = () => {
       <h2 className="w-full text-center">Risikostufen - Auswirkungen</h2>
       <BasicQuiz quizData={risikostufenAuswirkungenData} />
       <h2 className="w-full text-center">HLEG</h2>
-      <BasicQuiz quizData={hlegData} />
+      <BasicQuiz quizData={hlegData} /> */}
     </div>
   );
 };

@@ -11,12 +11,15 @@ jobs:
     name: Build and Push
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for all branches and tags
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         width:
-          version: "18"
+          node-version: 20
+          cache: "pnpm"
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
@@ -24,10 +27,10 @@ jobs:
           version: 8
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile # frozen-lockfile to take package-lock into account
+        run: pnpm install
 
       - name: Build the project
-        run: pnpm run build
+        run: pnpm build
 
       - name: Publish the build folder to the build branch
         uses: s0/git-publish-subdir-action@develop

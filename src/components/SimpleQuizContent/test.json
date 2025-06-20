@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "questionText": "Welches Bild stellt Berlin dar?",
+    "images": [
+      "images/hamburg.webp",
+      "images/paris.webp",
+      "images/paris.webp",
+      "images/paris.webp"
+    ],
+    "options": ["Keines", "Beide", "Links", "Rechts"],
+    "correctAnswer": [0],
+    "explanation": "Beispieltext"
+  }
+]

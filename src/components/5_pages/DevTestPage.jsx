@@ -1,5 +1,5 @@
 import React from "react";
-import BasicQuiz from "../interactive/BasicQuiz";
+import BasicQuiz from "../interactive//Quiz/BasicQuiz";
 // KI-bezogene UX
 import autonomieData from "../SimpleQuizContent/ki-bezogene-ux/autonomie.json";
 import situationsbewusstseinData from "../SimpleQuizContent/ki-bezogene-ux/situationsbewusstsein.json";
@@ -12,12 +12,16 @@ import risikostufenBeispieleData from "../SimpleQuizContent/ai-act/risikostufen-
 import risikostufenAuswirkungenData from "../SimpleQuizContent/ai-act/risikostufen-auswirkungen.json";
 import hlegData from "../SimpleQuizContent/ai-act/hleg.json";
 
+import testData from "../SimpleQuizContent/test.json";
+
 const DevTestPage = () => {
   return (
     <div className="w-full h-full">
-      {/* <h1 className="w-full text-center">KI-bezogene UX</h1>
+      <BasicQuiz quizData={testData} />
+      <h1 className="w-full text-center">KI-bezogene UX</h1>
       <h2 className="w-full text-center">Wahrgenommene Autonomie</h2>
       <BasicQuiz quizData={autonomieData} />
+      {/* 
       <h2 className="w-full text-center">
         Wahrgenommenes Situationsbewusstsein
       </h2>

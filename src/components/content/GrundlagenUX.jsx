@@ -275,6 +275,19 @@ const Usability = {
   ],
 };
 
+const sectionsNutzungskontext = [
+  { id: "2", title: "Definition" },
+  { id: "3", title: "Warum ist der Nutzungskontext wichtig?" },
+  { id: "4", title: "Die 4 Bestandteile des Nutzungskontextes" },
+  {
+    id: "5",
+    title:
+      'Unterschied und Bedeutung von "Ease of Use" und "Ease of Learn" im Nutzungskontext',
+  },
+  { id: "6", title: "Wie erfolgt eine Nutzungskontextanalyse?" },
+  { id: "7", title: "Ausblick" },
+];
+
 const Nutzungskontext = {
   linkName: "nutzungskontext",
   name: "Nutzungskontext",
@@ -283,14 +296,243 @@ const Nutzungskontext = {
   content: [
     <ChapterHeader text={"Nutzungskontext"} number={3} />,
     <section>
-      <div className="text-center p-10 pb-0 bg-slate-200 rounded-xl text-ux_dark flex flex-col justify-center items-center">
-        Work in progress...
-        <Link
-          to={"/"}
-          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
-          Zurück zur Kursübersicht
+      <p>
+        ist der Rahmen, unter dem ein System genutzt wird. Dazu gehören die
+        Nutzer:innen, ihre Aufgaben, die Umgebung und die Hilfsmittel. Man muss
+        den Nutzungskontext verstehen, um benutzerzentriert zu gestalten.
+      </p>
+      <Accordion sections={sectionsNutzungskontext} />
+      <SubNavigation sections={sectionsNutzungskontext} />
+    </section>,
+    <section>
+      <h2>Definition Nutzungskontext</h2>
+      <p>
+        Der Nutzungskontext beschreibt, wie ein digitales System wirklich
+        benutzt wird. Wer ein benutzerfreundliches System gestalten will, sollte
+        frühzeitig mit den Nutzer:innen zusammenarbeiten und folgende Aspekte
+        berücksichtigen:
+      </p>
+      <List
+        items={[
+          "die <b>Benutzer:innen</b>, z.B. ihre Kenntnisse, Erfahrungen und Erwartungen",
+          "die <b>Aufgaben</b>, die mit dem System erledigt werden sollen",
+          "die verwendeten <b>Arbeitsmittel</b>, z.B. Software, Geräte",
+          "die <b>physische</b> und <b>soziale Umgebung</b>, z.B. die Art, wie der Arbeitsplatz gestaltet ist oder die Menschen, mit denen man arbeitet",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
+    </section>,
+    <section>
+      <h2>Warum ist der Nutzungskontext wichtig?</h2>
+      <p>
+        Wenn Sie die Usability (Gebrauchstauglichkeit) eines interaktiven System
+        bewerten oder verbessern möchten, muss der jeweilige Nutzungskontext und
+        dessen Anforderungen bekannt sein. Das System ist nicht automatisch
+        gebrauchstauglich, weil es bestimmte Funktionen bietet. Es kommt darauf
+        an, <b>wie gut das System in der Praxis funktioniert</b> und ob es von
+        der Zielgruppe <b>effektiv, effizient und zufriedenstellend</b> genutzt
+        werden kann.
+      </p>
+      <p>GRAFIK VON USABILITY</p>
+      <p>
+        Dabei ist es wichtig, frühzeitig mit der Zielgruppe in Kontakt zu treten
+        und ihre Perspektive bei der Konzeption und Entwicklung mit
+        einzubeziehen. Das kann die spätere Akzeptanz und den Erfolg des Systems
+        erhöhen. Das kann auf den ersten Blick sehr umfangreich wirken. Dennoch
+        gilt hier das Motto "Alles ist besser als nichts!". Selbst einige wenige
+        informelle Gespräche, Fotos und Notizen sind immer noch besser, als
+        Software weitab vom Nutzungskontext bequem vom Schreibtisch aus zu
+        gestalten. Deshalb ist es auf jeden Fall wichtig, mit den realen
+        Zielgruppen in Kontakt zu treten – selbst wenn es nur ein informelles
+        Gespräch beim Kaffee ist.
+      </p>
+    </section>,
+    <section>
+      <h2>Die 4 Bestandteile des Nutzungskontextes im Detail</h2>
+      <p>
+        Die folgenden Aspekte und Methoden können als Inspiration für ein
+        Vorgehen bei Ihrem System dienen. Sie können je nach System, Zielen und
+        verfügbaren Ressourcen unterschiedlich relevant und umsetzbar sein.
+      </p>
+      <h3>1. Benutzer:innen</h3>
+      <p>
+        Die Benutzer:innen, also die reale Zielgruppe des Systems, stehen im
+        Mittelpunkt der Gestaltung. Dieses Vorgehen nennt man auch
+        benutzerzentrierte Gestaltung. Weiteres zu diesem Vorgehen erfahren Sie
+        detailliert im Kapitel{" "}
+        <Link to="/ux-und-usability/mensch-computer-interaktion">
+          <b>Mensch-Computer-Interaktion</b>
         </Link>
-      </div>
+      </p>
+      <p>Dabei können verschiedene Aspekte analysiert werden:</p>
+      <ul>
+        <li>
+          <b>Fähigkeiten</b>, z.B. technisches Verständnis, Sprachkompetenz
+        </li>
+        <li>
+          <b>Vorerfahrung und Wissen</b>, z.B. Umgang mit KI-Tools wie Chatbots
+          oder Bildgeneratoren
+        </li>
+        <li>
+          <b>Erwartungen</b>, z.B. durch vorherige Nutzung bestimmter Systeme
+        </li>
+        <li>
+          <b>Demografische Daten</b>, wie Alter, Geschlecht, körperliche
+          Einschränkungen
+        </li>
+        <li>
+          <b>Mentale Eigenschaften</b>, z.B. Motivation, Einstellung gegenüber
+          KI, Lernstil
+        </li>
+      </ul>
+      <Accordion title="Hier ein Beispiel:" initiallyOpen={false}>
+        <p>
+          In einer Flüchtlingshilfsorganisation wird ein KI-gestütztes
+          Übersetzungstool eingesetzt. Die Helfer:innen haben unterschiedliche
+          technische Fähigkeiten und Vorerfahrungen mit KI-Tools. Für die
+          Geflüchteten muss das Tool auch verschiedene Alphabetisierungsniveaus
+          abdecken. Manche Nutzer:innen können nicht lesen, weshalb eine
+          Sprachausgabe und Piktogramme notwendig sind. Das Übersetzungstool
+          muss also für viele unterschiedliche Bedürfnisse angepasst werden, um
+          effektiv und benutzerfreundlich zu sein.
+        </p>
+      </Accordion>
+      <h3>2. Aufgaben</h3>
+      <p>
+        Die Aufgaben beschreiben, was die Benutzer:innen mit einem System
+        erreichen wollen. Das hat großen Einfluss darauf, welche Funktionen ein
+        System besitzt.
+      </p>
+      <p>Dazu könnte man sich folgende Aspekte ansehen:</p>
+      <ul>
+        <li>
+          <b>Aufgabenziel</b>, z.B. Informationen finden, Texte generieren
+        </li>
+        <li>
+          <b>Einbettung in Arbeitsabläufe</b>, z.B. Teil eines Prozesses
+        </li>
+        <li>
+          <b>Vorgaben und erwartete Ergebnisse</b>, z.B. qualitativ hochwertiger
+          Textentwurf
+        </li>
+        <li>
+          <b>Häufigkeit und Bearbeitungsdauer</b> von Aufgaben
+        </li>
+        <li>
+          <b>Physische und mentale Anforderungen</b>, z.B. Konzentrationsaufwand
+        </li>
+      </ul>
+      <p>
+        Oft wird die Automatisierung von Aufgaben durch KI, insbesondere
+        ChatBots, erwogen. Diese scheinen zunächst effizient für Kundenanfragen
+        und interne Kommunikation. Nach der Implementierung zeigt sich jedoch
+        oft Unzufriedenheit der Nutzer:innen, da die Erwartungen nicht erfüllt
+        werden und der ChatBot im Vergleich zu anderen am Markt schlecht
+        abschneidet.
+      </p>
+      <p>
+        Um solche Szenarien zu vermeiden, ist es ratsam, vorher den
+        Nutzungskontext genau zu analysieren. Im Modul{" "}
+        <Link to={"/identifikation-prozesse/einleitung"}>
+          Identifikation passender Prozesse
+        </Link>{" "}
+        werden wir uns eingehend damit beschäftigen, wie Automatisierungs- und
+        KI-Potenziale identifiziert werden können und wie man frühzeitig
+        bewerten kann, welche Prozesse sich dafür eignen.
+      </p>
+      <h3>3. Umgebung</h3>
+      <p>
+        Ein System muss je nach Umgebung sehr unterschiedliche Anforderungen
+        erfüllen, um wirklich wirksam nutzbar zu sein. Die folgenden Bereiche
+        gehören zur Umgebung
+      </p>
+      <p>2 Spalten und Tabs-Sachen</p>
+      <h3>4. Hilfsmittel</h3>
+      <p>Die technischen Bedingungen umfassen folgende Punkte:</p>
+      <ul>
+        <li>
+          {" "}
+          <b>Hardware</b>, z.B. Headsets für Sprachassistenten, Tablets für
+          mobile KI-Apps
+        </li>
+        <li>
+          {" "}
+          <b>Software</b>, z.B. spezialisierte KI-Tools, Betriebssysteme
+        </li>
+        <li>
+          {" "}
+          <b>Dokumentationen</b>, z.B. Handbücher, Tutorials
+        </li>
+      </ul>
+    </section>,
+    <section>
+      <h2>
+        Unterschied und Bedeutung von "Ease if Use" und "Ease of Learn" im
+        Nutzungskontext
+      </h2>
+      <p>
+        <b>Ease of Use</b> und <b>Ease of Learn</b> (oft als Erlernbarkeit
+        bezeichnet) sind zwei zentrale, aber unterschiedliche Qualitätsmerkmale
+        bei der Gestaltung und Bewertung von Softwaresystemen. Die
+        Unterscheidung ist gerade im Hinblick auf unterschiedliche Zielgruppen,
+        etwa interne Nutzer:innen (Mitarbeitende) vs. externe Nutzer:innen
+        (Kunden:innen, Klienten), entscheidend.
+      </p>
+      <p>TABELLE</p>
+      <p>
+        Bei Interne Systeme, z. B. für Mitarbeitende, kann es sinnvoll sein, die
+        Ease of Learn etwas zugunsten der Ease of Use zu vernachlässigen, wenn
+        die Nutzer:innen regelmäßig und intensiv mit dem System arbeiten. Eine
+        kurze, initiale Schulung ist oft akzeptabel, solange das System
+        anschließend effizient und produktiv genutzt werden kann.
+      </p>
+      <p>
+        Bei Front-facing Systeme (für Klienten/Kunden) hingegen ist die Ease of
+        Learn besonders kritisch, weil die Nutzer:innen oft keine oder nur wenig
+        Vorerfahrung mit dem System haben und keine Schulung erhalten. Das
+        System muss somit schnell verständlich sein, damit sie ihre Ziele ohne
+        Frustration erreichen.
+      </p>
+    </section>,
+    <section>
+      <h2>Wie erfolgt eine Nutzungskontextanalyse?</h2>
+      <p>
+        Die Nutzungskontextanalyse untersucht die vier oben genannten Aspekte.
+        Dabei ist zu unterscheiden, ob ein neues Produkt entwickelt oder ein
+        bestehendes überarbeitet wird. Bei bestehenden Produkten kann auf
+        vorhandenes Wissen oder frühere Tests zurückgegriffen werden.
+      </p>
+      <p>
+        Bei Neuentwicklungen muss der Nutzungskontext vollständig neu erhoben
+        werden. Anmerkung: Dabei wird vom Idealfall ausgegangen. Wir wissen sehr
+        gut, dass die Realität oft weit davon entfernt ist und eine solche
+        Analyse oftmals nicht so umfassend durchgeführt werden kann. Daher gilt
+        “Alles besser als nichts”.
+      </p>
+      <p>Die Analyse erfolgt in zwei Schritten:</p>
+      <p>SPALTEN ODER TABS</p>
+      <p>
+        Auf Basis dieser Analysen werden Usability-Ziele und konkrete
+        Nutzungsanforderungen abgeleitet. Diese sind die Grundlage für
+        Gestaltung und Evaluation. Später können damit gezielte Usability-Tests
+        durchgeführt werden. Kontexte können sich ändern, also kann die Analyse
+        kontinuierlich wiederholt werden. Mehr dazu in den Kapiteln{" "}
+        <Link to={"/ux-und-usability/mensch-computer-interaktion"}>
+          Mensch-Computer-Interaktion
+        </Link>{" "}
+        und <Link to={"/ux-und-usability/evaluation"}>Evaluationen</Link>.
+      </p>
+    </section>,
+    <section>
+      <h2>Ausblick</h2>
+      <p>
+        Die festgelegten Anforderungen und Ziele an das System beziehen sich
+        nicht nur auf die Gebrauchstauglichkeit (Usability), sondern auch auf{" "}
+        <b>emotionale Aspekte</b>. Dazu gehört, dass sich die Nutzung eines
+        Systems stimmig, angenehm oder motivierend anfühlt. Mehr dazu erläutern
+        wir im nächsten Kapitel zur User Experience (UX).
+      </p>
     </section>,
   ],
 };

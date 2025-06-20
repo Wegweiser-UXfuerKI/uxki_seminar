@@ -39,7 +39,7 @@
       "Sie können Gesundheit, Sicherheit und Grundrechte erheblich beeinträchtigen",
       "Sie beeinträchtigen ausschließlich wirtschaftliche Interessen",
       "Sie erhöhen den Energieverbrauch signifikant",
-      "Sie ersetzen menschliche Arbeitskraft vollständig"
+      "Sie ersetzen zu viel menschliche Arbeitskraft"
     ],
     "correctAnswer": [0]
   },
@@ -49,7 +49,7 @@
     "options": [
       "Kritische Infrastrukturen, Bildung, Beschäftigung, Strafverfolgung",
       "Freizeitgestaltung und Tourismus",
-      "Online-Werbung und Marketing",
+      "Militär und Sicherheit",
       "Digitale Unterhaltungssysteme"
     ],
     "correctAnswer": [0]
@@ -166,7 +166,7 @@
   },
   {
     "id": 14,
-    "questionText": "Was ist Ziel eines KI-Managementsystems nach KIVO?",
+    "questionText": "Was ist Ziel eines KI-Managementsystems im Sinne der KI-Verordnung?",
     "options": [
       "Sicherstellung der regulatorischen Anforderungen und Risikomanagement",
       "Reduzierung der Steuerlast für KI-Unternehmen",
@@ -188,7 +188,7 @@
   },
   {
     "id": 16,
-    "questionText": "Welche Elemente sind wesentliche Bestandteile eines KI-Managementsystems laut KIVO und DIN 42001:2023?",
+    "questionText": "Welche Elemente sind wesentliche Bestandteile eines KI-Managementsystems laut KI-Verordnung und DIN 42001:2023?",
     "options": [
       "Integration in bestehende Managementprozesse",
       "Förderung von Verantwortung und Rechenschaftspflicht",

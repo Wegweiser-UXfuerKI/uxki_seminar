@@ -39,7 +39,7 @@
       "Nachvollziehbare und erklärbare Entscheidungen",
       "Verwendung geschlossener, nicht überprüfbarer Modelle",
       "Verzicht auf Erklärungen zur Funktionsweise",
-      "Zentralisierung aller Entscheidungen bei der KI"
+      "Zentralisierung aller Entscheidungen bei KI-Systemen"
     ],
     "correctAnswer": [0]
   },
@@ -50,7 +50,7 @@
       "Vermeidung diskriminierender Effekte",
       "Inklusive Gestaltung für alle Nutzergruppen",
       "Berücksichtigung demografischer Unterschiede",
-      "Maximale Reduktion der Modellkomplexität"
+      "Reduktion der Modellkomplexität"
     ],
     "correctAnswer": [0, 1, 2]
   },

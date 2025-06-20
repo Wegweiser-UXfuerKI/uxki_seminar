@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "type": "single",
     "questionText": "Was beschreibt die wahrgenommene Autonomie bei der Nutzung eines KI-Systems?",
     "options": [
       "Die Fähigkeit des Systems, Entscheidungen ohne den Nutzer zu treffen",
@@ -8,7 +9,8 @@
       "Die Geschwindigkeit, mit der das System arbeitet",
       "Die Anzahl der Funktionen, die das System bietet"
     ],
-    "correctAnswer": [1]
+    "correctAnswer": [1],
+    "explanation": "Erklärung aller Ergebnisse"
   },
   {
     "id": 2,

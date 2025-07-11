@@ -68,7 +68,7 @@ body {
   box-shadow: var(--glasBoxShadow);
 }
 
-.shadow:hover {
+.shadow:not(.no-hover):hover {
   -webkit-box-shadow: var(--shadow);
   -moz-box-shadow: var(--shadow);
   box-shadow: var(--shadow);

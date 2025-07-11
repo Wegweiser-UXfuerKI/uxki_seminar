@@ -1,18 +1,36 @@
 /* Root Variables - Color Scheme and Design Variables */
 :root {
-  /*Main colors*/
+  /* Main colors */
   --tb: #77d1cb; /* tiffanyBlue */
+  --tb-rgb: 119, 209, 203;
+
   --vb: #7aa2cd; /* vistaBlue */
+  --vb-rgb: 122, 162, 205;
+
   --ti: #8377d1; /* tropicalIndigo */
+  --ti-rgb: 131, 119, 209;
+
   --lf: #aa77c2; /* lavenderFloral */
+  --lf-rgb: 170, 119, 194;
+
   --sm: #d177b3; /* skyMagenta */
+  --sm-rgb: 209, 119, 179;
 
   /* Neutrals */
   --br: #292734; /* raisinBlack */
+  --br-rgb: 41, 39, 52;
+
   --ev: #54506a; /* englishViolet */
+  --ev-rgb: 84, 80, 106;
+
   --fg: #b7b4c7; /* frenchGray */
+  --fg-rgb: 183, 180, 199;
+
   --la: #d4d2dd; /* lavenderWeb */
+  --la-rgb: 212, 210, 221;
+
   --w: #f1f0f4; /* anti-flashWhite */
+  --w-rgb: 241, 240, 244;
 
   /* Shadows and Background */
   --shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);

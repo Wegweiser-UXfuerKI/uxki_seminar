@@ -1,0 +1,74 @@
+.table_container {
+  width: 100%;
+  max-width: 960px;
+  margin: 10px auto;
+  overflow-x: auto;
+  border-radius: var(--scale2);
+}
+
+.table {
+  display: grid;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--scale2);
+  overflow: hidden;
+}
+
+.table_row {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  padding: var(--scale2) 0;
+  column-gap: var(--scale3);
+}
+
+.header_row {
+  font-weight: bold;
+  color: var(--fg);
+  border-radius: var(--scale2);
+}
+
+:global(:root.light) .header_row {
+  background-color: rgba(var(--w-rgb), 0.56);
+  color: var(--rb);
+}
+
+:global(:root.dark) .header_row {
+  background-color: rgba(var(--ev-rgb), 0.56);
+  color: var(--w);
+}
+
+.table_cell {
+  position: relative;
+  padding: var(--scale2) 0 var(--scale2) 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+}
+
+.table_row .table_cell:first-child {
+  padding-left: var(--scale2);
+}
+
+.table_row .table_cell:last-child {
+  padding-right: var(--scale2);
+}
+
+.header_row .table_cell:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 75%;
+  width: 1px;
+  background-color: var(--fg);
+  opacity: 0.3;
+  transform: translateY(-50%);
+}
+
+.table_cell img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

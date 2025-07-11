@@ -13,14 +13,36 @@ import risikostufenAuswirkungenData from "../SimpleQuizContent/ai-act/risikostuf
 import hlegData from "../SimpleQuizContent/ai-act/hleg.json";
 
 import testData from "../SimpleQuizContent/test.json";
+import { TabSwitchView } from "../2_molecule/TabSwitchView";
+import { Table } from "../2_molecule/Table";
 
 const DevTestPage = () => {
+  const tableData = [
+    [<b>Name</b>, <b>Rolle</b>],
+    ["Maria Schmidt", <b>Entwickler:in</b>],
+    ["Max Mustermann", "Designer"],
+    ["Peter Bäcker", "Projektmanager"],
+  ];
+
+  const columnWidths = ["25%", "50%", "25%"];
+
   return (
     <div className="w-full h-full">
       <BasicQuiz quizData={testData} />
       <h1 className="w-full text-center">KI-bezogene UX</h1>
       <h2 className="w-full text-center">Wahrgenommene Autonomie</h2>
       <BasicQuiz quizData={autonomieData} />
+
+      <Table data={tableData} headerStyle={true} />
+
+      <TabSwitchView>
+        <div title="Tab Links ye ye">
+          <BasicQuiz quizData={testData} />
+        </div>
+        <div title="Tab rechts le le le">
+          <BasicQuiz quizData={autonomieData} />
+        </div>
+      </TabSwitchView>
       {/* 
       <h2 className="w-full text-center">
         Wahrgenommenes Situationsbewusstsein

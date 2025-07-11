@@ -1,5 +1,8 @@
 .ux-button {
+  position: relative;
+  isolation: isolate;
   background: var(--bg);
+  color: var(--text);
 }
 
 .ux-button:hover,
@@ -72,4 +75,34 @@
   .ux-button:before {
     animation: none;
   }
+}
+
+/* Inverted Styles */
+
+:root.light .ux-button.inverted {
+  --bg: var(--ev);
+  --text: var(--w);
+}
+
+:root.light .ux-button.inverted:hover,
+:root.light .ux-button.inverted:focus {
+  color: var(--bg);
+}
+
+:root.light .ux-button.inverted:hover:after {
+  background: var(--text);
+}
+
+:root.dark .ux-button.inverted {
+  --bg: var(--w);
+  --text: var(--ev);
+}
+
+:root.dark .ux-button.inverted:hover,
+:root.dark .ux-button.inverted:focus {
+  color: var(--w);
+}
+
+:root.dark .ux-button.inverted:hover:after {
+  background: var(--text);
 }

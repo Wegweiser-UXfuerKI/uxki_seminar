@@ -5,6 +5,8 @@ import { Question } from "./Question";
 import { QuizResult } from "./QuizResult";
 import BaseButton from "../../1_elements/BaseButton";
 
+import ArrowIcon from "../../1_elements/ArrowIcon";
+
 /**
  * Main component for rendering the quiz interface and mangeing state.
  *
@@ -279,11 +281,11 @@ const BasicQuiz = ({ quizData, shuffleQuestions = false }) => {
                 <BaseButton
                   onClick={() => handleNavigateQuestion("prev")}
                   disabled={!canNavigatePrev}
-                  className={`h-6 px-3 rounded-md text-sm ${
+                  className={`h-6 rounded-md ${
                     !canNavigatePrev ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                   ariaLabel="Vorherige Frage">
-                  &lt;
+                  <ArrowIcon direction="left" className="p-0" />
                 </BaseButton>
                 <div className="text-sm mx-3">
                   Frage {viewingQuestionIndex + 1} von{" "}
@@ -296,30 +298,10 @@ const BasicQuiz = ({ quizData, shuffleQuestions = false }) => {
                     !canNavigateNext ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                   ariaLabel="Nächste Frage">
-                  &gt;
+                  <ArrowIcon direction="right" />
                 </BaseButton>
                 <span className="mx-2">|</span>
                 Korrekte Antworten bisher: {score}
-              </div>
-              <div className="flex items-center space-x-2">
-                <BaseButton
-                  onClick={() => handleNavigateQuestion("prev")}
-                  disabled={!canNavigatePrev}
-                  className={`h-6 px-3 rounded-md text-sm ${
-                    !canNavigatePrev ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
-                  ariaLabel="Vorherige Frage">
-                  &lt;
-                </BaseButton>
-                <BaseButton
-                  onClick={() => handleNavigateQuestion("next")}
-                  disabled={!canNavigateNext}
-                  className={`h-6 px-3 rounded-md text-sm ${
-                    !canNavigateNext ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
-                  ariaLabel="Nächste Frage">
-                  &gt;
-                </BaseButton>
               </div>
             </div>
 

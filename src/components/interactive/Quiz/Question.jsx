@@ -177,7 +177,7 @@ export const Question = ({
 
       {/* Erklärungsbereich */}
       {showAnswerState && explanation && (
-        <div className="mt-6 p-6 glassBox">
+        <div className="mt-6 p-6 glassBox rounded-xl">
           <h3>Erklärung:</h3>
           <p>{explanation}</p>
         </div>

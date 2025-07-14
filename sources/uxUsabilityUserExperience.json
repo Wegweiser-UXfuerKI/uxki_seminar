@@ -1,0 +1,131 @@
+[
+  {
+    "type": "chapter",
+    "author": [{ "family": "Jetter", "given": "Hans-Christian" }],
+    "editor": [
+      { "family": "Münch", "given": "Angela" },
+      { "family": "Oppermann", "given": "Reinhold" },
+      { "family": "Herczeg", "given": "Michael" }
+    ],
+    "title": "Die MCI im Wandel: User Experience als die zentrale Herausforderung?",
+    "container-title": "Mensch und Computer 2006: Mensch und Computer im Strukturwandel",
+    "publisher": "Oldenbourg Verlag",
+    "issued": { "date-parts": [[2006]] },
+    "page": "65–72"
+  },
+  {
+    "type": "book",
+    "author": [
+      {
+        "literal": "International Organization for Standardization"
+      }
+    ],
+    "title": "DIN EN ISO 9241-210:2020-03, Ergonomie der Mensch-System-Interaktion—Teil 210: Menschzentrierte Gestaltung interaktiver Systeme (ISO 9241-210:2019); Deutsche Fassung EN ISO 9241-210:2019",
+    "publisher": "DIN Media GmbH",
+    "issued": { "date-parts": [[2020, 3]] },
+    "DOI": "10.31030/3104744",
+    "URL": "https://doi.org/10.31030/3104744"
+  },
+  {
+    "type": "book",
+    "author": [
+      { "family": "Hartson", "given": "Rex" },
+      { "family": "Pyla", "given": "Pardha S." }
+    ],
+    "title": "The UX book: Agile UX design for a quality user experience",
+    "edition": "Second edition",
+    "publisher": "Morgan Kaufmann, an imprint of Elsevier",
+    "issued": { "date-parts": [[2019]] }
+  },
+  {
+    "type": "book",
+    "author": [{ "family": "Norman", "given": "Don A." }],
+    "title": "The design of everyday things",
+    "edition": "Rev. and expanded edition",
+    "publisher": "MIT Press",
+    "issued": { "date-parts": [[2013]] }
+  },
+  {
+    "type": "book",
+    "author": [
+      { "family": "Sharp", "given": "Helen" },
+      { "family": "Rogers", "given": "Yvonne" },
+      { "family": "Preece", "given": "Jenny" }
+    ],
+    "title": "Interaction design: Beyond human-computer interaction",
+    "edition": "Fifth edition",
+    "publisher": "Wiley",
+    "issued": { "date-parts": [[2019]] }
+  },
+  {
+    "type": "book",
+    "author": [{ "family": "Jordan", "given": "Patrick W." }],
+    "title": "Designing Pleasurable Products",
+    "edition": "0 Aufl.",
+    "publisher": "CRC Press",
+    "issued": { "date-parts": [[2000]] },
+    "DOI": "10.4324/9780203305683",
+    "URL": "https://doi.org/10.4324/9780203305683"
+  },
+  {
+    "type": "book",
+    "author": [
+      { "family": "Diefenbach", "given": "Sarah" },
+      { "family": "Hassenzahl", "given": "Marc" }
+    ],
+    "title": "Psychologie in der nutzerzentrierten Produktgestaltung",
+    "publisher": "Springer Berlin Heidelberg",
+    "issued": { "date-parts": [[2017]] },
+    "DOI": "10.1007/978-3-662-53026-9",
+    "URL": "https://doi.org/10.1007/978-3-662-53026-9"
+  },
+  {
+    "type": "chapter",
+    "author": [{ "family": "Hassenzahl", "given": "Marc" }],
+    "editor": [
+      { "family": "Blythe", "given": "Mark A." },
+      { "family": "Overbeeke", "given": "Kees" },
+      { "family": "Monk", "given": "Andrew F." },
+      { "family": "Wright", "given": "Peter C." }
+    ],
+    "title": "The Thing and I: Understanding the Relationship Between User and Product",
+    "container-title": "Funology",
+    "volume": "3",
+    "page": "31–42",
+    "publisher": "Springer Netherlands",
+    "issued": { "date-parts": [[2003]] },
+    "DOI": "10.1007/1-4020-2967-5_4",
+    "URL": "https://doi.org/10.1007/1-4020-2967-5_4"
+  },
+  {
+    "type": "chapter",
+    "author": [
+      { "family": "Hassenzahl", "given": "Marc" },
+      { "family": "Burmester", "given": "Michael" },
+      { "family": "Koller", "given": "Franz" }
+    ],
+    "editor": [
+      { "family": "Szwillus", "given": "Gerrit" },
+      { "family": "Ziegler", "given": "Jürgen" }
+    ],
+    "title": "AttrakDiff: Ein Fragebogen zur Messung wahrgenommener hedonischer und pragmatischer Qualität",
+    "container-title": "Mensch & Computer 2003",
+    "volume": "57",
+    "page": "187–196",
+    "publisher": "Vieweg+Teubner Verlag",
+    "issued": { "date-parts": [[2003]] },
+    "DOI": "10.1007/978-3-322-80058-9_19",
+    "URL": "https://doi.org/10.1007/978-3-322-80058-9_19"
+  },
+  {
+    "type": "report",
+    "author": [{ "family": "Ecker", "given": "Michael" }],
+    "title": "Usability und Usability Engineering zur Gestaltung von Lernsystemen",
+    "collection-title": "Technischer Bericht",
+    "collection-number": "1/2015",
+    "page": "38",
+    "publisher": "Pädagogische Hochschule Weingarten AG Mediendidaktik und Visualisierung (MEVis)",
+    "issued": { "date-parts": [[2016]] },
+    "URL": "https://hsbwgt.bsz-bw.de/frontdoor/index/index/year/2016/docId/191"
+  }
+]

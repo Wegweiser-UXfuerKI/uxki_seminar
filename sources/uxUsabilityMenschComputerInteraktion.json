@@ -1,0 +1,74 @@
+[
+  {
+    "type": "webpage",
+    "author": [{ "family": "Nielsen", "given": "Jakob" }],
+    "title": "Mental Models",
+    "issued": { "date-parts": [[2010]] },
+    "URL": "https://www.nngroup.com/articles/mental-models/"
+  },
+  {
+    "type": "book",
+    "author": [
+      { "family": "Constantine", "given": "Larry L." },
+      { "family": "Lockwood", "given": "Lucy A. D." }
+    ],
+    "title": "Software for use: A practical guide to the models and methods of usage-centered design; [web powered]",
+    "publisher": "Addison Wesley",
+    "issued": { "date-parts": [[1999]] }
+  },
+  {
+    "type": "book",
+    "author": [
+      { "family": "Hartson", "given": "Rex" },
+      { "family": "Pyla", "given": "Pardha S." }
+    ],
+    "title": "The UX book: Agile UX design for a quality user experience",
+    "edition": "Second edition",
+    "publisher": "Morgan Kaufmann, an imprint of Elsevier",
+    "issued": { "date-parts": [[2019]] }
+  },
+  {
+    "type": "report",
+    "author": [
+      { "family": "Harper", "given": "Richard" },
+      { "family": "Rodden", "given": "Tom" },
+      { "family": "Rogers", "given": "Yvonne" },
+      { "family": "Sellen", "given": "Abigail" }
+    ],
+    "title": "Being human: Human-computer interaction in the year 2020",
+    "publisher": "Microsoft Research",
+    "issued": { "date-parts": [[2008]] },
+    "URL": "https://www.microsoft.com/en-us/research/project/being-human/"
+  },
+  {
+    "type": "article",
+    "title": "DIN EN ISO 9241-210:2020-03, Ergonomie der Mensch-System-Interaktion - Teil 210: Menschzentrierte Gestaltung interaktiver Systeme (ISO 9241-210:2019); Deutsche Fassung EN ISO 9241-210:2019",
+    "issued": { "date-parts": [[2020, 3]] },
+    "publisher": "DIN Media GmbH",
+    "DOI": "10.31030/3104744",
+    "URL": "https://doi.org/10.31030/3104744"
+  },
+  {
+    "type": "book",
+    "author": [
+      { "family": "Preece", "given": "Jenny" },
+      { "family": "Rogers", "given": "Yvonne" },
+      { "family": "Sharp", "given": "Helen" }
+    ],
+    "title": "Interaction design: Beyond human-computer interaction",
+    "edition": "5. Aufl.",
+    "publisher": "Wiley",
+    "issued": { "date-parts": [[2019]] }
+  },
+  {
+    "type": "report",
+    "author": [{ "family": "Ecker", "given": "Michael" }],
+    "title": "Usability und Usability Engineering zur Gestaltung von Lernsystemen",
+    "collection-title": "Technischer Bericht",
+    "collection-number": "1/2015",
+    "page": "38",
+    "publisher": "Pädagogische Hochschule Weingarten AG Mediendidaktik und Visualisierung (MEVis)",
+    "issued": { "date-parts": [[2016]] },
+    "URL": "https://hsbwgt.bsz-bw.de/frontdoor/index/index/year/2016/docId/191"
+  }
+]

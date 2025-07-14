@@ -20,9 +20,16 @@ import styles from "./Table.module.css";
  * @param {string[]} [props.columnWidths] - Ein Array von Strings, das die Spaltenbreiten im CSS Grid Format definiert
  * (z.B. `['1fr', '2fr', '100px']`).
  * Wenn nicht angegeben, werden die Spaltenbreiten gleichmäßig aufgeteilt.
+ * @param {boolean} [props.verticalAlignCells=true] - Wenn `true`, werden die Inhalte der Zellen vertikal zentriert.
+ * Standardmäßig ist dies aktiviert.
  * @returns {React.ElementType|null} Das gerenderte Tabellenkomponente oder `null`, wenn keine Daten vorhanden sind.
  */
-export const Table = ({ data, headerStyle = true, columnWidths }) => {
+export const Table = ({
+  data,
+  headerStyle = true,
+  columnWidths,
+  verticalAlignedCells = true,
+}) => {
   if (!data || data.length === 0) {
     return null;
   }
@@ -53,7 +60,11 @@ export const Table = ({ data, headerStyle = true, columnWidths }) => {
 
         {/* Rows */}
         {rows.map((row, rowIndex) => (
-          <div key={rowIndex} className={styles.table_row}>
+          <div
+            key={rowIndex}
+            className={`${styles.table_row} ${
+              verticalAlignedCells ? styles.align_center : ""
+            }`}>
             {row.map((cell, cellIndex) => (
               <div key={cellIndex} className={styles.table_cell}>
                 {cell}

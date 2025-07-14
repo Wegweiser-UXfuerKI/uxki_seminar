@@ -5,6 +5,8 @@ import { VideoContainer } from "../1_elements/VideoContainer";
 import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 import List from "../2_molecule/List";
+import { Table } from "../2_molecule/Table";
+import { TabSwitchView } from "../2_molecule/TabSwitchView";
 
 const sectionsIntro = [
   { id: "1", title: "Intro" },
@@ -288,6 +290,76 @@ const sectionsNutzungskontext = [
   { id: "7", title: "Ausblick" },
 ];
 
+const easeLearnUseTableData = [
+  [
+    <b>Kriterium</b>,
+    <b>Ease of Learn (Erlernbarkkeit)</b>,
+    <b>Ease of Use (Benutzungseffizienz)</b>,
+  ],
+  [
+    "Zielgruppe",
+    "Erstnutzende, Gelegenheitsnutzende",
+    "Routine-Nutzende, Experten",
+  ],
+  [
+    "Wichtig bei",
+    "Öffentlichen, selten genutzten Systemen",
+    "Internen, häufig genutzten Systemen",
+  ],
+  [
+    "Fokus",
+    "Schnelle Einarbeitung, geringe Hürden",
+    "Effizienz, Produktivität, Zufriedenheit",
+  ],
+  [
+    "Typische Metrik",
+    "Zeit bis zur ersten erfolgreichen Nutzung",
+    "Geschwindigkeit, Fehlerfreiheit, Zufriedenheit",
+  ],
+];
+
+const umgebungTableData = [
+  [<b>Organisatorische Umgebung</b>, <b>Physische Umgebung</b>],
+  [
+    <>
+      <b>Arbeitsstruktur </b>, z.B. Einzelarbeit oder Teamarbeit mit KI-Tools
+    </>,
+    <>
+      <b>Arbeitsplatzbedingungen</b>, z.B. Lärmpegel in der Umgebung und die
+      Anwesenheit anderer Personen vs. Zuverlässigkeit und Datenschutz bei
+      Spracheingabe, Spiegelungen, Lichteinstrahlung und Handschuhe vs.
+      Outdoor-Einsatz eines Touchscreens
+    </>,
+  ],
+  [
+    <>
+      <b>Unterbrechungen</b> im Arbeitsalltag und bei Aufgaben
+    </>,
+    <>
+      <b>Technische Ausstattung</b>, z.B. verfügbare Rechen- und Grafikleistung
+      auf Mobilgeräten, Stabilität und Geschwindigkeit der Internetverbindung,
+      Bildschirmgröße und -auflösung
+    </>,
+  ],
+  [
+    [
+      <b>Unterstützung oder Schulungen</b>,
+      "z.B. IT-Support bei Problemen mit der KI oder Training mit neuen Systemen",
+    ],
+    <>
+      <b>Arbeitsplatzausstattung</b>, z.B. Verwendung im Büro, mobile Verwendung
+      im Stehen oder Sitzen, Verfügbarkeit von Teamarbeitsplätzen mit Projektor
+      oder digitalem Whiteboard
+    </>,
+  ],
+  [
+    <>
+      <b>Organisationskultur</b>, z.B. Akzeptanz von KI-Assistenz
+    </>,
+    "",
+  ],
+];
+
 const Nutzungskontext = {
   linkName: "nutzungskontext",
   name: "Nutzungskontext",
@@ -447,7 +519,47 @@ const Nutzungskontext = {
         erfüllen, um wirklich wirksam nutzbar zu sein. Die folgenden Bereiche
         gehören zur Umgebung
       </p>
-      <p>2 Spalten und Tabs-Sachen</p>
+      <Table
+        data={umgebungTableData}
+        headerStyle={false}
+        verticalAlignedCells={false}
+      />
+      <p>
+        Hier ist ein Beispiel: Eine KI-Anwendung zur Sprachübersetzung wird in
+        zwei gemeinwohlorientierten Organisationen eingesetzt.
+      </p>
+      <TabSwitchView>
+        <div title="1. Mobiler Beratungsbus für Geflüchtete">
+          <p>
+            In einem mobilen Beratungsbus für Geflüchtete arbeiten die
+            Mitarbeitenden mit Tablets. Die Beratung findet häufig unter freiem
+            Himmel statt, bei instabiler Internetverbindung und unter hohem
+            Zeitdruck. Die Arbeit erfolgt dabei oft im Stehen oder in
+            improvisierten Sitzpositionen.
+          </p>
+          <p>
+            In diesem Nutzungskontext ist der Einsatz heute typischer
+            KI-Technologien, z. B. Chatbots, nur bedingt geeignet, da die
+            technische Infrastruktur sowie die körperlichen und zeitlichen
+            Rahmenbedingungen für deren Einsatz nicht optimal sind. Heutige
+            Chatbots brauchen in der Regel schnelle Internetverbindungen und
+            basieren auf Eingaben über Tastatur oder Sprache, die mit spürbaren
+            Verzögerungen durch weit entfernte Server erst verarbeitet und dann
+            beantwortet werden. Die Anwendung sollte dagegen
+            Offline-Funktionalität und schnelle Spracheingabe berücksichtigen.
+          </p>
+        </div>
+        <div title="2. Digital ausgerichtete NGO mit Online-Beratung">
+          <p>
+            In einer digital ausgerichteten NGO, die Online-Beratung anbietet,
+            arbeiten die Teams in ruhigen Büros mit ergonomischen
+            Arbeitsplätzen. Dort stehen leistungsfähige Laptops oder Desktop-PCs
+            mit großen Bildschirmen, Headsets und stabiler Internetverbindung
+            zur Verfügung. Die Beratungen folgen einem festen Zeitplan und
+            ermöglichen konzentriertes Arbeiten.
+          </p>
+        </div>
+      </TabSwitchView>
       <h3>4. Hilfsmittel</h3>
       <p>Die technischen Bedingungen umfassen folgende Punkte:</p>
       <ul>
@@ -479,7 +591,11 @@ const Nutzungskontext = {
         etwa interne Nutzer:innen (Mitarbeitende) vs. externe Nutzer:innen
         (Kunden:innen, Klienten), entscheidend.
       </p>
-      <p>TABELLE</p>
+      <Table
+        data={easeLearnUseTableData}
+        headerStyle={true}
+        verticalAlignCells={true}
+      />
       <p>
         Bei Interne Systeme, z. B. für Mitarbeitende, kann es sinnvoll sein, die
         Ease of Learn etwas zugunsten der Ease of Use zu vernachlässigen, wenn

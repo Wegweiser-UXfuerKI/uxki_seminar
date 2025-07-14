@@ -1,7 +1,7 @@
 .table_container {
   width: 100%;
   max-width: 960px;
-  margin: 10px auto;
+  margin: var(--scale4) auto;
   overflow-x: auto;
   border-radius: var(--scale2);
 }
@@ -40,10 +40,17 @@
 
 .table_cell {
   position: relative;
-  padding: var(--scale2) 0 var(--scale2) 0;
+  padding-top: var(--scale2);
+  padding-bottom: var(--scale2);
+  padding-left: 0;
+  padding-right: 0;
   overflow: hidden;
   word-wrap: break-word;
   display: flex;
+  line-height: 1.5;
+}
+
+.align_center {
   align-items: center;
 }
 

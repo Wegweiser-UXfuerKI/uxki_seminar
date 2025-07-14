@@ -6,6 +6,15 @@ import { AppContext } from "../AppContext";
 import { getSubtopicNameByLink } from "./ContentHandler";
 
 const moduleMap = {
+  "ux-und-usability": {
+    einleitung: "uxUsabilityEinleitung",
+    usability: "uxUsabilityUsability",
+    nutzungskontext: "uxUsabilityNutzungskontext",
+    "user-experience": "uxUsabilityUserExperience",
+    "mensch-computer-interaktion": "uxUsabilityMenschComputerInteraktion",
+    evaluation: "uxUsabilityEvaluation",
+    fazit: "uxUsabilityFazit",
+  },
   "eu-ai-act": {
     einleitung: "euAIActEinleitung",
     "risikostufen-anwendungsbeispiele": "euAIActRisikostufenBeispiele",

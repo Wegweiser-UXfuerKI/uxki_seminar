@@ -369,9 +369,10 @@ const Nutzungskontext = {
     <ChapterHeader text={"Nutzungskontext"} number={3} />,
     <section>
       <p>
-        ist der Rahmen, unter dem ein System genutzt wird. Dazu gehören die
-        Nutzer:innen, ihre Aufgaben, die Umgebung und die Hilfsmittel. Man muss
-        den Nutzungskontext verstehen, um benutzerzentriert zu gestalten.
+        Beschreibt den Rahmen, in dem ein System verwendet wird. Dazu gehören
+        die Nutzer:innen, ihre Aufgaben, ihre Umgebung und ihre Hilfsmittel. Man
+        muss den Nutzungskontext verstehen, um Systeme wirklich
+        benutzerzentriert zu gestalten und einsetzen zu können.
       </p>
       <Accordion sections={sectionsNutzungskontext} />
       <SubNavigation sections={sectionsNutzungskontext} />
@@ -379,10 +380,10 @@ const Nutzungskontext = {
     <section>
       <h2>Definition Nutzungskontext</h2>
       <p>
-        Der Nutzungskontext beschreibt, wie ein digitales System wirklich
-        benutzt wird. Wer ein benutzerfreundliches System gestalten will, sollte
-        frühzeitig mit den Nutzer:innen zusammenarbeiten und folgende Aspekte
-        berücksichtigen:
+        Der Nutzungskontext beschreibt die Umstände, unter denen ein digitales
+        System benutzt werden wird. Wer also ein benutzerfreundliches System
+        gestalten will, sollte frühzeitig mit den Nutzer:innen zusammenarbeiten
+        und folgende Aspekte des Nutzungskontext ermitteln:
       </p>
       <List
         items={[
@@ -402,26 +403,30 @@ const Nutzungskontext = {
         bewerten oder verbessern möchten, muss der jeweilige Nutzungskontext und
         dessen Anforderungen bekannt sein. Das System ist nicht automatisch
         gebrauchstauglich, weil es bestimmte Funktionen bietet. Es kommt darauf
-        an, <b>wie gut das System in der Praxis funktioniert</b> und ob es von
-        der Zielgruppe <b>effektiv, effizient und zufriedenstellend</b> genutzt
-        werden kann.
+        an, <b>wie gut das System in der Praxis funktioniert</b> (also in seinen
+        realen Nutzungskontexten) und ob es von der Zielgruppe dabei{" "}
+        <b>effektiv, effizient und zufriedenstellend</b> genutzt werden kann.
       </p>
       <p>GRAFIK VON USABILITY</p>
       <p>
-        Dabei ist es wichtig, frühzeitig mit der Zielgruppe in Kontakt zu treten
+        Daher ist es wichtig, frühzeitig mit der Zielgruppe in Kontakt zu treten
         und ihre Perspektive bei der Konzeption und Entwicklung mit
         einzubeziehen. Das kann die spätere Akzeptanz und den Erfolg des Systems
-        erhöhen. Das kann auf den ersten Blick sehr umfangreich wirken. Dennoch
-        gilt hier das Motto "Alles ist besser als nichts!". Selbst einige wenige
-        informelle Gespräche, Fotos und Notizen sind immer noch besser, als
-        Software weitab vom Nutzungskontext bequem vom Schreibtisch aus zu
-        gestalten. Deshalb ist es auf jeden Fall wichtig, mit den realen
-        Zielgruppen in Kontakt zu treten – selbst wenn es nur ein informelles
-        Gespräch beim Kaffee ist.
+        deutlich erhöhen. Auf den ersten Blick wirkt dies aufwändig und
+        vielleicht sogar abschreckend. Dennoch gilt hier das Motto "Alles ist
+        besser als nichts!". Bereits einige wenige informelle Gespräche mit
+        zukünftigen Benutzer:innen, Notizen über deren Arbeitsweise und Fotos
+        von deren Arbeitsumgebung können schon helfen, um den Nutzungskontext
+        erheblich besser zu verstehen. Selbst kleine Schritte sind immer noch
+        besser, als dass eine Software vom bequemen Schreibtisch und fernab vom
+        realen Nutzungskontext komplett am Bedarf vorbei gestaltet wird. Deshalb
+        ist es auf jeden Fall wichtig, direkt mit den realen Zielgruppen in
+        Kontakt zu treten – selbst wenn es nur für ein informelles Gespräch beim
+        Kaffee ist.
       </p>
     </section>,
     <section>
-      <h2>Die 4 Bestandteile des Nutzungskontextes im Detail</h2>
+      <h2>Die vier Bestandteile des Nutzungskontextes im Detail</h2>
       <p>
         Die folgenden Aspekte und Methoden können als Inspiration für ein
         Vorgehen bei Ihrem System dienen. Sie können je nach System, Zielen und
@@ -438,6 +443,7 @@ const Nutzungskontext = {
         </Link>
       </p>
       <p>Dabei können verschiedene Aspekte analysiert werden:</p>
+      {/* Hier reine Liste oder auch mit Komponente für nummern? */}
       <ul>
         <li>
           <b>Fähigkeiten</b>, z.B. technisches Verständnis, Sprachkompetenz
@@ -461,13 +467,32 @@ const Nutzungskontext = {
       <Accordion title="Hier ein Beispiel:" initiallyOpen={false}>
         <p>
           In einer Flüchtlingshilfsorganisation wird ein KI-gestütztes
-          Übersetzungstool eingesetzt. Die Helfer:innen haben unterschiedliche
-          technische Fähigkeiten und Vorerfahrungen mit KI-Tools. Für die
-          Geflüchteten muss das Tool auch verschiedene Alphabetisierungsniveaus
-          abdecken. Manche Nutzer:innen können nicht lesen, weshalb eine
-          Sprachausgabe und Piktogramme notwendig sind. Das Übersetzungstool
-          muss also für viele unterschiedliche Bedürfnisse angepasst werden, um
-          effektiv und benutzerfreundlich zu sein.
+          Übersetzungstool eingesetzt. Die Helfer:innen haben generell sehr
+          unterschiedliche technische Fähigkeiten und Vorerfahrungen mit
+          KI-Tools. Das System sollte daher neue oder ungeübte Nutzer:innen
+          nicht mit zu vielen Funktionen überfordern. Funktionen für
+          Fortgeschrittene, die eher erfahrenen Benutzer*innen helfen, sollten
+          optional sein und den Erstkontakt nicht unnötig erschweren. Für die
+          Geflüchteten muss das Tool zusätzlich auch verschiedene
+          Alphabetisierungsniveaus abdecken. Manche Benutzer:innen werden nicht
+          oder nur schlecht lesen können, weshalb hier eine Sprachausgabe und
+          Piktogramme notwendig sind. Das Übersetzungstool muss also für viele
+          unterschiedliche Bedürfnisse angepasst werden, um wirklich
+          gebrauchstauglich zu sein.
+        </p>
+        <p>
+          Bei internen Systeme, z. B. für Mitarbeitende, kann es sinnvoll sein,
+          den Ease of Learn etwas zugunsten des Ease of Use zu vernachlässigen,
+          wenn die Nutzer:innen regelmäßig und intensiv mit dem System arbeiten.
+          Eine kurze, initiale Schulung ist oft akzeptabel, solange das System
+          anschließend effizient und produktiv genutzt werden kann.
+        </p>
+        <p>
+          Bei Front-facing Systeme (für Klienten/Kunden) hingegen ist der Ease
+          of Learn besonders kritisch, weil die Nutzer:innen oft keine oder nur
+          wenig Vorerfahrung mit dem System haben und keine Schulung erhalten.
+          Das System muss somit schnell verständlich sein, damit sie ihre Ziele
+          ohne Frustration erreichen.
         </p>
       </Accordion>
       <h3>2. Aufgaben</h3>
@@ -477,6 +502,7 @@ const Nutzungskontext = {
         System besitzt.
       </p>
       <p>Dazu könnte man sich folgende Aspekte ansehen:</p>
+      {/* Same here: Reine Liste oder nummeriert? */}
       <ul>
         <li>
           <b>Aufgabenziel</b>, z.B. Informationen finden, Texte generieren
@@ -496,23 +522,105 @@ const Nutzungskontext = {
         </li>
       </ul>
       <p>
-        Oft wird die Automatisierung von Aufgaben durch KI, insbesondere
-        ChatBots, erwogen. Diese scheinen zunächst effizient für Kundenanfragen
-        und interne Kommunikation. Nach der Implementierung zeigt sich jedoch
-        oft Unzufriedenheit der Nutzer:innen, da die Erwartungen nicht erfüllt
-        werden und der ChatBot im Vergleich zu anderen am Markt schlecht
-        abschneidet.
+        Im Rahmen der Entwicklung eines neuen Systems lohnt es sich, alle diese
+        Aspekte der Aufgaben zu analysieren und zu dokumentieren. Damit lassen
+        sich klarere Anforderungen an das neue System formulieren.
+      </p>
+      <p>
+        Zum Beispiel kann die Häufigkeit und Bearbeitungsdauer einer Aufgabe
+        eine große Rolle spielen. Wenn eine Aufgabe sehr typisch und häufig ist,
+        so sollte die entsprechende Funktion zu deren Bearbeitung mit dem System
+        besonders sorgfältig gestaltet sein!
+      </p>
+      <p>
+        Wird sie z.B. täglich oder sogar mehrmals täglich verwendet, dann ist
+        unbedingt zu vermeiden, dass viele Informationen immer neu eingegeben
+        oder Teilschritte stupide wiederholt werden müssen. Um typische Aufgaben
+        schneller zu bearbeiten, dürfen die Funktionen komplexer zu erlernen und
+        zu bedienen sein, z.B. durch die Verwendung von Tastaturkürzeln, durch
+        das Anlegen vorausgefüllter Vorlagen, das Abspeichern von
+        Standard-Textbausteinen oder Makros. Das ist wünschenswert, sofern sich
+        damit im Endeffekt die Aufgaben schneller und besser erledigen lassen.
+        Man spricht hier vom <b>“Ease of Use”</b> und die Effizienz steht dabei
+        im Vordergrund, da man davon ausgeht, dass die Benutzer:innen in solchen
+        Funktionen geschult werden und viel Übung haben.
+      </p>
+      <p>
+        Eine Funktion, die von ungeschulten Benutzer:innen nur sehr selten
+        verwendet wird, muss sich dagegen viel einfacher, selbsterklärender und
+        “intuitiver” präsentieren. Man spricht hier vom <b>“Ease of Learn”</b>{" "}
+        und die Erlernbarkeit steht dabei im Vordergrund.
+      </p>
+      <Accordion title="Ease of Use und Ease of Learn" initiallyOpen={false}>
+        <p>
+          <b>Ease of Use</b> (auch Benutzungseffizienz) und <b>Ease of Learn</b>{" "}
+          (oft als Erlernbarkeit bezeichnet) sind zwei zentrale, aber
+          unterschiedliche Qualitätsmerkmale bei der Gestaltung und Bewertung
+          von Softwaresystemen. Die Unterscheidung ist gerade im Hinblick auf
+          unterschiedliche Zielgruppen, etwa interne Nutzer:innen
+          (Mitarbeitende) vs. externe Nutzer:innen (Kunden:innen, Klienten),
+          entscheidend.
+        </p>
+        <Table
+          data={easeLearnUseTableData}
+          headerStyle={true}
+          verticalAlignCells={true}
+        />
+        <p>
+          Bei internen Systeme, z. B. für Mitarbeitende, kann es sinnvoll sein,
+          den Ease of Learn etwas zugunsten des Ease of Use zu vernachlässigen,
+          wenn die Nutzer:innen regelmäßig und intensiv mit dem System arbeiten.
+          Eine kurze, initiale Schulung ist oft akzeptabel, solange das System
+          anschließend effizient und produktiv genutzt werden kann.
+        </p>
+        <p>
+          Bei Front-facing Systeme (für Klienten/Kunden) hingegen ist der Ease
+          of Learn besonders kritisch, weil die Nutzer:innen oft keine oder nur
+          wenig Vorerfahrung mit dem System haben und keine Schulung erhalten.
+          Das System muss somit schnell verständlich sein, damit sie ihre Ziele
+          ohne Frustration erreichen.
+        </p>
+      </Accordion>
+      <p>
+        Durch den Erfolg von ChatGPT wird heute sehr oft die Automatisierung von
+        Aufgaben durch Chatbots als eine Art Allheilmittel betrachtet. Dies
+        erscheint zunächst vielversprechend, da Chatbots bereits effizient und
+        vielfältig eingesetzt werden, z.B. für die automatische Beantwortung von
+        Kundenanfragen oder für Auskünfte über interne Prozesse in
+        Organisationen oder gesetzliche Richtlinien. Hier ist jedoch Vorsicht
+        geboten! Erfolgreiche Chatbots benötigen eine Datengrundlage mit
+        entsprechend hoher Qualität. Die dort enthaltenen Informationen müssen
+        korrekt und auch in für die KI verarbeitbaren Strukturen vorliegen.
+        Chaotische, unstrukturierte und schlecht zu verarbeitende Sammlungen von
+        Dateien und Dokumenten in verschiedensten Ordnerstrukturen und Formaten
+        lassen sich auch durch eine moderne KI nicht einfach in eine
+        zuverlässige Informationsquelle verwandeln. Auch hier gilt der
+        Informatik-Grundsatz <b>“Garbage in, Garbage out!”</b>.
+      </p>
+      <p>
+        Selbst bei gepflegten Dokumentenbeständen als Wissensgrundlage für
+        Chatbots zeigt sich nach der Implementierung nicht selten eine große
+        Unzufriedenheit der Nutzer:innen, da ihre realen Aufgaben, Erwartungen,
+        Informationsbedürfnisse und Anforderungen bei der Entwicklung nicht
+        ausreichend berücksichtigt wurden. Das ist insbesondere dann
+        problematisch, wenn die Qualität des eigenen Chatbots im Vergleich zu
+        den mit dem gesamten Wissen der Welt trainierten KI-Systemen globaler
+        IT-Konzerne in der Wahrnehmung der Benutzer:innen schlecht abschneidet.
       </p>
       <p>
         Um solche Szenarien zu vermeiden, ist es ratsam, vorher den
-        Nutzungskontext genau zu analysieren. Im Modul{" "}
-        <Link to={"/identifikation-prozesse/einleitung"}>
-          Identifikation passender Prozesse
+        Nutzungskontext genau zu analysieren und darauf zu achten, dass die
+        Aufgaben und Anforderungen der Benutzer:innen überhaupt mit den
+        vorhandenen Technologien und Daten erfüllt werden können. Im Modul{" "}
+        <Link to={"/identifikation-prozesse"}>
+          <b>Identifikation passender Prozesse</b>
         </Link>{" "}
         werden wir uns eingehend damit beschäftigen, wie Automatisierungs- und
         KI-Potenziale identifiziert werden können und wie man frühzeitig
-        bewerten kann, welche Prozesse sich dafür eignen.
+        bewerten kann, welche Prozesse sich dafür eignen, bevor eine Umsetzung
+        durchgeführt oder beauftragt wird.
       </p>
+
       <h3>3. Umgebung</h3>
       <p>
         Ein System muss je nach Umgebung sehr unterschiedliche Anforderungen
@@ -521,7 +629,7 @@ const Nutzungskontext = {
       </p>
       <Table
         data={umgebungTableData}
-        headerStyle={false}
+        headerStyle={true}
         verticalAlignedCells={false}
       />
       <p>
@@ -576,39 +684,27 @@ const Nutzungskontext = {
           {" "}
           <b>Dokumentationen</b>, z.B. Handbücher, Tutorials
         </li>
+        <li>
+          <b>Nicht-digitale Werkzeuge und Objekte</b>, z.B. Stifte, Notizzettel,
+          Formulare, Laufkarten
+        </li>
       </ul>
-    </section>,
-    <section>
-      <h2>
-        Unterschied und Bedeutung von "Ease if Use" und "Ease of Learn" im
-        Nutzungskontext
-      </h2>
       <p>
-        <b>Ease of Use</b> und <b>Ease of Learn</b> (oft als Erlernbarkeit
-        bezeichnet) sind zwei zentrale, aber unterschiedliche Qualitätsmerkmale
-        bei der Gestaltung und Bewertung von Softwaresystemen. Die
-        Unterscheidung ist gerade im Hinblick auf unterschiedliche Zielgruppen,
-        etwa interne Nutzer:innen (Mitarbeitende) vs. externe Nutzer:innen
-        (Kunden:innen, Klienten), entscheidend.
-      </p>
-      <Table
-        data={easeLearnUseTableData}
-        headerStyle={true}
-        verticalAlignCells={true}
-      />
-      <p>
-        Bei Interne Systeme, z. B. für Mitarbeitende, kann es sinnvoll sein, die
-        Ease of Learn etwas zugunsten der Ease of Use zu vernachlässigen, wenn
-        die Nutzer:innen regelmäßig und intensiv mit dem System arbeiten. Eine
-        kurze, initiale Schulung ist oft akzeptabel, solange das System
-        anschließend effizient und produktiv genutzt werden kann.
-      </p>
-      <p>
-        Bei Front-facing Systeme (für Klienten/Kunden) hingegen ist die Ease of
-        Learn besonders kritisch, weil die Nutzer:innen oft keine oder nur wenig
-        Vorerfahrung mit dem System haben und keine Schulung erhalten. Das
-        System muss somit schnell verständlich sein, damit sie ihre Ziele ohne
-        Frustration erreichen.
+        Obwohl Hardware, Software und Dokumentation natürlich einen
+        unmittelbaren Einfluss auf die erfolgreiche Verwendung bzw. Usability
+        eines Systems haben, sollte die Rolle der nicht-digitalen Werkzeuge und
+        Objekte keinesfalls unterschätzt werden. Viele Prozesse laufen heute
+        noch papier-basiert ab. Beispielsweise werden auch heute noch wichtige
+        Informationen auf Handzetteln ausgegeben oder über Formulare abgefragt.
+        Laufkarten und Notizen begleiten Personen, Gegenstände oder Akten durch
+        eine Organisation und ermöglichen es, entscheidende (Meta-)Informationen
+        festzuhalten (z.B. Hintergründe, Internas, Vorgeschichten), die in
+        digitalen Systemen oftmals komplett wegfallen. Es lohnt sich also einen
+        Blick auf diese wichtigen nicht-digitalen Werkzeuge und Objekte zu
+        werfen, bevor man Aufgaben digitalisiert oder automatisiert. Nur so kann
+        sicher gestellt werden, dass den Benutzer:innen nachher nicht im System
+        entscheidende Möglichkeiten zur Informationseingabe und -weitergabe
+        fehlen.
       </p>
     </section>,
     <section>
@@ -617,23 +713,70 @@ const Nutzungskontext = {
         Die Nutzungskontextanalyse untersucht die vier oben genannten Aspekte.
         Dabei ist zu unterscheiden, ob ein neues Produkt entwickelt oder ein
         bestehendes überarbeitet wird. Bei bestehenden Produkten kann auf
-        vorhandenes Wissen oder frühere Tests zurückgegriffen werden.
+        vorhandenes Wissen oder frühere Tests zurückgegriffen werden. Bei
+        Neuentwicklungen muss der Nutzungskontext vollständig neu erhoben
+        werden.
       </p>
       <p>
-        Bei Neuentwicklungen muss der Nutzungskontext vollständig neu erhoben
-        werden. Anmerkung: Dabei wird vom Idealfall ausgegangen. Wir wissen sehr
-        gut, dass die Realität oft weit davon entfernt ist und eine solche
-        Analyse oftmals nicht so umfassend durchgeführt werden kann. Daher gilt
-        “Alles besser als nichts”.
+        Anmerkung: Dabei wird vom Idealfall ausgegangen. Wir wissen sehr gut,
+        dass die Realität oft weit davon entfernt ist und eine solche Analyse
+        oftmals nicht so umfassend durchgeführt werden kann. Daher gilt hier
+        wieder “Alles ist besser als nichts!”.
       </p>
       <p>Die Analyse erfolgt in zwei Schritten:</p>
-      <p>SPALTEN ODER TABS</p>
+      <TabSwitchView>
+        <div title="1. Datenerhebung">
+          <p>
+            Zunächst werden Informationen über Benutzende, Aufgaben und
+            Nutzungssituation gesammelt. Mögliche Methoden:
+          </p>
+          <ul>
+            <li>
+              {" "}
+              <b>Interviews</b>: Gezielte Befragung von Nutzer:innen oder
+              Expert:innen.
+            </li>
+            <li>
+              {" "}
+              <b>Umfragen</b>: Standardisierte Erhebung von Meinungen und
+              Erfahrungen über Fragebögen.
+            </li>
+            <li>
+              {" "}
+              <b>Fokusgruppen</b>: Gruppendiskussion zur Sammlung
+              unterschiedlicher Perspektiven.
+            </li>
+          </ul>
+        </div>
+        <div title="2. Analyse & Dokumentation">
+          <p>
+            Die gesammelten Daten werden geordnet und aufbereitet, z. B. durch:
+          </p>
+          <ul>
+            <li>
+              {" "}
+              <b>Personas</b>: Fiktive, aber realitätsnahe Nutzerprofile.
+            </li>
+            <li>
+              {" "}
+              <b>Nutzungsszenarien, Problemszenarien</b>: Beschreibungen
+              typischer Nutzungs- oder Problemsituationen.
+            </li>
+            <li>
+              {" "}
+              <b>Aufgabenanalyse</b>: Zerlegung von Aufgaben in Teilaufgaben
+              (z.B. mittels Hierarchical Task Analysis).
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
       <p>
-        Auf Basis dieser Analysen werden Usability-Ziele und konkrete
-        Nutzungsanforderungen abgeleitet. Diese sind die Grundlage für
-        Gestaltung und Evaluation. Später können damit gezielte Usability-Tests
-        durchgeführt werden. Kontexte können sich ändern, also kann die Analyse
-        kontinuierlich wiederholt werden. Mehr dazu in den Kapiteln{" "}
+        Auf Basis dieser Analysen werden <b>Usability-Ziele</b> und{" "}
+        <b>konkrete Nutzungsanforderungen</b> abgeleitet. Diese sind die
+        Grundlage für Gestaltung und Evaluation. Später können damit gezielte{" "}
+        <b>Usability-Tests</b> durchgeführt werden. Kontexte können sich ändern,
+        also kann die Analyse kontinuierlich wiederholt werden. Mehr dazu in den
+        Kapiteln{" "}
         <Link to={"/ux-und-usability/mensch-computer-interaktion"}>
           Mensch-Computer-Interaktion
         </Link>{" "}
@@ -647,7 +790,10 @@ const Nutzungskontext = {
         nicht nur auf die Gebrauchstauglichkeit (Usability), sondern auch auf{" "}
         <b>emotionale Aspekte</b>. Dazu gehört, dass sich die Nutzung eines
         Systems stimmig, angenehm oder motivierend anfühlt. Mehr dazu erläutern
-        wir im nächsten Kapitel zur User Experience (UX).
+        wir im nächsten Kapitel zur{" "}
+        <Link to={"ux-und-usability/user-experience"}>
+          <b>User Experience (UX).</b>
+        </Link>
       </p>
     </section>,
   ],

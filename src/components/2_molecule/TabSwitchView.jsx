@@ -22,7 +22,7 @@ export const TabSwitchView = ({ children }) => {
 
   return (
     <div>
-      <div className="max-w-[960px] mx-auto flex justify-between bg-[rgba(var(--w-rgb),0.56)] dark:bg-[rgba(var(--ev-rgb),0.56)] p-2 shadow no-hover rounded-[var(--scale2)] gap-x-[var(--base-size)]">
+      <div className="max-w-[960px] mx-auto mb-[var(--scale2)] flex justify-between bg-[rgba(var(--w-rgb),0.56)] dark:bg-[rgba(var(--ev-rgb),0.56)] p-2 shadow no-hover rounded-[var(--scale2)] gap-x-[var(--base-size)]">
         <div className="w-full">
           <button
             onClick={() => handleTabChange(0)}
@@ -32,7 +32,7 @@ export const TabSwitchView = ({ children }) => {
                 : "text-[var(--rb)] dark:text-[var(--w)]"
             }`}
             aria-label="Button to switch to the left tab">
-            Links: {tabTitles[0]}
+            {tabTitles[0]}
           </button>
         </div>
         <div className="w-full">
@@ -44,7 +44,7 @@ export const TabSwitchView = ({ children }) => {
                 : "text-[var(--rb)] dark:text-[var(--w)]"
             }`}
             aria-label="Button to switch to the right tab">
-            Rechts: {tabTitles[1]}
+            {tabTitles[1]}
           </button>
         </div>
       </div>

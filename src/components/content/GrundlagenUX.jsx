@@ -7,6 +7,23 @@ import SubNavigation from "../2_molecule/nav/SubNavigation";
 import List from "../2_molecule/List";
 import { Table } from "../2_molecule/Table";
 import { TabSwitchView } from "../2_molecule/TabSwitchView";
+import Sources from "../Sources";
+import ThemeImage from "../1_elements/ThemeImage";
+
+import nutzungskontext_dark from "../../assets/images/grundlagenUX/nutzungskontext_dark.png";
+import nutzungskontext_light from "../../assets/images/grundlagenUX/nutzungskontext_light.png";
+import DD_dark from "../../assets/images/grundlagenUX/double_diamond_dark.png";
+import DD_light from "../../assets/images/grundlagenUX/double_diamond_light.png";
+import hcd_dark from "../../assets/images/grundlagenUX/hcd_dark.png";
+import hcd_light from "../../assets/images/grundlagenUX/hcd_light.png";
+import ucd_dark from "../../assets/images/grundlagenUX/ucd_dark.png";
+import ucd_light from "../../assets/images/grundlagenUX/ucd_light.png";
+import ux_dark from "../../assets/images/grundlagenUX/ux_dark.png";
+import ux_light from "../../assets/images/grundlagenUX/ux_light.png";
+import icon_check from "../../assets/images/grundlagenUX/icon_check.png";
+import icon_clock from "../../assets/images/grundlagenUX/icon_clock.png";
+import icon_love from "../../assets/images/grundlagenUX/icon_love.png";
+import icon_smile from "../../assets/images/grundlagenUX/icon_smile.png";
 
 const sectionsIntro = [
   { id: "1", title: "Intro" },
@@ -407,7 +424,11 @@ const Nutzungskontext = {
         realen Nutzungskontexten) und ob es von der Zielgruppe dabei{" "}
         <b>effektiv, effizient und zufriedenstellend</b> genutzt werden kann.
       </p>
-      <p>GRAFIK VON USABILITY</p>
+      <ThemeImage
+        darkSrc={nutzungskontext_dark}
+        lightSrc={nutzungskontext_light}
+        alt="Bild Nutzungskontext"
+      />
       <p>
         Daher ist es wichtig, frühzeitig mit der Zielgruppe in Kontakt zu treten
         und ihre Perspektive bei der Konzeption und Entwicklung mit
@@ -636,38 +657,41 @@ const Nutzungskontext = {
         Hier ist ein Beispiel: Eine KI-Anwendung zur Sprachübersetzung wird in
         zwei gemeinwohlorientierten Organisationen eingesetzt.
       </p>
-      <TabSwitchView>
-        <div title="1. Mobiler Beratungsbus für Geflüchtete">
-          <p>
-            In einem mobilen Beratungsbus für Geflüchtete arbeiten die
-            Mitarbeitenden mit Tablets. Die Beratung findet häufig unter freiem
-            Himmel statt, bei instabiler Internetverbindung und unter hohem
-            Zeitdruck. Die Arbeit erfolgt dabei oft im Stehen oder in
-            improvisierten Sitzpositionen.
-          </p>
-          <p>
-            In diesem Nutzungskontext ist der Einsatz heute typischer
-            KI-Technologien, z. B. Chatbots, nur bedingt geeignet, da die
-            technische Infrastruktur sowie die körperlichen und zeitlichen
-            Rahmenbedingungen für deren Einsatz nicht optimal sind. Heutige
-            Chatbots brauchen in der Regel schnelle Internetverbindungen und
-            basieren auf Eingaben über Tastatur oder Sprache, die mit spürbaren
-            Verzögerungen durch weit entfernte Server erst verarbeitet und dann
-            beantwortet werden. Die Anwendung sollte dagegen
-            Offline-Funktionalität und schnelle Spracheingabe berücksichtigen.
-          </p>
-        </div>
-        <div title="2. Digital ausgerichtete NGO mit Online-Beratung">
-          <p>
-            In einer digital ausgerichteten NGO, die Online-Beratung anbietet,
-            arbeiten die Teams in ruhigen Büros mit ergonomischen
-            Arbeitsplätzen. Dort stehen leistungsfähige Laptops oder Desktop-PCs
-            mit großen Bildschirmen, Headsets und stabiler Internetverbindung
-            zur Verfügung. Die Beratungen folgen einem festen Zeitplan und
-            ermöglichen konzentriertes Arbeiten.
-          </p>
-        </div>
-      </TabSwitchView>
+      <div className="mb-[var(--scale4)] pb-[var(--scale4)]">
+        <TabSwitchView>
+          <div title="1. Mobiler Beratungsbus für Geflüchtete">
+            <p>
+              In einem mobilen Beratungsbus für Geflüchtete arbeiten die
+              Mitarbeitenden mit Tablets. Die Beratung findet häufig unter
+              freiem Himmel statt, bei instabiler Internetverbindung und unter
+              hohem Zeitdruck. Die Arbeit erfolgt dabei oft im Stehen oder in
+              improvisierten Sitzpositionen.
+            </p>
+            <p>
+              In diesem Nutzungskontext ist der Einsatz heute typischer
+              KI-Technologien, z. B. Chatbots, nur bedingt geeignet, da die
+              technische Infrastruktur sowie die körperlichen und zeitlichen
+              Rahmenbedingungen für deren Einsatz nicht optimal sind. Heutige
+              Chatbots brauchen in der Regel schnelle Internetverbindungen und
+              basieren auf Eingaben über Tastatur oder Sprache, die mit
+              spürbaren Verzögerungen durch weit entfernte Server erst
+              verarbeitet und dann beantwortet werden. Die Anwendung sollte
+              dagegen Offline-Funktionalität und schnelle Spracheingabe
+              berücksichtigen.
+            </p>
+          </div>
+          <div title="2. Digital ausgerichtete NGO mit Online-Beratung">
+            <p>
+              In einer digital ausgerichteten NGO, die Online-Beratung anbietet,
+              arbeiten die Teams in ruhigen Büros mit ergonomischen
+              Arbeitsplätzen. Dort stehen leistungsfähige Laptops oder
+              Desktop-PCs mit großen Bildschirmen, Headsets und stabiler
+              Internetverbindung zur Verfügung. Die Beratungen folgen einem
+              festen Zeitplan und ermöglichen konzentriertes Arbeiten.
+            </p>
+          </div>
+        </TabSwitchView>
+      </div>
       <h3>4. Hilfsmittel</h3>
       <p>Die technischen Bedingungen umfassen folgende Punkte:</p>
       <ul>
@@ -799,6 +823,31 @@ const Nutzungskontext = {
   ],
 };
 
+const sectionsUX = [
+  { id: "2", title: "Was ist UX?" },
+  { id: "3", title: "UX als Markenversprechen und Erwartungshaltung" },
+  { id: "4", title: "Wie erreicht man eine gute UX?" },
+  { id: "5", title: "Wichtige UX-Faktoren im Detail" },
+  { id: "6", title: "Beispiel KI-Chatbot" },
+  { id: "7", title: "Fazit: UX bedeutet Nutzerzentrierung" },
+];
+
+const pragamatischeHedonischData = [
+  [<b>Pragmatische Qualität (PQ)</b>, <b>Hedonische Qualität (HQ)</b>],
+  [
+    "Klar, unterstützend, nützlich, beherschbar",
+    "Besonders, beeindruckend, aufregend, cool",
+  ],
+  [
+    <>
+      Fokus: <b>Gebrauchstauglichkeit & Nutzen</b>
+    </>,
+    <>
+      Fokus: <b>Vergnügen & Wohlbefinden</b>
+    </>,
+  ],
+];
+
 const UserExperience = {
   linkName: "user-experience",
   name: "User Experience",
@@ -807,17 +856,256 @@ const UserExperience = {
   content: [
     <ChapterHeader text={"User Experience"} number={4} />,
     <section>
-      <div className="text-center p-10 pb-0 bg-slate-200 rounded-xl text-ux_dark flex flex-col justify-center items-center">
-        PowerPoint User Experience
-        <div className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
-          <a href="/downloads/UXPP.pptx" download>
-            Hier Herunterladen
-          </a>
+      <p>
+        User Experience umfasst das gesamte Nutzungserlebnis eines Produkts,
+        einschließlich subjektiver Empfindungen wie Ästhetik, Vertrauen und
+        Freude. UX geht über Usability hinaus und ist heute ein Schlüssel zum
+        Erfolg aller Arten von Produkten.
+      </p>
+      <Accordion sections={sectionsUX} />
+      <SubNavigation sections={sectionsUX} />
+    </section>,
+    <section>
+      <h2>Was ist UX?</h2>
+      <p>
+        Die <b>User Experience</b> (UX) ist ein immer wichtigeres Ziel bei der
+        Gestaltung digitaler Systeme. Auch wenn es dafür unterschiedliche
+        Übersetzungen gibt, ist <b>„Benutzungserlebnis”</b> unserer Meinung nach
+        der passendste deutsche Begriff. UX beschreibt die Gesamtheit der
+        Eindrücke, Gefühle und Erlebnisse, die Nutzer:innen{" "}
+        <b>vor, während und nach der Interaktion</b> mit einem Produkt oder
+        System haben. Gute Usability wird mittlerweile vorausgesetzt. Aber
+        Erlebnisse, die den Benutzer:innen einen Eindruck von
+        Leistungsfähigkeit, Eleganz, Attraktivität und Zuverlässigkeit des
+        Systems vermitteln? Diese bleiben in Erinnerung und machen den
+        Unterschied!
+      </p>
+      <p>Nehmen wir als Beispiel ein Smartphone:</p>
+      <ul>
+        <li>
+          Bereits vor der ersten Nutzung können Vorfreude und Erwartungen
+          entstehen, etwa durch Werbung, Design oder das Markenimage.
+        </li>
+        <li>
+          Während der Nutzung sind nicht nur Funktionalität und Usability
+          wichtig, sondern auch der Spaß, die emotionale Wirkung und die
+          Attraktivität des Systems bei der Verwendung.
+        </li>
+        <li>
+          Nach der Nutzung, etwa nach der Verwendung einer App, dem
+          Fotografieren oder einem Telefonat, können Gefühle wie Zufriedenheit,
+          Vertrauen, Stolz, aber auch Frustration auftreten.
+        </li>
+      </ul>
+      <ThemeImage
+        darkSrc={ux_dark}
+        lightSrc={ux_light}
+        alt="User Experience Grafik"
+      />
+      <p>
+        Die UX wird durch emotionale, soziale und kulturelle Aspekte geprägt,
+        also dadurch, wie das Produkt in das Leben der Nutzer:innen eingebettet
+        ist. Ein Produkt, das nicht nur funktioniert, sondern auch Freude
+        bereitet und positiv im Gedächtnis bleibt, hebt sich deutlich von
+        anderen ab.
+      </p>
+      <p className="specialText">
+        Laut ISO 9241-210 umfasst die UX „alle Wahrnehmungen und Reaktionen
+        einer Person, die sich aus der Nutzung oder erwarteten Nutzung eines
+        Produkts, Systems oder einer Dienstleistung ergeben.“
+      </p>
+    </section>,
+    <section>
+      <h2>UX als Markenversprechen</h2>
+      <p>
+        Die Bedeutung von UX ist bei Systemen für gemeinwohlorientierte
+        Organisationen nicht immer auf den ersten Blick ersichtlich. Hier steht
+        meist nicht der Spaß im Vordergrund, sondern dass Endnutzer:innen gut
+        beraten werden und relevante Informationen erhalten oder Mitarbeitende
+        schnell zuverlässige Prognosen für ihre Ressourcenplanung bekommen.
+      </p>
+      <p>
+        Dennoch sind UX und ihre emotionalen Komponenten entscheidend. Jedes
+        System, das im Kontext einer gemeinwohlorientierten Organisation
+        angeboten wird, verändert deren Wahrnehmung von außen und auch von
+        innen. Entspricht die Wirkung des Systems der selbstgewählten Mission,
+        dem Selbstverständnis und der Zuverlässigkeit, für die die Organisation
+        stehen will?{" "}
+      </p>
+      <p>
+        Wenn die Vorfreude oder Erwartungshaltung der Endnutzer:innen
+        beispielsweise enttäuscht wird, weil ein Chatbot nicht so hilfreich ist
+        wie erwartet, führt das zu Frustration und Ablehnung. Unter Umständen
+        kann sogar ein Imageschaden für die Gesamtorganisation entstehen. Auch
+        wenn es ein internes Prognosewerkzeug versäumt, seinen Nutzer:innen die
+        vorhandenen Beschränkungen und Unsicherheiten in der Vorhersage
+        klarzumachen, kann das schnell zu einem Vertrauensverlust und einer
+        kompletten Ablehnung des Systems führen. Das ist besonders tragisch,
+        wenn das System eigentlich gute Dienste leisten könnte, aber vielleicht
+        nur in wenigen Situationen überfordert war.
+      </p>
+      <p>
+        Es lohnt sich also, digitale Systeme nicht nur durch eine rein
+        funktionale und pragmatische Brille zu betrachten. Anstelle von
+        „Funktioniert es?” und „Wie gut kommen die Nutzer:innen damit zurecht?”
+        tritt zusätzlich die Frage „Wie wirkt es auf die Nutzer:innen und ist
+        dies die erwünschte Wirkung?”.
+      </p>
+    </section>,
+    <section>
+      <h2>Wie erreicht man eine gute UX?</h2>
+      <p>
+        Eine gute User Experience (UX) kann nicht direkt „designt“ werden, denn
+        sie entsteht im subjektiven Erleben der Nutzer:innen. Oder wie Preece et
+        al. (2015) treffend formulieren:
+      </p>
+      <p className="specialText">
+        „You cannot design a user experience, only design for a user
+        experience.“
+      </p>
+      <p>
+        Das bedeutet: UX-Designer:innen können ein System unter Berücksichtigung
+        des Nutzungskontextes so gestalten, dass positive Nutzungserlebnisse
+        möglichst wahrscheinlich werden. Entscheidend ist dabei ein
+        nutzerzentrierter Ansatz, bei dem der Mensch und seine Bedürfnisse im
+        Mittelpunkt stehen.{" "}
+      </p>
+      <p>
+        Im nächsten Kapitel zur{" "}
+        <Link to="/ux-und-usability/mensch-computer-interaktion">
+          <b>Mensch-Computer-Interaktion (HCI)</b>
+        </Link>{" "}
+        lernen Sie zentrale Methoden zur nutzerzentrierten Gestaltung kennen.
+        Zuvor befassen wir uns jedoch mit den Zielen und grundlegenden Aspekten
+        guter UX.
+      </p>
+      <p>
+        <b>Zentrale Ziele einer guten UX können sein:</b>
+      </p>
+      <ul>
+        <li>
+          <b>Produktive und einfache Interaktion</b>, die Nutzer:innen effizient
+          ans Ziel bringt
+        </li>
+        <li>
+          <b>Erfüllende und zufriedenstellende Nutzung</b>, die den Bedürfnissen
+          entspricht
+        </li>
+        <li>
+          <b>Positive Emotionen</b>, etwa das Gefühl, etwas „Cooles“,
+          „Einzigartiges“ oder „Elegantes“ zu nutzen
+        </li>
+        <li>
+          <b>Stärkere Markenbindung</b>, weil das Nutzungserlebnis positiv in
+          Erinnerung bleibt
+        </li>
+      </ul>
+    </section>,
+    <section>
+      <h2>Wcihtige UX-Faktoren im Detail</h2>
+      <h3>1. Erlebnispotential</h3>
+      <p>
+        Gute UX ermöglicht nicht nur das Erreichen eines Zieles, sondern schafft
+        Erlebnisse. Wichtige Fragen dabei sind:
+      </p>
+      <ul>
+        <li>Wie fühle ich mich bei der Nutzung?</li>
+        <li>Wer kann ich durch das Produkt sein?</li>
+        <li>Welche Erlebnisse ermöglicht mir das Produkt?</li>
+      </ul>
+      <h3>2. Pragmatische und hedonische Qualität (nach Hasssenzahl)</h3>
+      <p>
+        Wir können also festhalten, UX bedeutet, wie Menschen eine Website, App
+        oder ein Produkt erleben - und das betrifft nicht nur,{" "}
+        <b>wie gut etwas funktioniert</b>, sondern auch,
+        <b>wie es sich dabei anfühlt</b>. Also: Es geht sowohl um die praktische
+        Seite (z. B. „Finde ich schnell, was ich suche?“) als auch um die
+        <b>emotionale</b> (z. B. „Macht es mir Spaß, das zu benutzen?“ oder
+        „Fühlt es sich angenehm an?“). Im Forschungskontext lässt sich dies als
+        so genannte pragmatische und hedonische Qualitäten aufschlüsseln:
+      </p>
+      <Table data={pragamatischeHedonischData} headerStyle={true} />
+      <h3>3. Weitere Aspekte guter UX:</h3>
+      <ul>
+        <li>
+          <b>Emotionale Bindung & Vertrauen</b>: Positive Emotionen fördern
+          Bindung und Vertrauen in das Produkt.
+        </li>
+        <li>
+          <b>Konsistenz</b>: Das „Benutzungserlebnis sollte über alle Geräte
+          hinweg stimmig sein, egal ob Smartphone, Tablet oder Desktop.
+        </li>
+        <li>
+          <b>Barrierefreiheit & Inklusion</b>: UX muss alle Nutzer:innen
+          einbeziehen, auch z. B. Menschen mit Seh- oder motorischen
+          Einschränkungen.
+        </li>
+        <li>
+          <b>Feedback & Fehlervermeidung</b>: Nutzer:innen sollten klares
+          Feedback erhalten und vor möglichen Fehlern geschützt werden.
+        </li>
+        <li>
+          <b>Interaktives Design & ständige Verbesserung</b>: UX ist ein
+          fortlaufender Prozess. Nutzerfeedback ist essentiell für
+          kontinuierliche Optimierung.
+        </li>
+      </ul>
+    </section>,
+    <section>
+      <h2>Beispiel KI-Chatbot</h2>
+      <TabSwitchView>
+        <div title="Beispiel für gute UX">
+          <p>
+            Ein KI-gestützter Chatbot kann eine positive User Experience bieten,
+            wenn er sich intuitiv bedienen lässt, natürliche Sprache verwendet
+            und klare Anweisungen gibt. Besonders überzeugend ist das
+            Benutzungserlebnis, wenn der Chatbot Probleme schnell und präzise
+            löst, sich an die individuellen Bedürfnisse und Präferenzen der
+            Nutzer:innen anpasst und dabei eine freundliche, empathische
+            Atmosphäre schafft.
+          </p>
         </div>
-      </div>
+        <div title="Beispiel für schlechte UX">
+          <p>
+            Negative UX entsteht hingegen, wenn es zu Missverständnissen kommt,
+            etwa weil Benutzereingaben falsch interpretiert oder unklare
+            Antworten gegeben werden. Auch mangelnde Flexibilität, also die
+            Unfähigkeit, auf unerwartete oder komplexe Anliegen einzugehen,
+            beeinträchtigt das Nutzungserlebnis. Lange Reaktionszeiten, unnötige
+            Interaktionen und wiederholte Eingabeaufforderungen führen schnell
+            zu Frustration, da sie den Dialog ermüdend und ineffizient wirken
+            lassen.
+          </p>
+        </div>
+      </TabSwitchView>
+    </section>,
+    <section>
+      <h2>Fazit: UX bedeutet Nutzerzentrierung</h2>
+      <p>
+        User Experience bedeutet, den Menschen und seine Bedürfnisse konsequent
+        in den Mittelpunkt zu stellen. Dabei geht es nicht nur um ansprechende
+        Oberflächen, sondern um die Gestaltung sinnvoller, angenehmer und
+        benutzerfreundlicher Produkte, die positive Erlebnisse und Emotionen
+        fördern.
+      </p>
+      <p>
+        Im nächsten Kapitel lernen Sie, wie mithilfe nutzerzentrierter Methoden
+        im Rahmen der{" "}
+        <Link to="/ux-und-usability/mensch-computer-interaktion">
+          <b>Mensch-Computer-Interaktion (HCI)</b>
+        </Link>{" "}
+        eine positive UX systematisch gestaltet und evaluiert werden kann.
+      </p>
     </section>,
   ],
 };
+
+const sectionsHCI = [
+  { id: "2", title: "Definition Mensch-Computer-Interaktion" },
+  { id: "3", title: "Warum ist menschenzentrierte Gestaltung wichtig?" },
+  { id: "4", title: "Vorgehensweise für menschzentrierte Gestaltung" },
+  { id: "5", title: "Fazit" },
+];
 
 const MenschComputerInteraktion = {
   linkName: "mensch-computer-interaktion",
@@ -825,19 +1113,262 @@ const MenschComputerInteraktion = {
   description:
     "Eine interdisziplinäre Forschungsdisziplin, die sich mit der Gestaltung von Interaktionen zwischen Menschen und Technologie beschäftigt. Ziel ist es, positive Nutzungserfahrungen durch optimierte Design- und Entwicklungsprozesse zu schaffen.",
   content: [
-    <ChapterHeader text={"Mensch Computer Interaktion"} number={5} />,
+    <ChapterHeader text={"Mensch-Computer-Interaktion"} number={5} />,
     <section>
-      <div className="text-center p-10 pb-0 bg-slate-200 rounded-xl text-ux_dark flex flex-col justify-center items-center">
-        PowerPoint Mensch Computer Interaktion
-        <div className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
-          <a href="/downloads/MCIPP.pptx" download>
-            Hier Herunterladen
-          </a>
-        </div>
-      </div>
+      <p>
+        Mensch-Computer-Interaktion ist eine interdisziplinäre
+        Forschungsdisziplin, die sich unter anderem mit der Gestaltung von
+        Interaktionen zwischen Menschen und Technologie beschäftigt. Ziel ist
+        es, positive Nutzungserlebnisse durch optimierte Design- und
+        Entwicklungsprozesse zu schaffen.
+      </p>
+      <Accordion sections={sectionsHCI} />
+      <SubNavigation sections={sectionsHCI} />
+    </section>,
+    <section>
+      <h2>Definition Mensch-Computer-Interaktion (HCI)</h2>
+      <p>
+        Die Mensch-Computer-Interaktion (engl. Human-Computer Interaction, HCI)
+        ist ein interdisziplinäres Forschungsfeld, das sich mit der Gestaltung,
+        Umsetzung und Bewertung interaktiver Computersysteme für die Nutzung
+        durch Menschen befasst. Im Zentrum steht die Frage, wie Computer und
+        Technologien so gestaltet werden können, dass sie für Nutzer:innen
+        möglichst einfach, effizient, angenehm und sinnvoll bedienbar sind.
+      </p>
+      <p>
+        Ursprünglich richtete sich die Nutzung von Computersystemen an
+        Expert:innen. Heute sind interaktive Technologien allgegenwärtig und
+        müssen für alle Menschen einfach und angenehm nutzbar sein.{" "}
+      </p>
+      <p>
+        <b>HCI vs. UX</b>: Der Begriff HCI wird überwiegend im
+        wissenschaftlichen Kontext verwendet, während User Experience (UX) vor
+        allem in der Praxis verbreitet ist. Beide Konzepte verfolgen jedoch
+        dasselbe Ziel: die Gestaltung positiver und nutzerfreundlicher
+        Interaktionserfahrungen.
+      </p>
+    </section>,
+    <section>
+      <h2>Warum ist menschenzentrierte Gestaltung wichtig?</h2>
+      <p>
+        Ein zentrales Ziel nutzerzentrierter Gestaltung ist es, die Lücke
+        zwischen den Vorstellungen der Nutzer:innen und der tatsächlichen
+        Funktionsweise eines Systems zu überbrücken. Denn Nutzer:innen und
+        Designer:innen haben oft unterschiedliche <b>mentale Modelle</b>, also
+        innere Vorstellungen davon, wie ein System funktioniert bzw.
+        funktionieren soll.
+      </p>
+      <p>
+        Mentale Modelle beruhen auf Erfahrungen, Intuitionen und Analogien.
+        Jakob Nielsen (2010) beschreibt sie so: „A mental model is what the user
+        believes about the system at hand.“ Es basiert auf Glauben, nicht auf
+        Fakten. Sie helfen dabei, Komplexität zu reduzieren, indem sie Konzepte
+        und deren Beziehungen vereinfacht abbilden. Damit erfüllen seine
+        wichtige Rolle, um unseren Alltag voller Technologien zu bestreiten.
+        Viele Menschen können bspw. ihre PKWs oder Mobiltelefone bedienen, weil
+        sie ein mentales Modell von unterschiedlichen Funktionsweisen haben. Ein
+        vollständiges Wissen darüber, wie genau ein Elektromotor funktioniert
+        ist nicht notwendig, um ein E-Auto zu bedienen.
+      </p>
+      <p>
+        Designer:innen oder Entwickler:innen verfügen meist über ein tieferes
+        technisches Verständnis, wodurch sich ihre Modelle oft von denen der
+        Nutzer:innen unterscheiden. Umso wichtiger ist nutzerzentriertes Design:
+        „Design with users, not just for users.“ Gute Gestaltung folgt den
+        mentalen Modellen der Nutzer:innen.{" "}
+      </p>
+      <h3>Ein Beispiel für ein mentales Modell</h3>
+      <p>
+        Viele Nutzer:innen gehen davon aus, dass ein KI-Chatbot „wie ein Mensch“
+        denkt und versteht. Ihr mentales Modell basiert auf natürlicher Sprache,
+        schnellen Antworten und auf scheinbarem Verständnis. In Wirklichkeit
+        verarbeitet der Chatbot jedoch statistische Wahrscheinlichkeiten und
+        greift auf große Sprachmodelle zurück. Ein echtes Verständnis im
+        menschlichen Sinn ist somit nicht gegeben. Dennoch ermöglicht dieses
+        vereinfachte Modell eine einfache Nutzung: Fragen stellen, Antworten
+        erhalten, Probleme lösen.{" "}
+      </p>
+      <p>
+        Das Design solcher Systeme greift diese mentalen Modelle also auf, um
+        die Bedienung zu erleichtern. Es kann aber auch zu falschen Erwartungen
+        und Frustration führen, wenn der Chatbot an seine Grenzen stößt. Daher
+        müssen klare Hinweise auf die tatsächlichen Fähigkeiten und Begrenzungen
+        gegeben werden, um realistische Erwartungen zu fördern bspw. indem
+        irreführende Beschreibungen wie “das System muss überlegen” oder “der
+        Bot antwortet” vermieden werden, um kein menschliches Denken zu
+        suggerieren.{" "}
+      </p>
+    </section>,
+    <section>
+      <h2>Vorgehensweise für menschzentrierte Gestaltung</h2>
+      <p>
+        In der Gestaltung nutzerfreundlicher Systeme gibt es verschiedene
+        bewährte Vorgehensweisen, die auf anerkannten Normen basieren und dabei
+        helfen, die User Experience der Nutzenden zu verbessern. Zu den
+        wichtigsten zählen das <b>User-Centered Design (UCD)</b>, der{" "}
+        <b>Human-Centered Design gemäß ISO 9241-210</b> sowie der{" "}
+        <b>Double Diamond Prozess.</b>
+      </p>
+      <p>
+        Allen gemein ist die Idee, dass man ein System selten sofort perfekt
+        gestalten kann. Ein iteratives Vorgehen, also wiederholtes Entwerfen,
+        Testen und Verbessern mit Nutzer:innen ist entscheidend, um ein
+        System/Tool mit guter UX zu schaffen.
+      </p>
+      <p>
+        Die vorgestellten Vorgehensweisen sind idealisierte Modelle, die in der
+        Praxis häufig angepasst werden müssen. Zeit- und Ressourcenbegrenzungen
+        sowie individuelle Anforderungen führen dazu, dass selten jeder Schritt
+        vollständig umgesetzt werden kann. Dennoch bieten sie eine wertvolle
+        Orientierung für eine nutzerzentrierte Gestaltung.
+      </p>
+      <p>
+        Um einen groben Überblick von den Vorgehensweisen zu bekommen, finden
+        Sie im folgenden je eine kurze Zusammenfassung der wichtigsten Punkte,
+        sowie des Ablaufs der einzelnen Vorgehensweisen. Für Ihr Projekt können
+        Sie diese Vorgehensweisen als Inspiration oder Leitlinien nutzen, um
+        einen für Sie passenden Prozess zu entwickeln.
+      </p>
+      <h3>1. User-Centered Design (UCD)</h3>
+      <p>
+        Der UCD ist ein iterativer Gestaltungsprozess, bei dem die Bedürfnisse,
+        Erwartungen und Einschränkungen der Nutzer:innen von Anfang an in den
+        Mittelpunkt gestellt werden.
+      </p>
+      <p>Typische Schritte sind:</p>
+      <List
+        items={[
+          "<b>Kontextanalyse</b> bedeutet, dass Nutzer*innen mit einem System ihre Aufgaben erfolgreich bewältigen können.",
+          "<b>Effizienz</b> beschreibt, dass dies mit einem angemessenen Aufwand geschieht.",
+          "<b>Implementierung (Build)</b>: Die entworfenen Lösungen werden technisch umgesetzt und in das reale System integriert.",
+          <p>
+            <b>Evaluationen</b>: In Usability-Tests, A/B-Tests oder durch reale
+            Nutzungsszenarien („in the wild“) wird überprüft, wie gut das System
+            tatsächlich funktioniert. Mehr dazu im Kapitel{" "}
+            <Link to={"/ux-und-usability/evaluation"}>
+              <b>Evaluation</b>
+            </Link>
+            .
+          </p>,
+        ]}
+        alignItems="center"
+        size="medium"
+      />
+      <p>
+        Im letzten Schritt des iterativen Prozesses (understand) werden die
+        Ergebnisse der Evaluationen interpretiert und die Erkenntnisse in die
+        Study-Phase zurückgeführt.
+      </p>
+      <ThemeImage
+        darkSrc={ucd_dark}
+        lightSrc={ucd_light}
+        alt="User-Centered Design Grafik"
+      />
+      <h3>2. Human-Centered Design (ISO 9241-210)</h3>
+      <p>
+        Der Human-Centered Design-Prozess (HCD) ist ein international genormtes,
+        menschenzentriertes Gestaltungsmodell. Er legt besonderen Wert auf ein
+        systematisches Vorgehen und definiert sechs zentrale Prinzipien, bei
+        denen Nutzer:innen früh und kontinuierlich einbezogen werden für ein
+        gesamtheitliches Systemverständnis.
+      </p>
+      <ThemeImage
+        darkSrc={hcd_dark}
+        lightSrc={hcd_light}
+        alt="Human-Centered Design Grafik"
+      />
+      <p>
+        Der Prozess beginnt mit dem Verstehen und Festlegen des
+        Nutzungskontexts, leitet daraus Anforderungen an das System ab,
+        entwickelt Lösungen iterativ und bewertet sie kontinuierlich mit
+        Nutzer:innen, bis die Anforderungen erfüllt sind. Dabei sind alle
+        Schritte eng verzahnt und wiederholen sich zyklisch zur stetigen
+        Verbesserung der Gebrauchstauglichkeit.
+      </p>
+      <h3>3. Double Diamond</h3>
+      <p>
+        Das Modell des britischen Design Council visualisiert den kreativen
+        Problemlösungsprozess in zwei Phasen: <b>Problemraum</b> (Verstehen &
+        Definieren) und <b>Lösungsraum</b> (Ideen finden & Umsetzen). Es
+        kombiniert divergentes und konvergentes Denken, um sowohl das richtige
+        Problem als auch die passende Lösung zu finden.
+      </p>
+      <ThemeImage
+        darkSrc={DD_dark}
+        lightSrc={DD_light}
+        alt="Double Diamond Grafik"
+      />
+    </section>,
+    <section>
+      <h2>Fazit</h2>
+      <List
+        items={[
+          "HCI zielt auf nutzerfreundliche Technik durch Gestaltung, die an den Bedürfnissen und mentalen Modellen der Nutzer:innen ausgerichtet ist.",
+          "Modelle wie UCD, HCD und Double Diamond bieten strukturierte, iterative Prozesse für nutzerzentriertes Design.",
+          "Mentale Modelle vereinfachen Technik, müssen aber durch klares Design realistisch unterstützt werden.",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
     </section>,
   ],
 };
+
+const sectionsEvaluation = [
+  { id: "2", title: "Warum sind Evaluationen wichtig?" },
+  { id: "3", title: "Wann wird evaluiert?" },
+  { id: "4", title: "Wie wird evaluiert und mit wem?" },
+  { id: "5", title: "Was sind Evaluationskriterien?" },
+  { id: "6", title: "Methoden zur Messung der Usability" },
+  { id: "7", title: "Methoden zur Messung der User Experience (UX)" },
+  { id: "8", title: "Kombination von Methoden für eine umfassende Messung" },
+  { id: "9", title: "Zusammenfassung" },
+];
+
+const evaluationTypeData = [
+  [<b>Evaluationsart</b>, <b>Wann?</b>, <b>Ziel</b>, <b>Beispiel</b>],
+  [
+    <b>Formative Evaluation</b>,
+    "Während der Entwicklung",
+    "Probleme frühzeitg erkennen und verbessern",
+    "Usability-Test mit einem Prototyp",
+  ],
+  [
+    <b>Summative Evaluation</b>,
+    "Nach der Entwicklung",
+    "Gesamtqualität beurteilen, Designs vergleichen",
+    "Vergleich von Version A und Version B",
+  ],
+];
+
+const evaluationMethodsData = [
+  ["", <b>Empirische Evaluation</b>, <b>Analytische Evaluation</b>],
+  [
+    <b>Wer evaluiert?</b>,
+    "Echte Nutzer:innen",
+    "Expert:innen (z.B. UX-Designer:innen, Usability-Spezialist:innen)",
+  ],
+  [
+    <b>Ziel</b>,
+    "Beobachtung des Nutzerverhaltens bei konkreten Aufgaben",
+    "Bewertung anhand von Regeln und Erfahrung, frühzeitg Probleme identifizieren",
+  ],
+  [
+    <b>Methoden</b>,
+    "Usability-Tests, Interviews, Beobachtungen, Fragebögen",
+    "Heuristische Evaluation (z.B. nach Nielsen), Cognitive Walkthrough",
+  ],
+  [
+    <b>Vorteil</b>,
+    "Realitätsnahe Ergebnisse",
+    "Schnell, günstig, keine Nutzer:innen nötig",
+  ],
+  [
+    <b>Nachteile</b>,
+    "Zeit- und Kostenintensiv",
+    "Weniger objektiv, of weniger praxisnah",
+  ],
+];
 
 const Evaluation = {
   linkName: "evaluation",
@@ -847,14 +1378,337 @@ const Evaluation = {
   content: [
     <ChapterHeader text={"Evaluation"} number={6} />,
     <section>
-      <div className="text-center p-10 pb-0 bg-slate-200 rounded-xl text-ux_dark flex flex-col justify-center items-center">
-        Work in progress...
-        <Link
-          to={"/"}
-          className="my-10 bg-slate-600 p-5 rounded-lg hover:bg-ux_grey hover:cursor-pointer text-ux_white">
-          Zurück zur Kursübersicht
-        </Link>
+      <p>
+        Als Evaluation bezeichnet man die Überprüfung und Messung von Usability
+        und UX eines Systems. Durch Methoden wie Tests und Nutzerfeedback wird
+        ermittelt, ob die gewünschte Nutzungserfahrung erreicht wird.
+      </p>
+      <Accordion sections={sectionsEvaluation} />
+      <SubNavigation sections={sectionsEvaluation} />
+    </section>,
+    <section>
+      <h2>Warum sind Evaluationen wichtig?</h2>
+      <p>
+        Evaluationen sind, wie Sie im vorherigen Modul gesehen haben, ein
+        wichtiger Bestandteil des benutzerzentrierten Gestaltungsprozesses. Sie
+        helfen dabei sicherzustellen, dass ein System nicht nur funktional ist,
+        sondern auch den Bedürfnissen der Nutzer:innen entspricht. Ziel ist es,
+        zu überprüfen, ob die Nutzeranforderungen erfüllt werden, ob das System
+        benutzerfreundlich ist und ob es gerne genutzt wird.
+      </p>
+      <p>
+        Dabei gilt: Usability-Tests können die Benutzerfreundlichkeit zwar
+        verbessern, ersetzen aber keine gute Gestaltung. Eine gute User
+        Experience lässt sich nicht einfach „herantesten“. Eine erfolgreiche
+        Evaluation setzt daher ein grundlegendes{" "}
+        <b>Verständnis der Nutzer:innen</b> und <b>ihrer Aufgaben</b> im{" "}
+        <Link to={"/ux-und-usability/nutzungskontext"}>
+          <b>Nutzungskontext</b>
+        </Link>{" "}
+        voraus. Nur so können Rückschlüsse gezogen und Verbesserungen erzielt
+        werden.
+      </p>
+    </section>,
+    <section>
+      <h2>Wann wird evaluiert?</h2>
+      <p>
+        Evaluationen sind nicht nur eine abschließende Qualitätskontrolle,
+        sondern begleiten idealerweise den gesamten Entwicklungsprozess. Je nach
+        Zeitpunkt unterscheiden sich die Ziele und Vorgehensweisen:
+      </p>
+      <ol>
+        <li>
+          Die <b>formative Evaluation</b> erfolgt <u>während</u> der
+          Entwicklung. Ihr Ziel ist es, frühzeitig Schwächen und
+          Usability-Probleme zu erkennen, um gezielt Verbesserungen vorzunehmen.
+          Häufig kommt hier ein Prototyp zum Einsatz, der mit echten
+          Nutzer:innen getestet wird.
+        </li>
+        <li>
+          Die <b>summative Evaluation</b> findet hingegen am <u>Ende</u> des
+          Entwicklungsprozesses statt. Hier geht es darum, die Gesamtqualität
+          des Systems zu bewerten, zum Beispiel durch den Vergleich
+          verschiedener Versionen, um herauszufinden, welche besser
+          funktioniert.
+        </li>
+      </ol>
+      <Table data={evaluationTypeData} />
+    </section>,
+    <section>
+      <h2>Wann wird evaluiert und mit wem?</h2>
+      <p>
+        Nachdem wir nun geklärt haben, was Evaluationen sind und wann sie im
+        Prozess sinnvoll eingesetzt werden, schauen wir uns als Nächstes an, wie
+        eine Evaluation konkret durchgeführt werden kann und wer daran beteiligt
+        ist.
+      </p>
+      <p>
+        Man unterscheidet dabei häufig zwischen empirischen und analytischen
+        Methoden. Beide Ansätze haben unterschiedliche Schwerpunkte und eignen
+        sich je nach Projektphase, Zielsetzung und verfügbaren Ressourcen:
+      </p>
+      <ol>
+        <li>
+          <b>Empirische Methoden</b> ermöglichen tiefere Einblicke in das{" "}
+          <b>tatsächliche Benutzungserlebnis</b>. Beispiele dafür sind ein
+          Usability-Test oder Interviews mit Bürger:innen, die prüfen, wie
+          verständlich und zugänglich eine KI-gestützte Plattform für
+          Sozialleistungen ist.
+        </li>
+        <li>
+          <b>Analytische Verfahren</b> lassen sich hingegen besonders in{" "}
+          <b>frühen Phasen</b> oder bei <b>begrenzten Ressourcen</b> effizienter
+          einsetzen. UX-Expert:innen führen beispielsweise eine heuristische
+          Evaluation durch, um frühzeitig Barrieren für ältere Menschen in einem
+          KI-basierten Beratungs-Chatbot zu identifizieren.
+        </li>
+      </ol>
+      <Table data={evaluationMethodsData} />
+    </section>,
+    <section>
+      <h2>Was sind Evaluationskriterien?</h2>
+      <p>
+        Um die Qualität der User Experience oder Usability systematisch
+        beurteilen zu können, braucht es klare Evaluationskriterien. Sie helfen
+        dabei, Ergebnisse nachvollziehbar und objektiv zu bewerten. Je nach
+        Projekt und Zielgruppe können unterschiedliche Schwerpunkte gesetzt
+        werden. Typische Kriterien sind zum Beispiel:
+      </p>
+      <div className="flex flex-col gap-[var(--scale4)] justify-center">
+        <div className="flex gap-[var(--scale2)]">
+          <img src={icon_check} alt="Icon Checkmark" />
+          <p>
+            <b>Effektivität</b>: Können Nutzer:innen ihre Aufgaben erfolgreich
+            erledigen? <br />
+            Beispiel: 90% der Aufgaben werden korrekt abgeschlossen.
+          </p>
+        </div>
+        <div className="flex gap-[var(--scale2)]">
+          <img src={icon_clock} alt="Icon Uhr" />
+          <p>
+            <b>Effizienz</b>: Wie schnell und mühelos gelingt die Nutzung?{" "}
+            <br />
+            Beispiel: Aufgabe lässt sich in unter 30 Sekunden oder mit maximal
+            10 Klicks lösen.
+          </p>
+        </div>
+        <div className="flex gap-[var(--scale2)]">
+          <img src={icon_smile} alt="Icon Lächeln" />
+          <p>
+            <b>Zufriedenheit</b>: Wie empfinden Nutzer:innen die Nutzung? <br />
+            Beispiel: Keine negativen Rückmeldungen, positive Bewertungen.
+          </p>
+        </div>
+        <div className="flex gap-[var(--scale2)]">
+          <img src={icon_love} alt="Icon Herzenaugen" />
+          <p>
+            <b>Freude an der Nutzung</b>: Macht die Anwendung Spaß oder fühlt
+            sie sich langsam an? <br />
+            Beispiel: Nutzer:innen berichten von einem positiven Erlebnis
+            währedn der Nutzung.
+          </p>
+        </div>
       </div>
+    </section>,
+    <section>
+      <h2>Methoden zur Messung der Usability</h2>
+      <TabSwitchView>
+        <div title="Usability-Tests">
+          <p>
+            In einem Usability-Test bearbeiten Nutzer:innen typische Aufgaben
+            mit dem System, während Expert:innen ihr Verhalten beobachten, um
+            Probleme und Barrieren zu erkennen. Diese Methode liefert Einblicke
+            in die tatsächliche Nutzung und hilft dabei, konkrete
+            Usability-Probleme zu identifizieren. Der Aufwand ist jedoch hoch,
+            und der künstliche Testrahmen kann das Verhalten der Nutzer:innen
+            beeinflussen. Zudem sind die Ergebnisse wegen der kleinen
+            Teilnehmerzahl oft nicht vollständig repräsentativ.
+          </p>
+        </div>
+        <div title="Heuristische Evaluation">
+          <p>
+            Bei der heuristischen Evaluation prüfen Expert:innen das System
+            anhand von Usability-Heuristiken (z.B.{" "}
+            <a
+              href="https://www.nngroup.com/articles/ten-usability-heuristics/"
+              target="_blank"
+              rel="noopener noreferrer">
+              die 10 Regeln von Nielsen
+            </a>
+            ). So lassen sich offensichtliche Usability-Probleme schnell
+            identifizieren, ohne dass Nutzer:innen einbezogen werden müssen. Das
+            macht die Methode kostengünstig und effizient für eine erste
+            Einschätzung. Allerdings ist die Bewertung subjektiv und hängt stark
+            von der Erfahrung der Expert:innen ab. Zudem werden oft nicht alle
+            Probleme erkannt, die bei echten Nutzer:innen auftreten würden. Mehr
+            zur Durchführung{" "}
+            <a
+              href="https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/"
+              target="_blank"
+              rel="noopener noreferrer">
+              hier
+            </a>
+            .
+          </p>
+        </div>
+        <div title="Fragebögen">
+          <p>
+            Standardisierte Fragebögen sind eine einfache und effiziente
+            Methode, um die subjektive Einschätzung der Usability durch
+            Nutzer:innen zu erfassen. Zu bekannten zählen:
+          </p>
+          <ul>
+            <li>
+              <p>
+                die{" "}
+                <a
+                  href="https://germanupa.de/wissen/fragebogenmatrix/sus/"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  System Usability Scale
+                </a>{" "}
+                (
+                <a
+                  href="http://interaction-design-group.de/toolbox/wp-content/uploads/2016/05/SUS.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Deutsche Variante
+                </a>
+                )
+              </p>
+            </li>
+            <li>
+              <p>
+                <a
+                  href="https://site.unibo.it/hfrs/en/questionnaire-and-scales-2/quis"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Questionnaire for User Interface Satisfaction (QUIS)
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a
+                  href="https://www.researchgate.net/publication/230786746_Measuring_Usability_with_the_USE_Questionnaire"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  USE-Fragebogen (Usefulness, Satisfaction, and Ease of Use)
+                </a>
+              </p>
+            </li>
+          </ul>
+          <p>
+            Diese Fragebögen lassen sich schnell durchführen, liefern
+            quantitative Daten und können mit vielen Nutzer:innen gleichzeitig
+            eingesetzt werden. Sie eignen sich besonders gut, um erste
+            Usability-Einschätzungen zu gewinnen oder um mehrere Versionen eines
+            Systems zu vergleichen.
+          </p>
+          <p>
+            Allerdings erfassen sie meist nur oberflächliche Aspekte und sind
+            stark von der Ehrlichkeit und dem Verständnis der Teilnehmenden für
+            die gestellten Fragen abhängig. Daher sollten sie idealerweise mit
+            weiteren Methoden kombiniert werden, um ein umfassenderes Bild der
+            Usability zu erhalten.
+          </p>
+        </div>
+      </TabSwitchView>
+    </section>,
+    <section>
+      <h2>Methoden zur Messung der User Experience (UX)</h2>
+      <p>
+        Die User Experience umfasst mehr als reine Usability. Sie berücksichtigt
+        auch Emotionen, Wahrnehmungen und das gesamte Nutzungserlebnis. Um diese
+        Dimensionen zu erfassen, kommen ergänzende Methoden zum Einsatz:
+      </p>
+      <TabSwitchView>
+        <div title="Interviews">
+          <p>
+            Interviews ermöglichen tiefe Einblicke in die Gedanken, Gefühle und
+            Erfahrungen der Nutzer:innen. Durch offene Fragen erhält man
+            detailliertes Feedback zur Wahrnehmung eines Produkts. Die Methode
+            ist flexibel und kontextbezogen, jedoch zeitaufwendig und nur
+            bedingt repräsentativ.
+          </p>
+        </div>
+        <div title="Emotionsanalyse und physiologische Messungen">
+          <p>
+            Techniken wie Eye-Tracking, Emotionserkennung oder
+            Hautleitfähigkeitsmessung erfassen unbewusste, emotionale Reaktionen
+            auf ein Produkt. Diese objektiven Daten helfen dabei, subtile
+            Aspekte der User Experience zu verstehen, die über bloße Befragungen
+            hinausgehen. Sie sind aber oft technisch aufwändig, teuer und können
+            das Nutzerverhalten beeinflussen.
+          </p>
+        </div>
+        <div title="Fragebögen">
+          <p>
+            Standardisierte Fragebögen wie der{" "}
+            <a
+              href="https://www.ueq-online.org/"
+              target="_blank"
+              rel="noopener noreferrer">
+              User Experience Questionnaire (UEQ)
+            </a>{" "}
+            oder{" "}
+            <a
+              href="https://germanupa.de/wissen/fragebogenmatrix/attrakdiff"
+              target="_blank"
+              rel="noopener noreferrer">
+              AttrakDiff
+            </a>{" "}
+            liefern schnelle, vergleichbare Ergebnisse zu verschiedenen
+            UX-Dimensionen. Sie sind einfach durchzuführen und gut validiert,
+            erfassen jedoch hauptsächlich subjektive Eindrücke und bieten wenig
+            Tiefe hinsichtlich der Ursachen hinter den Bewertungen.
+          </p>
+        </div>
+      </TabSwitchView>
+    </section>,
+    <section>
+      <h2>Kombination von Methoden für eine umfassende Messung</h2>
+      <p>
+        Ein Multi-Methoden-Ansatz kombiniert verschiedene Erhebungsverfahren, um
+        sowohl quantitative als auch qualitative Daten zu erfassen. So können
+        unterschiedliche Perspektiven berücksichtigt und Stärken wie Schwächen
+        eines Systems besser sichtbar gemacht werden. Beispielsweise können Sie:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <b>Zunächst einen Usability-Test</b> durchführen, um
+            Beobachtungensdaten zu sammeln.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Anschließend einen Fragebogen</b> einsetzen, um subjektive
+            Eindrücke zu messen.
+          </p>
+        </li>
+        <li>
+          <b>Abschließend Interviews</b> führen, um Hintergründe und Details zu
+          verstehen.
+        </li>
+      </ol>
+      <p>
+        Allerdings wird auch hier von einem idealen Vorgehen ausgegangen und
+        kann in realen Projekten den Anforderungen entsprechend abgewandelt
+        werden.
+      </p>
+    </section>,
+    <section>
+      <h2>Zusammenfassung</h2>
+      <List
+        items={[
+          "Evaluationen sind <b>kein Ersatz für gutes Design</b>, sondern ein Werkzeug zur Verbesserung.",
+          "Es gibt <b>verschiedene Arten von Evaluationen</b>, abhängig vom Zeitpunkt, Aufwand und Ziel: <b>Formativ vs. Summativ</b> oder <b>Empirisch vs. Analytisch</b>",
+          "Gute Evaluation basiert auf klarem Verständnis der Aufgaben, Nutzer:innen und Kontexte.",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
     </section>,
   ],
 };
@@ -902,21 +1756,7 @@ const Quellen = {
   content: [
     <ChapterHeader text={"Quellen"} number={8} />,
     <section>
-      <h2>Literaturverzeichnis</h2>
-      <ul>
-        <li>
-          Jetter, H.-C. (2023). D3 Mensch-Computer-Interaktion, Usability und
-          User Experience. In R. Kuhlen, D. Lewandowski, W. Semar & C.
-          Womser-Hacker (Hrsg.), <i>Grundlagen der Informationswissenschaft</i>{" "}
-          (S. 525–534). De Gruyter Saur.{" "}
-          <a
-            href="https://doi.org/10.1515/9783110769043-045"
-            target="_blank"
-            rel="noreferrer">
-            https://doi.org/10.1515/9783110769043-045
-          </a>
-        </li>
-      </ul>
+      <Sources />
     </section>,
   ],
 };

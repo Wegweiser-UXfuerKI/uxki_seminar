@@ -11,42 +11,27 @@ import { useState } from "react";
 export const TabSwitchView = ({ children }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
-  const handleTabChange = (index) => {
-    setSelectedTab(index);
-  };
-
   const tabTitles = React.Children.map(
     children,
-    (child) => child.props.title || `Tab 1 oder 2`
+    (child, index) => child.props.title || `Tab ${index + 1}`
   );
 
   return (
     <div>
       <div className="max-w-[960px] mx-auto mb-[var(--scale2)] flex justify-between bg-[rgba(var(--w-rgb),0.56)] dark:bg-[rgba(var(--ev-rgb),0.56)] p-2 shadow no-hover rounded-[var(--scale2)] gap-x-[var(--base-size)]">
-        <div className="w-full">
+        {tabTitles.map((title, index) => (
           <button
-            onClick={() => handleTabChange(0)}
-            className={`w-full px-6 py-4 text-left h-full rounded-xl ${
-              selectedTab === 0
-                ? "ux-button "
+            key={index}
+            onClick={() => setSelectedTab(index)}
+            className={`flex-1 px-6 py-4 text-left rounded-xl ${
+              selectedTab === index
+                ? "ux-button"
                 : "text-[var(--rb)] dark:text-[var(--w)]"
             }`}
-            aria-label="Button to switch to the left tab">
-            {tabTitles[0]}
+            aria-label={`Button to switch to tab ${index + 1}`}>
+            {title}
           </button>
-        </div>
-        <div className="w-full">
-          <button
-            onClick={() => handleTabChange(1)}
-            className={`w-full px-6 py-4 text-left h-full rounded-xl ${
-              selectedTab === 1
-                ? "ux-button inverted"
-                : "text-[var(--rb)] dark:text-[var(--w)]"
-            }`}
-            aria-label="Button to switch to the right tab">
-            {tabTitles[1]}
-          </button>
-        </div>
+        ))}
       </div>
       <div>{children[selectedTab]}</div>
     </div>

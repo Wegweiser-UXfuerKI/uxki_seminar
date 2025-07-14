@@ -161,6 +161,12 @@ h4 {
   font-weight: 600;
 }
 
+:root.light section u,
+:root.dark section u {
+  font-size: inherit;
+  text-decoration: underline;
+}
+
 i,
 b,
 strong {

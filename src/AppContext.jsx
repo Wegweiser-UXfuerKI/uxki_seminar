@@ -50,6 +50,12 @@ const AppProvider = ({ children }) => {
 
   // Disabled subtopics for specific modules
   const disabledSubtopics = {
+    "ux-und-usability": [
+      "nutzungskontext",
+      "user-experience",
+      "mensch-computer-interaktion",
+      "evaluation",
+    ],
     "ux-bezogene-ki-eigenschaften": ["einleitung"],
     dateninput: ["einleitung"],
     verarbeitung: ["einleitung"],

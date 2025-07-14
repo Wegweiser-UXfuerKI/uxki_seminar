@@ -39,6 +39,23 @@ const AppProvider = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const devModules = [
+    "ux-bezogene-ki-eigenschaften",
+    "dateninput",
+    "verarbeitung",
+    "ki-ergebnisse",
+    "identifikation-prozesse",
+  ];
+
+  const devSubtopics = {
+    "ux-und-usability": [
+      "nutzungskontext",
+      "user-experience",
+      "mensch-computer-interaktion",
+      "evaluation",
+    ],
+  };
+
   // Temporarily deactivated modules
   const disabledModules = [
     "ux-bezogene-ki-eigenschaften",
@@ -167,6 +184,8 @@ const AppProvider = ({ children }) => {
     setTheme,
     disabledModules,
     disabledSubtopics,
+    devModules,
+    devSubtopics,
   };
 
   return (

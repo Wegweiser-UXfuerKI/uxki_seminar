@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Navigate, useParams } from "react-router-dom";
 import { AppContext } from "../../AppContext";
 import { ChapterSwitch } from "../3_organism/ChapterSwitch";
 import { getSubtopicContentByLink } from "../ContentHandler";
@@ -10,18 +11,25 @@ import { getSubtopicContentByLink } from "../ContentHandler";
  * @component
  * @returns {JSX.Element} The rendered TextLayout component.
  */
-export const ChapterLayout = () => {
-  const { selectedModuleLink, selectedSubtopicLink } = useContext(AppContext);
+export const ChapterLayout = ({ isDevRoute = false }) => {
+  const { module, subtopicId } = useParams();
+  const { devModules, devSubtopics } = useContext(AppContext);
   const [subtopicContent, setSubtopicContent] = useState(null);
 
   /**
    * Updates `subtopicContent` whenever `selectedModuleLink` or `selectedSubtopicLink` changes.
    */
   useEffect(() => {
-    setSubtopicContent(
-      getSubtopicContentByLink(selectedModuleLink, selectedSubtopicLink)
-    );
-  }, [selectedModuleLink, selectedSubtopicLink]);
+    setSubtopicContent(getSubtopicContentByLink(module, subtopicId));
+  }, [module, subtopicId]);
+
+  const isModuleInDev = devModules.includes(module);
+  const isSubtopicInDev = devSubtopics[module]?.includes(subtopicId);
+  const isContentInDev = isModuleInDev || isSubtopicInDev;
+
+  if (isContentInDev && !isDevRoute) {
+    return <Navigate to="/" replace />;
+  }
 
   return (
     <div
@@ -30,17 +38,15 @@ export const ChapterLayout = () => {
       {subtopicContent &&
       subtopicContent.content &&
       Array.isArray(subtopicContent.content) ? (
-        subtopicContent.content.map((section, sectionIndex) => {
-          return (
-            <div
-              key={`kapitel-${sectionIndex}-section-${sectionIndex}`}
-              id={sectionIndex}>
-              {section}
-            </div>
-          );
-        })
+        subtopicContent.content.map((section, sectionIndex) => (
+          <div
+            key={`kapitel-${sectionIndex}-section-${sectionIndex}`}
+            id={sectionIndex}>
+            {section}
+          </div>
+        ))
       ) : (
-        <p>Loading...</p>
+        <p>Inhalt wird geladen...</p>
       )}
       <ChapterSwitch />
     </div>

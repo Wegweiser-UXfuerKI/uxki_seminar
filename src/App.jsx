@@ -50,6 +50,10 @@ function App() {
             <Routes>
               <Route index element={<Home />} />
               <Route path=":module/:subtopicId" element={<ChapterLayout />} />
+              <Route
+                path="dev/:module/:subtopicId"
+                element={<ChapterLayout isDevRoute={true} />}
+              />
               <Route path="*" element={<Navigate to="/" replace />} />
               <Route path="dev" element={<DevTestPage />} />
             </Routes>

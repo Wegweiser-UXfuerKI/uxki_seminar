@@ -1,0 +1,54 @@
+[
+  {
+    "type": "book",
+    "author": [
+      { "family": "Bogner", "given": "Alexander" },
+      { "family": "Littig", "given": "Beate" },
+      { "family": "Menz", "given": "Wolfgang" }
+    ],
+    "title": "Interviews mit Experten: Eine praxisorientierte Einführung",
+    "publisher": "Springer Fachmedien Wiesbaden",
+    "issued": { "date-parts": [[2014]] },
+    "DOI": "10.1007/978-3-531-19416-5",
+    "URL": "https://doi.org/10.1007/978-3-531-19416-5"
+  },
+  {
+    "type": "book",
+    "author": [
+      { "family": "Hartson", "given": "Rex" },
+      { "family": "Pyla", "given": "Pardha S." }
+    ],
+    "title": "The UX book: Agile UX design for a quality user experience",
+    "edition": "Second edition",
+    "publisher": "Morgan Kaufmann, an imprint of Elsevier",
+    "issued": { "date-parts": [[2019]] }
+  },
+  {
+    "type": "book",
+    "author": [{ "family": "Helfferich", "given": "Cornelia" }],
+    "title": "Die Qualität qualitativer Daten",
+    "publisher": "VS Verlag für Sozialwissenschaften",
+    "issued": { "date-parts": [[2009]] },
+    "DOI": "10.1007/978-3-531-91858-7",
+    "URL": "https://doi.org/10.1007/978-3-531-91858-7"
+  },
+  {
+    "type": "book",
+    "author": [
+      { "family": "Kruse", "given": "Jan" },
+      { "family": "Schmieder", "given": "Christian" }
+    ],
+    "title": "Qualitative Interviewforschung: Ein integrativer Ansatz",
+    "edition": "2., überarbeitete und ergänzte Auflage",
+    "publisher": "Beltz Juventa",
+    "issued": { "date-parts": [[2015]] }
+  },
+  {
+    "type": "webpage",
+    "author": [{ "family": "Nielsen", "given": "Jakob" }],
+    "title": "10 Usability Heuristics for User Interface Design",
+    "publisher": "Nielsen Norman Group",
+    "issued": { "date-parts": [[1994, 4, 24]] },
+    "URL": "https://www.nngroup.com/articles/ten-usability-heuristics/"
+  }
+]

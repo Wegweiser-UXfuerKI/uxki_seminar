@@ -1,0 +1,23 @@
+[
+  {
+    "type": "chapter",
+    "author": [{ "family": "Burmester", "given": "Michael" }],
+    "editor": [{ "family": "Schmitz", "given": "Roland" }],
+    "title": "Usability und Design",
+    "container-title": "Kompendium Medieninformatik",
+    "page": "245–302",
+    "publisher": "Springer Berlin Heidelberg",
+    "issued": { "date-parts": [[2007]] },
+    "DOI": "10.1007/978-3-540-36630-0_5",
+    "URL": "https://doi.org/10.1007/978-3-540-36630-0_5"
+  },
+  {
+    "type": "book",
+    "title": "DIN EN ISO 9241-11:2018-11, Ergonomie der Mensch-System-Interaktion_- Teil_11: Gebrauchstauglichkeit: Begriffe und Konzepte (ISO_9241-11:2018); Deutsche Fassung EN_ISO_9241-11:2018",
+    "author": [{ "literal": "DIN Media GmbH" }],
+    "issued": { "date-parts": [[2018, 11]] },
+    "publisher": "DIN Media GmbH",
+    "DOI": "10.31030/2757945",
+    "URL": "https://doi.org/10.31030/2757945"
+  }
+]

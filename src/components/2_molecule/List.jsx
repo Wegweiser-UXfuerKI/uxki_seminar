@@ -1,3 +1,4 @@
+import React from "react";
 import Circle from "../1_elements/Circle";
 
 /**
@@ -6,7 +7,7 @@ import Circle from "../1_elements/Circle";
  * Renders a list of items, each displayed with a numbered circular badge.
  *
  * @component
- * @param {Array} items - An array of items to be displayed in the list.
+ * @param {Array<string | React.ReactNode>} items - An array of HTML strings or React nodes to be displayed in the list.
  * @param {string} [alignItems="top"] - Defines vertical alignment of list items:
  *   - `"center"`: Items are vertically centered.
  *   - `"top"`: Items are top-aligned (default).
@@ -25,7 +26,11 @@ const List = ({ items, alignItems = "top", size = "medium" }) => (
           alignItems === "center" ? "items-center" : "items-start"
         } lg:gap-6 gap-4 mb-8`}>
         <Circle content={index + 1} size={size} />
-        <p dangerouslySetInnerHTML={{ __html: item }} />
+        {typeof item === "string" ? (
+          <p dangerouslySetInnerHTML={{ __html: item }} />
+        ) : (
+          item
+        )}
       </li>
     ))}
   </ul>

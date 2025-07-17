@@ -11,7 +11,6 @@ const ThemeImage = ({ lightSrc, darkSrc, alt = "" }) => {
       setIsDarkMode(true);
     }
 
-    // Optional: Wenn du auf Klassenänderungen hören willst:
     const observer = new MutationObserver(() => {
       if (root.classList.contains("light")) {
         setIsDarkMode(false);
@@ -25,7 +24,13 @@ const ThemeImage = ({ lightSrc, darkSrc, alt = "" }) => {
     return () => observer.disconnect();
   }, []);
 
-  return <img src={isDarkMode ? darkSrc : lightSrc} alt={alt} />;
+  return (
+    <img
+      src={isDarkMode ? darkSrc : lightSrc}
+      alt={alt}
+      className="h-full w-full"
+    />
+  );
 };
 
 export default ThemeImage;

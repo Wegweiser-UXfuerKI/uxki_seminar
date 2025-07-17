@@ -10,16 +10,16 @@ import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import Sources from "../Sources";
 import ThemeImage from "../1_elements/ThemeImage";
 
-import nutzungskontext_dark from "../../assets/images/grundlagenUX/nutzungskontext_dark.png";
-import nutzungskontext_light from "../../assets/images/grundlagenUX/nutzungskontext_light.png";
-import DD_dark from "../../assets/images/grundlagenUX/double_diamond_dark.png";
-import DD_light from "../../assets/images/grundlagenUX/double_diamond_light.png";
-import hcd_dark from "../../assets/images/grundlagenUX/hcd_dark.png";
-import hcd_light from "../../assets/images/grundlagenUX/hcd_light.png";
-import ucd_dark from "../../assets/images/grundlagenUX/ucd_dark.png";
-import ucd_light from "../../assets/images/grundlagenUX/ucd_light.png";
-import ux_dark from "../../assets/images/grundlagenUX/ux_dark.png";
-import ux_light from "../../assets/images/grundlagenUX/ux_light.png";
+import nutzungskontext_dark from "../../assets/images/grundlagenUX/nutzungskontext-dark.png";
+import nutzungskontext_light from "../../assets/images/grundlagenUX/nutzungskontext-light.png";
+import DD_dark from "../../assets/images/grundlagenUX/double_diamond-dark.png";
+import DD_light from "../../assets/images/grundlagenUX/double_diamond-light.png";
+import hcd_dark from "../../assets/images/grundlagenUX/hcd-dark.png";
+import hcd_light from "../../assets/images/grundlagenUX/hcd-light.png";
+import ucd_dark from "../../assets/images/grundlagenUX/ucd-dark.png";
+import ucd_light from "../../assets/images/grundlagenUX/ucd-light.png";
+import ux_dark from "../../assets/images/grundlagenUX/ux-dark.png";
+import ux_light from "../../assets/images/grundlagenUX/ux-light.png";
 import icon_check from "../../assets/images/grundlagenUX/icon_check.png";
 import icon_clock from "../../assets/images/grundlagenUX/icon_clock.png";
 import icon_love from "../../assets/images/grundlagenUX/icon_love.png";
@@ -424,11 +424,13 @@ const Nutzungskontext = {
         realen Nutzungskontexten) und ob es von der Zielgruppe dabei{" "}
         <b>effektiv, effizient und zufriedenstellend</b> genutzt werden kann.
       </p>
-      <ThemeImage
-        darkSrc={nutzungskontext_dark}
-        lightSrc={nutzungskontext_light}
-        alt="Bild Nutzungskontext"
-      />
+      <div className="w-full flex justify-center mb-[56px]">
+        <ThemeImage
+          darkSrc={nutzungskontext_dark}
+          lightSrc={nutzungskontext_light}
+          alt="Bild Nutzungskontext"
+        />
+      </div>
       <p>
         Daher ist es wichtig, frühzeitig mit der Zielgruppe in Kontakt zu treten
         und ihre Perspektive bei der Konzeption und Entwicklung mit
@@ -897,11 +899,13 @@ const UserExperience = {
           Vertrauen, Stolz, aber auch Frustration auftreten.
         </li>
       </ul>
-      <ThemeImage
-        darkSrc={ux_dark}
-        lightSrc={ux_light}
-        alt="User Experience Grafik"
-      />
+      <div className="w-full flex justify-center mb-[56px]">
+        <ThemeImage
+          darkSrc={ux_dark}
+          lightSrc={ux_light}
+          alt="User Experience Grafik"
+        />
+      </div>
       <p>
         Die UX wird durch emotionale, soziale und kulturelle Aspekte geprägt,
         also dadurch, wie das Produkt in das Leben der Nutzer:innen eingebettet
@@ -1259,11 +1263,15 @@ const MenschComputerInteraktion = {
         Ergebnisse der Evaluationen interpretiert und die Erkenntnisse in die
         Study-Phase zurückgeführt.
       </p>
-      <ThemeImage
-        darkSrc={ucd_dark}
-        lightSrc={ucd_light}
-        alt="User-Centered Design Grafik"
-      />
+      <div className="w-full flex justify-center mb-[56px]">
+        <div className="w-2/3">
+          <ThemeImage
+            darkSrc={ucd_dark}
+            lightSrc={ucd_light}
+            alt="User-Centered Design Grafik"
+          />
+        </div>
+      </div>
       <h3>2. Human-Centered Design (ISO 9241-210)</h3>
       <p>
         Der Human-Centered Design-Prozess (HCD) ist ein international genormtes,
@@ -1272,11 +1280,13 @@ const MenschComputerInteraktion = {
         denen Nutzer:innen früh und kontinuierlich einbezogen werden für ein
         gesamtheitliches Systemverständnis.
       </p>
-      <ThemeImage
-        darkSrc={hcd_dark}
-        lightSrc={hcd_light}
-        alt="Human-Centered Design Grafik"
-      />
+      <div className="w-full flex justify-center mb-[56px]">
+        <ThemeImage
+          darkSrc={hcd_dark}
+          lightSrc={hcd_light}
+          alt="Human-Centered Design Grafik"
+        />
+      </div>
       <p>
         Der Prozess beginnt mit dem Verstehen und Festlegen des
         Nutzungskontexts, leitet daraus Anforderungen an das System ab,
@@ -1293,11 +1303,13 @@ const MenschComputerInteraktion = {
         kombiniert divergentes und konvergentes Denken, um sowohl das richtige
         Problem als auch die passende Lösung zu finden.
       </p>
-      <ThemeImage
-        darkSrc={DD_dark}
-        lightSrc={DD_light}
-        alt="Double Diamond Grafik"
-      />
+      <div className="w-full flex justify-center mb-[56px]">
+        <ThemeImage
+          darkSrc={DD_dark}
+          lightSrc={DD_light}
+          alt="Double Diamond Grafik"
+        />
+      </div>
     </section>,
     <section>
       <h2>Fazit</h2>

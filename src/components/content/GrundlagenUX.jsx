@@ -25,6 +25,11 @@ import icon_clock from "../../assets/images/grundlagenUX/icon_clock.png";
 import icon_love from "../../assets/images/grundlagenUX/icon_love.png";
 import icon_smile from "../../assets/images/grundlagenUX/icon_smile.png";
 
+import CheckIcon from "../../assets/icons/grundlagenUX/check.svg?react";
+import ClockIcon from "../../assets/icons/grundlagenUX/clock.svg?react";
+import LoveIcon from "../../assets/icons/grundlagenUX/love.svg?react";
+import SmileIcon from "../../assets/icons/grundlagenUX/smile.svg?react";
+
 const sectionsIntro = [
   { id: "1", title: "Intro" },
   { id: "3", title: "Fünf Grundbegriffe" },
@@ -891,7 +896,8 @@ const UserExperience = {
           Vertrauen, Stolz, aber auch Frustration auftreten.
         </li>
       </ul>
-      <div className="w-full flex justify-center mb-[56px]">
+      <h4>User Experience nach ISO</h4>
+      <div className="w-full flex justify-center mb-[56px] mt-[var(--scale4)]">
         <ThemeImage
           darkSrc={ux_dark}
           lightSrc={ux_light}
@@ -955,7 +961,7 @@ const UserExperience = {
         sie entsteht im subjektiven Erleben der Nutzer:innen. Oder wie Preece et
         al. (2015) treffend formulieren:
       </p>
-      <p className="specialText">
+      <p className="specialText text-center">
         „You cannot design a user experience, only design for a user
         experience.“
       </p>
@@ -998,7 +1004,7 @@ const UserExperience = {
       </ul>
     </section>,
     <section>
-      <h2>Wcihtige UX-Faktoren im Detail</h2>
+      <h2>Wichtige UX-Faktoren im Detail</h2>
       <h3>1. Erlebnispotential</h3>
       <p>
         Gute UX ermöglicht nicht nur das Erreichen eines Zieles, sondern schafft
@@ -1480,7 +1486,7 @@ const Evaluation = {
       </p>
       <div className="flex flex-col gap-[var(--scale4)] justify-center">
         <div className="flex gap-[var(--scale2)]">
-          <img src={icon_check} alt="Icon Checkmark" />
+          <CheckIcon className="w-[73px] h-[73px]" />
           <p>
             <b>Effektivität</b>: Können Nutzer:innen ihre Aufgaben erfolgreich
             erledigen? <br />
@@ -1488,7 +1494,7 @@ const Evaluation = {
           </p>
         </div>
         <div className="flex gap-[var(--scale2)]">
-          <img src={icon_clock} alt="Icon Uhr" />
+          <ClockIcon className="w-[73px] h-[73px]" />
           <p>
             <b>Effizienz</b>: Wie schnell und mühelos gelingt die Nutzung?{" "}
             <br />
@@ -1497,19 +1503,21 @@ const Evaluation = {
           </p>
         </div>
         <div className="flex gap-[var(--scale2)]">
-          <img src={icon_smile} alt="Icon Lächeln" />
+          {/*           <img src={icon_smile} alt="Icon Lächeln" />
+           */}{" "}
+          <SmileIcon className="w-[73px] h-[73px]" />
           <p>
             <b>Zufriedenheit</b>: Wie empfinden Nutzer:innen die Nutzung? <br />
             Beispiel: Keine negativen Rückmeldungen, positive Bewertungen.
           </p>
         </div>
         <div className="flex gap-[var(--scale2)]">
-          <img src={icon_love} alt="Icon Herzenaugen" />
+          <LoveIcon className="w-[73px] h-[73px]" />
           <p>
             <b>Freude an der Nutzung</b>: Macht die Anwendung Spaß oder fühlt
             sie sich langsam an? <br />
             Beispiel: Nutzer:innen berichten von einem positiven Erlebnis
-            währedn der Nutzung.
+            während der Nutzung.
           </p>
         </div>
       </div>

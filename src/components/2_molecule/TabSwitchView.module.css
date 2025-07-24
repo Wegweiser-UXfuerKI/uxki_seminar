@@ -1,0 +1,109 @@
+/* TabSwitchView.module.css */
+.tab_container {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: var(--scale2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--base-size);
+  border-radius: var(--scale2);
+  position: relative;
+}
+
+.tab_header {
+  display: flex;
+}
+
+.tab_button {
+  flex: 1;
+  padding: var(--scale2) var(--scale2);
+  text-align: left;
+  border-radius: var(--base-size);
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: 80px;
+}
+
+:global(:root.light) .text_color {
+  color: var(--w);
+}
+
+:global(:root.dark) .text_color {
+  color: var(--rb);
+}
+
+:global(:root.light) .background {
+  background-color: rgba(var(--w-rgb), 0.56);
+  color: var(--rb);
+}
+
+:global(:root.dark) .background {
+  background-color: rgba(var(--ev-rgb), 0.56);
+  color: var(--w);
+}
+
+:global(:root.light) .content_background {
+  background-color: rgba(var(--fg-rgb), 1);
+  color: var(--rb);
+}
+
+:global(:root.dark) .content_background {
+  background-color: rgba(var(--br-rgb), 1);
+  color: var(--w);
+}
+
+.tab_content {
+  padding: var(--scale2);
+  border-radius: var(--base-size);
+  margin-top: -1px;
+  z-index: 0;
+}
+
+.active_tab_button {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.remove_top_left_radius {
+  border-top-left-radius: 0;
+}
+
+.remove_top_right_radius {
+  border-top-right-radius: 0;
+}
+
+.tab_button_wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_deco,
+.right_deco {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 50%;
+  pointer-events: none;
+  z-index: 1000;
+}
+.left_deco {
+  left: -40px;
+}
+
+.right_deco {
+  right: -40px;
+}
+
+:global(:root.light) .svg_background {
+  color: rgba(var(--fg-rgb), 1);
+}
+
+:global(:root.dark) .svg_background {
+  color: rgba(var(--br-rgb), 1);
+}

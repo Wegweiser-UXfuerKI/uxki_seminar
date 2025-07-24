@@ -1,12 +1,11 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import styles from "./TabSwitchView.module.css";
+
+import SwooshSVG from "../../assets/otherSVG/swoosh.svg?react";
 
 /**
- *
  * @param {Object} props
- * @param {React.ReactNode} props.children - The content of the tabs. Each child should have a `title` prop.
- * @param {string} [props.children.title] - The title of the tab, used for the button label.
- * @returns
+ * @param {React.ReactNode[]} props.children - The content of the tabs. Each child should have a `title` prop.
  */
 export const TabSwitchView = ({ children }) => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -17,23 +16,59 @@ export const TabSwitchView = ({ children }) => {
   );
 
   return (
-    <div>
-      <div className="max-w-[960px] mx-auto mb-[var(--scale2)] flex justify-between bg-[rgba(var(--w-rgb),0.56)] dark:bg-[rgba(var(--ev-rgb),0.56)] p-2 shadow no-hover rounded-[var(--scale2)] gap-x-[var(--base-size)]">
-        {tabTitles.map((title, index) => (
-          <button
-            key={index}
-            onClick={() => setSelectedTab(index)}
-            className={`flex-1 px-6 py-4 text-left rounded-xl ${
-              selectedTab === index
-                ? "ux-button"
-                : "text-[var(--rb)] dark:text-[var(--w)]"
-            }`}
-            aria-label={`Button to switch to tab ${index + 1}`}>
-            {title}
-          </button>
-        ))}
+    <div
+      className={`${styles.tab_container} ${styles.background} no-hover shadow`}>
+      <div className={styles.tab_header}>
+        {tabTitles.map((title, index) => {
+          const isActive = selectedTab === index;
+          const isFirst = index === 0;
+          const isLast = index === tabTitles.length - 1;
+
+          return (
+            <div key={index} className={styles.tab_button_wrapper}>
+              {isActive && !isFirst && (
+                <SwooshSVG
+                  className={`${styles.left_deco} ${styles.svg_background}`}
+                  aria-hidden="true"
+                  style={{ transform: "rotate(180deg)" }}
+                />
+              )}
+
+              <button
+                onClick={() => setSelectedTab(index)}
+                className={`${styles.tab_button} ${
+                  isActive
+                    ? `${styles.content_background} ${styles.active_tab_button}`
+                    : ""
+                }`}
+                aria-label={`Button to switch to tab ${index + 1}`}>
+                {title}
+              </button>
+
+              {isActive && !isLast && (
+                <SwooshSVG
+                  className={`${styles.right_deco} ${styles.svg_background}`}
+                  aria-hidden="true"
+                  style={{ transform: "rotate(-90deg)" }}
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
-      <div>{children[selectedTab]}</div>
+
+      <div
+        className={`${styles.tab_content} ${styles.text_color} ${
+          styles.content_background
+        } ${
+          selectedTab === 0
+            ? styles.remove_top_left_radius
+            : selectedTab === children.length - 1
+            ? styles.remove_top_right_radius
+            : ""
+        }`}>
+        {children[selectedTab]}
+      </div>
     </div>
   );
 };

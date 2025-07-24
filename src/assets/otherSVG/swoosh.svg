@@ -1,0 +1,5 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,0 H500 V500 H0 Z
+         M0,500 A500,500 0 0,1 500,0 L500,500 Z"
+      fill="currentColor" fill-rule="evenodd" />
+</svg>

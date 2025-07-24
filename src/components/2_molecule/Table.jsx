@@ -28,7 +28,7 @@ export const Table = ({
   data,
   headerStyle = true,
   columnWidths,
-  verticalAlignedCells = true,
+  verticalAlignedCells = false,
 }) => {
   if (!data || data.length === 0) {
     return null;
@@ -37,24 +37,36 @@ export const Table = ({
   const headers = data[0];
   const rows = data.slice(1);
 
+  const columnCount = headers.length;
+  const gridTemplate = [];
+
+  for (let i = 0; i < columnCount; i++) {
+    gridTemplate.push(columnWidths ? columnWidths[i] || "1fr" : "1fr");
+    if (i < columnCount - 1) gridTemplate.push("1px");
+  }
+
   const tableStyle = {
-    gridTemplateColumns: columnWidths
-      ? columnWidths.join(" ")
-      : `repeat(${headers.length}, 1fr)`,
+    gridTemplateColumns: gridTemplate.join(" "),
   };
 
   return (
-    <div className={styles.table_container}>
+    <div
+      className={`${styles.table_container} ${styles.background} no-hover shadow`}>
       <div className={styles.table} style={tableStyle}>
         {/* Header kram */}
         <div
           className={`${styles.table_row} ${
-            headerStyle ? `${styles.header_row} no-hover shadow` : ""
+            headerStyle
+              ? `${styles.header_row} ${styles.background} no-hover shadow`
+              : ""
           }`}>
           {headers.map((header, index) => (
-            <div key={index} className={styles.table_cell}>
-              {header}
-            </div>
+            <React.Fragment key={index}>
+              <div className={styles.table_cell}>{header}</div>
+              {index < headers.length - 1 && (
+                <div className={styles.vertical_divider} />
+              )}
+            </React.Fragment>
           ))}
         </div>
 
@@ -63,12 +75,15 @@ export const Table = ({
           <div
             key={rowIndex}
             className={`${styles.table_row} ${
-              verticalAlignedCells ? styles.align_center : ""
+              verticalAlignedCells ? styles.align_center : styles.align_top
             }`}>
             {row.map((cell, cellIndex) => (
-              <div key={cellIndex} className={styles.table_cell}>
-                {cell}
-              </div>
+              <React.Fragment key={cellIndex}>
+                <div className={styles.table_cell}>{cell}</div>
+                {cellIndex < row.length - 1 && (
+                  <div className={styles.vertical_divider} />
+                )}
+              </React.Fragment>
             ))}
           </div>
         ))}

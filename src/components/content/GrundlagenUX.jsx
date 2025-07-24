@@ -137,7 +137,7 @@ const Usability = {
         Gute Usability ist eine Grundvoraussetzung für erfolgreiche
         Mensch-Computer-Interaktion. Undurchdachte oder schlecht gestaltete
         Systeme führen dagegen schnell zu Bedienproblemen, kognitiver
-        Überlastung und Frustration bei den Nutzer*innen – also zu einer
+        Überlastung und Frustration bei den Nutzer:innen – also zu einer
         schlechten Usability.
       </p>
       <p>
@@ -156,9 +156,9 @@ const Usability = {
       </p>
       <List
         items={[
-          "<b>Effektivität</b> bedeutet, dass Nutzer*innen mit einem System ihre Aufgaben erfolgreich bewältigen können.",
+          "<b>Effektivität</b> bedeutet, dass Nutzer:innen mit einem System ihre Aufgaben erfolgreich bewältigen können.",
           "<b>Effizienz</b> beschreibt, dass dies mit einem angemessenen Aufwand geschieht.",
-          "<b>Zufriedenstellung</b> bezieht sich darauf, dass die Verwendung des Systems für ihre Aufgaben bei den Nutzer*innen keine starken negativen Emotionen wie Frustration oder Ärger auslöst.",
+          "<b>Zufriedenstellung</b> bezieht sich darauf, dass die Verwendung des Systems für ihre Aufgaben bei den Nutzer:innen keine starken negativen Emotionen wie Frustration oder Ärger auslöst.",
         ]}
         alignItems="center"
         size="medium"
@@ -298,13 +298,8 @@ const sectionsNutzungskontext = [
   { id: "2", title: "Definition" },
   { id: "3", title: "Warum ist der Nutzungskontext wichtig?" },
   { id: "4", title: "Die 4 Bestandteile des Nutzungskontextes" },
-  {
-    id: "5",
-    title:
-      'Unterschied und Bedeutung von "Ease of Use" und "Ease of Learn" im Nutzungskontext',
-  },
-  { id: "6", title: "Wie erfolgt eine Nutzungskontextanalyse?" },
-  { id: "7", title: "Ausblick" },
+  { id: "5", title: "Wie erfolgt eine Nutzungskontextanalyse?" },
+  { id: "6", title: "Ausblick" },
 ];
 
 const easeLearnUseTableData = [
@@ -339,7 +334,7 @@ const umgebungTableData = [
   [<b>Organisatorische Umgebung</b>, <b>Physische Umgebung</b>],
   [
     <>
-      <b>Arbeitsstruktur </b>, z.B. Einzelarbeit oder Teamarbeit mit KI-Tools
+      <b>Arbeitsstruktur</b>, z.B. Einzelarbeit oder Teamarbeit mit KI-Tools
     </>,
     <>
       <b>Arbeitsplatzbedingungen</b>, z.B. Lärmpegel in der Umgebung und die
@@ -494,7 +489,7 @@ const Nutzungskontext = {
           unterschiedliche technische Fähigkeiten und Vorerfahrungen mit
           KI-Tools. Das System sollte daher neue oder ungeübte Nutzer:innen
           nicht mit zu vielen Funktionen überfordern. Funktionen für
-          Fortgeschrittene, die eher erfahrenen Benutzer*innen helfen, sollten
+          Fortgeschrittene, die eher erfahrenen Benutzer:innen helfen, sollten
           optional sein und den Erstkontakt nicht unnötig erschweren. Für die
           Geflüchteten muss das Tool zusätzlich auch verschiedene
           Alphabetisierungsniveaus abdecken. Manche Benutzer:innen werden nicht
@@ -574,36 +569,33 @@ const Nutzungskontext = {
         “intuitiver” präsentieren. Man spricht hier vom <b>“Ease of Learn”</b>{" "}
         und die Erlernbarkeit steht dabei im Vordergrund.
       </p>
-      <Accordion title="Ease of Use und Ease of Learn" initiallyOpen={false}>
-        <p>
-          <b>Ease of Use</b> (auch Benutzungseffizienz) und <b>Ease of Learn</b>{" "}
-          (oft als Erlernbarkeit bezeichnet) sind zwei zentrale, aber
-          unterschiedliche Qualitätsmerkmale bei der Gestaltung und Bewertung
-          von Softwaresystemen. Die Unterscheidung ist gerade im Hinblick auf
-          unterschiedliche Zielgruppen, etwa interne Nutzer:innen
-          (Mitarbeitende) vs. externe Nutzer:innen (Kunden:innen, Klienten),
-          entscheidend.
-        </p>
-        <Table
-          data={easeLearnUseTableData}
-          headerStyle={true}
-          verticalAlignCells={true}
-        />
-        <p>
-          Bei internen Systeme, z. B. für Mitarbeitende, kann es sinnvoll sein,
-          den Ease of Learn etwas zugunsten des Ease of Use zu vernachlässigen,
-          wenn die Nutzer:innen regelmäßig und intensiv mit dem System arbeiten.
-          Eine kurze, initiale Schulung ist oft akzeptabel, solange das System
-          anschließend effizient und produktiv genutzt werden kann.
-        </p>
-        <p>
-          Bei Front-facing Systeme (für Klienten/Kunden) hingegen ist der Ease
-          of Learn besonders kritisch, weil die Nutzer:innen oft keine oder nur
-          wenig Vorerfahrung mit dem System haben und keine Schulung erhalten.
-          Das System muss somit schnell verständlich sein, damit sie ihre Ziele
-          ohne Frustration erreichen.
-        </p>
-      </Accordion>
+      <p>
+        <b>Ease of Use</b> (auch Benutzungseffizienz) und <b>Ease of Learn</b>{" "}
+        (oft als Erlernbarkeit bezeichnet) sind zwei zentrale, aber
+        unterschiedliche Qualitätsmerkmale bei der Gestaltung und Bewertung von
+        Softwaresystemen. Die Unterscheidung ist gerade im Hinblick auf
+        unterschiedliche Zielgruppen, etwa interne Nutzer:innen (Mitarbeitende)
+        vs. externe Nutzer:innen (Kunden:innen, Klienten), entscheidend.
+      </p>
+      <Table
+        data={easeLearnUseTableData}
+        headerStyle={true}
+        verticalAlignCells={true}
+      />
+      <p>
+        Bei internen Systeme, z. B. für Mitarbeitende, kann es sinnvoll sein,
+        den Ease of Learn etwas zugunsten des Ease of Use zu vernachlässigen,
+        wenn die Nutzer:innen regelmäßig und intensiv mit dem System arbeiten.
+        Eine kurze, initiale Schulung ist oft akzeptabel, solange das System
+        anschließend effizient und produktiv genutzt werden kann.
+      </p>
+      <p>
+        Bei Front-facing Systeme (für Klienten/Kunden) hingegen ist der Ease of
+        Learn besonders kritisch, weil die Nutzer:innen oft keine oder nur wenig
+        Vorerfahrung mit dem System haben und keine Schulung erhalten. Das
+        System muss somit schnell verständlich sein, damit sie ihre Ziele ohne
+        Frustration erreichen.
+      </p>
       <p>
         Durch den Erfolg von ChatGPT wird heute sehr oft die Automatisierung von
         Aufgaben durch Chatbots als eine Art Allheilmittel betrachtet. Dies
@@ -810,7 +802,7 @@ const Nutzungskontext = {
       </p>
     </section>,
     <section>
-      <h2>Ausblick</h2>
+      <h2>Fazit</h2>
       <p>
         Die festgelegten Anforderungen und Ziele an das System beziehen sich
         nicht nur auf die Gebrauchstauglichkeit (Usability), sondern auch auf{" "}
@@ -1242,7 +1234,7 @@ const MenschComputerInteraktion = {
       <p>Typische Schritte sind:</p>
       <List
         items={[
-          "<b>Kontextanalyse</b> bedeutet, dass Nutzer*innen mit einem System ihre Aufgaben erfolgreich bewältigen können.",
+          "<b>Kontextanalyse</b> bedeutet, dass Nutzer:innen mit einem System ihre Aufgaben erfolgreich bewältigen können.",
           "<b>Effizienz</b> beschreibt, dass dies mit einem angemessenen Aufwand geschieht.",
           "<b>Implementierung (Build)</b>: Die entworfenen Lösungen werden technisch umgesetzt und in das reale System integriert.",
           <p>
@@ -1447,7 +1439,7 @@ const Evaluation = {
       <Table data={evaluationTypeData} />
     </section>,
     <section>
-      <h2>Wann wird evaluiert und mit wem?</h2>
+      <h2>Wie wird evaluiert und mit wem?</h2>
       <p>
         Nachdem wir nun geklärt haben, was Evaluationen sind und wann sie im
         Prozess sinnvoll eingesetzt werden, schauen wir uns als Nächstes an, wie

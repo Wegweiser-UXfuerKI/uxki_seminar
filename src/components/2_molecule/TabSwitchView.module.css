@@ -57,8 +57,8 @@
 
 .tab_content {
   padding: var(--scale2);
+  padding-top: var(--scale4);
   border-radius: var(--base-size);
-  margin-top: -1px;
   z-index: 0;
 }
 

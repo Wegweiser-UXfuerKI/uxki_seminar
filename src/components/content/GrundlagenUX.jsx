@@ -820,8 +820,9 @@ const Nutzungskontext = {
         Systems stimmig, angenehm oder motivierend anfühlt. Mehr dazu erläutern
         wir im nächsten Kapitel zur{" "}
         <Link to={"ux-und-usability/user-experience"}>
-          <b>User Experience (UX).</b>
+          <b>User Experience (UX)</b>
         </Link>
+        .
       </p>
     </section>,
   ],

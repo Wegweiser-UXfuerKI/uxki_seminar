@@ -85,7 +85,7 @@ const SubNavigation = ({ sections }) => {
             e.preventDefault();
             handleSmoothScroll(section.id);
           }}
-          className={`relative group w-fit h-10 flex items-center justify-center rounded-full glassBox glassBlur px-4 py-1 transition-all ease-in-out ${
+          className={`relative no_underline no_link_hover group w-fit h-10 flex items-center justify-center rounded-full glassBox glassBlur px-4 py-1 transition-all ease-in-out ${
             activeSection === section.id ? "active" : ""
           }`}
           aria-label={`Gehe zur Sektion: ${section.title}`}>

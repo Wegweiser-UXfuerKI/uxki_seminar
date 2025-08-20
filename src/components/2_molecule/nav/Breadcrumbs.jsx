@@ -35,7 +35,7 @@ const Breadcrumbs = () => {
         to="/"
         aria-label="Zur Startseite"
         onClick={homeScrollCheck}
-        className="inlineLink">
+        className="inlineLink no_underline">
         Kursübersicht
       </Link>
 

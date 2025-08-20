@@ -158,7 +158,7 @@ const DropDownMenu = ({
                     handleChapterChange(link);
                   }
                 }}
-                className={`secondLevel rounded-lg px-2 py-1 ${
+                className={`secondLevel no_underline no_link_hover rounded-lg px-2 py-1 ${
                   isDisabled ? "disabled" : isActive ? "active" : ""
                 }`}
                 tabIndex={isDisabled ? -1 : 0}

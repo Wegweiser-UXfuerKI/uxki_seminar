@@ -55,7 +55,7 @@ const FooterLink = ({ href, title, children }) => (
     target="_blank"
     rel="noreferrer"
     title={title}
-    className="text-[var(--br)] inlineLink">
+    className="text-[var(--br)] inlineLink no_underline">
     {children}
   </a>
 );

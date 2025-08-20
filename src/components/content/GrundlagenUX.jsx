@@ -20,10 +20,6 @@ import ucd_dark from "../../assets/images/grundlagenUX/ucd-dark.png";
 import ucd_light from "../../assets/images/grundlagenUX/ucd-light.png";
 import ux_dark from "../../assets/images/grundlagenUX/ux-dark.png";
 import ux_light from "../../assets/images/grundlagenUX/ux-light.png";
-import icon_check from "../../assets/images/grundlagenUX/icon_check.png";
-import icon_clock from "../../assets/images/grundlagenUX/icon_clock.png";
-import icon_love from "../../assets/images/grundlagenUX/icon_love.png";
-import icon_smile from "../../assets/images/grundlagenUX/icon_smile.png";
 
 import CheckIcon from "../../assets/icons/grundlagenUX/check.svg?react";
 import ClockIcon from "../../assets/icons/grundlagenUX/clock.svg?react";
@@ -310,8 +306,14 @@ const sectionsNutzungskontext = [
 const easeLearnUseTableData = [
   [
     <b>Kriterium</b>,
-    <b>Ease of Learn (Erlernbarkkeit)</b>,
-    <b>Ease of Use (Benutzungseffizienz)</b>,
+    <b>
+      Ease of Learn <br />
+      <b>(Erlernbarkkeit)</b>
+    </b>,
+    <b>
+      Ease of Use <br />
+      (Benutzungseffizienz)
+    </b>,
   ],
   [
     "Zielgruppe",
@@ -831,8 +833,17 @@ const sectionsUX = [
   { id: "7", title: "Fazit: UX bedeutet Nutzerzentrierung" },
 ];
 
-const pragamatischeHedonischData = [
-  [<b>Pragmatische Qualität (PQ)</b>, <b>Hedonische Qualität (HQ)</b>],
+const pragamatischeHedonischTableData = [
+  [
+    <b>
+      Pragmatische Qualität <br />
+      (PQ)
+    </b>,
+    <b>
+      Hedonische Qualität <br />
+      (HQ)
+    </b>,
+  ],
   [
     "Klar, unterstützend, nützlich, beherschbar",
     "Besonders, beeindruckend, aufregend, cool",
@@ -1026,7 +1037,7 @@ const UserExperience = {
         „Fühlt es sich angenehm an?“). Im Forschungskontext lässt sich dies als
         so genannte pragmatische und hedonische Qualitäten aufschlüsseln:
       </p>
-      <Table data={pragamatischeHedonischData} headerStyle={true} />
+      <Table data={pragamatischeHedonischTableData} headerStyle={true} />
       <h3>3. Weitere Aspekte guter UX:</h3>
       <ul>
         <li>

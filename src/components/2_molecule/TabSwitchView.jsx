@@ -40,7 +40,7 @@ export const TabSwitchView = ({ children }) => {
                   isActive
                     ? `${styles.content_background} ${styles.active_tab_button}`
                     : ""
-                }`}
+                } text-center`}
                 aria-label={`Button to switch to tab ${index + 1}`}>
                 {title}
               </button>

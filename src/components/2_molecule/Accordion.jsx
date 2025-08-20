@@ -101,7 +101,7 @@ const Accordion = ({
                     e.preventDefault();
                     handleSmoothScroll(section.id);
                   }}
-                  className="block px-2 py-1 mb-1 rounded-lg">
+                  className="block px-2 py-1 mb-1 rounded-lg no_underline no_link_hover">
                   {`${index + 1}: ${section.title}`}
                 </Link>
               ))}

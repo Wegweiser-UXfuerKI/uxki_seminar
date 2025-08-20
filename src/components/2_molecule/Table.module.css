@@ -25,6 +25,7 @@
   font-weight: bold;
   color: var(--fg);
   border-radius: var(--scale2);
+  height: 80px;
 }
 
 .table_cell {
@@ -35,6 +36,7 @@
   word-wrap: break-word;
   display: block;
   line-height: 1.5;
+  height: 100%;
 }
 
 :global(:root.light) .header_row {

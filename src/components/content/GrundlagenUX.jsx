@@ -658,40 +658,43 @@ const Nutzungskontext = {
         Hier ist ein Beispiel: Eine KI-Anwendung zur Sprachübersetzung wird in
         zwei gemeinwohlorientierten Organisationen eingesetzt.
       </p>
-      <div className="mb-[var(--scale4)] pb-[var(--scale4)]">
-        <TabSwitchView>
-          <div title="1. Mobiler Beratungsbus für Geflüchtete">
-            <p>
-              In einem mobilen Beratungsbus für Geflüchtete arbeiten die
-              Mitarbeitenden mit Tablets. Die Beratung findet häufig unter
-              freiem Himmel statt, bei instabiler Internetverbindung und unter
-              hohem Zeitdruck. Die Arbeit erfolgt dabei oft im Stehen oder in
-              improvisierten Sitzpositionen.
-            </p>
-            <p>
-              In diesem Nutzungskontext ist der Einsatz heute typischer
-              KI-Technologien, z. B. Chatbots, nur bedingt geeignet, da die
-              technische Infrastruktur sowie die körperlichen und zeitlichen
-              Rahmenbedingungen für deren Einsatz nicht optimal sind. Heutige
-              Chatbots brauchen in der Regel schnelle Internetverbindungen und
-              basieren auf Eingaben über Tastatur oder Sprache, die mit
-              spürbaren Verzögerungen durch weit entfernte Server erst
-              verarbeitet und dann beantwortet werden. Die Anwendung sollte
-              dagegen Offline-Funktionalität und schnelle Spracheingabe
-              berücksichtigen.
-            </p>
-          </div>
-          <div title="2. Digital ausgerichtete NGO mit Online-Beratung">
-            <p>
-              In einer digital ausgerichteten NGO, die Online-Beratung anbietet,
-              arbeiten die Teams in ruhigen Büros mit ergonomischen
-              Arbeitsplätzen. Dort stehen leistungsfähige Laptops oder
-              Desktop-PCs mit großen Bildschirmen, Headsets und stabiler
-              Internetverbindung zur Verfügung. Die Beratungen folgen einem
-              festen Zeitplan und ermöglichen konzentriertes Arbeiten.
-            </p>
-          </div>
-        </TabSwitchView>
+      <Accordion
+        title="1. Mobiler Beratungsbus für Geflüchtete"
+        initiallyOpen={false}>
+        <p>
+          In einem mobilen Beratungsbus für Geflüchtete arbeiten die
+          Mitarbeitenden mit Tablets. Die Beratung findet häufig unter freiem
+          Himmel statt, bei instabiler Internetverbindung und unter hohem
+          Zeitdruck. Die Arbeit erfolgt dabei oft im Stehen oder in
+          improvisierten Sitzpositionen.
+        </p>
+        <p>
+          In diesem Nutzungskontext ist der Einsatz heute typischer
+          KI-Technologien, z. B. Chatbots, nur bedingt geeignet, da die
+          technische Infrastruktur sowie die körperlichen und zeitlichen
+          Rahmenbedingungen für deren Einsatz nicht optimal sind. Heutige
+          Chatbots brauchen in der Regel schnelle Internetverbindungen und
+          basieren auf Eingaben über Tastatur oder Sprache, die mit spürbaren
+          Verzögerungen durch weit entfernte Server erst verarbeitet und dann
+          beantwortet werden. Die Anwendung sollte dagegen
+          Offline-Funktionalität und schnelle Spracheingabe berücksichtigen.
+        </p>
+      </Accordion>
+      <div className="mb-12">
+        {" "}
+        {/* TODO: uniform distance */}
+        <Accordion
+          title="2. Digital ausgerichtete NGO mit Online-Beratung"
+          initiallyOpen={false}>
+          <p>
+            In einer digital ausgerichteten NGO, die Online-Beratung anbietet,
+            arbeiten die Teams in ruhigen Büros mit ergonomischen
+            Arbeitsplätzen. Dort stehen leistungsfähige Laptops oder Desktop-PCs
+            mit großen Bildschirmen, Headsets und stabiler Internetverbindung
+            zur Verfügung. Die Beratungen folgen einem festen Zeitplan und
+            ermöglichen konzentriertes Arbeiten.
+          </p>
+        </Accordion>
       </div>
       <h3>4. Hilfsmittel</h3>
       <p>Die technischen Bedingungen umfassen folgende Punkte:</p>
@@ -855,6 +858,30 @@ const pragamatischeHedonischTableData = [
     <>
       Fokus: <b>Vergnügen & Wohlbefinden</b>
     </>,
+  ],
+];
+
+const weitereAspkteTableDate = [
+  [<b>Aspekt</b>, <b>Beschreibung</b>],
+  [
+    <b>Emotionale Bindung & Vertrauen</b>,
+    "Positive Emotionen fördern die Bindung und Vertrauen in das Produkt.",
+  ],
+  [
+    <b>Konsistenz</b>,
+    'Das "Benutzungserlebnis" sollte über alle Geräte hinweg stimmig sein, egal ob Smartphone, Tablet oder Desktop.',
+  ],
+  [
+    <b>Barrierefreiheit & Inklusion</b>,
+    "UX muss alle Nutzer:innen einbeziehen, auch z. B. Menschen mit Seh- oder motorischen Einschränkungen.",
+  ],
+  [
+    <b>Feedback & Fehlervermeidung</b>,
+    "Nutzer:innen sollten klares Feedback erhalten und vor möglichen Fehlern geschützt werden.",
+  ],
+  [
+    <b>Interaktives Design & ständige Verbesserung</b>,
+    "UX ist ein fortlaufender Prozess. Nutzerfeedback ist essentiell für kontinuierliche Optimierung.",
   ],
 ];
 
@@ -1039,58 +1066,36 @@ const UserExperience = {
       </p>
       <Table data={pragamatischeHedonischTableData} headerStyle={true} />
       <h3>3. Weitere Aspekte guter UX:</h3>
-      <ul>
-        <li>
-          <b>Emotionale Bindung & Vertrauen</b>: Positive Emotionen fördern
-          Bindung und Vertrauen in das Produkt.
-        </li>
-        <li>
-          <b>Konsistenz</b>: Das „Benutzungserlebnis sollte über alle Geräte
-          hinweg stimmig sein, egal ob Smartphone, Tablet oder Desktop.
-        </li>
-        <li>
-          <b>Barrierefreiheit & Inklusion</b>: UX muss alle Nutzer:innen
-          einbeziehen, auch z. B. Menschen mit Seh- oder motorischen
-          Einschränkungen.
-        </li>
-        <li>
-          <b>Feedback & Fehlervermeidung</b>: Nutzer:innen sollten klares
-          Feedback erhalten und vor möglichen Fehlern geschützt werden.
-        </li>
-        <li>
-          <b>Interaktives Design & ständige Verbesserung</b>: UX ist ein
-          fortlaufender Prozess. Nutzerfeedback ist essentiell für
-          kontinuierliche Optimierung.
-        </li>
-      </ul>
+      <Table data={weitereAspkteTableDate} headerStyle={true} />
     </section>,
     <section>
       <h2>Beispiel KI-Chatbot</h2>
-      <TabSwitchView>
-        <div title="Beispiel für gute UX">
-          <p>
-            Ein KI-gestützter Chatbot kann eine positive User Experience bieten,
-            wenn er sich intuitiv bedienen lässt, natürliche Sprache verwendet
-            und klare Anweisungen gibt. Besonders überzeugend ist das
-            Benutzungserlebnis, wenn der Chatbot Probleme schnell und präzise
-            löst, sich an die individuellen Bedürfnisse und Präferenzen der
-            Nutzer:innen anpasst und dabei eine freundliche, empathische
-            Atmosphäre schafft.
-          </p>
-        </div>
-        <div title="Beispiel für schlechte UX">
-          <p>
-            Negative UX entsteht hingegen, wenn es zu Missverständnissen kommt,
-            etwa weil Benutzereingaben falsch interpretiert oder unklare
-            Antworten gegeben werden. Auch mangelnde Flexibilität, also die
-            Unfähigkeit, auf unerwartete oder komplexe Anliegen einzugehen,
-            beeinträchtigt das Nutzungserlebnis. Lange Reaktionszeiten, unnötige
-            Interaktionen und wiederholte Eingabeaufforderungen führen schnell
-            zu Frustration, da sie den Dialog ermüdend und ineffizient wirken
-            lassen.
-          </p>
-        </div>
-      </TabSwitchView>
+      <div className="mb-[var(--scale2)]">
+        Hier finden Sie je ein Beispiel für eine gute und eine schlechte User
+        Experience bei einem KI-Chatbot:
+      </div>
+      <Accordion title="Beispiel für gute UX" initiallyOpen={false}>
+        <p>
+          Ein KI-gestützter Chatbot kann eine positive User Experience bieten,
+          wenn er sich intuitiv bedienen lässt, natürliche Sprache verwendet und
+          klare Anweisungen gibt. Besonders überzeugend ist das
+          Benutzungserlebnis, wenn der Chatbot Probleme schnell und präzise
+          löst, sich an die individuellen Bedürfnisse und Präferenzen der
+          Nutzer:innen anpasst und dabei eine freundliche, empathische
+          Atmosphäre schafft.
+        </p>
+      </Accordion>
+      <Accordion title="Beispiel für schlechte UX" initiallyOpen={false}>
+        <p>
+          Negative UX entsteht hingegen, wenn es zu Missverständnissen kommt,
+          etwa weil Benutzereingaben falsch interpretiert oder unklare Antworten
+          gegeben werden. Auch mangelnde Flexibilität, also die Unfähigkeit, auf
+          unerwartete oder komplexe Anliegen einzugehen, beeinträchtigt das
+          Nutzungserlebnis. Lange Reaktionszeiten, unnötige Interaktionen und
+          wiederholte Eingabeaufforderungen führen schnell zu Frustration, da
+          sie den Dialog ermüdend und ineffizient wirken lassen.
+        </p>
+      </Accordion>
     </section>,
     <section>
       <h2>Fazit: UX bedeutet Nutzerzentrierung</h2>
@@ -1343,7 +1348,7 @@ const sectionsEvaluation = [
   { id: "6", title: "Methoden zur Messung der Usability" },
   { id: "7", title: "Methoden zur Messung der User Experience (UX)" },
   { id: "8", title: "Kombination von Methoden für eine umfassende Messung" },
-  { id: "9", title: "Zusammenfassung" },
+  { id: "9", title: "Fazit" },
 ];
 
 const evaluationTypeData = [
@@ -1722,7 +1727,7 @@ const Evaluation = {
       </p>
     </section>,
     <section>
-      <h2>Zusammenfassung</h2>
+      <h2>Fazit</h2>
       <List
         items={[
           "Evaluationen sind <b>kein Ersatz für gutes Design</b>, sondern ein Werkzeug zur Verbesserung.",

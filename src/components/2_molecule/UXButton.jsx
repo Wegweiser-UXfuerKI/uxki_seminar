@@ -51,8 +51,7 @@ const UXButton = ({
       href={to}
       target="_blank"
       rel="noopener noreferrer"
-      className={`ux-button px-6 py-4 flex justify-between h-full items-center rounded-xl gap-2 transform ${glassyClass}`}
-    >
+      className={`ux-button px-6 py-4 flex justify-between h-full items-center rounded-xl gap-2 transform ${glassyClass}`}>
       {text}
       <RightArrow arrowPosition={arrowPosition} />
     </a>
@@ -62,7 +61,7 @@ const UXButton = ({
       onClick={handleNavigation}
       aria-label={`Navigiere zu ${text}`}
       role="link"
-      className={`ux-button px-6 py-4 flex justify-between h-full items-center rounded-xl gap-2 transform ${glassyClass}`}>
+      className={`ux-button no_underline no_link_hover px-6 py-4 flex justify-between h-full items-center rounded-xl gap-2 transform ${glassyClass}`}>
       {text}
       <RightArrow arrowPosition={arrowPosition} />
     </Link>

@@ -29,7 +29,7 @@ const SubTopicCard = ({ topicName, link, description, number, isDisabled }) => {
         to={`/${selectedModuleLink}/${link}`}
         aria-disabled={isDisabled}
         tabIndex={isDisabled ? -1 : 0}
-        className="relative glassBox rounded-3xl h-full p-6 flex flex-col justify-top m-2 transition overflow-hidden hover:-translate-y-2">
+        className="relative glassBox no_underline no_link_hover rounded-3xl h-full p-6 flex flex-col justify-top m-2 transition overflow-hidden hover:-translate-y-2">
         <h3
           className="fourthTitle lg:mt-20 mt-10 hyphens-auto relative"
           data-topic-number={topicNumber}>

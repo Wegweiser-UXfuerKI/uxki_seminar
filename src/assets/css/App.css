@@ -230,14 +230,9 @@ a.no_underline {
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
+a:not(.no_link_hover):hover,
+a:not(.no_link_hover):focus {
   color: var(--tb);
-}
-
-a.no_link_hover:hover,
-a.no_link_hover:focus {
-  color: var(--text) !important;
 }
 
 :root.dark a.active {

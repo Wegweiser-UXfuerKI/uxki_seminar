@@ -39,6 +39,11 @@
   height: 100%;
 }
 
+.header_row .table_cell {
+  display: flex;
+  align-items: center;
+}
+
 :global(:root.light) .header_row {
   color: var(--rb);
 }

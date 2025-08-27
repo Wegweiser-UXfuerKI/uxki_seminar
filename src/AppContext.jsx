@@ -47,14 +47,9 @@ const AppProvider = ({ children }) => {
     "identifikation-prozesse",
   ];
 
-  const devSubtopics = {
-    "ux-und-usability": [
-      "nutzungskontext",
-      "user-experience",
-      "mensch-computer-interaktion",
-      "evaluation",
-    ],
-  };
+  /* 
+  "module-link": ["subtopic-link", "", ...] */
+  const devSubtopics = {};
 
   // Temporarily deactivated modules
   const disabledModules = [
@@ -67,12 +62,6 @@ const AppProvider = ({ children }) => {
 
   // Disabled subtopics for specific modules
   const disabledSubtopics = {
-    "ux-und-usability": [
-      "nutzungskontext",
-      "user-experience",
-      "mensch-computer-interaktion",
-      "evaluation",
-    ],
     "ux-bezogene-ki-eigenschaften": ["einleitung"],
     dateninput: ["einleitung"],
     verarbeitung: ["einleitung"],

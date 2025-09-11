@@ -1,4 +1,4 @@
-import ImageElement from "../../assets/icons/dateninput.svg?react";
+import ImageElement from "../../assets/icons/verarbeitung.svg?react";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 
 const Einleitung = {
@@ -20,8 +20,8 @@ const Einleitung = {
 };
 
 const Dateninput = {
-  linkName: "dateninput",
-  name: "Dateninput",
+  linkName: "grundlagen-ki",
+  name: "Grundlagen von KI",
   moduleImage: ImageElement,
   content: [Einleitung],
 };

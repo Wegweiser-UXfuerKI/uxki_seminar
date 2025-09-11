@@ -41,9 +41,7 @@ const AppProvider = ({ children }) => {
 
   const devModules = [
     "ux-bezogene-ki-eigenschaften",
-    "dateninput",
-    "verarbeitung",
-    "ki-ergebnisse",
+    "grundlagen-ki",
     "identifikation-prozesse",
   ];
 
@@ -54,18 +52,14 @@ const AppProvider = ({ children }) => {
   // Temporarily deactivated modules
   const disabledModules = [
     "ux-bezogene-ki-eigenschaften",
-    "dateninput",
-    "verarbeitung",
-    "ki-ergebnisse",
+    "grundlagen-ki",
     "identifikation-prozesse",
   ];
 
   // Disabled subtopics for specific modules
   const disabledSubtopics = {
     "ux-bezogene-ki-eigenschaften": ["einleitung"],
-    dateninput: ["einleitung"],
-    verarbeitung: ["einleitung"],
-    "ki-ergebnisse": ["einleitung"],
+    "grundlagen-ki": ["einleitung"],
     "identifikation-prozesse": ["einleitung"],
   };
 

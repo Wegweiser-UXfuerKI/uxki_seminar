@@ -1,20 +1,16 @@
-import Dateninput from "./content/Dateninput";
+import GrundlagenKI from "./content/GrundlagenKI";
 import EuAiActSections from "./content/EuAiAct";
 import UXBasics from "./content/GrundlagenUX";
 import IdentifikationProzesse from "./content/IdentifikationProzesse";
-import KIErgebnisse from "./content/KI-Ergebnisse";
 import UXKISections from "./content/UXKI";
 import UXKIEigenschaften from "./content/UXKIEigenschaften";
-import Verarbeitung from "./content/Verarbeitung";
 
 // List of all Modules
 const modules = [
   UXBasics,
   UXKISections,
   UXKIEigenschaften,
-  Dateninput,
-  Verarbeitung,
-  KIErgebnisse,
+  GrundlagenKI,
   IdentifikationProzesse,
   EuAiActSections,
 ];
@@ -72,7 +68,9 @@ export function getModuleImageByLink(moduleLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return null;
   const ModuleIcon = module.moduleImage;
-  return <ModuleIcon className="lg:max-h-[150px] lg:max-w-[150px] max-h-[96px] max-w-[96px]" />;
+  return (
+    <ModuleIcon className="lg:max-h-[150px] lg:max-w-[150px] max-h-[96px] max-w-[96px]" />
+  );
 }
 
 /**

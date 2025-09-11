@@ -1060,7 +1060,7 @@ const UserExperience = {
         oder ein Produkt erleben - und das betrifft nicht nur,{" "}
         <b>wie gut etwas funktioniert</b>, sondern auch,
         <b>wie es sich dabei anfühlt</b>. Also: Es geht sowohl um die praktische
-        Seite (z. B. „Finde ich schnell, was ich suche?“) als auch um die
+        Seite (z. B. „Finde ich schnell, was ich suche?“) als auch um die{" "}
         <b>emotionale</b> (z. B. „Macht es mir Spaß, das zu benutzen?“ oder
         „Fühlt es sich angenehm an?“). Im Forschungskontext lässt sich dies als
         so genannte pragmatische und hedonische Qualitäten aufschlüsseln:

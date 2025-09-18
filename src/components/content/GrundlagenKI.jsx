@@ -3,9 +3,9 @@ import { ChapterHeader } from "../3_organism/ChapterHeader";
 
 const Einleitung = {
   linkName: "einleitung",
-  name: "Einführung",
+  name: "Einleitung",
   description:
-    "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
+    "Hier wird ein Überblick über die die KI Technologien und deren Funktionsweise gegeben.",
   content: [
     <ChapterHeader text={"Einleitung"} number={1} />,
     <section>
@@ -19,11 +19,59 @@ const Einleitung = {
   ],
 };
 
+const Input = {
+  linkName: "input",
+  name: "Input",
+  description: "Hier wird der Input von KI-Systemen thematisiert.",
+  content: [
+    <ChapterHeader text={"Input"} number={2} />,
+    <section>
+      <p></p>
+    </section>,
+  ],
+};
+
+const Verarbeitung = {
+  linkName: "verarbeitung",
+  name: "Verarbeitung",
+  description: "Hier wird die Verarbeitung bei KI-Systemen thematisiert.",
+  content: [
+    <ChapterHeader text={"Verarbeitung"} number={3} />,
+    <section>
+      <p></p>
+    </section>,
+  ],
+};
+
+const Output = {
+  linkName: "output",
+  name: "Output",
+  description: "Hier wird der Output von KI-Systemen thematisiert.",
+  content: [
+    <ChapterHeader text={"Output"} number={4} />,
+    <section>
+      <p></p>
+    </section>,
+  ],
+};
+
+const LLM = {
+  linkName: "llm",
+  name: "LLMs",
+  description: "Hier werden LLMs thematisiert.",
+  content: [
+    <ChapterHeader text={"LLMs"} number={5} />,
+    <section>
+      <p></p>
+    </section>,
+  ],
+};
+
 const Dateninput = {
-  linkName: "grundlagen-ki",
-  name: "Grundlagen von KI",
+  linkName: "ki-technologien-verstehen",
+  name: "KI-Technologien verstehen",
   moduleImage: ImageElement,
-  content: [Einleitung],
+  content: [Einleitung, Input, Verarbeitung, Output, LLM],
 };
 
 export default Dateninput;

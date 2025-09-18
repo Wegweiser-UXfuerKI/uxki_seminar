@@ -33,7 +33,7 @@ const sectionsIntro = [
 
 const Einleitung = {
   linkName: "einleitung",
-  name: "Einführung UX und Usability",
+  name: "Einleitung UX und Usability",
   description:
     "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
   content: [

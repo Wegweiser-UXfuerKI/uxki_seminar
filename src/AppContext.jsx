@@ -40,9 +40,9 @@ const AppProvider = ({ children }) => {
   const navigate = useNavigate();
 
   const devModules = [
-    "ux-bezogene-ki-eigenschaften",
-    "grundlagen-ki",
-    "identifikation-prozesse",
+    "gestaltungsziele-menschzentrierte-ki",
+    "ki-technologien-verstehen",
+    "automatisierungspotenziale-erkennen",
   ];
 
   /* 
@@ -51,16 +51,29 @@ const AppProvider = ({ children }) => {
 
   // Temporarily deactivated modules
   const disabledModules = [
-    "ux-bezogene-ki-eigenschaften",
-    "grundlagen-ki",
-    "identifikation-prozesse",
+    "gestaltungsziele-menschzentrierte-ki",
+    "ki-technologien-verstehen",
+    "automatisierungspotenziale-erkennen",
   ];
 
   // Disabled subtopics for specific modules
   const disabledSubtopics = {
-    "ux-bezogene-ki-eigenschaften": ["einleitung"],
-    "grundlagen-ki": ["einleitung"],
-    "identifikation-prozesse": ["einleitung"],
+    "gestaltungsziele-menschzentrierte-ki": [
+      "einleitung",
+      "vertrauenswuerdigkeit",
+      "transparenz",
+      "erklaerbarkeit",
+      "kontrollierbarkeit",
+      "mentale-modellkomplementaritaet",
+    ],
+    "ki-technologien-verstehen": [
+      "einleitung",
+      "input",
+      "verarbeitung",
+      "output",
+      "llm",
+    ],
+    "automatisierungspotenziale-erkennen": ["einleitung"],
   };
 
   /**

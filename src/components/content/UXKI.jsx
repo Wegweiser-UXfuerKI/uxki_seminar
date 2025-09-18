@@ -1920,12 +1920,12 @@ const sectionsIntro = [
 ];
 
 const EinführungUXKI = {
-  linkName: "einfuehrung-ki-bezogene-ux",
-  name: "Einführung KI-bezogene UX",
+  linkName: "einleitung-ki-bezogene-ux",
+  name: "Einleitung KI-bezogene UX",
   description:
     "KI-Systeme machen mehr Aspekte für die User Experience relevant. Hier werden wichtige dieser KI-bezogenen UX Aspekte ein erstes mal angeführt.",
   content: [
-    <ChapterHeader text={"Einführung in KI-bezogene UX"} number={1} />,
+    <ChapterHeader text={"Einleitung in KI-bezogene UX"} number={1} />,
     <section id="einleitung">
       <SubNavigation sections={sectionsIntro} />
       <p>

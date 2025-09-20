@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was ist das Ziel einer Evaluation im Bereich Usability und UX?",
+    "options": [
+      "Die Überprüfung, ob ein System benutzerfreundlich ist und den Nutzeranforderungen entspricht",
+      "Die Optimierung der internen Code-Architektur",
+      "Die rein technische Performance-Messung von Servern",
+      "Die Maximierung des Marketing-Erfolgs"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Warum sind Evaluationen wichtig?",
+    "options": [
+      "Sie stellen sicher, dass Systeme nicht nur funktionieren, sondern auch den Bedürfnissen der Nutzer:innen entsprechen",
+      "Sie prüfen, ob Nutzeranforderungen erfüllt werden",
+      "Sie stellen fest, ob Systeme gerne genutzt werden",
+      "Sie ersetzen den Designprozess vollständig"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 3,
+    "questionText": "Welche Aussage zur Rolle von Usability-Tests ist korrekt?",
+    "options": [
+      "Sie können die Benutzerfreundlichkeit verbessern, sind aber kein Ersatz für gute Gestaltung",
+      "Sie garantieren automatisch eine gute User Experience",
+      "Sie machen andere Evaluationsmethoden überflüssig",
+      "Sie sind nur am Projektende sinnvoll"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 4,
+    "questionText": "Welche Arten von Evaluation gibt es je nach Zeitpunkt im Entwicklungsprozess?",
+    "options": [
+      "Formative Evaluation während der Entwicklung",
+      "Summative Evaluation am Ende des Entwicklungsprozesses",
+      "Explorative Evaluation nach dem Launch",
+      "Visuelle Evaluation während der Designphase"
+    ],
+    "correctAnswer": [0, 1]
+  },
+  {
+    "id": 5,
+    "questionText": "Was ist das Ziel der formativen Evaluation?",
+    "options": [
+      "Frühzeitige Erkennung von Schwächen und Usability-Problemen",
+      "Bewertung der Gesamtqualität am Ende",
+      "Vergleich verschiedener Versionen",
+      "Optimierung der Hardwareleistung"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 6,
+    "questionText": "Welche Merkmale treffen auf die summative Evaluation zu?",
+    "options": [
+      "Sie findet am Ende des Entwicklungsprozesses statt",
+      "Sie beurteilt die Gesamtqualität des Systems",
+      "Sie vergleicht verschiedene Versionen",
+      "Sie wird nur ohne Nutzer:innen durchgeführt"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 7,
+    "questionText": "Welche beiden Hauptarten von Evaluationsmethoden unterscheidet man?",
+    "options": [
+      "Empirische Methoden",
+      "Analytische Methoden",
+      "Technische Methoden",
+      "Visuelle Methoden"
+    ],
+    "correctAnswer": [0, 1]
+  },
+  {
+    "id": 8,
+    "questionText": "Wer führt eine empirische Evaluation typischerweise durch?",
+    "options": [
+      "Echte Nutzer:innen",
+      "Expert:innen wie UX-Designer:innen",
+      "Projektmanager:innen",
+      "Marketing-Spezialist:innen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 9,
+    "questionText": "Welche Vorteile hat eine analytische Evaluation?",
+    "options": [
+      "Sie ist schnell und kostengünstig",
+      "Sie benötigt keine Nutzer:innen",
+      "Sie ist immer völlig objektiv",
+      "Sie ersetzt empirische Methoden vollständig"
+    ],
+    "correctAnswer": [0, 1]
+  },
+  {
+    "id": 10,
+    "questionText": "Welche Evaluationskriterien sind typisch für Usability und UX?",
+    "options": [
+      "Effektivität",
+      "Effizienz",
+      "Zufriedenheit",
+      "Freude an der Nutzung"
+    ],
+    "correctAnswer": [0, 1, 2, 3]
+  },
+  {
+    "id": 11,
+    "questionText": "Welches Beispiel beschreibt Effektivität als Evaluationskriterium?",
+    "options": [
+      "90% der Aufgaben werden korrekt abgeschlossen",
+      "Eine Aufgabe lässt sich in unter 30 Sekunden lösen",
+      "Nutzer:innen empfinden das System als angenehm",
+      "Das System benötigt wenig Energieverbrauch"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 12,
+    "questionText": "Welche Methoden eignen sich zur Messung der Usability?",
+    "options": [
+      "Usability-Tests",
+      "Heuristische Evaluation",
+      "Standardisierte Fragebögen (z.B. SUS, QUIS, USE)",
+      "Eye-Tracking und physiologische Messungen"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 13,
+    "questionText": "Welche dieser Methoden liefert tiefe Einblicke in Gedanken und Gefühle der Nutzer:innen?",
+    "options": [
+      "Interviews",
+      "System Usability Scale (SUS)",
+      "Heuristische Evaluation",
+      "Performance-Messung"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 14,
+    "questionText": "Welche Methoden eignen sich speziell zur Messung der User Experience?",
+    "options": [
+      "Interviews",
+      "Emotionsanalyse und physiologische Messungen",
+      "Fragebögen",
+      "Netzwerkanalyse"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 15,
+    "questionText": "Welcher Vorteil hat der Multi-Methoden-Ansatz in der Evaluation?",
+    "options": [
+      "Er kombiniert quantitative und qualitative Daten",
+      "Er berücksichtigt unterschiedliche Perspektiven",
+      "Er macht Stärken und Schwächen eines Systems sichtbar",
+      "Er ersetzt die Notwendigkeit von Nutzerfeedback"
+    ],
+    "correctAnswer": [0, 1, 2]
+  }
+]

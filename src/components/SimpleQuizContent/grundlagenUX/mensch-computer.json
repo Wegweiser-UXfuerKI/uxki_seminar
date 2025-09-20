@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was ist das Ziel der Mensch-Computer-Interaktion (HCI)?",
+    "options": [
+      "Positive Nutzungserlebnisse durch optimierte Gestaltung und Entwicklungsprozesse zu schaffen",
+      "Die technische Leistungsfähigkeit von Computern zu maximieren",
+      "Nur für Expert:innen bedienbare Systeme zu entwickeln",
+      "Systeme ausschließlich ästhetisch ansprechend zu gestalten"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Wie wird HCI im Vergleich zu UX typischerweise verwendet?",
+    "options": [
+      "HCI im wissenschaftlichen Kontext, UX in der Praxis",
+      "Beide Begriffe sind vollständig identisch und austauschbar",
+      "UX nur in der Softwareentwicklung, HCI nur im Design",
+      "HCI nur für Hardware, UX nur für Software"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 3,
+    "questionText": "Warum ist menschenzentrierte Gestaltung wichtig?",
+    "options": [
+      "Um die Lücke zwischen mentalen Modellen der Nutzer:innen und der tatsächlichen Systemfunktion zu überbrücken",
+      "Um ausschließlich technische Perfektion zu erreichen",
+      "Damit Systeme nur für Entwickler:innen verständlich sind",
+      "Weil Systeme ohne Nutzerfeedback meist erfolgreicher sind"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 4,
+    "questionText": "Was beschreibt ein mentales Modell?",
+    "options": [
+      "Eine innere Vorstellung der Nutzer:innen darüber, wie ein System funktioniert",
+      "Eine vollständige technische Dokumentation",
+      "Das Datenmodell der Programmiersprache",
+      "Ein exaktes Abbild der realen Funktionsweise eines Systems"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 5,
+    "questionText": "Welche Eigenschaften haben mentale Modelle?",
+    "options": [
+      "Sie basieren auf Erfahrungen, Intuitionen und Analogien",
+      "Sie beruhen auf exakten technischen Fakten",
+      "Sie sind unabhängig von Nutzer:innen und deren Wissen",
+      "Sie ersetzen den Bedarf an nutzerzentriertem Design"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 6,
+    "questionText": "Welches dieser Beispiele beschreibt ein mentales Modell im Umgang mit Technologie?",
+    "options": [
+      "Die Annahme, dass ein KI-Chatbot wie ein Mensch denkt und versteht",
+      "Das exakte Wissen über die Architektur neuronaler Netze",
+      "Die Programmierung eines Chatbots durch Entwickler:innen",
+      "Die physikalische Erklärung eines Elektromotors"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 7,
+    "questionText": "Was kann passieren, wenn mentale Modelle und reale Systemfunktionen stark voneinander abweichen?",
+    "options": [
+      "Falsche Erwartungen und Frustration bei den Nutzer:innen",
+      "Eine verbesserte Bedienbarkeit",
+      "Schnelleres technisches Verständnis der Nutzer:innen",
+      "Automatische Anpassung der Systeme"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 8,
+    "questionText": "Welche dieser Vorgehensweisen sind zentral für nutzerzentriertes Design?",
+    "options": [
+      "User-Centered Design (UCD), Human-Centered Design (ISO 9241-210) und Double Diamond",
+      "Agiles Projektmanagement, Scrum und Kanban",
+      "Hardwareoptimierung, Cloud Computing und Big Data",
+      "Visuelles Design, Farblehre und Typografie"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 9,
+    "questionText": "Welches Prinzip ist allen nutzerzentrierten Vorgehensweisen gemeinsam?",
+    "options": [
+      "Iteratives Vorgehen mit wiederholtem Entwerfen, Testen und Verbessern",
+      "Einmalige Entwicklung ohne Anpassungen",
+      "Vorrang des Budgets über Nutzerbedürfnisse",
+      "Fokus ausschließlich auf technische Effizienz"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 10,
+    "questionText": "Was sind typische Schritte im User-Centered Design (UCD)?",
+    "options": [
+      "Kontextanalyse, Effizienzprüfung, Implementierung, Evaluation",
+      "Budgetplanung, Marketing, Vertrieb, Controlling",
+      "Hardwaredesign, Datenbankmodellierung, Netzwerkaufbau",
+      "Visuelle Gestaltung, Animation, Branding, CI"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 11,
+    "questionText": "Wodurch zeichnet sich der Human-Centered Design-Prozess (ISO 9241-210) aus?",
+    "options": [
+      "Er basiert auf sechs Prinzipien, bei denen Nutzer:innen früh und kontinuierlich einbezogen werden",
+      "Er ist eine rein technische Norm ohne Bezug zu Nutzer:innen",
+      "Er legt ausschließlich Wert auf grafische Gestaltung",
+      "Er dient nur zur Dokumentation von Softwarearchitekturen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 12,
+    "questionText": "Was visualisiert das Double Diamond Modell?",
+    "options": [
+      "Den kreativen Problemlösungsprozess mit Problem- und Lösungsraum",
+      "Die technische Leistungsoptimierung von Algorithmen",
+      "Die Budget- und Ressourcenplanung eines Projekts",
+      "Die physischen Komponenten einer Benutzeroberfläche"
+    ],
+    "correctAnswer": [0]
+  }
+]

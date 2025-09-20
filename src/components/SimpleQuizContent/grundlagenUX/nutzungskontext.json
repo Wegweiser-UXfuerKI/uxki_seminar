@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was beschreibt der Begriff Nutzungskontext?",
+    "options": [
+      "Die Umstände, unter denen ein System verwendet wird",
+      "Die Anzahl der Nutzer eines Systems",
+      "Die technischen Spezifikationen der Hardware",
+      "Die geplanten Marketingstrategien"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Welche Aspekte gehören typischerweise zum Nutzungskontext?",
+    "options": [
+      "Die Benutzenden",
+      "Die Aufgaben",
+      "Die verwendeten Hilfsmittel",
+      "Die Finanzplanung des Projekts"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 3,
+    "questionText": "Warum ist der Nutzungskontext für die Usability-Bewertung wichtig?",
+    "options": [
+      "Weil er bestimmt, ob ein System in der Praxis effektiv, effizient und zufriedenstellend genutzt werden kann",
+      "Weil er vorgibt, welche Programmiersprache genutzt werden soll",
+      "Weil er die grafische Oberfläche automatisch gestaltet",
+      "Weil er festlegt, wie viele Nutzende das System haben wird"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 4,
+    "questionText": "Welche Maßnahmen können schon mit wenig Aufwand helfen, den Nutzungskontext besser zu verstehen?",
+    "options": [
+      "Informelle GEspräche mit Nutzenden",
+      "Notizen über die Arbeitsweise der Zielgruppe",
+      "Fotos von der Arbeitsumgebung",
+      "Statistische Auswertung der Verkaufszahlen"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 5,
+    "questionText": "Welche Hauptaspekte umfasst der Nutzungskontext?",
+    "options": [
+      "Benutzende",
+      "Aufgaben",
+      "Umgebung",
+      "Hilfsmittel",
+      "Budgetplanung",
+      "Projektzeitplan"
+    ],
+    "correctAnswer": [0, 1, 2, 3]
+  },
+  {
+    "id": 6,
+    "questionText": "Was kann bei der Analyse der Benutzenden wichtig sein?",
+    "options": [
+      "Fähigkeiten",
+      "Vorerfahrung und Wissen",
+      "Erwartungen",
+      "Demografische Daten"
+    ],
+    "correctAnswer": [0, 1, 2, 3]
+  },
+  {
+    "id": 7,
+    "questionText": "Welche Qualitätsmerkmale unterscheiden sich bei der GEstaltung von Softwaresystem je nach Zielgruppe?",
+    "options": [
+      "Ease of Learn (Erlernbarkeit) und Ease of Use (Benutzungseffizienz)",
+      "Sicherheit und Datenschutz",
+      "Kosten und Nutzen",
+      "Hardware und Software"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 8,
+    "questionText": "Wann steht \"Ease of Learn\" im Vordergrund?",
+    "options": [
+      "Bei selten genutzten Öffentlichen Systemen",
+      "Bei Systemen für Routine-Nutzende",
+      "Bei internenen Fachanwendungen",
+      "Bei Programmen mit Schulungspflicht"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 9,
+    "questionText": "Wann steht \"Ease of Use\" im Vordergrund?",
+    "options": [
+      "Bei internen Systemen für regelmäßige Nutzung",
+      "Bei öffentlichen Informationsportalen",
+      "Bei einmalig genutzten Formularen",
+      "Bei Gelegenheitsanwendungen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 10,
+    "questionText": "Welche Aspekte sind für die Analyse von Aufgaben relevant?",
+    "options": [
+      "Aufgabenziele",
+      "Einbettung in Arbeitsabläufe",
+      "Vorgaben und erwartete Ergebnisse",
+      "Häufigkeit und Dauer"
+    ],
+    "correctAnswer": [0, 1, 2, 3]
+  },
+  {
+    "id": 11,
+    "questionText": "Was gehört zur physischen und organisatorischen Umgebung eines Systems?",
+    "options": [
+      "Arbeitsplatzbedingungen",
+      "Arbeitsstruktur",
+      "Organisationskultur",
+      "Hardwareleistung"
+    ],
+    "correctAnswer": [0, 1, 2, 3]
+  },
+  {
+    "id": 12,
+    "questionText": "Welche Rolle spielen Hilfsmittel im Nutzungskontext?",
+    "options": [
+      "Sie haben einen direkten Einfluss auf Usability",
+      "Sie sind irrelevant, solange die Software gut ist",
+      "Sie bestimmen nur die Entwicklungskosten",
+      "Sie gelten ausschließlich für analoge Systeme"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 13,
+    "questionText": "Welche Methoden eignen sich zur Datenerhebung über den Nutzungskontext?",
+    "options": ["Interviews", "Umfragen", "Fokusgruppen", "Usability-Tests"],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 14,
+    "questionText": "Welche Methoden eignen sich zur Dokumentation und Analyse des Nutzungskontexts?",
+    "options": [
+      "Personas",
+      "Nutzungsszenarien",
+      "Aufgabenanalyse",
+      "Benchmarking der Konkurrenz"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 15,
+    "questionText": "Welche dieser zusätzlichen Anforderungen und Ziele an das System können im Rahmen des Nutzungskontexts über die Usability hinausgehen?",
+    "options": [
+      "Emotionale Aspekte wie angenehme oder motivierende Nutzung",
+      "Reduzierung der Produktionskosten",
+      "Automatische Fehlerkorrektur",
+      "Erweiterte Hardwarekompatibilität"
+    ],
+    "correctAnswer": [1]
+  }
+]

@@ -9,6 +9,7 @@ import { Table } from "../2_molecule/Table";
 import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import Sources from "../Sources";
 import ThemeImage from "../1_elements/ThemeImage";
+import BasicQuiz from "../interactive/Quiz/BasicQuiz";
 
 import nutzungskontext_dark from "../../assets/images/grundlagenUX/nutzungskontext-dark.png";
 import nutzungskontext_light from "../../assets/images/grundlagenUX/nutzungskontext-light.png";
@@ -25,6 +26,12 @@ import CheckIcon from "../../assets/icons/grundlagenUX/check.svg?react";
 import ClockIcon from "../../assets/icons/grundlagenUX/clock.svg?react";
 import LoveIcon from "../../assets/icons/grundlagenUX/love.svg?react";
 import SmileIcon from "../../assets/icons/grundlagenUX/smile.svg?react";
+
+import usability_quiz from "../SimpleQuizContent/grundlagenUX/usability.json";
+import user_experience_quiz from "../SimpleQuizContent/grundlagenUX/user-experience.json";
+import nutzungskontext_quiz from "../SimpleQuizContent/grundlagenUX/nutzungskontext.json";
+import mensch_computer_quiz from "../SimpleQuizContent/grundlagenUX/mensch-computer.json";
+import evaluation_quiz from "../SimpleQuizContent/grundlagenUX/evaluation.json";
 
 const sectionsIntro = [
   { id: "1", title: "Intro" },
@@ -291,6 +298,14 @@ const Usability = {
         hinter diesem Begriff verbirgt, werden wir in der nächsten Lektion
         thematisieren.
       </p>
+    </section>,
+    <section>
+      <h2>Wissensüberprüfung</h2>
+      <p>
+        Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
+        werden.
+      </p>
+      <BasicQuiz quizData={usability_quiz} shuffleQuestions />
     </section>,
   ],
 };
@@ -825,6 +840,14 @@ const Nutzungskontext = {
         .
       </p>
     </section>,
+    <section>
+      <h2>Wissensüberprüfung</h2>
+      <p>
+        Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
+        werden.
+      </p>
+      <BasicQuiz quizData={nutzungskontext_quiz} shuffleQuestions />
+    </section>,
   ],
 };
 
@@ -1116,6 +1139,14 @@ const UserExperience = {
         eine positive UX systematisch gestaltet und evaluiert werden kann.
       </p>
     </section>,
+    <section>
+      <h2>Wissensüberprüfung</h2>
+      <p>
+        Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
+        werden.
+      </p>
+      <BasicQuiz quizData={user_experience_quiz} shuffleQuestions />
+    </section>,
   ],
 };
 
@@ -1337,6 +1368,14 @@ const MenschComputerInteraktion = {
         alignItems="center"
         size="medium"
       />
+    </section>,
+    <section>
+      <h2>Wissensüberprüfung</h2>
+      <p>
+        Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
+        werden.
+      </p>
+      <BasicQuiz quizData={mensch_computer_quiz} shuffleQuestions />
     </section>,
   ],
 };
@@ -1738,6 +1777,14 @@ const Evaluation = {
         alignItems="center"
         size="medium"
       />
+    </section>,
+    <section>
+      <h2>Wissensüberprüfung</h2>
+      <p>
+        Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
+        werden.
+      </p>
+      <BasicQuiz quizData={evaluation_quiz} shuffleQuestions />
     </section>,
   ],
 };

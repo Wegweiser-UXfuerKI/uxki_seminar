@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was bedeutet Usability im Fachjargon?",
+    "options": [
+      "Gebrauchstauglichkeit",
+      "Benutzeroberfläche",
+      "Systemeffizienz",
+      "Nutzendenakzeptanz"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "Welcher Begriff wird im Alltag am ehesten für Usability verwendet?",
+    "options": [
+      "Intuitive Bedienung",
+      "Hardware Ergonomie",
+      "Funktionsumfang",
+      "Interaktionen"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 3,
+    "questionText": "Warum ist gute Usability entscheidend für digitale Systeme?",
+    "options": [
+      "Sie entscheidet über Erfolg und Akzeptanz",
+      "Sie macht Schulungen überflüssig",
+      "Sie garantiert Sicherheit",
+      "Sie reduziert die Hardware-Kosten"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 4,
+    "questionText": "Welche drei Faktoren definiert die DIN EN ISO 9241-11 für Usability?",
+    "options": [
+      "Effektivität",
+      "Effizienz",
+      "Zufriedenstellung",
+      "Barrierefreiheit"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 5,
+    "questionText": "Was beschreibt \"Effektivität\" in Bezug auf Usability?",
+    "options": [
+      "Ob Aufgaben erfolgreich bewältigt werden",
+      "Wie schnell Aufgaben erledigt werden",
+      "Ob Nutzende zufrieden sind",
+      "Wie wenig Ressourcen benötigt werden"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 6,
+    "questionText": "Was ist der Unterschied zwischen Effektivität und Effizienz?",
+    "options": [
+      "Effektivität = erfolgreich, Effizienz = Aufwand",
+      "Effektivität = Kosten, Effizienz = Gewinn",
+      "Effektivität = Zufriedenheit, Effizienz = Zufriedenheit + Zeit",
+      "Effektivität = Einfachheit, Effizienz = Sicherheit"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 7,
+    "questionText": "Was bedeutet der Satz von Bill Buxton \"Everything is best for something and worst for something else\" im Kontext von Usability?",
+    "options": [
+      "Systeme eignen sich unterschiedlich gut je nach Kontext",
+      "Es gibt universell perfekte Systeme",
+      "Systeme sind immer gleich effektiv",
+      "Schlechte Usability ist unvermeidbar"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 8,
+    "questionText": "Welche Aussage beschreibt die NAtur von Usability am besten?",
+    "options": [
+      "Usability ergibt sich immer aus dem jeweiligen Nutzungskontext",
+      "Usability ist eine feste Eigenschaft eines Systems",
+      "Usability hängt ausschließlich von der Hardware ab",
+      "Usability ist unabhängig von den Nutzenden"
+    ],
+    "correctAnswer": [0]
+  }
+]

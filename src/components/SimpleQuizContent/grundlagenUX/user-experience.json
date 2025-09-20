@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "questionText": "Was beschreibt der Begriff \"User Experience\" (UX)?",
+    "options": [
+      "Das gesamte Nutzungserlebnis einschließlich Gefühle und Wahrnehmungen",
+      "Die Benutzerfreunflichkeit eines Systems",
+      "Das Design der Benutzeroberfläche",
+      "Die technische Leistungsfähigkeit der Software"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 2,
+    "questionText": "In welchem Zeitraum umfasst UX die Erlebnisse der Nutzenden?",
+    "options": [
+      "Vor, während und nach der Nutzung",
+      "Während der Nutzung",
+      "Vor und nach der Nutzung",
+      "Nach längerer Erfahrung mit dem Produkt"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 3,
+    "questionText": "Welche dieser Aspekte können schon vor der ersten Nutzung die UX beeinflussen?",
+    "options": [
+      "Werbung",
+      "Markenimage",
+      "Design",
+      "Hardwareleistung des Servers"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 4,
+    "questionText": "Welche Folgen kann eine enttäuschende UX haben?",
+    "options": [
+      "Frustration der Nutzer:innen",
+      "Vertrauensverlust",
+      "Ablehnung des Systems",
+      "Automatische Verbesserungen durch Updates"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 5,
+    "questionText": "Welche Fragen sind neben \"Funktioniert es?\" bei der Bewertung eines Systems im Hinblick auf UX entscheident?",
+    "options": [
+      "Wie wirkt es auf die Nutzer:innen und ist dies die erwünschte Wirkung?",
+      "Welche Programmiersprache wurde genutzt?",
+      "Wie hoch sind die Kosten des Systems?",
+      "Wie lange dauerte die Entwicklung?"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 6,
+    "questionText": "Warum kann man UX nicht direkt \"designen\"?",
+    "options": [
+      "Weil UX vom subjektiven Erleben der Nutzer:innen abhängt",
+      "Weil UX ausschließlich zufällig entsteht",
+      "Weil UX keine Rolle spielt",
+      "Weil UX nur von der Hardware bestimmt wird"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 7,
+    "questionText": "Welche dieser Aussagen stellt den zentralen Ansatz dar, um gute UX zu ermöglichen?",
+    "options": [
+      "Nutzerzentrierte Gestaltung, die Bedürfnisse in den Mittelpunkt stellt",
+      "Fokus ausschließlich auf technische Leistungswerte",
+      "Marketinggestützte Optimierung",
+      "Minimierung der Entwicklungskosten"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 8,
+    "questionText": "Welche Ziele kann eine gute UX haben?",
+    "options": [
+      "Produktive und einfache Interaktion",
+      "Erfüllende und zufriedenstellende Nutzung",
+      "Positive Emotionen",
+      "Stärkere Markenbildung"
+    ],
+    "correctAnswer": [0, 1, 2, 3]
+  },
+  {
+    "id": 9,
+    "questionText": "Was beschreibt die \"pragmatische Qualität\" (PQ) nach Hassenzahl?",
+    "options": [
+      "Fokus auf Gebrauchstauglichkeit und Nutzen",
+      "Fokus auf Vergnügen und Wohlbefinden",
+      "Fokus auf Markenimage",
+      "Fokus auf technische Leistungswerte"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 10,
+    "questionText": "Was beschreibt die \"hedonische Qualität\" (HQ) nach Hassenzahl?",
+    "options": [
+      "Vergnügen und Wohlbefinden",
+      "Klarheit und Nützlichkeit",
+      "Technische Robustheit",
+      "Fehlerfreiheit"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 11,
+    "questionText": "Welche Aspekte zählen zu weiteren wichtigen Faktoren guter UX?",
+    "options": [
+      "Emotionale Bindung & Vertrauen",
+      "Konsistenz über Geräte hinweg",
+      "Barrierefreiheit & Inklusion",
+      "Feedback & Fehlervermeidung"
+    ],
+    "correctAnswer": [0, 1, 2, 3]
+  },
+  {
+    "id": 12,
+    "questionText": "Welcher Aspekt gehört NICHT zu den zentralen UX-Faktoren?",
+    "options": [
+      "Projektbudget",
+      "Interaktives Design & ständige Verbesserung",
+      "Emotionale Bindung",
+      "Konsistenz über Geräte hinweg"
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 13,
+    "questionText": "Welche Eigenschaften zeichnen eine gute UX bei einem KI-Chatbot aus?",
+    "options": [
+      "Intuitive Bedienbarkeit",
+      "Natürliche Sprache",
+      "Freundliche, empathische Atmosphäre",
+      "Lange Reaktionszeiten"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 14,
+    "questionText": "Welche Probleme führen typischerweise zu einer schlechten UX bei Chatbots?",
+    "options": [
+      "Missverständnisse durch falsche Interpretation",
+      "Unklare Antworten",
+      "Lange Reaktionszeiten",
+      "Unnötige Interaktionen"
+    ],
+    "correctAnswer": [0, 1, 2, 3]
+  }
+]

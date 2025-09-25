@@ -119,16 +119,5 @@
       "Er dient nur zur Dokumentation von Softwarearchitekturen"
     ],
     "correctAnswer": [0]
-  },
-  {
-    "id": 12,
-    "questionText": "Was visualisiert das Double Diamond Modell?",
-    "options": [
-      "Den kreativen Problemlösungsprozess mit Problem- und Lösungsraum",
-      "Die technische Leistungsoptimierung von Algorithmen",
-      "Die Budget- und Ressourcenplanung eines Projekts",
-      "Die physischen Komponenten einer Benutzeroberfläche"
-    ],
-    "correctAnswer": [0]
   }
 ]

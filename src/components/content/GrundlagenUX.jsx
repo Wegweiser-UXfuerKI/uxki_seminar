@@ -591,8 +591,8 @@ const Nutzungskontext = {
         Nutzungskontext genau zu analysieren und darauf zu achten, dass die
         Aufgaben und Anforderungen der Benutzer:innen überhaupt mit den
         vorhandenen Technologien und Daten erfüllt werden können. Im Modul{" "}
-        <Link to={"/identifikation-prozesse"}>
-          <b>Identifikation passender Prozesse</b>
+        <Link to={"/automatisierungspotenziale-erkennen"}>
+          <b>Automatisierungspotenziale erkennen</b>
         </Link>{" "}
         werden wir uns eingehend damit beschäftigen, wie Automatisierungs- und
         KI-Potenziale identifiziert werden können und wie man frühzeitig

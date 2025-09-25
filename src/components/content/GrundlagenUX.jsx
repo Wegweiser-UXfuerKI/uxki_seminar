@@ -13,8 +13,6 @@ import BasicQuiz from "../interactive/Quiz/BasicQuiz";
 
 import nutzungskontext_dark from "../../assets/images/grundlagenUX/nutzungskontext-dark.png";
 import nutzungskontext_light from "../../assets/images/grundlagenUX/nutzungskontext-light.png";
-import DD_dark from "../../assets/images/grundlagenUX/double_diamond-dark.png";
-import DD_light from "../../assets/images/grundlagenUX/double_diamond-light.png";
 import hcd_dark from "../../assets/images/grundlagenUX/hcd-dark.png";
 import hcd_light from "../../assets/images/grundlagenUX/hcd-light.png";
 import ucd_dark from "../../assets/images/grundlagenUX/ucd-dark.png";
@@ -352,48 +350,6 @@ const easeLearnUseTableData = [
   ],
 ];
 
-const umgebungTableData = [
-  [<b>Organisatorische Umgebung</b>, <b>Physische Umgebung</b>],
-  [
-    <>
-      <b>Arbeitsstruktur</b>, z.B. Einzelarbeit oder Teamarbeit mit KI-Tools
-    </>,
-    <>
-      <b>Arbeitsplatzbedingungen</b>, z.B. Lärmpegel in der Umgebung und die
-      Anwesenheit anderer Personen vs. Zuverlässigkeit und Datenschutz bei
-      Spracheingabe, Spiegelungen, Lichteinstrahlung und Handschuhe vs.
-      Outdoor-Einsatz eines Touchscreens
-    </>,
-  ],
-  [
-    <>
-      <b>Unterbrechungen</b> im Arbeitsalltag und bei Aufgaben
-    </>,
-    <>
-      <b>Technische Ausstattung</b>, z.B. verfügbare Rechen- und Grafikleistung
-      auf Mobilgeräten, Stabilität und Geschwindigkeit der Internetverbindung,
-      Bildschirmgröße und -auflösung
-    </>,
-  ],
-  [
-    [
-      <b>Unterstützung oder Schulungen</b>,
-      "z.B. IT-Support bei Problemen mit der KI oder Training mit neuen Systemen",
-    ],
-    <>
-      <b>Arbeitsplatzausstattung</b>, z.B. Verwendung im Büro, mobile Verwendung
-      im Stehen oder Sitzen, Verfügbarkeit von Teamarbeitsplätzen mit Projektor
-      oder digitalem Whiteboard
-    </>,
-  ],
-  [
-    <>
-      <b>Organisationskultur</b>, z.B. Akzeptanz von KI-Assistenz
-    </>,
-    "",
-  ],
-];
-
 const Nutzungskontext = {
   linkName: "nutzungskontext",
   name: "Nutzungskontext",
@@ -504,37 +460,6 @@ const Nutzungskontext = {
           KI, Lernstil
         </li>
       </ul>
-      <Accordion title="Hier ein Beispiel:" initiallyOpen={false}>
-        <p>
-          In einer Flüchtlingshilfsorganisation wird ein KI-gestütztes
-          Übersetzungstool eingesetzt. Die Helfer:innen haben generell sehr
-          unterschiedliche technische Fähigkeiten und Vorerfahrungen mit
-          KI-Tools. Das System sollte daher neue oder ungeübte Nutzer:innen
-          nicht mit zu vielen Funktionen überfordern. Funktionen für
-          Fortgeschrittene, die eher erfahrenen Benutzer:innen helfen, sollten
-          optional sein und den Erstkontakt nicht unnötig erschweren. Für die
-          Geflüchteten muss das Tool zusätzlich auch verschiedene
-          Alphabetisierungsniveaus abdecken. Manche Benutzer:innen werden nicht
-          oder nur schlecht lesen können, weshalb hier eine Sprachausgabe und
-          Piktogramme notwendig sind. Das Übersetzungstool muss also für viele
-          unterschiedliche Bedürfnisse angepasst werden, um wirklich
-          gebrauchstauglich zu sein.
-        </p>
-        <p>
-          Bei internen Systeme, z. B. für Mitarbeitende, kann es sinnvoll sein,
-          den Ease of Learn etwas zugunsten des Ease of Use zu vernachlässigen,
-          wenn die Nutzer:innen regelmäßig und intensiv mit dem System arbeiten.
-          Eine kurze, initiale Schulung ist oft akzeptabel, solange das System
-          anschließend effizient und produktiv genutzt werden kann.
-        </p>
-        <p>
-          Bei Front-facing Systeme (für Klienten/Kunden) hingegen ist der Ease
-          of Learn besonders kritisch, weil die Nutzer:innen oft keine oder nur
-          wenig Vorerfahrung mit dem System haben und keine Schulung erhalten.
-          Das System muss somit schnell verständlich sein, damit sie ihre Ziele
-          ohne Frustration erreichen.
-        </p>
-      </Accordion>
       <h3>2. Aufgaben</h3>
       <p>
         Die Aufgaben beschreiben, was die Benutzer:innen mit einem System
@@ -575,15 +500,16 @@ const Nutzungskontext = {
       <p>
         Wird sie z.B. täglich oder sogar mehrmals täglich verwendet, dann ist
         unbedingt zu vermeiden, dass viele Informationen immer neu eingegeben
-        oder Teilschritte stupide wiederholt werden müssen. Um typische Aufgaben
-        schneller zu bearbeiten, dürfen die Funktionen komplexer zu erlernen und
-        zu bedienen sein, z.B. durch die Verwendung von Tastaturkürzeln, durch
-        das Anlegen vorausgefüllter Vorlagen, das Abspeichern von
-        Standard-Textbausteinen oder Makros. Das ist wünschenswert, sofern sich
-        damit im Endeffekt die Aufgaben schneller und besser erledigen lassen.
-        Man spricht hier vom <b>“Ease of Use”</b> und die Effizienz steht dabei
-        im Vordergrund, da man davon ausgeht, dass die Benutzer:innen in solchen
-        Funktionen geschult werden und viel Übung haben.
+        oder Teilschritte stupide wiederholt werden müssen. Um häufige Aufgaben
+        schneller bearbeiten zu können, dürfen auch Funktionen integriert
+        werden, die etwas komplexer zu erlernen und zu bedienen sind, z.B.
+        Tastaturkürzel, vorausgefüllte Vorlagen und Template oder die
+        Möglichkeit zur Speicherung wiederverwendbarer Standard-Textbausteine
+        oder Makros. Das ist wünschenswert, sofern sich damit im Endeffekt die
+        Aufgaben schneller und besser erledigen lassen. Man spricht hier vom{" "}
+        <b>“Ease of Use”</b> und die Effizienz steht dabei im Vordergrund, da
+        man davon ausgeht, dass die Benutzer:innen in solchen Funktionen
+        geschult werden und viel Übung haben.
       </p>
       <p>
         Eine Funktion, die von ungeschulten Benutzer:innen nur sehr selten
@@ -604,6 +530,21 @@ const Nutzungskontext = {
         headerStyle={true}
         verticalAlignCells={true}
       />
+      <h4>Beispiele wie Ease of Use und Ease of Learn Einfluss haben</h4>
+      <p>
+        In einer Organisation zur Hilfe von Geflüchtete wird ein KI-gestütztes
+        Übersetzungstool eingesetzt. Die Helfer:innen haben generell sehr
+        unterschiedliche technische Fähigkeiten und Vorerfahrungen mit KI-Tools.
+        Das System sollte daher neue oder ungeübte Nutzer:innen nicht mit zu
+        vielen Funktionen überfordern. Funktionen für Fortgeschrittene, die eher
+        erfahrenen Benutzer:innen helfen, sollten optional sein und den
+        Erstkontakt nicht unnötig erschweren. Für die Geflüchteten muss das Tool
+        zusätzlich auch verschiedene Alphabetisierungsniveaus abdecken. Manche
+        Benutzer:innen werden nicht oder nur schlecht lesen können, weshalb hier
+        eine Sprachausgabe und Piktogramme notwendig sind. Das Übersetzungstool
+        muss also für viele unterschiedliche Bedürfnisse angepasst werden, um
+        wirklich gebrauchstauglich zu sein.
+      </p>
       <p>
         Bei internen Systeme, z. B. für Mitarbeitende, kann es sinnvoll sein,
         den Ease of Learn etwas zugunsten des Ease of Use zu vernachlässigen,
@@ -618,6 +559,7 @@ const Nutzungskontext = {
         System muss somit schnell verständlich sein, damit sie ihre Ziele ohne
         Frustration erreichen.
       </p>
+      <h3>3. Chatbots als Allheilmittel</h3>
       <p>
         Durch den Erfolg von ChatGPT wird heute sehr oft die Automatisierung von
         Aufgaben durch Chatbots als eine Art Allheilmittel betrachtet. Dies
@@ -658,17 +600,51 @@ const Nutzungskontext = {
         durchgeführt oder beauftragt wird.
       </p>
 
-      <h3>3. Umgebung</h3>
+      <h3>4. Umgebung</h3>
       <p>
         Ein System muss je nach Umgebung sehr unterschiedliche Anforderungen
         erfüllen, um wirklich wirksam nutzbar zu sein. Die folgenden Bereiche
         gehören zur Umgebung
       </p>
-      <Table
-        data={umgebungTableData}
-        headerStyle={true}
-        verticalAlignedCells={false}
-      />
+      <p>
+        <b>Soziale Umgebung:</b>
+      </p>
+      <ul>
+        <li>
+          <b>Arbeitsstruktur</b>, z.B. Einzelarbeit oder Teamarbeit mit KI-Tools
+        </li>
+        <li>
+          <b>Unterbrechungen</b> im Arbeitsalltag und bei Aufgaben
+        </li>
+        <li>
+          <b>Unterstützung oder Schulungen</b>, z.B. IT-Support bei Problemen
+          mit der KI oder Training mit neuen Systemen
+        </li>
+        <li>
+          <b>Organisationskultur</b>, z.B. Akzeptanz von KI-Assistenz
+        </li>
+      </ul>
+      <p>
+        <b>Physische Umgebung:</b>
+      </p>
+      <ul>
+        <li>
+          <b>Arbeitsplatzbedingungen</b>, z.B. Lärmpegel in der Umgebung und die
+          Anwesenheit anderer Personen vs. Zuverlässigkeit und Datenschutz bei
+          Spracheingabe, Spiegelungen, Lichteinstrahlung und Handschuhe vs.
+          Outdoor-Einsatz eines Touchscreens
+        </li>
+        <li>
+          <b>Technische Ausstattung</b>, z.B. verfügbare Rechen- und
+          Grafikleistung auf Mobilgeräten, Stabilität und Geschwindigkeit der
+          Internetverbindung, Bildschirmgröße und -auflösung
+        </li>
+        <li>
+          <b>Arbeitsplatzausstattung</b>, z.B. Verwendung im Büro, mobile
+          Verwendung im Stehen oder Sitzen, Verfügbarkeit von Teamarbeitsplätzen
+          mit Projektor oder digitalem Whiteboard
+        </li>
+      </ul>
       <p>
         Hier ist ein Beispiel: Eine KI-Anwendung zur Sprachübersetzung wird in
         zwei gemeinwohlorientierten Organisationen eingesetzt.
@@ -711,7 +687,7 @@ const Nutzungskontext = {
           </p>
         </Accordion>
       </div>
-      <h3>4. Hilfsmittel</h3>
+      <h3>5. Hilfsmittel</h3>
       <p>Die technischen Bedingungen umfassen folgende Punkte:</p>
       <ul>
         <li>
@@ -827,7 +803,7 @@ const Nutzungskontext = {
       </p>
     </section>,
     <section>
-      <h2>Fazit</h2>
+      <h2>Ausblick</h2>
       <p>
         Die festgelegten Anforderungen und Ziele an das System beziehen sich
         nicht nur auf die Gebrauchstauglichkeit (Usability), sondern auch auf{" "}
@@ -1159,7 +1135,7 @@ const sectionsHCI = [
 
 const MenschComputerInteraktion = {
   linkName: "mensch-computer-interaktion",
-  name: "Mensch Computer Interaktion",
+  name: "Mensch-Computer-Interaktion",
   description:
     "Eine interdisziplinäre Forschungsdisziplin, die sich mit der Gestaltung von Interaktionen zwischen Menschen und Technologie beschäftigt. Ziel ist es, positive Nutzungserfahrungen durch optimierte Design- und Entwicklungsprozesse zu schaffen.",
   content: [
@@ -1191,17 +1167,23 @@ const MenschComputerInteraktion = {
         müssen für alle Menschen einfach und angenehm nutzbar sein.{" "}
       </p>
       <p>
-        <b>HCI vs. UX</b>: Der Begriff HCI wird überwiegend im
-        wissenschaftlichen Kontext verwendet, während User Experience (UX) vor
-        allem in der Praxis verbreitet ist. Beide Konzepte verfolgen jedoch
-        dasselbe Ziel: die Gestaltung positiver und nutzerfreundlicher
-        Interaktionserfahrungen.
+        <b>HCI vs. UX vs. Interaktionsdesign</b>: Der Begriff HCI wird
+        überwiegend im wissenschaftlichen Kontext verwendet und bezieht sich
+        meist auf die Mensch-Computer-Interaktion als Forschungsdisziplin. Das
+        Konzept der User Experience (UX) ist eines der zentralen Ergebnisse
+        dieser Forschung und hat sich schnell in der Praxis verbreitet. In
+        dieser Praxis versuchen Interaktionsdesigner:innen die UX systematisch
+        zu verbessern. Man kann also sagen: Die HCI erforscht die Beziehung
+        zwischen Mensch und Computer. Sie liefert neue Konzepte, Methoden,
+        Prozesse und Technologien für das Interaktionsdesign. Das Ziel ist
+        dabei, die UX realer System in der Praxis zu verbessern, z.B. durch die
+        Schaffung positiverer oder "besserer" Nutzungserlebnisse.
       </p>
     </section>,
     <section>
-      <h2>Warum ist menschenzentrierte Gestaltung wichtig?</h2>
+      <h2>Warum ist menschzentrierte Gestaltung wichtig?</h2>
       <p>
-        Ein zentrales Ziel nutzerzentrierter Gestaltung ist es, die Lücke
+        Ein zentrales Ziel menschzentrierter Gestaltung ist es, die Lücke
         zwischen den Vorstellungen der Nutzer:innen und der tatsächlichen
         Funktionsweise eines Systems zu überbrücken. Denn Nutzer:innen und
         Designer:innen haben oft unterschiedliche <b>mentale Modelle</b>, also
@@ -1341,28 +1323,13 @@ const MenschComputerInteraktion = {
         Schritte eng verzahnt und wiederholen sich zyklisch zur stetigen
         Verbesserung der Gebrauchstauglichkeit.
       </p>
-      <h3>3. Double Diamond</h3>
-      <p>
-        Das Modell des britischen Design Council visualisiert den kreativen
-        Problemlösungsprozess in zwei Phasen: <b>Problemraum</b> (Verstehen &
-        Definieren) und <b>Lösungsraum</b> (Ideen finden & Umsetzen). Es
-        kombiniert divergentes und konvergentes Denken, um sowohl das richtige
-        Problem als auch die passende Lösung zu finden.
-      </p>
-      <div className="w-full flex justify-center mb-[56px]">
-        <ThemeImage
-          darkSrc={DD_dark}
-          lightSrc={DD_light}
-          alt="Double Diamond Grafik"
-        />
-      </div>
     </section>,
     <section>
       <h2>Fazit</h2>
       <List
         items={[
           "HCI zielt auf nutzerfreundliche Technik durch Gestaltung, die an den Bedürfnissen und mentalen Modellen der Nutzer:innen ausgerichtet ist.",
-          "Modelle wie UCD, HCD und Double Diamond bieten strukturierte, iterative Prozesse für nutzerzentriertes Design.",
+          "Modelle wie UCD und HCD bieten strukturierte, iterative Prozesse für nutzerzentriertes Design.",
           "Mentale Modelle vereinfachen Technik, müssen aber durch klares Design realistisch unterstützt werden.",
         ]}
         alignItems="center"

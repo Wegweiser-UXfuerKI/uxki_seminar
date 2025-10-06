@@ -29,6 +29,9 @@ const AppProvider = ({ children }) => {
   const [selectedModuleName, setSelectedModuleName] = useState(null);
   const [selectedSubtopicLink, setSelectedSubtopicLink] = useState(null);
   const [selectedSubtopicName, setSelectedSubtopicName] = useState(null);
+
+  const [isDevMode, setIsDevMode] = useState(false);
+
   const [scrollToChapter, setScrollToChapter] = useState(null);
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
@@ -83,12 +86,26 @@ const AppProvider = ({ children }) => {
    * the selectedModuleName to null.
    */
   useEffect(() => {
-    const pathSegments = location.pathname.split("/").filter(Boolean);
+    let pathSegments = location.pathname.split("/").filter(Boolean);
+    //const module = pathSegments[0];
+    //const subtopicLink = pathSegments[1];
+
+    const isDevPath = pathSegments[0] === "dev";
+    setIsDevMode(isDevPath);
+    sessionStorage.setItem("devMode", isDevPath);
+
+    if (isDevPath) {
+      pathSegments = pathSegments.slice(1);
+    }
+
     const module = pathSegments[0];
     const subtopicLink = pathSegments[1];
 
-    // Sepcial case for dev page
-    if (module === "dev") {
+    if (module === "test") return;
+
+    const isRootPath = pathSegments.length === 0;
+
+    if (isRootPath) {
       setSelectedModuleLink(null);
       setSelectedModuleName(null);
       setSelectedSubtopicLink(null);
@@ -96,42 +113,61 @@ const AppProvider = ({ children }) => {
       return;
     }
 
+    console.log("module:", module);
+    console.log("getModuleLinks():", getModuleLinks());
+
     if (module && getModuleLinks().includes(module)) {
       if (subtopicLink) {
         const subtopic = getSubtopicByLink(module, subtopicLink);
         if (subtopic) {
           setSelectedModuleLink(module);
-          const moduleNames = getModuleNameByLink(module);
-          setSelectedModuleName(moduleNames);
+          setSelectedModuleName(getModuleNameByLink(module));
           setSelectedSubtopicLink(subtopicLink);
-          const subtopicName = getSubtopicNameByLink(module, subtopicLink);
-          setSelectedSubtopicName(subtopicName);
+          setSelectedSubtopicName(getSubtopicNameByLink(module, subtopicLink));
         } else {
-          if (location.pathname !== "/") {
+          console.log("devPath:", isDevPath);
+          console.log("location.pathname:", location.pathname);
+          if (isDevPath && location.pathname !== "/dev") {
+            navigate("/dev", { replace: true });
+          } else if (!isDevPath && location.pathname !== "/") {
             navigate("/", { replace: true });
           }
-          setScrollToChapter(module);
-          setSelectedModuleLink(null);
-          setSelectedModuleName(null);
+          resetModuleSelection(module);
         }
       } else {
-        if (location.pathname !== "/") {
+        if (isDevPath && location.pathname !== "/dev") {
+          navigate("/dev", { replace: true });
+        } else if (!isDevPath && location.pathname !== "/") {
           navigate("/", { replace: true });
         }
-        setScrollToChapter(module);
-        setSelectedModuleLink(null);
-        setSelectedModuleName(null);
-        setSelectedSubtopicLink(null);
-        setSelectedSubtopicName(null);
+        resetModuleSelection(module);
       }
     } else {
-      if (location.pathname !== "/") {
+      console.log("devPath:", isDevPath);
+      console.log("location.pathname:", location.pathname);
+      if (isDevPath && location.pathname !== "/dev") {
+        navigate("/dev", { replace: true });
+      } else if (!isDevPath && location.pathname !== "/") {
         navigate("/", { replace: true });
       }
-      setSelectedModuleLink(null);
-      setSelectedModuleName(null);
+      clearSelection();
     }
   }, [location.pathname, navigate]);
+
+  function resetModuleSelection(module) {
+    setScrollToChapter(module);
+    setSelectedModuleLink(null);
+    setSelectedModuleName(null);
+    setSelectedSubtopicLink(null);
+    setSelectedSubtopicName(null);
+  }
+
+  function clearSelection() {
+    setSelectedModuleLink(null);
+    setSelectedModuleName(null);
+    setSelectedSubtopicLink(null);
+    setSelectedSubtopicName(null);
+  }
 
   // Storing and applying
   useEffect(() => {
@@ -182,6 +218,7 @@ const AppProvider = ({ children }) => {
     disabledSubtopics,
     devModules,
     devSubtopics,
+    isDevMode,
   };
 
   return (

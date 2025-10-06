@@ -49,13 +49,17 @@ function App() {
           <main className="flex justify-center lg:pl-20 w-full BgCircle">
             <Routes>
               <Route index element={<Home />} />
-              <Route path=":module/:subtopicId" element={<ChapterLayout />} />
+              <Route path="dev" element={<Home />} />
+              <Route
+                path=":module/:subtopicId"
+                element={<ChapterLayout isDevRoute={false} />}
+              />
               <Route
                 path="dev/:module/:subtopicId"
                 element={<ChapterLayout isDevRoute={true} />}
               />
               <Route path="*" element={<Navigate to="/" replace />} />
-              <Route path="dev" element={<DevTestPage />} />
+              <Route path="dev/test" element={<DevTestPage />} />
             </Routes>
             <ToTopButton />
           </main>

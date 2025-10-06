@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AppContext } from "../../../AppContext";
 import { getSubtopicLinksByModule } from "../../ContentHandler";
+import { LinkHandler } from "../../1_elements/LinkHandler";
 
 /**
  * DropDownMenu component that displays a dropdown menu on hover.
@@ -109,7 +110,7 @@ const DropDownMenu = ({
       onFocus={() => toggleMenu(true)} // Open on focus
       onBlur={() => toggleMenu(false)} // Close when losing focus
       className="relative">
-      <Link
+      <LinkHandler
         to={
           isDisabledModule
             ? "/"
@@ -129,7 +130,7 @@ const DropDownMenu = ({
         }}
         tabIndex={0}>
         {typeof triggerElement === "function" ? triggerElement() : selectedName}
-      </Link>
+      </LinkHandler>
 
       <motion.div
         initial="exit"

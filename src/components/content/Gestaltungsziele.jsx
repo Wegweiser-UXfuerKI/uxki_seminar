@@ -83,9 +83,9 @@ const MentaleModellkomplementarität = {
   ],
 };
 
-const UXKIEigenschaften = {
+const Gestaltungsziele = {
   linkName: "gestaltungsziele-menschzentrierte-ki",
-  name: "Gestaltungsziele für Menschzentrierte KI",
+  name: "Gestaltungsziele für menschzentrierte KI",
   moduleImage: ImageElement,
   content: [
     Einleitung,
@@ -97,4 +97,4 @@ const UXKIEigenschaften = {
   ],
 };
 
-export default UXKIEigenschaften;
+export default Gestaltungsziele;

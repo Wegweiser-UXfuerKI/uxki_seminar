@@ -23,6 +23,7 @@ const IconNav = () => {
     selectedSubtopicLink,
     disabledModules,
     disabledSubtopics,
+    isDevMode,
   } = useContext(AppContext);
 
   /**
@@ -66,11 +67,13 @@ const IconNav = () => {
         return (
           <DropDownMenu
             key={moduleLink}
-            selectedLink={`${selectedModuleLink}/${selectedSubtopicLink}`}
+            selectedLink={`${
+              isDevMode ? "dev/" : ""
+            }${selectedModuleLink}/${selectedSubtopicLink}`}
             selectedName={moduleName}
             selectedModule={moduleLink}
             items={subtopics.map(([subtopicLink, subtopicName]) => [
-              `${moduleLink}/${subtopicLink}`,
+              `${isDevMode ? "dev/" : ""}${moduleLink}/${subtopicLink}`,
               subtopicName,
             ])}
             disabledItems={disabledSubtopics[moduleLink] || []}

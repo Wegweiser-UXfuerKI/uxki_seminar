@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { AppContext } from "../../AppContext";
 import { ChapterSwitch } from "../3_organism/ChapterSwitch";
-import { getSubtopicContentByLink } from "../ContentHandler";
+import { getSubtopicContentByLink, getModuleByLink } from "../ContentHandler";
 
 /**
  * A component that renders the content of a selected subtopic and provides navigation between chapters.
@@ -20,8 +20,14 @@ export const ChapterLayout = ({ isDevRoute = false }) => {
    * Updates `subtopicContent` whenever `selectedModuleLink` or `selectedSubtopicLink` changes.
    */
   useEffect(() => {
-    setSubtopicContent(getSubtopicContentByLink(module, subtopicId));
-  }, [module, subtopicId]);
+    setSubtopicContent(
+      getSubtopicContentByLink(module, subtopicId, isDevRoute)
+    );
+  }, [module, subtopicId, isDevRoute]);
+
+  if (!getModuleByLink(module, isDevRoute)) {
+    return <Navigate to={isDevRoute ? "/dev" : "/"} replace />;
+  }
 
   const isModuleInDev = devModules.includes(module);
   const isSubtopicInDev = devSubtopics[module]?.includes(subtopicId);

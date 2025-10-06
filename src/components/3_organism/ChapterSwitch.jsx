@@ -15,8 +15,12 @@ import UXButton from "../2_molecule/UXButton";
  * @returns {JSX.Element} The rendered ChapterSwitch component.
  */
 export const ChapterSwitch = () => {
-  const { selectedModuleLink, selectedSubtopicLink, disabledSubtopics } =
-    useContext(AppContext);
+  const {
+    selectedModuleLink,
+    selectedSubtopicLink,
+    disabledSubtopics,
+    isDevMode,
+  } = useContext(AppContext);
   const [prevChapterLink, setPrevChapterLink] = useState(null);
   const [nextChapterLink, setNextChapterLink] = useState(null);
   const [prevChapterName, setPrevChapterName] = useState(null);
@@ -81,7 +85,11 @@ export const ChapterSwitch = () => {
             text={prevChapterName}
             arrowPosition="left"
             useGlassyBox={true}
-            to={`/${selectedModuleLink}/${prevChapterLink}`}
+            to={
+              isDevMode
+                ? `/dev/${selectedModuleLink}/${prevChapterLink}`
+                : `/${selectedModuleLink}/${prevChapterLink}`
+            }
           />
         )}
       </div>
@@ -90,7 +98,11 @@ export const ChapterSwitch = () => {
           <UXButton
             text={nextChapterName}
             useGlassyBox={true}
-            to={`/${selectedModuleLink}/${nextChapterLink}`}
+            to={
+              isDevMode
+                ? `/dev/${selectedModuleLink}/${nextChapterLink}`
+                : `/${selectedModuleLink}/${nextChapterLink}`
+            }
           />
         )}
       </div>

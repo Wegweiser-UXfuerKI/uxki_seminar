@@ -1,26 +1,89 @@
+import { isDevModeActive } from "./utils/DevMode";
+
 import GrundlagenKI from "./content/GrundlagenKI";
 import EuAiActSections from "./content/EuAiAct";
 import UXBasics from "./content/GrundlagenUX";
 import IdentifikationProzesse from "./content/IdentifikationProzesse";
 import UXKISections from "./content/UXKI";
-import UXKIEigenschaften from "./content/UXKIEigenschaften";
+import Gestaltungsziele from "./content/Gestaltungsziele";
 
-// List of all Modules
-const modules = [
+import devgrundlagenux from "./content/DEVGrundlagenUX";
+
+// List of files for all (live-)Modules
+const moduleFiles = [
   UXBasics,
   UXKISections,
-  UXKIEigenschaften,
+  Gestaltungsziele,
   GrundlagenKI,
   IdentifikationProzesse,
   EuAiActSections,
 ];
+
+// files for modules in development
+const devModuleFiles = [devgrundlagenux];
+
+// modules in development
+const devModules = [
+  "ux-und-usability",
+  "gestaltungsziele-menschzentrierte-ki",
+  "ki-technologien-verstehen",
+  "automatisierungspotenziale-erkennen",
+];
+
+// Temporarily deactivated modules
+const disabledModules = [
+  "gestaltungsziele-menschzentrierte-ki",
+  "ki-technologien-verstehen",
+  "automatisierungspotenziale-erkennen",
+];
+
+// Disabled subtopics for specific modules
+const disabledSubtopics = {
+  "gestaltungsziele-menschzentrierte-ki": [
+    "einleitung",
+    "vertrauenswuerdigkeit",
+    "transparenz",
+    "erklaerbarkeit",
+    "kontrollierbarkeit",
+    "mentale-modellkomplementaritaet",
+  ],
+  "ki-technologien-verstehen": [
+    "einleitung",
+    "input",
+    "verarbeitung",
+    "output",
+    "llm",
+  ],
+  "automatisierungspotenziale-erkennen": ["einleitung"],
+};
+
+/**
+ * Collects all modules (live and dev).
+ * @returns {Object[]} Array of modules.
+ */
+export function getAllModules() {
+  const isDevMode = isDevModeActive();
+
+  if (!isDevMode) return moduleFiles;
+
+  const devMap = new Map(devModuleFiles.map((m) => [m.linkName, m]));
+
+  return moduleFiles.map((m) => {
+    if (devModules.includes(m.linkName) && devMap.has(m.linkName)) {
+      return devMap.get(m.linkName);
+    }
+    return m;
+  });
+
+  //return isDevMode ? [...moduleFiles, ...devModuleFiles] : moduleFiles;
+}
 
 /**
  * Gets a list of all module links.
  * @returns {string[]} An array of module link names.
  */
 export function getModuleLinks() {
-  return modules.map((module) => module.linkName);
+  return getAllModules().map((m) => m.linkName);
 }
 
 /**
@@ -28,26 +91,7 @@ export function getModuleLinks() {
  * @returns {string[]} An array of module names.
  */
 export function getModuleNames() {
-  return modules.map((module) => module.name);
-}
-
-/**
- * Gets the name of a module by its link.
- * @param {string} moduleLink - The link of the module.
- * @returns {string|null} The name of the module, or null if not found.
- */
-export function getModuleNameByLink(moduleLink) {
-  const module = getModuleByLink(moduleLink);
-  if (!module) return null;
-  return module.name;
-}
-
-/**
- * Gets a list of all module links and names.
- * @returns {Array<[string, string]>} An array of pairs containing link and name.
- */
-export function getModuleLinksAndNames() {
-  return modules.map((module) => [module.linkName, module.name]);
+  return getAllModules().map((module) => module.name);
 }
 
 /**
@@ -56,7 +100,26 @@ export function getModuleLinksAndNames() {
  * @returns {Object|null} The module object, or null if not found.
  */
 export function getModuleByLink(moduleLink) {
-  return modules.find((module) => module.linkName === moduleLink);
+  return getAllModules().find((module) => module.linkName === moduleLink);
+}
+
+/**
+ * Gets the name of a module by its link.
+ * @param {string} moduleLink - The link of the module.
+ * @param {boolean} isDevMode - True for dev mode.
+ * @returns {string|null} The name of the module, or null if not found.
+ */
+export function getModuleNameByLink(moduleLink) {
+  const module = getModuleByLink(moduleLink);
+  return module ? module.name : null;
+}
+
+/**
+ * Gets a list of all module links and names.
+ * @returns {Array<[string, string]>} An array of pairs containing link and name.
+ */
+export function getModuleLinksAndNames() {
+  return getAllModules().map((module) => [module.linkName, module.name]);
 }
 
 /**
@@ -183,4 +246,16 @@ export function getSubtopicContentByLink(moduleLink, subtopicLink) {
   const module = getModuleByLink(moduleLink);
   if (!subtopic || !module) return null;
   return module.content.find((topic) => topic.linkName === subtopicLink);
+}
+
+export function isModuleDisabled(moduleLink) {
+  return disabledModules.includes(moduleLink);
+}
+
+export function isSubtopicDisabled(moduleLink, subtopicLink) {
+  return disabledSubtopics[moduleLink]?.includes(subtopicLink);
+}
+
+export function getDisabledSubtopics(moduleLink) {
+  return disabledSubtopics[moduleLink] || [];
 }

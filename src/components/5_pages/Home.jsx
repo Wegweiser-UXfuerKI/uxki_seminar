@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from "react";
-import { getModuleLinksAndNames } from "../ContentHandler";
+import { getModuleLinksAndNames, isModuleDisabled } from "../ContentHandler";
 import HomeModuleCard from "../2_molecule/cards/HomeModuleCard";
 import { AppContext } from "../../AppContext";
 import { VideoContainer } from "../1_elements/VideoContainer";
@@ -166,7 +166,7 @@ const Home = () => {
               key={index}
               module={module}
               index={index}
-              isDisabled={disabledModules.includes(module[0])}
+              isDisabled={isModuleDisabled(module[0])}
               disabledSubtopics={disabledSubtopics}
               moduleRefs={moduleRefs}
             />

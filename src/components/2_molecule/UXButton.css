@@ -32,6 +32,13 @@
   border-radius: var(--scale2);
 }
 
+/* Prevent border radius */
+.ux-button.no-rounded,
+.ux-button.no-rounded:before,
+.ux-button.no-rounded:after {
+  border-radius: 0;
+}
+
 .ux-button:hover:before {
   opacity: 1;
 }

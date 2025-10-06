@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../../AppContext";
 import ArrowIcon from "../../1_elements/ArrowIcon";
+import { LinkHandler } from "../../1_elements/LinkHandler";
 
 /**
  * Breadcrumbs component to display the current navigation path.
@@ -31,21 +32,21 @@ const Breadcrumbs = () => {
       className="flex items-center justify-start pt-8 gap-2"
       aria-label="Breadcrumbs Navigation">
       {/* Home Link */}
-      <Link
+      <LinkHandler
         to="/"
         aria-label="Zur Startseite"
         onClick={homeScrollCheck}
         className="inlineLink no_underline">
         Kursübersicht
-      </Link>
+      </LinkHandler>
 
       {/* Module Link */}
       {selectedModuleLink && (
         <>
           <ArrowIcon />
-          <Link to={`/${selectedModuleLink}`} className="inlineLink">
+          <LinkHandler to={`/${selectedModuleLink}`} className="inlineLink">
             {selectedModuleName}
-          </Link>
+          </LinkHandler>
         </>
       )}
     </nav>

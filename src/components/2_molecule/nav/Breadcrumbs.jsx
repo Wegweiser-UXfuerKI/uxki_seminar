@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import { AppContext } from "../../../AppContext";
 import ArrowIcon from "../../1_elements/ArrowIcon";
 import { LinkHandler } from "../../1_elements/LinkHandler";

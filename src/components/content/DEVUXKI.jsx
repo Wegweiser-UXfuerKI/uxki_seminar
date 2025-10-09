@@ -4,9 +4,16 @@ import { VideoContainer } from "../1_elements/VideoContainer";
 import SubTopicCard from "../2_molecule/cards/SubTopicCard";
 import List from "../2_molecule/List";
 
+import autonimieQuizData from "../SimpleQuizContent/ki-bezogene-ux/autonomie.json";
+import situationsQuizData from "../SimpleQuizContent/ki-bezogene-ux/situationsbewusstsein.json";
+import mentaleQuizData from "../SimpleQuizContent/ki-bezogene-ux/mentale-belastung.json";
+import vertrauenQuizData from "../SimpleQuizContent/ki-bezogene-ux/vertrauenswuerdigkeit.json";
+import diagnostizitaetQuizData from "../SimpleQuizContent/ki-bezogene-ux/diagnostizitaet.json";
+
 //TODO: place components globaly for every modul page?
 import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
+import BasicQuiz from "../interactive/Quiz/BasicQuiz";
 
 const moduleLink = "ki-bezogene-ux";
 const moduleName = "KI-bezogene UX";
@@ -372,6 +379,14 @@ const WahrgenommeneAutonomie = {
         ]}
       />
     </section>,
+    <section>
+      <h2>Wissensüberprüfung</h2>
+      <p>
+        Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
+        werden.
+      </p>
+      <BasicQuiz quizData={autonimieQuizData} />
+    </section>,
   ],
 };
 
@@ -550,6 +565,14 @@ const WahrgenommenesSituationsbewusstsein = {
         ]}
       />
     </section>,
+    <section>
+      <h2>Wissensüberprüfung</h2>
+      <p>
+        Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
+        werden.
+      </p>
+      <BasicQuiz quizData={situationsQuizData} />
+    </section>,
   ],
 };
 
@@ -693,6 +716,14 @@ const WahrgenommeneInformationOverload = {
           "Der <b>NASA-TLX</b> hilft bei der Bewertung der Arbeitsbelastung und Verbesserung der Benutzerfreundlichkeit.",
         ]}
       />
+    </section>,
+    <section>
+      <h2>Wissensüberprüfung</h2>
+      <p>
+        Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
+        werden.
+      </p>
+      <BasicQuiz quizData={mentaleQuizData} />
     </section>,
   ],
 };
@@ -965,6 +996,14 @@ const PerceivedTrustworthiness = {
         ]}
       />
     </section>,
+    <section>
+      <h2>Wissensüberprüfung</h2>
+      <p>
+        Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
+        werden.
+      </p>
+      <BasicQuiz quizData={vertrauenQuizData} />
+    </section>,
   ],
 };
 
@@ -1167,6 +1206,14 @@ const PerceivedConfidence = {
           "Die diagnostische Qualität eines Systems hat direkten Einfluss auf das <b>Wohl der Gemeinschaft</b>.",
         ]}
       />
+    </section>,
+    <section>
+      <h2>Wissensüberprüfung</h2>
+      <p>
+        Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
+        werden.
+      </p>
+      <BasicQuiz quizData={diagnostizitaetQuizData} />
     </section>,
   ],
 };

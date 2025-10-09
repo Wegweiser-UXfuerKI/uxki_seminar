@@ -8,6 +8,7 @@ import UXKISections from "./content/UXKI";
 import Gestaltungsziele from "./content/Gestaltungsziele";
 
 import devgrundlagenux from "./content/DEVGrundlagenUX";
+import devUxki from "./content/DEVUXKI";
 
 // List of files for all (live-)Modules
 const moduleFiles = [
@@ -20,11 +21,12 @@ const moduleFiles = [
 ];
 
 // files for modules in development
-const devModuleFiles = [devgrundlagenux];
+const devModuleFiles = [devgrundlagenux, devUxki];
 
 // modules in development
 const devModules = [
   "ux-und-usability",
+  "ki-bezogene-ux",
   "gestaltungsziele-menschzentrierte-ki",
   "ki-technologien-verstehen",
   "automatisierungspotenziale-erkennen",

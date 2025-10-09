@@ -141,8 +141,8 @@ export const Question = ({
                         : handleRadioChange(originalIndex)
                     }
                     disabled={showAnswerState || isReviewing}
-                    className={`h-4 w-4 ux-button appearance-auto mr-3 ${
-                      isMultipleChoice ? "rounded" : "rounded-full"
+                    className={`h-4 w-4 max-h-4 max-w-4 ux-button appearance-auto mr-3 ${
+                      isMultipleChoice ? "no-rounded" : "rounded-full"
                     } accent-[var(--vb)] hover:accent-[var(--vb)] focus:accent-[var(--vb)] checked:accent-[var(--vb)] text-[var(--vb)] focus:ring-2 focus:ring-[var(--vb)] hover:border-[var(--vb)] border-2 dark:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed`}
                   />
                   <span

@@ -291,7 +291,7 @@ const Usability = {
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
         werden.
       </p>
-      <BasicQuiz quizData={usability_quiz} shuffleQuestions />
+      <BasicQuiz quizData={usability_quiz} />
     </section>,
   ],
 };
@@ -814,7 +814,7 @@ const Nutzungskontext = {
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
         werden.
       </p>
-      <BasicQuiz quizData={nutzungskontext_quiz} shuffleQuestions />
+      <BasicQuiz quizData={nutzungskontext_quiz} />
     </section>,
   ],
 };
@@ -1113,7 +1113,7 @@ const UserExperience = {
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
         werden.
       </p>
-      <BasicQuiz quizData={user_experience_quiz} shuffleQuestions />
+      <BasicQuiz quizData={user_experience_quiz} />
     </section>,
   ],
 };
@@ -1334,7 +1334,7 @@ const MenschComputerInteraktion = {
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
         werden.
       </p>
-      <BasicQuiz quizData={mensch_computer_quiz} shuffleQuestions />
+      <BasicQuiz quizData={mensch_computer_quiz} />
     </section>,
   ],
 };
@@ -1743,7 +1743,7 @@ const Evaluation = {
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
         werden.
       </p>
-      <BasicQuiz quizData={evaluation_quiz} shuffleQuestions />
+      <BasicQuiz quizData={evaluation_quiz} />
     </section>,
   ],
 };

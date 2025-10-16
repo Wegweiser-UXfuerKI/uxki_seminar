@@ -94,7 +94,7 @@ const Einleitung = {
         Jede Lektion führt in eine zentrale Eigenschaft ein, liefert{" "}
         <b>praxisnahe Beispiele</b>, benennt{" "}
         <b>psychologische und technologische Hintergründe</b> und bietet{" "}
-        <b>konkrete Empfehlungen für GEstaltung und Umsetzung</b>
+        <b>konkrete Empfehlungen für Gestaltung und Umsetzung</b>
       </p>
       <p>
         Das Ziel: Ein fundiertes Verständnis dafür,{" "}

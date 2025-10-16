@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "questionText": "Ein System, welches wir nicht richtig kontrollieren können, ...",
+    "options": [
+      "Ist ein System, das wir nicht verstehen.",
+      "erfordert eine größere Erklärbarkeit.",
+      "ist in seiner Rechenleistung eingeschränkt.",
+      "Ist auch kein System, für das wir die Verantwortung übernehmen können."
+    ],
+    "correctAnswer": [3]
+  },
+  {
+    "id": 2,
+    "questionText": "Menschliche Aufsichtsfähigkeit (Human Oversight) bedeutet: Menschen müssen in der Lage sein, ...",
+    "options": [
+      "zu Intervenieren.",
+      "zu Verstehen.",
+      "Verantwortung zu verteilen.",
+      "Entscheidungen zu treffen."
+    ],
+    "correctAnswer": [0, 1, 3]
+  },
+  {
+    "id": 3,
+    "questionText": "Kontrolle bedeutet, dass wir in der Lage sind, ...",
+    "options": [
+      "den Zustand eines Systems zu verändern.",
+      "den Output eines Systems zu verstehen.",
+      "den Input eines Systems zu verändern.",
+      "im Nachhinein den Trainingsprozess eines Systems zu beeinflussen."
+    ],
+    "correctAnswer": [0]
+  },
+  {
+    "id": 4,
+    "questionText": "Die Kontrollierbarkeit von Sprachmodellen ist ... ",
+    "options": [
+      "leicht zu gewährleisten, da sie auf einem Regelwerk basieren.",
+      "unmöglich, da das Training durch das Deep Neural Network sehr untransparent ist.",
+      "ist an die Wortprädiktion gebunden.",
+      "relativ eingeschränkt, da man nicht die konkreten Handlungen beeinflussen kann."
+    ],
+    "correctAnswer": [2, 3]
+  },
+  {
+    "id": 5,
+    "questionText": "Was muss man bezüglich des Ressourcenverbrauchs zur Ausübung von Kontrollierbarkeit beachten?",
+    "options": [
+      "Kontrollierbarkeit, dessen Ressourcenverbrauch zu hoch ist, wird oftmals nicht angewendet werden.",
+      "Kontrolle ausüben können wir nicht ohne den Einsatz von Ressourcen wie Energie und Zeit.",
+      "Die Aufgewendeten Ressourcen müssen in einem guten Verhältnis zum Maß der ausgeübten Kontrolle stehen.",
+      "Kontrolle herzustellen muss immer Priorität haben, auch wenn der Ressourcenverbrauch zur Ausübung sehr hoch ist."
+    ],
+    "correctAnswer": [0, 1, 2]
+  }
+]

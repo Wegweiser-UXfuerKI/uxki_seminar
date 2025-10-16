@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "questionText": "Welche Systeme sind inherent erklärbar?",
+    "options": [
+      "Large Language Models.",
+      "KI Systeme, die auf einem Regelwerk basieren.",
+      "Systeme, die auf das Deep Neural Network zurückgreifen.",
+      "Auf Big-Data trainierte Systeme."
+    ],
+    "correctAnswer": [1]
+  },
+  {
+    "id": 2,
+    "questionText": "Was versteht man unter lokaler Erklärbarkeit?",
+    "options": [
+      "Die Erklärbarkeit eines spezifischen Modells.",
+      "Die Erklärbarkeit eines spezifischen Outputs.",
+      "Die Erklärbarkeit eines spezifischen Inputs.",
+      "Die Erklärbarkeit eines spezifischen Prozesses."
+    ],
+    "correctAnswer": [1]
+  },
+  {
+    "id": 3,
+    "questionText": "Was versteht man unter globaler Erklärbarkeit?",
+    "options": [
+      "Die Erklärbarkeit eines spezifischen Outputs.",
+      "Die Erklärbarkeit eines spezifischen Prozesses.",
+      "Die Erklärbarkeit eines spezifischen Modells.",
+      "Die Erklärbarkeit eines spezifischen Inputs."
+    ],
+    "correctAnswer": [2]
+  },
+  {
+    "id": 4,
+    "questionText": "Was ist hilfreich um eine nützliche Erklärbarkeit herzustellen?",
+    "options": [
+      "Alle technischen Details des Systems offenzulegen",
+      "Nur besonders komplexe Modelle erklärbar zu machen",
+      "Nur besonders häufige Anwendungsfälle erklärbar zu machen",
+      "Mit Nutzenden darüber zu sprechen, welche Informationen sie benötigen"
+    ],
+    "correctAnswer": [3]
+  }
+]

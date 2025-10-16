@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "questionText": "Das Modell des Human-Computer-Trust von Madsen, M. & Gregor, S. (2000) unterscheidet zwischen diese Quellen für Vertrauenswürdigkeit:",
+    "options": [
+      "kognitives Vertrauen",
+      "effektives Vertrauen",
+      "verhaltensbasiertes Vertrauen",
+      "affektives Vertrauen"
+    ],
+    "correctAnswer": [0, 3]
+  },
+  {
+    "id": 2,
+    "questionText": "Was versteht man unter kognitivem Vertrauen?",
+    "options": [
+      "Vertrauen, das auf der Vertrautheit mit einem System basiert.",
+      "Vertrauen, das auf der Leistungsfähigkeit eines Systems basiert.",
+      "Vertrauen, das auf einer emotionalen Komponente basiert: Wohlwollen, geteilte Werte etc.",
+      "Vertrauen, das auf der Erfahrung mit einem System basiert."
+    ],
+    "correctAnswer": [1]
+  },
+  {
+    "id": 3,
+    "questionText": "Was versteht man unter affektivem Vertrauen?",
+    "options": [
+      "Vertrauen, das auf der Vertrautheit mit einem System basiert.",
+      "Vertrauen, das auf der Leistungsfähigkeit eines Systems basiert.",
+      "Vertrauen, das auf einer emotionalen Komponente basiert: Wohlwollen, geteilte Werte etc.",
+      "Vertrauen, das auf der Erfahrung mit einem System basiert."
+    ],
+    "correctAnswer": [2]
+  },
+  {
+    "id": 4,
+    "questionText": "Was beschreibt Übervertrauen/Miscalibrated Trust in ein KI-System am besten?",
+    "options": [
+      "Wenn Nutzende die Fähigkeiten des Systems realistisch einschätzen",
+      "Wenn Nutzende den Empfehlungen des Systems zu stark folgen, obwohl Fehler möglich sind",
+      "Wenn das System seine Entscheidungen nicht transparent macht",
+      "Wenn Nutzende das System aufgrund schlechter Erfahrungen nicht mehr verwenden"
+    ],
+    "correctAnswer": [1]
+  }
+]

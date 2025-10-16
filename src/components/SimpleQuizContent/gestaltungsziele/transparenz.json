@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "questionText": "Wie lässt sich das Verhältnis von Vertrauenswürdigkeit und Transparenz beschreiben?",
+    "options": [
+      "Die Begriffe beschreiben das gleiche Konzept, sind also Austauschbar.",
+      "Transparenz ist eine notwendige Bedingung für Vertrauenswürdigkeit.",
+      "Beide Konstrukte hängen eng miteinander zusammen.",
+      "Vertrauenswürdigkeit ist eine notwendige Bedingung für Transparenz."
+    ],
+    "correctAnswer": [1, 2]
+  },
+  {
+    "id": 2,
+    "questionText": "Transparenz erlaubt die korrekte Einschätzung von:",
+    "options": [
+      "Erklärbarkeit",
+      "Effizienz",
+      "Vertrauenswürdigkeit",
+      "Kontrollierbarkeit"
+    ],
+    "correctAnswer": [0, 2, 3]
+  },
+  {
+    "id": 3,
+    "questionText": "Diese Informationen zu veröffentlichen würde zur Transparenz beitragen:",
+    "options": [
+      "Involvierte Parteien: Interessen, Bias etc.",
+      "Entwicklung: Welche Daten verwendet? Wie verarbeitet?",
+      "Verbrauchte Ressourcen: Energie- und Trainingsaufwand",
+      "Einsatzgebiet: Für welche Zwecke wird das System eingesetzt?"
+    ],
+    "correctAnswer": [0, 1, 2]
+  },
+  {
+    "id": 4,
+    "questionText": "Für die User Experience eines KI Systems ist Transparenz wichtig, wenn es darum geht:",
+    "options": [
+      "Ein System effizienter zu gestalten.",
+      "Ein System vertrauenswürdig zu machen.",
+      "Ein System gerecht zu machen.",
+      "Ein System nachvollziehbar zu machen."
+    ],
+    "correctAnswer": [1, 3]
+  }
+]

@@ -1,6 +1,6 @@
 import { isDevModeActive } from "./utils/DevMode";
 
-import GrundlagenKI from "./content/GrundlagenKI";
+import GrundlagenKI from "./content/KITechnologien";
 import EuAiActSections from "./content/EuAiAct";
 import UXBasics from "./content/GrundlagenUX";
 import IdentifikationProzesse from "./content/IdentifikationProzesse";
@@ -9,6 +9,8 @@ import Gestaltungsziele from "./content/Gestaltungsziele";
 
 import devgrundlagenux from "./content/DEVGrundlagenUX";
 import devUxki from "./content/DEVUXKI";
+import devGestaltungsziele from "./content/DEVGestaltungsziele";
+import devKITechnologien from "./content/DEVKITechnologien";
 
 // List of files for all (live-)Modules
 const moduleFiles = [
@@ -21,7 +23,12 @@ const moduleFiles = [
 ];
 
 // files for modules in development
-const devModuleFiles = [devgrundlagenux, devUxki];
+const devModuleFiles = [
+  devgrundlagenux,
+  devUxki,
+  devGestaltungsziele,
+  devKITechnologien,
+];
 
 // modules in development
 const devModules = [
@@ -34,21 +41,12 @@ const devModules = [
 
 // Temporarily deactivated modules
 const disabledModules = [
-  "gestaltungsziele-menschzentrierte-ki",
   "ki-technologien-verstehen",
   "automatisierungspotenziale-erkennen",
 ];
 
 // Disabled subtopics for specific modules
 const disabledSubtopics = {
-  "gestaltungsziele-menschzentrierte-ki": [
-    "einleitung",
-    "vertrauenswuerdigkeit",
-    "transparenz",
-    "erklaerbarkeit",
-    "kontrollierbarkeit",
-    "mentale-modellkomplementaritaet",
-  ],
   "ki-technologien-verstehen": [
     "einleitung",
     "input",
@@ -210,9 +208,12 @@ export function getSubtopicData(moduleLink) {
 export function getPreviousSubtopicLink(moduleLink, subtopicLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return null;
-  const index = module.content.findIndex(
-    (entry) => entry.linkName === subtopicLink
-  );
+
+  const subtopics = isDevModeActive()
+    ? module.content
+    : module.content.filter((entry) => !entry.disabled);
+
+  const index = subtopics.findIndex((entry) => entry.linkName === subtopicLink);
   if (index > 0) {
     return module.content[index - 1].linkName;
   }
@@ -228,9 +229,17 @@ export function getPreviousSubtopicLink(moduleLink, subtopicLink) {
 export function getNextSubtopicLink(moduleLink, subtopicLink) {
   const module = getModuleByLink(moduleLink);
   if (!module) return null;
-  const index = module.content.findIndex(
-    (entry) => entry.linkName === subtopicLink
-  );
+
+  const subtopics = isDevModeActive()
+    ? module.content
+    : module.content.filter((entry) => !entry.disabled);
+
+  console.log("DevMode:", isDevModeActive());
+  console.log("subtopics:", subtopics);
+
+  console.log("subtopicLink:", subtopicLink);
+
+  const index = subtopics.findIndex((entry) => entry.linkName === subtopicLink);
   if (index !== -1 && index < module.content.length - 1) {
     return module.content[index + 1].linkName;
   }
@@ -250,14 +259,21 @@ export function getSubtopicContentByLink(moduleLink, subtopicLink) {
   return module.content.find((topic) => topic.linkName === subtopicLink);
 }
 
+function shouldRespectDisabled() {
+  return !isDevModeActive();
+}
+
 export function isModuleDisabled(moduleLink) {
-  return disabledModules.includes(moduleLink);
+  return shouldRespectDisabled() && disabledModules.includes(moduleLink);
 }
 
 export function isSubtopicDisabled(moduleLink, subtopicLink) {
-  return disabledSubtopics[moduleLink]?.includes(subtopicLink);
+  return (
+    shouldRespectDisabled() &&
+    disabledSubtopics[moduleLink]?.includes(subtopicLink)
+  );
 }
 
 export function getDisabledSubtopics(moduleLink) {
-  return disabledSubtopics[moduleLink] || [];
+  return shouldRespectDisabled() ? disabledSubtopics[moduleLink] || [] : [];
 }

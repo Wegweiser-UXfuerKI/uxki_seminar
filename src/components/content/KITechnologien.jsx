@@ -10,11 +10,38 @@ const Einleitung = {
     <ChapterHeader text={"Einleitung"} number={1} />,
     <section>
       <p>
-        Hier erfahren Sie, warum der Dateninput ein kritischer Faktor für die
-        Entwicklung und Nutzung von KI-Systemen ist. Das Modul behandelt Themen
-        wie Datenqualität, -auswahl und -vorverarbeitung sowie deren Einuss auf
-        die Funktionalität und Fairness von KI-Anwendungen.
+        In diesem Modul steht die Verarbeitung von Informationen durch
+        KI-Systeme im Mittelpunkt. Nachdem zuvor erläutert wurde, wie
+        Informationen an KI-Systeme übermittelt werden, geht es nun darum, auf
+        welche Weise diese Systeme die erhaltenen Daten verarbeiten.
       </p>
+
+      <p>
+        Im Zentrum des Moduls steht die Vorstellung verschiedener Lernarten, mit
+        denen KI-Systeme trainiert werden können und die bestimmen, wie sie mit
+        Informationen umgehen.
+      </p>
+
+      <p>
+        Darüber hinaus werden in diesem Zusammenhang auch neuronale Netze sowie
+        der Umgang mit Unsicherheiten und Fehlern während der
+        Informationsverarbeitung thematisiert.
+      </p>
+    </section>,
+    <section>
+      <p>CARDS ZU EINZELNEN KAPITELN</p>
+    </section>,
+    <section>
+      <p>
+        Es gibt fünf Arten von Maschinellem Lernen. Welche dabei eingesetzt
+        wird, hängt von der Aufgabenstellung un der Art der Daten ab die zur
+        Verfügung stehen.
+      </p>
+      <p>GRAFIK MIT ARTEN</p>
+      <p>Sachen zu einzelnen Begriffen</p>
+    </section>,
+    <section>
+      <h2>Warum ist es wichtig, zu verstehen, wie Systeme angelernt werden?</h2>
     </section>,
   ],
 };

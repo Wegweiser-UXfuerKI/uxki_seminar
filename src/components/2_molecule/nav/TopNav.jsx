@@ -4,6 +4,7 @@ import RightArrow from "../../1_elements/RightArrow";
 import { AppContext } from "../../../AppContext";
 import DropDownMenu from "./DropDownMenu";
 import {
+  getDisabledSubtopics,
   getModuleLinksAndNames,
   getSubtopicLinksAndNamesByModulelink,
 } from "../../ContentHandler";
@@ -22,8 +23,6 @@ const TopNav = () => {
     selectedModuleName,
     selectedSubtopicLink,
     selectedSubtopicName,
-    disabledModules,
-    disabledSubtopics,
   } = useContext(AppContext);
 
   /**
@@ -65,7 +64,7 @@ const TopNav = () => {
             selectedLink={selectedModuleLink}
             selectedName={selectedModuleName}
             items={moduleItems}
-            disabledItems={disabledModules[selectedModuleLink] || []}
+            disabledItems={getDisabledSubtopics(selectedModuleLink)}
             position="bottom"
           />
           {selectedSubtopicName && (
@@ -78,7 +77,7 @@ const TopNav = () => {
                   `${selectedModuleLink}/${subtopicLink}`,
                   subtopicName,
                 ])}
-                disabledItems={disabledSubtopics[selectedModuleLink] || []}
+                disabledItems={getDisabledSubtopics(selectedModuleLink)}
                 position="bottom"
               />
             </>

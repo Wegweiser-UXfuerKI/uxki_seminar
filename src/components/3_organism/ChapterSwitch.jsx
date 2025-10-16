@@ -4,6 +4,7 @@ import {
   getPreviousSubtopicLink,
   getNextSubtopicLink,
   getSubtopicNameByLink,
+  getDisabledSubtopics,
 } from "../ContentHandler";
 import UXButton from "../2_molecule/UXButton";
 
@@ -15,12 +16,8 @@ import UXButton from "../2_molecule/UXButton";
  * @returns {JSX.Element} The rendered ChapterSwitch component.
  */
 export const ChapterSwitch = () => {
-  const {
-    selectedModuleLink,
-    selectedSubtopicLink,
-    disabledSubtopics,
-    isDevMode,
-  } = useContext(AppContext);
+  const { selectedModuleLink, selectedSubtopicLink, isDevMode } =
+    useContext(AppContext);
   const [prevChapterLink, setPrevChapterLink] = useState(null);
   const [nextChapterLink, setNextChapterLink] = useState(null);
   const [prevChapterName, setPrevChapterName] = useState(null);
@@ -38,7 +35,7 @@ export const ChapterSwitch = () => {
 
       while (
         currentLink &&
-        disabledSubtopics[selectedModuleLink]?.includes(currentLink)
+        getDisabledSubtopics(selectedModuleLink)?.includes(currentLink)
       ) {
         currentLink =
           direction === "previous"
@@ -54,7 +51,7 @@ export const ChapterSwitch = () => {
 
     setPrevChapterLink(prevLink);
     setNextChapterLink(nextLink);
-  }, [selectedModuleLink, selectedSubtopicLink, disabledSubtopics]);
+  }, [selectedModuleLink, selectedSubtopicLink]);
 
   /**
    * Updates the names of the previous and next chapters based on their links.

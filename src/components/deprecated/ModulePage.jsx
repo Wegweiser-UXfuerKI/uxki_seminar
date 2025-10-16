@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import SubTopic from "../SubTopic";
 import { AppContext } from "../../AppContext";
-import { getSubtopicData } from "../ContentHandler";
+import { getDisabledSubtopics, getSubtopicData } from "../ContentHandler";
 import { Link } from "react-router-dom";
 
 /**
@@ -20,17 +20,6 @@ const ModulePage = () => {
 
   const subtopicData = getSubtopicData(selectedModuleLink);
 
-  const disabledSubtopics = {
-    "ux-und-usability": [
-      "usability",
-      "nutzungskontext",
-      "user-experience",
-      "mensch-computer-interaktion",
-      "evaluation",
-      "quellen",
-    ],
-  };
-
   return (
     <div className="flex flex-col justify-center items-center gap-10 my-40 m-auto max-w-[1080px]">
       <h1>{selectedModuleName}</h1>
@@ -39,9 +28,9 @@ const ModulePage = () => {
       <div className="flex flex-row justify-center flex-wrap">
         {subtopicData && subtopicData.length > 0 ? (
           subtopicData.map((subtopic, index) => {
-            const isSubtopicDisabled = disabledSubtopics[
+            const isSubtopicDisabled = getDisabledSubtopics(
               selectedModuleLink
-            ]?.includes(subtopic.link);
+            )?.includes(subtopic.link);
 
             return (
               <SubTopic

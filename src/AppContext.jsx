@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
+  getModuleByLink,
   getModuleLinks,
   getModuleNameByLink,
   getSubtopicByLink,
   getSubtopicNameByLink,
+  shouldRedirectHome,
 } from "./components/ContentHandler";
 
 const AppContext = createContext();
@@ -42,43 +44,6 @@ const AppProvider = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const devModules = [
-    "gestaltungsziele-menschzentrierte-ki",
-    "ki-technologien-verstehen",
-    "automatisierungspotenziale-erkennen",
-  ];
-
-  /* 
-  "module-link": ["subtopic-link", "", ...] */
-  const devSubtopics = {};
-
-  // Temporarily deactivated modules
-  const disabledModules = [
-    "gestaltungsziele-menschzentrierte-ki",
-    "ki-technologien-verstehen",
-    "automatisierungspotenziale-erkennen",
-  ];
-
-  // Disabled subtopics for specific modules
-  const disabledSubtopics = {
-    "gestaltungsziele-menschzentrierte-ki": [
-      "einleitung",
-      "vertrauenswuerdigkeit",
-      "transparenz",
-      "erklaerbarkeit",
-      "kontrollierbarkeit",
-      "mentale-modellkomplementaritaet",
-    ],
-    "ki-technologien-verstehen": [
-      "einleitung",
-      "input",
-      "verarbeitung",
-      "output",
-      "llm",
-    ],
-    "automatisierungspotenziale-erkennen": ["einleitung"],
-  };
-
   /**
    * If the location is a direct link to a subtopic, check if the subtopic exists
    * and navigate to the subtopic if it does, or the module if it doesn't.
@@ -87,8 +52,6 @@ const AppProvider = ({ children }) => {
    */
   useEffect(() => {
     let pathSegments = location.pathname.split("/").filter(Boolean);
-    //const module = pathSegments[0];
-    //const subtopicLink = pathSegments[1];
 
     const isDevPath = pathSegments[0] === "dev";
     setIsDevMode(isDevPath);
@@ -98,25 +61,87 @@ const AppProvider = ({ children }) => {
       pathSegments = pathSegments.slice(1);
     }
 
-    const module = pathSegments[0];
+    const moduleLink = pathSegments[0];
     const subtopicLink = pathSegments[1];
 
-    if (module === "test") return;
+    // custom dev page
+    if (moduleLink === "test") return;
 
     const isRootPath = pathSegments.length === 0;
-
     if (isRootPath) {
-      setSelectedModuleLink(null);
-      setSelectedModuleName(null);
-      setSelectedSubtopicLink(null);
-      setSelectedSubtopicName(null);
+      clearSelection();
       return;
     }
 
-    console.log("module:", module);
+    console.log("module:", moduleLink);
     console.log("getModuleLinks():", getModuleLinks());
 
-    if (module && getModuleLinks().includes(module)) {
+    const moduleFound = !!getModuleByLink(moduleLink);
+    const subtopicFound = !!getSubtopicByLink(moduleLink, subtopicLink);
+
+    const homeRedirectTarget = isDevPath ? "/dev" : "/";
+
+    // redirect home if pathname is nonsense (non existing module)
+    if (!moduleFound) {
+      navigate(homeRedirectTarget, { replace: true });
+      clearSelection();
+      return;
+    }
+
+    // redirect home if subtopic is non exising, but scroll to module
+    if (!subtopicFound) {
+      navigate(homeRedirectTarget, { replace: true });
+      resetModuleSelection();
+      return;
+    }
+
+    // check if module or subtopic is disabled
+    const isRedirectHome = shouldRedirectHome(moduleLink, subtopicLink);
+
+    // redirect home if module or subtopic is disabled, scroll to chapter
+    if (isRedirectHome) {
+      navigate(homeRedirectTarget, { replace: true });
+      resetModuleSelection();
+      return;
+    }
+
+    // if all is valid, let navigation happen and set data
+    setSelectedModuleLink(moduleLink);
+    setSelectedModuleName(getModuleNameByLink(moduleLink));
+    setSelectedSubtopicLink(subtopicLink);
+    setSelectedSubtopicName(getSubtopicNameByLink(moduleLink, subtopicLink));
+
+    /*
+
+    check if dev / no dev
+
+    if dev:
+      check test page:
+
+
+    check root:
+      return to home with dev or no dev
+
+
+    if live:
+      check if module exits:
+        take that module
+        check if subtopic exists
+
+    if dev:
+      check if module exits in dev:
+        take that Variant else take live variant
+        check if subtopic exists
+
+    live, not disabled -> seite
+    live, disabled -> home
+
+    dev, not disabled -> if exits as dev file there, otherwise live file
+    dev, disabled -> if exits as dev file there, otherwiese live file
+
+    */
+
+    /* if (module && getModuleLinks().includes(module)) {
       if (subtopicLink) {
         const subtopic = getSubtopicByLink(module, subtopicLink);
         if (subtopic) {
@@ -151,7 +176,7 @@ const AppProvider = ({ children }) => {
         navigate("/", { replace: true });
       }
       clearSelection();
-    }
+    } */
   }, [location.pathname, navigate]);
 
   function resetModuleSelection(module) {
@@ -214,10 +239,6 @@ const AppProvider = ({ children }) => {
     setScrollToChapter,
     theme,
     setTheme,
-    disabledModules,
-    disabledSubtopics,
-    devModules,
-    devSubtopics,
     isDevMode,
   };
 

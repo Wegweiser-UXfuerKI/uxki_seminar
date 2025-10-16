@@ -41,6 +41,7 @@ const devModules = [
 
 // Temporarily deactivated modules
 const disabledModules = [
+  "gestaltungsziele-menschzentrierte-ki",
   "ki-technologien-verstehen",
   "automatisierungspotenziale-erkennen",
 ];
@@ -74,8 +75,14 @@ export function getAllModules() {
     }
     return m;
   });
+}
 
-  //return isDevMode ? [...moduleFiles, ...devModuleFiles] : moduleFiles;
+/**
+ * Gets the list of disabled Modules
+ * @returns {string[]} disabled Modules
+ */
+export function getDisabledModules() {
+  return disabledModules;
 }
 
 /**
@@ -101,6 +108,29 @@ export function getModuleNames() {
  */
 export function getModuleByLink(moduleLink) {
   return getAllModules().find((module) => module.linkName === moduleLink);
+}
+
+/**
+ * Checks if a module and subtopic can be accessed in live mode
+ * @param {string} moduleLink moduleLink wanting to check
+ * @param {string} subtopicLink subtopicLink wanting to check
+ * @returns
+ */
+export function shouldRedirectHome(moduleLink, subtopicLink) {
+  const isDevMode = isDevModeActive();
+  console.log("moduleLink:", moduleLink);
+  console.log("subtopicLink:", subtopicLink);
+  console.log("disabledModules:", disabledModules);
+
+  if (!isDevMode) {
+    const isDisabledModule = disabledModules.includes(moduleLink);
+    const isDisabledSubtopic =
+      disabledSubtopics[moduleLink]?.includes(subtopicLink);
+    if (isDisabledModule || isDisabledSubtopic) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /**

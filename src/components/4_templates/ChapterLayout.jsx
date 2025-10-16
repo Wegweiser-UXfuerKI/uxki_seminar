@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
-import { AppContext } from "../../AppContext";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { ChapterSwitch } from "../3_organism/ChapterSwitch";
-import { getSubtopicContentByLink, getModuleByLink } from "../ContentHandler";
+import { getSubtopicContentByLink } from "../ContentHandler";
 
 /**
  * A component that renders the content of a selected subtopic and provides navigation between chapters.
@@ -11,31 +10,16 @@ import { getSubtopicContentByLink, getModuleByLink } from "../ContentHandler";
  * @component
  * @returns {JSX.Element} The rendered TextLayout component.
  */
-export const ChapterLayout = ({ isDevRoute = false }) => {
+export const ChapterLayout = () => {
   const { module, subtopicId } = useParams();
-  const { devModules, devSubtopics } = useContext(AppContext);
   const [subtopicContent, setSubtopicContent] = useState(null);
 
   /**
    * Updates `subtopicContent` whenever `selectedModuleLink` or `selectedSubtopicLink` changes.
    */
   useEffect(() => {
-    setSubtopicContent(
-      getSubtopicContentByLink(module, subtopicId, isDevRoute)
-    );
-  }, [module, subtopicId, isDevRoute]);
-
-  if (!getModuleByLink(module, isDevRoute)) {
-    return <Navigate to={isDevRoute ? "/dev" : "/"} replace />;
-  }
-
-  const isModuleInDev = devModules.includes(module);
-  const isSubtopicInDev = devSubtopics[module]?.includes(subtopicId);
-  const isContentInDev = isModuleInDev || isSubtopicInDev;
-
-  if (isContentInDev && !isDevRoute) {
-    return <Navigate to="/" replace />;
-  }
+    setSubtopicContent(getSubtopicContentByLink(module, subtopicId));
+  }, [module, subtopicId]);
 
   return (
     <div

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import {
   getSubtopicLinksAndNamesByModulelink,
   getModuleImageByLink,
+  getDisabledSubtopics,
 } from "../../ContentHandler";
 import UXButton from "../UXButton";
 import { AppContext } from "../../../AppContext";
@@ -33,18 +34,11 @@ import { AppContext } from "../../../AppContext";
  * @param {Array} props.module - The module data, where `module[0]` is the module link, and `module[1]` is the module name.
  * @param {number} props.index - The index of the module in the parent component (used for referencing).
  * @param {boolean} props.isDisabled - A flag indicating if the module is disabled (visually and functionally).
- * @param {Object} props.disabledSubtopics - An object where keys are module links and values are arrays of subtopic links to be disabled.
  * @param {Object} props.moduleRefs - A reference object used to keep track of module elements for scrolling or other operations.
  *
  * @returns {JSX.Element} The JSX code for the module card with its details and subtopics.
  */
-const HomeModuleCard = ({
-  module,
-  index,
-  isDisabled,
-  disabledSubtopics,
-  moduleRefs,
-}) => {
+const HomeModuleCard = ({ module, index, isDisabled, moduleRefs }) => {
   const { isDevMode } = useContext(AppContext);
 
   return (
@@ -78,8 +72,9 @@ const HomeModuleCard = ({
                 key={pairIndex}
                 className="w-full flex flex-col sm:flex-row gap-5">
                 {pair.map(([subLink, subName], subIndex) => {
-                  const isSubtopicDisabled =
-                    disabledSubtopics[module[0]]?.includes(subLink);
+                  const isSubtopicDisabled = getDisabledSubtopics(
+                    module[0]
+                  )?.includes(subLink);
                   return (
                     <div
                       key={subIndex}

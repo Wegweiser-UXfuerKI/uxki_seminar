@@ -5,6 +5,8 @@ import {
   getModuleLinksAndNames,
   getSubtopicLinksAndNamesByModulelink,
   getModuleByLink,
+  getDisabledSubtopics,
+  isModuleDisabled,
 } from "../../ContentHandler";
 
 /**
@@ -18,13 +20,8 @@ import {
  * @returns {JSX.Element} A navigational menu with module icons and dropdown subtopics.
  */
 const IconNav = () => {
-  const {
-    selectedModuleLink,
-    selectedSubtopicLink,
-    disabledModules,
-    disabledSubtopics,
-    isDevMode,
-  } = useContext(AppContext);
+  const { selectedModuleLink, selectedSubtopicLink, isDevMode } =
+    useContext(AppContext);
 
   /**
    * Retrieves all available modules with their links and names.
@@ -62,7 +59,7 @@ const IconNav = () => {
          * Checks if the current module is disabled.
          * @constant {boolean} isDisabled - Whether the module is disabled.
          */
-        const isDisabled = disabledModules.includes(moduleLink);
+        const isDisabled = isModuleDisabled(moduleLink);
 
         return (
           <DropDownMenu
@@ -76,7 +73,7 @@ const IconNav = () => {
               `${isDevMode ? "dev/" : ""}${moduleLink}/${subtopicLink}`,
               subtopicName,
             ])}
-            disabledItems={disabledSubtopics[moduleLink] || []}
+            disabledItems={getDisabledSubtopics(moduleLink)}
             isDisabledModule={isDisabled}
             title={moduleName}
             triggerElement={() =>

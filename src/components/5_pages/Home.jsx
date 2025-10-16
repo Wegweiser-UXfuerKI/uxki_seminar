@@ -28,8 +28,7 @@ import LinkButton from "../2_molecule/nav/LinkButton";
  */
 const Home = () => {
   const modulesData = getModuleLinksAndNames(); // Fetch the list of available modules and their details
-  const { scrollToChapter, setScrollToChapter, disabledSubtopics } =
-    useContext(AppContext); // Context to handle scroll and disabled modules/subtopics
+  const { scrollToChapter, setScrollToChapter } = useContext(AppContext); // Context to handle scroll and disabled modules/subtopics
   const moduleRefs = useRef([]); // Reference to each module card for smooth scrolling
 
   /**
@@ -163,7 +162,6 @@ const Home = () => {
               module={module}
               index={index}
               isDisabled={isModuleDisabled(module[0])}
-              disabledSubtopics={disabledSubtopics}
               moduleRefs={moduleRefs}
             />
           ))}

@@ -47,16 +47,8 @@ const disabledModules = [
 ];
 
 // Disabled subtopics for specific modules
-const disabledSubtopics = {
-  "ki-technologien-verstehen": [
-    "einleitung",
-    "input",
-    "verarbeitung",
-    "output",
-    "llm",
-  ],
-  "automatisierungspotenziale-erkennen": ["einleitung"],
-};
+// example: "automatisierungspotenziale-erkennen": ["einleitung"],
+const disabledSubtopics = {};
 
 /**
  * Collects all modules (live and dev).

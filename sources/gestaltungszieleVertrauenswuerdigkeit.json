@@ -1,0 +1,152 @@
+[
+  {
+    "id": "10.1145/3442188.3445923",
+    "abstract": "Trust is a central component of the interaction between people and AI, in that 'incorrect' levels of trust may cause misuse, abuse or disuse of the technology. But what, precisely, is the nature of trust in AI? What are the prerequisites and goals of the cognitive mechanism of trust, and how can we promote them, or assess whether they are being satisfied in a given interaction? This work aims to answer these questions. We discuss a model of trust inspired by, but not identical to, interpersonal trust (i.e., trust between people) as defined by sociologists. This model rests on two key properties: the vulnerability of the user; and the ability to anticipate the impact of the AI model's decisions. We incorporate a formalization of 'contractual trust', such that trust between a user and an AI model is trust that some implicit or explicit contract will hold, and a formalization of 'trustworthiness' (that detaches from the notion of trustworthiness in sociology), and with it concepts of 'warranted' and 'unwarranted' trust. We present the possible causes of warranted trust as intrinsic reasoning and extrinsic behavior, and discuss how to design trustworthy AI, how to evaluate whether trust has manifested, and whether it is warranted. Finally, we elucidate the connection between trust and XAI using our formalization.",
+    "author": [
+      { "family": "Jacovi", "given": "Alon" },
+      { "family": "Marasović", "given": "Ana" },
+      { "family": "Miller", "given": "Tim" },
+      { "family": "Goldberg", "given": "Yoav" }
+    ],
+    "citation-key": "10.1145/3442188.3445923",
+    "collection-title": "FAccT '21",
+    "container-title": "Proceedings of the 2021 ACM conference on fairness, accountability, and transparency",
+    "DOI": "10.1145/3442188.3445923",
+    "event-place": "Virtual Event, Canada",
+    "ISBN": "978-1-4503-8309-7",
+    "issued": { "date-parts": [["2021"]] },
+    "number-of-pages": "12",
+    "page": "624–635",
+    "publisher": "Association for Computing Machinery",
+    "publisher-place": "Virtual Event, Canada",
+    "title": "Formalizing trust in artificial intelligence: Prerequisites, causes and goals of human trust in AI",
+    "type": "paper-conference",
+    "URL": "https://doi.org/10.1145/3442188.3445923"
+  },
+  {
+    "id": "book",
+    "author": [
+      { "family": "Perez Alvarez", "given": "Miguel" },
+      { "family": "Havens", "given": "John" },
+      { "family": "Winfield", "given": "Alan" }
+    ],
+    "citation-key": "book",
+    "ISBN": "978-1-5044-7569-3",
+    "issued": { "date-parts": [["2017", 8]] },
+    "title": "ETHICALLY ALIGNED DESIGN a vision for prioritizing human wellbeing with artificial intelligence and autonomous systems",
+    "type": "book"
+  },
+  {
+    "id": "doi:10.1177/0018720814547570",
+    "abstract": "Objective: We systematically review recent empirical research on factors that influence trust in automation to present a three-layered trust model that synthesizes existing knowledge.Background: Much of the existing research on factors that guide human-automation interaction is centered around trust, a variable that often determines the willingness of human operators to rely on automation. Studies have utilized a variety of different automated systems in diverse experimental paradigms to identify factors that impact operators’ trust.Method: We performed a systematic review of empirical research on trust in automation from January 2002 to June 2013. Papers were deemed eligible only if they reported the results of a human-subjects experiment in which humans interacted with an automated system in order to achieve a goal. Additionally, a relationship between trust (or a trust-related behavior) and another variable had to be measured. All together, 101 total papers, containing 127 eligible studies, were included in the review.Results: Our analysis revealed three layers of variability in human–automation trust (dispositional trust, situational trust, and learned trust), which we organize into a model. We propose design recommendations for creating trustworthy automation and identify environmental conditions that can affect the strength of the relationship between trust and reliance. Future research directions are also discussed for each layer of trust.Conclusion: Our three-layered trust model provides a new lens for conceptualizing the variability of trust in automation. Its structure can be applied to help guide future research and develop training interventions and design procedures that encourage appropriate trust.",
+    "author": [
+      { "family": "Hoff", "given": "Kevin Anthony" },
+      { "family": "Bashir", "given": "Masooda" }
+    ],
+    "citation-key": "doi:10.1177/0018720814547570",
+    "container-title": "Human Factors",
+    "DOI": "10.1177/0018720814547570",
+    "issue": "3",
+    "issued": { "date-parts": [["2015"]] },
+    "page": "407-434",
+    "title": "Trust in automation: Integrating empirical evidence on factors that influence trust",
+    "type": "article-journal",
+    "URL": "https://doi.org/10.1177/0018720814547570",
+    "volume": "57"
+  },
+  {
+    "id": "EuropeanCommission2019",
+    "author": [{ "literal": "European Commission" }],
+    "citation-key": "EuropeanCommission2019",
+    "issued": { "date-parts": [["2019"]] },
+    "publisher": "High-Level Expert Group on Artificial Intelligence",
+    "title": "Ethics guidelines for trustworthy AI",
+    "type": "report",
+    "URL": "https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai"
+  },
+  {
+    "id": "floridiUnifiedFrameworkFive2019",
+    "abstract": "Artificial Intelligence (AI) is already having a major impact on society. As a result, many organizations have launched a wide range of initiatives to establish ethical principles for the adoption of socially beneficial AI. Unfortunately, the sheer volume of proposed principles threatens to overwhelm and confuse. How might this problem of ‘principle proliferation’ be solved? In this paper, we report the results of a fine-grained analysis of several of the highest-profile sets of ethical principles for AI. We assess whether these principles converge upon a set of agreed-upon principles, or diverge, with significant disagreement over what constitutes ‘ethical AI.’ Our analysis finds a high degree of overlap among the sets of principles we analyze. We then identify an overarching framework consisting of five core principles for ethical AI. Four of them are core principles commonly used in bioethics: beneficence, non-maleficence, autonomy, and justice. On the basis of our comparative analysis, we argue that a new principle is needed in addition: explicability, understood as incorporating both the epistemological sense of intelligibility (as an answer to the question ‘how does it work?’) and in the ethical sense of accountability (as an answer to the question: ‘who is responsible for the way it works?’). In the ensuing discussion, we note the limitations and assess the implications of this ethical framework for future efforts to create laws, rules, technical standards, and best practices for ethical AI in a wide range of contexts.",
+    "accessed": { "date-parts": [["2025", 10, 17]] },
+    "author": [
+      { "family": "Floridi", "given": "Luciano" },
+      { "family": "Cowls", "given": "Josh" }
+    ],
+    "citation-key": "floridiUnifiedFrameworkFive2019",
+    "container-title": "Harvard Data Science Review",
+    "DOI": "10.1162/99608f92.8cd550d1",
+    "ISSN": "2644-2353, 2688-8513",
+    "issue": "1",
+    "issued": { "date-parts": [["2019", 7, 3]] },
+    "language": "en",
+    "publisher": "The MIT Press",
+    "source": "hdsr.mitpress.mit.edu",
+    "title": "A Unified Framework of Five Principles for AI in Society",
+    "type": "article-journal",
+    "URL": "https://hdsr.mitpress.mit.edu/pub/l0jsh9d1/release/8",
+    "volume": "1"
+  },
+  {
+    "id": "LeeSee2004",
+    "author": [
+      { "family": "Lee", "given": "John D." },
+      { "family": "See", "given": "Katrina A." }
+    ],
+    "citation-key": "LeeSee2004",
+    "container-title": "Human Factors",
+    "DOI": "10.1518/hfes.46.1.50_30392",
+    "ISSN": "0018-7208",
+    "issue": "1",
+    "issued": { "date-parts": [["2004"]] },
+    "page": "50–80",
+    "PMID": "15151155",
+    "title": "Trust in automation: designing for appropriate reliance",
+    "type": "article-journal",
+    "URL": "https://doi.org/10.1518/hfes.46.1.50_30392",
+    "volume": "46"
+  },
+  {
+    "id": "Madsen2000MeasuringHT",
+    "author": [
+      { "family": "Madsen", "given": "Maria" },
+      { "family": "Gregor", "given": "Shirley D" }
+    ],
+    "citation-key": "Madsen2000MeasuringHT",
+    "issued": { "date-parts": [["2000"]] },
+    "title": "Measuring human-computer trust",
+    "type": "paper-conference",
+    "URL": "https://api.semanticscholar.org/CorpusID:18821611"
+  },
+  {
+    "id": "mayerIntegrativeModelOrganizational1995",
+    "abstract": "Scholars in various disciplines have considered the causes, nature, and effects of trust. Prior approaches to studying trust are considered, including characteristics of the trustor, the trustee, and the role of risk. A definition of trust and a model of its antecedents and outcomes are presented, which integrate research from multiple disciplines and differentiate trust from similar constructs. Several research propositions based on the model are presented.",
+    "accessed": { "date-parts": [["2025", 10, 17]] },
+    "archive": "JSTOR",
+    "author": [
+      { "family": "Mayer", "given": "Roger C." },
+      { "family": "Davis", "given": "James H." },
+      { "family": "Schoorman", "given": "F. David" }
+    ],
+    "citation-key": "mayerIntegrativeModelOrganizational1995",
+    "container-title": "The Academy of Management Review",
+    "DOI": "10.2307/258792",
+    "ISSN": "03637425",
+    "issue": "3",
+    "issued": { "date-parts": [["1995"]] },
+    "page": "709-734",
+    "publisher": "Academy of Management",
+    "title": "An Integrative Model of Organizational Trust",
+    "type": "article-journal",
+    "URL": "http://www.jstor.org/stable/258792",
+    "volume": "20"
+  },
+  {
+    "id": "OECD2019",
+    "author": [{ "literal": "OECD" }],
+    "citation-key": "OECD2019",
+    "issued": { "date-parts": [["2019"]] },
+    "title": "Recommendation of the council on artificial intelligence",
+    "type": "document",
+    "URL": "https://legalinstruments.oecd.org/en/instruments/oecd-legal-0449"
+  }
+]

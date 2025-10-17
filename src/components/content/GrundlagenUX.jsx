@@ -30,82 +30,7 @@ import user_experience_quiz from "../SimpleQuizContent/grundlagenUX/user-experie
 import nutzungskontext_quiz from "../SimpleQuizContent/grundlagenUX/nutzungskontext.json";
 import mensch_computer_quiz from "../SimpleQuizContent/grundlagenUX/mensch-computer.json";
 import evaluation_quiz from "../SimpleQuizContent/grundlagenUX/evaluation.json";
-
-const sectionsIntro = [
-  { id: "1", title: "Intro" },
-  { id: "3", title: "Fünf Grundbegriffe" },
-];
-
-const Einleitung = {
-  linkName: "einleitung",
-  name: "Einleitung UX und Usability",
-  description:
-    "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
-  content: [
-    <ChapterHeader text={"Einleitung"} number={1} />,
-    <section>
-      <SubNavigation sections={sectionsIntro} />
-      <p>
-        In diesem Modul gibt Ihnen Prof. Dr. Hans-Christian Jetter einen
-        Überblick über die Begriffe <b>Usability</b> und <b>User Experience</b>{" "}
-        — zwei zentrale Aspekte menschzentrierter Designprozesse, die in
-        Forschung und Entwicklung eine wichtige Rolle spielen. Der Fokus auf
-        beide Aspekte während der Entwicklung eines Produkts kann einen starken
-        Einuss auf das Gesamterlebnis von Nutzenden bei der Interaktion haben.
-        Wir erklären Ihnen, wieso ein fehlender Fokus auf diese Aspekte ein
-        Produkt unattraktiver für Kunden und Nutzende machen kann, und welche
-        Punkte Sie beim Design Ihres Produkts beachten sollten. Abschließend
-        erhalten Sie Informationen und Tipps dazu, wie die beiden Aspekte
-        evaluiert werden können.
-      </p>
-    </section>,
-    <section>
-      <VideoContainer
-        link={
-          "https://www.youtube-nocookie.com/embed/9cgmeenl72s?rel=0&modestbranding=1"
-        }
-        title={"Einleitungsvideo"}
-      />
-    </section>,
-    <section id="aspekte">
-      <h2>Zusammenfassung der 5 Grundbegriffe:</h2>
-
-      {/* TODO: use SubTopic Card in the future to display subtopics */}
-      <h3>1 Usability (Gebrauchstauglichkeit):</h3>
-      <p>
-        Beschreibt, wie effektiv, effizient und zufriedenstellend Nutzende ihre
-        Ziele mit einem System erreichen. Eine gute Usability ist entscheidend
-        für Akzeptanz und Erfolg eines Produkts.
-      </p>
-      <h3>2 Nutzungskontext:</h3>
-      <p>
-        Bezieht sich auf die Rahmenbedingungen, unter denen ein System genutzt
-        wird, einschließlich Nutzendenprofil, Aufgaben, Umgebung und
-        Hilfsmittel. Ein tiefes Verständnis des Nutzungskontexts ist essenziell
-        für eine benutzerzentrierte Gestaltung.
-      </p>
-      <h3>3 User Experience (UX):</h3>
-      <p>
-        Umfasst das gesamte Nutzungserlebnis eines Produkts, einschließlich
-        subjektiver Empfindungen wie Ästhetik, Vertrauen und Freude. UX geht
-        über Usability hinaus und ist heute ein Schlüssel zum Produkterfolg.
-      </p>
-      <h3>4 Mensch-Computer-Interaktion (HCI):</h3>
-      <p>
-        Eine interdisziplinäre Forschungsdisziplin, die sich mit der Gestaltung
-        von Interaktionen zwischen Menschen und Technologie beschäftigt. Ziel
-        ist es, positive Nutzungserfahrungen durch optimierte Design- und
-        Entwicklungsprozesse zu schaffen.
-      </p>
-      <h3>5 Evaluation:</h3>
-      <p>
-        Bezeichnet die Überprüfung und Messung von Usability und UX eines
-        Systems. Durch Methoden wie Tests und Nutzerfeedback wird ermittelt, ob
-        die gewünschten Nutzungserfahrungen erreicht werden.
-      </p>
-    </section>,
-  ],
-};
+import SubTopicCard from "../2_molecule/cards/SubTopicCard";
 
 const sectionsUsability = [
   { id: "2", title: "Definition" },
@@ -1752,6 +1677,87 @@ const Evaluation = {
         werden.
       </p>
       <BasicQuiz quizData={evaluation_quiz} shuffleQuestions />
+    </section>,
+  ],
+};
+
+const linksAndNames = [
+  {
+    link: Usability.linkName,
+    name: Usability.name,
+    description: Usability.description,
+  },
+  {
+    link: Nutzungskontext.linkName,
+    name: Nutzungskontext.name,
+    description: Nutzungskontext.description,
+  },
+  {
+    link: UserExperience.linkName,
+    name: UserExperience.name,
+    description: UserExperience.description,
+  },
+  {
+    link: MenschComputerInteraktion.linkName,
+    name: MenschComputerInteraktion.name,
+    description: MenschComputerInteraktion.description,
+  },
+  {
+    link: Evaluation.linkName,
+    name: Evaluation.name,
+    description: Evaluation.description,
+  },
+];
+
+const sectionsIntro = [
+  { id: "1", title: "Intro" },
+  { id: "3", title: "Fünf Grundbegriffe" },
+];
+
+const Einleitung = {
+  linkName: "einleitung",
+  name: "Einleitung UX und Usability",
+  description:
+    "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
+  content: [
+    <ChapterHeader text={"Einleitung"} number={1} />,
+    <section>
+      <SubNavigation sections={sectionsIntro} />
+      <p>
+        In diesem Modul gibt Ihnen Prof. Dr. Hans-Christian Jetter einen
+        Überblick über die Begriffe <b>Usability</b> und <b>User Experience</b>{" "}
+        — zwei zentrale Aspekte menschzentrierter Designprozesse, die in
+        Forschung und Entwicklung eine wichtige Rolle spielen. Der Fokus auf
+        beide Aspekte während der Entwicklung eines Produkts kann einen starken
+        Einuss auf das Gesamterlebnis von Nutzenden bei der Interaktion haben.
+        Wir erklären Ihnen, wieso ein fehlender Fokus auf diese Aspekte ein
+        Produkt unattraktiver für Kunden und Nutzende machen kann, und welche
+        Punkte Sie beim Design Ihres Produkts beachten sollten. Abschließend
+        erhalten Sie Informationen und Tipps dazu, wie die beiden Aspekte
+        evaluiert werden können.
+      </p>
+    </section>,
+    <section>
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/9cgmeenl72s?rel=0&modestbranding=1"
+        }
+        title={"Einleitungsvideo"}
+      />
+    </section>,
+    <section id="aspekte">
+      <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
+      <div className="flex flex-wrap justify-center -mx-4">
+        {linksAndNames.map((item, index) => (
+          <SubTopicCard
+            key={item.link || index}
+            topicName={item.name}
+            link={item.link}
+            description={item.description}
+            number={index}
+          />
+        ))}
+      </div>
     </section>,
   ],
 };

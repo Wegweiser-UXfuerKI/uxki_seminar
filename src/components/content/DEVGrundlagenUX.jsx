@@ -38,14 +38,26 @@ const sectionsIntro = [
 
 const Einleitung = {
   linkName: "einleitung",
-  name: "DEV EINLEITUNG",
+  name: "Einleitung UX und Usability",
   description:
     "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
   content: [
-    <ChapterHeader text={"Ye ye ye"} number={1} />,
+    <ChapterHeader text={"Einleitung"} number={1} />,
     <section>
       <SubNavigation sections={sectionsIntro} />
-      <p>Test Test Test</p>
+      <p>
+        In diesem Modul gibt Ihnen Prof. Dr. Hans-Christian Jetter einen
+        Überblick über die Begriffe <b>Usability</b> und <b>User Experience</b>{" "}
+        — zwei zentrale Aspekte menschzentrierter Designprozesse, die in
+        Forschung und Entwicklung eine wichtige Rolle spielen. Der Fokus auf
+        beide Aspekte während der Entwicklung eines Produkts kann einen starken
+        Einuss auf das Gesamterlebnis von Nutzenden bei der Interaktion haben.
+        Wir erklären Ihnen, wieso ein fehlender Fokus auf diese Aspekte ein
+        Produkt unattraktiver für Kunden und Nutzende machen kann, und welche
+        Punkte Sie beim Design Ihres Produkts beachten sollten. Abschließend
+        erhalten Sie Informationen und Tipps dazu, wie die beiden Aspekte
+        evaluiert werden können.
+      </p>
     </section>,
     <section>
       <VideoContainer

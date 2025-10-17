@@ -15,6 +15,13 @@ const moduleMap = {
     evaluation: "uxUsabilityEvaluation",
     fazit: "uxUsabilityFazit",
   },
+  "gestaltungsziele-menschzentrierte-ki": {
+    vertrauenswuerdigkeit: "gestaltungszieleVertrauenswuerdigkeit",
+    transparenz: "gestaltungszieleTransparenz",
+    erklaerbarkeit: "gestaltungszieleErklaerbarkeit",
+    kontrollierbarkeit: "gestaltungszieleKontrollierbarkeit",
+    "mentale-modelle": "gestaltungszieleMentaleModelle",
+  },
   "eu-ai-act": {
     einleitung: "euAIActEinleitung",
     "risikostufen-anwendungsbeispiele": "euAIActRisikostufenBeispiele",

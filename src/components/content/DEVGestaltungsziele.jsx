@@ -14,6 +14,7 @@ import vertrauenswuerdigkeitQuiz from "../SimpleQuizContent/gestaltungsziele/ver
 import transparenzQuiz from "../SimpleQuizContent/gestaltungsziele/transparenz.json";
 import erklaerbarkeitQuiz from "../SimpleQuizContent/gestaltungsziele/erklaerbarkeit.json";
 import kontrollierbarkeitQuiz from "../SimpleQuizContent/gestaltungsziele/kontrollierbarkeit.json";
+import Sources from "../Sources";
 
 const sectionsEinleitung = [
   { id: "einleitung", title: "Einleitung" },
@@ -1962,12 +1963,12 @@ const sectionsMentaleKomplement = [
   { id: "7", title: "Fazit: MMC als Zukunftsprinzip kollaborativer KI" },
 ];
 const MentaleModellkomplementarität = {
-  linkName: "mentale-modellkomplementaritaet",
-  name: "Mentale Modellkomplementarität",
+  linkName: "mentale-modelle",
+  name: "Mentale Modelle",
   description:
     "Hier wird die Mentale Modellkomplementarität von KI-Systemen thematisiert.",
   content: [
-    <ChapterHeader text={"Mentale Modellkomplementarität"} number={6} />,
+    <ChapterHeader text={"Mentale Modelle"} number={6} />,
     <section>
       {/* p Mit einleitungstext */}
       <Accordion sections={sectionsMentaleKomplement} />
@@ -2242,6 +2243,19 @@ const Fazit = {
   ],
 };
 
+const Quellen = {
+  linkName: "quellen",
+  name: "Quellen",
+  description:
+    "Hier befinden sich die verwendeten Quellen der einzelnen Kapitel.",
+  content: [
+    <ChapterHeader text={"Quellen"} number={8} />,
+    <section>
+      <Sources />
+    </section>,
+  ],
+};
+
 const linksAndNames = [
   {
     link: Vertrauenswürdigkeit.linkName,
@@ -2282,6 +2296,7 @@ const Gestaltungsziele = {
     Kontrollierbarkeit,
     MentaleModellkomplementarität,
     Fazit,
+    Quellen,
   ],
 };
 

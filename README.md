@@ -28,3 +28,7 @@ Ein Import könnte beispielsweise so aussehen:
 `import BaseArrowSVG from "../../assets/icons/right-arrow.svg?react";`
 
 Alternativ können SVGs wie gewohnt als image Element eingebunden werden
+
+#### Einbinden von Quellen
+
+Quellen können als CSL JSON geladen werden. Dazu müssen die Dateien pro Kapitel in `/public/sources` hinterlegt werden und in der Datei `/src/components/Sources.jsx` den einzelnen Kapiteln von Modulen zugewiesen werden.

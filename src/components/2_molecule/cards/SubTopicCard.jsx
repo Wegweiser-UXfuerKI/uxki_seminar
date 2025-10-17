@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import { AppContext } from "../../../AppContext";
+import { LinkHandler } from "../../1_elements/LinkHandler";
 
 /**
  * A component representing a subtopic card.
@@ -25,7 +25,7 @@ const SubTopicCard = ({ topicName, link, description, number, isDisabled }) => {
       className={`lg:w-1/3 sm:w-1/2 w-full mb-6 ${
         isDisabled ? "disabled" : ""
       }`}>
-      <Link
+      <LinkHandler
         to={`/${selectedModuleLink}/${link}`}
         aria-disabled={isDisabled}
         tabIndex={isDisabled ? -1 : 0}
@@ -39,7 +39,7 @@ const SubTopicCard = ({ topicName, link, description, number, isDisabled }) => {
           </span>
         </h3>
         <p className="text-base">{description}</p>
-      </Link>
+      </LinkHandler>
     </div>
   );
 };

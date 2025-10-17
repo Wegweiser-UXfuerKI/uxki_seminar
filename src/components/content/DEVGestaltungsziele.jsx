@@ -6,7 +6,6 @@ import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 import List from "../2_molecule/List";
-import { Table } from "../2_molecule/Table";
 import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import BasicQuiz from "../interactive/Quiz/BasicQuiz";
 
@@ -15,114 +14,6 @@ import transparenzQuiz from "../SimpleQuizContent/gestaltungsziele/transparenz.j
 import erklaerbarkeitQuiz from "../SimpleQuizContent/gestaltungsziele/erklaerbarkeit.json";
 import kontrollierbarkeitQuiz from "../SimpleQuizContent/gestaltungsziele/kontrollierbarkeit.json";
 import Sources from "../Sources";
-
-const sectionsEinleitung = [
-  { id: "einleitung", title: "Einleitung" },
-  { id: "2", title: "Warum sind UX-Eigenschaften wichtig?" },
-  { id: "3", title: "Aufbau der Lernmodule" },
-];
-
-const Einleitung = {
-  linkName: "einleitung",
-  name: "Einleitung",
-  description:
-    "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
-  content: [
-    <ChapterHeader text={"Einleitung"} number={1} />,
-    <section id="einleitung">
-      <SubNavigation sections={sectionsEinleitung} />
-      <p>
-        Künstliche Intelligenz beeinflusst zunehmend, wie Menschen mit
-        automatisierten Systemen interagieren - ob in der Medizin, im
-        Personalwesen, in der Verwaltung oder in Alltagsanwendungen. Doch je
-        autonomer und komplexer KI-Systeme werden, desto wichtiger wird ihre{" "}
-        <b>Gestaltung aus Sicht der Nutzer:innen</b>. In diesem Modul wollen wir
-        ihnen näher bringen, welche Rolle die verschiedenen Eigenschaften von
-        KI-Systemen spielen und worauf sie bei der Gestaltung ihres Systems
-        achten müssen.
-      </p>
-    </section>,
-    <section>
-      <h2>Warum sind UX-Eigenschaften wichtig?</h2>
-      <p>
-        Das folgende Modul bietet einen systematischen Einstieg in zentrale{" "}
-        <b>UX-bezogene Eigenschaften von KI-Systemen</b>, die darüber
-        entscheiden:
-      </p>
-      <ul>
-        <li>
-          wie gut Menschen die <b>Funktion und Grenzen</b> der KI verstehen,
-        </li>
-        <li>
-          ob sie der KI <b>angemessen vertrauen</b> (nicht blind oder
-          skeptisch),
-        </li>
-        <li>
-          ob sie im <b>kritischen Moment handlungsfähig</b> bleiben,
-        </li>
-        <li>
-          und ob sie langfristig die <b>Verantwortung behalten</b>.
-        </li>
-      </ul>
-      <p>
-        Sie sind damit zentrale Voraussetzungen für <b>Human-Centered AI</b> und
-        ein entscheidener Faktor für die{" "}
-        <b>gesellschaftliche Akzeptanz und Sicherheit</b> von KI-Systemen.
-      </p>
-    </section>,
-    <section>
-      <h2>Aufbau der Lernmodule</h2>
-      <p>Die behandelten UX-bezogenen Eigenschaften von KI-Systemen sind:</p>
-      {/* <div className="flex flex-wrap justify-center -mx-4">
-        {linksAndNames.map((item, index) => (
-          <SubTopicCard
-            key={item.link || index}
-            topicName={item.name}
-            link={item.link}
-            description={item.description}
-            number={index}
-          />
-        ))}
-      </div> */}
-      <ul>
-        <li>
-          <b>Vertrauenswürdigkeit</b>: Wann empfinden Menschen eine KI als
-          glaubwürdig und verlässlich?
-        </li>
-        <li>
-          <b>Transparenz</b>: Wie viel Einsicht in Prozesse und Daten brauchen
-          Nutzer:innen?
-        </li>
-        <li>
-          <b>Erklärbarkeit (XAI)</b>: Was macht eine gute Erklärung aus - und
-          für wen?
-        </li>
-        <li>
-          <b>Kontrollierbarkeit</b>: Wie und wann können Menschen sinnvoll
-          eingreifen?
-        </li>
-        <li>
-          <b>Mental Model Complementary</b>: Wie ergänzen sich Mensch und
-          Maschine kognitiv?
-        </li>
-      </ul>
-      <p>
-        Jede Lektion führt in eine zentrale Eigenschaft ein, liefert{" "}
-        <b>praxisnahe Beispiele</b>, benennt{" "}
-        <b>psychologische und technologische Hintergründe</b> und bietet{" "}
-        <b>konkrete Empfehlungen für Gestaltung und Umsetzung</b>.
-      </p>
-      <p className="specialText">
-        Das Ziel: Ein fundiertes Verständnis dafür,{" "}
-        <b>
-          wie KI-Systeme gestaltet sein müssen, damit sie im Sinne der Menschen
-          funktionieren
-        </b>
-        .
-      </p>
-    </section>,
-  ],
-};
 
 const sectionsVertrauenswürdigkeit = [
   { id: "3", title: "Warum ist Trustworthy AI ein zentrales Thema?" },
@@ -2283,6 +2174,125 @@ const linksAndNames = [
     description: MentaleModellkomplementarität.description,
   },
 ];
+
+const sectionsEinleitung = [
+  { id: "einleitung", title: "Einleitung" },
+  { id: "2", title: "Warum sind UX-Eigenschaften wichtig?" },
+  { id: "3", title: "Aufbau der Lernmodule" },
+];
+
+const Einleitung = {
+  linkName: "einleitung",
+  name: "Einleitung",
+  description:
+    "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
+  content: [
+    <ChapterHeader text={"Einleitung"} number={1} />,
+    <section id="einleitung">
+      <SubNavigation sections={sectionsEinleitung} />
+      <p>
+        Künstliche Intelligenz beeinflusst zunehmend, wie Menschen mit
+        automatisierten Systemen interagieren - ob in der Medizin, im
+        Personalwesen, in der Verwaltung oder in Alltagsanwendungen. Doch je
+        autonomer und komplexer KI-Systeme werden, desto wichtiger wird ihre{" "}
+        <b>Gestaltung aus Sicht der Nutzer:innen</b>. In diesem Modul wollen wir
+        ihnen näher bringen, welche Rolle die verschiedenen Eigenschaften von
+        KI-Systemen spielen und worauf sie bei der Gestaltung ihres Systems
+        achten müssen.
+      </p>
+    </section>,
+    <section>
+      <h2>Warum sind UX-Eigenschaften wichtig?</h2>
+      <p>
+        Das folgende Modul bietet einen systematischen Einstieg in zentrale{" "}
+        <b>UX-bezogene Eigenschaften von KI-Systemen</b>, die darüber
+        entscheiden:
+      </p>
+      <ul>
+        <li>
+          wie gut Menschen die <b>Funktion und Grenzen</b> der KI verstehen,
+        </li>
+        <li>
+          ob sie der KI <b>angemessen vertrauen</b> (nicht blind oder
+          skeptisch),
+        </li>
+        <li>
+          ob sie im <b>kritischen Moment handlungsfähig</b> bleiben,
+        </li>
+        <li>
+          und ob sie langfristig die <b>Verantwortung behalten</b>.
+        </li>
+      </ul>
+      <p>
+        Sie sind damit zentrale Voraussetzungen für <b>Human-Centered AI</b> und
+        ein entscheidener Faktor für die{" "}
+        <b>gesellschaftliche Akzeptanz und Sicherheit</b> von KI-Systemen.
+      </p>
+    </section>,
+    <section>
+      <h2>Aufbau der Lernmodule</h2>
+      <p>Die behandelten UX-bezogenen Eigenschaften von KI-Systemen sind:</p>
+      {/* <div className="flex flex-wrap justify-center -mx-4">
+        {linksAndNames.map((item, index) => (
+          <SubTopicCard
+            key={item.link || index}
+            topicName={item.name}
+            link={item.link}
+            description={item.description}
+            number={index}
+          />
+        ))}
+      </div> */}
+      <div className="flex flex-wrap justify-center -mx-4">
+        {linksAndNames.map((item, index) => (
+          <SubTopicCard
+            key={item.link || index}
+            topicName={item.name}
+            link={item.link}
+            description={item.description}
+            number={index}
+          />
+        ))}
+      </div>
+      <ul>
+        <li>
+          <b>Vertrauenswürdigkeit</b>: Wann empfinden Menschen eine KI als
+          glaubwürdig und verlässlich?
+        </li>
+        <li>
+          <b>Transparenz</b>: Wie viel Einsicht in Prozesse und Daten brauchen
+          Nutzer:innen?
+        </li>
+        <li>
+          <b>Erklärbarkeit (XAI)</b>: Was macht eine gute Erklärung aus - und
+          für wen?
+        </li>
+        <li>
+          <b>Kontrollierbarkeit</b>: Wie und wann können Menschen sinnvoll
+          eingreifen?
+        </li>
+        <li>
+          <b>Mental Model Complementary</b>: Wie ergänzen sich Mensch und
+          Maschine kognitiv?
+        </li>
+      </ul>
+      <p>
+        Jede Lektion führt in eine zentrale Eigenschaft ein, liefert{" "}
+        <b>praxisnahe Beispiele</b>, benennt{" "}
+        <b>psychologische und technologische Hintergründe</b> und bietet{" "}
+        <b>konkrete Empfehlungen für Gestaltung und Umsetzung</b>.
+      </p>
+      <p className="specialText">
+        Das Ziel: Ein fundiertes Verständnis dafür,{" "}
+        <b>
+          wie KI-Systeme gestaltet sein müssen, damit sie im Sinne der Menschen
+          funktionieren
+        </b>
+        .
+      </p>
+    </section>,
+  ],
+};
 
 const Gestaltungsziele = {
   linkName: "gestaltungsziele-menschzentrierte-ki",

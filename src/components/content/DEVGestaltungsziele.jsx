@@ -1,9 +1,13 @@
 import ImageElement from "../../assets/icons/ux-bezogen.svg?react";
 import { LinkHandler } from "../1_elements/LinkHandler";
 import { VideoContainer } from "../1_elements/VideoContainer";
+import SubTopicCard from "../2_molecule/cards/SubTopicCard";
 import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
+import List from "../2_molecule/List";
+import { Table } from "../2_molecule/Table";
+import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import BasicQuiz from "../interactive/Quiz/BasicQuiz";
 
 import vertrauenswuerdigkeitQuiz from "../SimpleQuizContent/gestaltungsziele/vertrauenswuerdigkeit.json";
@@ -30,7 +34,7 @@ const Einleitung = {
         Künstliche Intelligenz beeinflusst zunehmend, wie Menschen mit
         automatisierten Systemen interagieren - ob in der Medizin, im
         Personalwesen, in der Verwaltung oder in Alltagsanwendungen. Doch je
-        autonomer und komplexer KI-Systeme werden, desto wichtiger wird ihre
+        autonomer und komplexer KI-Systeme werden, desto wichtiger wird ihre{" "}
         <b>Gestaltung aus Sicht der Nutzer:innen</b>. In diesem Modul wollen wir
         ihnen näher bringen, welche Rolle die verschiedenen Eigenschaften von
         KI-Systemen spielen und worauf sie bei der Gestaltung ihres Systems
@@ -68,6 +72,17 @@ const Einleitung = {
     <section>
       <h2>Aufbau der Lernmodule</h2>
       <p>Die behandelten UX-bezogenen Eigenschaften von KI-Systemen sind:</p>
+      {/* <div className="flex flex-wrap justify-center -mx-4">
+        {linksAndNames.map((item, index) => (
+          <SubTopicCard
+            key={item.link || index}
+            topicName={item.name}
+            link={item.link}
+            description={item.description}
+            number={index}
+          />
+        ))}
+      </div> */}
       <ul>
         <li>
           <b>Vertrauenswürdigkeit</b>: Wann empfinden Menschen eine KI als
@@ -94,9 +109,9 @@ const Einleitung = {
         Jede Lektion führt in eine zentrale Eigenschaft ein, liefert{" "}
         <b>praxisnahe Beispiele</b>, benennt{" "}
         <b>psychologische und technologische Hintergründe</b> und bietet{" "}
-        <b>konkrete Empfehlungen für Gestaltung und Umsetzung</b>
+        <b>konkrete Empfehlungen für Gestaltung und Umsetzung</b>.
       </p>
-      <p>
+      <p className="specialText">
         Das Ziel: Ein fundiertes Verständnis dafür,{" "}
         <b>
           wie KI-Systeme gestaltet sein müssen, damit sie im Sinne der Menschen
@@ -109,20 +124,20 @@ const Einleitung = {
 };
 
 const sectionsVertrauenswürdigkeit = [
-  { id: "1", title: "Warum ist Trustworthy AI ein zentrales Thema?" },
-  { id: "2", title: "Warum ist Vertrauenswürdigkeit schwer zu definieren?" },
-  { id: "3", title: "Vertrauen vs. Vertrauenswürdigkeit" },
-  { id: "4", title: "Dimensionen vertrauenswürdiger KI-Systeme" },
-  { id: "5", title: "Was folgt daraus für die Gestaltung von KI?" },
-  { id: "6", title: "Messung von Vertrauen und Vertrauenswürdigkeit" },
-  { id: "7", title: "Vertrauen gestalten, Vertrauenswürdigkeit sichern" },
+  { id: "3", title: "Warum ist Trustworthy AI ein zentrales Thema?" },
+  { id: "4", title: "Warum ist Vertrauenswürdigkeit schwer zu definieren?" },
+  { id: "5", title: "Vertrauen vs. Vertrauenswürdigkeit" },
+  { id: "6", title: "Dimensionen vertrauenswürdiger KI-Systeme" },
+  { id: "7", title: "Was folgt daraus für die Gestaltung von KI?" },
+  { id: "8", title: "Messung von Vertrauen und Vertrauenswürdigkeit" },
+  { id: "9", title: "Fazit" },
 ];
 
 const Vertrauenswürdigkeit = {
   linkName: "vertrauenswuerdigkeit",
   name: "Vertrauenswürdigkeit",
   description:
-    "Hier wird die Vetrauenswürdigkeit von KI-Systemen thematisiert.",
+    "Wann empfinden Menschen eine KI als glaubwürdig und verlässlich?",
   content: [
     <ChapterHeader text={"Vertrauenswürdigkeit"} number={2} />,
     <section>
@@ -151,7 +166,7 @@ const Vertrauenswürdigkeit = {
         <LinkHandler to={"/eu-ai-act/high-level-expert-group"}>
           Expertenkommissionen
         </LinkHandler>{" "}
-        eingefordert
+        eingefordert.
       </p>
       <p>
         Besonders in sensiblen Bereichen - etwa in der Medizin, im Finanzwesen
@@ -208,14 +223,14 @@ const Vertrauenswürdigkeit = {
       <ul>
         <li>
           Sie besteht aus mehreren Dimensionen (z.B. Transparenz, Fairness,
-          Robustheit)
+          Robustheit).
         </li>
         <li>
           Ihre Bewertung ist kontextabhängig (Was im E-Commerce als
           vertrauenswürdig gilt, reicht im Gesundheitswesen vielleicht nicht aus
           - der Fachausdruck ist “individueller Standard“).
         </li>
-        <li>Sie wird oft mit Vertrauen verwechselt oder vermischt</li>
+        <li>Sie wird oft mit Vertrauen verwechselt oder vermischt.</li>
       </ul>
       <p>
         Die Begriffe "Vertrauen" und "Vertrauenswürdigkeit" sind nicht
@@ -237,24 +252,25 @@ const Vertrauenswürdigkeit = {
         Der Unterschied zwischen <i>Vertrauen und Vertrauenswürdigkeit</i> ist
         zentral für die Gestaltung und Bewertung von KI-Systemen:
       </p>
-      <ul>
+      <ol>
         <li>
           <b>Vertrauen</b> ist eine <b>subjektive Haltung</b> bzw. Einstellung
           eines Individuums oder einer Gruppe gegenüber einer Entität (hier: der
-          KI). Es basiert auf Wahrnehmung, Erfahrung, Intuition und oft auch auf
+          KI). <br />
+          Es basiert auf Wahrnehmung, Erfahrung, Intuition und oft auch auf
           psychologischen und kulturellen Faktoren. Vertrauen kann entstehen,
           selbst wenn ein System objektiv unsicher ist - oder ausbleiben, obwohl
           das System technisch und ethisch einwandfrei funktioniert.
         </li>
         <li>
           <b>Vertrauenswürdigkeit</b> ist eine{" "}
-          <b>objektive, überprüfbare Eigenschaft des Systems</b>. Sie hängt von
-          Kriterien wie Zuverlässigkeit, Fairness, Sicherheit, Transparenz und
-          Erklärbarkeit ab. Ein vertrauenswürdiges System erfüllt dokumentierte
-          Standards und kann seine Leistungsfähigkeit und Unvoreingenommenheit
-          nachweisen.
+          <b>objektive, überprüfbare Eigenschaft des Systems</b>. <br />
+          Sie hängt von Kriterien wie Zuverlässigkeit, Fairness, Sicherheit,
+          Transparenz und Erklärbarkeit ab. Ein vertrauenswürdiges System
+          erfüllt dokumentierte Standards und kann seine Leistungsfähigkeit und
+          Unvoreingenommenheit nachweisen.
         </li>
-      </ul>
+      </ol>
       <p>
         Eine Verwechslung ist leicht möglich: Vertrauenswürdigkeit kann nämlich
         in einer Anwendung mit wenig Risiko und Anspruch an Korrektheit
@@ -262,7 +278,7 @@ const Vertrauenswürdigkeit = {
         gefährlich sind. Dadurch wirkt Vertrauenswürdigkeit aufgrund ihrer
         Kontextabhängigkeit nicht überprüfbar und objektiv - so wie Vertrauen.
       </p>
-      <h3>3a. Wie entsteht Vertrauen in KI-Systeme</h3>
+      <h3>3a. Wie entsteht Vertrauen in KI-Systeme?</h3>
       <p>
         Vertrauen entsteht <b>nicht automatisch</b> durch technische Qualität.
         Es ist ein psychologischer und sozialer Prozess. Ein hilfreiches Modell
@@ -271,43 +287,43 @@ const Vertrauenswürdigkeit = {
         unterscheiden darin zwei zentrale Dimensionen von Vertrauen in
         Computersysteme:
       </p>
-      <h4>Kognitives Vertrauen</h4>
-      <p>
-        Beruht auf der rationalen Einschätzung der Systemleistung. Es entsteht,
-        wenn Nutzer:innen das System als kompetent, vorhersehbar und zuverlässig
-        wahrnehmen.
-      </p>
-      <p>
-        <i>Fördernde Faktoren:</i>
-      </p>
-      <ul>
-        <li>technische Kompetenz und Genauigkeit</li>
-        <li>konsistente, nachvollziehbare Entscheidungen</li>
-
-        <li>transparente Abläufe</li>
-
-        <li>Stabilität und Verlässlichkeit im Betrieb</li>
-      </ul>
-      <h4>Affektives Vertrauen</h4>
-      <p>
-        Beruht auf emotionaler Resonanz und sozialer Wahrnehmung. Es entsteht,
-        wenn Nutzer:innen das Gefühl haben, fair behandelt zu werden oder dass
-        das System ihre Interessen unterstützt.
-      </p>
-      <ul>
-        <li>
-          menschlich wirkendes, empathisches Design - aber Achtung, es sollte
-          kein "uncanny valley" entstehen
-        </li>
-
-        <li>freundliche, respektvolle Sprache und soziale Signale</li>
-
-        <li>
-          ethisches Verhalten (z.B. keine Manipulation, kein übertriebener
-          Druck)
-        </li>
-      </ul>
-      <p>
+      <TabSwitchView>
+        <div title="Kognitives Vertrauen">
+          <p>
+            Beruht auf der rationalen Einschätzung der Systemleistung. Es
+            entsteht, wenn Nutzer:innen das System als kompetent, vorhersehbar
+            und zuverlässig wahrnehmen.
+          </p>
+          <p>
+            <b>Fördernde Faktoren:</b>
+          </p>
+          <ul className="mt-5">
+            <li>technische Kompetenz und Genauigkeit</li>
+            <li>konsistente, nachvollziehbare Entscheidungen</li>
+            <li>transparente Abläufe</li>
+            <li>Stabilität und Verlässlichkeit im Betrieb</li>
+          </ul>
+        </div>
+        <div title="Affektives Vertrauen">
+          <p>
+            Beruht auf emotionaler Resonanz und sozialer Wahrnehmung. Es
+            entsteht, wenn Nutzer:innen das Gefühl haben, fair behandelt zu
+            werden oder dass das System ihre Interessen unterstützt.
+          </p>
+          <ul>
+            <li>
+              menschlich wirkendes, empathisches Design - aber Achtung, es
+              sollte kein "uncanny valley" entstehen
+            </li>
+            <li>freundliche, respektvolle Sprache und soziale Signale</li>
+            <li>
+              ethisches Verhalten (z.B. keine Manipulation, kein übertriebener
+              Druck)
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
+      <p className="mt-10">
         UX-Design muss beide Dimensionen - kognitiv und affektiv - mitdenken, um
         angemessenes Vertrauen in KI-Systeme zu ermöglichen.
       </p>
@@ -316,30 +332,36 @@ const Vertrauenswürdigkeit = {
         Ein entscheidender Punkt: Nur weil Menschen einem System vertrauen, ist
         es noch lange nicht vertrauenswürdig. Und umgekehrt.
       </p>
-      <p>
-        <b>Risiko 1</b>: Menschen vertrauen einem{" "}
-        <b>nicht vertrauenswürdigen</b> System &rarr; Gefahr von
-        Fehlentscheidungen. Beispiel: Nutzende vertrauen einem nicht für
-        medizinische Beratung ausgelegten System wie ChatGPT bei Fragen zu
-        komplexen Wechselwirkungen von Medikamenten. Dies nennt man
-        Übervertrauen.
-      </p>
-      <p>
-        <b>Risiko 2</b>: Menschen misstrauen einem <b>vertrauenswürdigen</b>{" "}
-        System &rarr; Gefahr von Ineffizienz, Ablehnung, Algorithm Aversio.
-        Beispiel: Es wird lieber manuell ein komplexer Datensatz aufgearbeitet,
-        als sich auf ein automatisiertes System zu verlassen, das für diese
-        Aufgabe geschaffen worden ist. Dies nennt man Untervertrauen.
-      </p>
-      <p>Deshalb ist das Ziel von UX-Design und KI-Entwicklung:</p>
-      <ul>
+      <ol>
         <li>
-          <b>Vertrauenswürdigkeit sicherstellen</b> (systemseitig)
+          <b>Risiko</b>: Menschen vertrauen einem{" "}
+          <b>nicht vertrauenswürdigen</b> System <br />
+          &rarr; Gefahr von Fehlentscheidungen. <br />
+          <br />
+          Beispiel: Nutzende vertrauen einem nicht für medizinische Beratung
+          ausgelegten System wie ChatGPT bei Fragen zu komplexen
+          Wechselwirkungen von Medikamenten. Dies nennt man Übervertrauen.
+          <br />
+          <br />
         </li>
         <li>
-          <b>Vertrauen kalibrieren</b> (nutzerseitig)
+          <b>Risiko</b>: Menschen misstrauen einem <b>vertrauenswürdigen</b>{" "}
+          System <br />
+          &rarr; Gefahr von Ineffizienz, Ablehnung, Algorithm Aversion. <br />
+          <br />
+          Beispiel: Es wird lieber manuell ein komplexer Datensatz
+          aufgearbeitet, als sich auf ein automatisiertes System zu verlassen,
+          das für diese Aufgabe geschaffen worden ist. Dies nennt man
+          Untervertrauen.
+          <br />
+          <br />
         </li>
-      </ul>
+      </ol>
+      <p className="specialText">
+        Deshalb ist das Ziel von UX-Design und KI-Entwicklung:{" "}
+        <b>Vertrauenswürdigkeit sicherstellen</b> (systemseitig) und{" "}
+        <b>Vertrauen kalibrieren</b> (nutzerseitig).
+      </p>
     </section>,
     <section>
       <h2>4. Dimensionen vertrauenswürdiger KI-System</h2>
@@ -347,91 +369,76 @@ const Vertrauenswürdigkeit = {
         Für ein System, das als vertrauenswürdig gelten soll, werden in der
         Regel folgende Eigenschaften gefordert:
       </p>
-      <ol type="a">
-        <li>
-          <b>Technische Robustheit und Sicherheit</b>: Das System soll unter
-          normalen und außergewöhnlichen Bedingungen zuverlässig arbeiten. Zu
-          relevanten Aspekten zählen z. B. Fehlertoleranz, Resilienz gegen
-          Angriffe (Cybersecurity), Fail-Safe-Mechanismen, kontinuierliche
-          Überwachung.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Nutzer:innen müssen über Systemstatus, Ausfälle
-              oder Sicherheitsereignisse klar informiert werden.
-            </li>
-          </ol>
-        </li>
+      <h4>1. Technische Robustheit und Sicherheit</h4>
+      <p>
+        Das System soll unter normalen und außergewöhnlichen Bedingungen
+        zuverlässig arbeiten. Zu relevanten Aspekten zählen z. B.
+        Fehlertoleranz, Resilienz gegen Angriffe (Cybersecurity),
+        Fail-Safe-Mechanismen, kontinuierliche Überwachung.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Nutzer:innen müssen über Systemstatus, Ausfälle oder
+        Sicherheitsereignisse klar informiert werden.
+      </p>
 
-        <li>
-          <b>Transparenz und Erklärbarkeit</b>: Entscheidungen und Prozesse
-          sollen nachvollziehbar und überprüfbar sein. Dazu zählt u. a. die
-          Offenlegung der Funktionsweise (z. B. Modellarchitektur,
-          Trainingsdatenquellen), Erklärungen einzelner Entscheidungen, Angabe
-          von Unsicherheiten.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Erklärungen müssen in für die Zielgruppe
-              verständlicher Form präsentiert werden (Text, Visualisierung,
-              interaktive Elemente).
-            </li>
-          </ol>
-        </li>
+      <h4>2. Transparenz und Erklärbarkeit</h4>
+      <p>
+        Entscheidungen und Prozesse sollen nachvollziehbar und überprüfbar sein.
+        Dazu zählt u. a. die Offenlegung der Funktionsweise (z. B.
+        Modellarchitektur, Trainingsdatenquellen), Erklärungen einzelner
+        Entscheidungen, Angabe von Unsicherheiten.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Erklärungen müssen in für die Zielgruppe verständlicher
+        Form präsentiert werden (Text, Visualisierung, interaktive Elemente).
+      </p>
 
-        <li>
-          <b>Fairness</b>: KI soll Personen oder Gruppen nicht benachteiligen
-          oder privilegieren, es sei denn, dies ist explizit gerechtfertigt (z.
-          B. positive Diskriminierung). Dazu gehört u. a. Bias-Erkennung, faire
-          Datenauswahl, Überprüfung von Outputs auf diskriminierende Muster.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Betroffene müssen bei Ergebnissen erkennen und
-              nachvollziehen können, ob diese aufgrund verzerrter Daten zustande
-              gekommen sind.
-            </li>
-          </ol>
-        </li>
+      <h4>3. Fairness</h4>
+      <p>
+        KI soll Personen oder Gruppen nicht benachteiligen oder privilegieren,
+        es sei denn, dies ist explizit gerechtfertigt (z. B. positive
+        Diskriminierung). Dazu gehört u. a. Bias-Erkennung, faire Datenauswahl,
+        Überprüfung von Outputs auf diskriminierende Muster.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Betroffene müssen bei Ergebnissen erkennen und
+        nachvollziehen können, ob diese aufgrund verzerrter Daten zustande
+        gekommen sind.
+      </p>
 
-        <li>
-          <b>Datenschutz und Daten-Governance</b>: Schutz personenbezogener
-          Daten und verantwortungsvoller Umgang mit sensiblen Informationen.
-          Dazu zählt u. a. Privacy by Design, Minimierung erhobener Daten, klare
-          Einwilligungsprozesse, Datenanonymisierung.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Nutzer:innen müssen leicht nachvollziehen und
-              steuern können, welche Daten genutzt werden.
-            </li>
-          </ol>
-        </li>
+      <h4>4. Datenschutz und Daten-Governance</h4>
+      <p>
+        Schutz personenbezogener Daten und verantwortungsvoller Umgang mit
+        sensiblen Informationen. Dazu zählt u. a. Privacy by Design, Minimierung
+        erhobener Daten, klare Einwilligungsprozesse, Datenanonymisierung.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Nutzer:innen müssen leicht nachvollziehen und steuern
+        können, welche Daten genutzt werden.
+      </p>
 
-        <li>
-          <b>Rechenschaftspflicht & Verantwortung</b>: Es muss klar sein, wer
-          für das Verhalten des Systems verantwortlich ist, und es muss möglich
-          sein, Entscheidungen im Nachhinein zu überprüfen. Dazu gehört z. B.
-          Dokumentation, Audit-Trails, klare Verantwortlichkeitszuordnung,
-          Haftungsregelungen.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Nutzer:innen müssen wissen, an wen sie sich im
-              Falle von Problemen wenden können.
-            </li>
-          </ol>
-        </li>
+      <h4>5. Rechenschaftspflicht & Verantwortung</h4>
+      <p>
+        Es muss klar sein, wer für das Verhalten des Systems verantwortlich ist,
+        und es muss möglich sein, Entscheidungen im Nachhinein zu überprüfen.
+        Dazu gehört z. B. Dokumentation, Audit-Trails, klare
+        Verantwortlichkeitszuordnung, Haftungsregelungen.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Nutzer:innen müssen wissen, an wen sie sich im Falle
+        von Problemen wenden können.
+      </p>
 
-        <li>
-          <b>Human Agency & Oversight</b>: Menschen behalten die Kontrolle über
-          kritische Entscheidungen. Dazu zählen z. B. Mechanismen wie
-          Human-in-the-Loop, Abschaltmöglichkeiten, Entscheidungsunterstützung
-          statt -ersetzung.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Schnittstellen müssen Eingriffe intuitiv
-              ermöglichen, ohne dass Nutzer:innen durch komplexe Prozesse
-              abgeschreckt werden.
-            </li>
-          </ol>
-        </li>
-      </ol>
+      <h4>6. Human Agency & Oversight</h4>
+      <p>
+        Menschen behalten die Kontrolle über kritische Entscheidungen. Dazu
+        zählen z. B. Mechanismen wie Human-in-the-Loop, Abschaltmöglichkeiten,
+        Entscheidungsunterstützung statt -ersetzung.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Schnittstellen müssen Eingriffe intuitiv ermöglichen,
+        ohne dass Nutzer:innen durch komplexe Prozesse abgeschreckt werden.
+      </p>
       <p>
         Diese Dimensionen bilden das Fundament der objektiven
         Vertrauenswürdigkeit. UX-Design hat die Aufgabe, diese Eigenschaften{" "}
@@ -441,25 +448,18 @@ const Vertrauenswürdigkeit = {
     </section>,
     <section>
       <h2>5. Was folgt daraus für die Gestaltung von KI?</h2>
-      <h4>Empfehlung für die Praxis:</h4>
-      <ul>
-        <li>
-          Entwickeln Sie <b>technisch vertrauenswürdige Systeme</b>, die fair,
-          robust und nachvollziehbar sind.
-        </li>
-        <li>
-          Gestalten Sie <b>erklärende Interfaces</b>, die Nutzer:innen wirklich
-          verstehen können.
-        </li>
-        <li>
-          Testen Sie mit echten Nutzer:innen:{" "}
-          <b>Verstehen ihre Nutzer:innen die Entscheidungen des Systems?</b>
-        </li>
-        <li>
-          Kommunizieren Sie ehrlich:{" "}
-          <b>Keine Überversprechen von KI-Fähigkeiten!</b>
-        </li>
-      </ul>
+      <p>
+        <b>Empfehlung für die Praxis:</b>
+      </p>
+      <List
+        items={[
+          "Entwickeln Sie <b>technisch vertrauenswürdige Systeme</b>, die fair, robust und nachvollziehbar sind.",
+          "Gestalten Sie <b>erklärende Interfaces</b>, die Nutzer:innen wirklich verstehen können.",
+          "Testen Sie mit echten Nutzer:innen: <b>Verstehen ihre Nutzer:innen die Entscheidungen des Systems?</b>",
+          "Kommunizieren Sie ehrlich: <b>Keine Überversprechen von KI-Fähigkeiten!</b>",
+        ]}
+        alignItems="center"
+      />
       <p>
         Aber wie lassen sich Vertrauenswürdigkeit und Vertrauen in Bezug auf ein
         KI-System eigentlich messen?
@@ -472,52 +472,46 @@ const Vertrauenswürdigkeit = {
         <b>objektiver Vertrauenswürdigkeit</b> unterscheiden. Beide Größen
         können auseinanderfallen und sollten separat erhoben werden.
       </p>
-      <p>
-        <b>a) Messung von Vertrauen (subjektiv)</b>
-      </p>
-      <ul>
-        <li>
-          <b>Umfragen & Fragebögen</b>: z. B. Trust in Automation Scale,
-          NASA-TLX (für mentale Belastung)
-        </li>
-        <li>
-          <b>Verhaltensindikatoren</b>: Bspw. Häufigkeit, mit der Nutzer:innen
-          Empfehlungen der KI folgen oder sie ablehnen
-        </li>
-        <li>
-          <b>Langzeitbeobachtung</b>: Veränderungen des Vertrauens über
-          wiederholte Nutzung
-        </li>
-      </ul>
-      <p>
-        <b>b) Messung von Vertrauenswürdigkeit (objektiv)</b>
-      </p>
-      <ul>
-        <li>
-          <b>Technische Metriken</b>: Genauigkeit, Fehlerraten,
-          Fairness-Indikatoren, Robustheitstests
-        </li>
+      <TabSwitchView>
+        <div title="Messung von Vertrauen (subjektiv)">
+          <ul className="mt-0">
+            <li>
+              <b>Umfragen & Fragebögen</b>: z. B. Trust in Automation Scale,
+              NASA-TLX (für mentale Belastung)
+            </li>
+            <li>
+              <b>Verhaltensindikatoren</b>: Bspw. Häufigkeit, mit der
+              Nutzer:innen Empfehlungen der KI folgen oder sie ablehnen
+            </li>
+            <li>
+              <b>Langzeitbeobachtung</b>: Veränderungen des Vertrauens über
+              wiederholte Nutzung
+            </li>
+          </ul>
+        </div>
+        <div title="Messung von Vertrauenswürdigkeit (objektiv)">
+          <ul className="mt-0">
+            <li>
+              <b>Technische Metriken</b>: Genauigkeit, Fehlerraten,
+              Fairness-Indikatoren, Robustheitstests
+            </li>
+            <li>
+              <b>Audit & Compliance-Prüfungen</b>: Abgleich mit regulatorischen
+              Standards (z. B. EU AI Act, ISO-Normen)
+            </li>
+            <li>
+              <b>Erklärbarkeits-Checks</b>: Verständlichkeit und Korrektheit der
+              bereitgestellten Erklärungen
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
 
-        <li>
-          <b>Audit & Compliance-Prüfungen</b>: Abgleich mit regulatorischen
-          Standards (z. B. EU AI Act, ISO-Normen)
-        </li>
-
-        <li>
-          <b>Erklärbarkeits-Checks</b>: Verständlichkeit und Korrektheit der
-          bereitgestellten Erklärungen
-        </li>
-      </ul>
+      <h4 className="mt-10">Kombination von Messmethoden</h4>
       <p>
-        <b>c) Kombination von Messmethoden</b>
+        Gemeinsame Auswertung, um <i>Trust Calibration</i> zu prüfen - also ob
+        subjektives Vertrauen mit objektiver Vertrauenswürdigkeit übereinstimmt.
       </p>
-      <ul>
-        <li>
-          Gemeinsame Auswertung, um <i>Trust Calibration</i> zu prüfen - also ob
-          subjektives Vertrauen mit objektiver Vertrauenswürdigkeit
-          übereinstimmt.
-        </li>
-      </ul>
     </section>,
     <section>
       <h2>7. Fazit: Vertrauen gestalten, Vertrauenswürdigkeit sichern</h2>
@@ -527,8 +521,8 @@ const Vertrauenswürdigkeit = {
         psychologisches Verständnis und ethische Klarheit.
       </p>
       <p className="specialText">
-        "Die Frage ist nicht: Wie überzeugen wir Menschen von KI? Sondern: Wie
-        gestalten wir KI, die überzeugt?"
+        Die Frage ist nicht: Wie überzeugen wir Menschen von KI? <br />
+        Sondern: Wie gestalten wir KI, die überzeugt?
       </p>
     </section>,
     <section>
@@ -2247,6 +2241,34 @@ const Fazit = {
     </section>,
   ],
 };
+
+const linksAndNames = [
+  {
+    link: Vertrauenswürdigkeit.linkName,
+    name: Vertrauenswürdigkeit.name,
+    description: Vertrauenswürdigkeit.description,
+  },
+  {
+    link: Transparenz.linkName,
+    name: Transparenz.name,
+    description: Transparenz.description,
+  },
+  {
+    link: Erklärbarkeit.linkName,
+    name: Erklärbarkeit.name,
+    description: Erklärbarkeit.description,
+  },
+  {
+    link: Kontrollierbarkeit.linkName,
+    name: Kontrollierbarkeit.name,
+    description: Kontrollierbarkeit.description,
+  },
+  {
+    link: MentaleModellkomplementarität.linkName,
+    name: MentaleModellkomplementarität.name,
+    description: MentaleModellkomplementarität.description,
+  },
+];
 
 const Gestaltungsziele = {
   linkName: "gestaltungsziele-menschzentrierte-ki",

@@ -44,7 +44,9 @@ const Vertrauenswürdigkeit = {
       />
     </section>,
     <section>
-      <h2>1. Einführung: Warum ist "Trustworthy AI" ein zentrales Thema?</h2>
+      <h2>
+        1. Einführung: Warum ist <i>Trustworthy AI</i> ein zentrales Thema?
+      </h2>
       <p>
         Vertrauenswürdigkeit ist eine Schlüsseldimension für die erfolgreiche
         Einführung und nachhaltige Nutzung von KI-Systemen. Während technische
@@ -109,8 +111,8 @@ const Vertrauenswürdigkeit = {
     <section>
       <h2>2. Warum ist Vertrauenswürdigkeit schwer zu definieren?</h2>
       <p>
-        Obwohl sie "objektiv" wirken soll, ist Vertrauenswürdigkeit schwierig
-        allgemein und einheitlich zu definieren, denn:
+        Obwohl sie <i>objektiv</i> wirken soll, ist Vertrauenswürdigkeit
+        schwierig allgemein und einheitlich zu definieren, denn:
       </p>
       <ul>
         <li>
@@ -120,12 +122,12 @@ const Vertrauenswürdigkeit = {
         <li>
           Ihre Bewertung ist kontextabhängig (Was im E-Commerce als
           vertrauenswürdig gilt, reicht im Gesundheitswesen vielleicht nicht aus
-          - der Fachausdruck ist “individueller Standard“).
+          - der Fachausdruck ist &bdquo;individueller Standard&ldquo;).
         </li>
         <li>Sie wird oft mit Vertrauen verwechselt oder vermischt.</li>
       </ul>
       <p>
-        Die Begriffe "Vertrauen" und "Vertrauenswürdigkeit" sind nicht
+        Die Begriffe <i>Vertrauen</i> und <i>Vertrauenswürdigkeit</i> sind nicht
         identisch. Gerade aus psychologischer Perspektive lohnt sich die
         Unterscheidung. Also, wo genau liegen die Unterschiede?
       </p>
@@ -205,7 +207,7 @@ const Vertrauenswürdigkeit = {
           <ul>
             <li>
               menschlich wirkendes, empathisches Design - aber Achtung, es
-              sollte kein "uncanny valley" entstehen
+              sollte kein <i>uncanny valley</i> entstehen
             </li>
             <li>freundliche, respektvolle Sprache und soziale Signale</li>
             <li>
@@ -535,8 +537,8 @@ const Transparenz = {
       </p>
       <p>
         <i>
-          „Wir haben 500 Bilder von denkmalgeschützten Gebäuden und 500.000
-          Bilder von nicht denkmalgeschützten Gebäuden verwendet.“
+          &bdquo;Wir haben 500 Bilder von denkmalgeschützten Gebäuden und
+          500.000 Bilder von nicht denkmalgeschützten Gebäuden verwendet.&ldquo;
         </i>
       </p>
       <p>
@@ -575,16 +577,16 @@ const Transparenz = {
       </p>
       <ul>
         <li>
-          "Transparenz = Offenlegen von Code" - für die meisten Nutzer:innen,
-          die nicht technisch versiert sind, ist eine solche Information{" "}
-          <b>nicht hilfreich</b>
+          &bdquo;Transparenz = Offenlegen von Code&ldquo; - für die meisten
+          Nutzer:innen, die nicht technisch versiert sind, ist eine solche
+          Information <b>nicht hilfreich</b>
         </li>
         <li>
-          "Mehr Transparenz ist immer besser" - kann aber auch zu{" "}
+          &bdquo;Mehr Transparenz ist immer besser&ldquo; - kann aber auch zu{" "}
           <b>Verwirrung oder Misstrauen führen</b>
         </li>
       </ul>
-      <h4>Herausforderungen:</h4>
+      <h4>Herausforderungen</h4>
       <ul>
         <li>
           Unterschiedliche Zielgruppen benötigen{" "}
@@ -650,16 +652,12 @@ const Transparenz = {
         Möglichkeit zu geben,{" "}
         <b>die Entscheidungen des Systems sinnvoll einzuordnen</b>.
       </p>
-      <h4>Wichtige UX-Fragen zur Transparenz:</h4>
+      <h4>Wichtige UX-Fragen zur Transparenz</h4>
       <ul>
         <li>Welche Daten nutzt die KI - und warum?</li>
-
         <li>Wie wurde das Modell trainiert?</li>
-
         <li>Wie kommt das System zu seinem Ergebnis?</li>
-
         <li>Wie zuverlässig ist dieses Ergebnis?</li>
-
         <li>Welche Grenzen, Risiken oder Unsicherheiten bestehen?</li>
       </ul>
       <p>
@@ -821,10 +819,10 @@ const sectionsErklaerbarkeit = [
 
 const Erklärbarkeit = {
   linkName: "erklaerbarkeit",
-  name: "Erklärbarkeit",
+  name: "Erklärbare KI (XAI)",
   description: "Hier wird die Erklärbarkeit von KI-Systemen thematisiert.",
   content: [
-    <ChapterHeader text={"Erklärbarkeit"} number={4} />,
+    <ChapterHeader text={"Erklärbare KI (XAI)"} number={4} />,
     <section>
       {/* p Mit einleitungstext */}
       <Accordion sections={sectionsErklaerbarkeit} />
@@ -832,7 +830,7 @@ const Erklärbarkeit = {
     </section>,
     <section>
       <VideoContainer
-        link="https://www.youtube-nocookie.com/embed/7fRa7xfLmwc?rel=0&modestbranding=1"
+        link="https://www.youtube-nocookie.com/embed/fAJ8rQdWzv0?rel=0&modestbranding=1"
         title="Erklärbarkeit"
       />
     </section>,
@@ -882,16 +880,17 @@ const Erklärbarkeit = {
         sind, stoßen wir bei modernen KI-Ansätzen schnell an Grenzen der
         Verständlichkeit. Besonders <b>Deep-Learning-Modelle</b>, die heute in
         vielen Anwendungen wie Bilderkennung, Sprachverarbeitung oder
-        Empfehlungssystemen eingesetzt werden, gelten häufig als „
-        <b>Black Boxes</b>“.
+        Empfehlungssystemen eingesetzt werden, gelten häufig als &bdquo;
+        <b>Black Boxes</b>&ldquo;.{" "}
         <b>Deep Learning basiert auf künstlichen neuronalen Netzen</b>, die aus
-        vielen Schichten („Layers“) miteinander verbundener künstlicher Neuronen
-        bestehen und so hochkomplexe Muster und Zusammenhänge in großen
-        Datenmengen automatisch erkennen und verarbeiten können.
+        vielen Schichten (&bdquo;Layers&ldquo;) miteinander verbundener
+        künstlicher Neuronen bestehen und so hochkomplexe Muster und
+        Zusammenhänge in großen Datenmengen automatisch erkennen und verarbeiten
+        können.
       </p>
-      <h3>Was bedeutet "Black Box"?</h3>
+      <h3>Was bedeutet &bdquo;Black Box&ldquo;?</h3>
       <p>
-        Eine „Black Box“ beschreibt ein System, dessen{" "}
+        Eine &bdquo;Black Box&ldquo; beschreibt ein System, dessen{" "}
         <b>
           innere Entscheidungsprozesse für Menschen nicht direkt nachvollziehbar
         </b>{" "}
@@ -912,7 +911,7 @@ const Erklärbarkeit = {
         <li>
           <b>Automatisches Feature-Learning</b>: Anders als bei klassischen
           Modellen werden relevante Merkmale (Features) nicht von Menschen
-          vorgegeben, sondern automatisch gelernt – was Transparenz erschwert.
+          vorgegeben, sondern automatisch gelernt - was Transparenz erschwert.
         </li>
         <li>
           <b>Optimierungsverfahren</b>: Trainingsprozesse wie Gradient Descent
@@ -934,11 +933,15 @@ const Erklärbarkeit = {
       <h2>3. Warum ist Erklärbarkeit komplex?</h2>
       <p>
         Eine Erklärung im Kontext von XAI ist ein kommunikatives Mittel, um auf
-        Fragen wie "Warum wurde diese Entscheidung getroffen?", "Was hätte
-        passieren müssen, damit es anders kommt?" oder "Was war besonders
-        einflussreich?" eine verständliche Antwort zu geben.
+        Fragen wie &bdquo;Warum wurde diese Entscheidung getroffen?&ldquo;,
+        &bdquo;Was hätte passieren müssen, damit es anders kommt?&ldquo; oder
+        &bdquo;Was war besonders einflussreich?&ldquo; eine verständliche
+        Antwort zu geben.
       </p>
-      <p>Allerdings ist das Konzept "Erklärung" schwer zu fassen, denn:</p>
+      <p>
+        Allerdings ist das Konzept &bdquo;Erklärung&ldquo; schwer zu fassen,
+        denn:
+      </p>
       <ul>
         <li>
           <b>Kontextabhängigkeit</b>: Je nach Anwendung (Medizin, Kreditvergabe,
@@ -956,8 +959,8 @@ const Erklärbarkeit = {
       <p>
         Ein Beispiel: Die Aussage "Die Entscheidung basiert auf der Position des
         Entscheidungsraums in Feature X" ist für Laien nicht hilfreich. Besser
-        wäre: "Ihr monatliches Einkommen liegt unter 3.200 €, was zur Ablehnung
-        beigetragen hat."
+        wäre: &bdquo;Ihr monatliches Einkommen liegt unter 3.200€, was zur
+        Ablehnung beigetragen hat.&ldquo;
       </p>
     </section>,
     <section>
@@ -969,8 +972,8 @@ const Erklärbarkeit = {
       <h3>Lokale Erklärungen</h3>
       <p>
         Diese beziehen sich auf eine <b>konkrete Entscheidung</b> eines
-        KI-Systems. Sie beantworten die Frage: "Warum genau wurde in diesem Fall
-        X und nicht Y entschieden?"
+        KI-Systems. Sie beantworten die Frage: &bdquo;Warum genau wurde in
+        diesem Fall X und nicht Y entschieden?&ldquo;
       </p>
       <ul>
         <li>Zeigen den Einfluss einzelner Eingabeparameter</li>
@@ -1232,8 +1235,8 @@ const Erklärbarkeit = {
         erklärbare KI ist eine nutzbare und verantwortbare KI.
       </p>
       <p className="specialText">
-        "Explain unto others in such a way as to help them explain to
-        themselves." - Hoffman et al. (2023)
+        &bdquo;Explain unto others in such a way as to help them explain to
+        themselves.&ldquo; - Hoffman et al. (2023)
       </p>
     </section>,
     <section>
@@ -1250,17 +1253,16 @@ const Erklärbarkeit = {
 const sectionsKontrollierbarkeit = [
   {
     id: "1",
-    title:
-      "Teil A: Einleitung: Kontrollierbarkeit in der Mensch-KI-Interaktion",
+    title: "Einleitung: Kontrollierbarkeit in der Mensch-KI-Interaktion",
   },
   {
     id: "2",
-    title: "Teil A: Dimensionen der Kontrollierbarkeit aus UX-Perspektive",
+    title: "Dimensionen der Kontrollierbarkeit aus UX-Perspektive",
   },
-  { id: "3", title: "Teil B: Human Oversight Definition & Zielsetzung" },
-  { id: "4", title: "Teil B: Design-Patterns für Human Oversight" },
-  { id: "5", title: "Teil B: UX-Herausforderungen bei Human Oversight" },
-  { id: "6", title: "Teil B: Messung und Evaluation von Human Oversight" },
+  { id: "3", title: "Human Oversight Definition & Zielsetzung" },
+  { id: "4", title: "Design-Patterns für Human Oversight" },
+  { id: "5", title: "UX-Herausforderungen bei Human Oversight" },
+  { id: "6", title: "Messung und Evaluation von Human Oversight" },
 ];
 
 const Kontrollierbarkeit = {
@@ -1282,7 +1284,7 @@ const Kontrollierbarkeit = {
     </section>,
     <section>
       <h2 className="font-black">
-        Teil A - Grundlagen der Kontrollierbarkeit in KI (UX-orientiert)
+        Grundlagen der Kontrollierbarkeit in KI (UX-orientiert)
       </h2>
       <h2>1. Einleitung: Kontrollierbarkeit in der Mensch-KI-Interaktion</h2>
       <p>
@@ -1438,7 +1440,7 @@ const Kontrollierbarkeit = {
     </section>,
     <section>
       <h2 className="font-black">
-        Teil B - Human Oversight als spezielle Form der Kontrollierbarkeit
+        Human Oversight als spezielle Form der Kontrollierbarkeit
       </h2>
       <h2>1. Definition & Zielsetzung</h2>
       <p>
@@ -1487,7 +1489,7 @@ const Kontrollierbarkeit = {
         Eingriffsmöglichkeit existiert, sondern dass diese{" "}
         <i>auffindbar, nutzbar und wirksam</i> ist. Das Oversight-Design muss
         gewährleisten, dass Nutzer:innen im richtigen Moment die nötigen
-        Informationen und die passenden Werkzeuge haben, um zu handeln – ohne
+        Informationen und die passenden Werkzeuge haben, um zu handeln - ohne
         überfordert oder durch unnötige Eingriffe ermüdet zu werden.
       </p>
     </section>,
@@ -1579,7 +1581,7 @@ const Kontrollierbarkeit = {
           Einsatzregeln festlegt und jederzeit den Einsatz beenden kann.
         </li>
       </ul>
-      <h3>Gestaltungsprinzipien über alle Patterns hinweg:</h3>
+      <h3>Gestaltungsprinzipien über alle Patterns hinweg</h3>
       <ul>
         <li>
           <b>Sichtbarkeit</b>: Kontrolloptionen müssen leicht auffindbar und
@@ -1608,7 +1610,9 @@ const Kontrollierbarkeit = {
         aus UX-Sicht nicht optimal umgesetzt werden. Dabei lassen sich die
         größten Stolpersteine in drei Hauptkategorien einteilen:
       </p>
-      <h3>1. Aufmerksamkeitsfalle ("Automation Complacency")</h3>
+      <h3>
+        1. Aufmerksamkeitsfalle <i>(Automation Complacency)</i>
+      </h3>
       <p>
         Wenn KI-Systeme über längere Zeit fehlerfrei oder sogar besser als der
         Mensch arbeiten, neigen Nutzer:innen dazu, ihre Aufmerksamkeit zu
@@ -1689,7 +1693,7 @@ const Kontrollierbarkeit = {
             </li>
             <li>
               Kontextbezogene Handlungsoptionen direkt im Erklärungsfenster
-              („Jetzt korrigieren“ statt „Gehe zu Menüpunkt 5“)
+              („Jetzt korrigieren“ statt &bdquo;Gehe zu Menüpunkt 5&ldquo;)
             </li>
           </ul>
         </li>
@@ -1866,12 +1870,6 @@ const MentaleModellkomplementarität = {
       <SubNavigation sections={sectionsMentaleKomplement} />
     </section>,
     <section>
-      <VideoContainer
-        link="https://www.youtube-nocookie.com/embed/fAJ8rQdWzv0?rel=0&modestbranding=1"
-        title="Mentale Komplementrität"
-      />
-    </section>,
-    <section>
       <h2>1. Einleitung: Was sind mentale Modelle?</h2>
       <p>
         Mentale Modelle sind <b>innere, vereinfachte Repräsentationen</b> davon,
@@ -1879,12 +1877,12 @@ const MentaleModellkomplementarität = {
         bestimmte Eingaben reagiert. Zum Beispiel definiert Johnson-Laird (1983)
         mentale Modelle als
       </p>
-      <p className="specialText">
-        “... an inner replica of a situation or set of relations, constructed
-        from perception, imagination, or discourse. These models, like a
-        physical model of the solar system or a diagram, represent the structure
-        of the world and are manipulated for reasoning, inference, and
-        understanding, rather than relying on formal logical rules.“
+      <p className="specialText text-center">
+        &bdquo;... an inner replica of a situation or set of relations,
+        constructed from perception, imagination, or discourse. These models,
+        like a physical model of the solar system or a diagram, represent the
+        structure of the world and are manipulated for reasoning, inference, and
+        understanding, rather than relying on formal logical rules.&ldquo;
       </p>
       <p>
         Mit anderen Worten, mentale Modelle sind mentale Repräsentationen -
@@ -1931,8 +1929,9 @@ const MentaleModellkomplementarität = {
         Kooperation ermöglicht.
       </p>
       <p>MMC bedeutet daher:</p>
-      <p className="specialText">
-        „Nicht Gleichheit der Modelle, sondern Komplementarität ihrer Stärken.“
+      <p className="specialText text-center">
+        &bdquo;Nicht Gleichheit der Modelle, sondern Komplementarität ihrer
+        Stärken.&ldquo;
       </p>
     </section>,
     <section>
@@ -2009,9 +2008,10 @@ const MentaleModellkomplementarität = {
           <b>dekompositionale Aufgabenstrukturierung</b>:
           <ul>
             <li>Die Gesamtaufgabe wird in Teilaufgaben zerlegt.</li>
-            <li></li>
-            <b>Mensch und KI</b> übernehmen jeweils die Komponenten, in denen
-            sie ihre spezifischen Stärken ausspielen können.
+            <li>
+              <b>Mensch und KI</b> übernehmen jeweils die Komponenten, in denen
+              sie ihre spezifischen Stärken ausspielen können.
+            </li>
             <li>
               Beispiel: In der medizinischen Diagnose übernimmt die KI das
               Screening großer Bilddatenmengen, der Mensch interpretiert
@@ -2051,7 +2051,7 @@ const MentaleModellkomplementarität = {
       <ul>
         <li>
           <b>Erklärungen nutzerzentriert gestalten</b> - z.B. durch kontrastive
-          Erklärungen: „Warum A statt B?“
+          Erklärungen: &bdquo;Warum A statt B?&ldquo;
         </li>
         <li>
           <b>Modellbildung unterstützen</b> - z.B. durch interaktive
@@ -2074,8 +2074,8 @@ const MentaleModellkomplementarität = {
     <section>
       <h2>7. Fazit: MMC als Zukunftsprinzip kollaborativer KI</h2>
       <p>
-        MMC verschiebt den Fokus weg von der reinen „Nutzerfreundlichkeit“ hin
-        zur <b>kognitiven Partnerschaft</b>: Mensch und KI sollen nicht
+        MMC verschiebt den Fokus weg von der reinen <i>Nutzerfreundlichkeit</i>{" "}
+        hin zur <b>kognitiven Partnerschaft</b>: Mensch und KI sollen nicht
         identisch, sondern anschlussfähig denken.
       </p>
       <p>
@@ -2083,8 +2083,9 @@ const MentaleModellkomplementarität = {
         <b>wechselseitig nutzbar machen</b>, entsteht ein leistungsfähiges,
         robustes und verantwortbares Entscheidungssystem.
       </p>
-      <p className="specialText">
-        „Gute KI ist nicht der bessere Mensch - sondern der bessere Partner.“
+      <p className="specialText text-center">
+        &bdquo;Gute KI ist nicht der bessere Mensch - sondern der bessere
+        Partner.&ldquo;
       </p>
     </section>,
   ],
@@ -2232,17 +2233,6 @@ const Einleitung = {
     <section>
       <h2>Aufbau der Lernmodule</h2>
       <p>Die behandelten UX-bezogenen Eigenschaften von KI-Systemen sind:</p>
-      {/* <div className="flex flex-wrap justify-center -mx-4">
-        {linksAndNames.map((item, index) => (
-          <SubTopicCard
-            key={item.link || index}
-            topicName={item.name}
-            link={item.link}
-            description={item.description}
-            number={index}
-          />
-        ))}
-      </div> */}
       <div className="flex flex-wrap justify-center -mx-4">
         {linksAndNames.map((item, index) => (
           <SubTopicCard
@@ -2254,29 +2244,7 @@ const Einleitung = {
           />
         ))}
       </div>
-      <ul>
-        <li>
-          <b>Vertrauenswürdigkeit</b>: Wann empfinden Menschen eine KI als
-          glaubwürdig und verlässlich?
-        </li>
-        <li>
-          <b>Transparenz</b>: Wie viel Einsicht in Prozesse und Daten brauchen
-          Nutzer:innen?
-        </li>
-        <li>
-          <b>Erklärbarkeit (XAI)</b>: Was macht eine gute Erklärung aus - und
-          für wen?
-        </li>
-        <li>
-          <b>Kontrollierbarkeit</b>: Wie und wann können Menschen sinnvoll
-          eingreifen?
-        </li>
-        <li>
-          <b>Mental Model Complementary</b>: Wie ergänzen sich Mensch und
-          Maschine kognitiv?
-        </li>
-      </ul>
-      <p>
+      <p className="mt-[var(--scale4)]">
         Jede Lektion führt in eine zentrale Eigenschaft ein, liefert{" "}
         <b>praxisnahe Beispiele</b>, benennt{" "}
         <b>psychologische und technologische Hintergründe</b> und bietet{" "}

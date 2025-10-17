@@ -441,7 +441,7 @@ const Vertrauenswürdigkeit = {
     </section>,
     <section>
       <h2>5. Was folgt daraus für die Gestaltung von KI?</h2>
-      <h4>Empfehlung für die Praxis:</h4>
+      <h4>Empfehlung für die Praxis</h4>
       <ul>
         <li>
           Entwickeln Sie <b>technisch vertrauenswürdige Systeme</b>, die fair,
@@ -698,7 +698,7 @@ const Transparenz = {
           <b>Verwirrung oder Misstrauen führen</b>
         </li>
       </ul>
-      <h4>Herausforderungen:</h4>
+      <h4>Herausforderungen</h4>
       <ul>
         <li>
           Unterschiedliche Zielgruppen benötigen{" "}
@@ -764,7 +764,7 @@ const Transparenz = {
         Möglichkeit zu geben,{" "}
         <b>die Entscheidungen des Systems sinnvoll einzuordnen</b>.
       </p>
-      <h4>Wichtige UX-Fragen zur Transparenz:</h4>
+      <h4>Wichtige UX-Fragen zur Transparenz</h4>
       <ul>
         <li>Welche Daten nutzt die KI - und warum?</li>
 
@@ -1693,7 +1693,7 @@ const Kontrollierbarkeit = {
           Einsatzregeln festlegt und jederzeit den Einsatz beenden kann.
         </li>
       </ul>
-      <h3>Gestaltungsprinzipien über alle Patterns hinweg:</h3>
+      <h3>Gestaltungsprinzipien über alle Patterns hinweg</h3>
       <ul>
         <li>
           <b>Sichtbarkeit</b>: Kontrolloptionen müssen leicht auffindbar und

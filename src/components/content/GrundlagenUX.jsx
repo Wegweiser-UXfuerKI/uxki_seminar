@@ -990,7 +990,7 @@ const UserExperience = {
         so genannte pragmatische und hedonische Qualitäten aufschlüsseln:
       </p>
       <Table data={pragamatischeHedonischTableData} headerStyle={true} />
-      <h3>3. Weitere Aspekte guter UX:</h3>
+      <h3>3. Weitere Aspekte guter UX</h3>
       <Table data={weitereAspkteTableDate} headerStyle={true} />
     </section>,
     <section>
@@ -1746,7 +1746,7 @@ const Einleitung = {
       />
     </section>,
     <section id="aspekte">
-      <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
+      <h2>Wichtige Aspekte der KI-bezogenen UX</h2>
       <div className="flex flex-wrap justify-center -mx-4">
         {linksAndNames.map((item, index) => (
           <SubTopicCard
@@ -1783,7 +1783,7 @@ const Fazit = {
       />
     </section>,
     <section>
-      <h2>Die 5 Grundbegriffe und ihre Relevanz:</h2>
+      <h2>Die 5 Grundbegriffe und ihre Relevanz</h2>
       <List
         items={[
           "<h4>Warum ist Usability wichtig für gemeinwohlorientierte KI?</h4> <p>Usability entspricht ungefähr dem, was viele unter „Benutzerfreundlichkeit“ verstehen. Sie stellt sicher, dass möglichst alle Menschen, unabhängig von ihrem technischen Wissen, die KI-Systeme effektiv, effizient und ohne große Hürden nutzen können. Dies ist entscheidend, um den Zugang zu gemeinwohlorientierten Diensten für eine breite Bevölkerungsschicht zu ermöglichen.</p>",

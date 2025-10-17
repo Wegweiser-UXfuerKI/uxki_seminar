@@ -155,7 +155,7 @@ const WahrgenommeneAutonomie = {
       </p>
       <ol>
         <li>
-          <h4>Anpassbare Automatisierung:</h4>
+          <h4>Anpassbare Automatisierung</h4>
           <ul>
             <li>
               Der Benutzer hat die Kontrolle über die Auswahl des
@@ -171,7 +171,7 @@ const WahrgenommeneAutonomie = {
           </ul>
         </li>
         <li>
-          <h4>Selbstanpassende Automatisierung:</h4>
+          <h4>Selbstanpassende Automatisierung</h4>
           <ul>
             <li>
               Das System überwacht den Benutzer (z. B. Arbeitsbelastung) und
@@ -420,7 +420,7 @@ const WahrgenommenesSituationsbewusstsein = {
     </section>,
     <section id="konzepte">
       <h2>2. Relevante Konzepte und Modelle</h2>
-      <h3>Drei Ebenen des Situationsbewusstsein laut Endsley (2000):</h3>
+      <h3>Drei Ebenen des Situationsbewusstsein laut Endsley (2000)</h3>
       <ol>
         <li>
           <b>Wahrnehmung:</b> Die Erfassung der relevanten Informationen in
@@ -757,7 +757,7 @@ const PerceivedTrustworthiness = {
           Prinzipien und Regeln handelt.
         </li>
       </ol>
-      <h4>Vertrauen als eine Einstellung nach Lee & See (2004):</h4>
+      <h4>Vertrauen als eine Einstellung nach Lee & See (2004)</h4>
       <p>
         Vertrauen wird als die Einstellung beschrieben, dass ein Agent/System
         dazu beitragen wird, die Ziele einer Person in einer Situation zu
@@ -1091,7 +1091,7 @@ const PerceivedConfidence = {
     </section>,
     <section id="operationalisierung">
       <h2>4. Operationalisierung: Fragebögen und Messinstrumente</h2>
-      <h4>Wahrgenommene Ergebnisdiagnostik:</h4>
+      <h4>Wahrgenommene Ergebnisdiagnostik</h4>
       <p>
         Hier wird erfasst, inwieweit die Nutzer der Meinung sind, dass die
         bereitgestellten Informationen fundiert sind und zu einer besseren
@@ -1962,7 +1962,7 @@ const EinführungUXKI = {
       </p>
     </section>,
     <section id="aspekte">
-      <h2>Wichtige Aspekte der KI-bezogenen UX:</h2>
+      <h2>Wichtige Aspekte der KI-bezogenen UX</h2>
       <div className="flex flex-wrap justify-center -mx-4">
         {linksAndNames.map((item, index) => (
           <SubTopicCard

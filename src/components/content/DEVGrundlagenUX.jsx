@@ -1,4 +1,5 @@
 import ImageElement from "../../assets/icons/usability.svg?react";
+import { Link } from "react-router-dom";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { VideoContainer } from "../1_elements/VideoContainer";
 import Accordion from "../2_molecule/Accordion";
@@ -29,83 +30,7 @@ import user_experience_quiz from "../SimpleQuizContent/grundlagenUX/user-experie
 import nutzungskontext_quiz from "../SimpleQuizContent/grundlagenUX/nutzungskontext.json";
 import mensch_computer_quiz from "../SimpleQuizContent/grundlagenUX/mensch-computer.json";
 import evaluation_quiz from "../SimpleQuizContent/grundlagenUX/evaluation.json";
-import { LinkHandler } from "../1_elements/LinkHandler";
-
-const sectionsIntro = [
-  { id: "1", title: "Intro" },
-  { id: "3", title: "Fünf Grundbegriffe" },
-];
-
-const Einleitung = {
-  linkName: "einleitung",
-  name: "Einleitung UX und Usability",
-  description:
-    "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
-  content: [
-    <ChapterHeader text={"Einleitung"} number={1} />,
-    <section>
-      <SubNavigation sections={sectionsIntro} />
-      <p>
-        In diesem Modul gibt Ihnen Prof. Dr. Hans-Christian Jetter einen
-        Überblick über die Begriffe <b>Usability</b> und <b>User Experience</b>{" "}
-        — zwei zentrale Aspekte menschzentrierter Designprozesse, die in
-        Forschung und Entwicklung eine wichtige Rolle spielen. Der Fokus auf
-        beide Aspekte während der Entwicklung eines Produkts kann einen starken
-        Einuss auf das Gesamterlebnis von Nutzenden bei der Interaktion haben.
-        Wir erklären Ihnen, wieso ein fehlender Fokus auf diese Aspekte ein
-        Produkt unattraktiver für Kunden und Nutzende machen kann, und welche
-        Punkte Sie beim Design Ihres Produkts beachten sollten. Abschließend
-        erhalten Sie Informationen und Tipps dazu, wie die beiden Aspekte
-        evaluiert werden können.
-      </p>
-    </section>,
-    <section>
-      <VideoContainer
-        link={
-          "https://www.youtube-nocookie.com/embed/9cgmeenl72s?rel=0&modestbranding=1"
-        }
-        title={"Einleitungsvideo"}
-      />
-    </section>,
-    <section id="aspekte">
-      <h2>Zusammenfassung der 5 Grundbegriffe:</h2>
-
-      {/* TODO: use SubTopic Card in the future to display subtopics */}
-      <h3>1 Usability (Gebrauchstauglichkeit):</h3>
-      <p>
-        Beschreibt, wie effektiv, effizient und zufriedenstellend Nutzende ihre
-        Ziele mit einem System erreichen. Eine gute Usability ist entscheidend
-        für Akzeptanz und Erfolg eines Produkts.
-      </p>
-      <h3>2 Nutzungskontext:</h3>
-      <p>
-        Bezieht sich auf die Rahmenbedingungen, unter denen ein System genutzt
-        wird, einschließlich Nutzendenprofil, Aufgaben, Umgebung und
-        Hilfsmittel. Ein tiefes Verständnis des Nutzungskontexts ist essenziell
-        für eine benutzerzentrierte Gestaltung.
-      </p>
-      <h3>3 User Experience (UX):</h3>
-      <p>
-        Umfasst das gesamte Nutzungserlebnis eines Produkts, einschließlich
-        subjektiver Empfindungen wie Ästhetik, Vertrauen und Freude. UX geht
-        über Usability hinaus und ist heute ein Schlüssel zum Produkterfolg.
-      </p>
-      <h3>4 Mensch-Computer-Interaktion (HCI):</h3>
-      <p>
-        Eine interdisziplinäre Forschungsdisziplin, die sich mit der Gestaltung
-        von Interaktionen zwischen Menschen und Technologie beschäftigt. Ziel
-        ist es, positive Nutzungserfahrungen durch optimierte Design- und
-        Entwicklungsprozesse zu schaffen.
-      </p>
-      <h3>5 Evaluation:</h3>
-      <p>
-        Bezeichnet die Überprüfung und Messung von Usability und UX eines
-        Systems. Durch Methoden wie Tests und Nutzerfeedback wird ermittelt, ob
-        die gewünschten Nutzungserfahrungen erreicht werden.
-      </p>
-    </section>,
-  ],
-};
+import SubTopicCard from "../2_molecule/cards/SubTopicCard";
 
 const sectionsUsability = [
   { id: "2", title: "Definition" },
@@ -303,7 +228,7 @@ const Usability = {
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
         werden.
       </p>
-      <BasicQuiz quizData={usability_quiz} />
+      <BasicQuiz quizData={usability_quiz} shuffleQuestions />
     </section>,
   ],
 };
@@ -434,9 +359,9 @@ const Nutzungskontext = {
         Mittelpunkt der Gestaltung. Dieses Vorgehen nennt man auch
         benutzerzentrierte Gestaltung. Weiteres zu diesem Vorgehen erfahren Sie
         detailliert im Kapitel{" "}
-        <LinkHandler to="/ux-und-usability/mensch-computer-interaktion">
+        <Link to="/ux-und-usability/mensch-computer-interaktion">
           <b>Mensch-Computer-Interaktion</b>
-        </LinkHandler>
+        </Link>
       </p>
       <p>Dabei können verschiedene Aspekte analysiert werden:</p>
       {/* Hier reine Liste oder auch mit Komponente für nummern? */}
@@ -591,9 +516,9 @@ const Nutzungskontext = {
         Nutzungskontext genau zu analysieren und darauf zu achten, dass die
         Aufgaben und Anforderungen der Benutzer:innen überhaupt mit den
         vorhandenen Technologien und Daten erfüllt werden können. Im Modul{" "}
-        <LinkHandler to={"/automatisierungspotenziale-erkennen"}>
+        <Link to={"/automatisierungspotenziale-erkennen"}>
           <b>Automatisierungspotenziale erkennen</b>
-        </LinkHandler>{" "}
+        </Link>{" "}
         werden wir uns eingehend damit beschäftigen, wie Automatisierungs- und
         KI-Potenziale identifiziert werden können und wie man frühzeitig
         bewerten kann, welche Prozesse sich dafür eignen, bevor eine Umsetzung
@@ -796,14 +721,10 @@ const Nutzungskontext = {
         <b>Usability-Tests</b> durchgeführt werden. Kontexte können sich ändern,
         also kann die Analyse kontinuierlich wiederholt werden. Mehr dazu in den
         Kapiteln{" "}
-        <LinkHandler to={"/ux-und-usability/mensch-computer-interaktion"}>
+        <Link to={"/ux-und-usability/mensch-computer-interaktion"}>
           Mensch-Computer-Interaktion
-        </LinkHandler>{" "}
-        und{" "}
-        <LinkHandler to={"/ux-und-usability/evaluation"}>
-          Evaluationen
-        </LinkHandler>
-        .
+        </Link>{" "}
+        und <Link to={"/ux-und-usability/evaluation"}>Evaluationen</Link>.
       </p>
     </section>,
     <section>
@@ -814,9 +735,9 @@ const Nutzungskontext = {
         <b>emotionale Aspekte</b>. Dazu gehört, dass sich die Nutzung eines
         Systems stimmig, angenehm oder motivierend anfühlt. Mehr dazu erläutern
         wir im nächsten Kapitel zur{" "}
-        <LinkHandler to={"ux-und-usability/user-experience"}>
+        <Link to={"ux-und-usability/user-experience"}>
           <b>User Experience (UX)</b>
-        </LinkHandler>
+        </Link>
         .
       </p>
     </section>,
@@ -826,7 +747,7 @@ const Nutzungskontext = {
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
         werden.
       </p>
-      <BasicQuiz quizData={nutzungskontext_quiz} />
+      <BasicQuiz quizData={nutzungskontext_quiz} shuffleQuestions />
     </section>,
   ],
 };
@@ -1016,9 +937,9 @@ const UserExperience = {
       </p>
       <p>
         Im nächsten Kapitel zur{" "}
-        <LinkHandler to="/ux-und-usability/mensch-computer-interaktion">
+        <Link to="/ux-und-usability/mensch-computer-interaktion">
           <b>Mensch-Computer-Interaktion (HCI)</b>
-        </LinkHandler>{" "}
+        </Link>{" "}
         lernen Sie zentrale Methoden zur nutzerzentrierten Gestaltung kennen.
         Zuvor befassen wir uns jedoch mit den Zielen und grundlegenden Aspekten
         guter UX.
@@ -1069,7 +990,7 @@ const UserExperience = {
         so genannte pragmatische und hedonische Qualitäten aufschlüsseln:
       </p>
       <Table data={pragamatischeHedonischTableData} headerStyle={true} />
-      <h3>3. Weitere Aspekte guter UX:</h3>
+      <h3>3. Weitere Aspekte guter UX</h3>
       <Table data={weitereAspkteTableDate} headerStyle={true} />
     </section>,
     <section>
@@ -1113,9 +1034,9 @@ const UserExperience = {
       <p>
         Im nächsten Kapitel lernen Sie, wie mithilfe nutzerzentrierter Methoden
         im Rahmen der{" "}
-        <LinkHandler to="/ux-und-usability/mensch-computer-interaktion">
+        <Link to="/ux-und-usability/mensch-computer-interaktion">
           <b>Mensch-Computer-Interaktion (HCI)</b>
-        </LinkHandler>{" "}
+        </Link>{" "}
         eine positive UX systematisch gestaltet und evaluiert werden kann.
       </p>
     </section>,
@@ -1125,7 +1046,7 @@ const UserExperience = {
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
         werden.
       </p>
-      <BasicQuiz quizData={user_experience_quiz} />
+      <BasicQuiz quizData={user_experience_quiz} shuffleQuestions />
     </section>,
   ],
 };
@@ -1281,9 +1202,9 @@ const MenschComputerInteraktion = {
             <b>Evaluationen</b>: In Usability-Tests, A/B-Tests oder durch reale
             Nutzungsszenarien („in the wild“) wird überprüft, wie gut das System
             tatsächlich funktioniert. Mehr dazu im Kapitel{" "}
-            <LinkHandler to={"/ux-und-usability/evaluation"}>
+            <Link to={"/ux-und-usability/evaluation"}>
               <b>Evaluation</b>
-            </LinkHandler>
+            </Link>
             .
           </p>,
         ]}
@@ -1346,7 +1267,7 @@ const MenschComputerInteraktion = {
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
         werden.
       </p>
-      <BasicQuiz quizData={mensch_computer_quiz} />
+      <BasicQuiz quizData={mensch_computer_quiz} shuffleQuestions />
     </section>,
   ],
 };
@@ -1439,9 +1360,9 @@ const Evaluation = {
         Experience lässt sich nicht einfach „herantesten“. Eine erfolgreiche
         Evaluation setzt daher ein grundlegendes{" "}
         <b>Verständnis der Nutzer:innen</b> und <b>ihrer Aufgaben</b> im{" "}
-        <LinkHandler to={"/ux-und-usability/nutzungskontext"}>
+        <Link to={"/ux-und-usability/nutzungskontext"}>
           <b>Nutzungskontext</b>
-        </LinkHandler>{" "}
+        </Link>{" "}
         voraus. Nur so können Rückschlüsse gezogen und Verbesserungen erzielt
         werden.
       </p>
@@ -1755,7 +1676,88 @@ const Evaluation = {
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
         werden.
       </p>
-      <BasicQuiz quizData={evaluation_quiz} />
+      <BasicQuiz quizData={evaluation_quiz} shuffleQuestions />
+    </section>,
+  ],
+};
+
+const linksAndNames = [
+  {
+    link: Usability.linkName,
+    name: Usability.name,
+    description: Usability.description,
+  },
+  {
+    link: Nutzungskontext.linkName,
+    name: Nutzungskontext.name,
+    description: Nutzungskontext.description,
+  },
+  {
+    link: UserExperience.linkName,
+    name: UserExperience.name,
+    description: UserExperience.description,
+  },
+  {
+    link: MenschComputerInteraktion.linkName,
+    name: MenschComputerInteraktion.name,
+    description: MenschComputerInteraktion.description,
+  },
+  {
+    link: Evaluation.linkName,
+    name: Evaluation.name,
+    description: Evaluation.description,
+  },
+];
+
+const sectionsIntro = [
+  { id: "1", title: "Intro" },
+  { id: "3", title: "Fünf Grundbegriffe" },
+];
+
+const Einleitung = {
+  linkName: "einleitung",
+  name: "Einleitung UX und Usability",
+  description:
+    "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
+  content: [
+    <ChapterHeader text={"Einleitung"} number={1} />,
+    <section>
+      <SubNavigation sections={sectionsIntro} />
+      <p>
+        In diesem Modul gibt Ihnen Prof. Dr. Hans-Christian Jetter einen
+        Überblick über die Begriffe <b>Usability</b> und <b>User Experience</b>{" "}
+        — zwei zentrale Aspekte menschzentrierter Designprozesse, die in
+        Forschung und Entwicklung eine wichtige Rolle spielen. Der Fokus auf
+        beide Aspekte während der Entwicklung eines Produkts kann einen starken
+        Einuss auf das Gesamterlebnis von Nutzenden bei der Interaktion haben.
+        Wir erklären Ihnen, wieso ein fehlender Fokus auf diese Aspekte ein
+        Produkt unattraktiver für Kunden und Nutzende machen kann, und welche
+        Punkte Sie beim Design Ihres Produkts beachten sollten. Abschließend
+        erhalten Sie Informationen und Tipps dazu, wie die beiden Aspekte
+        evaluiert werden können.
+      </p>
+    </section>,
+    <section>
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/9cgmeenl72s?rel=0&modestbranding=1"
+        }
+        title={"Einleitungsvideo"}
+      />
+    </section>,
+    <section id="aspekte">
+      <h2>Wichtige Aspekte der KI-bezogenen UX</h2>
+      <div className="flex flex-wrap justify-center -mx-4">
+        {linksAndNames.map((item, index) => (
+          <SubTopicCard
+            key={item.link || index}
+            topicName={item.name}
+            link={item.link}
+            description={item.description}
+            number={index}
+          />
+        ))}
+      </div>
     </section>,
   ],
 };
@@ -1781,7 +1783,7 @@ const Fazit = {
       />
     </section>,
     <section>
-      <h2>Die 5 Grundbegriffe und ihre Relevanz:</h2>
+      <h2>Die 5 Grundbegriffe und ihre Relevanz</h2>
       <List
         items={[
           "<h4>Warum ist Usability wichtig für gemeinwohlorientierte KI?</h4> <p>Usability entspricht ungefähr dem, was viele unter „Benutzerfreundlichkeit“ verstehen. Sie stellt sicher, dass möglichst alle Menschen, unabhängig von ihrem technischen Wissen, die KI-Systeme effektiv, effizient und ohne große Hürden nutzen können. Dies ist entscheidend, um den Zugang zu gemeinwohlorientierten Diensten für eine breite Bevölkerungsschicht zu ermöglichen.</p>",
@@ -1810,7 +1812,7 @@ const Quellen = {
 
 const UXBasicsData = {
   linkName: "ux-und-usability",
-  name: "UX DEV DEV DEV",
+  name: "UX und Usability",
   moduleImage: ImageElement,
   content: [
     Einleitung,

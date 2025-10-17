@@ -131,11 +131,21 @@ h2 {
   margin-bottom: var(--scale4);
 }
 
+.secondTitle,
+h2 i {
+  font-weight: 700;
+}
+
 .thirdTitle,
 h3 {
   font-size: var(--scale4);
   font-weight: 600;
   margin-bottom: var(--scale2);
+}
+
+.thirdTitle,
+h3 i {
+  font-weight: 600;
 }
 
 .fourthTitle,

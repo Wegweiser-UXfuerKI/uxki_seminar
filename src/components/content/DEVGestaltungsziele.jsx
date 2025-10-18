@@ -447,7 +447,7 @@ const sectionsTransparenz = [
 const Transparenz = {
   linkName: "transparenz",
   name: "Transparenz",
-  description: "Hier wird die Transparenz von KI-Systemen thematisiert.",
+  description: "Wie viel Einsicht in Prozesse und Daten brauchen Nutzer:innen?",
   content: [
     <ChapterHeader text={"Transparenz in KI-Systemen"} number={3} />,
     <section>
@@ -816,7 +816,7 @@ const sectionsErklaerbarkeit = [
 const Erklärbarkeit = {
   linkName: "erklaerbarkeit",
   name: "Erklärbare KI (XAI)",
-  description: "Hier wird die Erklärbarkeit von KI-Systemen thematisiert.",
+  description: "Was macht eine gute Erklärung aus – und für wen?",
   content: [
     <ChapterHeader text={"Erklärbare KI (XAI)"} number={4} />,
     <section>
@@ -1330,7 +1330,7 @@ const sectionsKontrollierbarkeit = [
 const Kontrollierbarkeit = {
   linkName: "kontrollierbarkeit",
   name: "Kontrollierbarkeit",
-  description: "Hier wird die Kontrollierbarkeit von KI-Systemen thematisiert.",
+  description: "Wie und wann können Menschen sinnvoll eingreifen?",
   content: [
     <ChapterHeader text={"Kontrollierbarkeit"} number={5} />,
     <section>
@@ -1570,7 +1570,7 @@ const Kontrollierbarkeit = {
       <h3>1. Human-in-the-Loop (HITL)</h3>
       <ul>
         <li>
-          <b>Beischreibung</b>: Der Mensch überprüft und bestätigt kritische
+          <b>Beschreibung</b>: Der Mensch überprüft und bestätigt kritische
           Entscheidungen vor ihrer Umsetzung.
         </li>
         <li>
@@ -1920,8 +1920,7 @@ const sectionsMentaleKomplement = [
 const MentaleModellkomplementarität = {
   linkName: "mentale-modelle",
   name: "Mentale Modelle",
-  description:
-    "Hier wird die Mentale Modellkomplementarität von KI-Systemen thematisiert.",
+  description: "Wie ergänzen sich Mensch und Maschine kognitiv?",
   content: [
     <ChapterHeader text={"Mentale Modelle"} number={6} />,
     <section>
@@ -1935,7 +1934,7 @@ const MentaleModellkomplementarität = {
         Mentale Modelle sind <b>innere, vereinfachte Repräsentationen</b> davon,
         wie ein System funktioniert, welche Ziele es verfolgt und wie es auf
         bestimmte Eingaben reagiert. Zum Beispiel definiert Johnson-Laird (1983)
-        mentale Modelle als
+        mentale Modelle als:
       </p>
       <p className="specialText text-center">
         &bdquo;... an inner replica of a situation or set of relations,
@@ -2027,109 +2026,79 @@ const MentaleModellkomplementarität = {
         Gestaltung:
       </p>
       <h3>a) Transparenz & Erklärbarkeit</h3>
-      <ul>
-        <li>
-          Systeme sollten ihr Vorgehen <b>offenlegen</b>, sodass Nutzer:innen
-          Schlüsse daraus ziehen können.
-        </li>
-        <li>Beispiel: Feature-Visualisierung oder Konfidenzwerte anzeigen.</li>
-      </ul>
+      <p>
+        Systeme sollten ihr Vorgehen <b>offenlegen</b>, sodass Nutzer:innen
+        Schlüsse daraus ziehen können. <br />
+        <b>Beispiel:</b> Feature-Visualisierung oder Konfidenzwerte anzeigen.
+      </p>
       <h3>b) Unterstütztes Modelllernen</h3>
-      <ul>
-        <li>
-          Nutzer:innen sollten durch{" "}
-          <b>Feedback, Visualisierungen oder Simulationen</b> ein mentales
-          Modell entwickeln können.
-        </li>
-        <li>
-          KI kann den Menschen auch über <b>eigene Grenzen informieren</b>{" "}
-          (Meta-Kommunikation)
-        </li>
-      </ul>
+      <p>
+        Nutzer:innen sollten durch{" "}
+        <b>Feedback, Visualisierungen oder Simulationen</b> ein mentales Modell
+        entwickeln können.
+      </p>
+      <p>
+        KI kann den Menschen auch über <b>eigene Grenzen informieren</b>{" "}
+        (Meta-Kommunikation).
+      </p>
       <h3>c) Bidirektionale Anpassung</h3>
-      <ul>
-        <li>
-          Nicht nur der Mensch passt sich an das System an - das System kann
-          auch <b>auf den mentalen Zustand des Menschen reagieren</b>, z.B.
-          durch adaptive Erklärungen oder Warnhinweise
-        </li>
-      </ul>
+      <p>
+        Nicht nur der Mensch passt sich an das System an - das System kann auch{" "}
+        <b>auf den mentalen Zustand des Menschen reagieren</b>, z.B. durch
+        adaptive Erklärungen oder Warnhinweise.
+      </p>
       <h3>d) Gemeinsame Aufgabenstruktur</h3>
-      <ul>
-        <li>
-          Interfaces sollten <b>Aufgaben so aufbereiten</b>, dass sie
-          menschliche und maschinelle Beiträge sichtbar und kombinierbar machen.
-        </li>
-      </ul>
+      <p>
+        Interfaces sollten <b>Aufgaben so aufbereiten</b>, dass sie menschliche
+        und maschinelle Beiträge sichtbar und kombinierbar machen.
+      </p>
       <h3>e) Dekompositionale Aufgabenverteilung</h3>
-      <ul>
-        <li>
-          Eine zentrale Technik zur Förderung von MMC ist die{" "}
-          <b>dekompositionale Aufgabenstrukturierung</b>:
-          <ul>
-            <li>Die Gesamtaufgabe wird in Teilaufgaben zerlegt.</li>
-            <li>
-              <b>Mensch und KI</b> übernehmen jeweils die Komponenten, in denen
-              sie ihre spezifischen Stärken ausspielen können.
-            </li>
-            <li>
-              Beispiel: In der medizinischen Diagnose übernimmt die KI das
-              Screening großer Bilddatenmengen, der Mensch interpretiert
-              auffällige Ergebnisse im Kontext individueller Patient:innen.
-            </li>
-          </ul>
-        </li>
-        <li>
-          Vorteil: Dekomposition fördert klare Zustädnigkeiten und gegenseitiges
-          Vertrauen - jeder Teilnehmende versteht die Rolle des anderen
-        </li>
-      </ul>
+      <p>
+        Eine zentrale Technik zur Förderung von MMC ist die{" "}
+        <b>dekompositionale Aufgabenstrukturierung</b>:
+        <ul>
+          <li>Die Gesamtaufgabe wird in Teilaufgaben zerlegt.</li>
+          <li>
+            <b>Mensch und KI</b> übernehmen jeweils die Komponenten, in denen
+            sie ihre spezifischen Stärken ausspielen können.
+          </li>
+          <li>
+            <b>Beispiel:</b> In der medizinischen Diagnose übernimmt die KI das
+            Screening großer Bilddatenmengen, der Mensch interpretiert
+            auffällige Ergebnisse im Kontext individueller Patient:innen.
+          </li>
+        </ul>
+      </p>
+      <p>
+        <b>Vorteil:</b> Dekomposition fördert klare Zustädnigkeiten und
+        gegenseitiges Vertrauen - jeder Teilnehmende versteht die Rolle des
+        anderen
+      </p>
     </section>,
     <section>
       <h2>5. Herausforderungen bei MMC</h2>
-      <ul>
-        <li>
-          <b>Modellkonflikte</b>: Mensch und KI kommen zu widersprüchlichen
-          Einschätzungen.
-        </li>
-        <li>
-          <b>Modellunsicherheit</b>: Menschen haben kein stabiles Modell der KI
-          - besonders bei intransparentem Verhalten.
-        </li>
-        <li>
-          <b>Kognitive Überlastung</b>: Zu viele Informationen über die
-          Funktionsweise der KI können überfordern.
-        </li>
-        <li>
-          <b>Missverständnisse</b>: Menschen interpretieren KI-Ausgaben nach
-          ihren eigenen kognitiven Mustern, was zu Fehlurteilen führen kann.
-        </li>
-      </ul>
+      <List
+        items={[
+          "<b>Modellkonflikte</b>: Mensch und KI kommen zu widersprüchlichen Einschätzungen.",
+          "<b>Modellunsicherheit</b>: Menschen haben kein stabiles Modell der KI - besonders bei intransparentem Verhalten.",
+          "<b>Kognitive Überlastung</b>: Zu viele Informationen über die Funktionsweise der KI können überfordern.",
+          "<b>Missverständnisse</b>: Menschen interpretieren KI-Ausgaben nach ihren eigenen kognitiven Mustern, was zu Fehlurteilen führen kann.",
+        ]}
+        alignItems="center"
+      />
     </section>,
     <section>
       <h2>6. Empfehlungen zur Förderung von MMC</h2>
-      <ul>
-        <li>
-          <b>Erklärungen nutzerzentriert gestalten</b> - z.B. durch kontrastive
-          Erklärungen: &bdquo;Warum A statt B?&ldquo;
-        </li>
-        <li>
-          <b>Modellbildung unterstützen</b> - z.B. durch interaktive
-          Visualisierungen oder kontrolliertes Experimentieren mit dem System
-        </li>
-        <li>
-          <b>Unterschiede sichtbar machen</b> - etwa durch Darstellung
-          divergierender Einschätzungen zwischen Mensch und Maschine
-        </li>
-        <li>
-          <b>Training & Reflexion</b> - Nutzer:innen sollten explizit über ihr
-          mentales Modell nachdenken (z.B. in Schulung oder Feedbacksituationen)
-        </li>
-        <li>
-          <b>Systemverhalten adaptiv gestalten</b> - z.B. mehr Erklärungen bei
-          erkennbarer Unsicherheit oder falscher Nutzung
-        </li>
-      </ul>
+      <List
+        items={[
+          "<b>Erklärungen nutzerzentriert gestalten</b> - z.B. durch kontrastive Erklärungen: &bdquo;Warum A statt B?&ldquo;",
+          "<b>Modellbildung unterstützen</b> - z.B. durch interaktive Visualisierungen oder kontrolliertes Experimentieren mit dem System",
+          "<b>Unterschiede sichtbar machen</b> - etwa durch Darstellung divergierender Einschätzungen zwischen Mensch und Maschine",
+          "<b>Training & Reflexion</b> - Nutzer:innen sollten explizit über ihr mentales Modell nachdenken (z.B. in Schulung oder Feedbacksituationen)",
+          "<b>Systemverhalten adaptiv gestalten</b> - z.B. mehr Erklärungen bei erkennbarer Unsicherheit oder falscher Nutzung",
+        ]}
+        alignItems="center"
+      />
     </section>,
     <section>
       <h2>7. Fazit: MMC als Zukunftsprinzip kollaborativer KI</h2>

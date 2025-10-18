@@ -172,7 +172,7 @@ const Vertrauenswürdigkeit = {
         gefährlich sind. Dadurch wirkt Vertrauenswürdigkeit aufgrund ihrer
         Kontextabhängigkeit nicht überprüfbar und objektiv - so wie Vertrauen.
       </p>
-      <h3>3a. Wie entsteht Vertrauen in KI-Systeme?</h3>
+      <h3>3a) Wie entsteht Vertrauen in KI-Systeme?</h3>
       <p>
         Vertrauen entsteht <b>nicht automatisch</b> durch technische Qualität.
         Es ist ein psychologischer und sozialer Prozess. Ein hilfreiches Modell
@@ -221,7 +221,7 @@ const Vertrauenswürdigkeit = {
         UX-Design muss beide Dimensionen - kognitiv und affektiv - mitdenken, um
         angemessenes Vertrauen in KI-Systeme zu ermöglichen.
       </p>
-      <h3>3b. Warum reicht Vertrauen allein nicht aus?</h3>
+      <h3>3b) Warum reicht Vertrauen allein nicht aus?</h3>
       <p>
         Ein entscheidender Punkt: Nur weil Menschen einem System vertrauen, ist
         es noch lange nicht vertrauenswürdig. Und umgekehrt.
@@ -263,7 +263,7 @@ const Vertrauenswürdigkeit = {
         Für ein System, das als vertrauenswürdig gelten soll, werden in der
         Regel folgende Eigenschaften gefordert:
       </p>
-      <h4>1. Technische Robustheit und Sicherheit</h4>
+      <h4>a) Technische Robustheit und Sicherheit</h4>
       <p>
         Das System soll unter normalen und außergewöhnlichen Bedingungen
         zuverlässig arbeiten. Zu relevanten Aspekten zählen z. B.
@@ -275,7 +275,7 @@ const Vertrauenswürdigkeit = {
         Sicherheitsereignisse klar informiert werden.
       </p>
 
-      <h4>2. Transparenz und Erklärbarkeit</h4>
+      <h4>b) Transparenz und Erklärbarkeit</h4>
       <p>
         Entscheidungen und Prozesse sollen nachvollziehbar und überprüfbar sein.
         Dazu zählt u. a. die Offenlegung der Funktionsweise (z. B.
@@ -287,7 +287,7 @@ const Vertrauenswürdigkeit = {
         Form präsentiert werden (Text, Visualisierung, interaktive Elemente).
       </p>
 
-      <h4>3. Fairness</h4>
+      <h4>c) Fairness</h4>
       <p>
         KI soll Personen oder Gruppen nicht benachteiligen oder privilegieren,
         es sei denn, dies ist explizit gerechtfertigt (z. B. positive
@@ -300,7 +300,7 @@ const Vertrauenswürdigkeit = {
         gekommen sind.
       </p>
 
-      <h4>4. Datenschutz und Daten-Governance</h4>
+      <h4>d) Datenschutz und Daten-Governance</h4>
       <p>
         Schutz personenbezogener Daten und verantwortungsvoller Umgang mit
         sensiblen Informationen. Dazu zählt u. a. Privacy by Design, Minimierung
@@ -311,7 +311,7 @@ const Vertrauenswürdigkeit = {
         können, welche Daten genutzt werden.
       </p>
 
-      <h4>5. Rechenschaftspflicht & Verantwortung</h4>
+      <h4>e) Rechenschaftspflicht & Verantwortung</h4>
       <p>
         Es muss klar sein, wer für das Verhalten des Systems verantwortlich ist,
         und es muss möglich sein, Entscheidungen im Nachhinein zu überprüfen.
@@ -323,7 +323,7 @@ const Vertrauenswürdigkeit = {
         von Problemen wenden können.
       </p>
 
-      <h4>6. Human Agency & Oversight</h4>
+      <h4>f) Human Agency & Oversight</h4>
       <p>
         Menschen behalten die Kontrolle über kritische Entscheidungen. Dazu
         zählen z. B. Mechanismen wie Human-in-the-Loop, Abschaltmöglichkeiten,
@@ -342,9 +342,7 @@ const Vertrauenswürdigkeit = {
     </section>,
     <section>
       <h2>5. Was folgt daraus für die Gestaltung von KI?</h2>
-      <p>
-        <b>Empfehlung für die Praxis:</b>
-      </p>
+      <h4>Empfehlung für die Praxis:</h4>
       <List
         items={[
           "Entwickeln Sie <b>technisch vertrauenswürdige Systeme</b>, die fair, robust und nachvollziehbar sind.",
@@ -2028,13 +2026,13 @@ const MentaleModellkomplementarität = {
         Damit mentale Modelle komplementär werden, braucht es gezielte
         Gestaltung:
       </p>
-      <h3>a) Transparenz & Erklärbarkeit</h3>
+      <h4>a) Transparenz & Erklärbarkeit</h4>
       <p>
         Systeme sollten ihr Vorgehen <b>offenlegen</b>, sodass Nutzer:innen
         Schlüsse daraus ziehen können. <br />
         <b>Beispiel:</b> Feature-Visualisierung oder Konfidenzwerte anzeigen.
       </p>
-      <h3>b) Unterstütztes Modelllernen</h3>
+      <h4>b) Unterstütztes Modelllernen</h4>
       <p>
         Nutzer:innen sollten durch{" "}
         <b>Feedback, Visualisierungen oder Simulationen</b> ein mentales Modell
@@ -2044,18 +2042,18 @@ const MentaleModellkomplementarität = {
         KI kann den Menschen auch über <b>eigene Grenzen informieren</b>{" "}
         (Meta-Kommunikation).
       </p>
-      <h3>c) Bidirektionale Anpassung</h3>
+      <h4>c) Bidirektionale Anpassung</h4>
       <p>
         Nicht nur der Mensch passt sich an das System an - das System kann auch{" "}
         <b>auf den mentalen Zustand des Menschen reagieren</b>, z.B. durch
         adaptive Erklärungen oder Warnhinweise.
       </p>
-      <h3>d) Gemeinsame Aufgabenstruktur</h3>
+      <h4>d) Gemeinsame Aufgabenstruktur</h4>
       <p>
         Interfaces sollten <b>Aufgaben so aufbereiten</b>, dass sie menschliche
         und maschinelle Beiträge sichtbar und kombinierbar machen.
       </p>
-      <h3>e) Dekompositionale Aufgabenverteilung</h3>
+      <h4>e) Dekompositionale Aufgabenverteilung</h4>
       <p>
         Eine zentrale Technik zur Förderung von MMC ist die{" "}
         <b>dekompositionale Aufgabenstrukturierung</b>:

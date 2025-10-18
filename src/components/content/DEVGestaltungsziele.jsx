@@ -660,13 +660,11 @@ const Transparenz = {
         <li>Wie zuverlässig ist dieses Ergebnis?</li>
         <li>Welche Grenzen, Risiken oder Unsicherheiten bestehen?</li>
       </ul>
-      <p>
-        <b>1. Prozess-Transparenz</b>: Offenlegung der Entstehung und
-        Funktionsweise eines KI-Systems.
-      </p>
+      <h4>1. Prozess-Transparenz</h4>
+      <p>Offenlegung der Entstehung und Funktionsweise eines KI-Systems.</p>
       <ul>
         <li>
-          <b>Beinhaltet z.B</b>: Herkunft und Qualität der Trainingsdaten,
+          <b>Beispielsweise</b>: Herkunft und Qualität der Trainingsdaten,
           Beschreibung der Modellarchitektur und verwendeten Algorithmen,
           inklusive Trainingsverhalten, sowie Zieldefinition und Systemgrenze.
         </li>
@@ -674,20 +672,18 @@ const Transparenz = {
           <b>Zweck</b>: Hilft Nutzer:innen und Prüfern, konkrete Ergebnisse zu
           verstehen, zu hinterfragen und ggf. zu korrigieren.
         </li>
-        <li>
-          <b>UX-Bezug</b>: Prozessinformationen müssen in einer Form verfügbar
-          sein, die sowohl für Fachleute als auch für betroffene Nutzer:innen
-          zugänglich ist - z.B. über interaktive Dokumentationen oder „About
-          this AI“-Sektionen.
-        </li>
       </ul>
-      <p>
-        <b>2. Entscheidungs-Transparenz: Definition</b>: Nachvollziehbarkeit
-        einzelner Entscheidungen oder Outputs der KI
+      <p className="specialText">
+        <b>UX-Bezug</b>: Prozessinformationen müssen in einer Form verfügbar
+        sein, die sowohl für Fachleute als auch für betroffene Nutzer:innen
+        zugänglich ist - z.B. über interaktive Dokumentationen oder „About this
+        AI“-Sektionen.
       </p>
+      <h4>2. Entscheidungs-Transparenz</h4>
+      <p>Nachvollziehbarkeit einzelner Entscheidungen oder Outputs der KI</p>
       <ul>
         <li>
-          <b>Beinhaltet z.B</b>: Begründung, warum eine bestimmte Entscheidung
+          <b>Beispielsweise</b>: Begründung, warum eine bestimmte Entscheidung
           getroffen wurde, Darstellung der wichtigsten Einflussfaktoren, Angabe
           von Unsicherheiten oder Wahrscheinlichkeiten
         </li>
@@ -695,20 +691,20 @@ const Transparenz = {
           <b>Zweck</b>: Hilft Nutzer:innen und Prüfern, konkrete Ergebnisse zu
           verstehen, zu hinterfragen und ggf. zu korrigieren.
         </li>
-        <li>
-          <b>UX-Bezug</b>: Erklärungen müssen <b>kontextbezogen</b> und{" "}
-          <b>handlungsrelevant</b> sein, z. B. durch visuelle Hervorhebung
-          relevanter Datenpunkte oder Szenario-abhängige Erklärtexte.
-        </li>
       </ul>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Erklärungen müssen <b>kontextbezogen</b> und{" "}
+        <b>handlungsrelevant</b> sein, z. B. durch visuelle Hervorhebung
+        relevanter Datenpunkte oder Szenario-abhängige Erklärtexte.
+      </p>
+      <h4>3. Governance-Transparenz</h4>
       <p>
-        <b>3. Governance-Transparenz: Definition</b>: Offenlegung der
-        organisatorischen und regulatorischen Rahmenbedingungen, unter denen ein
-        KI-System betrieben wird.
+        Offenlegung der organisatorischen und regulatorischen Rahmenbedingungen,
+        unter denen ein KI-System betrieben wird.
       </p>
       <ul>
         <li>
-          <b>Beinhaltet z.B</b>: Zuständigkeiten und Verantwortlichkeiten,
+          <b>Beispielsweise</b>: Zuständigkeiten und Verantwortlichkeiten,
           Eingesetzte Audit- und Überwachungsprozesse, Einhaltung von Standards
           und Zertifizierungen
         </li>
@@ -716,12 +712,12 @@ const Transparenz = {
           <b>Zweck</b>: Ermöglicht es Stakeholdern, die Verantwortungsstruktur
           zu verstehen und im Problemfall geeignete Ansprechpersonen zu finden.
         </li>
-        <li>
-          <b>UX-Bezug</b>: Governance-Informationen sollten für Endnutzer:innen
-          einfach auffindbar sein, z. B. über leicht zugängliche Hilfeseiten,
-          Zertifikatsanzeigen oder Compliance-Labels im Interface.
-        </li>
       </ul>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Governance-Informationen sollten für Endnutzer:innen
+        einfach auffindbar sein, z. B. über leicht zugängliche Hilfeseiten,
+        Zertifikatsanzeigen oder Compliance-Labels im Interface.
+      </p>
       <p>
         <b>Zusammenhang der Dimensionen</b>:
       </p>
@@ -1077,7 +1073,71 @@ const Erklärbarkeit = {
     </section>,
     <section>
       <h2>5. Wirkung von Erklärungen - Chancen und Risiken</h2>
-      <p>Gut gestaltete Erklärungen können:</p>
+      <p>
+        Erklärungen können gut gestaltet sein, wobei es deutliche Grenzen gibt
+        und sie auch so gestaltet sein können, dass es problematisch ist.
+      </p>
+      <TabSwitchView>
+        <div title="Gut gestaltete Erklärungen">
+          <ul>
+            <li>
+              <b>Verständlichkeit</b>: Klar, nachvollziehbar, ohne Fachjargon
+            </li>
+            <li>
+              <b>Relevanz</b>: Fokussiert auf das, was Nutzer:innen wirklich
+              interessiert
+            </li>
+            <li>
+              <b>Treffsicherheit</b>: Erfasst die zentrale Logik der
+              Entscheidungen
+            </li>
+            <li>
+              <b>Vertrauensbildung</b>: Fördert angemessenes Vertrauen (weder
+              blind noch misstrauisch)
+            </li>
+            <li>
+              <b>Lernförderlich</b>: Hilft, ein mentales Modell aufzubauen
+            </li>
+          </ul>
+        </div>
+        <div title="Grenzen">
+          <ul>
+            <li>
+              <b>Komplexität des Modells</b>: Hochdimensionale Netze haben keine
+              klaren "Entscheidungswege"
+            </li>
+            <li>
+              <b>Datenabhängigkeit</b>: Erklärungen sind nur so gut wie die
+              Daten, die verwendet wurden
+            </li>
+            <li>
+              <b>Missverständnisse</b>: Nutzer:innen interpretieren Erklärungen
+              anders als intendiert
+            </li>
+            <li>
+              <b>Manipulation</b>: Erklärungen können auch genutzt werden, um
+              Vertrauen zu erzwingen
+            </li>
+          </ul>
+        </div>
+        <div title="Problematisch">
+          <ul>
+            <li>
+              <b>Falsche oder ungenaue Erklärungen</b> können zu fehlerhaften
+              Verhalten führen
+            </li>
+            <li>
+              <b>Übermäßige Vereinfachungen</b> können relevante Aspekte
+              verschleiern
+            </li>
+            <li>
+              <b>Erklärungen können manipulativ wirken</b>, wenn sie Vertrauen
+              erzeugen sollen, wo Misstrauen angemessen wäre
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
+      {/* <p>Gut gestaltete Erklärungen können:</p>
       <ul>
         <li>
           <b>Verständlichkeit</b>: Klar, nachvollziehbar, ohne Fachjargon
@@ -1130,7 +1190,9 @@ const Erklärbarkeit = {
           <b>Erklärungen können manipulativ wirken</b>, wenn sie Vertrauen
           erzeugen sollen, wo Misstrauen angemessen wäre
         </li>
-      </ul>
+      </ul> */}
+      {/* TODO: remember this */}
+      <div className="h-[var(--scale3)]"></div>
       <Accordion
         title="Beispiel aus der Forschung (Kühl et al., 2024)"
         initiallyOpen={false}>
@@ -1826,12 +1888,10 @@ const Kontrollierbarkeit = {
         Evaluation ist kein einmaliger Schritt, sondern Teil eines{" "}
         <i>iterative Design Loops</i>:
       </p>
-      <ol>
-        <li>Messen</li>
-        <li>Analysieren</li>
-        <li>Interface anpassen</li>
-        <li>Erneut testen</li>
-      </ol>
+      <List
+        items={["Messen", "Analysieren", "Interface anpassen", "Erneut testen"]}
+        alignItems="center"
+      />
       <p>
         Gerade in adaptiven KI-Systemen kann sich das Nutzerverhalten im Laufe
         der Zeit ändern, was regelmäßige Re-Evaluationen nötig macht.

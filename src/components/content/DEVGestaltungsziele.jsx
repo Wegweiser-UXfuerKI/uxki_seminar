@@ -431,14 +431,14 @@ const Vertrauenswürdigkeit = {
 };
 
 const sectionsTransparenz = [
-  { id: "1", title: "Einleitung: Warum ist Transparenz wichtig?" },
-  { id: "2", title: "Definition: Was bedeutet Transparenz in der KI?" },
-  { id: "3", title: "Beispiel: Denkmal-Entscheidung per Bildanalyse" },
-  { id: "4", title: "Warum ist Transparenz nicht trivial?" },
-  { id: "5", title: "Wie lässt sich Transparenz herstellen?" },
-  { id: "6", title: "Praktische Tipps zu Gestaltung transparenter KI" },
+  { id: "3", title: "Einleitung: Warum ist Transparenz wichtig?" },
+  { id: "4", title: "Definition: Was bedeutet Transparenz in der KI?" },
+  { id: "5", title: "Beispiel: Denkmal-Entscheidung per Bildanalyse" },
+  { id: "6", title: "Warum ist Transparenz nicht trivial?" },
+  { id: "7", title: "Wie lässt sich Transparenz herstellen?" },
+  { id: "8", title: "Praktische Tipps zu Gestaltung transparenter KI" },
   {
-    id: "7",
+    id: "9",
     title:
       "Fazit: Transparenz als Brücke zum Vertrauen und Grundlage für weitere UX-bezogene Eigenschaften",
   },
@@ -808,13 +808,13 @@ const Transparenz = {
 };
 
 const sectionsErklaerbarkeit = [
-  { id: "1", title: "Einleitung: Was ist XAI und warum ist sie wichtig?" },
-  { id: "2", title: "Sind KI Systeme immer erklärbar?" },
-  { id: "3", title: "Warum ist Erklärbarkeit komplex?" },
-  { id: "4", title: "Arten von Erklärbarkeit" },
-  { id: "5", title: "Wirkung von Erklärungen - Chancen und Risiken" },
-  { id: "6", title: "Gestaltungshinweise und praktische Tipps" },
-  { id: "7", title: "Fazit: XAI als kontinuierlicher Gestaltungsprozess" },
+  { id: "3", title: "Einleitung: Was ist XAI und warum ist sie wichtig?" },
+  { id: "4", title: "Sind KI Systeme immer erklärbar?" },
+  { id: "5", title: "Warum ist Erklärbarkeit komplex?" },
+  { id: "6", title: "Arten von Erklärbarkeit" },
+  { id: "7", title: "Wirkung von Erklärungen - Chancen und Risiken" },
+  { id: "8", title: "Gestaltungshinweise und praktische Tipps" },
+  { id: "9", title: "Fazit: XAI als kontinuierlicher Gestaltungsprozess" },
 ];
 
 const Erklärbarkeit = {
@@ -1252,17 +1252,17 @@ const Erklärbarkeit = {
 
 const sectionsKontrollierbarkeit = [
   {
-    id: "1",
+    id: "3",
     title: "Einleitung: Kontrollierbarkeit in der Mensch-KI-Interaktion",
   },
   {
-    id: "2",
+    id: "4",
     title: "Dimensionen der Kontrollierbarkeit aus UX-Perspektive",
   },
-  { id: "3", title: "Human Oversight Definition & Zielsetzung" },
-  { id: "4", title: "Design-Patterns für Human Oversight" },
-  { id: "5", title: "UX-Herausforderungen bei Human Oversight" },
-  { id: "6", title: "Messung und Evaluation von Human Oversight" },
+  { id: "5", title: "Human Oversight Definition & Zielsetzung" },
+  { id: "6", title: "Design-Patterns für Human Oversight" },
+  { id: "7", title: "UX-Herausforderungen bei Human Oversight" },
+  { id: "8", title: "Messung und Evaluation von Human Oversight" },
 ];
 
 const Kontrollierbarkeit = {
@@ -1849,13 +1849,13 @@ const Kontrollierbarkeit = {
 };
 
 const sectionsMentaleKomplement = [
-  { id: "1", title: "Einleitung: Was sind mentale Modelle?" },
-  { id: "2", title: "Was bedeutet Mental Model Complementary (MMC)?" },
-  { id: "3", title: "Warum ist MMC wichtig?" },
-  { id: "4", title: "Gestaltung von MMC in der Praxis" },
-  { id: "5", title: "Herausforderungen bei MMC" },
-  { id: "6", title: "Empfehlungen zur Förderung von MMC" },
-  { id: "7", title: "Fazit: MMC als Zukunftsprinzip kollaborativer KI" },
+  { id: "2", title: "Einleitung: Was sind mentale Modelle?" },
+  { id: "3", title: "Was bedeutet Mental Model Complementary (MMC)?" },
+  { id: "4", title: "Warum ist MMC wichtig?" },
+  { id: "5", title: "Gestaltung von MMC in der Praxis" },
+  { id: "6", title: "Herausforderungen bei MMC" },
+  { id: "7", title: "Empfehlungen zur Förderung von MMC" },
+  { id: "8", title: "Fazit: MMC als Zukunftsprinzip kollaborativer KI" },
 ];
 const MentaleModellkomplementarität = {
   linkName: "mentale-modelle",

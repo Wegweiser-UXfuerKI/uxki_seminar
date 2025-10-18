@@ -953,43 +953,48 @@ const Erklärbarkeit = {
         </li>
       </ul>
       <p>
-        Ein Beispiel: Die Aussage "Die Entscheidung basiert auf der Position des
-        Entscheidungsraums in Feature X" ist für Laien nicht hilfreich. Besser
-        wäre: &bdquo;Ihr monatliches Einkommen liegt unter 3.200€, was zur
-        Ablehnung beigetragen hat.&ldquo;
+        Ein Beispiel: Die Aussage &bdquo;Die Entscheidung basiert auf der
+        Position des Entscheidungsraums in Feature X&ldquo; ist für Laien nicht
+        hilfreich. Besser wäre: &bdquo;Ihr monatliches Einkommen liegt unter
+        3.200€, was zur Ablehnung beigetragen hat.&ldquo;
       </p>
     </section>,
     <section>
       <h2>4. Arten von Erklärungen in XAI</h2>
       <p>
         Erklärungen können auf unterschiedliche Weisen strukturiert sein. Man
-        unterscheidet insbesondere:
+        unterscheidet insbesondere <b>Lokale und Globale Erklärungen</b>:
       </p>
-      <h3>Lokale Erklärungen</h3>
-      <p>
-        Diese beziehen sich auf eine <b>konkrete Entscheidung</b> eines
-        KI-Systems. Sie beantworten die Frage: &bdquo;Warum genau wurde in
-        diesem Fall X und nicht Y entschieden?&ldquo;
-      </p>
-      <ul>
-        <li>Zeigen den Einfluss einzelner Eingabeparameter</li>
-        <li>Typische Methoden: SHAP, LIME, Counterfactuals</li>
-      </ul>
-      <h3>Globale Erklärungen</h3>
-      <p>
-        Sie beschreiben die <b>allgemeine Funktionsweise</b> des Modells über
-        viele Entscheidungen hinweg:
-      </p>
-      <ul>
-        <li>
-          Sie geben einen Überblick über Entscheidungslogik des Modells und
-          erläutern,
-        </li>
-        <li>
-          welchen Einfluss verschiedene Variablen haben und wie sie
-          zusammenhängen
-        </li>
-      </ul>
+      <TabSwitchView>
+        <div title="Lokale Erklärungen">
+          <p>
+            Diese beziehen sich auf eine <b>konkrete Entscheidung</b> eines
+            KI-Systems. Sie beantworten die Frage: &bdquo;Warum genau wurde in
+            diesem Fall X und nicht Y entschieden?&ldquo;
+          </p>
+          <ul>
+            <li>Zeigen den Einfluss einzelner Eingabeparameter</li>
+            <li>Typische Methoden: SHAP, LIME, Counterfactuals</li>
+          </ul>
+        </div>
+        <div title="Globale Erklärungen">
+          <p>
+            Sie beschreiben die <b>allgemeine Funktionsweise</b> des Modells
+            über viele Entscheidungen hinweg:
+          </p>
+          <ul>
+            <li>
+              Sie geben einen Überblick über Entscheidungslogik des Modells und
+              erläutern,
+            </li>
+            <li>
+              welchen Einfluss verschiedene Variablen haben und wie sie
+              zusammenhängen
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
+      <div className="h-[var(--scale3)]"></div>
       <Accordion
         title="Beispiel für ein Kreditbewertungsmodell"
         initiallyOpen={false}>
@@ -1013,16 +1018,15 @@ const Erklärbarkeit = {
           unabhängig von einer einzelnen Kundenentscheidung.
         </p>
       </Accordion>
-      <h3>Weitere Einteilungen (Speith, 2020)</h3>
+      <h3 className="mt-20">Weitere Einteilungen (Speith, 2020)</h3>
       <p>
-        <b>Post-hoc vs intrinsisch</b>: Erklärung wird entweder nachträglich
+        <b>Post-hoc vs. intrinsisch</b>: Erklärung wird entweder nachträglich
         erzeugt oder ergibt sich aus der Modellstruktur selbst (z.B.
-        Entscheidungsbaum)
+        Entscheidungsbaum).
       </p>
-      <ul>
-        <li>
-          <b>Modellbasierte (intrinsische) Erklärbarkeit</b>: Das Modell selbst
-          ist bereits transparent und verständlich
+      <TabSwitchView>
+        <div title="Modellbasierte (intrinsische) Erklärbarkeit">
+          <p>Das Modell selbst ist bereits transparent und verständlich.</p>
           <ul>
             <li>
               <b>Entscheidungsbäume</b> - Entscheidungen folgen klaren Regeln
@@ -1036,17 +1040,16 @@ const Erklärbarkeit = {
               IF-THEN-Strukturen
             </li>
           </ul>
-        </li>
-        <li>
-          <b>Post-hoc-Erklärungen</b>: Hier wird das Verhalten eines komplexen,
-          intransparenten Modells nachträglich analysiert. Häufige Ansätze sind:
+        </div>
+        <div title="Post-hoc-Erklärungen">
+          <p>
+            Hier wird das Verhalten eines komplexen, intransparenten Modells
+            nachträglich analysiert. Häufige Ansätze sind:
+          </p>
           <ul>
             <li>
-              Feature-Attribution:{" "}
-              <i>
-                Wie wichtig war ein bestimmtes Eingabefeature für diese
-                Entscheidung?
-              </i>
+              <b> Feature-Attribution:</b> Wie wichtig war ein bestimmtes
+              Eingabefeature für diese Entscheidung?
               <ul>
                 <li>
                   <b>SHAP (SHapley Additive exPlanations)</b>
@@ -1068,8 +1071,8 @@ const Erklärbarkeit = {
               Hilfsmittel wie Diagramme, Heatmaps, Salience Maps
             </li>
           </ul>
-        </li>
-      </ul>
+        </div>
+      </TabSwitchView>
     </section>,
     <section>
       <h2>5. Wirkung von Erklärungen - Chancen und Risiken</h2>

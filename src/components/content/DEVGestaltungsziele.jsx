@@ -584,7 +584,7 @@ const Transparenz = {
           <b>Verwirrung oder Misstrauen führen</b>
         </li>
       </ul>
-      <h4>Herausforderungen</h4>
+      <h4>Herausforderungen:</h4>
       <ul>
         <li>
           Unterschiedliche Zielgruppen benötigen{" "}
@@ -650,14 +650,19 @@ const Transparenz = {
         Möglichkeit zu geben,{" "}
         <b>die Entscheidungen des Systems sinnvoll einzuordnen</b>.
       </p>
-      <h4>Wichtige UX-Fragen zur Transparenz</h4>
-      <ul>
-        <li>Welche Daten nutzt die KI - und warum?</li>
-        <li>Wie wurde das Modell trainiert?</li>
-        <li>Wie kommt das System zu seinem Ergebnis?</li>
-        <li>Wie zuverlässig ist dieses Ergebnis?</li>
-        <li>Welche Grenzen, Risiken oder Unsicherheiten bestehen?</li>
-      </ul>
+      <Accordion
+        title="Wichtige UX-Fragen zur Transparenz"
+        initiallyOpen={false}>
+        <ul>
+          <li>Welche Daten nutzt die KI - und warum?</li>
+          <li>Wie wurde das Modell trainiert?</li>
+          <li>Wie kommt das System zu seinem Ergebnis?</li>
+          <li>Wie zuverlässig ist dieses Ergebnis?</li>
+          <li>Welche Grenzen, Risiken oder Unsicherheiten bestehen?</li>
+        </ul>
+      </Accordion>
+      <div className="h-[var(--scale3)]"></div>
+      <h3>Drei Arten von Transparenz</h3>
       <h4>1. Prozess-Transparenz</h4>
       <p>Offenlegung der Entstehung und Funktionsweise eines KI-Systems.</p>
       <ul>
@@ -716,24 +721,15 @@ const Transparenz = {
         einfach auffindbar sein, z. B. über leicht zugängliche Hilfeseiten,
         Zertifikatsanzeigen oder Compliance-Labels im Interface.
       </p>
-      <p>
-        <b>Zusammenhang der Dimensionen</b>:
-      </p>
-      <ul>
-        <li>
-          Prozess-Transparenz &rarr; zeigt <b>wie</b> das System gebaut ist
-        </li>
-
-        <li>
-          Entscheidungs-Transparenz &rarr; erklärt <b>warum</b> das System etwas
-          tut
-        </li>
-
-        <li>
-          Governance-Transparenz &rarr; offenbart <b>wer</b> dafür
-          verantwortlich is
-        </li>
-      </ul>
+      <h4>Zusammenhang der Dimensionen:</h4>
+      <List
+        items={[
+          "Prozess-Transparenz &rarr; zeigt <b>wie</b> das System gebaut ist",
+          "Entscheidungs-Transparenz &rarr; erklärt <b>warum</b> das System etwas tut",
+          "Governance-Transparenz &rarr; offenbart <b>wer</b> dafür verantwortlich is",
+        ]}
+        alignItems="center"
+      />
       <p>
         Alle drei Dimensionen zusammen ermöglichen nicht nur eine{" "}
         <b>objektive Nachvollziehbarkeit</b>, sondern auch eine{" "}
@@ -743,28 +739,16 @@ const Transparenz = {
     </section>,
     <section>
       <h2>6. Praktische Tipps zur Gestaltung transparenter KI</h2>
-      <ul>
-        <li>
-          <b>Kenntnis der Zielgruppe</b>: Was wollen Nutzer:innen wissen? Was
-          können sie verstehen?
-        </li>
-        <li>
-          <b>Relevanz statt Überfrachtung</b>: Nur die Informationen geben, die
-          für die Entscheidung oder Nutzung wichtig sind.
-        </li>
-        <li>
-          <b>Visuelle Unterstützung</b>: Erklärungen durch Diagramme, Heatmaps,
-          Gegenbeispiele etc.
-        </li>
-        <li>
-          <b>Transparenz modularisieren</b>: Für verschiedene Ebenen (Daten,
-          Modell, Entscheidung) unterschiedliche Erklärungstiefen anbieten
-        </li>
-        <li>
-          <b>Feedback einholen</b>: Verstehen die Nutzer:innen wirklich, was
-          erklärt wurde?
-        </li>
-      </ul>
+      <List
+        items={[
+          "<b>Kenntnis der Zielgruppe</b>: Was wollen Nutzer:innen wissen? Was können sie verstehen?",
+          "<b>Relevanz statt Überfrachtung</b>: Nur die Informationen geben, die für die Entscheidung oder Nutzung wichtig sind.",
+          "<b>Visuelle Unterstützung</b>: Erklärungen durch Diagramme, Heatmaps, Gegenbeispiele etc.",
+          "<b>Transparenz modularisieren</b>: Für verschiedene Ebenen (Daten, Modell, Entscheidung) unterschiedliche Erklärungstiefen anbieten.",
+          "<b>Feedback einholen</b>: Verstehen die Nutzer:innen wirklich, was erklärt wurde?",
+        ]}
+        alignItems="center"
+      />
     </section>,
     <section>
       <h2>
@@ -1349,7 +1333,7 @@ const Kontrollierbarkeit = {
       <h2 className="font-black">
         Grundlagen der Kontrollierbarkeit in KI (UX-orientiert)
       </h2>
-      <h2>1. Einleitung: Kontrollierbarkeit in der Mensch-KI-Interaktion</h2>
+      <h3>1. Einleitung: Kontrollierbarkeit in der Mensch-KI-Interaktion</h3>
       <p>
         Kontrollierbarkeit beschreibt die Fähigkeit, das Verhalten eines Systems
         gezielt zu beeinflussen oder zu begrenzen, sodass es mit den Zielen des
@@ -1398,7 +1382,7 @@ const Kontrollierbarkeit = {
       </p>
     </section>,
     <section>
-      <h2>2. Dimensionen der Kontrollierbarkeit aus UX-Perspektive</h2>
+      <h3>2. Dimensionen der Kontrollierbarkeit aus UX-Perspektive</h3>
       <p>
         Aus Sicht der Mensch-KI-Interaktion lässt sich Kontrollierbarkeit in
         mehrere zentrale Dimensionen unterteilen. Diese Dimensionen bestimmen,
@@ -1407,7 +1391,7 @@ const Kontrollierbarkeit = {
         Eigenschaften, sondern auch Gestaltungsprinzipien für Interfaces und
         Interaktionsdesign.
       </p>
-      <h3>1. Transparenz</h3>
+      <h4>a) Transparenz</h4>
       <p>
         Transparenz bedeutet, dass das System seine Funktionsweise,
         Entscheidungslogik und Zielrichtung in einer für den Menschen
@@ -1425,7 +1409,7 @@ const Kontrollierbarkeit = {
         Hohe Transparenz erleichtert es, mentale Modelle zu bilden, die
         Grundlage für effektive Kontrolle sind.
       </p>
-      <h3>2. Vorhersagbarkeit</h3>
+      <h4>b) Vorhersagbarkeit</h4>
       <p>
         Ein KI-System sollte in vergleichbaren Situationen konsistent reagieren.
         Vorhersagbarkeit verringert die kognitive Belastung, da Nutzer:innen
@@ -1440,7 +1424,7 @@ const Kontrollierbarkeit = {
           Kontexten
         </li>
       </ul>
-      <h3>3. Interventionsmöglichkeiten</h3>
+      <h4>c) Interventionsmöglichkeiten</h4>
       <p>
         Nutzer:innen müssen jederzeit in der Lage sein, das Verhalten der KI zu
         beeinflussen oder zu stoppen. Dies reicht von <i>Undo-Funktionen</i> bis
@@ -1454,7 +1438,7 @@ const Kontrollierbarkeit = {
         </li>
         <li>Sichtbarkeit und Erreichbarkeit der Kontrollfunktionen</li>
       </ul>
-      <h3>4. Rückmeldungen & Erklärungen</h3>
+      <h4>d) Rückmeldungen & Erklärungen</h4>
       <p>
         Kontrollierbarkeit hängt davon ab, ob Nutzer:innen die Auswirkungen
         ihrer Eingriffe nachvollziehen können. Effektive Feedback-Mechanismen:
@@ -1466,7 +1450,7 @@ const Kontrollierbarkeit = {
           Möglichkeit zur Überprüfung, ob die gewünschte Wirkung eingetreten ist
         </li>
       </ul>
-      <h3>5. Adaptivität mit Nutzerkontrolle</h3>
+      <h4>e) Adaptivität mit Nutzerkontrolle</h4>
       <p>
         KI kann sich an das Verhalten und die Präferenzen des Nutzers anpassen,
         sollte dabei aber stets abschaltbare und <i>übersteuerbare</i>{" "}
@@ -1505,7 +1489,7 @@ const Kontrollierbarkeit = {
       <h2 className="font-black">
         Human Oversight als spezielle Form der Kontrollierbarkeit
       </h2>
-      <h2>1. Definition & Zielsetzung</h2>
+      <h3>1. Definition & Zielsetzung</h3>
       <p>
         <b>Human Oversight</b> bezeichnet die systematisch gestaltete
         Möglichkeit für Menschen, den Betrieb und die Entscheidungen eines
@@ -1557,7 +1541,7 @@ const Kontrollierbarkeit = {
       </p>
     </section>,
     <section>
-      <h2>2. Design-Pattern für Human Oversight</h2>
+      <h3>2. Design-Pattern für Human Oversight</h3>
       <p>
         Human Oversight kann in der Praxis in unterschiedlichen Formen umgesetzt
         werden. Diese <i>Design-Patterns</i> unterscheiden sich vor allem darin,{" "}
@@ -1568,104 +1552,88 @@ const Kontrollierbarkeit = {
         bedeutet das, diese Mechanismen so zu integrieren, dass sie{" "}
         <b>sichtbar</b>, <b>verständlich</b> und <b>bedienbar</b> sind.
       </p>
-      <h3>1. Human-in-the-Loop (HITL)</h3>
-      <ul>
-        <li>
-          <b>Beschreibung</b>: Der Mensch überprüft und bestätigt kritische
-          Entscheidungen vor ihrer Umsetzung.
-        </li>
-        <li>
-          <b>Vorteil</b>: Maximale Sicherheit, da keine kritische Aktion ohne
-          menschliche Zustimmung ausgeführt wird.
-        </li>
-        <li>
-          <b>UX-Anforderung:</b>
-          <ul>
-            <li>Klare Benachrichtigung, wenn eine Entscheidung ansteht</li>
-            <li>Kompakte, aber aussagekräftige Erklärung der KI-Empfehlung</li>
-            <li>Einfacher Mechanismus zur Zustimmung oder Ablehnung</li>
-          </ul>
-        </li>
-        <li>
-          <b>Beispiel</b>: Radiologisches Diagnosesystem, bei dem Ärzt:innen
-          KI-gestützte Befunde vor Freigabe validieren.
-        </li>
-      </ul>
-      <h3>2. Human-out-the-Loop (HOTL)</h3>
-      <ul>
-        <li>
-          <b>Beschreibung</b>: Der Mensch überwacht den laufenden Prozess und
-          kann bei Bedarf eingreifen, muss es aber nicht proaktiv bei jeder
-          Entscheidung tun.
-        </li>
-        <li>
-          <b>Vorteil</b>: Effizienter, da die KI autonom arbeitet, bis eine
-          Intervention erforderlich ist.
-        </li>
-        <li>
-          <b>UX-Anforderung:</b>
-          <ul>
-            <li>Kontinuierliche Statusanzeigen und Prozessvisualisierungen</li>
-            <li>Frühwarnungen bei Anomalien oder Risikoindikatoren</li>
-            <li>Sofortige Eingriffsmöglichkeiten mit minimalem Reaktionsweg</li>
-          </ul>
-        </li>
-        <li>
-          <b>Beispiel</b>: Autonomes Fahren, bei dem der Fahrer jederzeit
-          übernehmen kann, wenn das System eine kritische Situation meldet.
-        </li>
-      </ul>
-      <h3>3. Human-in-Command (HIC)</h3>
-      <ul>
-        <li>
-          <b>Beschreibung</b>: Der Mensch definiert die übergeordneten Ziele,
-          Grenzen und Rahmenbedingungen und kann den Betrieb der KI jederzeit
-          stoppen oder neu konfigurieren.
-        </li>
-        <li>
-          <b>Vorteil</b>: Hohe strategische Kontrolle, auch wenn operative
-          Entscheidungen autonom getroffen werden.
-        </li>
-        <li>
-          <b>UX-Anforderung:</b>
-          <ul>
-            <li>Leicht zugängliche Konfigurations- und Abschaltfunktionen</li>
-            <li>
-              Transparente Darstellung der aktuellen Systemziele und -grenzen
-            </li>
-            <li>
-              Logging und Audit Trails, um getroffene Entscheidungen
-              nachzuvollziehen
-            </li>
-          </ul>
-        </li>
-        <li>
-          <b>Beispiel</b>: Militärische Drohnensteuerung, bei der der Operator
-          Einsatzregeln festlegt und jederzeit den Einsatz beenden kann.
-        </li>
-      </ul>
-      <h3>Gestaltungsprinzipien über alle Patterns hinweg</h3>
-      <ul>
-        <li>
-          <b>Sichtbarkeit</b>: Kontrolloptionen müssen leicht auffindbar und
-          jederzeit zugänglich sein.
-        </li>
-        <li>
-          <b>Zeitkritik</b>: Je geringer die Reaktionszeit, desto direkter und
-          weniger verschachtelt muss der Eingriffspfad sein.
-        </li>
-        <li>
-          <b>Informationsdesign</b>: Nur relevante Informationen anzeigen, um
-          Überforderung und „Alert Fatigue“ zu vermeiden.
-        </li>
-        <li>
-          <b>Vertrauenskalibrierung</b>: Interface-Design muss ein realistisches
-          Bild der KI-Fähigkeiten und -Grenzen vermitteln.
-        </li>
-      </ul>
+      <h4>a) Human-in-the-Loop (HITL)</h4>
+      <p>
+        Der Mensch überprüft und bestätigt kritische Entscheidungen vor ihrer
+        Umsetzung.
+      </p>
+      <p>
+        <b>Vorteil</b>: Maximale Sicherheit, da keine kritische Aktion ohne
+        menschliche Zustimmung ausgeführt wird.
+      </p>
+      <p className="specialText">
+        <b>UX-Anforderung:</b>
+        <ul>
+          <li>Klare Benachrichtigung, wenn eine Entscheidung ansteht</li>
+          <li>Kompakte, aber aussagekräftige Erklärung der KI-Empfehlung</li>
+          <li>Einfacher Mechanismus zur Zustimmung oder Ablehnung</li>
+        </ul>
+      </p>
+      <p>
+        <b>Beispiel</b>: Radiologisches Diagnosesystem, bei dem Ärzt:innen
+        KI-gestützte Befunde vor Freigabe validieren.
+      </p>
+      <h4>b) Human-out-the-Loop (HOTL)</h4>
+      <p>
+        Der Mensch überwacht den laufenden Prozess und kann bei Bedarf
+        eingreifen, muss es aber nicht proaktiv bei jeder Entscheidung tun.
+      </p>
+      <p>
+        <b>Vorteil</b>: Effizienter, da die KI autonom arbeitet, bis eine
+        Intervention erforderlich ist.
+      </p>
+      <p className="specialText">
+        <b>UX-Anforderung:</b>
+        <ul>
+          <li>Kontinuierliche Statusanzeigen und Prozessvisualisierungen</li>
+          <li>Frühwarnungen bei Anomalien oder Risikoindikatoren</li>
+          <li>Sofortige Eingriffsmöglichkeiten mit minimalem Reaktionsweg</li>
+        </ul>
+      </p>
+      <p>
+        <b>Beispiel</b>: Autonomes Fahren, bei dem der Fahrer jederzeit
+        übernehmen kann, wenn das System eine kritische Situation meldet.
+      </p>
+      <h4>c) Human-in-Command (HIC)</h4>
+      <p>
+        Der Mensch definiert die übergeordneten Ziele, Grenzen und
+        Rahmenbedingungen und kann den Betrieb der KI jederzeit stoppen oder neu
+        konfigurieren.
+      </p>
+      <p>
+        <b>Vorteil</b>: Hohe strategische Kontrolle, auch wenn operative
+        Entscheidungen autonom getroffen werden.
+      </p>
+      <p className="specialText">
+        <b>UX-Anforderung:</b>
+        <ul>
+          <li>Leicht zugängliche Konfigurations- und Abschaltfunktionen</li>
+          <li>
+            Transparente Darstellung der aktuellen Systemziele und -grenzen
+          </li>
+          <li>
+            Logging und Audit Trails, um getroffene Entscheidungen
+            nachzuvollziehen
+          </li>
+        </ul>
+      </p>
+      <p>
+        <b>Beispiel</b>: Militärische Drohnensteuerung, bei der der Operator
+        Einsatzregeln festlegt und jederzeit den Einsatz beenden kann.
+      </p>
+      <h4>Gestaltungsprinzipien über alle Patterns hinweg</h4>
+      <List
+        items={[
+          "<b>Sichtbarkeit</b>: Kontrolloptionen müssen leicht auffindbar und jederzeit zugänglich sein.",
+          "<b>Zeitkritik</b>: Je geringer die Reaktionszeit, desto direkter und weniger verschachtelt muss der Eingriffspfad sein.",
+          "<b>Informationsdesign</b>: Nur relevante Informationen anzeigen, um Überforderung und „Alert Fatigue“ zu vermeiden.",
+          "<b>Vertrauenskalibrierung</b>: Interface-Design muss ein realistisches Bild der KI-Fähigkeiten und -Grenzen vermitteln.",
+        ]}
+        alignItems="center"
+      />
     </section>,
     <section>
-      <h2>3. UX-Herausforderungen bei Human Oversight</h2>
+      <h3>3. UX-Herausforderungen bei Human Oversight</h3>
       <p>
         Human Oversight stellt nicht nur technische, sondern vor allem
         gestalterische Herausforderungen. Selbst wenn Eingriffsmöglichkeiten
@@ -1673,95 +1641,86 @@ const Kontrollierbarkeit = {
         aus UX-Sicht nicht optimal umgesetzt werden. Dabei lassen sich die
         größten Stolpersteine in drei Hauptkategorien einteilen:
       </p>
-      <h3>
-        1. Aufmerksamkeitsfalle <i>(Automation Complacency)</i>
-      </h3>
+      <h4>
+        a) Aufmerksamkeitsfalle <i>(Automation Complacency)</i>
+      </h4>
       <p>
         Wenn KI-Systeme über längere Zeit fehlerfrei oder sogar besser als der
         Mensch arbeiten, neigen Nutzer:innen dazu, ihre Aufmerksamkeit zu
         reduzieren.
       </p>
-      <ul>
-        <li>
-          <b>Folge</b>: Eingriffe erfolgen zu spät oder gar nicht, weil
-          Anomalien nicht mehr aktiv überwacht werden.
-        </li>
-        <li>
-          <b>UX-Ansatz</b>:
-          <ul>
-            <li>
-              Periodische aktive Bestätigung der Nutzer:innen einfordern („Are
-              you still there?“-Checks in kritischen Prozessen)
-            </li>
-            <li>
-              Adaptive Anzeigen, die bei hohem Risiko die Aufmerksamkeit erhöhen
-            </li>
-            <li>
-              Schulung und bewusste Sensibilisierung für seltene, aber kritische
-              Eingriffsfälle
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h3>2. Alert Fatigue</h3>
+      <p>
+        <b>Folge</b>: Eingriffe erfolgen zu spät oder gar nicht, weil Anomalien
+        nicht mehr aktiv überwacht werden.
+      </p>
+      <p className="specialText">
+        <b>UX-Ansatz:</b>
+        <ul>
+          <li>
+            Periodische aktive Bestätigung der Nutzer:innen einfordern („Are you
+            still there?“-Checks in kritischen Prozessen)
+          </li>
+          <li>
+            Adaptive Anzeigen, die bei hohem Risiko die Aufmerksamkeit erhöhen
+          </li>
+          <li>
+            Schulung und bewusste Sensibilisierung für seltene, aber kritische
+            Eingriffsfälle
+          </li>
+        </ul>
+      </p>
+      <h4>b) Alert Fatigue</h4>
       <p>
         Wenn zu viele Warnungen oder Eingriffsaufforderungen erscheinen -
         insbesondere mit geringer Relevanz - tritt das Gegenteil der
         beabsichtigten Wirkung ein: Nutzer:innen ignorieren auch wichtige
         Alarme.
       </p>
-      <ul>
-        <li>
-          <b>Folge</b>: Kritische Warnungen werden übersehen oder reflexartig
-          weggeklickt.
-        </li>
-        <li>
-          <b>UX-Ansatz</b>:{" "}
-          <ul>
-            <li>
-              Priorisierung von Alerts nach Schweregrad und
-              Handlungsdringlichkeit
-            </li>
-            <li>
-              Zusammenfassung von Informationsmeldungen, um
-              Benachrichtigungsflut zu vermeiden
-            </li>
-            <li>
-              Möglichkeit für Nutzer:innen, Alarmempfindlichkeit fein
-              einzustellen
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h3>3. Erklärungsformat und Handlungsrelevanz</h3>
+      <p>
+        <b>Folge</b>: Kritische Warnungen werden übersehen oder reflexartig
+        weggeklickt.
+      </p>
+      <p className="specialText">
+        <b>UX-Ansatz:</b>
+        <ul>
+          <li>
+            Priorisierung von Alerts nach Schweregrad und Handlungsdringlichkeit
+          </li>
+          <li>
+            Zusammenfassung von Informationsmeldungen, um Benachrichtigungsflut
+            zu vermeiden
+          </li>
+          <li>
+            Möglichkeit für Nutzer:innen, Alarmempfindlichkeit fein einzustellen
+          </li>
+        </ul>
+      </p>
+      <h4>c) Erklärungsformat und Handlungsrelevanz</h4>
       <p>
         Selbst wenn eine KI ihre Entscheidungen transparent macht, heißt das
         nicht automatisch, dass Nutzer:innen diese Informationen verstehen oder
         anwenden können.
       </p>
-      <ul>
-        <li>
-          <b>Folge</b>: Oversight wird formal erfüllt, aber praktisch
-          wirkungslos.
-        </li>
-        <li>
-          <b>UX-Ansatz</b>:
-          <ul>
-            <li>
-              Nutzung verständlicher, nicht-technischer Sprache für Erklärungen
-            </li>
-            <li>
-              Ergänzung durch visuelle Darstellungen (Heatmaps, Diagramme,
-              Ablaufvisualisierungen)
-            </li>
-            <li>
-              Kontextbezogene Handlungsoptionen direkt im Erklärungsfenster
-              („Jetzt korrigieren“ statt &bdquo;Gehe zu Menüpunkt 5&ldquo;)
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Zusatzproblem: Balance zwischen Kontrolle und Autonomie</h3>
+      <p>
+        <b>Folge</b>: Oversight wird formal erfüllt, aber praktisch wirkungslos.
+      </p>
+      <p className="specialText">
+        <b>UX-Ansatz:</b>
+        <ul>
+          <li>
+            Nutzung verständlicher, nicht-technischer Sprache für Erklärungen
+          </li>
+          <li>
+            Ergänzung durch visuelle Darstellungen (Heatmaps, Diagramme,
+            Ablaufvisualisierungen)
+          </li>
+          <li>
+            Kontextbezogene Handlungsoptionen direkt im Erklärungsfenster
+            („Jetzt korrigieren“ statt &bdquo;Gehe zu Menüpunkt 5&ldquo;)
+          </li>
+        </ul>
+      </p>
+      <h4>Zusatzproblem: Balance zwischen Kontrolle und Autonomie</h4>
       <p>
         Zu restriktives Oversight-Design kann die Effizienz der KI untergraben,
         während zu wenig Kontrolle Risiken erhöht. Die UX-Herausforderung
@@ -1770,7 +1729,7 @@ const Kontrollierbarkeit = {
       </p>
     </section>,
     <section>
-      <h2>4. Messung und Evaluation von Human Oversight</h2>
+      <h3>4. Messung und Evaluation von Human Oversight</h3>
       <p>
         Damit Human Oversight nicht nur als formale Anforderung existiert,
         sondern tatsächlich wirksam ist, muss er regelmäßig{" "}
@@ -1778,121 +1737,89 @@ const Kontrollierbarkeit = {
         Evaluation sowohl quantitative Leistungsdaten als auch qualitative
         Nutzererfahrungen.
       </p>
-      <h3>1. Quantitative Metriken</h3>
+      <h4>1. Quantitative Metriken</h4>
       <p>Diese Metriken erfassen messbare Aspekte der Oversight-Wirksamkeit:</p>
       <ul>
         <li>
-          <b>Eingriffshäufigkeit</b>
-          <ul>
-            <li>Wie oft greifen Nutzer:innen in den KI-Betrieb ein?</li>
-            <li>
-              Aussagekraft: Hohe Eingriffsraten können auf mangelnde KI-Qualität
-              hinweisen, zu niedrige auf unzureichende Wachsamkeit.
-            </li>
-          </ul>
+          <b>Eingriffshäufigkeit: </b> Wie oft greifen Nutzer:innen in den
+          KI-Betrieb ein? <br />
+          Aussagekraft: Hohe Eingriffsraten können auf mangelnde KI-Qualität
+          hinweisen, zu niedrige auf unzureichende Wachsamkeit.
         </li>
         <li>
-          <b>Zeit bis zum Eingriff (Reaction Time)</b>
-          <ul>
-            <li>
-              Wie lange dauert es, bis Nutzer:innen auf eine kritische Situation
-              reagieren?
-            </li>
-            <li>
-              Besonders relevant in sicherheitskritischen Szenarien wie Medizin,
-              Luftfahrt oder Verkehr.
-            </li>
-          </ul>
+          <b>Zeit bis zum Eingriff (Reaction Time): </b>
+          Wie lange dauert es, bis Nutzer:innen auf eine kritische Situation
+          reagieren? <br />
+          Besonders relevant in sicherheitskritischen Szenarien wie Medizin,
+          Luftfahrt oder Verkehr.
         </li>
         <li>
-          <b>Fehlervermeidung durch Eingriff</b>
-          <ul>
-            <li>
-              Anteil der KI-Fehler, die vor Schadenseintritt erkannt und
-              korrigiert wurden.
-            </li>
-          </ul>
+          <b>Fehlervermeidung durch Eingriff: </b>
+          Anteil der KI-Fehler, die vor Schadenseintritt erkannt und korrigiert
+          wurden.
         </li>
         <li>
-          <b>Erfolgsquote der Intervention</b>
-          <ul>
-            <li>
-              Prozentsatz der Eingriffe, die den gewünschten Effekt hatten.
-            </li>
-          </ul>
+          <b>Erfolgsquote der Intervention: </b>
+          Prozentsatz der Eingriffe, die den gewünschten Effekt hatten.
         </li>
       </ul>
-      <h3>2. Qualitative Evaluationsmethoden</h3>
+      <h4>2. Qualitative Evaluationsmethoden</h4>
       <p>
         Diese Methoden beleuchten die subjektive Wahrnehmung, das Vertrauen und
         die mentale Arbeitsbelastung der Nutzer:innen:
       </p>
       <ul>
         <li>
-          <b>Usability-Tests</b>
-          <ul>
-            <li>
-              Beobachten, wie einfach Nutzer:innen Oversight-Funktionen finden
-              und nutzen können.
-            </li>
-          </ul>
+          <b>Usability-Tests: </b>
+          Beobachten, wie einfach Nutzer:innen Oversight-Funktionen finden und
+          nutzen können.
         </li>
         <li>
-          <b>Kognitive Walkthroughs</b>
-          <ul>
-            <li>
-              Schritt-für-Schritt-Analyse, ob Nutzer:innen im kritischen Moment
-              die richtige Aktion wählen.
-            </li>
-          </ul>
+          <b>Kognitive Walkthroughs: </b>
+          Schritt-für-Schritt-Analyse, ob Nutzer:innen im kritischen Moment die
+          richtige Aktion wählen.
         </li>
         <li>
-          <b>Think-Aloud-Protokolle</b>
-          <ul>
-            <li>
-              Erfassung des Denkprozesses während der Interaktion, um mentale
-              Modelle zu verstehen.
-            </li>
-          </ul>
+          <b>Think-Aloud-Protokolle: </b>
+          Erfassung des Denkprozesses während der Interaktion, um mentale
+          Modelle zu verstehen.
         </li>
         <li>
-          <b>Post-Task-Befragungen</b>
-          <ul>
-            <li>
-              Bewertung von Verständlichkeit, Sicherheitsempfinden und
-              wahrgenommener Kontrolle.
-            </li>
-          </ul>
+          <b>Post-Task-Befragungen: </b>
+          Bewertung von Verständlichkeit, Sicherheitsempfinden und
+          wahrgenommener Kontrolle.
         </li>
       </ul>
-      <h3>3. Simulation und Szenariotests</h3>
+      <h4>3. Simulation und Szenariotests</h4>
       <p>
         Gerade bei selten auftretenden, aber hochkritischen Situationen sind
         kontrollierte Tests entscheidend:
       </p>
       <ul>
         <li>
-          <b>Fault Injection</b>: Absichtlich Fehlentscheidungen der KI
+          <b>Fault Injection: </b>Absichtlich Fehlentscheidungen der KI
           einbauen, um Eingriffsverhalten zu testen.
         </li>
         <li>
-          <b>Time Pressure Scenarios</b>: Messen, ob Nutzer:innen auch unter
+          <b>Time Pressure Scenarios: </b>Messen, ob Nutzer:innen auch unter
           Stress rechtzeitig reagieren.
         </li>
         <li>
-          <b>Mode Confusion Tests</b>: Prüfen, ob Nutzer:innen wissen, in
+          <b>Mode Confusion Tests: </b>Prüfen, ob Nutzer:innen wissen, in
           welchem Automatisierungsmodus sich das System befindet.
         </li>
       </ul>
-      <h3>4. Kontinuierliche Optimierung</h3>
+      <h4>4. Kontinuierliche Optimierung</h4>
       <p>
         Evaluation ist kein einmaliger Schritt, sondern Teil eines{" "}
         <i>iterative Design Loops</i>:
       </p>
-      <List
-        items={["Messen", "Analysieren", "Interface anpassen", "Erneut testen"]}
-        alignItems="center"
-      />
+      <ol>
+        <li>Messen</li>
+        <li>Analysieren</li>
+        <li>Interface anpassen</li>
+        <li>Erneut testen</li>
+      </ol>
       <p>
         Gerade in adaptiven KI-Systemen kann sich das Nutzerverhalten im Laufe
         der Zeit ändern, was regelmäßige Re-Evaluationen nötig macht.

@@ -15,6 +15,23 @@ import hlegData from "../SimpleQuizContent/ai-act/hleg.json";
 import testData from "../SimpleQuizContent/test.json";
 import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import { Table } from "../2_molecule/Table";
+import { CarouselContainer } from "../3_organism/CarouselContainer";
+
+const Slide = ({ number, color }) => (
+  <div
+    style={{
+      height: "300px",
+      backgroundColor: color,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      fontSize: "3rem",
+      color: "white",
+      borderRadius: "8px",
+    }}>
+    Slide {number}
+  </div>
+);
 
 const DevTestPage = () => {
   const tableData = [
@@ -28,6 +45,64 @@ const DevTestPage = () => {
 
   return (
     <div className="w-full h-full">
+      <div className="max-w-[960px] mx-auto mt-8">
+        <CarouselContainer>
+          <div
+            title="Modellbasierte (intrinsische) Erklärbarkeit"
+            className="rounded-xl p-[var(--scale2)] h-full shadow no-hover">
+            <p>Das Modell selbst ist bereits transparent und verständlich.</p>
+            <ul>
+              <li>
+                <b>Entscheidungsbäume</b> - Entscheidungen folgen klaren Regeln
+              </li>
+              <li>
+                <b>Lineare Modelle</b> - Einfluss jedes Faktors ist direkt
+                absehbar
+              </li>
+              <li>
+                <b>Regel- oder logikbasierte Systeme</b> - nachvollziehbare
+                IF-THEN-Strukturen
+              </li>
+            </ul>
+          </div>
+          <div
+            title="Post-hoc-Erklärungen"
+            className="rounded-xl p-[var(--scale2)] h-full shadow no-hover">
+            <p>
+              Hier wird das Verhalten eines komplexen, intransparenten Modells
+              nachträglich analysiert. Häufige Ansätze sind:
+            </p>
+            <ul>
+              <li>
+                <b> Feature-Attribution:</b> Wie wichtig war ein bestimmtes
+                Eingabefeature für diese Entscheidung?
+                <ul>
+                  <li>
+                    <b>SHAP (SHapley Additive exPlanations)</b>
+                  </li>
+                  <li>
+                    <b>
+                      LIME (Local Interpretable Model-Agnostic Explanations)
+                    </b>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>Kontrastive Erklärung</b>: Warum wurde A statt B
+                vorhergesagt?
+              </li>
+              <li>
+                <b>Gegenfaktische Erklärung</b>: Was müsste sich an den
+                Eingabedaten ändern, damit B statt A passiert?
+              </li>
+              <li>
+                <b>Symbolisch vs. visuell</b>: Textlich formuliert vs. visuelle
+                Hilfsmittel wie Diagramme, Heatmaps, Salience Maps
+              </li>
+            </ul>
+          </div>
+        </CarouselContainer>
+      </div>
       <BasicQuiz quizData={testData} />
       <h1 className="w-full text-center">KI-bezogene UX</h1>
       <h2 className="w-full text-center">Wahrgenommene Autonomie</h2>

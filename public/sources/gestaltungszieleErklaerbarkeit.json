@@ -1,3 +1,62 @@
 [
-  {"id":"MILLER20191","abstract":"There has been a recent resurgence in the area of explainable artificial intelligence as researchers and practitioners seek to provide more transparency to their algorithms. Much of this research is focused on explicitly explaining decisions or actions to a human observer, and it should not be controversial to say that looking at how humans explain to each other can serve as a useful starting point for explanation in artificial intelligence. However, it is fair to say that most work in explainable artificial intelligence uses only the researchers' intuition of what constitutes a ‘good’ explanation. There exist vast and valuable bodies of research in philosophy, psychology, and cognitive science of how people define, generate, select, evaluate, and present explanations, which argues that people employ certain cognitive biases and social expectations to the explanation process. This paper argues that the field of explainable artificial intelligence can build on this existing research, and reviews relevant papers from philosophy, cognitive psychology/science, and social psychology, which study these topics. It draws out some important findings, and discusses ways that these can be infused with work on explainable artificial intelligence.","author":[{"family":"Miller","given":"Tim"}],"citation-key":"MILLER20191","container-title":"Artificial Intelligence","DOI":"https://doi.org/10.1016/j.artint.2018.07.007","ISSN":"0004-3702","issued":{"date-parts":[["2019"]]},"page":"1-38","title":"Explanation in artificial intelligence: Insights from the social sciences","type":"article-journal","URL":"https://www.sciencedirect.com/science/article/pii/S0004370218305988","volume":"267"}
+  {
+    "id": "deckCriticalSurveyFairness2024",
+    "abstract": "In this critical survey, we analyze typical claims on the relationship between explainable AI (XAI) and fairness to disentangle the multidimensional relationship between these two concepts. Based on a systematic literature review and a subsequent qualitative content analysis, we identify seven archetypal claims from 175 scientific articles on the alleged fairness benefits of XAI. We present crucial caveats with respect to these claims and provide an entry point for future discussions around the potentials and limitations of XAI for specific fairness desiderata. Importantly, we notice that claims are often (i) vague and simplistic, (ii) lacking normative grounding, or (iii) poorly aligned with the actual capabilities of XAI. We suggest to conceive XAI not as an ethical panacea but as one of many tools to approach the multidimensional, sociotechnical challenge of algorithmic fairness. Moreover, when making a claim about XAI and fairness, we emphasize the need to be more specific about what kind of XAI method is used, which fairness desideratum it refers to, how exactly it enables fairness, and who is the stakeholder that benefits from XAI.",
+    "accessed": { "date-parts": [["2025", 10, 20]] },
+    "author": [
+      { "family": "Deck", "given": "Luca" },
+      { "family": "Schoeffer", "given": "Jakob" },
+      { "family": "De-Arteaga", "given": "Maria" },
+      { "family": "Kühl", "given": "Niklas" }
+    ],
+    "citation-key": "deckCriticalSurveyFairness2024",
+    "collection-title": "FAccT '24",
+    "container-title": "Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency",
+    "DOI": "10.1145/3630106.3658990",
+    "event-place": "New York, NY, USA",
+    "ISBN": "979-8-4007-0450-5",
+    "issued": { "date-parts": [["2024", 6, 5]] },
+    "page": "1579–1595",
+    "publisher": "Association for Computing Machinery",
+    "publisher-place": "New York, NY, USA",
+    "source": "ACM Digital Library",
+    "title": "A Critical Survey on Fairness Benefits of Explainable AI",
+    "type": "paper-conference",
+    "URL": "https://doi.org/10.1145/3630106.3658990"
+  },
+  {
+    "id": "MILLER20191",
+    "abstract": "There has been a recent resurgence in the area of explainable artificial intelligence as researchers and practitioners seek to provide more transparency to their algorithms. Much of this research is focused on explicitly explaining decisions or actions to a human observer, and it should not be controversial to say that looking at how humans explain to each other can serve as a useful starting point for explanation in artificial intelligence. However, it is fair to say that most work in explainable artificial intelligence uses only the researchers' intuition of what constitutes a ‘good’ explanation. There exist vast and valuable bodies of research in philosophy, psychology, and cognitive science of how people define, generate, select, evaluate, and present explanations, which argues that people employ certain cognitive biases and social expectations to the explanation process. This paper argues that the field of explainable artificial intelligence can build on this existing research, and reviews relevant papers from philosophy, cognitive psychology/science, and social psychology, which study these topics. It draws out some important findings, and discusses ways that these can be infused with work on explainable artificial intelligence.",
+    "author": [{ "family": "Miller", "given": "Tim" }],
+    "citation-key": "MILLER20191",
+    "container-title": "Artificial Intelligence",
+    "DOI": "https://doi.org/10.1016/j.artint.2018.07.007",
+    "ISSN": "0004-3702",
+    "issued": { "date-parts": [["2019"]] },
+    "page": "1-38",
+    "title": "Explanation in artificial intelligence: Insights from the social sciences",
+    "type": "article-journal",
+    "URL": "https://www.sciencedirect.com/science/article/pii/S0004370218305988",
+    "volume": "267"
+  },
+  {
+    "id": "speithReviewTaxonomiesExplainable2022",
+    "abstract": "The recent surge in publications related to explainable artificial intelligence (XAI) has led to an almost insurmountable wall if one wants to get started or stay up to date with XAI. For this reason, articles and reviews that present taxonomies of XAI methods seem to be a welcomed way to get an overview of the field. Building on this idea, there is currently a trend of producing such taxonomies, leading to several competing approaches to construct them. In this paper, we will review recent approaches to constructing taxonomies of XAI methods and discuss general challenges concerning them as well as their individual advantages and limitations. Our review is intended to help scholars be aware of challenges current taxonomies face. As we will argue, when charting the field of XAI, it may not be sufficient to rely on one of the approaches we found. To amend this problem, we will propose and discuss three possible solutions: a new taxonomy that incorporates the reviewed ones, a database of XAI methods, and a decision tree to help choose fitting methods.",
+    "accessed": { "date-parts": [["2025", 10, 20]] },
+    "author": [{ "family": "Speith", "given": "Timo" }],
+    "citation-key": "speithReviewTaxonomiesExplainable2022",
+    "collection-title": "FAccT '22",
+    "container-title": "Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency",
+    "DOI": "10.1145/3531146.3534639",
+    "event-place": "New York, NY, USA",
+    "ISBN": "978-1-4503-9352-2",
+    "issued": { "date-parts": [["2022", 6, 20]] },
+    "page": "2239–2250",
+    "publisher": "Association for Computing Machinery",
+    "publisher-place": "New York, NY, USA",
+    "source": "ACM Digital Library",
+    "title": "A Review of Taxonomies of Explainable Artificial Intelligence (XAI) Methods",
+    "type": "paper-conference",
+    "URL": "https://dl.acm.org/doi/10.1145/3531146.3534639"
+  }
 ]

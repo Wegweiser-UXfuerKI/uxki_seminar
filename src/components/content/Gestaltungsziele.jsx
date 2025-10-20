@@ -1,143 +1,61 @@
 import ImageElement from "../../assets/icons/ux-bezogen.svg?react";
 import { LinkHandler } from "../1_elements/LinkHandler";
 import { VideoContainer } from "../1_elements/VideoContainer";
+import SubTopicCard from "../2_molecule/cards/SubTopicCard";
 import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
+import List from "../2_molecule/List";
+import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import BasicQuiz from "../interactive/Quiz/BasicQuiz";
 
 import vertrauenswuerdigkeitQuiz from "../SimpleQuizContent/gestaltungsziele/vertrauenswuerdigkeit.json";
 import transparenzQuiz from "../SimpleQuizContent/gestaltungsziele/transparenz.json";
 import erklaerbarkeitQuiz from "../SimpleQuizContent/gestaltungsziele/erklaerbarkeit.json";
 import kontrollierbarkeitQuiz from "../SimpleQuizContent/gestaltungsziele/kontrollierbarkeit.json";
-
-const sectionsEinleitung = [
-  { id: "einleitung", title: "Einleitung" },
-  { id: "2", title: "Warum sind UX-Eigenschaften wichtig?" },
-  { id: "3", title: "Aufbau der Lernmodule" },
-];
-
-const Einleitung = {
-  linkName: "einleitung",
-  name: "Einleitung",
-  description:
-    "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
-  content: [
-    <ChapterHeader text={"Einleitung"} number={1} />,
-    <section id="einleitung">
-      <SubNavigation sections={sectionsEinleitung} />
-      <p>
-        Künstliche Intelligenz beeinflusst zunehmend, wie Menschen mit
-        automatisierten Systemen interagieren - ob in der Medizin, im
-        Personalwesen, in der Verwaltung oder in Alltagsanwendungen. Doch je
-        autonomer und komplexer KI-Systeme werden, desto wichtiger wird ihre
-        <b>Gestaltung aus Sicht der Nutzer:innen</b>. In diesem Modul wollen wir
-        ihnen näher bringen, welche Rolle die verschiedenen Eigenschaften von
-        KI-Systemen spielen und worauf sie bei der Gestaltung ihres Systems
-        achten müssen.
-      </p>
-    </section>,
-    <section>
-      <h2>Warum sind UX-Eigenschaften wichtig?</h2>
-      <p>
-        Das folgende Modul bietet einen systematischen Einstieg in zentrale{" "}
-        <b>UX-bezogene Eigenschaften von KI-Systemen</b>, die darüber
-        entscheiden:
-      </p>
-      <ul>
-        <li>
-          wie gut Menschen die <b>Funktion und Grenzen</b> der KI verstehen,
-        </li>
-        <li>
-          ob sie der KI <b>angemessen vertrauen</b> (nicht blind oder
-          skeptisch),
-        </li>
-        <li>
-          ob sie im <b>kritischen Moment handlungsfähig</b> bleiben,
-        </li>
-        <li>
-          und ob sie langfristig die <b>Verantwortung behalten</b>.
-        </li>
-      </ul>
-      <p>
-        Sie sind damit zentrale Voraussetzungen für <b>Human-Centered AI</b> und
-        ein entscheidener Faktor für die{" "}
-        <b>gesellschaftliche Akzeptanz und Sicherheit</b> von KI-Systemen.
-      </p>
-    </section>,
-    <section>
-      <h2>Aufbau der Lernmodule</h2>
-      <p>Die behandelten UX-bezogenen Eigenschaften von KI-Systemen sind:</p>
-      <ul>
-        <li>
-          <b>Vertrauenswürdigkeit</b>: Wann empfinden Menschen eine KI als
-          glaubwürdig und verlässlich?
-        </li>
-        <li>
-          <b>Transparenz</b>: Wie viel Einsicht in Prozesse und Daten brauchen
-          Nutzer:innen?
-        </li>
-        <li>
-          <b>Erklärbarkeit (XAI)</b>: Was macht eine gute Erklärung aus - und
-          für wen?
-        </li>
-        <li>
-          <b>Kontrollierbarkeit</b>: Wie und wann können Menschen sinnvoll
-          eingreifen?
-        </li>
-        <li>
-          <b>Mental Model Complementary</b>: Wie ergänzen sich Mensch und
-          Maschine kognitiv?
-        </li>
-      </ul>
-      <p>
-        Jede Lektion führt in eine zentrale Eigenschaft ein, liefert{" "}
-        <b>praxisnahe Beispiele</b>, benennt{" "}
-        <b>psychologische und technologische Hintergründe</b> und bietet{" "}
-        <b>konkrete Empfehlungen für GEstaltung und Umsetzung</b>
-      </p>
-      <p>
-        Das Ziel: Ein fundiertes Verständnis dafür,{" "}
-        <b>
-          wie KI-Systeme gestaltet sein müssen, damit sie im Sinne der Menschen
-          funktionieren
-        </b>
-        .
-      </p>
-    </section>,
-  ],
-};
+import Sources from "../Sources";
 
 const sectionsVertrauenswürdigkeit = [
-  { id: "1", title: "Warum ist Trustworthy AI ein zentrales Thema?" },
-  { id: "2", title: "Warum ist Vertrauenswürdigkeit schwer zu definieren?" },
-  { id: "3", title: "Vertrauen vs. Vertrauenswürdigkeit" },
-  { id: "4", title: "Dimensionen vertrauenswürdiger KI-Systeme" },
-  { id: "5", title: "Was folgt daraus für die Gestaltung von KI?" },
-  { id: "6", title: "Messung von Vertrauen und Vertrauenswürdigkeit" },
-  { id: "7", title: "Vertrauen gestalten, Vertrauenswürdigkeit sichern" },
+  { id: "3", title: "Warum ist Trustworthy AI ein zentrales Thema?" },
+  { id: "4", title: "Warum ist Vertrauenswürdigkeit schwer zu definieren?" },
+  { id: "5", title: "Vertrauen vs. Vertrauenswürdigkeit" },
+  { id: "6", title: "Dimensionen vertrauenswürdiger KI-Systeme" },
+  { id: "7", title: "Was folgt daraus für die Gestaltung von KI?" },
+  { id: "8", title: "Messung von Vertrauen und Vertrauenswürdigkeit" },
+  { id: "9", title: "Fazit" },
 ];
 
 const Vertrauenswürdigkeit = {
   linkName: "vertrauenswuerdigkeit",
   name: "Vertrauenswürdigkeit",
   description:
-    "Hier wird die Vetrauenswürdigkeit von KI-Systemen thematisiert.",
+    "Wann empfinden Menschen eine KI als glaubwürdig und verlässlich?",
   content: [
     <ChapterHeader text={"Vertrauenswürdigkeit"} number={2} />,
     <section>
-      {/* p Mit einleitungstext */}
+      <p>
+        Dieses Kapitel behandelt, warum Vertrauenswürdigkeit für den
+        erfolgreichen und verantwortungsvollen Einsatz von KI-Systemen
+        entscheidend ist, erläutert den Unterschied zwischen Vertrauen und
+        Vertrauenswürdigkeit und zeigt, wie beides durch Gestaltung, Technik und
+        Evaluation gefördert werden kann.
+      </p>
       <Accordion sections={sectionsVertrauenswürdigkeit} />
       <SubNavigation sections={sectionsVertrauenswürdigkeit} />
     </section>,
     <section>
+      <p>
+        Im folgenden Video wird grundlegend erläutert, was Vertrauenswürdigkeit
+        in KI-Systemen bedeutet und warum sie eine zentrale Voraussetzung für
+        ihre Akzeptanz und verantwortungsvolle Nutzung ist.
+      </p>
       <VideoContainer
         link="https://www.youtube-nocookie.com/embed/n5T6GVjXyJ4?rel=0&modestbranding=1"
         title="Vertrauenswürdigkeit"
       />
     </section>,
     <section>
-      <h2>1. Einführung: Warum ist "Trustworthy AI" ein zentrales Thema?</h2>
+      <h2>1. Einführung: Warum ist Trustworthy AI ein zentrales Thema?</h2>
       <p>
         Vertrauenswürdigkeit ist eine Schlüsseldimension für die erfolgreiche
         Einführung und nachhaltige Nutzung von KI-Systemen. Während technische
@@ -151,7 +69,7 @@ const Vertrauenswürdigkeit = {
         <LinkHandler to={"/eu-ai-act/high-level-expert-group"}>
           Expertenkommissionen
         </LinkHandler>{" "}
-        eingefordert
+        eingefordert.
       </p>
       <p>
         Besonders in sensiblen Bereichen - etwa in der Medizin, im Finanzwesen
@@ -202,23 +120,23 @@ const Vertrauenswürdigkeit = {
     <section>
       <h2>2. Warum ist Vertrauenswürdigkeit schwer zu definieren?</h2>
       <p>
-        Obwohl sie "objektiv" wirken soll, ist Vertrauenswürdigkeit schwierig
-        allgemein und einheitlich zu definieren, denn:
+        Obwohl sie <i>objektiv</i> wirken soll, ist Vertrauenswürdigkeit
+        schwierig allgemein und einheitlich zu definieren, denn:
       </p>
       <ul>
         <li>
           Sie besteht aus mehreren Dimensionen (z.B. Transparenz, Fairness,
-          Robustheit)
+          Robustheit).
         </li>
         <li>
           Ihre Bewertung ist kontextabhängig (Was im E-Commerce als
           vertrauenswürdig gilt, reicht im Gesundheitswesen vielleicht nicht aus
-          - der Fachausdruck ist “individueller Standard“).
+          - der Fachausdruck ist &bdquo;individueller Standard&ldquo;).
         </li>
-        <li>Sie wird oft mit Vertrauen verwechselt oder vermischt</li>
+        <li>Sie wird oft mit Vertrauen verwechselt oder vermischt.</li>
       </ul>
       <p>
-        Die Begriffe "Vertrauen" und "Vertrauenswürdigkeit" sind nicht
+        Die Begriffe <i>Vertrauen</i> und <i>Vertrauenswürdigkeit</i> sind nicht
         identisch. Gerade aus psychologischer Perspektive lohnt sich die
         Unterscheidung. Also, wo genau liegen die Unterschiede?
       </p>
@@ -237,24 +155,25 @@ const Vertrauenswürdigkeit = {
         Der Unterschied zwischen <i>Vertrauen und Vertrauenswürdigkeit</i> ist
         zentral für die Gestaltung und Bewertung von KI-Systemen:
       </p>
-      <ul>
+      <ol>
         <li>
           <b>Vertrauen</b> ist eine <b>subjektive Haltung</b> bzw. Einstellung
           eines Individuums oder einer Gruppe gegenüber einer Entität (hier: der
-          KI). Es basiert auf Wahrnehmung, Erfahrung, Intuition und oft auch auf
+          KI). <br />
+          Es basiert auf Wahrnehmung, Erfahrung, Intuition und oft auch auf
           psychologischen und kulturellen Faktoren. Vertrauen kann entstehen,
           selbst wenn ein System objektiv unsicher ist - oder ausbleiben, obwohl
           das System technisch und ethisch einwandfrei funktioniert.
         </li>
         <li>
           <b>Vertrauenswürdigkeit</b> ist eine{" "}
-          <b>objektive, überprüfbare Eigenschaft des Systems</b>. Sie hängt von
-          Kriterien wie Zuverlässigkeit, Fairness, Sicherheit, Transparenz und
-          Erklärbarkeit ab. Ein vertrauenswürdiges System erfüllt dokumentierte
-          Standards und kann seine Leistungsfähigkeit und Unvoreingenommenheit
-          nachweisen.
+          <b>objektive, überprüfbare Eigenschaft des Systems</b>. <br />
+          Sie hängt von Kriterien wie Zuverlässigkeit, Fairness, Sicherheit,
+          Transparenz und Erklärbarkeit ab. Ein vertrauenswürdiges System
+          erfüllt dokumentierte Standards und kann seine Leistungsfähigkeit und
+          Unvoreingenommenheit nachweisen.
         </li>
-      </ul>
+      </ol>
       <p>
         Eine Verwechslung ist leicht möglich: Vertrauenswürdigkeit kann nämlich
         in einer Anwendung mit wenig Risiko und Anspruch an Korrektheit
@@ -262,7 +181,7 @@ const Vertrauenswürdigkeit = {
         gefährlich sind. Dadurch wirkt Vertrauenswürdigkeit aufgrund ihrer
         Kontextabhängigkeit nicht überprüfbar und objektiv - so wie Vertrauen.
       </p>
-      <h3>3a. Wie entsteht Vertrauen in KI-Systeme</h3>
+      <h3>3a) Wie entsteht Vertrauen in KI-Systeme?</h3>
       <p>
         Vertrauen entsteht <b>nicht automatisch</b> durch technische Qualität.
         Es ist ein psychologischer und sozialer Prozess. Ein hilfreiches Modell
@@ -271,75 +190,81 @@ const Vertrauenswürdigkeit = {
         unterscheiden darin zwei zentrale Dimensionen von Vertrauen in
         Computersysteme:
       </p>
-      <h4>Kognitives Vertrauen</h4>
-      <p>
-        Beruht auf der rationalen Einschätzung der Systemleistung. Es entsteht,
-        wenn Nutzer:innen das System als kompetent, vorhersehbar und zuverlässig
-        wahrnehmen.
-      </p>
-      <p>
-        <i>Fördernde Faktoren:</i>
-      </p>
-      <ul>
-        <li>technische Kompetenz und Genauigkeit</li>
-        <li>konsistente, nachvollziehbare Entscheidungen</li>
-
-        <li>transparente Abläufe</li>
-
-        <li>Stabilität und Verlässlichkeit im Betrieb</li>
-      </ul>
-      <h4>Affektives Vertrauen</h4>
-      <p>
-        Beruht auf emotionaler Resonanz und sozialer Wahrnehmung. Es entsteht,
-        wenn Nutzer:innen das Gefühl haben, fair behandelt zu werden oder dass
-        das System ihre Interessen unterstützt.
-      </p>
-      <ul>
-        <li>
-          menschlich wirkendes, empathisches Design - aber Achtung, es sollte
-          kein "uncanny valley" entstehen
-        </li>
-
-        <li>freundliche, respektvolle Sprache und soziale Signale</li>
-
-        <li>
-          ethisches Verhalten (z.B. keine Manipulation, kein übertriebener
-          Druck)
-        </li>
-      </ul>
-      <p>
+      <TabSwitchView>
+        <div title="Kognitives Vertrauen">
+          <p>
+            Beruht auf der rationalen Einschätzung der Systemleistung. Es
+            entsteht, wenn Nutzer:innen das System als kompetent, vorhersehbar
+            und zuverlässig wahrnehmen.
+          </p>
+          <p>
+            <b>Fördernde Faktoren:</b>
+          </p>
+          <ul className="mt-5">
+            <li>technische Kompetenz und Genauigkeit</li>
+            <li>konsistente, nachvollziehbare Entscheidungen</li>
+            <li>transparente Abläufe</li>
+            <li>Stabilität und Verlässlichkeit im Betrieb</li>
+          </ul>
+        </div>
+        <div title="Affektives Vertrauen">
+          <p>
+            Beruht auf emotionaler Resonanz und sozialer Wahrnehmung. Es
+            entsteht, wenn Nutzer:innen das Gefühl haben, fair behandelt zu
+            werden oder dass das System ihre Interessen unterstützt.
+          </p>
+          <ul>
+            <li>
+              menschlich wirkendes, empathisches Design - aber Achtung, es
+              sollte kein <i>uncanny valley</i> entstehen
+            </li>
+            <li>freundliche, respektvolle Sprache und soziale Signale</li>
+            <li>
+              ethisches Verhalten (z.B. keine Manipulation, kein übertriebener
+              Druck)
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
+      <p className="mt-10">
         UX-Design muss beide Dimensionen - kognitiv und affektiv - mitdenken, um
         angemessenes Vertrauen in KI-Systeme zu ermöglichen.
       </p>
-      <h3>3b. Warum reicht Vertrauen allein nicht aus?</h3>
+      <h3>3b) Warum reicht Vertrauen allein nicht aus?</h3>
       <p>
         Ein entscheidender Punkt: Nur weil Menschen einem System vertrauen, ist
         es noch lange nicht vertrauenswürdig. Und umgekehrt.
       </p>
-      <p>
-        <b>Risiko 1</b>: Menschen vertrauen einem{" "}
-        <b>nicht vertrauenswürdigen</b> System &rarr; Gefahr von
-        Fehlentscheidungen. Beispiel: Nutzende vertrauen einem nicht für
-        medizinische Beratung ausgelegten System wie ChatGPT bei Fragen zu
-        komplexen Wechselwirkungen von Medikamenten. Dies nennt man
-        Übervertrauen.
-      </p>
-      <p>
-        <b>Risiko 2</b>: Menschen misstrauen einem <b>vertrauenswürdigen</b>{" "}
-        System &rarr; Gefahr von Ineffizienz, Ablehnung, Algorithm Aversio.
-        Beispiel: Es wird lieber manuell ein komplexer Datensatz aufgearbeitet,
-        als sich auf ein automatisiertes System zu verlassen, das für diese
-        Aufgabe geschaffen worden ist. Dies nennt man Untervertrauen.
-      </p>
-      <p>Deshalb ist das Ziel von UX-Design und KI-Entwicklung:</p>
-      <ul>
+      <ol>
         <li>
-          <b>Vertrauenswürdigkeit sicherstellen</b> (systemseitig)
+          <b>Risiko</b>: Menschen vertrauen einem{" "}
+          <b>nicht vertrauenswürdigen</b> System <br />
+          &rarr; Gefahr von Fehlentscheidungen. <br />
+          <br />
+          Beispiel: Nutzende vertrauen einem nicht für medizinische Beratung
+          ausgelegten System wie ChatGPT bei Fragen zu komplexen
+          Wechselwirkungen von Medikamenten. Dies nennt man Übervertrauen.
+          <br />
+          <br />
         </li>
         <li>
-          <b>Vertrauen kalibrieren</b> (nutzerseitig)
+          <b>Risiko</b>: Menschen misstrauen einem <b>vertrauenswürdigen</b>{" "}
+          System <br />
+          &rarr; Gefahr von Ineffizienz, Ablehnung, Algorithm Aversion. <br />
+          <br />
+          Beispiel: Es wird lieber manuell ein komplexer Datensatz
+          aufgearbeitet, als sich auf ein automatisiertes System zu verlassen,
+          das für diese Aufgabe geschaffen worden ist. Dies nennt man
+          Untervertrauen.
+          <br />
+          <br />
         </li>
-      </ul>
+      </ol>
+      <p className="specialText">
+        Deshalb ist das Ziel von UX-Design und KI-Entwicklung:{" "}
+        <b>Vertrauenswürdigkeit sicherstellen</b> (systemseitig) und{" "}
+        <b>Vertrauen kalibrieren</b> (nutzerseitig).
+      </p>
     </section>,
     <section>
       <h2>4. Dimensionen vertrauenswürdiger KI-System</h2>
@@ -347,91 +272,76 @@ const Vertrauenswürdigkeit = {
         Für ein System, das als vertrauenswürdig gelten soll, werden in der
         Regel folgende Eigenschaften gefordert:
       </p>
-      <ol type="a">
-        <li>
-          <b>Technische Robustheit und Sicherheit</b>: Das System soll unter
-          normalen und außergewöhnlichen Bedingungen zuverlässig arbeiten. Zu
-          relevanten Aspekten zählen z. B. Fehlertoleranz, Resilienz gegen
-          Angriffe (Cybersecurity), Fail-Safe-Mechanismen, kontinuierliche
-          Überwachung.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Nutzer:innen müssen über Systemstatus, Ausfälle
-              oder Sicherheitsereignisse klar informiert werden.
-            </li>
-          </ol>
-        </li>
+      <h4>a) Technische Robustheit und Sicherheit</h4>
+      <p>
+        Das System soll unter normalen und außergewöhnlichen Bedingungen
+        zuverlässig arbeiten. Zu relevanten Aspekten zählen z. B.
+        Fehlertoleranz, Resilienz gegen Angriffe (Cybersecurity),
+        Fail-Safe-Mechanismen, kontinuierliche Überwachung.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Nutzer:innen müssen über Systemstatus, Ausfälle oder
+        Sicherheitsereignisse klar informiert werden.
+      </p>
 
-        <li>
-          <b>Transparenz und Erklärbarkeit</b>: Entscheidungen und Prozesse
-          sollen nachvollziehbar und überprüfbar sein. Dazu zählt u. a. die
-          Offenlegung der Funktionsweise (z. B. Modellarchitektur,
-          Trainingsdatenquellen), Erklärungen einzelner Entscheidungen, Angabe
-          von Unsicherheiten.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Erklärungen müssen in für die Zielgruppe
-              verständlicher Form präsentiert werden (Text, Visualisierung,
-              interaktive Elemente).
-            </li>
-          </ol>
-        </li>
+      <h4>b) Transparenz und Erklärbarkeit</h4>
+      <p>
+        Entscheidungen und Prozesse sollen nachvollziehbar und überprüfbar sein.
+        Dazu zählt u. a. die Offenlegung der Funktionsweise (z. B.
+        Modellarchitektur, Trainingsdatenquellen), Erklärungen einzelner
+        Entscheidungen, Angabe von Unsicherheiten.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Erklärungen müssen in für die Zielgruppe verständlicher
+        Form präsentiert werden (Text, Visualisierung, interaktive Elemente).
+      </p>
 
-        <li>
-          <b>Fairness</b>: KI soll Personen oder Gruppen nicht benachteiligen
-          oder privilegieren, es sei denn, dies ist explizit gerechtfertigt (z.
-          B. positive Diskriminierung). Dazu gehört u. a. Bias-Erkennung, faire
-          Datenauswahl, Überprüfung von Outputs auf diskriminierende Muster.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Betroffene müssen bei Ergebnissen erkennen und
-              nachvollziehen können, ob diese aufgrund verzerrter Daten zustande
-              gekommen sind.
-            </li>
-          </ol>
-        </li>
+      <h4>c) Fairness</h4>
+      <p>
+        KI soll Personen oder Gruppen nicht benachteiligen oder privilegieren,
+        es sei denn, dies ist explizit gerechtfertigt (z. B. positive
+        Diskriminierung). Dazu gehört u. a. Bias-Erkennung, faire Datenauswahl,
+        Überprüfung von Outputs auf diskriminierende Muster.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Betroffene müssen bei Ergebnissen erkennen und
+        nachvollziehen können, ob diese aufgrund verzerrter Daten zustande
+        gekommen sind.
+      </p>
 
-        <li>
-          <b>Datenschutz und Daten-Governance</b>: Schutz personenbezogener
-          Daten und verantwortungsvoller Umgang mit sensiblen Informationen.
-          Dazu zählt u. a. Privacy by Design, Minimierung erhobener Daten, klare
-          Einwilligungsprozesse, Datenanonymisierung.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Nutzer:innen müssen leicht nachvollziehen und
-              steuern können, welche Daten genutzt werden.
-            </li>
-          </ol>
-        </li>
+      <h4>d) Datenschutz und Daten-Governance</h4>
+      <p>
+        Schutz personenbezogener Daten und verantwortungsvoller Umgang mit
+        sensiblen Informationen. Dazu zählt u. a. Privacy by Design, Minimierung
+        erhobener Daten, klare Einwilligungsprozesse, Datenanonymisierung.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Nutzer:innen müssen leicht nachvollziehen und steuern
+        können, welche Daten genutzt werden.
+      </p>
 
-        <li>
-          <b>Rechenschaftspflicht & Verantwortung</b>: Es muss klar sein, wer
-          für das Verhalten des Systems verantwortlich ist, und es muss möglich
-          sein, Entscheidungen im Nachhinein zu überprüfen. Dazu gehört z. B.
-          Dokumentation, Audit-Trails, klare Verantwortlichkeitszuordnung,
-          Haftungsregelungen.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Nutzer:innen müssen wissen, an wen sie sich im
-              Falle von Problemen wenden können.
-            </li>
-          </ol>
-        </li>
+      <h4>e) Rechenschaftspflicht & Verantwortung</h4>
+      <p>
+        Es muss klar sein, wer für das Verhalten des Systems verantwortlich ist,
+        und es muss möglich sein, Entscheidungen im Nachhinein zu überprüfen.
+        Dazu gehört z. B. Dokumentation, Audit-Trails, klare
+        Verantwortlichkeitszuordnung, Haftungsregelungen.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Nutzer:innen müssen wissen, an wen sie sich im Falle
+        von Problemen wenden können.
+      </p>
 
-        <li>
-          <b>Human Agency & Oversight</b>: Menschen behalten die Kontrolle über
-          kritische Entscheidungen. Dazu zählen z. B. Mechanismen wie
-          Human-in-the-Loop, Abschaltmöglichkeiten, Entscheidungsunterstützung
-          statt -ersetzung.
-          <ol type="a" className="list-none">
-            <li>
-              <b>UX-Bezug</b>: Schnittstellen müssen Eingriffe intuitiv
-              ermöglichen, ohne dass Nutzer:innen durch komplexe Prozesse
-              abgeschreckt werden.
-            </li>
-          </ol>
-        </li>
-      </ol>
+      <h4>f) Human Agency & Oversight</h4>
+      <p>
+        Menschen behalten die Kontrolle über kritische Entscheidungen. Dazu
+        zählen z. B. Mechanismen wie Human-in-the-Loop, Abschaltmöglichkeiten,
+        Entscheidungsunterstützung statt -ersetzung.
+      </p>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Schnittstellen müssen Eingriffe intuitiv ermöglichen,
+        ohne dass Nutzer:innen durch komplexe Prozesse abgeschreckt werden.
+      </p>
       <p>
         Diese Dimensionen bilden das Fundament der objektiven
         Vertrauenswürdigkeit. UX-Design hat die Aufgabe, diese Eigenschaften{" "}
@@ -441,25 +351,16 @@ const Vertrauenswürdigkeit = {
     </section>,
     <section>
       <h2>5. Was folgt daraus für die Gestaltung von KI?</h2>
-      <h4>Empfehlung für die Praxis</h4>
-      <ul>
-        <li>
-          Entwickeln Sie <b>technisch vertrauenswürdige Systeme</b>, die fair,
-          robust und nachvollziehbar sind.
-        </li>
-        <li>
-          Gestalten Sie <b>erklärende Interfaces</b>, die Nutzer:innen wirklich
-          verstehen können.
-        </li>
-        <li>
-          Testen Sie mit echten Nutzer:innen:{" "}
-          <b>Verstehen ihre Nutzer:innen die Entscheidungen des Systems?</b>
-        </li>
-        <li>
-          Kommunizieren Sie ehrlich:{" "}
-          <b>Keine Überversprechen von KI-Fähigkeiten!</b>
-        </li>
-      </ul>
+      <h4>Empfehlung für die Praxis:</h4>
+      <List
+        items={[
+          "Entwickeln Sie <b>technisch vertrauenswürdige Systeme</b>, die fair, robust und nachvollziehbar sind.",
+          "Gestalten Sie <b>erklärende Interfaces</b>, die Nutzer:innen wirklich verstehen können.",
+          "Testen Sie mit echten Nutzer:innen: <b>Verstehen ihre Nutzer:innen die Entscheidungen des Systems?</b>",
+          "Kommunizieren Sie ehrlich: <b>Keine Überversprechen von KI-Fähigkeiten!</b>",
+        ]}
+        alignItems="center"
+      />
       <p>
         Aber wie lassen sich Vertrauenswürdigkeit und Vertrauen in Bezug auf ein
         KI-System eigentlich messen?
@@ -472,52 +373,46 @@ const Vertrauenswürdigkeit = {
         <b>objektiver Vertrauenswürdigkeit</b> unterscheiden. Beide Größen
         können auseinanderfallen und sollten separat erhoben werden.
       </p>
-      <p>
-        <b>a) Messung von Vertrauen (subjektiv)</b>
-      </p>
-      <ul>
-        <li>
-          <b>Umfragen & Fragebögen</b>: z. B. Trust in Automation Scale,
-          NASA-TLX (für mentale Belastung)
-        </li>
-        <li>
-          <b>Verhaltensindikatoren</b>: Bspw. Häufigkeit, mit der Nutzer:innen
-          Empfehlungen der KI folgen oder sie ablehnen
-        </li>
-        <li>
-          <b>Langzeitbeobachtung</b>: Veränderungen des Vertrauens über
-          wiederholte Nutzung
-        </li>
-      </ul>
-      <p>
-        <b>b) Messung von Vertrauenswürdigkeit (objektiv)</b>
-      </p>
-      <ul>
-        <li>
-          <b>Technische Metriken</b>: Genauigkeit, Fehlerraten,
-          Fairness-Indikatoren, Robustheitstests
-        </li>
+      <TabSwitchView>
+        <div title="Messung von Vertrauen (subjektiv)">
+          <ul className="mt-0">
+            <li>
+              <b>Umfragen & Fragebögen</b>: z. B. Trust in Automation Scale,
+              NASA-TLX (für mentale Belastung)
+            </li>
+            <li>
+              <b>Verhaltensindikatoren</b>: Bspw. Häufigkeit, mit der
+              Nutzer:innen Empfehlungen der KI folgen oder sie ablehnen
+            </li>
+            <li>
+              <b>Langzeitbeobachtung</b>: Veränderungen des Vertrauens über
+              wiederholte Nutzung
+            </li>
+          </ul>
+        </div>
+        <div title="Messung von Vertrauenswürdigkeit (objektiv)">
+          <ul className="mt-0">
+            <li>
+              <b>Technische Metriken</b>: Genauigkeit, Fehlerraten,
+              Fairness-Indikatoren, Robustheitstests
+            </li>
+            <li>
+              <b>Audit & Compliance-Prüfungen</b>: Abgleich mit regulatorischen
+              Standards (z. B. EU AI Act, ISO-Normen)
+            </li>
+            <li>
+              <b>Erklärbarkeits-Checks</b>: Verständlichkeit und Korrektheit der
+              bereitgestellten Erklärungen
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
 
-        <li>
-          <b>Audit & Compliance-Prüfungen</b>: Abgleich mit regulatorischen
-          Standards (z. B. EU AI Act, ISO-Normen)
-        </li>
-
-        <li>
-          <b>Erklärbarkeits-Checks</b>: Verständlichkeit und Korrektheit der
-          bereitgestellten Erklärungen
-        </li>
-      </ul>
+      <h4 className="mt-10">Kombination von Messmethoden</h4>
       <p>
-        <b>c) Kombination von Messmethoden</b>
+        Gemeinsame Auswertung, um <i>Trust Calibration</i> zu prüfen - also ob
+        subjektives Vertrauen mit objektiver Vertrauenswürdigkeit übereinstimmt.
       </p>
-      <ul>
-        <li>
-          Gemeinsame Auswertung, um <i>Trust Calibration</i> zu prüfen - also ob
-          subjektives Vertrauen mit objektiver Vertrauenswürdigkeit
-          übereinstimmt.
-        </li>
-      </ul>
     </section>,
     <section>
       <h2>7. Fazit: Vertrauen gestalten, Vertrauenswürdigkeit sichern</h2>
@@ -527,8 +422,8 @@ const Vertrauenswürdigkeit = {
         psychologisches Verständnis und ethische Klarheit.
       </p>
       <p className="specialText">
-        "Die Frage ist nicht: Wie überzeugen wir Menschen von KI? Sondern: Wie
-        gestalten wir KI, die überzeugt?"
+        Die Frage ist nicht: Wie überzeugen wir Menschen von KI? <br />
+        Sondern: Wie gestalten wir KI, die überzeugt?
       </p>
     </section>,
     <section>
@@ -543,14 +438,14 @@ const Vertrauenswürdigkeit = {
 };
 
 const sectionsTransparenz = [
-  { id: "1", title: "Einleitung: Warum ist Transparenz wichtig?" },
-  { id: "2", title: "Definition: Was bedeutet Transparenz in der KI?" },
-  { id: "3", title: "Beispiel: Denkmal-Entscheidung per Bildanalyse" },
-  { id: "4", title: "Warum ist Transparenz nicht trivial?" },
-  { id: "5", title: "Wie lässt sich Transparenz herstellen?" },
-  { id: "6", title: "Praktische Tipps zu Gestaltung transparenter KI" },
+  { id: "3", title: "Einleitung: Warum ist Transparenz wichtig?" },
+  { id: "4", title: "Definition: Was bedeutet Transparenz in der KI?" },
+  { id: "5", title: "Beispiel: Denkmal-Entscheidung per Bildanalyse" },
+  { id: "6", title: "Warum ist Transparenz nicht trivial?" },
+  { id: "7", title: "Wie lässt sich Transparenz herstellen?" },
+  { id: "8", title: "Praktische Tipps zu Gestaltung transparenter KI" },
   {
-    id: "7",
+    id: "9",
     title:
       "Fazit: Transparenz als Brücke zum Vertrauen und Grundlage für weitere UX-bezogene Eigenschaften",
   },
@@ -559,15 +454,25 @@ const sectionsTransparenz = [
 const Transparenz = {
   linkName: "transparenz",
   name: "Transparenz",
-  description: "Hier wird die Transparenz von KI-Systemen thematisiert.",
+  description: "Wie viel Einsicht in Prozesse und Daten brauchen Nutzer:innen?",
   content: [
     <ChapterHeader text={"Transparenz in KI-Systemen"} number={3} />,
     <section>
-      {/* p Mit einleitungstext */}
+      <p>
+        Dieses Kapitel beleuchtet die Bedeutung von Transparenz als zentrale
+        Voraussetzung vertrauenswürdiger KI und zeigt, warum sie nicht nur
+        rechtlich gefordert, sondern auch essenziell für Verständnis,
+        Verantwortung und Akzeptanz ist.
+      </p>
       <Accordion sections={sectionsTransparenz} />
       <SubNavigation sections={sectionsTransparenz} />
     </section>,
     <section>
+      <p>
+        Im folgenden Video wird Transparenz von KI-Systemen anhand eines
+        Beispiels erklärt und darauf eingegangen wie man Transparenz erreichen
+        kann, sowie dess Aspekte im Bezug zur UX.
+      </p>
       <VideoContainer
         link="https://www.youtube-nocookie.com/embed/M1daurSX-Fk?rel=0&modestbranding=1"
         title="Transparenz"
@@ -577,7 +482,7 @@ const Transparenz = {
       <h2>1. Einleitung: Warum ist Transparenz wichtig?</h2>
       <p>
         Transparenz ist ein zentrales Prinzip im Kontext vertrauenswürdiger KI.
-        Sie wird oft als Voraussetzung dafür genannt, dass ein System als
+        Sie wird oft als Voraussetzung dafür genannt, dass ein System als{" "}
         <b>vertrauenswürdig</b> wahrgenommen werden kann. Aber:{" "}
         <b>Transparenz ist nicht das Gleiche wie Vertrauenswürdigkeit</b>. Sie
         ist vielmehr eine <b>notwendige Bedingung</b> für korrekte
@@ -649,8 +554,8 @@ const Transparenz = {
       </p>
       <p>
         <i>
-          „Wir haben 500 Bilder von denkmalgeschützten Gebäuden und 500.000
-          Bilder von nicht denkmalgeschützten Gebäuden verwendet.“
+          &bdquo;Wir haben 500 Bilder von denkmalgeschützten Gebäuden und
+          500.000 Bilder von nicht denkmalgeschützten Gebäuden verwendet.&ldquo;
         </i>
       </p>
       <p>
@@ -689,16 +594,16 @@ const Transparenz = {
       </p>
       <ul>
         <li>
-          "Transparenz = Offenlegen von Code" - für die meisten Nutzer:innen,
-          die nicht technisch versiert sind, ist eine solche Information{" "}
-          <b>nicht hilfreich</b>
+          &bdquo;Transparenz = Offenlegen von Code&ldquo; - für die meisten
+          Nutzer:innen, die nicht technisch versiert sind, ist eine solche
+          Information <b>nicht hilfreich</b>
         </li>
         <li>
-          "Mehr Transparenz ist immer besser" - kann aber auch zu{" "}
+          &bdquo;Mehr Transparenz ist immer besser&ldquo; - kann aber auch zu{" "}
           <b>Verwirrung oder Misstrauen führen</b>
         </li>
       </ul>
-      <h4>Herausforderungen</h4>
+      <h4>Herausforderungen:</h4>
       <ul>
         <li>
           Unterschiedliche Zielgruppen benötigen{" "}
@@ -764,25 +669,24 @@ const Transparenz = {
         Möglichkeit zu geben,{" "}
         <b>die Entscheidungen des Systems sinnvoll einzuordnen</b>.
       </p>
-      <h4>Wichtige UX-Fragen zur Transparenz</h4>
-      <ul>
-        <li>Welche Daten nutzt die KI - und warum?</li>
-
-        <li>Wie wurde das Modell trainiert?</li>
-
-        <li>Wie kommt das System zu seinem Ergebnis?</li>
-
-        <li>Wie zuverlässig ist dieses Ergebnis?</li>
-
-        <li>Welche Grenzen, Risiken oder Unsicherheiten bestehen?</li>
-      </ul>
-      <p>
-        <b>1. Prozess-Transparenz</b>: Offenlegung der Entstehung und
-        Funktionsweise eines KI-Systems.
-      </p>
+      <Accordion
+        title="Wichtige UX-Fragen zur Transparenz"
+        initiallyOpen={false}>
+        <ul>
+          <li>Welche Daten nutzt die KI - und warum?</li>
+          <li>Wie wurde das Modell trainiert?</li>
+          <li>Wie kommt das System zu seinem Ergebnis?</li>
+          <li>Wie zuverlässig ist dieses Ergebnis?</li>
+          <li>Welche Grenzen, Risiken oder Unsicherheiten bestehen?</li>
+        </ul>
+      </Accordion>
+      <div className="h-[var(--scale3)]"></div>
+      <h3>Drei Arten von Transparenz</h3>
+      <h4>1. Prozess-Transparenz</h4>
+      <p>Offenlegung der Entstehung und Funktionsweise eines KI-Systems.</p>
       <ul>
         <li>
-          <b>Beinhaltet z.B</b>: Herkunft und Qualität der Trainingsdaten,
+          <b>Beispielsweise</b>: Herkunft und Qualität der Trainingsdaten,
           Beschreibung der Modellarchitektur und verwendeten Algorithmen,
           inklusive Trainingsverhalten, sowie Zieldefinition und Systemgrenze.
         </li>
@@ -790,20 +694,18 @@ const Transparenz = {
           <b>Zweck</b>: Hilft Nutzer:innen und Prüfern, konkrete Ergebnisse zu
           verstehen, zu hinterfragen und ggf. zu korrigieren.
         </li>
-        <li>
-          <b>UX-Bezug</b>: Prozessinformationen müssen in einer Form verfügbar
-          sein, die sowohl für Fachleute als auch für betroffene Nutzer:innen
-          zugänglich ist - z.B. über interaktive Dokumentationen oder „About
-          this AI“-Sektionen.
-        </li>
       </ul>
-      <p>
-        <b>2. Entscheidungs-Transparenz: Definition</b>: Nachvollziehbarkeit
-        einzelner Entscheidungen oder Outputs der KI
+      <p className="specialText">
+        <b>UX-Bezug</b>: Prozessinformationen müssen in einer Form verfügbar
+        sein, die sowohl für Fachleute als auch für betroffene Nutzer:innen
+        zugänglich ist - z.B. über interaktive Dokumentationen oder „About this
+        AI“-Sektionen.
       </p>
+      <h4>2. Entscheidungs-Transparenz</h4>
+      <p>Nachvollziehbarkeit einzelner Entscheidungen oder Outputs der KI</p>
       <ul>
         <li>
-          <b>Beinhaltet z.B</b>: Begründung, warum eine bestimmte Entscheidung
+          <b>Beispielsweise</b>: Begründung, warum eine bestimmte Entscheidung
           getroffen wurde, Darstellung der wichtigsten Einflussfaktoren, Angabe
           von Unsicherheiten oder Wahrscheinlichkeiten
         </li>
@@ -811,20 +713,20 @@ const Transparenz = {
           <b>Zweck</b>: Hilft Nutzer:innen und Prüfern, konkrete Ergebnisse zu
           verstehen, zu hinterfragen und ggf. zu korrigieren.
         </li>
-        <li>
-          <b>UX-Bezug</b>: Erklärungen müssen <b>kontextbezogen</b> und{" "}
-          <b>handlungsrelevant</b> sein, z. B. durch visuelle Hervorhebung
-          relevanter Datenpunkte oder Szenario-abhängige Erklärtexte.
-        </li>
       </ul>
+      <p className="specialText">
+        <b>UX-Bezug</b>: Erklärungen müssen <b>kontextbezogen</b> und{" "}
+        <b>handlungsrelevant</b> sein, z. B. durch visuelle Hervorhebung
+        relevanter Datenpunkte oder Szenario-abhängige Erklärtexte.
+      </p>
+      <h4>3. Governance-Transparenz</h4>
       <p>
-        <b>3. Governance-Transparenz: Definition</b>: Offenlegung der
-        organisatorischen und regulatorischen Rahmenbedingungen, unter denen ein
-        KI-System betrieben wird.
+        Offenlegung der organisatorischen und regulatorischen Rahmenbedingungen,
+        unter denen ein KI-System betrieben wird.
       </p>
       <ul>
         <li>
-          <b>Beinhaltet z.B</b>: Zuständigkeiten und Verantwortlichkeiten,
+          <b>Beispielsweise</b>: Zuständigkeiten und Verantwortlichkeiten,
           Eingesetzte Audit- und Überwachungsprozesse, Einhaltung von Standards
           und Zertifizierungen
         </li>
@@ -832,30 +734,21 @@ const Transparenz = {
           <b>Zweck</b>: Ermöglicht es Stakeholdern, die Verantwortungsstruktur
           zu verstehen und im Problemfall geeignete Ansprechpersonen zu finden.
         </li>
-        <li>
-          <b>UX-Bezug</b>: Governance-Informationen sollten für Endnutzer:innen
-          einfach auffindbar sein, z. B. über leicht zugängliche Hilfeseiten,
-          Zertifikatsanzeigen oder Compliance-Labels im Interface.
-        </li>
       </ul>
-      <p>
-        <b>Zusammenhang der Dimensionen</b>:
+      <p className="specialText">
+        <b>UX-Bezug</b>: Governance-Informationen sollten für Endnutzer:innen
+        einfach auffindbar sein, z. B. über leicht zugängliche Hilfeseiten,
+        Zertifikatsanzeigen oder Compliance-Labels im Interface.
       </p>
-      <ul>
-        <li>
-          Prozess-Transparenz &rarr; zeigt <b>wie</b> das System gebaut ist
-        </li>
-
-        <li>
-          Entscheidungs-Transparenz &rarr; erklärt <b>warum</b> das System etwas
-          tut
-        </li>
-
-        <li>
-          Governance-Transparenz &rarr; offenbart <b>wer</b> dafür
-          verantwortlich is
-        </li>
-      </ul>
+      <h4>Zusammenhang der Dimensionen:</h4>
+      <List
+        items={[
+          "Prozess-Transparenz &rarr; zeigt <b>wie</b> das System gebaut ist",
+          "Entscheidungs-Transparenz &rarr; erklärt <b>warum</b> das System etwas tut",
+          "Governance-Transparenz &rarr; offenbart <b>wer</b> dafür verantwortlich is",
+        ]}
+        alignItems="center"
+      />
       <p>
         Alle drei Dimensionen zusammen ermöglichen nicht nur eine{" "}
         <b>objektive Nachvollziehbarkeit</b>, sondern auch eine{" "}
@@ -865,28 +758,16 @@ const Transparenz = {
     </section>,
     <section>
       <h2>6. Praktische Tipps zur Gestaltung transparenter KI</h2>
-      <ul>
-        <li>
-          <b>Kenntnis der Zielgruppe</b>: Was wollen Nutzer:innen wissen? Was
-          können sie verstehen?
-        </li>
-        <li>
-          <b>Relevanz statt Überfrachtung</b>: Nur die Informationen geben, die
-          für die Entscheidung oder Nutzung wichtig sind.
-        </li>
-        <li>
-          <b>Visuelle Unterstützung</b>: Erklärungen durch Diagramme, Heatmaps,
-          Gegenbeispiele etc.
-        </li>
-        <li>
-          <b>Transparenz modularisieren</b>: Für verschiedene Ebenen (Daten,
-          Modell, Entscheidung) unterschiedliche Erklärungstiefen anbieten
-        </li>
-        <li>
-          <b>Feedback einholen</b>: Verstehen die Nutzer:innen wirklich, was
-          erklärt wurde?
-        </li>
-      </ul>
+      <List
+        items={[
+          "<b>Kenntnis der Zielgruppe</b>: Was wollen Nutzer:innen wissen? Was können sie verstehen?",
+          "<b>Relevanz statt Überfrachtung</b>: Nur die Informationen geben, die für die Entscheidung oder Nutzung wichtig sind.",
+          "<b>Visuelle Unterstützung</b>: Erklärungen durch Diagramme, Heatmaps, Gegenbeispiele etc.",
+          "<b>Transparenz modularisieren</b>: Für verschiedene Ebenen (Daten, Modell, Entscheidung) unterschiedliche Erklärungstiefen anbieten.",
+          "<b>Feedback einholen</b>: Verstehen die Nutzer:innen wirklich, was erklärt wurde?",
+        ]}
+        alignItems="center"
+      />
     </section>,
     <section>
       <h2>
@@ -924,29 +805,38 @@ const Transparenz = {
 };
 
 const sectionsErklaerbarkeit = [
-  { id: "1", title: "Einleitung: Was ist XAI und warum ist sie wichtig?" },
-  { id: "2", title: "Sind KI Systeme immer erklärbar?" },
-  { id: "3", title: "Warum ist Erklärbarkeit komplex?" },
-  { id: "4", title: "Arten von Erklärbarkeit" },
-  { id: "5", title: "Wirkung von Erklärungen - Chancen und Risiken" },
-  { id: "6", title: "Gestaltungshinweise und praktische Tipps" },
-  { id: "7", title: "Fazit: XAI als kontinuierlicher Gestaltungsprozess" },
+  { id: "3", title: "Einleitung: Was ist XAI und warum ist sie wichtig?" },
+  { id: "4", title: "Sind KI Systeme immer erklärbar?" },
+  { id: "5", title: "Warum ist Erklärbarkeit komplex?" },
+  { id: "6", title: "Arten von Erklärbarkeit" },
+  { id: "7", title: "Wirkung von Erklärungen - Chancen und Risiken" },
+  { id: "8", title: "Gestaltungshinweise und praktische Tipps" },
+  { id: "9", title: "Fazit: XAI als kontinuierlicher Gestaltungsprozess" },
 ];
 
 const Erklärbarkeit = {
   linkName: "erklaerbarkeit",
-  name: "Erklärbarkeit",
-  description: "Hier wird die Erklärbarkeit von KI-Systemen thematisiert.",
+  name: "Erklärbare KI (XAI)",
+  description: "Was macht eine gute Erklärung aus – und für wen?",
   content: [
-    <ChapterHeader text={"Erklärbarkeit"} number={4} />,
+    <ChapterHeader text={"Erklärbare KI (XAI)"} number={4} />,
     <section>
-      {/* p Mit einleitungstext */}
+      <p>
+        Dieses Kapitel führt in das Konzept der Erklärbaren Künstlichen
+        Intelligenz (XAI) ein und zeigt, warum Erklärbarkeit entscheidend ist,
+        um Vertrauen, Verantwortung und Verständnis im Umgang mit KI-Systemen zu
+        fördern.
+      </p>
       <Accordion sections={sectionsErklaerbarkeit} />
       <SubNavigation sections={sectionsErklaerbarkeit} />
     </section>,
     <section>
+      <p>
+        Im folgenden Video wird anhand eines Beispiels grundlegend erklärt was
+        Erklärbare KI ist.
+      </p>
       <VideoContainer
-        link="https://www.youtube-nocookie.com/embed/7fRa7xfLmwc?rel=0&modestbranding=1"
+        link="https://www.youtube-nocookie.com/embed/fAJ8rQdWzv0?rel=0&modestbranding=1"
         title="Erklärbarkeit"
       />
     </section>,
@@ -996,16 +886,17 @@ const Erklärbarkeit = {
         sind, stoßen wir bei modernen KI-Ansätzen schnell an Grenzen der
         Verständlichkeit. Besonders <b>Deep-Learning-Modelle</b>, die heute in
         vielen Anwendungen wie Bilderkennung, Sprachverarbeitung oder
-        Empfehlungssystemen eingesetzt werden, gelten häufig als „
-        <b>Black Boxes</b>“.
+        Empfehlungssystemen eingesetzt werden, gelten häufig als &bdquo;
+        <b>Black Boxes</b>&ldquo;.{" "}
         <b>Deep Learning basiert auf künstlichen neuronalen Netzen</b>, die aus
-        vielen Schichten („Layers“) miteinander verbundener künstlicher Neuronen
-        bestehen und so hochkomplexe Muster und Zusammenhänge in großen
-        Datenmengen automatisch erkennen und verarbeiten können.
+        vielen Schichten (&bdquo;Layers&ldquo;) miteinander verbundener
+        künstlicher Neuronen bestehen und so hochkomplexe Muster und
+        Zusammenhänge in großen Datenmengen automatisch erkennen und verarbeiten
+        können.
       </p>
-      <h3>Was bedeutet "Black Box"?</h3>
+      <h3>Was bedeutet &bdquo;Black Box&ldquo;?</h3>
       <p>
-        Eine „Black Box“ beschreibt ein System, dessen{" "}
+        Eine &bdquo;Black Box&ldquo; beschreibt ein System, dessen{" "}
         <b>
           innere Entscheidungsprozesse für Menschen nicht direkt nachvollziehbar
         </b>{" "}
@@ -1026,7 +917,7 @@ const Erklärbarkeit = {
         <li>
           <b>Automatisches Feature-Learning</b>: Anders als bei klassischen
           Modellen werden relevante Merkmale (Features) nicht von Menschen
-          vorgegeben, sondern automatisch gelernt – was Transparenz erschwert.
+          vorgegeben, sondern automatisch gelernt - was Transparenz erschwert.
         </li>
         <li>
           <b>Optimierungsverfahren</b>: Trainingsprozesse wie Gradient Descent
@@ -1048,11 +939,15 @@ const Erklärbarkeit = {
       <h2>3. Warum ist Erklärbarkeit komplex?</h2>
       <p>
         Eine Erklärung im Kontext von XAI ist ein kommunikatives Mittel, um auf
-        Fragen wie "Warum wurde diese Entscheidung getroffen?", "Was hätte
-        passieren müssen, damit es anders kommt?" oder "Was war besonders
-        einflussreich?" eine verständliche Antwort zu geben.
+        Fragen wie &bdquo;Warum wurde diese Entscheidung getroffen?&ldquo;,
+        &bdquo;Was hätte passieren müssen, damit es anders kommt?&ldquo; oder
+        &bdquo;Was war besonders einflussreich?&ldquo; eine verständliche
+        Antwort zu geben.
       </p>
-      <p>Allerdings ist das Konzept "Erklärung" schwer zu fassen, denn:</p>
+      <p>
+        Allerdings ist das Konzept &bdquo;Erklärung&ldquo; schwer zu fassen,
+        denn:
+      </p>
       <ul>
         <li>
           <b>Kontextabhängigkeit</b>: Je nach Anwendung (Medizin, Kreditvergabe,
@@ -1068,43 +963,48 @@ const Erklärbarkeit = {
         </li>
       </ul>
       <p>
-        Ein Beispiel: Die Aussage "Die Entscheidung basiert auf der Position des
-        Entscheidungsraums in Feature X" ist für Laien nicht hilfreich. Besser
-        wäre: "Ihr monatliches Einkommen liegt unter 3.200 €, was zur Ablehnung
-        beigetragen hat."
+        Ein Beispiel: Die Aussage &bdquo;Die Entscheidung basiert auf der
+        Position des Entscheidungsraums in Feature X&ldquo; ist für Laien nicht
+        hilfreich. Besser wäre: &bdquo;Ihr monatliches Einkommen liegt unter
+        3.200€, was zur Ablehnung beigetragen hat.&ldquo;
       </p>
     </section>,
     <section>
       <h2>4. Arten von Erklärungen in XAI</h2>
       <p>
         Erklärungen können auf unterschiedliche Weisen strukturiert sein. Man
-        unterscheidet insbesondere:
+        unterscheidet insbesondere <b>Lokale und Globale Erklärungen</b>:
       </p>
-      <h3>Lokale Erklärungen</h3>
-      <p>
-        Diese beziehen sich auf eine <b>konkrete Entscheidung</b> eines
-        KI-Systems. Sie beantworten die Frage: "Warum genau wurde in diesem Fall
-        X und nicht Y entschieden?"
-      </p>
-      <ul>
-        <li>Zeigen den Einfluss einzelner Eingabeparameter</li>
-        <li>Typische Methoden: SHAP, LIME, Counterfactuals</li>
-      </ul>
-      <h3>Globale Erklärungen</h3>
-      <p>
-        Sie beschreiben die <b>allgemeine Funktionsweise</b> des Modells über
-        viele Entscheidungen hinweg:
-      </p>
-      <ul>
-        <li>
-          Sie geben einen Überblick über Entscheidungslogik des Modells und
-          erläutern,
-        </li>
-        <li>
-          welchen Einfluss verschiedene Variablen haben und wie sie
-          zusammenhängen
-        </li>
-      </ul>
+      <TabSwitchView>
+        <div title="Lokale Erklärungen">
+          <p>
+            Diese beziehen sich auf eine <b>konkrete Entscheidung</b> eines
+            KI-Systems. Sie beantworten die Frage: &bdquo;Warum genau wurde in
+            diesem Fall X und nicht Y entschieden?&ldquo;
+          </p>
+          <ul>
+            <li>Zeigen den Einfluss einzelner Eingabeparameter</li>
+            <li>Typische Methoden: SHAP, LIME, Counterfactuals</li>
+          </ul>
+        </div>
+        <div title="Globale Erklärungen">
+          <p>
+            Sie beschreiben die <b>allgemeine Funktionsweise</b> des Modells
+            über viele Entscheidungen hinweg:
+          </p>
+          <ul>
+            <li>
+              Sie geben einen Überblick über Entscheidungslogik des Modells und
+              erläutern,
+            </li>
+            <li>
+              welchen Einfluss verschiedene Variablen haben und wie sie
+              zusammenhängen
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
+      <div className="h-[var(--scale3)]"></div>
       <Accordion
         title="Beispiel für ein Kreditbewertungsmodell"
         initiallyOpen={false}>
@@ -1128,16 +1028,15 @@ const Erklärbarkeit = {
           unabhängig von einer einzelnen Kundenentscheidung.
         </p>
       </Accordion>
-      <h3>Weitere Einteilungen (Speith, 2020)</h3>
+      <h3 className="mt-20">Weitere Einteilungen (Speith, 2020)</h3>
       <p>
-        <b>Post-hoc vs intrinsisch</b>: Erklärung wird entweder nachträglich
+        <b>Post-hoc vs. intrinsisch</b>: Erklärung wird entweder nachträglich
         erzeugt oder ergibt sich aus der Modellstruktur selbst (z.B.
-        Entscheidungsbaum)
+        Entscheidungsbaum).
       </p>
-      <ul>
-        <li>
-          <b>Modellbasierte (intrinsische) Erklärbarkeit</b>: Das Modell selbst
-          ist bereits transparent und verständlich
+      <TabSwitchView>
+        <div title="Modellbasierte (intrinsische) Erklärbarkeit">
+          <p>Das Modell selbst ist bereits transparent und verständlich.</p>
           <ul>
             <li>
               <b>Entscheidungsbäume</b> - Entscheidungen folgen klaren Regeln
@@ -1151,17 +1050,16 @@ const Erklärbarkeit = {
               IF-THEN-Strukturen
             </li>
           </ul>
-        </li>
-        <li>
-          <b>Post-hoc-Erklärungen</b>: Hier wird das Verhalten eines komplexen,
-          intransparenten Modells nachträglich analysiert. Häufige Ansätze sind:
+        </div>
+        <div title="Post-hoc-Erklärungen">
+          <p>
+            Hier wird das Verhalten eines komplexen, intransparenten Modells
+            nachträglich analysiert. Häufige Ansätze sind:
+          </p>
           <ul>
             <li>
-              Feature-Attribution:{" "}
-              <i>
-                Wie wichtig war ein bestimmtes Eingabefeature für diese
-                Entscheidung?
-              </i>
+              <b> Feature-Attribution:</b> Wie wichtig war ein bestimmtes
+              Eingabefeature für diese Entscheidung?
               <ul>
                 <li>
                   <b>SHAP (SHapley Additive exPlanations)</b>
@@ -1183,12 +1081,76 @@ const Erklärbarkeit = {
               Hilfsmittel wie Diagramme, Heatmaps, Salience Maps
             </li>
           </ul>
-        </li>
-      </ul>
+        </div>
+      </TabSwitchView>
     </section>,
     <section>
       <h2>5. Wirkung von Erklärungen - Chancen und Risiken</h2>
-      <p>Gut gestaltete Erklärungen können:</p>
+      <p>
+        Erklärungen können gut gestaltet sein, wobei es deutliche Grenzen gibt
+        und sie auch so gestaltet sein können, dass es problematisch ist.
+      </p>
+      <TabSwitchView>
+        <div title="Gut gestaltete Erklärungen">
+          <ul>
+            <li>
+              <b>Verständlichkeit</b>: Klar, nachvollziehbar, ohne Fachjargon
+            </li>
+            <li>
+              <b>Relevanz</b>: Fokussiert auf das, was Nutzer:innen wirklich
+              interessiert
+            </li>
+            <li>
+              <b>Treffsicherheit</b>: Erfasst die zentrale Logik der
+              Entscheidungen
+            </li>
+            <li>
+              <b>Vertrauensbildung</b>: Fördert angemessenes Vertrauen (weder
+              blind noch misstrauisch)
+            </li>
+            <li>
+              <b>Lernförderlich</b>: Hilft, ein mentales Modell aufzubauen
+            </li>
+          </ul>
+        </div>
+        <div title="Grenzen">
+          <ul>
+            <li>
+              <b>Komplexität des Modells</b>: Hochdimensionale Netze haben keine
+              klaren "Entscheidungswege"
+            </li>
+            <li>
+              <b>Datenabhängigkeit</b>: Erklärungen sind nur so gut wie die
+              Daten, die verwendet wurden
+            </li>
+            <li>
+              <b>Missverständnisse</b>: Nutzer:innen interpretieren Erklärungen
+              anders als intendiert
+            </li>
+            <li>
+              <b>Manipulation</b>: Erklärungen können auch genutzt werden, um
+              Vertrauen zu erzwingen
+            </li>
+          </ul>
+        </div>
+        <div title="Problematisch">
+          <ul>
+            <li>
+              <b>Falsche oder ungenaue Erklärungen</b> können zu fehlerhaften
+              Verhalten führen
+            </li>
+            <li>
+              <b>Übermäßige Vereinfachungen</b> können relevante Aspekte
+              verschleiern
+            </li>
+            <li>
+              <b>Erklärungen können manipulativ wirken</b>, wenn sie Vertrauen
+              erzeugen sollen, wo Misstrauen angemessen wäre
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
+      {/* <p>Gut gestaltete Erklärungen können:</p>
       <ul>
         <li>
           <b>Verständlichkeit</b>: Klar, nachvollziehbar, ohne Fachjargon
@@ -1241,7 +1203,9 @@ const Erklärbarkeit = {
           <b>Erklärungen können manipulativ wirken</b>, wenn sie Vertrauen
           erzeugen sollen, wo Misstrauen angemessen wäre
         </li>
-      </ul>
+      </ul> */}
+      {/* TODO: remember this */}
+      <div className="h-[var(--scale3)]"></div>
       <Accordion
         title="Beispiel aus der Forschung (Kühl et al., 2024)"
         initiallyOpen={false}>
@@ -1346,8 +1310,8 @@ const Erklärbarkeit = {
         erklärbare KI ist eine nutzbare und verantwortbare KI.
       </p>
       <p className="specialText">
-        "Explain unto others in such a way as to help them explain to
-        themselves." - Hoffman et al. (2023)
+        &bdquo;Explain unto others in such a way as to help them explain to
+        themselves.&ldquo; - Hoffman et al. (2023)
       </p>
     </section>,
     <section>
@@ -1363,32 +1327,42 @@ const Erklärbarkeit = {
 
 const sectionsKontrollierbarkeit = [
   {
-    id: "1",
-    title:
-      "Teil A: Einleitung: Kontrollierbarkeit in der Mensch-KI-Interaktion",
+    id: "3",
+    title: "Einleitung: Kontrollierbarkeit in der Mensch-KI-Interaktion",
   },
   {
-    id: "2",
-    title: "Teil A: Dimensionen der Kontrollierbarkeit aus UX-Perspektive",
+    id: "4",
+    title: "Dimensionen der Kontrollierbarkeit aus UX-Perspektive",
   },
-  { id: "3", title: "Teil B: Human Oversight Definition & Zielsetzung" },
-  { id: "4", title: "Teil B: Design-Patterns für Human Oversight" },
-  { id: "5", title: "Teil B: UX-Herausforderungen bei Human Oversight" },
-  { id: "6", title: "Teil B: Messung und Evaluation von Human Oversight" },
+  { id: "5", title: "Human Oversight Definition & Zielsetzung" },
+  { id: "6", title: "Design-Patterns für Human Oversight" },
+  { id: "7", title: "UX-Herausforderungen bei Human Oversight" },
+  { id: "8", title: "Messung und Evaluation von Human Oversight" },
 ];
 
 const Kontrollierbarkeit = {
   linkName: "kontrollierbarkeit",
   name: "Kontrollierbarkeit",
-  description: "Hier wird die Kontrollierbarkeit von KI-Systemen thematisiert.",
+  description: "Wie und wann können Menschen sinnvoll eingreifen?",
   content: [
     <ChapterHeader text={"Kontrollierbarkeit"} number={5} />,
     <section>
-      {/* p Mit einleitungstext */}
+      <p>
+        Dieses Kapitel behandelt die Kontrollierbarkeit von KI-Systemen aus
+        einer UX-orientierten Perspektive und zeigt, wie Nutzer:innen die
+        Möglichkeit erhalten, das Verhalten von KI gezielt zu verstehen, zu
+        beeinflussen und sicher zu steuern - eine zentrale Voraussetzung für
+        Akzeptanz, Vertrauen und verantwortungsvollen Einsatz.
+      </p>
       <Accordion sections={sectionsKontrollierbarkeit} />
       <SubNavigation sections={sectionsKontrollierbarkeit} />
     </section>,
     <section>
+      <p>
+        Im folgenden Video wird grundlegend erläutert, was Kontrollierbarkeit in
+        der Mensch-KI-Interaktion bedeutet und warum sie eine Schlüsselrolle für
+        nutzerzentriertes, sicheres und vertrauenswürdiges KI-Design spielt.
+      </p>
       <VideoContainer
         link="https://www.youtube-nocookie.com/embed/7fRa7xfLmwc?rel=0&modestbranding=1"
         title="Kontrollierbarkeit"
@@ -1396,9 +1370,9 @@ const Kontrollierbarkeit = {
     </section>,
     <section>
       <h2 className="font-black">
-        Teil A - Grundlagen der Kontrollierbarkeit in KI (UX-orientiert)
+        Grundlagen der Kontrollierbarkeit in KI (UX-orientiert)
       </h2>
-      <h2>1. Einleitung: Kontrollierbarkeit in der Mensch-KI-Interaktion</h2>
+      <h3>1. Einleitung: Kontrollierbarkeit in der Mensch-KI-Interaktion</h3>
       <p>
         Kontrollierbarkeit beschreibt die Fähigkeit, das Verhalten eines Systems
         gezielt zu beeinflussen oder zu begrenzen, sodass es mit den Zielen des
@@ -1447,7 +1421,7 @@ const Kontrollierbarkeit = {
       </p>
     </section>,
     <section>
-      <h2>2. Dimensionen der Kontrollierbarkeit aus UX-Perspektive</h2>
+      <h3>2. Dimensionen der Kontrollierbarkeit aus UX-Perspektive</h3>
       <p>
         Aus Sicht der Mensch-KI-Interaktion lässt sich Kontrollierbarkeit in
         mehrere zentrale Dimensionen unterteilen. Diese Dimensionen bestimmen,
@@ -1456,7 +1430,7 @@ const Kontrollierbarkeit = {
         Eigenschaften, sondern auch Gestaltungsprinzipien für Interfaces und
         Interaktionsdesign.
       </p>
-      <h3>1. Transparenz</h3>
+      <h4>a) Transparenz</h4>
       <p>
         Transparenz bedeutet, dass das System seine Funktionsweise,
         Entscheidungslogik und Zielrichtung in einer für den Menschen
@@ -1474,7 +1448,7 @@ const Kontrollierbarkeit = {
         Hohe Transparenz erleichtert es, mentale Modelle zu bilden, die
         Grundlage für effektive Kontrolle sind.
       </p>
-      <h3>2. Vorhersagbarkeit</h3>
+      <h4>b) Vorhersagbarkeit</h4>
       <p>
         Ein KI-System sollte in vergleichbaren Situationen konsistent reagieren.
         Vorhersagbarkeit verringert die kognitive Belastung, da Nutzer:innen
@@ -1489,7 +1463,7 @@ const Kontrollierbarkeit = {
           Kontexten
         </li>
       </ul>
-      <h3>3. Interventionsmöglichkeiten</h3>
+      <h4>c) Interventionsmöglichkeiten</h4>
       <p>
         Nutzer:innen müssen jederzeit in der Lage sein, das Verhalten der KI zu
         beeinflussen oder zu stoppen. Dies reicht von <i>Undo-Funktionen</i> bis
@@ -1503,7 +1477,7 @@ const Kontrollierbarkeit = {
         </li>
         <li>Sichtbarkeit und Erreichbarkeit der Kontrollfunktionen</li>
       </ul>
-      <h3>4. Rückmeldungen & Erklärungen</h3>
+      <h4>d) Rückmeldungen & Erklärungen</h4>
       <p>
         Kontrollierbarkeit hängt davon ab, ob Nutzer:innen die Auswirkungen
         ihrer Eingriffe nachvollziehen können. Effektive Feedback-Mechanismen:
@@ -1515,7 +1489,7 @@ const Kontrollierbarkeit = {
           Möglichkeit zur Überprüfung, ob die gewünschte Wirkung eingetreten ist
         </li>
       </ul>
-      <h3>5. Adaptivität mit Nutzerkontrolle</h3>
+      <h4>e) Adaptivität mit Nutzerkontrolle</h4>
       <p>
         KI kann sich an das Verhalten und die Präferenzen des Nutzers anpassen,
         sollte dabei aber stets abschaltbare und <i>übersteuerbare</i>{" "}
@@ -1552,9 +1526,9 @@ const Kontrollierbarkeit = {
     </section>,
     <section>
       <h2 className="font-black">
-        Teil B - Human Oversight als spezielle Form der Kontrollierbarkeit
+        Human Oversight als spezielle Form der Kontrollierbarkeit
       </h2>
-      <h2>1. Definition & Zielsetzung</h2>
+      <h3>1. Definition & Zielsetzung</h3>
       <p>
         <b>Human Oversight</b> bezeichnet die systematisch gestaltete
         Möglichkeit für Menschen, den Betrieb und die Entscheidungen eines
@@ -1601,12 +1575,12 @@ const Kontrollierbarkeit = {
         Eingriffsmöglichkeit existiert, sondern dass diese{" "}
         <i>auffindbar, nutzbar und wirksam</i> ist. Das Oversight-Design muss
         gewährleisten, dass Nutzer:innen im richtigen Moment die nötigen
-        Informationen und die passenden Werkzeuge haben, um zu handeln – ohne
+        Informationen und die passenden Werkzeuge haben, um zu handeln - ohne
         überfordert oder durch unnötige Eingriffe ermüdet zu werden.
       </p>
     </section>,
     <section>
-      <h2>2. Design-Pattern für Human Oversight</h2>
+      <h3>2. Design-Pattern für Human Oversight</h3>
       <p>
         Human Oversight kann in der Praxis in unterschiedlichen Formen umgesetzt
         werden. Diese <i>Design-Patterns</i> unterscheiden sich vor allem darin,{" "}
@@ -1617,104 +1591,88 @@ const Kontrollierbarkeit = {
         bedeutet das, diese Mechanismen so zu integrieren, dass sie{" "}
         <b>sichtbar</b>, <b>verständlich</b> und <b>bedienbar</b> sind.
       </p>
-      <h3>1. Human-in-the-Loop (HITL)</h3>
-      <ul>
-        <li>
-          <b>Beischreibung</b>: Der Mensch überprüft und bestätigt kritische
-          Entscheidungen vor ihrer Umsetzung.
-        </li>
-        <li>
-          <b>Vorteil</b>: Maximale Sicherheit, da keine kritische Aktion ohne
-          menschliche Zustimmung ausgeführt wird.
-        </li>
-        <li>
-          <b>UX-Anforderung:</b>
-          <ul>
-            <li>Klare Benachrichtigung, wenn eine Entscheidung ansteht</li>
-            <li>Kompakte, aber aussagekräftige Erklärung der KI-Empfehlung</li>
-            <li>Einfacher Mechanismus zur Zustimmung oder Ablehnung</li>
-          </ul>
-        </li>
-        <li>
-          <b>Beispiel</b>: Radiologisches Diagnosesystem, bei dem Ärzt:innen
-          KI-gestützte Befunde vor Freigabe validieren.
-        </li>
-      </ul>
-      <h3>2. Human-out-the-Loop (HOTL)</h3>
-      <ul>
-        <li>
-          <b>Beschreibung</b>: Der Mensch überwacht den laufenden Prozess und
-          kann bei Bedarf eingreifen, muss es aber nicht proaktiv bei jeder
-          Entscheidung tun.
-        </li>
-        <li>
-          <b>Vorteil</b>: Effizienter, da die KI autonom arbeitet, bis eine
-          Intervention erforderlich ist.
-        </li>
-        <li>
-          <b>UX-Anforderung:</b>
-          <ul>
-            <li>Kontinuierliche Statusanzeigen und Prozessvisualisierungen</li>
-            <li>Frühwarnungen bei Anomalien oder Risikoindikatoren</li>
-            <li>Sofortige Eingriffsmöglichkeiten mit minimalem Reaktionsweg</li>
-          </ul>
-        </li>
-        <li>
-          <b>Beispiel</b>: Autonomes Fahren, bei dem der Fahrer jederzeit
-          übernehmen kann, wenn das System eine kritische Situation meldet.
-        </li>
-      </ul>
-      <h3>3. Human-in-Command (HIC)</h3>
-      <ul>
-        <li>
-          <b>Beschreibung</b>: Der Mensch definiert die übergeordneten Ziele,
-          Grenzen und Rahmenbedingungen und kann den Betrieb der KI jederzeit
-          stoppen oder neu konfigurieren.
-        </li>
-        <li>
-          <b>Vorteil</b>: Hohe strategische Kontrolle, auch wenn operative
-          Entscheidungen autonom getroffen werden.
-        </li>
-        <li>
-          <b>UX-Anforderung:</b>
-          <ul>
-            <li>Leicht zugängliche Konfigurations- und Abschaltfunktionen</li>
-            <li>
-              Transparente Darstellung der aktuellen Systemziele und -grenzen
-            </li>
-            <li>
-              Logging und Audit Trails, um getroffene Entscheidungen
-              nachzuvollziehen
-            </li>
-          </ul>
-        </li>
-        <li>
-          <b>Beispiel</b>: Militärische Drohnensteuerung, bei der der Operator
-          Einsatzregeln festlegt und jederzeit den Einsatz beenden kann.
-        </li>
-      </ul>
-      <h3>Gestaltungsprinzipien über alle Patterns hinweg</h3>
-      <ul>
-        <li>
-          <b>Sichtbarkeit</b>: Kontrolloptionen müssen leicht auffindbar und
-          jederzeit zugänglich sein.
-        </li>
-        <li>
-          <b>Zeitkritik</b>: Je geringer die Reaktionszeit, desto direkter und
-          weniger verschachtelt muss der Eingriffspfad sein.
-        </li>
-        <li>
-          <b>Informationsdesign</b>: Nur relevante Informationen anzeigen, um
-          Überforderung und „Alert Fatigue“ zu vermeiden.
-        </li>
-        <li>
-          <b>Vertrauenskalibrierung</b>: Interface-Design muss ein realistisches
-          Bild der KI-Fähigkeiten und -Grenzen vermitteln.
-        </li>
-      </ul>
+      <h4>a) Human-in-the-Loop (HITL)</h4>
+      <p>
+        Der Mensch überprüft und bestätigt kritische Entscheidungen vor ihrer
+        Umsetzung.
+      </p>
+      <p>
+        <b>Vorteil</b>: Maximale Sicherheit, da keine kritische Aktion ohne
+        menschliche Zustimmung ausgeführt wird.
+      </p>
+      <p className="specialText">
+        <b>UX-Anforderung:</b>
+        <ul>
+          <li>Klare Benachrichtigung, wenn eine Entscheidung ansteht</li>
+          <li>Kompakte, aber aussagekräftige Erklärung der KI-Empfehlung</li>
+          <li>Einfacher Mechanismus zur Zustimmung oder Ablehnung</li>
+        </ul>
+      </p>
+      <p>
+        <b>Beispiel</b>: Radiologisches Diagnosesystem, bei dem Ärzt:innen
+        KI-gestützte Befunde vor Freigabe validieren.
+      </p>
+      <h4>b) Human-out-the-Loop (HOTL)</h4>
+      <p>
+        Der Mensch überwacht den laufenden Prozess und kann bei Bedarf
+        eingreifen, muss es aber nicht proaktiv bei jeder Entscheidung tun.
+      </p>
+      <p>
+        <b>Vorteil</b>: Effizienter, da die KI autonom arbeitet, bis eine
+        Intervention erforderlich ist.
+      </p>
+      <p className="specialText">
+        <b>UX-Anforderung:</b>
+        <ul>
+          <li>Kontinuierliche Statusanzeigen und Prozessvisualisierungen</li>
+          <li>Frühwarnungen bei Anomalien oder Risikoindikatoren</li>
+          <li>Sofortige Eingriffsmöglichkeiten mit minimalem Reaktionsweg</li>
+        </ul>
+      </p>
+      <p>
+        <b>Beispiel</b>: Autonomes Fahren, bei dem der Fahrer jederzeit
+        übernehmen kann, wenn das System eine kritische Situation meldet.
+      </p>
+      <h4>c) Human-in-Command (HIC)</h4>
+      <p>
+        Der Mensch definiert die übergeordneten Ziele, Grenzen und
+        Rahmenbedingungen und kann den Betrieb der KI jederzeit stoppen oder neu
+        konfigurieren.
+      </p>
+      <p>
+        <b>Vorteil</b>: Hohe strategische Kontrolle, auch wenn operative
+        Entscheidungen autonom getroffen werden.
+      </p>
+      <p className="specialText">
+        <b>UX-Anforderung:</b>
+        <ul>
+          <li>Leicht zugängliche Konfigurations- und Abschaltfunktionen</li>
+          <li>
+            Transparente Darstellung der aktuellen Systemziele und -grenzen
+          </li>
+          <li>
+            Logging und Audit Trails, um getroffene Entscheidungen
+            nachzuvollziehen
+          </li>
+        </ul>
+      </p>
+      <p>
+        <b>Beispiel</b>: Militärische Drohnensteuerung, bei der der Operator
+        Einsatzregeln festlegt und jederzeit den Einsatz beenden kann.
+      </p>
+      <h4>Gestaltungsprinzipien über alle Patterns hinweg</h4>
+      <List
+        items={[
+          "<b>Sichtbarkeit</b>: Kontrolloptionen müssen leicht auffindbar und jederzeit zugänglich sein.",
+          "<b>Zeitkritik</b>: Je geringer die Reaktionszeit, desto direkter und weniger verschachtelt muss der Eingriffspfad sein.",
+          "<b>Informationsdesign</b>: Nur relevante Informationen anzeigen, um Überforderung und „Alert Fatigue“ zu vermeiden.",
+          "<b>Vertrauenskalibrierung</b>: Interface-Design muss ein realistisches Bild der KI-Fähigkeiten und -Grenzen vermitteln.",
+        ]}
+        alignItems="center"
+      />
     </section>,
     <section>
-      <h2>3. UX-Herausforderungen bei Human Oversight</h2>
+      <h3>3. UX-Herausforderungen bei Human Oversight</h3>
       <p>
         Human Oversight stellt nicht nur technische, sondern vor allem
         gestalterische Herausforderungen. Selbst wenn Eingriffsmöglichkeiten
@@ -1722,93 +1680,86 @@ const Kontrollierbarkeit = {
         aus UX-Sicht nicht optimal umgesetzt werden. Dabei lassen sich die
         größten Stolpersteine in drei Hauptkategorien einteilen:
       </p>
-      <h3>1. Aufmerksamkeitsfalle ("Automation Complacency")</h3>
+      <h4>
+        a) Aufmerksamkeitsfalle <i>(Automation Complacency)</i>
+      </h4>
       <p>
         Wenn KI-Systeme über längere Zeit fehlerfrei oder sogar besser als der
         Mensch arbeiten, neigen Nutzer:innen dazu, ihre Aufmerksamkeit zu
         reduzieren.
       </p>
-      <ul>
-        <li>
-          <b>Folge</b>: Eingriffe erfolgen zu spät oder gar nicht, weil
-          Anomalien nicht mehr aktiv überwacht werden.
-        </li>
-        <li>
-          <b>UX-Ansatz</b>:
-          <ul>
-            <li>
-              Periodische aktive Bestätigung der Nutzer:innen einfordern („Are
-              you still there?“-Checks in kritischen Prozessen)
-            </li>
-            <li>
-              Adaptive Anzeigen, die bei hohem Risiko die Aufmerksamkeit erhöhen
-            </li>
-            <li>
-              Schulung und bewusste Sensibilisierung für seltene, aber kritische
-              Eingriffsfälle
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h3>2. Alert Fatigue</h3>
+      <p>
+        <b>Folge</b>: Eingriffe erfolgen zu spät oder gar nicht, weil Anomalien
+        nicht mehr aktiv überwacht werden.
+      </p>
+      <p className="specialText">
+        <b>UX-Ansatz:</b>
+        <ul>
+          <li>
+            Periodische aktive Bestätigung der Nutzer:innen einfordern („Are you
+            still there?“-Checks in kritischen Prozessen)
+          </li>
+          <li>
+            Adaptive Anzeigen, die bei hohem Risiko die Aufmerksamkeit erhöhen
+          </li>
+          <li>
+            Schulung und bewusste Sensibilisierung für seltene, aber kritische
+            Eingriffsfälle
+          </li>
+        </ul>
+      </p>
+      <h4>b) Alert Fatigue</h4>
       <p>
         Wenn zu viele Warnungen oder Eingriffsaufforderungen erscheinen -
         insbesondere mit geringer Relevanz - tritt das Gegenteil der
         beabsichtigten Wirkung ein: Nutzer:innen ignorieren auch wichtige
         Alarme.
       </p>
-      <ul>
-        <li>
-          <b>Folge</b>: Kritische Warnungen werden übersehen oder reflexartig
-          weggeklickt.
-        </li>
-        <li>
-          <b>UX-Ansatz</b>:{" "}
-          <ul>
-            <li>
-              Priorisierung von Alerts nach Schweregrad und
-              Handlungsdringlichkeit
-            </li>
-            <li>
-              Zusammenfassung von Informationsmeldungen, um
-              Benachrichtigungsflut zu vermeiden
-            </li>
-            <li>
-              Möglichkeit für Nutzer:innen, Alarmempfindlichkeit fein
-              einzustellen
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h3>3. Erklärungsformat und Handlungsrelevanz</h3>
+      <p>
+        <b>Folge</b>: Kritische Warnungen werden übersehen oder reflexartig
+        weggeklickt.
+      </p>
+      <p className="specialText">
+        <b>UX-Ansatz:</b>
+        <ul>
+          <li>
+            Priorisierung von Alerts nach Schweregrad und Handlungsdringlichkeit
+          </li>
+          <li>
+            Zusammenfassung von Informationsmeldungen, um Benachrichtigungsflut
+            zu vermeiden
+          </li>
+          <li>
+            Möglichkeit für Nutzer:innen, Alarmempfindlichkeit fein einzustellen
+          </li>
+        </ul>
+      </p>
+      <h4>c) Erklärungsformat und Handlungsrelevanz</h4>
       <p>
         Selbst wenn eine KI ihre Entscheidungen transparent macht, heißt das
         nicht automatisch, dass Nutzer:innen diese Informationen verstehen oder
         anwenden können.
       </p>
-      <ul>
-        <li>
-          <b>Folge</b>: Oversight wird formal erfüllt, aber praktisch
-          wirkungslos.
-        </li>
-        <li>
-          <b>UX-Ansatz</b>:
-          <ul>
-            <li>
-              Nutzung verständlicher, nicht-technischer Sprache für Erklärungen
-            </li>
-            <li>
-              Ergänzung durch visuelle Darstellungen (Heatmaps, Diagramme,
-              Ablaufvisualisierungen)
-            </li>
-            <li>
-              Kontextbezogene Handlungsoptionen direkt im Erklärungsfenster
-              („Jetzt korrigieren“ statt „Gehe zu Menüpunkt 5“)
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Zusatzproblem: Balance zwischen Kontrolle und Autonomie</h3>
+      <p>
+        <b>Folge</b>: Oversight wird formal erfüllt, aber praktisch wirkungslos.
+      </p>
+      <p className="specialText">
+        <b>UX-Ansatz:</b>
+        <ul>
+          <li>
+            Nutzung verständlicher, nicht-technischer Sprache für Erklärungen
+          </li>
+          <li>
+            Ergänzung durch visuelle Darstellungen (Heatmaps, Diagramme,
+            Ablaufvisualisierungen)
+          </li>
+          <li>
+            Kontextbezogene Handlungsoptionen direkt im Erklärungsfenster
+            („Jetzt korrigieren“ statt &bdquo;Gehe zu Menüpunkt 5&ldquo;)
+          </li>
+        </ul>
+      </p>
+      <h4>Zusatzproblem: Balance zwischen Kontrolle und Autonomie</h4>
       <p>
         Zu restriktives Oversight-Design kann die Effizienz der KI untergraben,
         während zu wenig Kontrolle Risiken erhöht. Die UX-Herausforderung
@@ -1817,7 +1768,7 @@ const Kontrollierbarkeit = {
       </p>
     </section>,
     <section>
-      <h2>4. Messung und Evaluation von Human Oversight</h2>
+      <h3>4. Messung und Evaluation von Human Oversight</h3>
       <p>
         Damit Human Oversight nicht nur als formale Anforderung existiert,
         sondern tatsächlich wirksam ist, muss er regelmäßig{" "}
@@ -1825,113 +1776,79 @@ const Kontrollierbarkeit = {
         Evaluation sowohl quantitative Leistungsdaten als auch qualitative
         Nutzererfahrungen.
       </p>
-      <h3>1. Quantitative Metriken</h3>
+      <h4>1. Quantitative Metriken</h4>
       <p>Diese Metriken erfassen messbare Aspekte der Oversight-Wirksamkeit:</p>
       <ul>
         <li>
-          <b>Eingriffshäufigkeit</b>
-          <ul>
-            <li>Wie oft greifen Nutzer:innen in den KI-Betrieb ein?</li>
-            <li>
-              Aussagekraft: Hohe Eingriffsraten können auf mangelnde KI-Qualität
-              hinweisen, zu niedrige auf unzureichende Wachsamkeit.
-            </li>
-          </ul>
+          <b>Eingriffshäufigkeit: </b> Wie oft greifen Nutzer:innen in den
+          KI-Betrieb ein? <br />
+          Aussagekraft: Hohe Eingriffsraten können auf mangelnde KI-Qualität
+          hinweisen, zu niedrige auf unzureichende Wachsamkeit.
         </li>
         <li>
-          <b>Zeit bis zum Eingriff (Reaction Time)</b>
-          <ul>
-            <li>
-              Wie lange dauert es, bis Nutzer:innen auf eine kritische Situation
-              reagieren?
-            </li>
-            <li>
-              Besonders relevant in sicherheitskritischen Szenarien wie Medizin,
-              Luftfahrt oder Verkehr.
-            </li>
-          </ul>
+          <b>Zeit bis zum Eingriff (Reaction Time): </b>
+          Wie lange dauert es, bis Nutzer:innen auf eine kritische Situation
+          reagieren? <br />
+          Besonders relevant in sicherheitskritischen Szenarien wie Medizin,
+          Luftfahrt oder Verkehr.
         </li>
         <li>
-          <b>Fehlervermeidung durch Eingriff</b>
-          <ul>
-            <li>
-              Anteil der KI-Fehler, die vor Schadenseintritt erkannt und
-              korrigiert wurden.
-            </li>
-          </ul>
+          <b>Fehlervermeidung durch Eingriff: </b>
+          Anteil der KI-Fehler, die vor Schadenseintritt erkannt und korrigiert
+          wurden.
         </li>
         <li>
-          <b>Erfolgsquote der Intervention</b>
-          <ul>
-            <li>
-              Prozentsatz der Eingriffe, die den gewünschten Effekt hatten.
-            </li>
-          </ul>
+          <b>Erfolgsquote der Intervention: </b>
+          Prozentsatz der Eingriffe, die den gewünschten Effekt hatten.
         </li>
       </ul>
-      <h3>2. Qualitative Evaluationsmethoden</h3>
+      <h4>2. Qualitative Evaluationsmethoden</h4>
       <p>
         Diese Methoden beleuchten die subjektive Wahrnehmung, das Vertrauen und
         die mentale Arbeitsbelastung der Nutzer:innen:
       </p>
       <ul>
         <li>
-          <b>Usability-Tests</b>
-          <ul>
-            <li>
-              Beobachten, wie einfach Nutzer:innen Oversight-Funktionen finden
-              und nutzen können.
-            </li>
-          </ul>
+          <b>Usability-Tests: </b>
+          Beobachten, wie einfach Nutzer:innen Oversight-Funktionen finden und
+          nutzen können.
         </li>
         <li>
-          <b>Kognitive Walkthroughs</b>
-          <ul>
-            <li>
-              Schritt-für-Schritt-Analyse, ob Nutzer:innen im kritischen Moment
-              die richtige Aktion wählen.
-            </li>
-          </ul>
+          <b>Kognitive Walkthroughs: </b>
+          Schritt-für-Schritt-Analyse, ob Nutzer:innen im kritischen Moment die
+          richtige Aktion wählen.
         </li>
         <li>
-          <b>Think-Aloud-Protokolle</b>
-          <ul>
-            <li>
-              Erfassung des Denkprozesses während der Interaktion, um mentale
-              Modelle zu verstehen.
-            </li>
-          </ul>
+          <b>Think-Aloud-Protokolle: </b>
+          Erfassung des Denkprozesses während der Interaktion, um mentale
+          Modelle zu verstehen.
         </li>
         <li>
-          <b>Post-Task-Befragungen</b>
-          <ul>
-            <li>
-              Bewertung von Verständlichkeit, Sicherheitsempfinden und
-              wahrgenommener Kontrolle.
-            </li>
-          </ul>
+          <b>Post-Task-Befragungen: </b>
+          Bewertung von Verständlichkeit, Sicherheitsempfinden und
+          wahrgenommener Kontrolle.
         </li>
       </ul>
-      <h3>3. Simulation und Szenariotests</h3>
+      <h4>3. Simulation und Szenariotests</h4>
       <p>
         Gerade bei selten auftretenden, aber hochkritischen Situationen sind
         kontrollierte Tests entscheidend:
       </p>
       <ul>
         <li>
-          <b>Fault Injection</b>: Absichtlich Fehlentscheidungen der KI
+          <b>Fault Injection: </b>Absichtlich Fehlentscheidungen der KI
           einbauen, um Eingriffsverhalten zu testen.
         </li>
         <li>
-          <b>Time Pressure Scenarios</b>: Messen, ob Nutzer:innen auch unter
+          <b>Time Pressure Scenarios: </b>Messen, ob Nutzer:innen auch unter
           Stress rechtzeitig reagieren.
         </li>
         <li>
-          <b>Mode Confusion Tests</b>: Prüfen, ob Nutzer:innen wissen, in
+          <b>Mode Confusion Tests: </b>Prüfen, ob Nutzer:innen wissen, in
           welchem Automatisierungsmodus sich das System befindet.
         </li>
       </ul>
-      <h3>4. Kontinuierliche Optimierung</h3>
+      <h4>4. Kontinuierliche Optimierung</h4>
       <p>
         Evaluation ist kein einmaliger Schritt, sondern Teil eines{" "}
         <i>iterative Design Loops</i>:
@@ -1959,31 +1876,28 @@ const Kontrollierbarkeit = {
 };
 
 const sectionsMentaleKomplement = [
-  { id: "1", title: "Einleitung: Was sind mentale Modelle?" },
-  { id: "2", title: "Was bedeutet Mental Model Complementary (MMC)?" },
-  { id: "3", title: "Warum ist MMC wichtig?" },
-  { id: "4", title: "Gestaltung von MMC in der Praxis" },
-  { id: "5", title: "Herausforderungen bei MMC" },
-  { id: "6", title: "Empfehlungen zur Förderung von MMC" },
-  { id: "7", title: "Fazit: MMC als Zukunftsprinzip kollaborativer KI" },
+  { id: "2", title: "Einleitung: Was sind mentale Modelle?" },
+  { id: "3", title: "Was bedeutet Mental Model Complementary (MMC)?" },
+  { id: "4", title: "Warum ist MMC wichtig?" },
+  { id: "5", title: "Gestaltung von MMC in der Praxis" },
+  { id: "6", title: "Herausforderungen bei MMC" },
+  { id: "7", title: "Empfehlungen zur Förderung von MMC" },
+  { id: "8", title: "Fazit: MMC als Zukunftsprinzip kollaborativer KI" },
 ];
 const MentaleModellkomplementarität = {
-  linkName: "mentale-modellkomplementaritaet",
-  name: "Mentale Modellkomplementarität",
-  description:
-    "Hier wird die Mentale Modellkomplementarität von KI-Systemen thematisiert.",
+  linkName: "mentale-modelle",
+  name: "Mentale Modelle",
+  description: "Wie ergänzen sich Mensch und Maschine kognitiv?",
   content: [
-    <ChapterHeader text={"Mentale Modellkomplementarität"} number={6} />,
+    <ChapterHeader text={"Mentale Modelle"} number={6} />,
     <section>
-      {/* p Mit einleitungstext */}
+      <p>
+        Dieses Kapitel behandelt werden Mentale Modelle betrachtet und wie sie
+        bestimmen, wie Menschen verstehen, was eine KI tut und wie sie mit ihr
+        interagieren.
+      </p>
       <Accordion sections={sectionsMentaleKomplement} />
       <SubNavigation sections={sectionsMentaleKomplement} />
-    </section>,
-    <section>
-      <VideoContainer
-        link="https://www.youtube-nocookie.com/embed/fAJ8rQdWzv0?rel=0&modestbranding=1"
-        title="Mentale Komplementrität"
-      />
     </section>,
     <section>
       <h2>1. Einleitung: Was sind mentale Modelle?</h2>
@@ -1991,14 +1905,14 @@ const MentaleModellkomplementarität = {
         Mentale Modelle sind <b>innere, vereinfachte Repräsentationen</b> davon,
         wie ein System funktioniert, welche Ziele es verfolgt und wie es auf
         bestimmte Eingaben reagiert. Zum Beispiel definiert Johnson-Laird (1983)
-        mentale Modelle als
+        mentale Modelle als:
       </p>
-      <p className="specialText">
-        “... an inner replica of a situation or set of relations, constructed
-        from perception, imagination, or discourse. These models, like a
-        physical model of the solar system or a diagram, represent the structure
-        of the world and are manipulated for reasoning, inference, and
-        understanding, rather than relying on formal logical rules.“
+      <p className="specialText text-center">
+        &bdquo;... an inner replica of a situation or set of relations,
+        constructed from perception, imagination, or discourse. These models,
+        like a physical model of the solar system or a diagram, represent the
+        structure of the world and are manipulated for reasoning, inference, and
+        understanding, rather than relying on formal logical rules.&ldquo;
       </p>
       <p>
         Mit anderen Worten, mentale Modelle sind mentale Repräsentationen -
@@ -2045,8 +1959,9 @@ const MentaleModellkomplementarität = {
         Kooperation ermöglicht.
       </p>
       <p>MMC bedeutet daher:</p>
-      <p className="specialText">
-        „Nicht Gleichheit der Modelle, sondern Komplementarität ihrer Stärken.“
+      <p className="specialText text-center">
+        &bdquo;Nicht Gleichheit der Modelle, sondern Komplementarität ihrer
+        Stärken.&ldquo;
       </p>
     </section>,
     <section>
@@ -2081,115 +1996,86 @@ const MentaleModellkomplementarität = {
         Damit mentale Modelle komplementär werden, braucht es gezielte
         Gestaltung:
       </p>
-      <h3>a) Transparenz & Erklärbarkeit</h3>
-      <ul>
-        <li>
-          Systeme sollten ihr Vorgehen <b>offenlegen</b>, sodass Nutzer:innen
-          Schlüsse daraus ziehen können.
-        </li>
-        <li>Beispiel: Feature-Visualisierung oder Konfidenzwerte anzeigen.</li>
-      </ul>
-      <h3>b) Unterstütztes Modelllernen</h3>
-      <ul>
-        <li>
-          Nutzer:innen sollten durch{" "}
-          <b>Feedback, Visualisierungen oder Simulationen</b> ein mentales
-          Modell entwickeln können.
-        </li>
-        <li>
-          KI kann den Menschen auch über <b>eigene Grenzen informieren</b>{" "}
-          (Meta-Kommunikation)
-        </li>
-      </ul>
-      <h3>c) Bidirektionale Anpassung</h3>
-      <ul>
-        <li>
-          Nicht nur der Mensch passt sich an das System an - das System kann
-          auch <b>auf den mentalen Zustand des Menschen reagieren</b>, z.B.
-          durch adaptive Erklärungen oder Warnhinweise
-        </li>
-      </ul>
-      <h3>d) Gemeinsame Aufgabenstruktur</h3>
-      <ul>
-        <li>
-          Interfaces sollten <b>Aufgaben so aufbereiten</b>, dass sie
-          menschliche und maschinelle Beiträge sichtbar und kombinierbar machen.
-        </li>
-      </ul>
-      <h3>e) Dekompositionale Aufgabenverteilung</h3>
-      <ul>
-        <li>
-          Eine zentrale Technik zur Förderung von MMC ist die{" "}
-          <b>dekompositionale Aufgabenstrukturierung</b>:
-          <ul>
-            <li>Die Gesamtaufgabe wird in Teilaufgaben zerlegt.</li>
-            <li></li>
+      <h4>a) Transparenz & Erklärbarkeit</h4>
+      <p>
+        Systeme sollten ihr Vorgehen <b>offenlegen</b>, sodass Nutzer:innen
+        Schlüsse daraus ziehen können. <br />
+        <b>Beispiel:</b> Feature-Visualisierung oder Konfidenzwerte anzeigen.
+      </p>
+      <h4>b) Unterstütztes Modelllernen</h4>
+      <p>
+        Nutzer:innen sollten durch{" "}
+        <b>Feedback, Visualisierungen oder Simulationen</b> ein mentales Modell
+        entwickeln können.
+      </p>
+      <p>
+        KI kann den Menschen auch über <b>eigene Grenzen informieren</b>{" "}
+        (Meta-Kommunikation).
+      </p>
+      <h4>c) Bidirektionale Anpassung</h4>
+      <p>
+        Nicht nur der Mensch passt sich an das System an - das System kann auch{" "}
+        <b>auf den mentalen Zustand des Menschen reagieren</b>, z.B. durch
+        adaptive Erklärungen oder Warnhinweise.
+      </p>
+      <h4>d) Gemeinsame Aufgabenstruktur</h4>
+      <p>
+        Interfaces sollten <b>Aufgaben so aufbereiten</b>, dass sie menschliche
+        und maschinelle Beiträge sichtbar und kombinierbar machen.
+      </p>
+      <h4>e) Dekompositionale Aufgabenverteilung</h4>
+      <p>
+        Eine zentrale Technik zur Förderung von MMC ist die{" "}
+        <b>dekompositionale Aufgabenstrukturierung</b>:
+        <ul>
+          <li>Die Gesamtaufgabe wird in Teilaufgaben zerlegt.</li>
+          <li>
             <b>Mensch und KI</b> übernehmen jeweils die Komponenten, in denen
             sie ihre spezifischen Stärken ausspielen können.
-            <li>
-              Beispiel: In der medizinischen Diagnose übernimmt die KI das
-              Screening großer Bilddatenmengen, der Mensch interpretiert
-              auffällige Ergebnisse im Kontext individueller Patient:innen.
-            </li>
-          </ul>
-        </li>
-        <li>
-          Vorteil: Dekomposition fördert klare Zustädnigkeiten und gegenseitiges
-          Vertrauen - jeder Teilnehmende versteht die Rolle des anderen
-        </li>
-      </ul>
+          </li>
+          <li>
+            <b>Beispiel:</b> In der medizinischen Diagnose übernimmt die KI das
+            Screening großer Bilddatenmengen, der Mensch interpretiert
+            auffällige Ergebnisse im Kontext individueller Patient:innen.
+          </li>
+        </ul>
+      </p>
+      <p>
+        <b>Vorteil:</b> Dekomposition fördert klare Zustädnigkeiten und
+        gegenseitiges Vertrauen - jeder Teilnehmende versteht die Rolle des
+        anderen
+      </p>
     </section>,
     <section>
       <h2>5. Herausforderungen bei MMC</h2>
-      <ul>
-        <li>
-          <b>Modellkonflikte</b>: Mensch und KI kommen zu widersprüchlichen
-          Einschätzungen.
-        </li>
-        <li>
-          <b>Modellunsicherheit</b>: Menschen haben kein stabiles Modell der KI
-          - besonders bei intransparentem Verhalten.
-        </li>
-        <li>
-          <b>Kognitive Überlastung</b>: Zu viele Informationen über die
-          Funktionsweise der KI können überfordern.
-        </li>
-        <li>
-          <b>Missverständnisse</b>: Menschen interpretieren KI-Ausgaben nach
-          ihren eigenen kognitiven Mustern, was zu Fehlurteilen führen kann.
-        </li>
-      </ul>
+      <List
+        items={[
+          "<b>Modellkonflikte</b>: Mensch und KI kommen zu widersprüchlichen Einschätzungen.",
+          "<b>Modellunsicherheit</b>: Menschen haben kein stabiles Modell der KI - besonders bei intransparentem Verhalten.",
+          "<b>Kognitive Überlastung</b>: Zu viele Informationen über die Funktionsweise der KI können überfordern.",
+          "<b>Missverständnisse</b>: Menschen interpretieren KI-Ausgaben nach ihren eigenen kognitiven Mustern, was zu Fehlurteilen führen kann.",
+        ]}
+        alignItems="center"
+      />
     </section>,
     <section>
       <h2>6. Empfehlungen zur Förderung von MMC</h2>
-      <ul>
-        <li>
-          <b>Erklärungen nutzerzentriert gestalten</b> - z.B. durch kontrastive
-          Erklärungen: „Warum A statt B?“
-        </li>
-        <li>
-          <b>Modellbildung unterstützen</b> - z.B. durch interaktive
-          Visualisierungen oder kontrolliertes Experimentieren mit dem System
-        </li>
-        <li>
-          <b>Unterschiede sichtbar machen</b> - etwa durch Darstellung
-          divergierender Einschätzungen zwischen Mensch und Maschine
-        </li>
-        <li>
-          <b>Training & Reflexion</b> - Nutzer:innen sollten explizit über ihr
-          mentales Modell nachdenken (z.B. in Schulung oder Feedbacksituationen)
-        </li>
-        <li>
-          <b>Systemverhalten adaptiv gestalten</b> - z.B. mehr Erklärungen bei
-          erkennbarer Unsicherheit oder falscher Nutzung
-        </li>
-      </ul>
+      <List
+        items={[
+          "<b>Erklärungen nutzerzentriert gestalten</b> - z.B. durch kontrastive Erklärungen: &bdquo;Warum A statt B?&ldquo;",
+          "<b>Modellbildung unterstützen</b> - z.B. durch interaktive Visualisierungen oder kontrolliertes Experimentieren mit dem System",
+          "<b>Unterschiede sichtbar machen</b> - etwa durch Darstellung divergierender Einschätzungen zwischen Mensch und Maschine",
+          "<b>Training & Reflexion</b> - Nutzer:innen sollten explizit über ihr mentales Modell nachdenken (z.B. in Schulung oder Feedbacksituationen)",
+          "<b>Systemverhalten adaptiv gestalten</b> - z.B. mehr Erklärungen bei erkennbarer Unsicherheit oder falscher Nutzung",
+        ]}
+        alignItems="center"
+      />
     </section>,
     <section>
       <h2>7. Fazit: MMC als Zukunftsprinzip kollaborativer KI</h2>
       <p>
-        MMC verschiebt den Fokus weg von der reinen „Nutzerfreundlichkeit“ hin
-        zur <b>kognitiven Partnerschaft</b>: Mensch und KI sollen nicht
+        MMC verschiebt den Fokus weg von der reinen <i>Nutzerfreundlichkeit</i>{" "}
+        hin zur <b>kognitiven Partnerschaft</b>: Mensch und KI sollen nicht
         identisch, sondern anschlussfähig denken.
       </p>
       <p>
@@ -2197,8 +2083,9 @@ const MentaleModellkomplementarität = {
         <b>wechselseitig nutzbar machen</b>, entsteht ein leistungsfähiges,
         robustes und verantwortbares Entscheidungssystem.
       </p>
-      <p className="specialText">
-        „Gute KI ist nicht der bessere Mensch - sondern der bessere Partner.“
+      <p className="specialText text-center">
+        &bdquo;Gute KI ist nicht der bessere Mensch - sondern der bessere
+        Partner.&ldquo;
       </p>
     </section>,
   ],
@@ -2248,6 +2135,133 @@ const Fazit = {
   ],
 };
 
+const Quellen = {
+  linkName: "quellen",
+  name: "Quellen",
+  description:
+    "Hier befinden sich die verwendeten Quellen der einzelnen Kapitel.",
+  content: [
+    <ChapterHeader text={"Quellen"} number={8} />,
+    <section>
+      <Sources />
+    </section>,
+  ],
+};
+
+const linksAndNames = [
+  {
+    link: Vertrauenswürdigkeit.linkName,
+    name: Vertrauenswürdigkeit.name,
+    description: Vertrauenswürdigkeit.description,
+  },
+  {
+    link: Transparenz.linkName,
+    name: Transparenz.name,
+    description: Transparenz.description,
+  },
+  {
+    link: Erklärbarkeit.linkName,
+    name: Erklärbarkeit.name,
+    description: Erklärbarkeit.description,
+  },
+  {
+    link: Kontrollierbarkeit.linkName,
+    name: Kontrollierbarkeit.name,
+    description: Kontrollierbarkeit.description,
+  },
+  {
+    link: MentaleModellkomplementarität.linkName,
+    name: MentaleModellkomplementarität.name,
+    description: MentaleModellkomplementarität.description,
+  },
+];
+
+const sectionsEinleitung = [
+  { id: "einleitung", title: "Einleitung" },
+  { id: "2", title: "Warum sind UX-Eigenschaften wichtig?" },
+  { id: "3", title: "Aufbau der Lernmodule" },
+];
+
+const Einleitung = {
+  linkName: "einleitung",
+  name: "Einleitung",
+  description:
+    "Hier wird ein Überblick über die Relevanz nutzerzentrierter Gestaltung und den Zusammenhang von Mensch und Technologie gegeben.",
+  content: [
+    <ChapterHeader text={"Einleitung"} number={1} />,
+    <section id="einleitung">
+      <SubNavigation sections={sectionsEinleitung} />
+      <p>
+        Künstliche Intelligenz beeinflusst zunehmend, wie Menschen mit
+        automatisierten Systemen interagieren - ob in der Medizin, im
+        Personalwesen, in der Verwaltung oder in Alltagsanwendungen. Doch je
+        autonomer und komplexer KI-Systeme werden, desto wichtiger wird ihre{" "}
+        <b>Gestaltung aus Sicht der Nutzer:innen</b>. In diesem Modul wollen wir
+        ihnen näher bringen, welche Rolle die verschiedenen Eigenschaften von
+        KI-Systemen spielen und worauf sie bei der Gestaltung ihres Systems
+        achten müssen.
+      </p>
+    </section>,
+    <section>
+      <h2>Warum sind UX-Eigenschaften wichtig?</h2>
+      <p>
+        Das folgende Modul bietet einen systematischen Einstieg in zentrale{" "}
+        <b>UX-bezogene Eigenschaften von KI-Systemen</b>, die darüber
+        entscheiden:
+      </p>
+      <ul>
+        <li>
+          wie gut Menschen die <b>Funktion und Grenzen</b> der KI verstehen,
+        </li>
+        <li>
+          ob sie der KI <b>angemessen vertrauen</b> (nicht blind oder
+          skeptisch),
+        </li>
+        <li>
+          ob sie im <b>kritischen Moment handlungsfähig</b> bleiben,
+        </li>
+        <li>
+          und ob sie langfristig die <b>Verantwortung behalten</b>.
+        </li>
+      </ul>
+      <p>
+        Sie sind damit zentrale Voraussetzungen für <b>Human-Centered AI</b> und
+        ein entscheidener Faktor für die{" "}
+        <b>gesellschaftliche Akzeptanz und Sicherheit</b> von KI-Systemen.
+      </p>
+    </section>,
+    <section>
+      <h2>Aufbau der Lernmodule</h2>
+      <p>Die behandelten UX-bezogenen Eigenschaften von KI-Systemen sind:</p>
+      <div className="flex flex-wrap justify-center -mx-4">
+        {linksAndNames.map((item, index) => (
+          <SubTopicCard
+            key={item.link || index}
+            topicName={item.name}
+            link={item.link}
+            description={item.description}
+            number={index}
+          />
+        ))}
+      </div>
+      <p className="mt-[var(--scale4)]">
+        Jede Lektion führt in eine zentrale Eigenschaft ein, liefert{" "}
+        <b>praxisnahe Beispiele</b>, benennt{" "}
+        <b>psychologische und technologische Hintergründe</b> und bietet{" "}
+        <b>konkrete Empfehlungen für Gestaltung und Umsetzung</b>.
+      </p>
+      <p className="specialText">
+        Das Ziel: Ein fundiertes Verständnis dafür,{" "}
+        <b>
+          wie KI-Systeme gestaltet sein müssen, damit sie im Sinne der Menschen
+          funktionieren
+        </b>
+        .
+      </p>
+    </section>,
+  ],
+};
+
 const Gestaltungsziele = {
   linkName: "gestaltungsziele-menschzentrierte-ki",
   name: "Gestaltungsziele für menschzentrierte KI",
@@ -2260,6 +2274,7 @@ const Gestaltungsziele = {
     Kontrollierbarkeit,
     MentaleModellkomplementarität,
     Fazit,
+    Quellen,
   ],
 };
 

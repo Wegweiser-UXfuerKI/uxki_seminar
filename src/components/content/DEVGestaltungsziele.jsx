@@ -33,20 +33,29 @@ const Vertrauenswürdigkeit = {
   content: [
     <ChapterHeader text={"Vertrauenswürdigkeit"} number={2} />,
     <section>
-      {/* p Mit einleitungstext */}
+      <p>
+        Dieses Kapitel behandelt, warum Vertrauenswürdigkeit für den
+        erfolgreichen und verantwortungsvollen Einsatz von KI-Systemen
+        entscheidend ist, erläutert den Unterschied zwischen Vertrauen und
+        Vertrauenswürdigkeit und zeigt, wie beides durch Gestaltung, Technik und
+        Evaluation gefördert werden kann.
+      </p>
       <Accordion sections={sectionsVertrauenswürdigkeit} />
       <SubNavigation sections={sectionsVertrauenswürdigkeit} />
     </section>,
     <section>
+      <p>
+        Im folgenden Video wird grundlegend erläutert, was Vertrauenswürdigkeit
+        in KI-Systemen bedeutet und warum sie eine zentrale Voraussetzung für
+        ihre Akzeptanz und verantwortungsvolle Nutzung ist.
+      </p>
       <VideoContainer
         link="https://www.youtube-nocookie.com/embed/n5T6GVjXyJ4?rel=0&modestbranding=1"
         title="Vertrauenswürdigkeit"
       />
     </section>,
     <section>
-      <h2>
-        1. Einführung: Warum ist <i>Trustworthy AI</i> ein zentrales Thema?
-      </h2>
+      <h2>1. Einführung: Warum ist Trustworthy AI ein zentrales Thema?</h2>
       <p>
         Vertrauenswürdigkeit ist eine Schlüsseldimension für die erfolgreiche
         Einführung und nachhaltige Nutzung von KI-Systemen. Während technische
@@ -449,11 +458,21 @@ const Transparenz = {
   content: [
     <ChapterHeader text={"Transparenz in KI-Systemen"} number={3} />,
     <section>
-      {/* p Mit einleitungstext */}
+      <p>
+        Dieses Kapitel beleuchtet die Bedeutung von Transparenz als zentrale
+        Voraussetzung vertrauenswürdiger KI und zeigt, warum sie nicht nur
+        rechtlich gefordert, sondern auch essenziell für Verständnis,
+        Verantwortung und Akzeptanz ist.
+      </p>
       <Accordion sections={sectionsTransparenz} />
       <SubNavigation sections={sectionsTransparenz} />
     </section>,
     <section>
+      <p>
+        Im folgenden Video wird Transparenz von KI-Systemen anhand eines
+        Beispiels erklärt und darauf eingegangen wie man Transparenz erreichen
+        kann, sowie dess Aspekte im Bezug zur UX.
+      </p>
       <VideoContainer
         link="https://www.youtube-nocookie.com/embed/M1daurSX-Fk?rel=0&modestbranding=1"
         title="Transparenz"
@@ -463,7 +482,7 @@ const Transparenz = {
       <h2>1. Einleitung: Warum ist Transparenz wichtig?</h2>
       <p>
         Transparenz ist ein zentrales Prinzip im Kontext vertrauenswürdiger KI.
-        Sie wird oft als Voraussetzung dafür genannt, dass ein System als
+        Sie wird oft als Voraussetzung dafür genannt, dass ein System als{" "}
         <b>vertrauenswürdig</b> wahrgenommen werden kann. Aber:{" "}
         <b>Transparenz ist nicht das Gleiche wie Vertrauenswürdigkeit</b>. Sie
         ist vielmehr eine <b>notwendige Bedingung</b> für korrekte
@@ -802,11 +821,20 @@ const Erklärbarkeit = {
   content: [
     <ChapterHeader text={"Erklärbare KI (XAI)"} number={4} />,
     <section>
-      {/* p Mit einleitungstext */}
+      <p>
+        Dieses Kapitel führt in das Konzept der Erklärbaren Künstlichen
+        Intelligenz (XAI) ein und zeigt, warum Erklärbarkeit entscheidend ist,
+        um Vertrauen, Verantwortung und Verständnis im Umgang mit KI-Systemen zu
+        fördern.
+      </p>
       <Accordion sections={sectionsErklaerbarkeit} />
       <SubNavigation sections={sectionsErklaerbarkeit} />
     </section>,
     <section>
+      <p>
+        Im folgenden Video wird anhand eines Beispiels grundlegend erklärt was
+        Erklärbare KI ist.
+      </p>
       <VideoContainer
         link="https://www.youtube-nocookie.com/embed/fAJ8rQdWzv0?rel=0&modestbranding=1"
         title="Erklärbarkeit"
@@ -1319,11 +1347,22 @@ const Kontrollierbarkeit = {
   content: [
     <ChapterHeader text={"Kontrollierbarkeit"} number={5} />,
     <section>
-      {/* p Mit einleitungstext */}
+      <p>
+        Dieses Kapitel behandelt die Kontrollierbarkeit von KI-Systemen aus
+        einer UX-orientierten Perspektive und zeigt, wie Nutzer:innen die
+        Möglichkeit erhalten, das Verhalten von KI gezielt zu verstehen, zu
+        beeinflussen und sicher zu steuern - eine zentrale Voraussetzung für
+        Akzeptanz, Vertrauen und verantwortungsvollen Einsatz.
+      </p>
       <Accordion sections={sectionsKontrollierbarkeit} />
       <SubNavigation sections={sectionsKontrollierbarkeit} />
     </section>,
     <section>
+      <p>
+        Im folgenden Video wird grundlegend erläutert, was Kontrollierbarkeit in
+        der Mensch-KI-Interaktion bedeutet und warum sie eine Schlüsselrolle für
+        nutzerzentriertes, sicheres und vertrauenswürdiges KI-Design spielt.
+      </p>
       <VideoContainer
         link="https://www.youtube-nocookie.com/embed/7fRa7xfLmwc?rel=0&modestbranding=1"
         title="Kontrollierbarkeit"
@@ -1852,7 +1891,11 @@ const MentaleModellkomplementarität = {
   content: [
     <ChapterHeader text={"Mentale Modelle"} number={6} />,
     <section>
-      {/* p Mit einleitungstext */}
+      <p>
+        Dieses Kapitel behandelt werden Mentale Modelle betrachtet und wie sie
+        bestimmen, wie Menschen verstehen, was eine KI tut und wie sie mit ihr
+        interagieren.
+      </p>
       <Accordion sections={sectionsMentaleKomplement} />
       <SubNavigation sections={sectionsMentaleKomplement} />
     </section>,

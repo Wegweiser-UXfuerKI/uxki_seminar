@@ -41,7 +41,6 @@ const devModules = [
 
 // Temporarily deactivated modules
 const disabledModules = [
-  "gestaltungsziele-menschzentrierte-ki",
   "ki-technologien-verstehen",
   "automatisierungspotenziale-erkennen",
 ];

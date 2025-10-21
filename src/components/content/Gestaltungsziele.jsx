@@ -2109,13 +2109,13 @@ const Fazit = {
       <p>
         Stattdessen müssen <b>UX-bezogene Eigenschaften</b> in den Mittelpunkt
         rücken, um sicherzustellen, dass KI-Systeme{" "}
-        <b>verständlich, vertrauenswürdig und nützlich</b> gestaltet werden.
+        <b>verständlich und vertrauenswürdig</b> gestaltet werden.
       </p>
       <p>
         Die behandelten Aspekte -{" "}
         <b>
-          Vertrauenswürdigkeit, Transparenz, Erklärbarkeit, Kontrollierbarkeit,
-          mentale Modellbildung und Nützlichkeit
+          Vertrauenswürdigkeit, Transparenz, Erklärbarkeit, Kontrollierbarkeit und
+          mentale Modellbildung
         </b>{" "}
         - bilden ein eng verzahntes Set an Qualitätsdimensionen. Sie greifen
         ineinander, bedingen sich gegenseitig und haben gemeinsam ein Ziel:{" "}

@@ -1200,7 +1200,7 @@ const MenschComputerInteraktion = {
       <List
         items={[
           "<b>Kontextanalyse</b> bedeutet, dass Nutzer:innen mit einem System ihre Aufgaben erfolgreich bewältigen können.",
-          "<b>Effizienz</b> beschreibt, dass dies mit einem angemessenen Aufwand geschieht.",
+          "<b>Design</b> beschreibt, dass nutzerzentrierte Gestaltung von Lösungen, die sich an den Bedürfnissen, Zielen und Kontexten aus der Analyse orientiert.",
           "<b>Implementierung (Build)</b>: Die entworfenen Lösungen werden technisch umgesetzt und in das reale System integriert.",
           <p>
             <b>Evaluationen</b>: In Usability-Tests, A/B-Tests oder durch reale

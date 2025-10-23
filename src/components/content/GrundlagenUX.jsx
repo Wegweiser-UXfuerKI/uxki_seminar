@@ -31,6 +31,7 @@ import nutzungskontext_quiz from "../SimpleQuizContent/grundlagenUX/nutzungskont
 import mensch_computer_quiz from "../SimpleQuizContent/grundlagenUX/mensch-computer.json";
 import evaluation_quiz from "../SimpleQuizContent/grundlagenUX/evaluation.json";
 import SubTopicCard from "../2_molecule/cards/SubTopicCard";
+import { LinkHandler } from "../1_elements/LinkHandler";
 
 const sectionsUsability = [
   { id: "2", title: "Definition" },
@@ -359,9 +360,9 @@ const Nutzungskontext = {
         Mittelpunkt der Gestaltung. Dieses Vorgehen nennt man auch
         benutzerzentrierte Gestaltung. Weiteres zu diesem Vorgehen erfahren Sie
         detailliert im Kapitel{" "}
-        <Link to="/ux-und-usability/mensch-computer-interaktion">
+        <LinkHandler to="/ux-und-usability/mensch-computer-interaktion">
           <b>Mensch-Computer-Interaktion</b>
-        </Link>
+        </LinkHandler>
       </p>
       <p>Dabei können verschiedene Aspekte analysiert werden:</p>
       {/* Hier reine Liste oder auch mit Komponente für nummern? */}
@@ -516,9 +517,9 @@ const Nutzungskontext = {
         Nutzungskontext genau zu analysieren und darauf zu achten, dass die
         Aufgaben und Anforderungen der Benutzer:innen überhaupt mit den
         vorhandenen Technologien und Daten erfüllt werden können. Im Modul{" "}
-        <Link to={"/automatisierungspotenziale-erkennen"}>
+        <LinkHandler to={"/automatisierungspotenziale-erkennen"}>
           <b>Automatisierungspotenziale erkennen</b>
-        </Link>{" "}
+        </LinkHandler>{" "}
         werden wir uns eingehend damit beschäftigen, wie Automatisierungs- und
         KI-Potenziale identifiziert werden können und wie man frühzeitig
         bewerten kann, welche Prozesse sich dafür eignen, bevor eine Umsetzung
@@ -721,10 +722,14 @@ const Nutzungskontext = {
         <b>Usability-Tests</b> durchgeführt werden. Kontexte können sich ändern,
         also kann die Analyse kontinuierlich wiederholt werden. Mehr dazu in den
         Kapiteln{" "}
-        <Link to={"/ux-und-usability/mensch-computer-interaktion"}>
+        <LinkHandler to={"/ux-und-usability/mensch-computer-interaktion"}>
           Mensch-Computer-Interaktion
-        </Link>{" "}
-        und <Link to={"/ux-und-usability/evaluation"}>Evaluationen</Link>.
+        </LinkHandler>{" "}
+        und{" "}
+        <LinkHandler to={"/ux-und-usability/evaluation"}>
+          Evaluationen
+        </LinkHandler>
+        .
       </p>
     </section>,
     <section>
@@ -735,9 +740,9 @@ const Nutzungskontext = {
         <b>emotionale Aspekte</b>. Dazu gehört, dass sich die Nutzung eines
         Systems stimmig, angenehm oder motivierend anfühlt. Mehr dazu erläutern
         wir im nächsten Kapitel zur{" "}
-        <Link to={"ux-und-usability/user-experience"}>
+        <LinkHandler to={"ux-und-usability/user-experience"}>
           <b>User Experience (UX)</b>
-        </Link>
+        </LinkHandler>
         .
       </p>
     </section>,
@@ -937,9 +942,9 @@ const UserExperience = {
       </p>
       <p>
         Im nächsten Kapitel zur{" "}
-        <Link to="/ux-und-usability/mensch-computer-interaktion">
+        <LinkHandler to="/ux-und-usability/mensch-computer-interaktion">
           <b>Mensch-Computer-Interaktion (HCI)</b>
-        </Link>{" "}
+        </LinkHandler>{" "}
         lernen Sie zentrale Methoden zur nutzerzentrierten Gestaltung kennen.
         Zuvor befassen wir uns jedoch mit den Zielen und grundlegenden Aspekten
         guter UX.
@@ -1201,9 +1206,9 @@ const MenschComputerInteraktion = {
             <b>Evaluationen</b>: In Usability-Tests, A/B-Tests oder durch reale
             Nutzungsszenarien („in the wild“) wird überprüft, wie gut das System
             tatsächlich funktioniert. Mehr dazu im Kapitel{" "}
-            <Link to={"/ux-und-usability/evaluation"}>
+            <LinkHandler to={"/ux-und-usability/evaluation"}>
               <b>Evaluation</b>
-            </Link>
+            </LinkHandler>
             .
           </p>,
         ]}
@@ -1359,9 +1364,9 @@ const Evaluation = {
         Experience lässt sich nicht einfach „herantesten“. Eine erfolgreiche
         Evaluation setzt daher ein grundlegendes{" "}
         <b>Verständnis der Nutzer:innen</b> und <b>ihrer Aufgaben</b> im{" "}
-        <Link to={"/ux-und-usability/nutzungskontext"}>
+        <LinkHandler to={"/ux-und-usability/nutzungskontext"}>
           <b>Nutzungskontext</b>
-        </Link>{" "}
+        </LinkHandler>{" "}
         voraus. Nur so können Rückschlüsse gezogen und Verbesserungen erzielt
         werden.
       </p>
@@ -1394,9 +1399,10 @@ const Evaluation = {
     <section>
       <h2>Wie wird evaluiert und mit wem?</h2>
       <p>
-        Beim Evaluieren unterscheidet man dabei häufig zwischen empirischen und analytischen
-        Methoden. Beide Ansätze haben unterschiedliche Schwerpunkte und eignen
-        sich je nach Projektphase, Zielsetzung und verfügbaren Ressourcen:
+        Beim Evaluieren unterscheidet man dabei häufig zwischen empirischen und
+        analytischen Methoden. Beide Ansätze haben unterschiedliche Schwerpunkte
+        und eignen sich je nach Projektphase, Zielsetzung und verfügbaren
+        Ressourcen:
       </p>
       <ol>
         <li>
@@ -1409,9 +1415,10 @@ const Evaluation = {
         <li>
           <b>Analytische Verfahren</b> lassen sich hingegen besonders in{" "}
           <b>frühen Phasen</b> oder bei <b>begrenzten Ressourcen</b> effizienter
-          einsetzen. UX-Expert:innen führen beispielsweise eine Art Inspektion bzw. 
-          Begutachtung des Systems auf der Basis ihrer Expertise durch, um frühzeitig Barrieren 
-          für ältere Menschen in einem KI-basierten Beratungs-Chatbot zu identifizieren.
+          einsetzen. UX-Expert:innen führen beispielsweise eine Art Inspektion
+          bzw. Begutachtung des Systems auf der Basis ihrer Expertise durch, um
+          frühzeitig Barrieren für ältere Menschen in einem KI-basierten
+          Beratungs-Chatbot zu identifizieren.
         </li>
       </ol>
       <Table data={evaluationMethodsData} />
@@ -1591,7 +1598,7 @@ const Evaluation = {
             Hautleitfähigkeitsmessung erfassen unbewusste, emotionale Reaktionen
             auf ein Produkt. Diese objektiven Daten helfen dabei, subtile
             Aspekte der User Experience zu verstehen, die über bloße Befragungen
-            hinausgehen. Sie sind aber oft technisch aufwändig, teuer, schwer zu 
+            hinausgehen. Sie sind aber oft technisch aufwändig, teuer, schwer zu
             interpretieren und können das Nutzerverhalten beeinflussen.
           </p>
         </div>

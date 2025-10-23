@@ -256,7 +256,7 @@ const easeLearnUseTableData = [
   [
     "Zielgruppe",
     "Erstnutzende, Gelegenheitsnutzende",
-    "Routine-Nutzende, Experten",
+    "Routine-Nutzende, Experten:innen",
   ],
   [
     "Wichtig bei",
@@ -1162,12 +1162,11 @@ const MenschComputerInteraktion = {
         In der Gestaltung nutzerfreundlicher Systeme gibt es verschiedene
         bewährte Vorgehensweisen, die auf anerkannten Normen basieren und dabei
         helfen, die User Experience der Nutzenden zu verbessern. Zu den
-        wichtigsten zählen das <b>User-Centered Design (UCD)</b>, der{" "}
-        <b>Human-Centered Design gemäß ISO 9241-210</b> sowie der{" "}
-        <b>Double Diamond Prozess.</b>
+        wichtigsten zählen das <b>User-Centered Design (UCD)</b> und der{" "}
+        <b>Human-Centered Design Prozess gemäß ISO 9241-210</b>.
       </p>
       <p>
-        Allen gemein ist die Idee, dass man ein System selten sofort perfekt
+        Beiden gemein ist die Idee, dass man ein System selten sofort perfekt
         gestalten kann. Ein iteratives Vorgehen, also wiederholtes Entwerfen,
         Testen und Verbessern mit Nutzer:innen ist entscheidend, um ein
         System/Tool mit guter UX zu schaffen.
@@ -1324,7 +1323,7 @@ const evaluationMethodsData = [
   [
     <b>Nachteile</b>,
     "Zeit- und Kostenintensiv",
-    "Weniger objektiv, of weniger praxisnah",
+    "Weniger objektiv, oft weniger praxisnah",
   ],
 ];
 
@@ -1395,13 +1394,7 @@ const Evaluation = {
     <section>
       <h2>Wie wird evaluiert und mit wem?</h2>
       <p>
-        Nachdem wir nun geklärt haben, was Evaluationen sind und wann sie im
-        Prozess sinnvoll eingesetzt werden, schauen wir uns als Nächstes an, wie
-        eine Evaluation konkret durchgeführt werden kann und wer daran beteiligt
-        ist.
-      </p>
-      <p>
-        Man unterscheidet dabei häufig zwischen empirischen und analytischen
+        Beim Evaluieren unterscheidet man dabei häufig zwischen empirischen und analytischen
         Methoden. Beide Ansätze haben unterschiedliche Schwerpunkte und eignen
         sich je nach Projektphase, Zielsetzung und verfügbaren Ressourcen:
       </p>
@@ -1416,9 +1409,9 @@ const Evaluation = {
         <li>
           <b>Analytische Verfahren</b> lassen sich hingegen besonders in{" "}
           <b>frühen Phasen</b> oder bei <b>begrenzten Ressourcen</b> effizienter
-          einsetzen. UX-Expert:innen führen beispielsweise eine heuristische
-          Evaluation durch, um frühzeitig Barrieren für ältere Menschen in einem
-          KI-basierten Beratungs-Chatbot zu identifizieren.
+          einsetzen. UX-Expert:innen führen beispielsweise eine Art Inspektion bzw. 
+          Begutachtung des Systems auf der Basis ihrer Expertise durch, um frühzeitig Barrieren 
+          für ältere Menschen in einem KI-basierten Beratungs-Chatbot zu identifizieren.
         </li>
       </ol>
       <Table data={evaluationMethodsData} />
@@ -1463,7 +1456,7 @@ const Evaluation = {
           <LoveIcon className="w-[73px] h-[73px]" />
           <p>
             <b>Freude an der Nutzung</b>: Macht die Anwendung Spaß oder fühlt
-            sie sich langsam an? <br />
+            sie sich frustrierend an? <br />
             Beispiel: Nutzer:innen berichten von einem positiven Erlebnis
             während der Nutzung.
           </p>
@@ -1598,8 +1591,8 @@ const Evaluation = {
             Hautleitfähigkeitsmessung erfassen unbewusste, emotionale Reaktionen
             auf ein Produkt. Diese objektiven Daten helfen dabei, subtile
             Aspekte der User Experience zu verstehen, die über bloße Befragungen
-            hinausgehen. Sie sind aber oft technisch aufwändig, teuer und können
-            das Nutzerverhalten beeinflussen.
+            hinausgehen. Sie sind aber oft technisch aufwändig, teuer, schwer zu 
+            interpretieren und können das Nutzerverhalten beeinflussen.
           </p>
         </div>
         <div title="Fragebögen">

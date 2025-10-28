@@ -381,8 +381,11 @@ const LLM = {
       <h3>Offene Modelle (Open Source)</h3>
       <p>
         Offene oder &bdquo;open-weight&ldquo; Modelle (z.B.{" "}
-        <b>Llama, Mistral, Zephyr</b>) gewinnen stark an Bedeutung. Sie
-        ermöglichen:
+        <b>Llama, Mistral, Zephyr</b>) gewinnen stark an Bedeutung. Während es
+        sich bei Modellen nicht unbedingt um echte Open-Source-Modelle handelt,
+        sondern nur um Open-Weight-Modelle, da für vollständige Open Source auch
+        die Trainingsdaten und der gesamte Trainingsprozess offenliegen müssten,
+        spricht man meist dennoch von Open Source. Diese Modelle ermöglichen:
       </p>
       <ul>
         <li>

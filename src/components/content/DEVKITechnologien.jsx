@@ -147,7 +147,8 @@ const llmTable = [
 const LLM = {
   linkName: "llm",
   name: "LLMs",
-  description: "Hier werden LLMs thematisiert.",
+  description:
+    "Hier werden LLMs thematisiert: Was sie sind, sie auszeichnet und ein kurzer Vergleich zwischen Modellen.",
   content: [
     <ChapterHeader text={"LLMs"} number={5} />,
     <section>

@@ -442,20 +442,22 @@ const InputTechnik = {
       </p>
       <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
         <h4>Leitfragen zum Erkennen von Bias</h4>
-        <p className="mt-[var(--scale5)]">
-          Wer oder was ist in den Daten <b>überrepräsentiert</b>?
-        </p>
-        <p>
-          Wer oder was <b>kommt kaum oder gar nicht vor</b>?
-        </p>
-        <p>
-          Welche historischen oder strukturellen Ungleichheiten könnten sich in
-          den genutzten Daten widerspiegeln?
-        </p>
-        <p>
-          Welche Werte oder Annahmen liegen in der Datenerhebung selbst
-          verborgen (z.B. Sprache, Begrifflichkeiten, Klassifikationen)?
-        </p>
+        <ul className="mt-[var(--scale5)]">
+          <li>
+            Wer oder was ist in den Daten <b>überrepräsentiert</b>?
+          </li>
+          <li>
+            Wer oder was <b>kommt kaum oder gar nicht vor</b>?
+          </li>
+          <li>
+            Welche historischen oder strukturellen Ungleichheiten könnten sich
+            in den genutzten Daten widerspiegeln?
+          </li>
+          <li>
+            Welche Werte oder Annahmen liegen in der Datenerhebung selbst
+            verborgen (z.B. Sprache, Begrifflichkeiten, Klassifikationen)?
+          </li>
+        </ul>
       </div>
       <p>
         Bias lässt sich nie vollständig vermeiden - aber er lässt sich erkennen,

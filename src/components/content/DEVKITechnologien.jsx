@@ -473,24 +473,778 @@ const InputTechnik = {
   ],
 };
 
-const Verarbeitung = {
-  linkName: "verarbeitung",
-  name: "Verarbeitung",
-  description: "Hier wird die Verarbeitung bei KI-Systemen thematisiert.",
+const InputInformation = {
+  linkName: "input-integrierte-informationsverarbeitung",
+  name: "Input - Integrierte Informationsverarbeitung",
+  description: "Wie werden Informationen als Input genutzt?",
   content: [
-    <ChapterHeader text={"Verarbeitung"} number={3} />,
+    <ChapterHeader
+      text={"Input - Integrierte Informationsverarbeitung"}
+      number={3}
+    />,
     <section>
       <p></p>
     </section>,
   ],
 };
 
-const Output = {
-  linkName: "output",
-  name: "Output",
+const sectionsVerarbeitungTechnik = [
+  { id: "2", title: "Überwachtes Lernen" },
+  { id: "3", title: "Unüberwachtes Lernen" },
+  { id: "4", title: "Bestärkendes Lernen" },
+  { id: "5", title: "Neuronale Netze" },
+];
+
+const ueberwachtesLernenTable = [
+  [<b>Overfitting</b>, <b>Underfitting</b>],
+  [
+    "Das Modell lernt die Trainingsdaten zu genau, erkennt keine allgemeinen Muster. Es liefert sehr gute Ergebnisse bei Trainingsdaten, aber schlechte Vorhersagen bei neuen Daten.",
+    "Das Modell erkennt die Zusammenhänge in den Daten nicht ausreichend und liefert ungenaue Vorhersagen, auch bei Trainingsdaten.",
+  ],
+  [
+    "Beispiel: Ein Modell wurde nur mit Daten älterer Menschen trainiert und liefert für jüngere Menschen ungenaue Vorhersagen.",
+    "Beispiel: Eine KI zur Spam-Erkennung, die nur kurze Texte als Spam markiert, ignoriert andere wichtige Merkmale wie Schreibweisen oder Handlungsaufforderungen.",
+  ],
+];
+
+const neuronTable = [
+  [<b>Menschliches Neuron</b>, <b>Künstliches Neuron</b>],
+  [
+    "Ein biologisches Neuron reagiert auf einen Reiz.",
+    <>
+      Ein künstliches Neuron funktioniert nach dem Prinzip: <b>Input</b> &rarr;{" "}
+      <b>Verarbeitung</b> &rarr; <b>Output</b>. Die eingehenden Informationen
+      werden mathematisch verrechnet und führen zu einem Ergebnis.
+    </>,
+  ],
+  [
+    <>
+      <b>Beispiel</b>: Man sieht eine bekannte Person (Stimulus) und reagiert
+      darauf, indem man sie grüßt (Reaktion)
+    </>,
+    <>
+      <b>Beispiel</b>: Ein künstliches Neuron bekommt Bilddaten als Input. Nach
+      der Verarbeitung &bdquo;entscheidet&ldquo; es, ob auf dem Bild eine Katze
+      oder ein Hund zu sehen ist.
+    </>,
+  ],
+];
+
+const architecturTable = [
+  [<b>Architektur</b>, <b>Kurzbeschreibung</b>, <b>Anwendungsbeispiel</b>],
+  [
+    <b>CNN (Convolutionale Neural Network)</b>,
+    <>
+      Spezialisiert auf Erkennung von Mustern in Bildern; nutzt Filter und
+      Faltungen.
+    </>,
+    <>Bilderkennung, z.B. handschriftliche Schrift</>,
+  ],
+  [
+    <b>RNN (Recurrent Neural Network)</b>,
+    <>
+      Verarbeitet Sequenzen, speichert Informationen über vorherige Schritte.
+    </>,
+    <>Textverarbeitung, Vorhersagen bei Zeitreihen</>,
+  ],
+  [
+    <b>LSTM (Long Short Term Memory)</b>,
+    <>Erweiterung von RNNs; kann sich über lange Zeiträume erinnern.</>,
+    <>Sprachverarbeitung, komplexe Zeitreihenanalysen</>,
+  ],
+  [
+    <b>DNN (Deep Neural Network)</b>,
+    <>
+      Tiefe Netzwerke mit vielen Hidden Layers; erkennt komplexe Zusammenhänge.
+    </>,
+    <>Alle Bereiche, z.B. Bilderkennung, Sprachmodelle, Vorhersagen</>,
+  ],
+];
+
+const VerarbeitungTechnik = {
+  linkName: "verarbeitung-technik",
+  name: "Verarbeitung - Technische Grundlagen",
+  description: "Hier wird die Verarbeitung bei KI-Systemen thematisiert.",
+  content: [
+    <ChapterHeader text={"Verarbeitung - Technische Grundlagen"} number={4} />,
+    <section>
+      <p>
+        Auf technischer Ebene kann beim Verarbeiten zwischen unterschiedlichen
+        Varianten unterschieden werden. Diese werden im folgenden betrachtet.
+      </p>
+      <Accordion sections={sectionsVerarbeitungTechnik} />
+      <SubNavigation sections={sectionsVerarbeitungTechnik} />
+    </section>,
+    <section>
+      <h2>Überwachtes Lernen</h2>
+      <p>
+        Ein Verfahren des maschinellen Lernens, bei dem ein System anhand von
+        gelabelten Daten trainiert wird, um später neue Eingaben korrekt zu
+        klassifizieren oder Vorhersagen über Zahlenwerte zu treffen.
+      </p>
+      <h3>1. Einführung in das überwachte Lernen</h3>
+      {/* p mit Rückbezug warum lernen wichtig ist */}
+      <h4>Was ist überwachtes Lernen?</h4>
+      <p>
+        Überwachtes Lernen (engl.: supervised learning) ist eine Methode des
+        maschinellen Lernens, bei der ein System anhand von gelabelten Daten
+        trainiert wird. Das bedeutet: Für jede Eingabe gibt es ein bekanntes
+        Ergebnis, das als Orientierung dient.
+      </p>
+      <Accordion title="Beispiel:" initiallyOpen={false}>
+        <p>
+          Stellen Sie sich vor, wir möchten ein System trainieren,
+          handschriftliche Buchstaben zu erkennen. Jede Buchstabendarstellung im
+          Datensatz ist bereits mit dem richtigen Buchstaben <b>labelt</b>, also
+          beschriftet. Das System lernt so, die Muster der Buchstaben zu
+          erkennen.
+        </p>
+      </Accordion>
+      <h3>2. Wichtige Bestandteile des Lernprozesses</h3>
+      <p>
+        Beim überwachten Lernen spielen zwei zentrale Aspekte eine wichtige
+        Rolle: Labels (also die Zielwerte) und die Aufteilung des Datensatzes in
+        verschiedene Teile.
+      </p>
+      <h4>1. Labels - die &bdquo;richtigen Antworten&ldquo;</h4>
+      <p>
+        Labels sind die Ergebnisse oder Kategorien, die wir unseren Eingaben
+        (den sogenannten Features) zuordnen.
+      </p>
+      <p>
+        <b>Beispiel Bilderkennung</b>: Wenn wir ein Foto von einem
+        Verkehrsschild in ein System eingeben, dann ist das passende Label z. B.
+        &bdquo;Stoppschild&ldquo; oder &bdquo;Geschwindigkeitsbegrenzung 50
+        km/h&ldquo;. Die Aufgabe des Modells besteht darin, die Eingabe (das
+        Foto) mit dem richtigen Ausgabewert (dem Label) zu verknüpfen.
+      </p>
+      <p>
+        <b>Einfache Ja/Nein-Fragen</b>: Manchmal ist die Klassifikation binär.
+        Wir möchten ein System trainieren, das entscheidet, ob eine Person für
+        einen Kredit geeignet ist (Ja) oder nicht (Nein). Dazu nutzen wir einen
+        Datensatz mit vielen Finanzinformationen (z. B. Einkommen, Schulden,
+        Zahlungsverhalten). Das System lernt dann, welche dieser Merkmale
+        entscheidend für die Kreditwürdigkeit sind.
+      </p>
+      <p>
+        Ohne Labels kann das Modell nicht lernen, ob seine Vorhersagen korrekt
+        sind. Sie sind sozusagen die &bdquo;Lösungsschablonen&ldquo;, an denen
+        das Modell sein Wissen überprüft.
+      </p>
+      <h4>2. Aufteilung des Datensatzes - Trainieren und Testen</h4>
+      <p>
+        Damit das Modell nicht nur die vorhandenen Daten auswendig lernt,
+        sondern allgemein gültige Regeln erkennt und Fehler frühzeitig
+        identifiziert werden, wird der Datensatz in verschiedene Teile
+        aufgeteilt:
+      </p>
+      <p>
+        <b>Trainingsdaten</b>: Dies ist der größte Teil des Datensatzes. Das
+        Modell &bdquo;sieht&ldquo; diese Daten während der Trainingsphase und
+        versucht, Muster darin zu erkennen.
+      </p>
+      <p>
+        <b>Testdaten</b>: Dieser Teil wird während des Trainings nicht
+        verwendet. Erst wenn das Modell fertig trainiert ist, werden die
+        Testdaten eingesetzt, um zu überprüfen, wie gut das Modell mit neuen,
+        unbekannten Daten zurechtkommt. So können wir feststellen, ob das Modell
+        wirklich gelernt hat oder ob es sich nur die Trainingsbeispiele
+        &bdquo;gemerkt&ldquo; hat.
+      </p>
+      <p>
+        In vielen Fällen wird zusätzlich noch ein Validierungsdatensatz genutzt,
+        mit dem die Zwischenergebnisse während des Trainings kontrolliert
+        werden.
+      </p>
+      <p>
+        <b>Beispiel</b>: Bei einem Fruchtbilder-System lernt das Modell an den
+        Trainingsbildern (&bdquo;Apfel&ldquo;, &bdquo;Birne&ldquo;,
+        &bdquo;Banane&ldquo;) und wird anschließend mit den Testbildern geprüft,
+        ob es neue Früchte korrekt erkennt.
+      </p>
+      <h3>3. Anwendungsbeispiele des überwachten Lernens</h3>
+      <p>
+        Beim überwachten Lernen gibt es zwei zentrale Anwendungsarten:{" "}
+        <b>Klassifikation</b> und <b>Regression</b>.
+      </p>
+      {/* Grafik klassifikation vs regression */}
+      <h4>Klassifikation - Daten in Kategorien einordnen</h4>
+      <p>
+        Bei der Klassifikation werden Eingaben bestimmten Kategorien zugeordnet.
+      </p>
+      <ul>
+        <li>
+          Beispiel Bilderkennung: Ein Bild wird automatisch als
+          &bdquo;Birne&ldquo; oder &bdquo;Blume&ldquo; erkannt.
+        </li>
+        <li>
+          Beispiel Bewertung: Ein System kann Tests oder Aufgaben daraufhin
+          beurteilen, ob sie &bdquo;vollständig&ldquo; oder
+          &bdquo;unvollständig&ldquo; sind.
+        </li>
+      </ul>
+      <p>
+        Das Ziel ist es also, qualitative Unterschiede zu erkennen und Daten in
+        klar definierte Gruppen einzuordnen. Beim überwachten Lernen werden
+        diese Klassifikationsregeln nicht von Hand aufgeschrieben. Stattdessen
+        stellt der Mensch eine Reihe von Beispielen mit den richtigen Labels
+        bereit. Das Modell lernt anhand dieser Beispiele, wie es selbstständig
+        auch neue Daten richtig kategorisieren kann. Der Mensch, der die Labels
+        liefert, fungiert dabei gewissermaßen als &bdquo;Aufsichtsperson&ldquo;,
+        die den Algorithmus in die richtige Richtung lenkt.
+      </p>
+      <Accordion
+        title="Beispiel: Nächste-Nachbarn-Klassifikator"
+        initiallyOpen={false}>
+        <p>
+          Der Nächste-Nachbarn-Klassifikator ist einer der einfachsten
+          Klassifikatoren. Er ordnet ein neues Objekt der Klasse des ähnlichsten
+          Objekts aus den Trainingsdaten zu. Dabei wird keine komplexe Regel
+          berechnet - die Vorhersage basiert allein auf der Ähnlichkeit zu
+          bekannten Beispielen. Klassifikatoren werden generell eingesetzt, um
+          Objekte in vordefinierte Kategorien einzuordnen, zum Beispiel zur
+          Einteilung von E-Mails in „Spam“ oder „Nicht-Spam“ oder zur Erkennung
+          von Bildinhalten. Ein typisches Beispiel für die Anwendung der
+          Nächste-Nachbarn-Methode ist die Vorhersage von Nutzerverhalten in
+          KI-Applikationen wie Empfehlungssystemen. Wer tiefer einsteigen
+          möchte, findet im Kurs Elements of AI weiterführende Informationen:{" "}
+          <a
+            href="https://course.elementsofai.com/de/4/2"
+            target="_blank"
+            rel="noopener noreferrer">
+            Elements of AI - Der Nächste-Nachbarn-Klassifikator
+          </a>
+          .
+        </p>
+      </Accordion>
+      <h4>Regression - Vorhersage von Zahlenwerten</h4>
+      <p>
+        Während es bei der Klassifikation um Kategorien geht, beschäftigt sich
+        die <b>Regression</b> mit der Vorhersage{" "}
+        <b>kontinuierlicher Zahlenwerte</b>, auch von Regressionsproblemen.
+        Statt Labels wie &bdquo;Apfel&ldquo; oder &bdquo;Banane&ldquo; wird also
+        eine Zahl vorhergesagt, die möglichst nahe am realen Wert liegt.
+      </p>
+      <p>
+        Besonders wichtig ist dabei, dass die Vorhersage meist nicht von einer
+        einzelnen Einflussgröße, sondern vom Zusammenspiel mehrerer Variablen
+        abhängt. Die Regression untersucht also, wie unterschiedliche Faktoren
+        gemeinsam auf die Zielgröße wirken.
+      </p>
+      <p>
+        <b>Beispiele</b>:
+      </p>
+      <ul>
+        <li>
+          <b>Einkommen</b>: Schätzung des Gehalts einer Person auf Basis von
+          Alter, Ausbildung, Berufserfahrung und Branche.
+        </li>
+        <li>
+          <b>Werbung</b>: Vorhersage der Klickrate einer Online-Anzeige in
+          Abhängigkeit von Text, Gestaltung, Zielgruppe und bisherigen
+          Nutzerverhalten.
+        </li>
+        <li>
+          <b>Verkehr</b>: Prognose der Anzahl von Unfällen, wobei Faktoren wie
+          Straßenbedingungen, Wetter, Tageszeit und Geschwidigkeitsbegrenzungen
+          einfließen.
+        </li>
+        <li>
+          <b>Immobilien</b>: Schätzung des Verkaufspreises einer Wohnung oder
+          eines Hauses anhand von Lage, Wohnfläche, Baujahr, Ausstattung und
+          energetischem Zustand.
+        </li>
+      </ul>
+      <Accordion title="Beispiel lineare Regression" initiallyOpen={false}>
+        <p>
+          Eine klassische Methode ist die <b>lineare Regression</b>, bei der ein
+          Zusammenhang zwischen Eingabevariablen (z. B. Wohnfläche, Lage,
+          Baujahr) und einer Zielgröße (z. B. Verkaufspreis) modelliert wird.
+          Komplexere Verfahren wie{" "}
+          <b>polynomiale Regression, Entscheidungsbäume oder neuronale Netze</b>{" "}
+          können auch nichtlineare oder stark verknüpfte Zusammenhänge abbilden.
+          Mehr dazu finden Sie unter:{" "}
+          <a
+            href="https://course.elementsofai.com/de/4/3"
+            target="_blank"
+            rel="noopener noreferrer">
+            Elements of AI - Regression
+          </a>
+          .
+        </p>
+      </Accordion>
+      <h3>4. Herausforderungen beim überwachten Lernen</h3>
+      <p>
+        Beim überwachten Lernen gibt es zwei zentrale Probleme, die die
+        Leistungsfähigkeit eines Modells stark beeinflussen können:{" "}
+        <b>Overfitting</b> und <b>Underfitting</b>.
+      </p>
+      <Table
+        data={ueberwachtesLernenTable}
+        headerStyle={true}
+        verticalAlignCells={true}
+      />
+      <p>
+        Das Ziel beim überwachten Lernen ist, ein ausgewogenes Modell zu
+        entwickeln, das die richtigen Muster erkennt, ohne sich zu sehr an die
+        Trainingsdaten zu klammern. Nur so kann es auf neue Daten gut
+        generalisieren und verlässliche Vorhersagen treffen.
+      </p>
+      <List
+        items={[
+          "<b>Gelabelte und ausreichende Datenmenge</b>: Damit ein Modell erfolgreich überwacht lernen kann, müssen einige Voraussetzungen erfüllt sein. Zunächst sind <b>gelabelte Daten</b> erforderlich, denn ohne bekannte Ergebnisse kann das System nicht lernen. Außerdem ist eine <b>ausreichende Datenmenge</b> wichtig, um zu verhindern, dass das Modell unteranpasst und keine sinnvollen Muster erkennt (Underfitting).",
+          "<b>Qualität und Vielfalt der Daten</b>: Neben der Menge spielen auch die <b>Datenqualität und Vielfalt</b> eine entscheidende Rolle. Ein vielfältiger Datensatz hilft, dass das Modell nicht nur die Trainingsdaten auswendig lernt, sondern die zugrunde liegenden Zusammenhänge erkennt und auf neue Daten übertragen werden kann. So wird Overfitting vermieden. Dabei ist zu beachten, dass natürlich nicht “irgendwelche” Daten genutzt werden sollten. Es geht vielmehr darum, einen möglichst diversen Datensatz zu dem spezifischen Problem zu haben, das das System lösen soll.",
+          "Schließlich ist eine <b>klare Zieldefinition</b> notwendig: Soll das Modell Eingaben klassifizieren, also Kategorien zuordnen, oder numerische Werte vorhersagen, also eine Regression durchführen? Eine präzise Zielsetzung bestimmt den Aufbau des Modells und die Auswahl der geeigneten Daten.",
+          "<b>Einsatz von Testdaten</b>: Um zu überprüfen, wie gut ein Modell auf neue Daten reagiert, werden <b>Testdaten</b> eingesetzt. Diese Daten wurden beim Training nicht verwendet und ermöglichen eine realistische Einschätzung der Leistungsfähigkeit. Zur Bewertung des Modells werden verschiedene <b>Kennzahlen</b> herangezogen, wie z.B. Genauigkeit oder Fehlermaße",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
+      <h3>Zusammenfassung</h3>
+      <p>
+        Überwachtes Lernen funktioniert nur mit <b>gelabelten Daten</b>. Modelle
+        unterscheiden sich je nach Ziel in <b>Klassifikation</b>, also der
+        Einordnung in Kategorien, und <b>Regression</b>, also der Vorhersage von
+        Zahlenwerten. Ziel ist immer ein ausgewogenes Modell, das weder
+        Overfitting noch Underfitting zeigt. Eine <b>gute Datenbasis</b> -
+        qualitativ hochwertig, vielfältig und ausreichend groß - ist
+        entscheidend für den Erfolg eines Modells.
+      </p>
+    </section>,
+    <section>
+      <h2>Unüberwachtes Lernen</h2>
+      <p>
+        Beschreibt ein Verfahren des maschinellen Lernens, bei dem ein System
+        ohne vorgegebene Labels in den Daten eigenständig Strukturen, Muster
+        oder Gruppen erkennt.
+      </p>
+      <h3>1. Einführung in das unüberwachte Lernen</h3>
+      <p>
+        Im Gegensatz zum überwachten Lernen arbeitet das{" "}
+        <b>unüberwachte Lernen</b> (engl.: unsupervised learning) mit Daten, die{" "}
+        <b>keine Labels</b> enthalten. Das bedeutet: Es gibt keine vorgegebenen
+        Kategorien oder Ergebnisse, an denen sich das System orientieren kann.
+        Stattdessen versucht das Modell, selbstständig Strukturen und Muster in
+        den Daten zu erkennen.
+      </p>
+      <p>
+        <b>Beispiel für unlabeled Daten</b> sind etwa große Mengen von
+        PDF-Antragsformularen oder Videoaufzeichnungen von Parlamentsdebatten
+        (z.B. auf{" "}
+        <a href="openparliament.tv" target="_blank" rel="noopener noreferrer">
+          openparliament.tv
+        </a>
+        ). Diese Daten liegen zwar in großer Zahl vor, sind aber nicht vorab in
+        Kategorien eingeteilt oder beschriftet.
+      </p>
+      <p>
+        Unüberwachtes Lernen kommt immer dann zum Einsatz,{" "}
+        <b>wenn noch keine Kategorien existieren</b> oder wenn es darum geht,
+        Daten <b>neu zu ordnen oder in Gruppen einzuteilen</b>.
+      </p>
+      <p>Die zentralen Fragestellungen lauten daher:</p>
+      <ul>
+        <li>
+          Wie lässt sich Struktur in einer großen Menge unlabeled Daten
+          entdecken?
+        </li>
+        <li>
+          Wie können diese Daten sinnvoll gruppiert oder zusammengefasst werden?
+        </li>
+      </ul>
+      <h3>2. Clustering - Die zentrale Methode</h3>
+      <p>
+        Eine der wichtigsten Methoden im unüberwachten Lernen ist das{" "}
+        <b>Clustering</b>. Darunter versteht man die{" "}
+        <b>Gruppierung von Daten nach ihrer Ähnlichkeit</b>. Ziel ist es,
+        Datensätze so anzuordnen, dass ähnliche Daten in einer Gruppe - einem
+        sogenannten Cluster - zusammengefasst werden.
+      </p>
+      <p>
+        <b>Beispiel</b>: Stellen Sie sich vor, es liegen viele verschiedene
+        Antragsformulare vor. Ohne vorherige Labels könnte das System sie
+        automatisch in Cluster einteilen, etwa in:
+      </p>
+      <ul>
+        <li>
+          <b>Sozialhilfe</b>
+        </li>
+        <li>
+          <b>Wohngeld</b>
+        </li>
+        <li>
+          <b>Elterngeld</b>
+        </li>
+      </ul>
+      <p>
+        So entstehen sinnvolle Gruppen, die eine spätere Analyse oder
+        Verarbeitung erleichtern.
+      </p>
+      <p>
+        Ein wichtiger Aspekt beim Clustering ist die <b>Anzahl der Cluster</b>:
+      </p>
+      <ul>
+        <li>
+          Mit <b>mehr Clustern</b> entstehen feinere Gruppen (hohe
+          Granularität), die Unterschiede sehr detailliert darstellen.
+        </li>
+        <li>
+          Mit <b>weniger Clustern</b> entstehen gröbere Gruppen (geringe
+          Granularität), die nur die wichtigsten Unterschiede berücksichtigen.
+        </li>
+      </ul>
+      <h3>3. Beispiel aus der Praxis</h3>
+      <p>
+        Ein praktisches Beispiel für unüberwachtes Lernen ist die{" "}
+        <b>Auswertung handschriftlicher Dokumente ohne Labels</b>. Das Ziel
+        besteht darin, verschiedene Buchstaben voneinander zu unterscheiden,
+        ohne dass diese zuvor beschriftet wurden.
+      </p>
+      <p>
+        Das System geht dabei so vor, dass sie ähnliche Formen automatisch in
+        Gruppen, also <b>Cluster</b>, einteilt. So könnten beispielsweise alle
+        &bdquo;A&ldquo;s in einem Cluster landen, alle &bdquo;B&ldquo;s in einem
+        anderen, und so weiter. Auf diese Weise lassen sich Strukturen in den
+        Daten erkennen, ohne dass vorherige Kennzeichnungen nötig sind.
+      </p>
+      <h3>4. Herausforderungen beim unüberwachten Lernen</h3>
+      <p>
+        Im Gegensatz zum überwachten Lernen bringt das unüberwachte Lernen
+        besondere Schwierigkeiten mit sich. Da <b>keine Labels</b> vorhanden
+        sind, gibt es auch keinen klassischen <b>Test-Datensatz</b>, mit dem die
+        Ergebnisse überprüft werden könnten.
+      </p>
+      <p>
+        Das bedeutet: Es gibt keine eindeutig &bdquo;richtigen&ldquo; oder
+        &bdquo;falschen&ldquo; Antworten. Stattdessen zeigt das Modell lediglich
+        mögliche Strukturen auf, die sinnvoll erscheinen können - oder auch
+        nicht. Die <b>Bewertung der Ergebnisse</b> ist daher deutlich komplexer
+        und erfordert meist zusätzliches Fachwissen oder weitere Analysen.
+      </p>
+      <p>
+        Einsatzgebiete: Während überwachte Lernverfahren vor allem dann sinnvoll
+        sind, wenn konkrete Vorhersagen oder Klassifikationen benötigt werden
+        (z.B. Kreditwürdigkeitsprüfung, medizinische Diagnose), eignet sich
+        unüberwachtes Lernen besonders für Exploration, Mustererkennung und
+        Clusterbildung, wenn keine Labels vorliegen und man zunächst Strukturen
+        oder Zusammenhänge in den Daten entdecken möchte.
+      </p>
+      <h3>Zusammenfassung</h3>
+      <p>
+        Unüberwachtes Lernen kommt ohne Labels aus. Sein Ziel ist es,{" "}
+        <b>Strukturen oder Gruppen (Cluster)</b> in Daten zu erkennen. Die
+        häufigste Methode dabei ist das <b>Clustering</b>, bei dem ähnliche
+        Daten automatisch zusammengefasst werden. Allerdings ist die Bewertung
+        der Ergebnisse wesentlich schwieriger als beim überwachten Lernen, da es
+        keine klaren Antworten gibt.
+      </p>
+    </section>,
+    <section>
+      <h2>Bestärkendes Lernen</h2>
+      <p>
+        Ein Verfahren des maschinellen Lernens, bei dem ein System durch Versuch
+        und Irrtum lernt und sein Verhalten anhand von Belohnungen oder
+        Bestrafungen schrittweise verbessert, um langfristig den größtmöglichen
+        Erfolg zu erzielen.
+      </p>
+      <h3>1. Einführung in das bestärkende Lernen</h3>
+      <p>
+        Beim <b>bestärkenden Lernen</b> (engl.: reinforcement learning) lernt
+        ein KI-System durch <b>Versuch und Irrtum</b>. Es erhält{" "}
+        <b>Belohnungen</b>, wenn es gute Entscheidungen trifft, und{" "}
+        <b>Bestrafungen</b>, wenn sein Verhalten nicht zielführend ist. Dieser
+        Ansatz ähnelt dem <b>operanten Konditionieren</b> in der Psychologie,
+        bei dem Verhalten durch positives oder negatives Feedback geformt wird.
+      </p>
+      <p>
+        Ein zentrales Merkmal ist, dass es{" "}
+        <b>keine direkten &bdquo;richtigen&ldquo; Lösungen</b> gibt. Das System
+        lernt stattdessen aus{" "}
+        <b>Feedback, das oft erst nach mehreren Schritten erfolgt</b>.
+      </p>
+      <p>
+        Typische Anwendungsbereiche sind Situationen, in denen ein KI-Akteur
+        eigenständig handeln muss, wie etwa:
+      </p>
+      <ul>
+        <li>
+          <b>Selbstfahrende Autos</b>, die erst nach einer Reihe von
+          Entscheidungen Rückmeldung über deren Qualität erhalten.
+        </li>
+        <li>
+          <b>Spiele</b>, bei denen der Erfolg erst am Ende des Spiels sichtbar
+          wird.
+        </li>
+      </ul>
+      <h3>2. Funktionsweise</h3>
+      <p>
+        Das System befindet sich in einer <b>Umgebung</b>, mit der es ständig
+        interagiert.
+      </p>
+      <ul>
+        <li>
+          Für jede Aktion erhält es eine Rückmeldung in Form einer Belohnung
+          oder Bestrafung.
+        </li>
+        <li>
+          Diese Erfahrungen werden gespeichert und genutzt, um die{" "}
+          <b>Strategie (Policy)</b> zu verbessern.
+        </li>
+        <li>
+          Das Ziel besteht darin, <b>langfristig die maximale Belohnung</b> zu
+          erreichen - nicht nur kurzfristig richtige Entscheidungen zu treffen.
+        </li>
+      </ul>
+      <h3>3. Besonderheiten</h3>
+      <p>
+        Bestärkendes Lernen unterscheidet sich deutlich vom überwachten und
+        unüberwachten Lernen:
+      </p>
+      <ul>
+        <li>
+          Es werden <b>keine großen Datensätze</b> benötigt, da das System durch
+          direkte Interaktion mit seiner Umgebung lernt.
+        </li>
+        <li>
+          Es gibt <b>keine festen Labels oder Testdaten</b>.
+        </li>
+        <li>
+          Stattdessen basiert der gesamte Lernprozess auf <b>Erfahrungen</b>.
+        </li>
+        <li>
+          Diese Methode ist besonders geeignet für <b>dynamische Umgebungen</b>,
+          in denen sich Situationen ständig ändern und Flexibilität gefragt ist.
+        </li>
+      </ul>
+      <h3>4. Anwendungsbeispiel: Robotik</h3>
+      <p>
+        Stellen wir uns vor, eine gemeinnützige Organisation betreibt eine{" "}
+        <b>Online-Hotline für psychosoziale Beratung</b>. Menschen können sich
+        dort anonym per Chat melden, wenn sie Unterstützung brauchen. Um die
+        Berater:innen im Gespräch zu unterstützen, wird ein KI-System mit{" "}
+        <b>bestärkendem Lernen</b> eingesetzt.
+      </p>
+      <p>
+        Das System soll lernen, in welchen Situationen bestimmte
+        Gesprächsstrategien besonders hilfreich sind. Es beobachtet also den
+        Verlauf der Chats und schlägt den Berater:innen mögliche Antworten oder
+        nächste Schritte vor - zum Beispiel:{" "}
+        <i>&bdquo;offene Frage stellen&ldquo;</i>,
+        <i>&bdquo;ermutigendes Feedback geben&ldquo;</i> oder{" "}
+        <i>&bdquo;ein konkretes Hilfsangebot nennen&ldquo;</i>.
+      </p>
+      <p>Wie funktioniert das Lernen?</p>
+      <ul>
+        <li>
+          <b>Agent</b>: Die KI ist der &bdquo;Agent&ldquo;, der Vorschläge für
+          die Gesprächsführung macht.
+        </li>
+        <li>
+          <b>Umgebung</b>: Die Umgebung ist das laufende Beratungsgespräch mit
+          allen Emotionen, Themen und Reaktionen der Ratsuchenden.
+        </li>
+        <li>
+          <b>Aktionen</b>: Der Agent kann unterschiedliche Arten von
+          Antwortvorschlägen machen.
+        </li>
+        <li>
+          <b>Belohnung</b>: Positiv, wenn Ratsuchende das Gspräch als hilfreich
+          bewerten oder es länger fortführen. Negativ, wenn sie unzufrieden
+          wirken, das Gespräch abbrechen oder keine Reaktion mehr zeigen.
+        </li>
+      </ul>
+      <p>
+        Über viele Gespräche hinweg probiert das System verschiedene Strategien
+        aus und bekommt Rückmeldung über die Wirkung. So{" "}
+        <b>lernt es durch Ausprobieren und Feedback</b>, welche Vorschläge im
+        Beratungsprozess wirklich hilfreich sind - nicht durch vorgegebene
+        Regeln, sondern durch Erfahrung.
+      </p>
+      <p>
+        Auf diese Weise kann die Organisation sicherstellen, dass die Hotline
+        langfristig <b>effizienter und wirksamer</b> arbeitet: Berater:innen
+        werden entlastet, Ratsuchende fühlen sich besser unterstützt, und die
+        knappen Ressourcen einer gemeinnützigen Organisation werden optimal
+        eingesetzt.
+      </p>
+      <h3>Zusammenfassung</h3>
+      <p>
+        Bestärkendes Lernen basiert auf dem Prinzip von{" "}
+        <b>Belohnung und Bestrafung</b>. Das System lernt schrittweise aus
+        seinen Erfahrungen und passt sein Verhalten immer weiter an. Es eignet
+        sich besonders für <b>komplexe, dynamische Umgebungen</b> wie die
+        Robotik. Das übergeordnete Ziel ist dabei stets die{" "}
+        <b>Maximierung der langfristigen Belohnung</b>.
+      </p>
+    </section>,
+    <section>
+      <h2>Neuronale Netze</h2>
+      <p>
+        Sind mathematische Modelle, die vom menschlichen Gehirn inspiriert sind
+        und aus miteinander verbundenen künstlichen Neuronen bestehen, um Muster
+        zu erkennen, Daten zu verarbeiten und komplexe Probleme zu lösen.
+      </p>
+      <h3>1. Einführung: Lernen von der Natur</h3>
+      <p>
+        Viele technische Innovationen sind durch die <b>Bionik</b> inspiriert,
+        also durch die Nachahmung von Phänomenen aus der Natur. Ein bekanntes
+        Beispiel ist der <b>Klettverschluss</b>, der auf der Struktur der
+        Kletten basiert.
+      </p>
+      <p>
+        Auch <b>künstliche neuronale Netze (KNN)</b> orientieren sich an der
+        Natur - genauer gesagt am <b>menschlichen Gehirn</b>, das aus rund
+        10-100 Milliarden Nervenzellen (Neuronen) besteht. So wie unser Gehirn
+        durch die Zusammenarbeit vieler Neuronen Informationen verarbeitet, tun
+        es auch künstliche neuronale Netze - nur mathematisch.
+      </p>
+      {/* Bild/Meme NN */}
+      <h4>1. Biologisches vs. künstliches Neuron</h4>
+      <Table data={neuronTable} headerStyle={true} verticalAlignCells={true} />
+      <h4>2. Neuronale Netze vs. herkömmliche Computer</h4>
+      <p>
+        Neuronale Netze unterscheiden sich von herkömmlichen Computern vor allem
+        dadurch, dass{" "}
+        <b>viele Neuronen gleichzeitig Informationen verarbeiten</b> und dass{" "}
+        <b>Speicherung und Verarbeitung von Daten nicht getrennt</b> sind,
+        sondern in den Neuronen selbst erfolgen. Dadurch eignen sie sich
+        besonders für Aufgaben, die massive Parallelverarbeitung erfordern. Ihre
+        volle Leistungsfähigkeit wird durch spezielle Hardware wie{" "}
+        <b>Grafikprozessoren (GPUs)</b> erreicht, die große Datenmengen
+        gleichzeitig bearbeiten können.
+      </p>
+      <p>Mehr dazu finden Sie im Kurs:</p>
+      <p className="specialText text-center">
+        <a
+          href="https://course.elementsofai.com/de/5/1"
+          target="_blank"
+          rel="noopener noreferrer">
+          <i>Elements of AI - Die Grundlagen neuronaler Netze</i>
+        </a>
+      </p>
+      <h3>2. Aufbau eines künstlichen neuronalen Netzes</h3>
+      <p>
+        Ein künstliches neuronales Netz ist in der Regel in{" "}
+        <b>drei Schichten</b> aufgebaut:
+      </p>
+      <List
+        items={[
+          "<b>Input-Schicht</b>: Sie nimmt die Daten auf, zum Beispiel Bildpixel oder Sensordaten.",
+          "<b>Verborgene Schichten (Hidden Layer)</b>: Hier findet die eigentliche Verarbeitung statt. Die Daten werden schrittweise transformiert und Muster herausgefiltert.",
+          "<b>Output-Schicht</b>: Am Ende gibt das Netz ein Ergebnis aus, etwa eine Klassifizierung (z.B. &bdquo;Katze&ldquo; oder &bdquo;Hund&ldquo;) oder einen Wert (z.B. eine Prognose).",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
+      <p>
+        Die Bausteine dieser Schichten sind die <b>Neuronen</b>, die als
+        Knotenpunkte fungieren. Zwischen den Neuronen bestehen{" "}
+        <b>Verbindungen</b>, die mit <b>Gewichten</b> versehen sind. Diese
+        Gewichte geben an, wie stark ein Neuron ein anderes beeinflusst. Ob ein
+        Neuron &bdquo;aktiv&ldquo; wird, entscheidet eine{" "}
+        <b>Aktivierungsfunktion</b>, die berechnet, wie stark ein Signal
+        weitergegeben wird.
+      </p>
+      <p>Mehr dazu finden Sie im Kurs:</p>
+      <p className="specialText text-center">
+        <a
+          href="https://course.elementsofai.com/de/5/2"
+          target="_blank"
+          rel="noopener noreferrer">
+          <i>Elements of AI - Aufbau neuronaler Netze</i>
+        </a>
+      </p>
+      <h3>3. Netzarchitekturen - für unterschiedliche Aufgaben</h3>
+      <p>
+        Neuronale Netze lassen sich je nach Aufgabe, Datentyp und Komplexität
+        unterschiedlich aufbauen: Sie können Rückkopplungen nutzen, wie bei
+        rekurrenten Netzen für zeitabhängige Daten oder sehr tief geschichtet
+        sein, wie bei Deep Learning-Modellen, um komplexe Muster zu erkennen. Je
+        nach Einsatzgebiet wählt man unterschiedliche <b>Netzarchitekturen</b>,
+        die speziell auf Bilder, Sequenzen oder große Datensätze zugeschnitten
+        sind. Wir wollen hier nicht tiefer auf die jeweiligen Netzarchitekturen
+        eingehen, sondern Ihnen einen Überblick geben, sodass Sie mit den
+        Begrifflichkeiten arbeiten können.
+      </p>
+      <Table data={architecturTable} headerStyle verticalAlignCells />
+      <p>Mehr dazu finden Sie im Kurs:</p>
+      <p className="specialText text-center">
+        <a
+          href="https://course.elementsofai.com/de/5/3"
+          target="_blank"
+          rel="noopener noreferrer">
+          <i>
+            Elements of AI - Fortgeschrittene Methoden im Bereich neuronaler
+            Netze
+          </i>
+        </a>
+      </p>
+      <h3>Zusammenfassung</h3>
+      <p>
+        Künstliche neuronale Netze orientieren sich am Modell des menschlichen
+        Gehirns und bestehen typischerweise aus{" "}
+        <b>Input-, Hidden- und Output-Schichten</b>. Je nach Aufgabe kommen
+        unterschiedliche <b>Netzarchitekturen</b> zum Einsatz, etwa CNNs für
+        Bilder, RNNs oder LSTMs für zeitabhängige Daten und tiefe Netzwerke
+        (DNNs) für komplexe Muster.
+      </p>
+      <p>
+        Neuronale Netze können mit verschiedenen Methoden trainiert werden:
+        <b>überwacht</b>, <b>unüberwacht</b> oder <b>bestärkend</b>. Deep
+        Learning bezeichnet die erweiterte Form mit vielen verborgenen
+        Schichten, die es ermöglicht, besonders komplexe Probleme zu lösen.
+      </p>
+      <p className="specialText">
+        Wenn Sie tiefer in das Thema einsteigen möchten, empfehlen wir Ihnen
+        einen zusätzlichen Kurs bei{" "}
+        <a
+          href="https://course.elementsofai.com/de/5"
+          target="_blank"
+          rel="noopener noreferrer">
+          Elements of AI
+        </a>{" "}
+        zu Neuronalen Netzen
+      </p>
+    </section>,
+  ],
+};
+
+const VerarbeitungInformation = {
+  linkName: "verarbeitung-integrierte-informationsverarbeitung",
+  name: "Verarbeitung - Integrierte Informationsverarbeitung",
+  description: "Hier wird die Verarbeitung bei KI-Systemen thematisiert.",
+  content: [
+    <ChapterHeader
+      text={"Verarbeitung - Integrierte Informationesverarbeitung"}
+      number={5}
+    />,
+    <section>
+      <p></p>
+    </section>,
+  ],
+};
+
+const OutputTechnik = {
+  linkName: "output-technik",
+  name: "Output - Technische Grundlagen",
   description: "Hier wird der Output von KI-Systemen thematisiert.",
   content: [
-    <ChapterHeader text={"Output"} number={4} />,
+    <ChapterHeader text={"Output - Technische Grundlagen"} number={6} />,
+    <section>
+      <p></p>
+    </section>,
+  ],
+};
+
+const OutputInformation = {
+  linkName: "output-integrierte-informationsverarbeitung",
+  name: "Output - Integrierte Informationsverarbeitung",
+  description: "Hier wird der Output von KI-Systemen thematisiert.",
+  content: [
+    <ChapterHeader
+      text={"Output - Integrierte Informationsverarbeitung"}
+      number={7}
+    />,
     <section>
       <p></p>
     </section>,
@@ -556,7 +1310,7 @@ const LLM = {
   description:
     "Hier werden LLMs thematisiert: Was sie sind, sie auszeichnet und ein kurzer Vergleich zwischen Modellen.",
   content: [
-    <ChapterHeader text={"LLMs"} number={5} />,
+    <ChapterHeader text={"LLMs"} number={8} />,
     <section>
       <p>
         LLMs sind große Sprachmodellen, die vorhersagen, wie ein Text
@@ -993,7 +1747,16 @@ const Dateninput = {
   linkName: "ki-technologien-verstehen",
   name: "KI-Technologien verstehen",
   moduleImage: ImageElement,
-  content: [Einleitung, InputTechnik, Verarbeitung, Output, LLM],
+  content: [
+    Einleitung,
+    InputTechnik,
+    InputInformation,
+    VerarbeitungTechnik,
+    VerarbeitungInformation,
+    OutputTechnik,
+    OutputInformation,
+    LLM,
+  ],
 };
 
 export default Dateninput;

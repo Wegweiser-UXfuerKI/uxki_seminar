@@ -9,60 +9,466 @@ import SubNavigation from "../2_molecule/nav/SubNavigation";
 
 import llm_dark from "../../assets/images/kiTechnologien/LLM-dark.png";
 import llm_light from "../../assets/images/kiTechnologien/LLM-light.png";
+import ArrowIcon from "../1_elements/ArrowIcon";
+import { CarouselContainer } from "../3_organism/CarouselContainer";
 
-const Einleitung = {
-  linkName: "einleitung",
-  name: "Einleitung",
+const sectionsInputTechnik = [
+  { id: "2", title: "Warum es wichtig ist, Daten zu verstehen" },
+  { id: "3", title: "Was sind Daten und was nicht?" },
+  {
+    id: "4",
+    title:
+      "Wie müssen Daten gestaltet sein, um von KI-Systemen genutzt zu werden?",
+  },
+  { id: "5", title: "Möglichkeiten der Kategorisierung von Daten" },
+  { id: "6", title: "Datenqualität" },
+  {
+    id: "7",
+    title:
+      "Beziehungen zwischen Daten: Abhängigkeiten, Korrelationen und Kausalität",
+  },
+  {
+    id: "8",
+    title: "Bias: Wenn Daten ein verzerrtes Bild der Realität zeigen",
+  },
+];
+
+const InputTechnik = {
+  linkName: "input-technik",
+  name: "Input - Technische Grundlagen",
   description:
-    "Hier wird ein Überblick über die die KI Technologien und deren Funktionsweise gegeben.",
+    "Hier wird der Input von KI-Systemen auf einer technischen Ebene thematisiert.",
   content: [
-    <ChapterHeader text={"Einleitung"} number={1} />,
+    <ChapterHeader text={"Input - Technische Grundlage"} number={2} />,
     <section>
+      <Accordion sections={sectionsInputTechnik} />
+      <SubNavigation sections={sectionsInputTechnik} />
+      <h2>1. Einleitung: Warum es wichtig ist, Daten zu verstehen</h2>
       <p>
-        In diesem Modul steht die Verarbeitung von Informationen durch
-        KI-Systeme im Mittelpunkt. Nachdem zuvor erläutert wurde, wie
-        Informationen an KI-Systeme übermittelt werden, geht es nun darum, auf
-        welche Weise diese Systeme die erhaltenen Daten verarbeiten.
+        Wer mit KI-Systemen arbeitet, arbeitet immer auch mit Daten. Ob ein
+        Chatbot Anfragen von Bürger:innen beantwortet, eine KI eingereichte
+        Anträge prüft oder ein Analyse-Tool soziale Trends erkennen soll - der
+        Ausgangspunkt all dieser Systeme sind Daten. Doch was genau sind
+        eigentlich &bdquo;Daten&ldquo;? Und warum ist es so entscheidend, ihre
+        Struktur, Herkunft und Qualität zu verstehen, bevor sie in ein KI-System
+        eingespeist werden?
       </p>
-
       <p>
-        Im Zentrum des Moduls steht die Vorstellung verschiedener Lernarten, mit
-        denen KI-Systeme trainiert werden können und die bestimmen, wie sie mit
-        Informationen umgehen.
-      </p>
-
-      <p>
-        Darüber hinaus werden in diesem Zusammenhang auch neuronale Netze sowie
-        der Umgang mit Unsicherheiten und Fehlern während der
-        Informationsverarbeitung thematisiert.
+        In gemeinwohlorientierten Organisationen wird KI oft eingesetzt, um
+        Prozesse zu entlasten, Zugänge zu erleichtern oder faire Entscheidungen
+        zu unterstützen. Aber ohne Verständnis dafür, was in ein System
+        hineingeht, bleibt unklar, wie man seine Ergebnisse bewerten oder
+        verbessern kann. <b>Input verstehen heißt, Daten verstehen</b>.
       </p>
     </section>,
     <section>
-      <p>CARDS ZU EINZELNEN KAPITELN</p>
-    </section>,
-    <section>
+      <h2>2. Was sind Daten und was nicht?</h2>
       <p>
-        Es gibt fünf Arten von Maschinellem Lernen. Welche dabei eingesetzt
-        wird, hängt von der Aufgabenstellung un der Art der Daten ab die zur
-        Verfügung stehen.
+        Daten sind zunächst nur Zeichen, Zahlen oder Symbole, die etwas in der
+        Welt abbilden. Erst durch Interpretation, also durch das Einordnen
+        dieser Zeichen in einen Kontext, entsteht Bedeutung.
       </p>
-      <p>GRAFIK MIT ARTEN</p>
-      <p>Sachen zu einzelnen Begriffen</p>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
+        <h4>Vom Zeichen zum Wissen</h4>
+        <p className="mt-[var(--scale5)]">
+          <b>Zeichen</b>: Einzelne Symbole oder Werte (z.B. &bdquo;25&ldquo;,
+          &bdquo;grün&ldquo;, &bdquo;Ja&ldquo;).
+        </p>
+        <p className="w-full text-center flex justify-center">
+          <ArrowIcon direction="down" style={{ fill: "var(--text)" }} />
+        </p>
+        <p>
+          <b>Daten</b>: Zeichen, die Systematisch erfasst wurden (z.B. &bdquo;25
+          Jahre alt&ldquo;, &bdquo;grüne Ampel&ldquo;, &bdquo;Ja/Nein
+          Antwort&ldquo;).
+        </p>
+        <p className="w-full text-center flex justify-center">
+          <ArrowIcon direction="down" style={{ fill: "var(--text)" }} />
+        </p>
+        <p>
+          <b>Information</b>: Bedeutung, die sich aus Daten in einem bestimmten
+          Kontext ergbnit (z.B. &bdquo;Die Person ist 25 Jahre alt&ldquo;).
+        </p>
+        <p className="w-full text-center flex justify-center">
+          <ArrowIcon direction="down" style={{ fill: "var(--text)" }} />
+        </p>
+        <p>
+          <b>Wissen</b>: Das Verständnis, wie diese Information einzuordnen ist
+          (&bdquo;Menschen zwischen 18 und 30 gelten hier als junge
+          Erwachsene&ldquo;).
+        </p>
+      </div>
+      <p>
+        In der Praxis bedeutet das: Wenn eine KI Informationen zu eingereichten
+        Förderanträgen verarbeitet, arbeitet sie nicht mit Wissen, sondern mit
+        Daten - etwa Texten, Zahlenfeldern oder Kategorien. Das Wissen, wie
+        diese zu interpretieren sind, liegt beim Menschen oder in den Regeln,
+        mit denen das KI-System trainiert wurde.
+      </p>
     </section>,
     <section>
-      <h2>Warum ist es wichtig, zu verstehen, wie Systeme angelernt werden?</h2>
+      <h2>
+        3. Wie müssen Daten gestaltet sein, um von KI-Systemen genutzt zu
+        werden?
+      </h2>
+      <p>
+        KI-Systeme können nur so gut arbeiten, wie die Daten es zulassen. Damit
+        ein System Daten verarbeiten kann, müssen diese in einer bestimmten
+        Struktur und einem Format vorliegen.
+      </p>
+      <Accordion title="Ein Beispiel dazu:" initiallyOpen={false}>
+        <p>
+          Ein Chatbot, der Fragen von Bürger:innen beantworten soll, braucht
+          strukturierte Eingabedaten - etwa eine Liste häufiger Fragen und
+          zugehöriger Antworten. Freitexte aus E-Mails oder Formularen müssen
+          zuvor aufbereitet werden, damit die KI sie versteht.
+        </p>
+      </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
+        <h4>Datenstrukturen und -formate</h4>
+        <p className="mt-[var(--scale5)]">
+          <b>Strukturierte Daten</b>: Klar definierte Spalten, Werte und
+          Datentypen (z.B. Tabellen, Datenbanken).
+        </p>
+        <p>
+          <b>Unstrukturierte Daten</b>: Texte, Bilder, Audiodateien, PDFs - also
+          Informationen ohne feste Ordnung.
+        </p>
+        <p>
+          <b>Halbstrukturierte Daten</b>: Mischformen wie JSON oder XML, die
+          Strukturmerkmale enthalten, aber flexibel bleiben.
+        </p>
+      </div>
+      <p>
+        Viele gemeinwohlorientierte Organisationen arbeiten in ihrem Alltag
+        überwiegend mit unstrukturierten Daten - etwa Antragsdokumenten,
+        Berichten oder selbsterstellten Dokumenten mit Freitextantworten.
+      </p>
+      <p className="specialText">
+        Diese unstrukturierten Daten können wertvoll sein, müssen aber in
+        strukturierte oder maschinenlesbare Form gebracht werden, bevor sie als
+        Input für eingesetzte KI-Systeme dienen können.
+      </p>
     </section>,
-  ],
-};
-
-const Input = {
-  linkName: "input",
-  name: "Input",
-  description: "Hier wird der Input von KI-Systemen thematisiert.",
-  content: [
-    <ChapterHeader text={"Input"} number={2} />,
     <section>
-      <p></p>
+      <h2>4. Möglichkeiten der Kategorisierung von Daten</h2>
+      <p>
+        Um zu verstehen, welche Art von Daten man einem KI-System zur Verfügung
+        stellt, ist es hilfreich, Daten nach bestimmten Kriterien zu{" "}
+        <b>kategorisieren</b>. Diese Kategorisierungen helfen dabei
+        einzuschätzen, ob Daten geeignet sind, welche Form der Aufbereitung sie
+        benötigen und welche Schlussfolgerungen sich später aus ihnen ziehen
+        lassen.
+      </p>
+      <p>
+        Ein erster Aspekt betrifft die <b>Syntax</b> - also die formale Struktur
+        der Daten. Syntax beschreibt, in welcher Form ein Wert vorliegt: als
+        Zahl, Text, Kategorie oder Wahr/Falsch-Angabe. Diese Unterscheidung ist
+        entscheidend, weil viele KI-Modelle bestimmte Formate erwarten. Ein Text
+        wie &bdquo;Ja&ldquo; oder &bdquo;Nein&ldquo; muss etwa in 0/1-Werte
+        umgewandelt werden, wenn das System nur mit numerischen Eingaben
+        arbeiten kann.
+      </p>
+      <p>
+        Darüber hinaus spielt die <b>Erscheinung oder Form</b> der Daten eine
+        Rolle. Damit ist gemeint, wie die Daten erfasst oder dargestellt sind -
+        etwa als Antwortfeld in einem Formular, als Sensormessung oder als
+        Fließtext in einem Bericht. Diese Form bestimmt häufig, wie leicht oder
+        schwer Daten automatisiert weiterverarbeitet werden können. Während eine
+        standardisierte Eingabemaske klare Werte liefert, sind handgeschriebene
+        Dokumente oder unstrukturierte E-Mails für eine KI nur schwer zu deuten.
+      </p>
+      <p>
+        Ein weiterer wichtiger Aspekt ist der <b>zeitliche Bezug</b> der Daten.
+        Daten sind Momentaufnahmen einer bestimmten Realität, die sich mit der
+        Zeit verändern kann. Angaben zu Einkommensverhältnissen,
+        Bevölkerungsdaten oder Nutzungszahlen können nach einigen Monaten oder
+        Jahren bereits veraltet sein. Wenn eine KI also auf Basis alter Daten
+        trainiert wurde, spiegelt sie möglicherweise eine Realität wider, die so
+        gar nicht mehr existiert.
+      </p>
+      <p>
+        Daten lassen sich außerdem nach ihrem Skalenniveau unterscheiden - also
+        danach, wie genau sie messbar sind.
+      </p>
+      <ul>
+        <li>
+          Nominale Daten (z.B. &bdquo;Farbe der Karte&ldquo;) lassen sich nicht
+          in einer Rangfolge bringen.
+        </li>
+        <li>
+          Ordinale Daten (z.B. &bdquo;Zufriedenheit: niedrig - mittel -
+          hoch&ldquo;) hingegen schon.
+        </li>
+        <li>
+          Intervall- und Rationskalen (z.B. Temperatur ind °C oder Einkommen in
+          Euro) ermöglichen präzise mathematische Berechnungen.
+        </li>
+      </ul>
+      <p>
+        Das richtige Verständnis dieser Unterschiede ist essenziell, weil sie
+        bestimmen, welche statistischen Verfahren und KI-Modelle überhaupt
+        sinnvoll angewendet werden können.
+      </p>
+      <p>
+        Schließlich ist auch der <b>Datentyp</b> selbst von Bedeutung. Ein
+        Datentyp legt fest, ob eine Information als Zahl, Text, boolescher Wert
+        (wahr/falsch) oder komplexere Struktur vorliegt. Ein scheinbar einfacher
+        Unterschied - etwa zwischen einer Zahl, die als Text gespeichert wurde
+        (&bdquo;15&ldquo;), und einer echten numerischen Variable - kann bei der
+        Verarbeitung durch eine KI große Auswirkungen haben.
+      </p>
+      <p>
+        In der Praxis ist es hilfreich, diese verschiedenen Kategorien im Blick
+        zu behalten. Wer etwa in einer Organisation arbeitet, die mithilfe von
+        KI eingereichte Förderanträge analysiert, sollte sich fragen:
+      </p>
+      <ul>
+        <li>
+          Sind die Eingabefelder in den Formularen konsistent aufgebaut
+          (Syntax)?
+        </li>
+        <li>
+          Liegen die Anträge in digitaler oder gescannter Form vor
+          (Erscheinung)?
+        </li>
+        <li>
+          Beziehen sich die Daten auf aktuelle oder ältere Förderperioden
+          (zeitlicher Bezug)?
+        </li>
+        <li>
+          Sind die Bewertungskategorien der Gutachter*innen ordinal oder
+          numerisch (Skalenniveau)?
+        </li>
+        <li>
+          Und schließlich: Sind die einzelnen Werte korrekt als Text oder Zahl
+          gespeichert (Datentyp)?
+        </li>
+      </ul>
+      <p>
+        Erst wenn diese Grundlagen verstanden und überprüft sind, kann ein
+        KI-System sinnvoll mit den Daten arbeiten und die Organisation
+        sicherstellen, dass die Ergebnisse nachvollziehbar und belastbar
+        bleiben.
+      </p>
+    </section>,
+    <section>
+      <h2>5. Datenqualität</h2>
+      <p>
+        Viele Probleme in KI-Projekten entstehen nicht durch den Algorithmus,
+        sondern durch <b>mangelhafte Datenqualität</b> mit der das KI-Tool
+        arbeitet. Grund dafür können bspw. menschliche Fehler bei der Eingabe,
+        unklare oder nicht vorhandene Standardisierung oder Umbrüche zwischen
+        verschiedenen technischen Systemen sein.
+      </p>
+      <h4>Vier zentrale Qualitätsmerkmale</h4>
+      <ul>
+        <li>
+          <b>Vollständigkeit</b>: Sind alle notwendigen Informationen vorhanden?
+        </li>
+        <li>
+          <b>Genauigkeit</b>: Sind die Daten korrekt und überprüfbar?
+        </li>
+        <li>
+          <b>Konsistenz</b>: Stimmen Daten innerhalb eines Systems überein (z.B.
+          gleiche Schreibweisen, gleiche Einheiten)?
+        </li>
+        <li>
+          <b>Aktualität</b>: Sind die Daten noch relevant oder bereits veraltet?
+        </li>
+      </ul>
+      <Accordion title="Ein Beispiel dazu:" initiallyOpen={false}>
+        <p>
+          Eine Organisation möchte mithilfe von KI prüfen, ob Förderanträge
+          vollständig ausgefüllt sind. Wenn jedoch alte Formulare im Umlauf sind
+          oder Einträge unterschiedlich benannt wurden (&bdquo;Straße&ldquo; vs.
+          &bdquo;Str.&ldquo;), kann die KI falsche Lücken oder Dubletten
+          erkennen und so zusätzliche Arbeit für Mitarbeitende erzeugen, die
+          diese falschen Positive dann händisch filtern müssen.
+        </p>
+      </Accordion>
+    </section>,
+    <section>
+      <h2>
+        6. Beziehungen zwischen Daten: Abhängigkeiten, Korrelationen und
+        Kausalität
+      </h2>
+      <p>
+        KI-Systeme analysieren Daten nicht isoliert, sondern immer in ihren{" "}
+        <b>Beziehungen zueinander</b>. Diese Beziehungen zu verstehen ist
+        zentral, um beurteilen zu können,{" "}
+        <b>
+          was eine KI tatsächlich erkennt - und was sie nur zu erkennen scheint
+        </b>
+        .
+      </p>
+      <p>
+        Zunächst lohnt sich ein Blick auf den Unterschied zwischen{" "}
+        <b>abhängigen</b> und <b>unabhängigen Variablen</b>. Eine unabhängige
+        Variable ist ein Faktor, der andere Werte beeinflussen kann, während
+        eine abhängige Variable das Ergebnis oder die Reaktion auf diesen
+        Einfluss darstellt.
+        <br />
+        Ein einfaches Beispiel: Wenn eine Organisation untersucht, ob das
+        Einkommen einer Person (unabhängige Variable) beeinflusst, ob sie
+        finanzielle Unterstützung beantragt (abhängige Variable), dann kann eine
+        KI diese Beziehung nur dann korrekt erkennen, wenn beide Variablen klar
+        definiert und sauber erfasst sind.
+      </p>
+      <p>
+        Solche Zusammenhänge bilden die Grundlage vieler KI-Modelle. Doch
+        wichtig ist:{" "}
+        <b>
+          Eine statistische Beziehung bedeutet nicht automatisch, dass ein
+          echter ursächlicher Zusammenhang besteht
+        </b>
+        . KI-Systeme identifizieren häufig <b>Korrelationen</b>, also
+        gleichzeitige Muster oder Bewegungen in den Daten, ohne zu verstehen,{" "}
+        <b>warum</b> sie auftreten. Kausalität hingegen beschreibt, dass eine
+        Veränderung in einer Variablen tatsächlich eine Veränderung in einer
+        anderen verursacht.
+      </p>
+      <p>
+        Ein klassisches Beispiel verdeutlicht das: Wenn eine KI in Daten
+        erkennt, dass in Monaten mit höherem Eisverkauf auch mehr Badeunfälle
+        gemeldet werden, besteht zwar eine Korrelation, aber keine Kausalität.
+        Der eigentliche Grund liegt in einer dritten Variable - dem warmen
+        Wetter, das sowohl den Eisverkauf als auch die Zahl der Badeunfälle
+        beeinflusst.
+      </p>
+      <p>
+        In gemeinwohlorientierten Projekten kann ein ähnliches Risiko auftreten.
+        Eine KI, die Bürger:innenanfragen auswertet, könnte feststellen, dass
+        bestimmte Stadtteile häufiger Beschwerden einreichen. Ohne Kontext
+        könnte dies fälschlicherweise als &bdquo;höhere Unzufriedenheit&ldquo;
+        interpretiert werden - dabei könnten schlicht{" "}
+        <b>unterschiedliche Kommunikationswege</b> oder
+        <b>bessere digitale Zugänge</b> die Ursache sein.
+      </p>
+      <p>Wer mit KI arbeitet, sollte daher immer fragen:</p>
+      <ul>
+        <li>
+          Welche Variablen hängen logisch miteinander zusammen und welche nur
+          zufällig?
+        </li>
+        <li>
+          Welche Faktoren könnten im Hintergrund wirken, ohne in den Daten
+          sichtbar zu sein?
+        </li>
+        <li>
+          Und wie sicher kann ich sein, dass ein Muster tatsächlich eine
+          Ursache-Wirkung-Beziehung darstellt?
+        </li>
+      </ul>
+      <p className="specialText">
+        Ein KI-System kann Muster sichtbar machen - aber die{" "}
+        <b>Interpretation dieser Muster bleibt menschliche Aufgabe</b>.
+      </p>
+    </section>,
+    <section>
+      <h2>7. Bias: Wenn Daten ein verzerrtes Bild der Realität zeigen</h2>
+      <p>
+        Ein weiteres zentrales Thema im Umgang mit Daten für KI-Systeme ist{" "}
+        <b>Bias</b>, also eine <b>Verzerrung oder Schieflage in den Daten</b>.
+        Biases sind nicht immer auf den ersten Blick erkennbar, können aber
+        große Auswirkungen auf die wahrgenommene Fairness, Zuverlässigkeit und
+        Akzeptanz eines KI-Systems haben.
+      </p>
+      <p>
+        Im Kern entsteht ein Bias dann, wenn die Daten, mit denen ein System
+        trainiert oder gefüttert wird,{" "}
+        <b>
+          nicht die tatsächliche Vielfalt oder Verteilung der Realität
+          widerspiegeln
+        </b>
+        . Die KI &bdquo;lernt&ldquo; dann ein einseitiges Bild - und
+        reproduziert es bei jeder Entscheidung oder Empfehlung.
+      </p>
+      <Accordion title="Beispiel:" initiallyOpen={false}>
+        <p>
+          Eine gemeinnützige Organisation möchte eine KI einsetzen, um
+          Bewerbungen für ehrenamtliche Positionen zu bewerten. Die
+          Trainingsdaten stammen aus früheren Jahren, in denen vor allem junge
+          Menschen aus Großstädten teilgenommen haben. Wenn die KI aus diesen
+          Daten lernt, könnte sie Bewerbungen von älteren Personen oder aus
+          ländlichen Regionen unbewusst schlechter bewerten, weil sie im
+          bisherigen Datensatz unterrepräsentiert waren.
+        </p>
+      </Accordion>
+      <p style={{ marginBottom: 0, marginTop: "var(--scale5)" }}>
+        Man unterscheidet dabei zwei grundsätzliche Arten, wie ein Bias
+        entstehen kann:
+      </p>
+      <div className="max-w-[960px] mx-auto">
+        <CarouselContainer sideVisibility={10}>
+          <div
+            title="Falsche Abbildung der Realität"
+            className="rounded-xl p-[var(--scale2)] h-full shadow no-hover">
+            <h4>Falsche Abbildung der Realität</h4>
+            <p>
+              Hier sind die Daten schlicht{" "}
+              <b>fehlerhaft, unvollständig oder falsch erhoben</b>. Vielleicht
+              wurden bestimmte Gruppen gar nicht befragt, Datensätze
+              ungleichmäßig aktualisiert oder Eingabefehler nie korrigiert. Ein
+              Chatbot, der Anfragen von Bürger:innen beantwortet, könnte etwa
+              eine Schieflage aufweisen, wenn die zugrunde liegenden
+              Textbeispiele überwiegend aus einer bestimmten Altersgruppe
+              stammen.
+            </p>
+          </div>
+          <div
+            title="Abbildung einer ungleichen Realität"
+            className="rounded-xl p-[var(--scale2)] h-full shadow no-hover">
+            <h4>Abbildung einer ungleichen Realität</h4>
+            <p>
+              In diesem Fall spiegeln die Daten die reale Welt korrekt wider -
+              doch diese Welt ist selbst <b>ungleich oder diskriminierend</b>.
+              Wenn eine KI beispielsweise historische Personaldaten analysiert,
+              in denen Männer häufiger Führungspositionen innehatten, dann
+              &bdquo;lernt&ldquo; sie diese Ungleichheit mit, selbst wenn
+              niemand sie absichtlich eingebaut hat. Sie läuft so Gefahr, diese
+              Ungleichheit zu reproduzieren.
+            </p>
+          </div>
+        </CarouselContainer>
+      </div>
+      <p>
+        Bias ist deshalb nicht nur ein technisches, sondern vor allem ein{" "}
+        <b>gesellschaftliches Problem</b>, das sich in die Technologie
+        einschreibt. In gemeinwohlorientierten Projekten ist der Umgang damit
+        besonders wichtig, weil Entscheidungen hier direkt über{" "}
+        <b>Zugang zu Unterstützung, Sichtbarkeit oder Teilhabe</b> entscheiden
+        können.
+      </p>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
+        <h4>Leitfragen zum Erkennen von Bias</h4>
+        <p className="mt-[var(--scale5)]">
+          Wer oder was ist in den Daten <b>überrepräsentiert</b>?
+        </p>
+        <p>
+          Wer oder was <b>kommt kaum oder gar nicht vor</b>?
+        </p>
+        <p>
+          Welche historischen oder strukturellen Ungleichheiten könnten sich in
+          den genutzten Daten widerspiegeln?
+        </p>
+        <p>
+          Welche Werte oder Annahmen liegen in der Datenerhebung selbst
+          verborgen (z.B. Sprache, Begrifflichkeiten, Klassifikationen)?
+        </p>
+      </div>
+      <p>
+        Bias lässt sich nie vollständig vermeiden - aber er lässt sich erkennen,
+        benennen und abmildern.
+        <br />
+        Dazu gehört, die Herkunft und Zusammensetzung der Daten kritisch zu
+        prüfen, verschiedene Perspektiven in die Entwicklung einzubeziehen und
+        den Kontext der Datennutzung offenzulegen.Gerade für Organisationen, die
+        im Dienst des Gemeinwohls arbeiten, ist dies ein entscheidender Schritt,
+        um sicherzustellen, dass KI-Systeme nicht unbeabsichtigt bestehende
+        Ungleichheiten fortschreiben, sondern dazu beitragen,{" "}
+        <b>fairere und inklusivere Entscheidungsprozesse</b> zu fördern.
+      </p>
     </section>,
   ],
 };
@@ -495,11 +901,99 @@ const LLM = {
   ],
 };
 
+const Einleitung = {
+  linkName: "einleitung",
+  name: "Einleitung",
+  description:
+    "Hier wird ein Überblick über die die KI Technologien und deren Funktionsweise gegeben.",
+  content: [
+    <ChapterHeader text={"Einleitung"} number={1} />,
+    <section>
+      <h2>
+        Einleitung: Warum Daten und Informationsverarbeitung die Grundlage für
+        KI-Verständnis sind
+      </h2>
+      <p>
+        Um KI-Systeme sinnvoll einsetzen und bewerten zu können, müssen wir
+        verstehen, wie sie Informationen aufnehmen, verarbeiten und daraus
+        Entscheidungen oder Antworten generieren. In diesem Modul treten wir
+        daher einen Schritt zurück - bevor wir über konkrete Anwendungen oder
+        Ergebnisse sprechen - und betrachten die Grundlagen: Wie gelangen
+        Systeme überhaupt an Informationen, und was passiert, wenn sie diese
+        &bdquo;verstehen&ldquo; sollen?
+      </p>
+    </section>,
+    <section>
+      <p>
+        Wenn wir über Künstliche Intelligenz sprechen, sprechen wir im Kern über
+        Informationsverarbeitung. Ein KI-System kann nur so gute Ergebnisse
+        liefern, wie die Informationen sind, auf die es Zugriff hat und wie
+        diese Informationen strukturiert, interpretiert und miteinander in
+        Beziehung gesetzt werden.
+      </p>
+      <p>
+        <b>Leitgedanke</b>:
+        <p className="specialText text-center">
+          KI verstehen heißt, Informationsverarbeitung verstehen.
+        </p>
+      </p>
+      <p>
+        Im Rahmen dieses Moduls erhalten Sie daher nicht nur einen Überblick
+        über zentrale technische Grundlagen, etwa die Aufbereitung und
+        Strukturierung von Daten, verschiedene Lernarten oder die Generierung
+        von Ergebnissen (Output), sondern wir verknüpfen diese Aspekte auch mit
+        aktuellen Forschungserkenntnissen zur Informationsverarbeitung bei
+        Systemen und Menschen als Kooperationspartnern.
+      </p>
+      <p>
+        Wie in den vorherigen Modulen bereits gezeigt wurde, reicht eine rein
+        technische Perspektive auf KI nicht aus. Systeme agieren nicht im
+        luftleeren Raum, sondern werden von Menschen entwickelt, trainiert und
+        genutzt. Ihre Wirksamkeit hängt also immer auch davon ab, wie gut
+        Menschen und Systeme miteinander interagieren, Informationen austauschen
+        und interpretieren.
+      </p>
+    </section>,
+    <section>
+      <p>
+        In diesem Modul bieten wir daher einen systematischen Einstieg in das
+        Thema Informationsverarbeitung in KI-Systemen - und in die Rolle, die
+        der Mensch in dieser Kooperation spielt. Ausgangspunkt ist das Modell
+        der integrierten Informationsverarbeitung (Integrated Information
+        Processing), das Technik und menschliches Denken gemeinsam betrachtet.
+      </p>
+      <p>Dabei beschäftigen wir uns unter anderem mit folgenden Fragen:</p>
+      <ul>
+        <li>
+          Wie müssen Informationen aufbereitet sein, damit System sie
+          &bdquo;versstehen&ldquo; und verarbeiten können?
+        </li>
+        <li>
+          Wie lernen Systeme, welche Informationen relevant sind, und wie
+          treffen sie auf dieser Basis Entscheidungen?
+        </li>
+        <li>
+          Und schließlich: Wie generieren KI-Systeme Ergebnisse, die für
+          Menschen nachvollziehbar, verständlich und nutzbar sind?
+        </li>
+      </ul>
+      <p>
+        Dieses Verständnis bildet die Grundlage für alle weiteren Themen in der
+        Modulreihe - von Datenqualität und Bias bis hin zu transparenter und
+        vertrauenswürdiger KI. Denn wer versteht, wie Systeme Informationen
+        verarbeiten, kann besser beurteilen, wann ihre Ergebnisse hilfreich,
+        fehlerhaft oder verzerrt sind - und wie Mensch und KI gemeinsam zu guten
+        Entscheidungen kommen.
+      </p>
+    </section>,
+  ],
+};
+
 const Dateninput = {
   linkName: "ki-technologien-verstehen",
   name: "KI-Technologien verstehen",
   moduleImage: ImageElement,
-  content: [Einleitung, Input, Verarbeitung, Output, LLM],
+  content: [Einleitung, InputTechnik, Verarbeitung, Output, LLM],
 };
 
 export default Dateninput;

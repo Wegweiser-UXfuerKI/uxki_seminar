@@ -9,6 +9,8 @@ import SubNavigation from "../2_molecule/nav/SubNavigation";
 
 import llm_dark from "../../assets/images/kiTechnologien/LLM-dark.png";
 import llm_light from "../../assets/images/kiTechnologien/LLM-light.png";
+import iip_light from "../../assets/images/kiTechnologien/IIP-light.png";
+import iip_dark from "../../assets/images/kiTechnologien/IIP-dark.png";
 import ArrowIcon from "../1_elements/ArrowIcon";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
 
@@ -1674,25 +1676,26 @@ const Einleitung = {
         verstehen, wie sie Informationen aufnehmen, verarbeiten und daraus
         Entscheidungen oder Antworten generieren. In diesem Modul treten wir
         daher einen Schritt zurück - bevor wir über konkrete Anwendungen oder
-        Ergebnisse sprechen - und betrachten die Grundlagen: Wie gelangen
-        Systeme überhaupt an Informationen, und was passiert, wenn sie diese
-        &bdquo;verstehen&ldquo; sollen?
+        Ergebnisse sprechen - und betrachten die Grundlagen:{" "}
+        <b>
+          Wie gelangen Systeme überhaupt an Informationen, und was passiert,
+          wenn sie diese &bdquo;verstehen&ldquo; sollen?
+        </b>
+      </p>
+      <p>
+        Wenn wir über Künstliche Intelligenz sprechen, sprechen wir im Kern über
+        <b> Informationsverarbeitung</b>. Ein KI-System kann nur so gute
+        Ergebnisse liefern, wie die Informationen sind, auf die es Zugriff hat
+        und wie diese Informationen strukturiert, interpretiert und miteinander
+        in Beziehung gesetzt werden.
+      </p>
+      <p className="specialText text-center">
+        <b>Leitgedanke</b>: KI verstehen heißt, Informationsverarbeitung
+        verstehen.
       </p>
     </section>,
     <section>
-      <p>
-        Wenn wir über Künstliche Intelligenz sprechen, sprechen wir im Kern über
-        Informationsverarbeitung. Ein KI-System kann nur so gute Ergebnisse
-        liefern, wie die Informationen sind, auf die es Zugriff hat und wie
-        diese Informationen strukturiert, interpretiert und miteinander in
-        Beziehung gesetzt werden.
-      </p>
-      <p>
-        <b>Leitgedanke</b>:
-        <p className="specialText text-center">
-          KI verstehen heißt, Informationsverarbeitung verstehen.
-        </p>
-      </p>
+      <h3>Zielsetzung des Moduls</h3>
       <p>
         Im Rahmen dieses Moduls erhalten Sie daher nicht nur einen Überblick
         über zentrale technische Grundlagen, etwa die Aufbereitung und
@@ -1711,12 +1714,26 @@ const Einleitung = {
       </p>
     </section>,
     <section>
+      <h3>Fokus: Gemeinsame Informationsverarbeitung von Mensch und System</h3>
       <p>
-        In diesem Modul bieten wir daher einen systematischen Einstieg in das
-        Thema Informationsverarbeitung in KI-Systemen - und in die Rolle, die
-        der Mensch in dieser Kooperation spielt. Ausgangspunkt ist das Modell
-        der integrierten Informationsverarbeitung (Integrated Information
-        Processing), das Technik und menschliches Denken gemeinsam betrachtet.
+        In diesem Modul bieten wir daher einen{" "}
+        <b>
+          systematischen Einstieg in das Thema Informationsverarbeitung in
+          KI-Systemen
+        </b>{" "}
+        und in die Rolle, die der Mensch in dieser Kooperation spielt.
+        Ausgangspunkt ist das{" "}
+        <b>
+          {" "}
+          Modell der integrierten Informationsverarbeitung (Integrated
+          Information Processing)
+        </b>
+        , das Technik und menschliches Denken gemeinsam betrachtet:
+        <ThemeImage
+          darkSrc={iip_dark}
+          lightSrc={iip_light}
+          alt="Bild integrierten Informationsverarbeitung"
+        />
       </p>
       <p>Dabei beschäftigen wir uns unter anderem mit folgenden Fragen:</p>
       <ul>

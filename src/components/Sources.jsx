@@ -22,6 +22,16 @@ const moduleMap = {
     kontrollierbarkeit: "gestaltungszieleKontrollierbarkeit",
     "mentale-modelle": "gestaltungszieleMentaleModelle",
   },
+  "ki-technologien-verstehen": {
+    einleitung: "kiTechnikEinleitung",
+    "input-technik": "kiTechnikInputTechnik",
+    "input-gestaltung": "kiTechnikInputGestaltung",
+    "verarbeitung-technik": "kiTechnikVerarbeitungTechnik",
+    "verarbeitung-gestaltung": "kiTechnikVerarbeitungGestaltung",
+    "output-technik": "kiTechnikOutputTechnik",
+    "output-gestaltung": "kiTechnikOutputGestaltung",
+    llm: "kiTechnikLlm",
+  },
   "eu-ai-act": {
     einleitung: "euAIActEinleitung",
     "risikostufen-anwendungsbeispiele": "euAIActRisikostufenBeispiele",

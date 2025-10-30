@@ -13,6 +13,7 @@ import iip_light from "../../assets/images/kiTechnologien/IIP-light.png";
 import iip_dark from "../../assets/images/kiTechnologien/IIP-dark.png";
 import ArrowIcon from "../1_elements/ArrowIcon";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
+import Sources from "../Sources";
 
 const sectionsInputTechnik = [
   { id: "2", title: "Warum es wichtig ist, Daten zu verstehen" },
@@ -37,11 +38,11 @@ const sectionsInputTechnik = [
 
 const InputTechnik = {
   linkName: "input-technik",
-  name: "Input - Technische Grundlagen",
+  name: "Input - Technik",
   description:
     "Hier wird der Input von KI-Systemen auf einer technischen Ebene thematisiert.",
   content: [
-    <ChapterHeader text={"Input - Technische Grundlage"} number={2} />,
+    <ChapterHeader text={"Input - Technik"} number={2} />,
     <section>
       <Accordion sections={sectionsInputTechnik} />
       <SubNavigation sections={sectionsInputTechnik} />
@@ -478,14 +479,11 @@ const InputTechnik = {
 };
 
 const InputInformation = {
-  linkName: "input-integrierte-informationsverarbeitung",
-  name: "Input - Integrierte Informationsverarbeitung",
+  linkName: "input-gestaltung",
+  name: "Input - Gestaltung",
   description: "Wie werden Informationen als Input genutzt?",
   content: [
-    <ChapterHeader
-      text={"Input - Integrierte Informationsverarbeitung"}
-      number={3}
-    />,
+    <ChapterHeader text={"Input - Gestaltung"} number={3} />,
     <section>
       <p></p>
     </section>,
@@ -567,10 +565,10 @@ const architecturTable = [
 
 const VerarbeitungTechnik = {
   linkName: "verarbeitung-technik",
-  name: "Verarbeitung - Technische Grundlagen",
+  name: "Verarbeitung - Technik",
   description: "Hier wird die Verarbeitung bei KI-Systemen thematisiert.",
   content: [
-    <ChapterHeader text={"Verarbeitung - Technische Grundlagen"} number={4} />,
+    <ChapterHeader text={"Verarbeitung - Technik"} number={4} />,
     <section>
       <p>
         Auf technischer Ebene kann beim Verarbeiten zwischen unterschiedlichen
@@ -1249,10 +1247,10 @@ const exampleOutputTable = [
 
 const OutputTechnik = {
   linkName: "output-technik",
-  name: "Output - Technische Grundlagen",
+  name: "Output - Technik",
   description: "Hier wird der Output von KI-Systemen thematisiert.",
   content: [
-    <ChapterHeader text={"Output - Technische Grundlagen"} number={6} />,
+    <ChapterHeader text={"Output - Technik"} number={6} />,
     <section>
       <h2>Einleitung: Warum der Output entscheident ist</h2>
       <p>
@@ -1545,8 +1543,8 @@ const OutputTechnik = {
 };
 
 const OutputInformation = {
-  linkName: "output-integrierte-informationsverarbeitung",
-  name: "Output - Integrierte Informationsverarbeitung",
+  linkName: "output-gestaltung",
+  name: "Output - Gestaltung",
   description: "Hier wird der Output von KI-Systemen thematisiert.",
   content: [
     <ChapterHeader
@@ -2060,6 +2058,19 @@ const Einleitung = {
   ],
 };
 
+const Quellen = {
+  linkName: "quellen",
+  name: "Quellen",
+  description:
+    "Hier befinden sich die verwendeten Quellen in Reihenfolge des ersten Auftretens",
+  content: [
+    <ChapterHeader text={"Quellen"} number={9} />,
+    <section>
+      <Sources />
+    </section>,
+  ],
+};
+
 const Dateninput = {
   linkName: "ki-technologien-verstehen",
   name: "KI-Technologien verstehen",
@@ -2073,6 +2084,7 @@ const Dateninput = {
     OutputTechnik,
     OutputInformation,
     LLM,
+    Quellen,
   ],
 };
 

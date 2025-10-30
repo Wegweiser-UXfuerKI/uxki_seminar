@@ -118,51 +118,6 @@ function Sources() {
     };
 
     loadCitations();
-
-    /*
-
-    const fileName = sourceMapModule[selectedModuleLink];
-    if (!fileName) {
-      console.error("no file found for:", selectedModuleLink);
-      return;
-    }
-    fetch(`/sources/${fileName}.json`)
-      .then((response) => response.json())
-      .then((data) => {
-        const cite = new Cite(data);
-
-        const formattedCitations = cite.format("bibliography", {
-          format: "html",
-          template: "apa",
-          lang: "de-DE",
-        });
-
-        const cleanHTML = DOMPurify.sanitize(formattedCitations);
-
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(cleanHTML, "text/html");
-
-        const citationsArray = Array.from(
-          doc.querySelectorAll(".csl-entry")
-        ).map((entry) => {
-          let outerHTML = entry.innerHTML;
-
-          const httpsLinkMatch = outerHTML.match(/https:\/\/[^\s]+/);
-
-          if (httpsLinkMatch) {
-            const httpsLink = httpsLinkMatch[0];
-            const anchorTag = `<a href="${httpsLink}" target="_blank">${httpsLink}</a>`;
-
-            outerHTML = outerHTML.replace(httpsLink, anchorTag);
-          }
-
-          return `<p class="${entry.className}" data-csl-entry-id="${entry.dataset.cslEntryId}">${outerHTML}</p>`;
-        });
-
-        setCitations(citationsArray);
-      })
-      .catch((error) => console.error("Fehler beim Laden der Quellen:", error));
-      */
   }, [selectedModuleLink]);
 
   return (

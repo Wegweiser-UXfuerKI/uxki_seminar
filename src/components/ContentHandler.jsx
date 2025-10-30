@@ -40,10 +40,7 @@ const devModules = [
 ];
 
 // Temporarily deactivated modules
-const disabledModules = [
-  "ki-technologien-verstehen",
-  "automatisierungspotenziale-erkennen",
-];
+const disabledModules = ["automatisierungspotenziale-erkennen"];
 
 // Disabled subtopics for specific modules
 // example: "automatisierungspotenziale-erkennen": ["einleitung"],

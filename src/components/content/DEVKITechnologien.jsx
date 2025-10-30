@@ -1226,6 +1226,25 @@ const VerarbeitungInformation = {
   ],
 };
 
+const sectionsOutputTechnik = [
+  { id: "1", title: "Warum der Output entscheident ist" },
+  { id: "2", title: "Kategorische Outputs" },
+  { id: "3", title: "Pattern Matching" },
+  { id: "4", title: "Numerische Prädiktionen" },
+  { id: "5", title: "Synthetische Ergebnisse" },
+  { id: "6", title: "Forecasting" },
+  { id: "7", title: "Metadaten: Wie gut ist der Output?" },
+  { id: "8", title: "Fazit" },
+];
+
+const exampleOutputTable = [
+  [<b>Wohnung</b>, <b>KI-Bewertung (Score 0-100)</b>],
+  [<>A</>, <>82</>],
+  [<>B</>, <>76</>],
+  [<>C</>, <>41</>],
+  [<>D</>, <>59</>],
+];
+
 const OutputTechnik = {
   linkName: "output-technik",
   name: "Output - Technische Grundlagen",
@@ -1233,7 +1252,292 @@ const OutputTechnik = {
   content: [
     <ChapterHeader text={"Output - Technische Grundlagen"} number={6} />,
     <section>
-      <p></p>
+      <h2>Einleitung: Warum der Output entscheident ist</h2>
+      <p>
+        Der Output eines KI-Systems ist das sichtbare Ergebnis aller
+        vorhergehenden Verarbeitungsschritte - und damit die Grundlage, auf der
+        Menschen und andere Systeme weiterarbeiten. Er entscheidet darüber, wie
+        nützlich, verständlich und anschlussfähig ein System im konkreten
+        Anwendungskontext ist.
+      </p>
+      <p>
+        Besonders in gemeinwohlorientierten Organisationen, in denen
+        Entscheidungen oft soziale Folgen haben, ist es wichtig, nicht nur das
+        Ergebnis selbst, sondern auch dessen Art, Herkunft und Aussagekraft zu
+        verstehen. Denn nicht jeder Output ist gleich: Systeme können Texte
+        bewerten, Wahrscheinlichkeiten berechnen, Prognosen abgeben oder sogar
+        neue Daten erzeugen.
+      </p>
+      <p>
+        Dieses Kapitel gibt einen Überblick über die wichtigsten Output-Formen
+        von KI-Systemen und erläutert, wie sie gelesen, interpretiert und
+        kritisch hinterfragt werden können.
+      </p>
+      <Accordion sections={sectionsOutputTechnik} />
+      <SubNavigation sections={sectionsOutputTechnik} />
+    </section>,
+    <section>
+      <h2>1. Kategorische Outputs</h2>
+      <p>
+        Viele KI-Systeme ordnen Daten in Kategorien ein. Diese Form des Outputs
+        findet sich häufig bei Klassifikationsaufgaben - etwa, wenn ein System
+        E-Mails als &bdquo;Spam&ldquo; oder &bdquo;Nich&ldquo;-Spam“ markiert,
+        oder wenn ein Textanalysetool die Stimmung eines Textes als
+        &bdquo;positiv&ldquo;, &bdquo;neutral&ldquo; oder &bdquo;negativ&ldquo;
+        einstuft.
+      </p>
+      <p>
+        Für gemeinwohlorientierte Organisationen können solche Modelle zum
+        Beispiel eingesetzt werden, um eingehende Anträge zu sortieren oder
+        Texte nach Themen zu gruppieren. Wichtig ist dabei zu verstehen, dass
+        eine Kategorie nicht immer eindeutig &bdquo;richtig&ldquo; ist: ein
+        analysierter Text kann sowohl sachlich als auch emotional gefärbt sein
+        und somit zwei Kategorien zugeordnet werden.
+      </p>
+      <p>
+        Ein zentrales Merkmal kategorialer Outputs ist die Wahrscheinlichkeit,
+        mit der eine Zuordnung vorgenommen wird. Ein Modell kann etwa schätzen,
+        dass eine Nachricht mit 70 % Wahrscheinlichkeit &bdquo;positiv&ldquo;
+        ist, mit 20 % &bdquo;neutral&ldquo; und mit 10 % &bdquo;negativ&ldquo;.
+      </p>
+      <Accordion title="Beispiel aus der Praxis" initiallyOpen={true}>
+        <p>
+          Eine Organisation, die Bürgeranfragen automatisch vorsortieren möchte,
+          nutzt ein KI-Modell, das E-Mails in die Kategorien &bdquo;Lob&ldquo;,
+          &bdquo;Beschwerde&ldquo;, &bdquo;Antrag&ldquo; und
+          &bdquo;Sonstiges&ldquo; einteilt. Eine Nachricht wird als „Antrag“
+          klassifiziert, mit einer Wahrscheinlichkeit von 55 %. Auf den ersten
+          Blick mag das ausreichend erscheinen - doch die zweitwahrscheinlichste
+          Kategorie &bdquo;Beschwerde&ldquo; liegt bei 40 %. Es wäre also
+          riskant, die E-Mail automatisch einem Bearbeitungsprozess zuzuweisen,
+          ohne diesen Unsicherheitsbereich zu berücksichtigen.
+        </p>
+      </Accordion>
+      <p className="specialText">
+        <b>Merksatz</b>: Kategorische Outputs sollten nie als absolute
+        Wahrheiten interpretiert werden. Ein Blick auf die zweit- oder
+        drittwahrscheinlichste Kategorie kann helfen, Fehlentscheidungen zu
+        vermeiden.
+      </p>
+    </section>,
+    <section>
+      <h2>2. Pattern Matching</h2>
+      <p>
+        Unter <i>Pattern Matching</i> versteht man das Erkennen wiederkehrender
+        Muster in Daten. Dabei sucht ein KI-System nach regelmäßigen Abfolgen,
+        Beziehungen oder Ähnlichkeiten zwischen Datenpunkten.
+      </p>
+      <p>
+        Diese Methode wird vor allem dort eingesetzt, wo es um zeitliche oder
+        sequentielle Zusammenhänge geht - etwa in der Analyse von
+        Verlaufsmustern, Ereignisfolgen oder Textstrukturen.
+      </p>
+      <Accordion title="Beispiel aus der Praxis" initiallyOpen={true}>
+        <p>
+          Ein gemeinnütziges Gesundheitsprojekt analysiert Gesprächsverläufe aus
+          einer Online-Beratung. Das System erkennt, dass Anfragen, in denen
+          Wörter wie <i>&bdquo;überfordert&ldquo;</i>,{" "}
+          <i>&bdquo;allein&ldquo;</i> oder
+          <i>&bdquo;nicht mehr weiter&ldquo;</i> vorkommen, häufig in einer
+          Eskalation enden, wenn innerhalb von 24 Stunden keine Antwort erfolgt.
+          Diese Mustererkennung hilft der Organisation, Prioritäten zu setzen
+          und gefährdete Fälle schneller zu identifizieren.
+        </p>
+      </Accordion>
+      <p>
+        Pattern Matching liefert also keine Bewertung, sondern erkennt
+        Strukturen, die menschlichen Entscheidenden Hinweise geben. Dabei gilt:
+        Muster sind immer statistisch - sie zeigen Wahrscheinlichkeiten, keine
+        Notwendigkeiten.
+      </p>
+      <p className="specialText">
+        <b>Reflexionsfrage</b>: Welche Risiken könnten entstehen, wenn eine
+        Organisation erkannte Muster als feste Regeln interpretiert?
+      </p>
+    </section>,
+    <section>
+      <h2>3. Numerische Prädiktion</h2>
+      <p>
+        Numerische Prädiktionen gehören zu den wichtigsten Outputs vieler
+        KI-Systeme. Statt Kategorien liefert das Modell hier <b>Zahlenwerte</b>,
+        die als Bewertung, Wahrscheinlichkeit oder Score dienen.
+      </p>
+      <p>
+        Ziel ist es, eine mathematische Funktion zu finden, die auf Basis der
+        Eingabedaten einen quantitativen Output erzeugt - zum Beispiel den
+        geschätzten Wert einer Immobilie, die Wahrscheinlichkeit eines
+        Ereignisses oder einen Prioritätsscore.
+      </p>
+      <Accordion title="Beispiel aus der Praxis" initiallyOpen={true}>
+        <p>
+          Eine soziale Einrichtung möchte geeigneten Wohnraum für Familien in
+          Not finden. Das KI-Modell bewertet 100 verfügbare Wohnungen anhand von
+          Größe, Lage, Zustand und Mietkosten.
+          <br />
+          Der Output sieht vereinfacht so aus:
+        </p>
+        <Table
+          data={exampleOutputTable}
+          headerStyle={false}
+          verticalAlignCells={true}
+        />
+        <p>
+          Je höher der Wert, desto besser die Eignung. Die Organisation kann
+          diese Bewertung als Orientierungshilfe nutzen - sollte aber immer
+          prüfen,{" "}
+          <b>welche Merkmale den Score am stärksten beeinflusst haben</b> (z. B.
+          über Methoden wie Shapley-Werte oder Permutationsanalysen).
+        </p>
+      </Accordion>
+      <p>
+        Numerische Prädiktionen ermöglichen es auch, die <b>Abweichung</b> eines
+        Werts zu quantifizieren - ein Vorteil, wenn Systeme durch Lernen
+        schrittweise optimiert werden sollen.
+      </p>
+      <p className="specialText">
+        <b>Merksatz</b>: Numerische Outputs machen Unterschiede messbar - aber
+        nicht automatisch erklärbar. Transparente Modelle helfen, Zahlen richtig
+        einzuordnen.
+      </p>
+    </section>,
+    <section>
+      <h2>Synthetische Ergebnisse</h2>
+      <p>
+        Synthetische Outputs entstehen, wenn ein KI-System{" "}
+        <b>neue Daten erzeugt</b>, anstatt vorhandene zu bewerten. Dazu gehören
+        automatisch generierte Texte, Bilder, Musik oder Simulationen.
+      </p>
+      <p>
+        Im gemeinwohlorientierten Bereich kann diese Art des Outputs
+        beispielsweise genutzt werden, um{" "}
+        <b>Situationen zu simulieren oder alternative Szenarien zu prüfen</b>.
+      </p>
+      <Accordion title="Beispiel aus der Praxis" initiallyOpen={true}>
+        <p>
+          Ein Stadtentwicklungsprojekt möchte ermitteln, wie sich neue
+          Grünflächen auf die Lebensqualität in einem Viertel auswirken könnten.
+          Das KI-System erzeugt auf Basis vorhandener Umweltdaten und
+          Bürgerbefragungen synthetische Szenarien, die verschiedene
+          Kombinationen von Bebauungsdichte, Verkehrsaufkommen und Grünanteil
+          zeigen. <br />
+          Diese Simulationen helfen, Entscheidungen über die Stadtplanung zu
+          unterstützen, ohne reale Eingriffe vornehmen zu müssen.
+        </p>
+      </Accordion>
+      <p>
+        Synthetische Ergebnisse bieten also große Chancen für Planung,
+        Simulation und Bildung. Gleichzeitig stellt sich die Frage nach{" "}
+        <b>ethischer Verantwortung</b>: Je realistischer synthetische Daten
+        sind, desto größer ist das Risiko, dass sie mit echten verwechselt oder
+        missbräuchlich verwendet werden.
+      </p>
+      <p className="specialText">
+        <b>Merksatz</b>: Synthetische Daten sind Werkzeuge zur Exploration -
+        keine Abbilder der Realität.
+      </p>
+    </section>,
+    <section>
+      <h2>5. Forecasting</h2>
+      <p>
+        Forecasting ist die Vorhersage zukünftiger Entwicklungen auf Basis
+        vergangener und aktueller Daten. Anders als bei numerischen Prädiktionen
+        liegt hier der Fokus auf Trends über Zeiträume hinweg.
+      </p>
+      <Accordion title="Beispiel aus der Praxis" initiallyOpen={true}>
+        <p>
+          Eine Organisation, die Lebensmittelspenden koordiniert, nutzt
+          Forecasting, um den künftigen Bedarf an bestimmten Produkten zu
+          planen. <br />
+          Das Modell zeigt:
+        </p>
+        <ul>
+          <li>
+            Wenn die Temperaturen im Winter unter 0°C fallen, steigt die
+            Nachfrage nach warmen Mahlzeiten um durchschnittlich 18%.
+          </li>
+          <li>In Ferienzeiten sinkt die Spendenbereitschaft um rund 12%.</li>
+        </ul>
+      </Accordion>
+      <p>
+        Diese Informationen ermöglichen es, Ressourcen effizienter einzuplanen
+        und Engpässe frühzeitig zu vermeiden.
+      </p>
+      <p>
+        Forecasting erlaubt so die Antizipation von Bedarfen und Risiken - ist
+        jedoch immer von der Qualität der zugrundeliegenden Daten abhängig.
+        Unerwartete Ereignisse (z. B. Pandemien, politische Krisen) können die
+        Genauigkeit solcher Vorhersagen erheblich beeinträchtigen.
+      </p>
+    </section>,
+    <section>
+      <h2>6. Metadaten: Wie gut ist der Output?</h2>
+      <p>
+        Neben den inhaltlichen Ergebnissen liefern viele KI-Systeme sogenannte
+        Metadaten - also Informationen über die Güte ihrer eigenen
+        Entscheidungen. <br />
+        Zu den wichtigsten gehören Accuracy, Precision und Recall.
+      </p>
+      <h4>Accuracy</h4>
+      <p>Wie viele Vorhersagen des Systems waren insgesamt korrekt?</p>
+      <p className="specialText">
+        <b>Beispiel</b>: Von 100 Anträgen erkennt ein System 70 korrekt &rarr;
+        Accuracy = 70%.
+      </p>
+      <h4>Precision</h4>
+      <p>
+        Wie viele der als &bdquo;positiv&ldquo; eingestuften Fälle warne
+        tatsächlich positiv?
+      </p>
+      <p className="specialText">
+        <b>Beispiel</b>: 50 Anträge wurden als &bdquo;dringend&ldquo; markiert,
+        aber nur 40 waren es tatsächlich &rarr; Precision = 40/50 = 80%.
+      </p>
+      <h4>Recall</h4>
+      <p>Wie viele der tatsächlich positiven Fälle wurden erkannt?</p>
+      <p className="specialText">
+        <b>Beispiel</b>: Es gab 60 wirklich dringende Anträge, 40 davon wurden
+        richtig erkannt &rarr; Recall = 40/60 = 66,7%.
+      </p>
+      <Accordion title="Bedeutung in der Praxis" initiallyOpen={true}>
+        <p>
+          Eine Organisation, die Anträge nach Dringlichkeit sortiert, sollte
+          dann auf einen hohen <b>Recall</b> achten, wenn das Übersehen eines
+          Falls (False Negative) gravierende Folgen hätte - etwa, dass eine
+          Person in Not keine schnelle Hilfe bekommt.
+        </p>
+        <p>
+          Wenn hingegen Falschalarme (<i>False Positives</i>) problematisch sind
+          - etwa, weil sie Ressourcen binden - ist eine hohe Precision
+          wichtiger.
+        </p>
+      </Accordion>
+      <h3>Reflexionsfragen</h3>
+      Fragen die man sich im Rahmen des Outputs stellen könnte:
+      <List
+        items={[
+          "Welche Form von Output produziert das KI-System, mit dem Sie arbeiten (z.B. Textklassifikation, Score, Simulation)?",
+          "Wie könnte die Darstellung der Ergebnisse verbessert werden, um sie für die Zielgruppe verständlicher oder nützlicher zu machen?",
+          "Wie stark würden Sie sich auf die Ergebnisse verlassen, wenn das System zusätzlich sein Accuracy oder Confidence mitliefert?",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
+    </section>,
+    <section>
+      <h2>Fazit</h2>
+      <p>
+        Das Verständnis verschiedener Output-Formen ist entscheidend, um
+        KI-Systeme sinnvoll in gemeinwohlorientierten Kontexten zu nutzen.{" "}
+        <br />
+        Ob kategoriale Zuordnung, numerische Prädiktion, Forecasting oder
+        Simulation - der Output ist immer nur so gut wie seine Interpretation.{" "}
+        <br />
+        Die Herausforderung liegt darin, Ergebnisse nicht als absolute
+        Wahrheiten, sondern als Hilfsmittel zur Entscheidungsunterstützung zu
+        begreifen. Nur dann kann KI in gemeinwohlorientierten Organisationen das
+        leisten, was sie soll: Prozesse verbessern, ohne Verantwortung zu
+        ersetzen.
+      </p>
     </section>,
   ],
 };
@@ -1267,7 +1571,7 @@ const llmTable = [
     <b>Anbieter</b>,
     <b>Besonderheit / Fokus</b>,
     <b>Einsatz & Nutzen</b>,
-    <b>Lizenz / Offenehit</b>,
+    <b>Lizenz / Offenheit</b>,
   ],
   [
     <b>GPT-4 / GPT-4o</b>,
@@ -1510,13 +1814,13 @@ const LLM = {
       </p>
       <h4>3. Veraltetes Wissen</h4>
       <p>
-        Wenn ein Modell nicht regelmäßig aktualisiert wird, kennt es keine
+        Wenn ein Modell nicht regelmäßig aktualisiert wird, kennt es keine{" "}
         <b>aktuellen Ereignisse</b> oder <b>neuen Daten</b> nach dem Zeitpunkt
         seines Trainings.
       </p>
       <h4>4. Bias (Voreingenommenheit)</h4>
       <p>
-        Da LLMs auf menschlichen Texten trainiert werden, übernehmen sie auch
+        Da LLMs auf menschlichen Texten trainiert werden, übernehmen sie auch{" "}
         <b>gesellschaftliche Vorurteile</b> oder <b>einseitige Darstellungen</b>
         , die in den Daten vorkommen.
       </p>

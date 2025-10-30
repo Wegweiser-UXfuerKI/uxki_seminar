@@ -9,6 +9,8 @@ import SubNavigation from "../2_molecule/nav/SubNavigation";
 
 import llm_dark from "../../assets/images/kiTechnologien/LLM-dark.png";
 import llm_light from "../../assets/images/kiTechnologien/LLM-light.png";
+import iip_light from "../../assets/images/kiTechnologien/IIP-light.png";
+import iip_dark from "../../assets/images/kiTechnologien/IIP-dark.png";
 import ArrowIcon from "../1_elements/ArrowIcon";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
 
@@ -1567,43 +1569,37 @@ const sectionsLLMs = [
 
 const llmTable = [
   [
-    <b>Modell</b>,
-    <b>Anbieter</b>,
+    <b>Modell & Anbieter</b>,
     <b>Besonderheit / Fokus</b>,
     <b>Einsatz & Nutzen</b>,
     <b>Lizenz / Offenheit</b>,
   ],
   [
-    <b>GPT-4 / GPT-4o</b>,
-    "OpenAI",
+    "GPT-4 / GPT-4o von OpenAI",
     "Sehr leistungsfähig, vielseitig (Text, Code, Analyse, Konversation)",
     "Schreiben, Programmieren, Wissensarbeit, Chatbots",
     "Proprietär (Cloud-basiert)",
   ],
   [
-    <b>Gemini</b>,
-    "Google DeepMind",
+    "Gemini von Google DeepMind",
     "Multimodal (Text, Bild, Code, Video), eng mit Google-Ecosystem verknüpft",
     "Multimodale Anwendungen, Such- und Wissensintegration",
     "Proprietär",
   ],
   [
-    <b>Claude</b>,
-    "Anthropic",
+    "Claude von Anthropic",
     "Fokus auf Sicherheit, Ethik, transparente KI-Antworten",
     "Sichere, erklärbare KI-Nutzung in sensiblen Bereichen",
     "Proprietär",
   ],
   [
-    <b>Llama</b>,
-    "Meta AI",
+    "Llama von Meta AI",
     "Offen zugänglich, stark für Forschung & Fine-Tuning",
     "Eigene Anpassungen, Forschung, interne Nutzung",
     "Teilweise offen (Open-Weight, Lizenzbeschränkungen)",
   ],
   [
-    <b>Mistral / Mixtral</b>,
-    "Mistral AI (EU)",
+    "Mistral / Mixtral von Mistral AI (EU)",
     "Europäischer Fokus auf Effizienz, Datenschutz, Open-Source-Ansatz",
     "On-Premises-Lösungen, datenschutzsensible Anwendungen",
     "Offen (Apache 2.0 / Open-Weight)",
@@ -1710,7 +1706,7 @@ const LLM = {
         Wenn das LLM ein neues Wort (oder Token) vorhersagt, wählt es nicht
         immer die <b>wahrscheinlichste</b> Option. Stattdessen kann es aus
         mehreren
-        <b>guten Möglichkeiten</b> auswählen. Das sorgt für{" "}
+        <b> guten Möglichkeiten</b> auswählen. Das sorgt für{" "}
         <b>abwechslungsreiche und kreative Texte</b>. Deshalb können zwei
         Antworten auf dieselbe Frage leicht unterschiedlich ausfallen.
       </p>
@@ -1978,25 +1974,26 @@ const Einleitung = {
         verstehen, wie sie Informationen aufnehmen, verarbeiten und daraus
         Entscheidungen oder Antworten generieren. In diesem Modul treten wir
         daher einen Schritt zurück - bevor wir über konkrete Anwendungen oder
-        Ergebnisse sprechen - und betrachten die Grundlagen: Wie gelangen
-        Systeme überhaupt an Informationen, und was passiert, wenn sie diese
-        &bdquo;verstehen&ldquo; sollen?
+        Ergebnisse sprechen - und betrachten die Grundlagen:{" "}
+        <b>
+          Wie gelangen Systeme überhaupt an Informationen, und was passiert,
+          wenn sie diese &bdquo;verstehen&ldquo; sollen?
+        </b>
+      </p>
+      <p>
+        Wenn wir über Künstliche Intelligenz sprechen, sprechen wir im Kern über
+        <b> Informationsverarbeitung</b>. Ein KI-System kann nur so gute
+        Ergebnisse liefern, wie die Informationen sind, auf die es Zugriff hat
+        und wie diese Informationen strukturiert, interpretiert und miteinander
+        in Beziehung gesetzt werden.
+      </p>
+      <p className="specialText text-center">
+        <b>Leitgedanke</b>: KI verstehen heißt, Informationsverarbeitung
+        verstehen.
       </p>
     </section>,
     <section>
-      <p>
-        Wenn wir über Künstliche Intelligenz sprechen, sprechen wir im Kern über
-        Informationsverarbeitung. Ein KI-System kann nur so gute Ergebnisse
-        liefern, wie die Informationen sind, auf die es Zugriff hat und wie
-        diese Informationen strukturiert, interpretiert und miteinander in
-        Beziehung gesetzt werden.
-      </p>
-      <p>
-        <b>Leitgedanke</b>:
-        <p className="specialText text-center">
-          KI verstehen heißt, Informationsverarbeitung verstehen.
-        </p>
-      </p>
+      <h3>Zielsetzung des Moduls</h3>
       <p>
         Im Rahmen dieses Moduls erhalten Sie daher nicht nur einen Überblick
         über zentrale technische Grundlagen, etwa die Aufbereitung und
@@ -2015,18 +2012,32 @@ const Einleitung = {
       </p>
     </section>,
     <section>
+      <h3>Fokus: Gemeinsame Informationsverarbeitung von Mensch und System</h3>
       <p>
-        In diesem Modul bieten wir daher einen systematischen Einstieg in das
-        Thema Informationsverarbeitung in KI-Systemen - und in die Rolle, die
-        der Mensch in dieser Kooperation spielt. Ausgangspunkt ist das Modell
-        der integrierten Informationsverarbeitung (Integrated Information
-        Processing), das Technik und menschliches Denken gemeinsam betrachtet.
+        In diesem Modul bieten wir daher einen{" "}
+        <b>
+          systematischen Einstieg in das Thema Informationsverarbeitung in
+          KI-Systemen
+        </b>{" "}
+        und in die Rolle, die der Mensch in dieser Kooperation spielt.
+        Ausgangspunkt ist das{" "}
+        <b>
+          {" "}
+          Modell der integrierten Informationsverarbeitung (Integrated
+          Information Processing)
+        </b>
+        , das Technik und menschliches Denken gemeinsam betrachtet.
+        {/* <ThemeImage
+          darkSrc={iip_dark}
+          lightSrc={iip_light}
+          alt="Bild integrierten Informationsverarbeitung"
+        /> */}
       </p>
       <p>Dabei beschäftigen wir uns unter anderem mit folgenden Fragen:</p>
       <ul>
         <li>
           Wie müssen Informationen aufbereitet sein, damit System sie
-          &bdquo;versstehen&ldquo; und verarbeiten können?
+          &bdquo;verstehen&ldquo; und verarbeiten können?
         </li>
         <li>
           Wie lernen Systeme, welche Informationen relevant sind, und wie

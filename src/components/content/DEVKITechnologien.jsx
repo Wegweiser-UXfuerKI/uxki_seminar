@@ -478,10 +478,19 @@ const InputTechnik = {
   ],
 };
 
+const sectionsInputGestaltung = [
+  {
+    id: "2",
+    title: "Information Disclosure - Kontext schaffen und Vertrauen fördern",
+  },
+  { id: "3", title: "Informationen editieren - Lernen durch Interaktion" },
+];
+
 const InputInformation = {
   linkName: "input-gestaltung",
   name: "Input - Gestaltung",
-  description: "Wie werden Informationen als Input genutzt?",
+  description:
+    "Wie werden Informationen als Input genutzt? Wie beeinflusst dies die Gestaltung von KI-Systemen?",
   content: [
     <ChapterHeader text={"Input - Gestaltung"} number={3} />,
     <section>
@@ -1212,14 +1221,11 @@ const VerarbeitungTechnik = {
 };
 
 const VerarbeitungInformation = {
-  linkName: "verarbeitung-integrierte-informationsverarbeitung",
-  name: "Verarbeitung - Integrierte Informationsverarbeitung",
+  linkName: "verarbeitung-gestaltung",
+  name: "Verarbeitung - Gestaltung",
   description: "Hier wird die Verarbeitung bei KI-Systemen thematisiert.",
   content: [
-    <ChapterHeader
-      text={"Verarbeitung - Integrierte Informationesverarbeitung"}
-      number={5}
-    />,
+    <ChapterHeader text={"Verarbeitung - Gestaltung"} number={5} />,
     <section>
       <p></p>
     </section>,
@@ -1549,7 +1555,8 @@ const sectionsOutputGestaltung = [
       "Was ist bei Interaktion mit KI-Systemen im Bezug auf den Output relevant?",
   },
   { id: "3", title: "UX-Beispiel: Kreditbewilligung" },
-  { id: "4", title: "Fazit" },
+
+  { id: "5", title: "Fazit" },
 ];
 
 const lfrTable = [

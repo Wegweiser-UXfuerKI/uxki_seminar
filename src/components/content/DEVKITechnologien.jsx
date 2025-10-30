@@ -1265,43 +1265,37 @@ const sectionsLLMs = [
 
 const llmTable = [
   [
-    <b>Modell</b>,
-    <b>Anbieter</b>,
+    <b>Modell & Anbieter</b>,
     <b>Besonderheit / Fokus</b>,
     <b>Einsatz & Nutzen</b>,
-    <b>Lizenz / Offenehit</b>,
+    <b>Lizenz / Offenheit</b>,
   ],
   [
-    <b>GPT-4 / GPT-4o</b>,
-    "OpenAI",
+    "GPT-4 / GPT-4o von OpenAI",
     "Sehr leistungsfähig, vielseitig (Text, Code, Analyse, Konversation)",
     "Schreiben, Programmieren, Wissensarbeit, Chatbots",
     "Proprietär (Cloud-basiert)",
   ],
   [
-    <b>Gemini</b>,
-    "Google DeepMind",
+    "Gemini von Google DeepMind",
     "Multimodal (Text, Bild, Code, Video), eng mit Google-Ecosystem verknüpft",
     "Multimodale Anwendungen, Such- und Wissensintegration",
     "Proprietär",
   ],
   [
-    <b>Claude</b>,
-    "Anthropic",
+    "Claude von Anthropic",
     "Fokus auf Sicherheit, Ethik, transparente KI-Antworten",
     "Sichere, erklärbare KI-Nutzung in sensiblen Bereichen",
     "Proprietär",
   ],
   [
-    <b>Llama</b>,
-    "Meta AI",
+    "Llama von Meta AI",
     "Offen zugänglich, stark für Forschung & Fine-Tuning",
     "Eigene Anpassungen, Forschung, interne Nutzung",
     "Teilweise offen (Open-Weight, Lizenzbeschränkungen)",
   ],
   [
-    <b>Mistral / Mixtral</b>,
-    "Mistral AI (EU)",
+    "Mistral / Mixtral von Mistral AI (EU)",
     "Europäischer Fokus auf Effizienz, Datenschutz, Open-Source-Ansatz",
     "On-Premises-Lösungen, datenschutzsensible Anwendungen",
     "Offen (Apache 2.0 / Open-Weight)",
@@ -1408,7 +1402,7 @@ const LLM = {
         Wenn das LLM ein neues Wort (oder Token) vorhersagt, wählt es nicht
         immer die <b>wahrscheinlichste</b> Option. Stattdessen kann es aus
         mehreren
-        <b>guten Möglichkeiten</b> auswählen. Das sorgt für{" "}
+        <b> guten Möglichkeiten</b> auswählen. Das sorgt für{" "}
         <b>abwechslungsreiche und kreative Texte</b>. Deshalb können zwei
         Antworten auf dieselbe Frage leicht unterschiedlich ausfallen.
       </p>
@@ -1513,7 +1507,7 @@ const LLM = {
       <h4>3. Veraltetes Wissen</h4>
       <p>
         Wenn ein Modell nicht regelmäßig aktualisiert wird, kennt es keine
-        <b>aktuellen Ereignisse</b> oder <b>neuen Daten</b> nach dem Zeitpunkt
+        <b> aktuellen Ereignisse</b> oder <b>neuen Daten</b> nach dem Zeitpunkt
         seines Trainings.
       </p>
       <h4>4. Bias (Voreingenommenheit)</h4>
@@ -1728,18 +1722,18 @@ const Einleitung = {
           Modell der integrierten Informationsverarbeitung (Integrated
           Information Processing)
         </b>
-        , das Technik und menschliches Denken gemeinsam betrachtet:
-        <ThemeImage
+        , das Technik und menschliches Denken gemeinsam betrachtet.
+        {/* <ThemeImage
           darkSrc={iip_dark}
           lightSrc={iip_light}
           alt="Bild integrierten Informationsverarbeitung"
-        />
+        /> */}
       </p>
       <p>Dabei beschäftigen wir uns unter anderem mit folgenden Fragen:</p>
       <ul>
         <li>
           Wie müssen Informationen aufbereitet sein, damit System sie
-          &bdquo;versstehen&ldquo; und verarbeiten können?
+          &bdquo;verstehen&ldquo; und verarbeiten können?
         </li>
         <li>
           Wie lernen Systeme, welche Informationen relevant sind, und wie

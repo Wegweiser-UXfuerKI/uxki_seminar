@@ -1,0 +1,115 @@
+[
+  {
+    "id": "doshivelez2017rigorousscienceinterpretablemachine",
+    "author": [
+      { "family": "Doshi-Velez", "given": "Finale" },
+      { "family": "Kim", "given": "Been" }
+    ],
+    "citation-key": "doshivelez2017rigorousscienceinterpretablemachine",
+    "issued": { "date-parts": [["2017"]] },
+    "title": "Towards a rigorous science of interpretable machine learning",
+    "type": "document",
+    "URL": "https://arxiv.org/abs/1702.08608"
+  },
+  {
+    "id": "eGovCampus_KIoev_2021",
+    "accessed": { "date-parts": [["2025", 10, 30]] },
+    "author": [{ "literal": "eGov-Campus" }],
+    "citation-key": "eGovCampus_KIoev_2021",
+    "issued": { "date-parts": [["2021"]] },
+    "title": "KI in öffentlichen verwaltungen",
+    "type": "webpage",
+    "URL": "https://learn.egov-campus.org/courses/kiverwaltung_uzl_2021-1/overview"
+  },
+  {
+    "id": "ElementsOfAI_2018",
+    "accessed": { "date-parts": [["2025", 10, 30]] },
+    "author": [
+      {
+        "family": "Helsinki",
+        "given": "University",
+        "non-dropping-particle": "of"
+      },
+      { "literal": "MinnaLearn" }
+    ],
+    "citation-key": "ElementsOfAI_2018",
+    "issued": { "date-parts": [["2018"]] },
+    "title": "Elements of AI",
+    "type": "webpage",
+    "URL": "https://www.elementsofai.com/"
+  },
+  {
+    "id": "molnarInterpretableMachineLearning2025",
+    "author": [{ "family": "Molnar", "given": "Christoph" }],
+    "citation-key": "molnarInterpretableMachineLearning2025",
+    "edition": "Third edition",
+    "event-place": "Munich, Germany",
+    "ISBN": "978-3-911578-03-5",
+    "issued": { "date-parts": [["2025"]] },
+    "language": "eng",
+    "note": "OCLC: 1518801363",
+    "publisher": "Christoph Molnar",
+    "publisher-place": "Munich, Germany",
+    "source": "Open WorldCat",
+    "title": "Interpretable machine learning: a guide for making black box models explainable",
+    "title-short": "Interpretable machine learning",
+    "type": "book"
+  },
+  {
+    "id": "ribeiro2016should",
+    "author": [
+      { "family": "Ribeiro", "given": "Marco Tulio" },
+      { "family": "Singh", "given": "Sameer" },
+      { "family": "Guestrin", "given": "Carlos" }
+    ],
+    "citation-key": "ribeiro2016should",
+    "container-title": "Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining",
+    "issued": { "date-parts": [["2016"]] },
+    "page": "1135–1144",
+    "title": "\" Why should i trust you?\" Explaining the predictions of any classifier",
+    "type": "paper-conference"
+  },
+  {
+    "id": "roscher2020explainable",
+    "author": [
+      { "family": "Roscher", "given": "Ribana" },
+      { "family": "Bohn", "given": "Bastian" },
+      { "family": "Duarte", "given": "Marco F" },
+      { "family": "Garcke", "given": "Jochen" }
+    ],
+    "citation-key": "roscher2020explainable",
+    "container-title": "IEEE access : practical innovations, open solutions",
+    "container-title-short": "Ieee Access",
+    "issued": { "date-parts": [["2020"]] },
+    "page": "42200–42216",
+    "publisher": "IEEE",
+    "title": "Explainable machine learning for scientific insights and discoveries",
+    "type": "article-journal",
+    "volume": "8"
+  },
+  {
+    "id": "Schrills2025",
+    "author": [{ "family": "Schrills", "given": "Tim Philipp Peter" }],
+    "citation-key": "Schrills2025",
+    "event-place": "Lübeck, Germany",
+    "genre": "Doctoral dissertation",
+    "issued": { "date-parts": [["2025"]] },
+    "publisher": "Universität zu Lübeck",
+    "publisher-place": "Lübeck, Germany",
+    "title": "Integrating humans and artificial intelligence in diagnostic tasks: Automation-related user experience & interaction in explainable AI / Integration von Mensch und Künstlicher Intelligenz bei diagnostischen Aufgaben: Automatisierungsbezogene User Experience & Interaktion in erklärbarer KI",
+    "type": "thesis",
+    "URL": "https://epub.uni-luebeck.de/handle/zhb_hl/3417"
+  },
+  {
+    "id": "shapley1953value",
+    "author": [
+      { "family": "Shapley", "given": "Lloyd S" },
+      { "literal": "others" }
+    ],
+    "citation-key": "shapley1953value",
+    "issued": { "date-parts": [["1953"]] },
+    "publisher": "Princeton University Press Princeton",
+    "title": "A value for n-person games",
+    "type": "article-journal"
+  }
+]

@@ -15,6 +15,8 @@ import ArrowIcon from "../1_elements/ArrowIcon";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
 import Sources from "../Sources";
 
+import tmpSources from "./KiTechnologienSorucesTMP.json";
+
 const sectionsInputTechnik = [
   { id: "2", title: "Warum es wichtig ist, Daten zu verstehen" },
   { id: "3", title: "Was sind Daten und was nicht?" },
@@ -3097,6 +3099,13 @@ const Einleitung = {
   ],
 };
 
+const tmpSourceList = [
+  {
+    title: "",
+    data: tmpSources,
+  },
+];
+
 const Quellen = {
   linkName: "quellen",
   name: "Quellen",
@@ -3105,7 +3114,7 @@ const Quellen = {
   content: [
     <ChapterHeader text={"Quellen"} number={9} />,
     <section>
-      <Sources />
+      <Sources sourceData={tmpSourceList} />
     </section>,
   ],
 };

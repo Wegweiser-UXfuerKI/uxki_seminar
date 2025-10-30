@@ -484,6 +484,55 @@ const sectionsInputGestaltung = [
     title: "Information Disclosure - Kontext schaffen und Vertrauen fördern",
   },
   { id: "3", title: "Informationen editieren - Lernen durch Interaktion" },
+  { id: "4", title: "Zeitverlauf - Entscheidungen nachvollziehbar machen" },
+  {
+    id: "5",
+    title: "Fazit: Gestaltung der Informationsverarbeitung als Lernprozess",
+  },
+];
+
+const editierenWohnbrückeTable = [
+  [<b>Veränderung</b>, <b>Neuer Eignungswert</b>, <b>Wert-Veränderung</b>],
+  [<>Miete sinkt von 850€ auf 700€</>, <>0,88</>, <>+0,06</>],
+  [
+    <>Entfernung zur nächsten Sozialstation steigt von 1km auf 2km</>,
+    <>0,75</>,
+    <>-0,07</>,
+  ],
+  [<>Barrierefreiheit entfernt</>, <>0,68</>, <>-0,14</>],
+];
+
+const zeitverlaufTable = [
+  [
+    <b>Datum</b>,
+    <b>Änderungen in den Daten</b>,
+    <b>Eignungswert</b>,
+    <b>Bemerkung</b>,
+  ],
+  [
+    <>01. Februar</>,
+    <>Ursrpüngliche Bewertung</>,
+    <>0,82</>,
+    <>Barrierefrei, mittlere Miete</>,
+  ],
+  [
+    <>15. Februar</>,
+    <>Neue Info: Heizkosten steigen um 30€</>,
+    <>0,79</>,
+    <>Leichter Abfall</>,
+  ],
+  [
+    <>01. März</>,
+    <>Zusatzdaten: Nähe zu Schule (0,8km)</>,
+    <>0,83</>,
+    <>Verbesserung</>,
+  ],
+  [
+    <>01. April</>,
+    <>Neue Konkurrenzangebote in der Umgebung</>,
+    <>0,76</>,
+    <>Sinkende relative Attraktivität</>,
+  ],
 ];
 
 const InputInformation = {
@@ -494,7 +543,285 @@ const InputInformation = {
   content: [
     <ChapterHeader text={"Input - Gestaltung"} number={3} />,
     <section>
-      <p></p>
+      <p>
+        Damit KI-Systeme Menschen sinnvoll unterstützen können, müssen beide
+        Seiten dieselbe &bdquo;Sprache&ldquo; sprechen und sich darüber
+        austauschen, was notwendig ist, um eine Aufgabe zu lösen. br Während
+        Maschinen Informationen als strukturierte Daten, Gewichte und
+        Wahrscheinlichkeiten verarbeiten, deuten Menschen dieselben
+        Informationen in Bedeutungen, Erfahrungen und Zielen.
+      </p>
+      <p>
+        Die Kunst besteht darin, diese beiden Arten der Informationsverarbeitung
+        miteinander zu verbinden. Genau hier setzt der Gedanke der integrierten
+        Informationsverarbeitung an: Informationen fließen nicht nur{" "}
+        <b>
+          vom Menschen ins System, sondern auch vom System zum Menschen zurück
+        </b>
+        . Nutzende verstehen dadurch, wie ein System arbeitet, können ihre
+        Eingaben korrigieren, und lernen mit der Zeit, wie sie bessere,
+        passgenauere Informationen bereitstellen.
+      </p>
+      <p>
+        In diesem Kapitel stellen wir drei Methoden vor, die diese
+        Zusammenarbeit zwischen Mensch und Maschine besonders unterstützen:
+      </p>
+      <List
+        items={[
+          "<b>Information Disclosure</b> - das System teilt kontextrelevante Informationen über seine Entscheidungen mit den Nutzer:innen so, dass die diese ihren Input anpassen können.",
+          "<b>Informationen editieren</b> - Nutzer:innen können Eingaben in das System verändern und so Effekte beobachten, wie sich diese Veränderungen auf das System auswirken.",
+          "<b>Zeitverlauf - das System zeigt, wie sich Informationen und Bewertungen über die Zeit hinweg verändern.</b>",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
+      <p>
+        Alle drei Methoden zielen darauf, Informationsverarbeitung verständlich,
+        überprüfbar und lernfähig zu machen so, dass Mensch und System
+        bestmöglichen Input für die weitere Verarbeitung generieren.
+      </p>
+      <Accordion sections={sectionsInputGestaltung} />
+      <SubNavigation sections={sectionsInputGestaltung} />
+    </section>,
+    <section>
+      <h2>
+        1. Information Disclosure - Kontext schaffen und Vertrauen fördern
+      </h2>
+      <p>
+        Information Disclosure bedeutet, dass ein KI-System mehr Informationen
+        bereitstellt, als nur das bloße Ergebnis.
+        <br />
+        Statt lediglich &bdquo;Wohnung geeignet: Ja&ldquo; oder &bdquo;Score:
+        0,73&ldquo; auszugeben, gibt das System auch Einblick in die Gründe und
+        Sicherheiten seiner Einschätzung und die Faktoren, die zu dieser
+        Entscheidung führen könnten. Dadurch können Nutzende besser
+        nachvollziehen, wie Entscheidungen zustande kommen - und ob sie auf
+        soliden Daten beruhen oder Unsicherheiten bestehen.
+      </p>
+      <Accordion
+        title="Das Beispiel &bdquo;Wohnbrücke e. V.&ldquo;"
+        initiallyOpen>
+        <p>
+          Die Organisation <i>Wohnbrücke e. V.</i> unterstützt Menschen in Not
+          bei der Wohnungssuche in einer Großstadt.
+          <br />
+          Um Wohnungsangebote systematisch zu bewerten, nutzt sie ein KI-System,
+          das jeder Immobilie einen Eignungswert zwischen 0 und 1 zuweist.
+        </p>
+        <p>
+          Ein Angebot in der Lindenstraße 12 erhält etwa den Wert 0,82. <br />
+          Das System zeigt außerdem an:
+        </p>
+        <ul>
+          <li>
+            <b>Hauptfaktoren</b>: Barrierefreiheit (+0,15), Nähe zu
+            Betreuungseinrichtungen (+0,12), moderate Miete (+0,08).
+          </li>
+          <li>
+            <b>Unsicherheiten</b>: Kein aktuelles Bildmaterial vorhanden,
+            fehlende Angaben zur Heizungsart.
+          </li>
+          <li>
+            <b>Confidence Score</b>: 0,76 (relativ hohe Sicherheit).
+          </li>
+        </ul>
+        <p>
+          So erkennen die Mitarbeitenden: Das System bewertet das Objekt positiv
+          - aber mit gewissen Unsicherheiten, die auf fehlende Daten
+          zurückzuführen sind.
+        </p>
+        <p>
+          Durch solche Offenlegungen wird die Entscheidungslogik greifbarer.
+          Mitarbeitende lernen, welche Merkmale besonders wichtig sind und wann
+          sie die Bewertung besser hinterfragen sollten. So können sie ihren
+          Input in das System bestmöglich anpassen. <br />
+          Gleichzeitig entsteht eine Transparenz, die Vertrauen schafft - sowohl
+          in das System selbst als auch in die Entscheidungen, die darauf
+          basieren.
+        </p>
+      </Accordion>
+      <h3>Reflexionsfrage</h3>
+      <p className="specialText">
+        Wann wäre es in Ihrem Arbeitskontext hilfreich, zu sehen, wie sicher
+        sich ein System bei seiner Einschätzung ist?
+      </p>
+      <h3>Vorteile von Information Disclosure</h3>
+      <ul>
+        <li>Erhöht Transparenz und Nachvollziehbarkeit.</li>
+        <li>Fördert Vertrauen in KI-gestützte Prozesse.</li>
+        <li>Hilft, Unsicherheiten zu erkennen und gezielt zu beheben.</li>
+        <li>
+          Unterstützt Lernprozesse bei Nutzenden (&bdquo;Wie denkt das
+          System?&ldquo;).
+        </li>
+      </ul>
+      <h3>Grenzen von Information Disclosure</h3>
+      <ul>
+        <li>
+          Gefahr der Überforderung: Zu viele Zahlen oder Indikatoren können
+          verwirren.
+        </li>
+        <li>
+          Missverständnisse möglich: Ein hoher Confidence Score heißt nicht
+          automatisch &bdquo;richtig&ldquo;, sondern nur, dass das System sich
+          dahingehend sehr sicher ist.
+        </li>
+        <li>
+          Datenschutz und Wettbewerbsinteressen können Offenlegungen
+          einschränken, beispielsweise könnte ein Tool zur Bewertung ovn
+          Krediten nicht ohne größere Probleme die Daten anderer Nutzer:innen
+          offenlegen, um seine Entscheidung zu verdeutlichen.
+        </li>
+      </ul>
+    </section>,
+    <section>
+      <h2>2. Informationen editieren - Lernen durch Interaktion</h2>
+      <p>
+        Während Disclosure Transparenz schafft, lädt die Methode des Information
+        Editierens zur aktiven Auseinandersetzung ein. <br />
+        Nutzende können Eingaben verändern, um zu sehen, wie das System
+        reagiert. Diese &bdquo;Was-wäre-wenn&ldquo;-Szenarien helfen, ein
+        intuitives Verständnis für die Informationsverarbeitung der KI zu
+        entwickeln.
+      </p>
+      <Accordion title="Editieren beo Wohnbrücke e. V." initiallyOpen>
+        <p>
+          Die Mitarbeitenden testen verschiedene Annahmen, um die Logik des
+          Systems besser zu verstehen. <br />
+          Sie wählen wieder das Objekt in der Lindenstraße 12, das aktuell den
+          Eignungswert 0,82 hat.
+        </p>
+        <p>Nun verändern sie einzelne Eingaben:</p>
+        <Table data={editierenWohnbrückeTable} headerStyle verticalAlignCells />
+        <p>Die Ergebnisse machen sichtbar:</p>
+        <ul>
+          <li>
+            Das System legt großen Wert auf Barrierefreiheit (-0,14 Punkte
+            Verlust).
+          </li>
+          <li>Auch Entfernung zu Betreuungseinrichtungen wirkt stark.</li>
+          <li>Mietkosten sind relevant, aber mit kleinerem Einfluss.</li>
+        </ul>
+        <p>
+          Mitarbeitende verstehen nun, welche Eingaben kritisch sind und wo das
+          System Schwerpunkte setzt. Das hilft ihnen, Daten gezielter zu prüfen
+          oder neue Objekte realistischer einzuschätzen.
+        </p>
+      </Accordion>
+      <h3>Reflexionsfrage</h3>
+      <p className="specialText">
+        Wie könnten Sie in Ihrem Projekt mit
+        &bdquo;Was-wäre-wenn&ldquo;-Szenarien prüfen, ob Ihr System
+        nachvollziehbar arbeitet?
+      </p>
+      <h3>Vorteile vom Editieren von Informationen</h3>
+      <ul>
+        <li>Fördert aktives, exploratives Lernen über Systemverhalten.</li>
+        <li>
+          Erlaubt es, Hypothesen zu prüfen (&bdquo;Was, wenn das Objekt kleiner
+          wäre?&ldquo;).
+        </li>
+        <li>
+          Macht Zusammenhänge greifbar - besonders hilfreich bei komplexen
+          Modellen.
+        </li>
+      </ul>
+      <h3>Grenzen und Risiken vom Editieren von Informationen</h3>
+      <ul>
+        <li>
+          Nicht jede Veränderung lässt sich eindeutig interpretieren -
+          insbesondere bei stark vernetzten Merkmalen.
+        </li>
+        <li>
+          Gefahr der Überanpassung: Nutzer:innen könnten versuchen, Eingaben
+          &bdquo;zu optimieren&ldquo;, statt realistische Daten zu liefern.
+        </li>
+        <li>
+          Zusätzlicher technischer Aufwand, da das System flexibel auf
+          Eingabeveränderungen reagieren und Veränderungen visualisieren muss.
+        </li>
+      </ul>
+    </section>,
+    <section>
+      <h2>3. Zeitverlauf - Entscheidungen nachvollziehbar machen</h2>
+      <p>
+        Die dritte Methode erweitert die Perspektive: <br />
+        Zeitverlauf meint die Möglichkeit, Veränderungen von Eingaben und
+        Ergebnissen über die Zeit zu beobachten. <br />
+        Damit wird nachvollziehbar, <i>wie</i> und <i>warum</i> sich
+        Systementscheidungen entwickeln - ein zentrales Element für Vertrauen
+        und Verantwortlichkeit.
+      </p>
+      <p>
+        Gerade in Organisationen, in denen Daten laufend aktualisiert werden
+        (z.B. Mietspiegel, Infrastruktur, Energiepreise), kann der Zeitverlauf
+        wichtige Hinweise geben.
+      </p>
+      <Accordion title="Zeitverlauf bei Wohnbrücke e. V." initiallyOpen>
+        <p>
+          Das Team verfolgt über drei Monate hinweg, wie sich die Bewertung der{" "}
+          <b>Wohnung Lindenstraße 12</b> entwickelt:
+        </p>
+        <Table data={zeitverlaufTable} headerStyle verticalAlignCells />
+        <p>
+          Dieser Verlauf zeigt: Das System reagiert auf neue Informationen
+          dynamisch. Für die Organisation bedeutet das Transparenz – sie kann
+          sehen, warum ein Objekt heute anders bewertet wird als vor einem
+          Monat.
+        </p>
+        <p>
+          Zudem können die Daten genutzt werden, um Trends zu erkennen: <br />
+          Verändern sich Bewertungen ganzer Stadtteile? <br />
+          Wie stark beeinflussen steigende Energiekosten die Eignungswerte
+          insgesamt?
+        </p>
+      </Accordion>
+      <h3>Reflexionsfrage</h3>
+      <p className="specialText">
+        Wie könnte ein Verlaufs- oder Änderungsprotokoll in Ihrem Projekt
+        helfen, Entwicklungen besser zu verstehen oder zu kommunizieren?
+      </p>
+      <h3>Vorteile von Zeitverläufen</h3>
+      <ul>
+        <li>
+          Unterstützt Nachvollziehbarkeit und Verantwortlichkeit über Zeit.
+        </li>
+        <li>
+          Hilft, Veränderungen und Lerneffekte im System sichtbar zu machen.
+        </li>
+        <li>Fördert Vertrauen, weil Entwicklungen dokumentiert sind.</li>
+      </ul>
+      <h3>Grenzen und Herausforderungen von Zeitverläufen</h3>
+      <ul>
+        <li>Erhöhter Speicher- und Dokumentationsaufwand.</li>
+        <li>
+          Datenschutzfragen (Protokolle enthalten oft sensible Informationen).
+        </li>
+        <li>Zu viele Details können den Überblick erschweren.</li>
+      </ul>
+    </section>,
+    <section>
+      <h2>Fazit: Gestaltung der Informationsverarbeitung als Lernprozess</h2>
+      <p>
+        Diese drei Methoden - Disclosure, Editieren und Zeitverlauf -
+        verdeutlichen, dass Informationsverarbeitung in KI-Systemen kein
+        einseitiger Vorgang ist. <br />
+        Sie sind Werkzeuge, um den Dialog zwischen Mensch und Maschine zu
+        fördern.
+      </p>
+      <List
+        items={[
+          "Disclosure schafft Verständnis und Transparenz",
+          "Editieren ermöglicht aktives Lernen und kontrolliertes Experimentieren",
+          "Zeitverlauf bietet Nachvollziehbarkeit und Reflexion über Zeit",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
+      <p>
+        Gemeinsam bilden sie die Grundlage für KI-Systeme, die nicht nur
+        technisch effizient, sondern auch sozial und ethisch handhabbar sind.
+      </p>
     </section>,
   ],
 };
@@ -1220,14 +1547,483 @@ const VerarbeitungTechnik = {
   ],
 };
 
+const sectionsVerarbeitungGestaltung = [
+  {
+    id: "2",
+    title: "Shapley-Werte - Wer trägt welchen Anteil an der Entscheidung?",
+  },
+  {
+    id: "3",
+    title: "Partial Dependence Plots - Zusammenhänge sichtbar machen",
+  },
+  {
+    id: "4",
+    title: "Permutation Feature Importance - Welche Faktoren wirklich zählen",
+  },
+];
+
+const shapleyTable = [
+  [<b>Merkmal</b>, <b>Shapley-Wert (Beitrag zur Vorhersage)</b>],
+  [<>Größe</>, <>+0,15</>],
+  [<>Lage (Nähe zu Betreuungseinrichtung)</>, <>+0,25</>],
+  [<>Kosten</>, <>-0,30</>],
+  [<>Zustand</>, <>-0,05</>],
+];
+
+const pfiTable = [
+  [<b>Merkmal</b>, <b>Anstieg des Fehlers (in %)</b>, <b>Bedeutung</b>],
+  [<>Mietkosten</>, <b>+22%</b>, <>Sehr wichtig</>],
+  [<>Entfernung zur Betreuungseinrichtung</>, <b>+15%</b>, <>Wichtig</>],
+  [<>Baujahr</>, <b>+7%</b>, <>Mittelwichtig</>],
+  [<>Barrierefreiheit</>, <b>+4%</b>, <>Gering</>],
+  [<>Klimaanlage vorhanden</>, <b>+1%</b>, <>Unwichtig</>],
+];
+
 const VerarbeitungInformation = {
   linkName: "verarbeitung-gestaltung",
   name: "Verarbeitung - Gestaltung",
-  description: "Hier wird die Verarbeitung bei KI-Systemen thematisiert.",
+  description: "Wie kann die Verarbeitung von KI-Systemen verarbeitet werden?",
   content: [
     <ChapterHeader text={"Verarbeitung - Gestaltung"} number={5} />,
     <section>
-      <p></p>
+      <Accordion sections={sectionsVerarbeitungGestaltung} initiallyOpen />
+      <SubNavigation sections={sectionsVerarbeitungGestaltung} />
+    </section>,
+    <section>
+      <h2>Shapley-Werte - Wer trägt welchen Anteil an der Entscheidung?</h2>
+      <p>
+        Wenn KI-Systeme Entscheidungen treffen, ist das Ergebnis oft nur eine
+        Zahl oder Bewertung. Aber was steckt dahinter? Welche Eingaben haben
+        welchen Anteil daran, dass ein bestimmtes Resultat herauskommt? Genau
+        diese Frage versuchen <b>Shapley-Werte</b> zu beantworten - eine
+        Methode, die ursprünglich aus der <b>Spieltheorie</b> stammt und heute
+        zu den wichtigsten Werkzeugen gehört, um{" "}
+        <b>Entscheidungsprozesse in KI-Systemen transparent</b> zu machen.
+      </p>
+      <h3>Vom Spiel zur Entscheidung - die Grundidee</h3>
+      <p>
+        Der Name geht auf den Mathematiker <b>Lloyd Shapley</b> zurück, der sich
+        mit fairer Verteilung von Gewinnen in kooperativen Spielen beschäftigte.{" "}
+        <br />
+        Stellen wir uns ein Spiel vor, in dem mehrere Personen gemeinsam ein
+        Ziel erreichen - zum Beispiel ein Team, das zusammen einen Gewinn
+        erspielt. Shapleys Frage lautete:{" "}
+        <i>
+          Wie lässt sich dieser Gewinn gerecht auf die Mitspielenden verteilen,
+          abhängig davon, wie stark jede Person zum Gesamterfolg beigetragen
+          hat?
+        </i>
+      </p>
+      <p>
+        Diese Idee lässt sich erstaunlich gut auf <b>KI-Modelle</b> übertragen:
+      </p>
+      <ul>
+        <li>
+          Das <b>&bdquo;Spiel&ldquo;</b> ist in unserem Fall das Modell, das
+          eine Entscheidung trifft oder eine Vorhersage berechnet.
+        </li>
+        <li>
+          Die <b>&bdquo;Spieler&ldquo;</b> sind die <b>Eingabevariablen</b>,
+          also beispielsweise Lage, Größe und Kosten einer Wohnung.
+        </li>
+        <li>
+          Der <b>&bdquo;Gewinn&ldquo;</b> ist die tatsächliche Vorhersage - etwa
+          der Eignungswert eines Gebäudes für eine Wohngruppe - im Vergleich zur
+          durchschnittlichen Bewertung aller untersuchten Objekte.
+        </li>
+      </ul>
+      <p>
+        Das Ziel der Methode: herauszufinden,{" "}
+        <b>wie stark jede einzelne Variable zum Ergebnis beigetragen hat</b> -
+        und zwar fair, indem alle möglichen Kombinationen von Merkmalen
+        berücksichtigt werden.
+      </p>
+      <h3>Ein praktisches Beispiel</h3>
+      <p>
+        Eine gemeinwohlorientierte Organisation möchte mit Unterstützung eines
+        KI-Systems einschätzen,{" "}
+        <b>welche Immobilien sich für Menschen in Not eignen</b>.
+      </p>
+      <p>Das System bewertet verschiedene Objekte anhand von Merkmalen wie:</p>
+      <ul>
+        <li>Größe der Immobilie</li>
+        <li>Entfernungn zu einer Betreuungseinrichtung</li>
+        <li>Ausstattung und Zustand</li>
+        <li>monatliche Mietkosten</li>
+      </ul>
+      <p>
+        Das Modell berechnet für jede Immobilie einen Eignungswert. Eine Wohnung
+        erhält z. B. <b>nur 0,35 Punkte</b> (auf einer Skala von 0 bis 1), eine
+        andere <b>0,75 Punkte</b>. <br />
+        Die Verantwortlichen möchten nun verstehen: Warum schneidet die erste so
+        viel schlechter ab? <br />
+        Mit <b>Shapley-Werten</b> lässt sich nachvollziehen, wie stark jedes
+        Merkmal dazu beigetragen hat - etwa:
+      </p>
+      <Table data={shapleyTable} headerStyle verticalAlignCells />
+      <p>
+        Solche Werte zeigen: Die höheren Kosten und der schlechte Zustand haben
+        die Bewertung stark gedrückt, während Lage und Größe positiv gewirkt
+        haben. Damit lässt sich nicht nur die Entscheidung des Systems besser
+        verstehen, sondern auch diskutieren,{" "}
+        <b>ob die Gewichtung dieser Faktoren fair und sinnvoll ist</b>.
+      </p>
+      <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover">
+        <h4>Wie Shapley-Werte berechnet werden</h4>
+        <p>
+          In der Praxis wird für jede Variable berechnet,{" "}
+          <b>wie sich das Ergebnis verändert</b>, wenn sie zum Modell
+          &bdquo;hinzugefügt&ldquo; oder &bdquo;weggelassen&ldquo; wird - und
+          das über alle möglichen Kombinationen von Variablen hinweg. <br />
+          Der Durchschnitt dieser Veränderungen ergibt den Shapley-Wert einer
+          Variable.
+        </p>
+        <p>
+          Da die vollständige Berechnung bei vielen Variablen sehr aufwändig
+          ist, arbeiten Anwendungen meist mit <b>Näherungsverfahren</b> oder{" "}
+          <b>Stichproben</b>. <br />
+          Viele gängige KI-Frameworks (z. B. SHAP in Python) bieten fertige
+          Implementierungen, die diese Berechnungen automatisiert durchführen.
+        </p>
+      </div>
+      <h3>Worauf Sie achten sollten</h3>
+      <p>
+        Die <b>Interpretation von Shapley-Werten</b> hängt immer vom{" "}
+        <b>Referenzdatensatz</b> ab - also den Daten, die als Vergleich
+        herangezogen werden, wenn einzelne Merkmale &bdquo;fehlen&ldquo;. Ein
+        unausgewogener oder nicht repräsentativer Datensatz kann zu{" "}
+        <b>verzerrten Ergebnissen</b> führen. Außerdem gilt: <br />
+        Shapley-Werte sagen{" "}
+        <b>
+          nichts darüber aus, wie sich das Ergebnis verändern würde, wenn ein
+          Merkmal tatsächlich geändert
+        </b>{" "}
+        würde. Sie beschreiben nur,{" "}
+        <b>welchen Einfluss es im aktuellen Modell</b> hat.
+      </p>
+      <p>
+        Beispiel: Der Shapley-Wert sagt nicht, &bdquo;wenn die Wohnung größer
+        wäre, würde sie besser bewertet&ldquo;, sondern nur, &bdquo;im aktuellen
+        Datensatz tragen größere Wohnungen im Schnitt positiv zur Bewertung
+        bei&ldquo;.
+      </p>
+      <h3>Grenzen und Aufwand</h3>
+      <p>
+        Die Methode ist <b>rechenintensiv</b>, besonders bei komplexen oder
+        hochdimensionalen Modellen. Für große Sprachmodelle (LLMs) oder
+        neuronale Netze lassen sich daher meist nur{" "}
+        <b>Teilsets von Merkmalen</b> untersuchen. Dennoch sind Shapley-Werte
+        eines der <b>robustesten und anerkanntesten Verfahren</b>, um{" "}
+        <b>Nachvollziehbarkeit und Fairness</b> in KI-Entscheidungen zu fördern.
+      </p>
+    </section>,
+    <section>
+      <h2>Partial Dependence Plots - Zusammenhänge sichtbar machen</h2>
+      <p>
+        Während <b>Shapley-Werte</b> uns zeigen, <i>welchen Anteil</i> einzelne
+        Faktoren an einer Entscheidung haben, helfen{" "}
+        <b>Partial Dependence Plots (PDPs)</b> dabei, <i>wie genau</i> diese
+        Faktoren den Ausgang eines Modells beeinflussen. <br />
+        Mit anderen Worten: Während Shapley-Werte erklären,{" "}
+        <b>wer wie stark mitspielt</b>, zeigen PDPs,{" "}
+        <b>wie das Zusammenspiel aussieht</b>.
+      </p>
+      <h3>Was zeigt ein PDP?</h3>
+      <p>
+        Ein <b>Partial Dependence Plot</b> stellt visuell dar,{" "}
+        <b>wie sich der vorhergesagte Wert eines Modells verändert</b>, wenn
+        sich ein oder mehrere Eingabefaktoren verändern - und alle anderen
+        Faktoren konstant gehalten werden.
+      </p>
+      <p>
+        Dadurch lässt sich nachvollziehen,{" "}
+        <b>welche Beziehung zwischen einem Merkmal und dem Ergebnis</b> besteht:
+      </p>
+      <ul>
+        <li>
+          Steigt der Wert des Merkmals &rarr; steigt oder fällt dann auch die
+          Bewertung durch das System?
+        </li>
+        <li>Gibt es Schwellenwerte, ab denen sich der Effekt ändert?</li>
+        <li>Wie wirken zwei Merkmale in Kombination aufeinander?</li>
+      </ul>
+      <h3>
+        Beispiel: Immobilienbewertung für eine gemeinwohlorientierte
+        Organisation
+      </h3>
+      <p>
+        Kommen wir noch einmal zu unserem Beispiel zurück: <br />
+        Eine Organisation nutzt ein KI-System, um zu beurteilen, welche
+        Immobilien sich für Menschen in Not eignen. Das System analysiert
+        Merkmale wie Größe, Mietkosten, Baujahr und Zustand der Immobilie und
+        gibt am Ende einen Eignungswert zwischen 0 (ungeeignet) und 1 (sehr
+        geeignet) aus.
+      </p>
+      <p>
+        Ein <b>Partial Dependence Plot</b> könnte nun etwa zeigen,{" "}
+        <b>wie das Baujahr der Immobilie</b> den Eignungswert beeinflusst.{" "}
+        <br />
+        In der Abbildung verläuft eine aufsteigende Kurve:
+      </p>
+      <p>
+        Je neuer das Gebäude, desto höher die Bewertung durch das System. <br />
+        Das Modell scheint also neuere Immobilien systematisch positiver zu
+        bewerten.
+      </p>
+      <p>
+        Eine zweite, erweiterte Darstellung zeigt zusätzlich den{" "}
+        <b>Zustand der Immobilie</b> als zweiten Faktor in einer farbigen{" "}
+        <b>Heatmap</b>. <br />
+        Darin erkennen wir, dass der Effekt des Baujahrs{" "}
+        <b>abhängig von der Qualität</b> ist:
+      </p>
+      <ul>
+        <li>
+          Bei <b>sehr guter Qualität</b> spielt das Alter kaum noch eine Rolle -
+          selbst ältere Gebäude erhalten hohe Bewertungen.
+        </li>
+        <li>
+          Bei <b>schlechter Qualität</b> verstärkt sich dagegen der Effekt des
+          Baujahres deutlich - alte und schlecht erhaltene Gebäude werden klar
+          abgewertet.
+        </li>
+      </ul>
+      <p>
+        Solche Visualisierungen helfen,{" "}
+        <b>Zusammenhänge intuitiv zu erkennen</b> - auch ohne tief in die
+        Modelllogik einzusteigen.
+      </p>
+      <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover">
+        <h4>Wie ein PDP funktioniert</h4>
+        <p>
+          Ein PDP wird erstellt, indem man{" "}
+          <b>den Wert eines Merkmals systematisch variiert</b> (z. B. das
+          Baujahr von 1950 bis 2020) und dabei beobachtet,{" "}
+          <b>wie sich die Modellvorhersage verändert</b>, während alle anderen
+          Merkmale konstant bleiben. <br />
+          Diese Veränderungen werden dann <b>als Kurve oder Fläche</b>{" "}
+          visualisiert.
+        </p>
+        <ul>
+          <li>
+            <b>1D-PDPs</b> zeigen die Auswirkung <b>eines einzelnen Faktors</b>{" "}
+            (z.B. Baujahr).
+          </li>
+          <li>
+            <b>2D-PDPs</b> zeigen die <b>Wechselwirkung zweier Faktoren</b>{" "}
+            (z.B. Baujahr und Zustand).
+          </li>
+        </ul>
+      </div>
+      <h3>Vorteile und Grenzen von PDPs</h3>
+      <h4>Vorteile</h4>
+      <ul>
+        <li>
+          Sie sind <b>intuitiv und leicht verständlich.</b>
+        </li>
+        <li>
+          Sie helfen, <b>nichtlineare Zusammenhänge</b> zu erkennen (z.B.
+          Schwellen oder Sättigungseffekte).
+        </li>
+        <li>
+          Sie unterstützen Teams dabei,{" "}
+          <b>Modellentscheidungen visuell zu prüfen</b> - auch ohne technisches
+          Detailwissen.
+        </li>
+      </ul>
+      <h4>Grenzen</h4>
+      <ul>
+        <li>
+          PDPs setzen voraus, dass <b>Faktoren unabhängig voneinander</b>{" "}
+          betrachtet werden können. <br />
+          In der Realität sind Variablen aber oft <b>korreliert</b> - etwa, dass
+          neuere Gebäude meistens teurer sind. <br />
+          Dadurch können im PDP <b>unrealistische Kombinationen</b> entstehen,
+          z.B. „sehr altes Gebäude mit extrem hohem Zustand“, die im echten
+          Datensatz gar nicht vorkommen. <br />
+          Das Modell zeigt dann zwar eine scheinbare Abhängigkeit, die{" "}
+          <b>in der Praxis aber keine Bedeutung</b> hat.
+        </li>
+        <li>
+          Zudem können PDPs <b>nur ein oder zwei Merkmale gleichzeitig</b>{" "}
+          darstellen. Für komplexere Interaktionen braucht es andere Verfahren
+          (z.B. Shapley- oder ICE-Plots).
+        </li>
+      </ul>
+      <h3>Beispiel für eine Fehlinterpretation</h3>
+      <p>
+        Angenommen, ein PDP zeigt, dass die Bewertung einer Immobilie{" "}
+        <b>stark mit steigender Wohnfläche</b> zunimmt. <br />
+        Gleichzeitig sind in den Daten aber größere Wohnungen fast immer{" "}
+        <b>auch teurer</b>. <br />
+        Der Plot könnte dann fälschlicherweise suggerieren, dass nur die Größe
+        entscheidend ist, obwohl in Wahrheit die <b>Mietkosten</b> der
+        eigentliche Treiber sind.
+      </p>
+      <p>
+        Solche Effekte zu erkennen, ist Teil einer reflektierten Anwendung
+        dieser Methode - und genau deshalb sind PDPs besonders nützlich,{" "}
+        <b>wenn sie gemeinsam mit anderen Verfahren</b> wie Shapley-Werten
+        eingesetzt werden.
+      </p>
+    </section>,
+    <section>
+      <h2>Permutation Feature Importance - Welche Faktoren wirklich zählen</h2>
+      <p>
+        Wenn wir verstehen wollen, welche Eingabefaktoren für die Entscheidungen
+        eines KI-Systems tatsächlich wichtig sind, reicht es nicht immer, nur zu
+        wissen, <i>wie</i> sie wirken. Oft möchten wir auch wissen,{" "}
+        <i>wie stark</i> sich das Wegfallen oder Verfälschen eines Faktors oder
+        dessen Reihenfolge im System auf das Ergebnis auswirkt. <br />
+        Eine Methode, die genau das messbar macht, ist die Permutation Feature
+        Importance (PFI) - zu Deutsch: die Bedeutung eines Merkmals durch
+        Zufallsdurchmischung.
+      </p>
+      <h3>Grundidee: Was passiert, wenn wir die Reihenfolge verändern?</h3>
+      <p>
+        Die Idee hinter der Permutation Feature Importance ist erstaunlich
+        einfach und intuitiv: <br />
+        Wenn ein bestimmtes Merkmal für die Vorhersage eines Modells wichtig
+        ist, sollte das Ergebnis schlechter werden, sobald wir die Werte dieses
+        Merkmals zufällig durcheinander mischen. <br />
+        Dadurch wird die ursprüngliche Beziehung zwischen diesem Merkmal und der
+        Zielgröße zerstört. <br />
+        Je stärker sich der Vorhersagefehler dadurch erhöht, desto wichtiger ist
+        dieses Merkmal für das Modell.
+      </p>
+      <p>
+        Ein Merkmal, dessen Vertauschung keine oder kaum Veränderungen bewirkt,
+        hat dagegen wenig Einfluss auf die Entscheidungen des Systems - das
+        Modell &bdquo;ignoriert&ldquo; es in gewisser Weise.
+      </p>
+      <h3>Beispiel: Bewertung von Wohnraum für Menschen in Not</h3>
+      <p>
+        Bleiben wir bei unserem laufenden Beispiel. <br />
+        Das KI-System bewertet Immobilien danach, wie gut sie sich als Wohnraum
+        für Menschen in Not eignen. Eingabefaktoren sind unter anderem:
+      </p>
+      <ul>
+        <li>Wohnfläche</li>
+        <li>Mietkosten</li>
+        <li>Entfernung zur Betreuungseinrichtung</li>
+        <li>Baujahr</li>
+        <li>Ausstattung (Zustand, Barrierefreiheit, etc.)</li>
+      </ul>
+      <p>
+        Nun wollen die Verantwortlichen verstehen, welche dieser Merkmale die
+        Entscheidung des Systems am stärksten beeinflussen.
+      </p>
+      <p>Dazu wird folgende Vorgehensweise angewandt:</p>
+      <List
+        items={[
+          "Das Modell sagt zunächst mit den echten Daten die Eignungswerte der Immobilien vorher.",
+          "Anschließend wird eine Spalte (z.B. das Baujahr) zufällig durchmischt. <br /> Damit verliert das Modell die echte Verbindung zwischen Baujahr und Bewertung.",
+          "Das Modell erstellt erneut Vorhersagen - diesmal mit den &bdquo;vertauschten&ldquo; Werten.",
+          "Nun wird gemessen, wie stark die Vorhersage an Genauigkeit verliert.",
+          "Dieser Unterschied wird für jedes Merkmal berechnet, oft mehrfach wiederholt und gemittelt.",
+        ]}
+        alignItems="center"
+        size="small"
+      />
+      <p>
+        Das Ergebnis zeigt, wie sehr das Modell auf jedes Merkmal angewiesen
+        ist. <br />
+        Beispielsweise könnte sich herausstellen:
+      </p>
+      <Table data={pfiTable} headerStyle verticalAlignCells />
+      <p>
+        In diesem Fall zeigt sich: <br />
+        Das Alter der Immobilie hat einen deutlich stärkeren Einfluss auf die
+        Bewertung als etwa die Ausstattung mit Klimaanlage - das System
+        gewichtet also manche Merkmale stark, andere kaum.
+      </p>
+      <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover">
+        <h4>Der technische Ablauf in Kürze</h4>
+        <List
+          items={[
+            "<b>Vorhersage mit Originaldaten</b>: Das Modell schätzt, wie geeignet jede Immobilie ist.",
+            "<b>Permutation eines Merkmals</b>: Die Werte eines Faktors (z.B. Baujahr) werden zufällig neu angeordnet.",
+            "<b>Vorhersage mit permutierten Daten</b>: Das Modell trifft erneut Entscheidungen, nun ohne die echte Beziehung zwischen Baujahr und Bewertung.",
+            "<b>Verlgeich der Fehler</b>: Wie sehr hat sich der Vorhersagefehler erhöht?",
+            "<b>Wiederholung</b>: Die Schritte werden mehrfach wiederholt und gemittelt, um zufällige Schwankungen auszugleichen.",
+          ]}
+          alignItems="center"
+          size="small"
+        />
+        <p>
+          Das Ergebnis: ein Wichtigkeitswert pro Merkmal, der zeigt, welche
+          Faktoren das Modell wirklich nutzt, um seine Entscheidungen zu
+          treffen.
+        </p>
+      </div>
+      <h3>Warum das relevant ist</h3>
+      <p>
+        PFI ist besonders dann nützlich, wenn Sie wissen wollen, ob Ihr System
+        auf die richtigen Dinge schaut. <br />
+        Wenn etwa das Modell in unserem Beispiel feststellt, dass die
+        Postleitzahl oder der Mietpreis besonders großen Einfluss hat, könnte
+        das ein Hinweis auf versteckte soziale oder geografische Verzerrungen
+        (Bias) sein. <br />
+        Die Methode kann also helfen, Fairness-Probleme frühzeitig zu erkennen
+        und zu adressieren.
+      </p>
+      <p>
+        Zudem berücksichtigt PFI automatisch auch{" "}
+        <b>Wechselwirkungen zwischen Variablen</b>: <br />
+        Wenn sich zwei Merkmale gegenseitig beeinflussen (z. B. Baujahr und
+        Zustand), wird dieser Effekt mitgemessen - denn durch das Durchmischen
+        werden alle Abhängigkeiten zwischen diesem Merkmal und den anderen
+        gleichzeitig aufgehoben.
+      </p>
+      <h3>Vorteile der Methode</h3>
+      <ul>
+        <li>
+          <b>Einfach und modellunabhängig</b>: Sie funktioniert mit fastem jedem
+          KI-Modell, ohne dass es neu trainiert werden muss.
+        </li>
+        <li>
+          <b>Erhöht Transparenz und Fairness</b>: Zeigt auf, welche Faktoren in
+          der Praxis tatsächlich Einfluss nehmen.
+        </li>
+        <li>
+          <b>Berücksichtigt Interaktionen</b>: Auch Kombinationseffekte zwischen
+          Variablen fließen mit ein.
+        </li>
+        <li>
+          <b>Verständlich für Nicht-Expert:innen</b>: Das Prinzip &bdquo;wie
+          mischen und schauen, was passiert&ldquo; ist leicht nachvollziehbar.
+        </li>
+      </ul>
+      <h3>Grenzen und Herausforderungen</h3>
+      <ul>
+        <li>
+          <b>Kein Verständnis der Richtung</b>: PFI zeigt nur, <i>wie stark</i>{" "}
+          ein Faktor wirkt - nicht <i>ob er positiv oder negativ</i> wirkt.
+        </li>
+        <li>
+          <b>Zufälligkeit und Streuung</b>: Da die Methode auf
+          Zufallsdurchmischung basiert, können Ergebnisse schwanken. <br />
+          Eine Mehrfach-Wiederholung (und Mittelung) stabilisiert die
+          Ergebnisse, kostet aber <b>mehr Rechenzeit</b>.
+        </li>
+        <li>
+          <b>Keine Aussage über Ursache und Wirkung</b>: PFI misst Bedeutung,
+          nicht Kausalität. Ein hoher Wert bedeutet nicht, dass dieses Merkmal{" "}
+          <i>verursacht</i>, dass das Ergebnis so ausfällt - nur, dass es eng
+          damit verknüpft ist.
+        </li>
+      </ul>
+      <h3>Beispielhafte Fehlinterpretation</h3>
+      <p>
+        Wenn die Organisation feststellt, dass das Merkmal „Postleitzahl“ sehr
+        wichtig für die Bewertung ist, bedeutet das <b>nicht</b>, dass die Lage
+        per se problematisch ist. Es kann sein, dass in bestimmten Stadtteilen
+        schlicht häufiger Immobilien mit schlechter Ausstattung vorkommen – und
+        das Modell diesen Zusammenhang gelernt hat. <br />
+        PFI hilft also, solche <b>versteckten Muster sichtbar zu machen</b>,
+        erfordert aber immer <b>eine menschliche Interpretation</b>, um
+        Fehlschlüsse zu vermeiden.
+      </p>
     </section>,
   ],
 };

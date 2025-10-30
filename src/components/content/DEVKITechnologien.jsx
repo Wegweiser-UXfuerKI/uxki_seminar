@@ -1542,6 +1542,25 @@ const OutputTechnik = {
   ],
 };
 
+const sectionsOutputGestaltung = [
+  {
+    id: "2",
+    title:
+      "Was ist bei Interaktion mit KI-Systemen im Bezug auf den Output relevant?",
+  },
+  { id: "3", title: "UX-Beispiel: Kreditbewilligung" },
+  { id: "4", title: "Fazit" },
+];
+
+const lfrTable = [
+  [<b>Merkmal</b>, <b>Einfluss auf die KI-Vorhersage</b>],
+  [<>Langfristiger Blutzuckerwert (HbA1c)</>, <>sehr Hoch</>],
+  [<>BMI (Übergewicht)</>, <>hoch</>],
+  [<>Alter</>, <>moderat</>],
+  [<>Bewegung pro Woche</>, <>gering</>],
+  [<>Geschlecht</>, <>kaum Einfluss</>],
+];
+
 const OutputInformation = {
   linkName: "output-gestaltung",
   name: "Output - Gestaltung",
@@ -1552,7 +1571,224 @@ const OutputInformation = {
       number={7}
     />,
     <section>
-      <p></p>
+      <p>
+        Outputs von KI-Systemen sind die Ergebnisse, die ein KI-Modell
+        produziert, nachdem es Eingabedaten verarbeitet hat. Beispiele:
+        Vorhersagen, Klassifikationen, Wahrscheinlichkeiten, Texte, Bilder etc.{" "}
+        <br />
+        <b>Kurz</b>: Was das Modell am Ende &bdquo;ausspuckt&ldquo;.
+      </p>
+      <Accordion sections={sectionsOutputGestaltung} initiallyOpen />
+      <SubNavigation sections={sectionsOutputGestaltung} />
+    </section>,
+    <section>
+      <h2>
+        Was ist bei Interaktion mit KI-Systemen im Bezug auf den Output
+        relevant?
+      </h2>
+      <p>
+        Wenn ein Nutzer mit einem KI-System interagiert, möchte er oft
+        verstehen:
+      </p>
+      <ul>
+        <li>
+          <b>Warum</b> hat die KI diese Entscheidung getroffen? &rarr;{" "}
+          <i>Local Feature Relevance</i>
+        </li>
+        <li>
+          <b>Wie sicher</b> ist sich die KI in ihrer Antwort? &rarr;{" "}
+          <i>Confidence Estimation</i>
+        </li>
+        <li>
+          <b>Was könnte anders sein</b>, damit das Ergebnis anders ausfällt?
+          &rarr; <i>Counterfactual Explanation</i>
+        </li>
+      </ul>
+      <h3>1. Local Feature Relevance (Lokale Merkmalsbedeutung)</h3>
+      <p>
+        Hier wird{" "}
+        <b>
+          erklärt, welche Eingabemerkmale für eine einzelne spezifische
+          Vorhersage wichtig waren
+        </b>
+        .
+      </p>
+      <p>
+        Beispiel bei einer medizinischen Diagnose-KI:
+        <br />
+        &bdquo;Für diese eine Vorhersage waren Alter und Blutdruck besonders
+        einflussreich, Geschlecht dagegen weniger.&ldquo;
+      </p>
+      <p className="specialText">
+        <b>Kurz</b>: Welche Faktoren haben in genau diesem Fall das ERgebnis
+        bestimmt?
+      </p>
+      <p>
+        Typische Anwendung im Interface: Heatmaps, Balkendiagramme, Tooltipps
+        &bdquo;Dieses Merkmal hatte den größten Einfluss&ldquo;
+      </p>
+      <h4>Beispiel mit Diabetes-Diagnose</h4>
+      <p>
+        Eine Ärztin gibt die Patientendaten in die KI ein. Das Modell sagt:{" "}
+        <b>
+          &bdquo;Hohe Wahrscheinlichkeit für ein zukünftiges
+          Diabetes-Risiko.&ldquo;
+        </b>
+      </p>
+      <p>
+        Die <b>Local Feature Relevance</b> zeigt für{" "}
+        <b>diesen einen Patienten</b>:
+      </p>
+      <Table data={lfrTable} headerStyle verticalAlignCells />
+      <p>
+        So kann die Ärztin <b>verstehen, warum</b> die KI das Risiko als hoch
+        einschätzt - nicht generell, sondern <b>bei genau diesem Menschen</b>.
+      </p>
+      <h3>2. Confidence Estimation (Konfidenzschätzung)</h3>
+      <p>
+        Das ist die{" "}
+        <b>
+          Einschätzung des Modells, wie sicher es sich bei seiner eigenen
+          Vorhersage ist
+        </b>
+        . Meist wird dies als Wahrscheinlichkeit oder Score ausgegeben.
+      </p>
+      <p>
+        <b>Wichtig</b>: Hohe Confidence bedeutet nicht automatisch, dass die
+        Vorhersage korrekt ist - nur, dass das Modell &bdquo;glaubt&ldquo;, dass
+        sie korrekt ist.
+      </p>
+      <p className="specialText">
+        <b>Kurz</b>: Wie sicher ist das Modell bei seiner Antwort?
+      </p>
+      <p>
+        Typische Anwendung im Interface: Wahrscheinlichkeitsanzeigen,
+        Farbcodierung (z.B. grün = sicher, rot = unsicher)
+      </p>
+      <h4>Beispiel mit Diabetes-Diagnose</h4>
+      <p>Nach der Risiko-Prognose zeigt das System:</p>
+      <p>
+        <b>Diabetes-Risiko: 78% Wahrscheinlichkeit</b>
+        <br />
+        <b>Vertrauensniveau des Modells: 92%</b>
+      </p>
+      <p>Die Ärztin erkennt dadurch:</p>
+      <ul>
+        <li>
+          Die KI ist <b>sehr sicher</b>, obwohl die Entscheidung komplex ist.
+        </li>
+        <li>
+          Sie kann die Informationen vorsichtig weitergeben: &bdquo;Die Daten
+          deuten stark auf ein erhöhtes Risiko hin.&ldquo;
+        </li>
+        <li>
+          Wäre die <b>Confidence z.B. nur 40%</b>, wäre Vorsicht angesagt.
+          Eventuell müssten weitere Tests gemacht werden.
+        </li>
+      </ul>
+      <h3>3. Counterfactual Explanation (Was-wäre-wenn-Erklärung)</h3>
+      <p>
+        Eine counterfaktische Erklärung zeigt,{" "}
+        <b>
+          welche minimale Veränderung an der Eingabe nötig wäre, damit das
+          Modell zu einem anderen Ergebnis kommt
+        </b>
+        .
+      </p>
+      <p>
+        Beispiel:
+        <br />
+        &bdquo;Die Kreditbewerbung wurde abgelehnt.{" "}
+        <b>
+          Hätte ihr Einkommen 400€ höher gelegen, wäre sie angenommen
+          worden.&ldquo;
+        </b>
+      </p>
+      <p className="specialText">
+        <b>Kurz</b>: Welche kleine Änderung hätte das Ergebnis verändert?
+      </p>
+      <p>
+        Typische Anwendung im Interface:
+        <br />
+        Interaktive &bdquo;Was-wäre-wenn&ldquo;-Slider: Nutzer:innen kann Werte
+        verändern und sieht direkt, wie sich das Ergebnis ändert.
+      </p>
+      <h4>Beispiel mit Diabetes-Diagnose</h4>
+      <p>Die KI gibt zusätzlich eine counterfaktische Empfehlung:</p>
+      <p>
+        <b>
+          &bdquo; Wenn der BMI um 2 Punkte reduziert wird oder der Patient 2
+          zusätzliche Sporteinheiten pro Woche durchführt, sinkt das
+          Diabetes-Risiko von 78% auf 45%. &ldquo;
+        </b>
+      </p>
+      <p>Im Interface kann die Ärztin z.B. einen Schieberegler bewegen:</p>
+      <ul>
+        <li>BMI von 31 &rarr; 29 &rarr; Risiko sinkt sichtbar</li>
+        <li>Bewegung 1h/Woche &rarr; 3h/Woche &rarr; Risiko sinkt weiter</li>
+      </ul>
+      <p>
+        Diese Erklärung ist <b>handlungsorientiert</b>, weil sie nicht nur
+        zeigt, was das Risiko ist, sondern auch, was man konkret tun könnte.
+      </p>
+    </section>,
+    <section>
+      <h2>UX-Beispiel: Kreditbewilligung</h2>
+      <p>Stellen Sie sich ein Dashboard für Kreditentscheidungen vor:</p>
+      <List
+        items={[
+          "<b>Local Feature Relevance</b> &rarr; Balken zeigt: &bdquo;Einkommen +400€, Schulden -100€ &rarr; stärkster Einfluss auf Entscheidung",
+          "<b>Confidence Estimation</b> &rarr; Ampel/Prozentangabe: &bdquo;KI ist zu 85% sicher, dass der Antrag abgelehnt wird&ldquo;",
+          "<b>Counterfactual Explanation</b> &rarr; Interaktives Widget: &bdquo;Wenn Sie ihr Einkommen um 400€ erhöhen oder Schulden reduzieren, würde der Antrag genehmigt&ldquo;",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
+      <h3>Resultat für UX:</h3>
+      <ul>
+        <li>
+          Nutzer:innen verstehen die Entscheidung (Local Feature Relevance)
+        </li>
+        <li>
+          Nutzer:innen wissen, wie zuverlässig die KI ist (Confidence
+          Estimation)
+        </li>
+        <li>
+          Nutzer:innen können potenzielle Maßnahmen ausprobieren (Counterfactual
+          Explanation)
+        </li>
+      </ul>
+    </section>,
+    <section>
+      <h2>Fazit</h2>
+      <p>
+        Damit Nutzer:innen die Ergebnisse eines KI-Systems verstehen und ihnen
+        vertrauen können, reicht der reine Output (z. B. ein Risiko-Wert oder
+        eine Entscheidung) nicht aus. Erst durch ergänzende
+        Erklärungsmechanismen wird der Output <b>interpretierbar und nutzbar</b>
+        .
+      </p>
+      <ul>
+        <li>
+          <b>Local Feature Relevance</b> zeigt, <b>warum</b> das Modell zu genau
+          diesem Ergebnis kam.
+        </li>
+        <li>
+          <b>Confidence Estimation</b> macht transparent, <b>wie sicher</b> das
+          Modell in seiner Vorhersage ist.
+        </li>
+        <li>
+          <b>Counterfactual Explanation</b> eröffnet{" "}
+          <b>konkrete Handlungsmöglichkeiten</b>, indem sie zeigt, wie das
+          Ergebnis durch kleine Änderungen beeinflusst werden kann.
+        </li>
+      </ul>
+      <p>
+        In der UX führt die Kombination dieser drei Aspekte zu{" "}
+        <b>Vertrauen, Nachvollziehbarkeit und Kontrolle</b>: zentrale
+        Voraussetzungen für verantwortungsbewusste und gebrauchstaugliche
+        KI-Systeme.
+      </p>
     </section>,
   ],
 };

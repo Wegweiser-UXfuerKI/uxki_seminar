@@ -26,9 +26,7 @@
     "accessed": { "date-parts": [["2025", 10, 30]] },
     "author": [
       {
-        "family": "Helsinki",
-        "given": "University",
-        "non-dropping-particle": "of"
+        "literal": "University of Helsinki"
       },
       { "literal": "MinnaLearn" }
     ],

@@ -20,6 +20,10 @@ const SubTopicCard = ({ topicName, link, description, number, isDisabled }) => {
   const { selectedModuleLink } = useContext(AppContext);
   const topicNumber = String(number + 1).padStart(2, "0");
 
+  const homeScrollCheck = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div
       className={`lg:w-1/3 sm:w-1/2 w-full mb-6 ${
@@ -27,6 +31,7 @@ const SubTopicCard = ({ topicName, link, description, number, isDisabled }) => {
       }`}>
       <LinkHandler
         to={`/${selectedModuleLink}/${link}`}
+        onClick={homeScrollCheck}
         aria-disabled={isDisabled}
         tabIndex={isDisabled ? -1 : 0}
         className="relative glassBox no_underline no_link_hover rounded-3xl h-full p-6 flex flex-col justify-top m-2 transition overflow-hidden hover:-translate-y-2">

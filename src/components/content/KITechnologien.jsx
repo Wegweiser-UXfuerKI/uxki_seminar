@@ -16,6 +16,7 @@ import { CarouselContainer } from "../3_organism/CarouselContainer";
 import Sources from "../Sources";
 
 import tmpSources from "./KiTechnologienSorucesTMP.json";
+import SubTopicCard from "../2_molecule/cards/SubTopicCard";
 
 const sectionsInputTechnik = [
   { id: "2", title: "Warum es wichtig ist, Daten zu verstehen" },
@@ -42,7 +43,7 @@ const InputTechnik = {
   linkName: "input-technik",
   name: "Input - Technik",
   description:
-    "Hier wird der Input von KI-Systemen auf einer technischen Ebene thematisiert.",
+    "Wie funktioniert der Input in ein KI-System auf technischer Ebene und welche Rolle spielen die verfügbaren Daten dabei?",
   content: [
     <ChapterHeader text={"Input - Technik"} number={2} />,
     <section>
@@ -193,8 +194,8 @@ const InputTechnik = {
         gar nicht mehr existiert.
       </p>
       <p>
-        Daten lassen sich außerdem nach ihrem Skalenniveau unterscheiden - also
-        danach, wie genau sie messbar sind.
+        Daten lassen sich außerdem nach ihrem <b>Skalenniveau</b> unterscheiden
+        - also danach, wie genau sie messbar sind.
       </p>
       <ul>
         <li>
@@ -557,12 +558,10 @@ const InputInformation = {
         Die Kunst besteht darin, diese beiden Arten der Informationsverarbeitung
         miteinander zu verbinden. Genau hier setzt der Gedanke der integrierten
         Informationsverarbeitung an: Informationen fließen nicht nur{" "}
-        <b>
-          vom Menschen ins System, sondern auch vom System zum Menschen zurück
-        </b>
-        . Nutzende verstehen dadurch, wie ein System arbeitet, können ihre
-        Eingaben korrigieren, und lernen mit der Zeit, wie sie bessere,
-        passgenauere Informationen bereitstellen.
+        <i>vom Menschen ins System</i>, sondern auch{" "}
+        <i>vom System zum Menschen zurück</i>. Nutzende verstehen dadurch, wie
+        ein System arbeitet, können ihre Eingaben korrigieren, und lernen mit
+        der Zeit, wie sie bessere, passgenauere Informationen bereitstellen.
       </p>
       <p>
         In diesem Kapitel stellen wir drei Methoden vor, die diese
@@ -686,7 +685,7 @@ const InputInformation = {
         intuitives Verständnis für die Informationsverarbeitung der KI zu
         entwickeln.
       </p>
-      <Accordion title="Editieren beo Wohnbrücke e. V." initiallyOpen>
+      <Accordion title="Editieren bei Wohnbrücke e. V." initiallyOpen>
         <p>
           Die Mitarbeitenden testen verschiedene Annahmen, um die Logik des
           Systems besser zu verstehen. <br />
@@ -832,7 +831,6 @@ const sectionsVerarbeitungTechnik = [
   { id: "2", title: "Überwachtes Lernen" },
   { id: "3", title: "Unüberwachtes Lernen" },
   { id: "4", title: "Bestärkendes Lernen" },
-  { id: "5", title: "Neuronale Netze" },
 ];
 
 const ueberwachtesLernenTable = [
@@ -847,7 +845,7 @@ const ueberwachtesLernenTable = [
   ],
 ];
 
-const neuronTable = [
+/* const neuronTable = [
   [<b>Menschliches Neuron</b>, <b>Künstliches Neuron</b>],
   [
     "Ein biologisches Neuron reagiert auf einen Reiz.",
@@ -899,12 +897,13 @@ const architecturTable = [
     </>,
     <>Alle Bereiche, z.B. Bilderkennung, Sprachmodelle, Vorhersagen</>,
   ],
-];
+]; */
 
 const VerarbeitungTechnik = {
   linkName: "verarbeitung-technik",
   name: "Verarbeitung - Technik",
-  description: "Hier wird die Verarbeitung bei KI-Systemen thematisiert.",
+  description:
+    "Die Frage wie KI-Systeme Daten verarbeiten wird in diesem Kapitel betrachtet.",
   content: [
     <ChapterHeader text={"Verarbeitung - Technik"} number={4} />,
     <section>
@@ -943,8 +942,8 @@ const VerarbeitungTechnik = {
       <h3>2. Wichtige Bestandteile des Lernprozesses</h3>
       <p>
         Beim überwachten Lernen spielen zwei zentrale Aspekte eine wichtige
-        Rolle: Labels (also die Zielwerte) und die Aufteilung des Datensatzes in
-        verschiedene Teile.
+        Rolle: <b>Labels</b> (also die Zielwerte) und die{" "}
+        <b>Aufteilung des Datensatzes</b> in verschiedene Teile.
       </p>
       <h4>1. Labels - die &bdquo;richtigen Antworten&ldquo;</h4>
       <p>
@@ -1033,30 +1032,6 @@ const VerarbeitungTechnik = {
         liefert, fungiert dabei gewissermaßen als &bdquo;Aufsichtsperson&ldquo;,
         die den Algorithmus in die richtige Richtung lenkt.
       </p>
-      <Accordion
-        title="Beispiel: Nächste-Nachbarn-Klassifikator"
-        initiallyOpen={false}>
-        <p>
-          Der Nächste-Nachbarn-Klassifikator ist einer der einfachsten
-          Klassifikatoren. Er ordnet ein neues Objekt der Klasse des ähnlichsten
-          Objekts aus den Trainingsdaten zu. Dabei wird keine komplexe Regel
-          berechnet - die Vorhersage basiert allein auf der Ähnlichkeit zu
-          bekannten Beispielen. Klassifikatoren werden generell eingesetzt, um
-          Objekte in vordefinierte Kategorien einzuordnen, zum Beispiel zur
-          Einteilung von E-Mails in „Spam“ oder „Nicht-Spam“ oder zur Erkennung
-          von Bildinhalten. Ein typisches Beispiel für die Anwendung der
-          Nächste-Nachbarn-Methode ist die Vorhersage von Nutzerverhalten in
-          KI-Applikationen wie Empfehlungssystemen. Wer tiefer einsteigen
-          möchte, findet im Kurs Elements of AI weiterführende Informationen:{" "}
-          <a
-            href="https://course.elementsofai.com/de/4/2"
-            target="_blank"
-            rel="noopener noreferrer">
-            Elements of AI - Der Nächste-Nachbarn-Klassifikator
-          </a>
-          .
-        </p>
-      </Accordion>
       <h4>Regression - Vorhersage von Zahlenwerten</h4>
       <p>
         Während es bei der Klassifikation um Kategorien geht, beschäftigt sich
@@ -1071,47 +1046,28 @@ const VerarbeitungTechnik = {
         abhängt. Die Regression untersucht also, wie unterschiedliche Faktoren
         gemeinsam auf die Zielgröße wirken.
       </p>
-      <p>
-        <b>Beispiele</b>:
-      </p>
-      <ul>
-        <li>
-          <b>Einkommen</b>: Schätzung des Gehalts einer Person auf Basis von
-          Alter, Ausbildung, Berufserfahrung und Branche.
-        </li>
-        <li>
-          <b>Werbung</b>: Vorhersage der Klickrate einer Online-Anzeige in
-          Abhängigkeit von Text, Gestaltung, Zielgruppe und bisherigen
-          Nutzerverhalten.
-        </li>
-        <li>
-          <b>Verkehr</b>: Prognose der Anzahl von Unfällen, wobei Faktoren wie
-          Straßenbedingungen, Wetter, Tageszeit und Geschwidigkeitsbegrenzungen
-          einfließen.
-        </li>
-        <li>
-          <b>Immobilien</b>: Schätzung des Verkaufspreises einer Wohnung oder
-          eines Hauses anhand von Lage, Wohnfläche, Baujahr, Ausstattung und
-          energetischem Zustand.
-        </li>
-      </ul>
-      <Accordion title="Beispiel lineare Regression" initiallyOpen={false}>
-        <p>
-          Eine klassische Methode ist die <b>lineare Regression</b>, bei der ein
-          Zusammenhang zwischen Eingabevariablen (z. B. Wohnfläche, Lage,
-          Baujahr) und einer Zielgröße (z. B. Verkaufspreis) modelliert wird.
-          Komplexere Verfahren wie{" "}
-          <b>polynomiale Regression, Entscheidungsbäume oder neuronale Netze</b>{" "}
-          können auch nichtlineare oder stark verknüpfte Zusammenhänge abbilden.
-          Mehr dazu finden Sie unter:{" "}
-          <a
-            href="https://course.elementsofai.com/de/4/3"
-            target="_blank"
-            rel="noopener noreferrer">
-            Elements of AI - Regression
-          </a>
-          .
-        </p>
+      <Accordion title="Beispiele" initiallyOpen={false}>
+        <ul>
+          <li>
+            <b>Einkommen</b>: Schätzung des Gehalts einer Person auf Basis von
+            Alter, Ausbildung, Berufserfahrung und Branche.
+          </li>
+          <li>
+            <b>Werbung</b>: Vorhersage der Klickrate einer Online-Anzeige in
+            Abhängigkeit von Text, Gestaltung, Zielgruppe und bisherigen
+            Nutzerverhalten.
+          </li>
+          <li>
+            <b>Verkehr</b>: Prognose der Anzahl von Unfällen, wobei Faktoren wie
+            Straßenbedingungen, Wetter, Tageszeit und
+            Geschwidigkeitsbegrenzungen einfließen.
+          </li>
+          <li>
+            <b>Immobilien</b>: Schätzung des Verkaufspreises einer Wohnung oder
+            eines Hauses anhand von Lage, Wohnfläche, Baujahr, Ausstattung und
+            energetischem Zustand.
+          </li>
+        </ul>
       </Accordion>
       <h3>4. Herausforderungen beim überwachten Lernen</h3>
       <p>
@@ -1356,57 +1312,7 @@ const VerarbeitungTechnik = {
           in denen sich Situationen ständig ändern und Flexibilität gefragt ist.
         </li>
       </ul>
-      <h3>4. Anwendungsbeispiel: Robotik</h3>
-      <p>
-        Stellen wir uns vor, eine gemeinnützige Organisation betreibt eine{" "}
-        <b>Online-Hotline für psychosoziale Beratung</b>. Menschen können sich
-        dort anonym per Chat melden, wenn sie Unterstützung brauchen. Um die
-        Berater:innen im Gespräch zu unterstützen, wird ein KI-System mit{" "}
-        <b>bestärkendem Lernen</b> eingesetzt.
-      </p>
-      <p>
-        Das System soll lernen, in welchen Situationen bestimmte
-        Gesprächsstrategien besonders hilfreich sind. Es beobachtet also den
-        Verlauf der Chats und schlägt den Berater:innen mögliche Antworten oder
-        nächste Schritte vor - zum Beispiel:{" "}
-        <i>&bdquo;offene Frage stellen&ldquo;</i>,
-        <i>&bdquo;ermutigendes Feedback geben&ldquo;</i> oder{" "}
-        <i>&bdquo;ein konkretes Hilfsangebot nennen&ldquo;</i>.
-      </p>
-      <p>Wie funktioniert das Lernen?</p>
-      <ul>
-        <li>
-          <b>Agent</b>: Die KI ist der &bdquo;Agent&ldquo;, der Vorschläge für
-          die Gesprächsführung macht.
-        </li>
-        <li>
-          <b>Umgebung</b>: Die Umgebung ist das laufende Beratungsgespräch mit
-          allen Emotionen, Themen und Reaktionen der Ratsuchenden.
-        </li>
-        <li>
-          <b>Aktionen</b>: Der Agent kann unterschiedliche Arten von
-          Antwortvorschlägen machen.
-        </li>
-        <li>
-          <b>Belohnung</b>: Positiv, wenn Ratsuchende das Gspräch als hilfreich
-          bewerten oder es länger fortführen. Negativ, wenn sie unzufrieden
-          wirken, das Gespräch abbrechen oder keine Reaktion mehr zeigen.
-        </li>
-      </ul>
-      <p>
-        Über viele Gespräche hinweg probiert das System verschiedene Strategien
-        aus und bekommt Rückmeldung über die Wirkung. So{" "}
-        <b>lernt es durch Ausprobieren und Feedback</b>, welche Vorschläge im
-        Beratungsprozess wirklich hilfreich sind - nicht durch vorgegebene
-        Regeln, sondern durch Erfahrung.
-      </p>
-      <p>
-        Auf diese Weise kann die Organisation sicherstellen, dass die Hotline
-        langfristig <b>effizienter und wirksamer</b> arbeitet: Berater:innen
-        werden entlastet, Ratsuchende fühlen sich besser unterstützt, und die
-        knappen Ressourcen einer gemeinnützigen Organisation werden optimal
-        eingesetzt.
-      </p>
+
       <h3>Zusammenfassung</h3>
       <p>
         Bestärkendes Lernen basiert auf dem Prinzip von{" "}
@@ -1415,135 +1321,6 @@ const VerarbeitungTechnik = {
         sich besonders für <b>komplexe, dynamische Umgebungen</b> wie die
         Robotik. Das übergeordnete Ziel ist dabei stets die{" "}
         <b>Maximierung der langfristigen Belohnung</b>.
-      </p>
-    </section>,
-    <section>
-      <h2>Neuronale Netze</h2>
-      <p>
-        Sind mathematische Modelle, die vom menschlichen Gehirn inspiriert sind
-        und aus miteinander verbundenen künstlichen Neuronen bestehen, um Muster
-        zu erkennen, Daten zu verarbeiten und komplexe Probleme zu lösen.
-      </p>
-      <h3>1. Einführung: Lernen von der Natur</h3>
-      <p>
-        Viele technische Innovationen sind durch die <b>Bionik</b> inspiriert,
-        also durch die Nachahmung von Phänomenen aus der Natur. Ein bekanntes
-        Beispiel ist der <b>Klettverschluss</b>, der auf der Struktur der
-        Kletten basiert.
-      </p>
-      <p>
-        Auch <b>künstliche neuronale Netze (KNN)</b> orientieren sich an der
-        Natur - genauer gesagt am <b>menschlichen Gehirn</b>, das aus rund
-        10-100 Milliarden Nervenzellen (Neuronen) besteht. So wie unser Gehirn
-        durch die Zusammenarbeit vieler Neuronen Informationen verarbeitet, tun
-        es auch künstliche neuronale Netze - nur mathematisch.
-      </p>
-      {/* Bild/Meme NN */}
-      <h4>1. Biologisches vs. künstliches Neuron</h4>
-      <Table data={neuronTable} headerStyle={true} verticalAlignCells={true} />
-      <h4>2. Neuronale Netze vs. herkömmliche Computer</h4>
-      <p>
-        Neuronale Netze unterscheiden sich von herkömmlichen Computern vor allem
-        dadurch, dass{" "}
-        <b>viele Neuronen gleichzeitig Informationen verarbeiten</b> und dass{" "}
-        <b>Speicherung und Verarbeitung von Daten nicht getrennt</b> sind,
-        sondern in den Neuronen selbst erfolgen. Dadurch eignen sie sich
-        besonders für Aufgaben, die massive Parallelverarbeitung erfordern. Ihre
-        volle Leistungsfähigkeit wird durch spezielle Hardware wie{" "}
-        <b>Grafikprozessoren (GPUs)</b> erreicht, die große Datenmengen
-        gleichzeitig bearbeiten können.
-      </p>
-      <p>Mehr dazu finden Sie im Kurs:</p>
-      <p className="specialText text-center">
-        <a
-          href="https://course.elementsofai.com/de/5/1"
-          target="_blank"
-          rel="noopener noreferrer">
-          <i>Elements of AI - Die Grundlagen neuronaler Netze</i>
-        </a>
-      </p>
-      <h3>2. Aufbau eines künstlichen neuronalen Netzes</h3>
-      <p>
-        Ein künstliches neuronales Netz ist in der Regel in{" "}
-        <b>drei Schichten</b> aufgebaut:
-      </p>
-      <List
-        items={[
-          "<b>Input-Schicht</b>: Sie nimmt die Daten auf, zum Beispiel Bildpixel oder Sensordaten.",
-          "<b>Verborgene Schichten (Hidden Layer)</b>: Hier findet die eigentliche Verarbeitung statt. Die Daten werden schrittweise transformiert und Muster herausgefiltert.",
-          "<b>Output-Schicht</b>: Am Ende gibt das Netz ein Ergebnis aus, etwa eine Klassifizierung (z.B. &bdquo;Katze&ldquo; oder &bdquo;Hund&ldquo;) oder einen Wert (z.B. eine Prognose).",
-        ]}
-        alignItems="center"
-        size="medium"
-      />
-      <p>
-        Die Bausteine dieser Schichten sind die <b>Neuronen</b>, die als
-        Knotenpunkte fungieren. Zwischen den Neuronen bestehen{" "}
-        <b>Verbindungen</b>, die mit <b>Gewichten</b> versehen sind. Diese
-        Gewichte geben an, wie stark ein Neuron ein anderes beeinflusst. Ob ein
-        Neuron &bdquo;aktiv&ldquo; wird, entscheidet eine{" "}
-        <b>Aktivierungsfunktion</b>, die berechnet, wie stark ein Signal
-        weitergegeben wird.
-      </p>
-      <p>Mehr dazu finden Sie im Kurs:</p>
-      <p className="specialText text-center">
-        <a
-          href="https://course.elementsofai.com/de/5/2"
-          target="_blank"
-          rel="noopener noreferrer">
-          <i>Elements of AI - Aufbau neuronaler Netze</i>
-        </a>
-      </p>
-      <h3>3. Netzarchitekturen - für unterschiedliche Aufgaben</h3>
-      <p>
-        Neuronale Netze lassen sich je nach Aufgabe, Datentyp und Komplexität
-        unterschiedlich aufbauen: Sie können Rückkopplungen nutzen, wie bei
-        rekurrenten Netzen für zeitabhängige Daten oder sehr tief geschichtet
-        sein, wie bei Deep Learning-Modellen, um komplexe Muster zu erkennen. Je
-        nach Einsatzgebiet wählt man unterschiedliche <b>Netzarchitekturen</b>,
-        die speziell auf Bilder, Sequenzen oder große Datensätze zugeschnitten
-        sind. Wir wollen hier nicht tiefer auf die jeweiligen Netzarchitekturen
-        eingehen, sondern Ihnen einen Überblick geben, sodass Sie mit den
-        Begrifflichkeiten arbeiten können.
-      </p>
-      <Table data={architecturTable} headerStyle verticalAlignCells />
-      <p>Mehr dazu finden Sie im Kurs:</p>
-      <p className="specialText text-center">
-        <a
-          href="https://course.elementsofai.com/de/5/3"
-          target="_blank"
-          rel="noopener noreferrer">
-          <i>
-            Elements of AI - Fortgeschrittene Methoden im Bereich neuronaler
-            Netze
-          </i>
-        </a>
-      </p>
-      <h3>Zusammenfassung</h3>
-      <p>
-        Künstliche neuronale Netze orientieren sich am Modell des menschlichen
-        Gehirns und bestehen typischerweise aus{" "}
-        <b>Input-, Hidden- und Output-Schichten</b>. Je nach Aufgabe kommen
-        unterschiedliche <b>Netzarchitekturen</b> zum Einsatz, etwa CNNs für
-        Bilder, RNNs oder LSTMs für zeitabhängige Daten und tiefe Netzwerke
-        (DNNs) für komplexe Muster.
-      </p>
-      <p>
-        Neuronale Netze können mit verschiedenen Methoden trainiert werden:
-        <b>überwacht</b>, <b>unüberwacht</b> oder <b>bestärkend</b>. Deep
-        Learning bezeichnet die erweiterte Form mit vielen verborgenen
-        Schichten, die es ermöglicht, besonders komplexe Probleme zu lösen.
-      </p>
-      <p className="specialText">
-        Wenn Sie tiefer in das Thema einsteigen möchten, empfehlen wir Ihnen
-        einen zusätzlichen Kurs bei{" "}
-        <a
-          href="https://course.elementsofai.com/de/5"
-          target="_blank"
-          rel="noopener noreferrer">
-          Elements of AI
-        </a>{" "}
-        zu Neuronalen Netzen
       </p>
     </section>,
   ],
@@ -1584,7 +1361,8 @@ const pfiTable = [
 const VerarbeitungInformation = {
   linkName: "verarbeitung-gestaltung",
   name: "Verarbeitung - Gestaltung",
-  description: "Wie kann die Verarbeitung von KI-Systemen verarbeitet werden?",
+  description:
+    "Wie kann die Verarbeitung von KI-Systemen gestaltet werden damit einzuordnen ist, ob es so arbeitet wie gewünscht?",
   content: [
     <ChapterHeader text={"Verarbeitung - Gestaltung"} number={5} />,
     <section>
@@ -2052,7 +1830,8 @@ const exampleOutputTable = [
 const OutputTechnik = {
   linkName: "output-technik",
   name: "Output - Technik",
-  description: "Hier wird der Output von KI-Systemen thematisiert.",
+  description:
+    "Mehr als nur ein Ergebnis: KI-Outputs kritisch verstehen und richtig deuten.",
   content: [
     <ChapterHeader text={"Output - Technik"} number={6} />,
     <section>
@@ -2141,7 +1920,7 @@ const OutputTechnik = {
           Ein gemeinnütziges Gesundheitsprojekt analysiert Gesprächsverläufe aus
           einer Online-Beratung. Das System erkennt, dass Anfragen, in denen
           Wörter wie <i>&bdquo;überfordert&ldquo;</i>,{" "}
-          <i>&bdquo;allein&ldquo;</i> oder
+          <i>&bdquo;allein&ldquo;</i> oder{" "}
           <i>&bdquo;nicht mehr weiter&ldquo;</i> vorkommen, häufig in einer
           Eskalation enden, wenn innerhalb von 24 Stunden keine Antwort erfolgt.
           Diese Mustererkennung hilft der Organisation, Prioritäten zu setzen
@@ -2316,7 +2095,7 @@ const OutputTechnik = {
         </p>
       </Accordion>
       <h3>Reflexionsfragen</h3>
-      Fragen die man sich im Rahmen des Outputs stellen könnte:
+      <p>Fragen die man sich im Rahmen des Outputs stellen könnte:</p>
       <List
         items={[
           "Welche Form von Output produziert das KI-System, mit dem Sie arbeiten (z.B. Textklassifikation, Score, Simulation)?",
@@ -2369,7 +2148,8 @@ const lfrTable = [
 const OutputInformation = {
   linkName: "output-gestaltung",
   name: "Output - Gestaltung",
-  description: "Hier wird der Output von KI-Systemen thematisiert.",
+  description:
+    "Ein guter KI-Output beantwortet mehr als nur die Frage nach dem Ergebnis. Er erklärt das 'Warum', das 'Wie sicher' und das 'Was wäre wenn' für Nutzervertrauen.",
   content: [
     <ChapterHeader
       text={"Output - Integrierte Informationsverarbeitung"}
@@ -2649,7 +2429,7 @@ const LLM = {
   linkName: "llm",
   name: "LLMs",
   description:
-    "Hier werden LLMs thematisiert: Was sie sind, sie auszeichnet und ein kurzer Vergleich zwischen Modellen.",
+    "Dieses Kapitel erklärt, wie LLMs durch Wortvorhersage plausible Texte erzeugen, warum sie aber nichts wirklich verstehen, deshalb 'halluzinieren' und welche Kriterien bei der Auswahl des richtigen Modells entscheidend sind.",
   content: [
     <ChapterHeader text={"LLMs"} number={8} />,
     <section>
@@ -2996,6 +2776,44 @@ const LLM = {
   ],
 };
 
+const linksAndNames = [
+  {
+    link: InputTechnik.linkName,
+    name: InputTechnik.name,
+    description: InputTechnik.description,
+  },
+  {
+    link: InputInformation.linkName,
+    name: InputInformation.name,
+    description: InputInformation.description,
+  },
+  {
+    link: VerarbeitungTechnik.linkName,
+    name: VerarbeitungTechnik.name,
+    description: VerarbeitungTechnik.description,
+  },
+  {
+    link: VerarbeitungInformation.linkName,
+    name: VerarbeitungInformation.name,
+    description: VerarbeitungInformation.description,
+  },
+  {
+    link: OutputTechnik.linkName,
+    name: OutputTechnik.name,
+    description: OutputTechnik.description,
+  },
+  {
+    link: OutputInformation.linkName,
+    name: OutputInformation.name,
+    description: OutputInformation.description,
+  },
+  {
+    link: LLM.linkName,
+    name: LLM.name,
+    description: LLM.description,
+  },
+];
+
 const Einleitung = {
   linkName: "einleitung",
   name: "Einleitung",
@@ -3095,6 +2913,20 @@ const Einleitung = {
         fehlerhaft oder verzerrt sind - und wie Mensch und KI gemeinsam zu guten
         Entscheidungen kommen.
       </p>
+    </section>,
+    <section>
+      <h3>Kapitelübersicht</h3>
+      <div className="flex flex-wrap justify-center -mx-4">
+        {linksAndNames.map((item, index) => (
+          <SubTopicCard
+            key={item.link || index}
+            topicName={item.name}
+            link={item.link}
+            description={item.description}
+            number={index}
+          />
+        ))}
+      </div>
     </section>,
   ],
 };

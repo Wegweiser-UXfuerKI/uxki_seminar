@@ -12,6 +12,12 @@ import llm_dark from "../../assets/images/kiTechnologien/LLM-dark.png";
 import llm_light from "../../assets/images/kiTechnologien/LLM-light.png";
 import iip_light from "../../assets/images/kiTechnologien/IIP-light.png";
 import iip_dark from "../../assets/images/kiTechnologien/IIP-dark.png";
+import kvr_light from "../../assets/images/kiTechnologien/kvr-light.png";
+import kvr_dark from "../../assets/images/kiTechnologien/kvr-dark.png";
+import labels_light from "../../assets/images/kiTechnologien/labels-light.png";
+import labels_dark from "../../assets/images/kiTechnologien/labels-dark.png";
+import over_light from "../../assets/images/kiTechnologien/over-light.png";
+import over_dark from "../../assets/images/kiTechnologien/over-dark.png";
 import ArrowIcon from "../1_elements/ArrowIcon";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
 import Sources from "../Sources";
@@ -948,8 +954,15 @@ const VerarbeitungTechnik = {
           beschriftet. Das System lernt so, die Muster der Buchstaben zu
           erkennen.
         </p>
+        <p className="p-10 pt-0">
+          <ThemeImage
+            darkSrc={labels_dark}
+            lightSrc={labels_light}
+            alt="Bild Muster der Buchstaben"
+          />
+        </p>
       </Accordion>
-      <h3>2. Wichtige Bestandteile des Lernprozesses</h3>
+      <h3 className="pt-10">2. Wichtige Bestandteile des Lernprozesses</h3>
       <p>
         Beim überwachten Lernen spielen zwei zentrale Aspekte eine wichtige
         Rolle: <b>Labels</b> (also die Zielwerte) und die{" "}
@@ -1016,7 +1029,13 @@ const VerarbeitungTechnik = {
         Beim überwachten Lernen gibt es zwei zentrale Anwendungsarten:{" "}
         <b>Klassifikation</b> und <b>Regression</b>.
       </p>
-      {/* Grafik klassifikation vs regression */}
+      <p className="max-w-[700px]">
+        <ThemeImage
+          darkSrc={kvr_dark}
+          lightSrc={kvr_light}
+          alt="Bild Klassifikation vs. Regressionn"
+        />
+      </p>
       <h4>Klassifikation - Daten in Kategorien einordnen</h4>
       <p>
         Bei der Klassifikation werden Eingaben bestimmten Kategorien zugeordnet.
@@ -1084,6 +1103,13 @@ const VerarbeitungTechnik = {
         Beim überwachten Lernen gibt es zwei zentrale Probleme, die die
         Leistungsfähigkeit eines Modells stark beeinflussen können:{" "}
         <b>Overfitting</b> und <b>Underfitting</b>.
+      </p>
+      <p className="max-w-[700px]">
+        <ThemeImage
+          darkSrc={over_dark}
+          lightSrc={over_light}
+          alt="Bild Overfitting vs. Underfitting"
+        />
       </p>
       <Table
         data={ueberwachtesLernenTable}

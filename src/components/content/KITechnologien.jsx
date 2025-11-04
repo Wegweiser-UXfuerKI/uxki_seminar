@@ -4,6 +4,7 @@ import { VideoContainer } from "../1_elements/VideoContainer";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 import { Table } from "../2_molecule/Table";
 import List from "../2_molecule/List";
+import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
 
@@ -46,9 +47,12 @@ const InputTechnik = {
     "Wie funktioniert der Input in ein KI-System auf technischer Ebene und welche Rolle spielen die verfügbaren Daten dabei?",
   content: [
     <ChapterHeader text={"Input - Technik"} number={2} />,
+
     <section>
       <Accordion sections={sectionsInputTechnik} />
       <SubNavigation sections={sectionsInputTechnik} />
+    </section>,
+    <section>
       <h2>1. Einleitung: Warum es wichtig ist, Daten zu verstehen</h2>
       <p>
         Wer mit KI-Systemen arbeitet, arbeitet immer auch mit Daten. Ob ein
@@ -166,6 +170,7 @@ const InputTechnik = {
         benötigen und welche Schlussfolgerungen sich später aus ihnen ziehen
         lassen.
       </p>
+      <h3>Syntax</h3>
       <p>
         Ein erster Aspekt betrifft die <b>Syntax</b> - also die formale Struktur
         der Daten. Syntax beschreibt, in welcher Form ein Wert vorliegt: als
@@ -175,6 +180,7 @@ const InputTechnik = {
         umgewandelt werden, wenn das System nur mit numerischen Eingaben
         arbeiten kann.
       </p>
+      <h3>Erscheinung oder Form</h3>
       <p>
         Darüber hinaus spielt die <b>Erscheinung oder Form</b> der Daten eine
         Rolle. Damit ist gemeint, wie die Daten erfasst oder dargestellt sind -
@@ -184,6 +190,7 @@ const InputTechnik = {
         standardisierte Eingabemaske klare Werte liefert, sind handgeschriebene
         Dokumente oder unstrukturierte E-Mails für eine KI nur schwer zu deuten.
       </p>
+      <h3>Zeitlicher Bezug</h3>
       <p>
         Ein weiterer wichtiger Aspekt ist der <b>zeitliche Bezug</b> der Daten.
         Daten sind Momentaufnahmen einer bestimmten Realität, die sich mit der
@@ -193,6 +200,7 @@ const InputTechnik = {
         trainiert wurde, spiegelt sie möglicherweise eine Realität wider, die so
         gar nicht mehr existiert.
       </p>
+      <h3>Skalenniveau</h3>
       <p>
         Daten lassen sich außerdem nach ihrem <b>Skalenniveau</b> unterscheiden
         - also danach, wie genau sie messbar sind.
@@ -216,6 +224,7 @@ const InputTechnik = {
         bestimmen, welche statistischen Verfahren und KI-Modelle überhaupt
         sinnvoll angewendet werden können.
       </p>
+      <h3>Datentyp</h3>
       <p>
         Schließlich ist auch der <b>Datentyp</b> selbst von Bedeutung. Ein
         Datentyp legt fest, ob eine Information als Zahl, Text, boolescher Wert
@@ -224,6 +233,7 @@ const InputTechnik = {
         (&bdquo;15&ldquo;), und einer echten numerischen Variable - kann bei der
         Verarbeitung durch eine KI große Auswirkungen haben.
       </p>
+      <h3>Praxisbezug</h3>
       <p>
         In der Praxis ist es hilfreich, diese verschiedenen Kategorien im Blick
         zu behalten. Wer etwa in einer Organisation arbeitet, die mithilfe von
@@ -268,21 +278,16 @@ const InputTechnik = {
         verschiedenen technischen Systemen sein.
       </p>
       <h4>Vier zentrale Qualitätsmerkmale</h4>
-      <ul>
-        <li>
-          <b>Vollständigkeit</b>: Sind alle notwendigen Informationen vorhanden?
-        </li>
-        <li>
-          <b>Genauigkeit</b>: Sind die Daten korrekt und überprüfbar?
-        </li>
-        <li>
-          <b>Konsistenz</b>: Stimmen Daten innerhalb eines Systems überein (z.B.
-          gleiche Schreibweisen, gleiche Einheiten)?
-        </li>
-        <li>
-          <b>Aktualität</b>: Sind die Daten noch relevant oder bereits veraltet?
-        </li>
-      </ul>
+      <List
+        items={[
+          "<b>Vollständigkeit</b>: Sind alle notwendigen Informationen vorhanden?",
+          "<b>Genauigkeit</b>: Sind die Daten korrekt und überprüfbar?",
+          "<b>Konsistenz</b>: Stimmen Daten innerhalb eines Systems überein (z.B. gleiche Schreibweisen, gleiche Einheiten)?",
+          "<b>Aktualität</b>: Sind die Daten noch relevant oder bereits veraltet?",
+        ]}
+        alignItems="center"
+        size="medium"
+      />
       <Accordion title="Ein Beispiel dazu:" initiallyOpen={false}>
         <p>
           Eine Organisation möchte mithilfe von KI prüfen, ob Förderanträge
@@ -409,7 +414,7 @@ const InputTechnik = {
         <CarouselContainer sideVisibility={10}>
           <div
             title="Falsche Abbildung der Realität"
-            className="rounded-xl p-[var(--scale2)] h-full shadow no-hover">
+            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
             <h4>Falsche Abbildung der Realität</h4>
             <p>
               Hier sind die Daten schlicht{" "}
@@ -424,7 +429,7 @@ const InputTechnik = {
           </div>
           <div
             title="Abbildung einer ungleichen Realität"
-            className="rounded-xl p-[var(--scale2)] h-full shadow no-hover">
+            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
             <h4>Abbildung einer ungleichen Realität</h4>
             <p>
               In diesem Fall spiegeln die Daten die reale Welt korrekt wider -
@@ -484,12 +489,16 @@ const InputTechnik = {
 const sectionsInputGestaltung = [
   {
     id: "2",
+    title: "Einleitung: Methoden integrierter Informationsverarbeitung",
+  },
+  {
+    id: "3",
     title: "Information Disclosure - Kontext schaffen und Vertrauen fördern",
   },
-  { id: "3", title: "Informationen editieren - Lernen durch Interaktion" },
-  { id: "4", title: "Zeitverlauf - Entscheidungen nachvollziehbar machen" },
+  { id: "4", title: "Informationen editieren - Lernen durch Interaktion" },
+  { id: "5", title: "Zeitverlauf - Entscheidungen nachvollziehbar machen" },
   {
-    id: "5",
+    id: "6",
     title: "Fazit: Gestaltung der Informationsverarbeitung als Lernprozess",
   },
 ];
@@ -546,6 +555,11 @@ const InputInformation = {
   content: [
     <ChapterHeader text={"Input - Gestaltung"} number={3} />,
     <section>
+      <Accordion sections={sectionsInputGestaltung} />
+      <SubNavigation sections={sectionsInputGestaltung} />
+    </section>,
+    <section>
+      <h2>1. Einleitung: Methoden integrierter Informationsverarbeitung</h2>
       <p>
         Damit KI-Systeme Menschen sinnvoll unterstützen können, müssen beide
         Seiten dieselbe &bdquo;Sprache&ldquo; sprechen und sich darüber
@@ -581,12 +595,10 @@ const InputInformation = {
         überprüfbar und lernfähig zu machen so, dass Mensch und System
         bestmöglichen Input für die weitere Verarbeitung generieren.
       </p>
-      <Accordion sections={sectionsInputGestaltung} />
-      <SubNavigation sections={sectionsInputGestaltung} />
     </section>,
     <section>
       <h2>
-        1. Information Disclosure - Kontext schaffen und Vertrauen fördern
+        2. Information Disclosure - Kontext schaffen und Vertrauen fördern
       </h2>
       <p>
         Information Disclosure bedeutet, dass ein KI-System mehr Informationen
@@ -676,7 +688,7 @@ const InputInformation = {
       </ul>
     </section>,
     <section>
-      <h2>2. Informationen editieren - Lernen durch Interaktion</h2>
+      <h2>3. Informationen editieren - Lernen durch Interaktion</h2>
       <p>
         Während Disclosure Transparenz schafft, lädt die Methode des Information
         Editierens zur aktiven Auseinandersetzung ein. <br />
@@ -744,7 +756,7 @@ const InputInformation = {
       </ul>
     </section>,
     <section>
-      <h2>3. Zeitverlauf - Entscheidungen nachvollziehbar machen</h2>
+      <h2>4. Zeitverlauf - Entscheidungen nachvollziehbar machen</h2>
       <p>
         Die dritte Methode erweitert die Perspektive: <br />
         Zeitverlauf meint die Möglichkeit, Veränderungen von Eingaben und
@@ -802,7 +814,7 @@ const InputInformation = {
       </ul>
     </section>,
     <section>
-      <h2>Fazit: Gestaltung der Informationsverarbeitung als Lernprozess</h2>
+      <h2>5. Fazit: Gestaltung der Informationsverarbeitung als Lernprozess</h2>
       <p>
         Diese drei Methoden - Disclosure, Editieren und Zeitverlauf -
         verdeutlichen, dass Informationsverarbeitung in KI-Systemen kein
@@ -922,8 +934,6 @@ const VerarbeitungTechnik = {
         klassifizieren oder Vorhersagen über Zahlenwerte zu treffen.
       </p>
       <h3>1. Einführung in das überwachte Lernen</h3>
-      {/* p mit Rückbezug warum lernen wichtig ist */}
-      <h4>Was ist überwachtes Lernen?</h4>
       <p>
         Überwachtes Lernen (engl.: supervised learning) ist eine Methode des
         maschinellen Lernens, bei der ein System anhand von gelabelten Daten
@@ -945,7 +955,7 @@ const VerarbeitungTechnik = {
         Rolle: <b>Labels</b> (also die Zielwerte) und die{" "}
         <b>Aufteilung des Datensatzes</b> in verschiedene Teile.
       </p>
-      <h4>1. Labels - die &bdquo;richtigen Antworten&ldquo;</h4>
+      <h4>Labels - die &bdquo;richtigen Antworten&ldquo;</h4>
       <p>
         Labels sind die Ergebnisse oder Kategorien, die wir unseren Eingaben
         (den sogenannten Features) zuordnen.
@@ -970,7 +980,7 @@ const VerarbeitungTechnik = {
         sind. Sie sind sozusagen die &bdquo;Lösungsschablonen&ldquo;, an denen
         das Modell sein Wissen überprüft.
       </p>
-      <h4>2. Aufteilung des Datensatzes - Trainieren und Testen</h4>
+      <h4>Aufteilung des Datensatzes - Trainieren und Testen</h4>
       <p>
         Damit das Modell nicht nur die vorhandenen Daten auswendig lernt,
         sondern allgemein gültige Regeln erkennt und Fehler frühzeitig
@@ -1093,7 +1103,6 @@ const VerarbeitungTechnik = {
           "Schließlich ist eine <b>klare Zieldefinition</b> notwendig: Soll das Modell Eingaben klassifizieren, also Kategorien zuordnen, oder numerische Werte vorhersagen, also eine Regression durchführen? Eine präzise Zielsetzung bestimmt den Aufbau des Modells und die Auswahl der geeigneten Daten.",
           "<b>Einsatz von Testdaten</b>: Um zu überprüfen, wie gut ein Modell auf neue Daten reagiert, werden <b>Testdaten</b> eingesetzt. Diese Daten wurden beim Training nicht verwendet und ermöglichen eine realistische Einschätzung der Leistungsfähigkeit. Zur Bewertung des Modells werden verschiedene <b>Kennzahlen</b> herangezogen, wie z.B. Genauigkeit oder Fehlermaße",
         ]}
-        alignItems="center"
         size="medium"
       />
       <h3>Zusammenfassung</h3>
@@ -1370,7 +1379,7 @@ const VerarbeitungInformation = {
       <SubNavigation sections={sectionsVerarbeitungGestaltung} />
     </section>,
     <section>
-      <h2>Shapley-Werte - Wer trägt welchen Anteil an der Entscheidung?</h2>
+      <h2>1. Shapley-Werte - Wer trägt welchen Anteil an der Entscheidung?</h2>
       <p>
         Wenn KI-Systeme Entscheidungen treffen, ist das Ergebnis oft nur eine
         Zahl oder Bewertung. Aber was steckt dahinter? Welche Eingaben haben
@@ -1498,7 +1507,7 @@ const VerarbeitungInformation = {
       </p>
     </section>,
     <section>
-      <h2>Partial Dependence Plots - Zusammenhänge sichtbar machen</h2>
+      <h2>2. Partial Dependence Plots - Zusammenhänge sichtbar machen</h2>
       <p>
         Während <b>Shapley-Werte</b> uns zeigen, <i>welchen Anteil</i> einzelne
         Faktoren an einer Entscheidung haben, helfen{" "}
@@ -1596,41 +1605,45 @@ const VerarbeitungInformation = {
         </ul>
       </div>
       <h3>Vorteile und Grenzen von PDPs</h3>
-      <h4>Vorteile</h4>
-      <ul>
-        <li>
-          Sie sind <b>intuitiv und leicht verständlich.</b>
-        </li>
-        <li>
-          Sie helfen, <b>nichtlineare Zusammenhänge</b> zu erkennen (z.B.
-          Schwellen oder Sättigungseffekte).
-        </li>
-        <li>
-          Sie unterstützen Teams dabei,{" "}
-          <b>Modellentscheidungen visuell zu prüfen</b> - auch ohne technisches
-          Detailwissen.
-        </li>
-      </ul>
-      <h4>Grenzen</h4>
-      <ul>
-        <li>
-          PDPs setzen voraus, dass <b>Faktoren unabhängig voneinander</b>{" "}
-          betrachtet werden können. <br />
-          In der Realität sind Variablen aber oft <b>korreliert</b> - etwa, dass
-          neuere Gebäude meistens teurer sind. <br />
-          Dadurch können im PDP <b>unrealistische Kombinationen</b> entstehen,
-          z.B. „sehr altes Gebäude mit extrem hohem Zustand“, die im echten
-          Datensatz gar nicht vorkommen. <br />
-          Das Modell zeigt dann zwar eine scheinbare Abhängigkeit, die{" "}
-          <b>in der Praxis aber keine Bedeutung</b> hat.
-        </li>
-        <li>
-          Zudem können PDPs <b>nur ein oder zwei Merkmale gleichzeitig</b>{" "}
-          darstellen. Für komplexere Interaktionen braucht es andere Verfahren
-          (z.B. Shapley- oder ICE-Plots).
-        </li>
-      </ul>
-      <h3>Beispiel für eine Fehlinterpretation</h3>
+      <TabSwitchView>
+        <div title="Vorteile">
+          <ul className="mt-0">
+            <li>
+              Sie sind <b>intuitiv und leicht verständlich.</b>
+            </li>
+            <li>
+              Sie helfen, <b>nichtlineare Zusammenhänge</b> zu erkennen (z.B.
+              Schwellen oder Sättigungseffekte).
+            </li>
+            <li>
+              Sie unterstützen Teams dabei,{" "}
+              <b>Modellentscheidungen visuell zu prüfen</b> - auch ohne
+              technisches Detailwissen.
+            </li>
+          </ul>
+        </div>
+        <div title="Grenzen">
+          <ul className="mt-0">
+            <li>
+              PDPs setzen voraus, dass <b>Faktoren unabhängig voneinander</b>{" "}
+              betrachtet werden können. <br />
+              In der Realität sind Variablen aber oft <b>korreliert</b> - etwa,
+              dass neuere Gebäude meistens teurer sind. <br />
+              Dadurch können im PDP <b>unrealistische Kombinationen</b>{" "}
+              entstehen, z.B. „sehr altes Gebäude mit extrem hohem Zustand“, die
+              im echten Datensatz gar nicht vorkommen. <br />
+              Das Modell zeigt dann zwar eine scheinbare Abhängigkeit, die{" "}
+              <b>in der Praxis aber keine Bedeutung</b> hat.
+            </li>
+            <li>
+              Zudem können PDPs <b>nur ein oder zwei Merkmale gleichzeitig</b>{" "}
+              darstellen. Für komplexere Interaktionen braucht es andere
+              Verfahren (z.B. Shapley- oder ICE-Plots).
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
+      <h3 className="mt-10">Beispiel für eine Fehlinterpretation</h3>
       <p>
         Angenommen, ein PDP zeigt, dass die Bewertung einer Immobilie{" "}
         <b>stark mit steigender Wohnfläche</b> zunimmt. <br />
@@ -1648,7 +1661,9 @@ const VerarbeitungInformation = {
       </p>
     </section>,
     <section>
-      <h2>Permutation Feature Importance - Welche Faktoren wirklich zählen</h2>
+      <h2>
+        3. Permutation Feature Importance - Welche Faktoren wirklich zählen
+      </h2>
       <p>
         Wenn wir verstehen wollen, welche Eingabefaktoren für die Entscheidungen
         eines KI-Systems tatsächlich wichtig sind, reicht es nicht immer, nur zu
@@ -1755,45 +1770,52 @@ const VerarbeitungInformation = {
         werden alle Abhängigkeiten zwischen diesem Merkmal und den anderen
         gleichzeitig aufgehoben.
       </p>
-      <h3>Vorteile der Methode</h3>
-      <ul>
-        <li>
-          <b>Einfach und modellunabhängig</b>: Sie funktioniert mit fastem jedem
-          KI-Modell, ohne dass es neu trainiert werden muss.
-        </li>
-        <li>
-          <b>Erhöht Transparenz und Fairness</b>: Zeigt auf, welche Faktoren in
-          der Praxis tatsächlich Einfluss nehmen.
-        </li>
-        <li>
-          <b>Berücksichtigt Interaktionen</b>: Auch Kombinationseffekte zwischen
-          Variablen fließen mit ein.
-        </li>
-        <li>
-          <b>Verständlich für Nicht-Expert:innen</b>: Das Prinzip &bdquo;wie
-          mischen und schauen, was passiert&ldquo; ist leicht nachvollziehbar.
-        </li>
-      </ul>
-      <h3>Grenzen und Herausforderungen</h3>
-      <ul>
-        <li>
-          <b>Kein Verständnis der Richtung</b>: PFI zeigt nur, <i>wie stark</i>{" "}
-          ein Faktor wirkt - nicht <i>ob er positiv oder negativ</i> wirkt.
-        </li>
-        <li>
-          <b>Zufälligkeit und Streuung</b>: Da die Methode auf
-          Zufallsdurchmischung basiert, können Ergebnisse schwanken. <br />
-          Eine Mehrfach-Wiederholung (und Mittelung) stabilisiert die
-          Ergebnisse, kostet aber <b>mehr Rechenzeit</b>.
-        </li>
-        <li>
-          <b>Keine Aussage über Ursache und Wirkung</b>: PFI misst Bedeutung,
-          nicht Kausalität. Ein hoher Wert bedeutet nicht, dass dieses Merkmal{" "}
-          <i>verursacht</i>, dass das Ergebnis so ausfällt - nur, dass es eng
-          damit verknüpft ist.
-        </li>
-      </ul>
-      <h3>Beispielhafte Fehlinterpretation</h3>
+      <h3>Vorteile und Grenzen</h3>
+      <TabSwitchView>
+        <div title="Vorteile">
+          <ul className="mt-0">
+            <li>
+              <b>Einfach und modellunabhängig</b>: Sie funktioniert mit fastem
+              jedem KI-Modell, ohne dass es neu trainiert werden muss.
+            </li>
+            <li>
+              <b>Erhöht Transparenz und Fairness</b>: Zeigt auf, welche Faktoren
+              in der Praxis tatsächlich Einfluss nehmen.
+            </li>
+            <li>
+              <b>Berücksichtigt Interaktionen</b>: Auch Kombinationseffekte
+              zwischen Variablen fließen mit ein.
+            </li>
+            <li>
+              <b>Verständlich für Nicht-Expert:innen</b>: Das Prinzip &bdquo;wie
+              mischen und schauen, was passiert&ldquo; ist leicht
+              nachvollziehbar.
+            </li>
+          </ul>
+        </div>
+        <div title="Grenzen und Herausforderungen">
+          <ul className="mt-0">
+            <li>
+              <b>Kein Verständnis der Richtung</b>: PFI zeigt nur,{" "}
+              <i>wie stark</i> ein Faktor wirkt - nicht{" "}
+              <i>ob er positiv oder negativ</i> wirkt.
+            </li>
+            <li>
+              <b>Zufälligkeit und Streuung</b>: Da die Methode auf
+              Zufallsdurchmischung basiert, können Ergebnisse schwanken. <br />
+              Eine Mehrfach-Wiederholung (und Mittelung) stabilisiert die
+              Ergebnisse, kostet aber <b>mehr Rechenzeit</b>.
+            </li>
+            <li>
+              <b>Keine Aussage über Ursache und Wirkung</b>: PFI misst
+              Bedeutung, nicht Kausalität. Ein hoher Wert bedeutet nicht, dass
+              dieses Merkmal <i>verursacht</i>, dass das Ergebnis so ausfällt -
+              nur, dass es eng damit verknüpft ist.
+            </li>
+          </ul>
+        </div>
+      </TabSwitchView>
+      <h3 className="mt-10">Beispielhafte Fehlinterpretation</h3>
       <p>
         Wenn die Organisation feststellt, dass das Merkmal „Postleitzahl“ sehr
         wichtig für die Bewertung ist, bedeutet das <b>nicht</b>, dass die Lage
@@ -1809,14 +1831,14 @@ const VerarbeitungInformation = {
 };
 
 const sectionsOutputTechnik = [
-  { id: "1", title: "Warum der Output entscheident ist" },
-  { id: "2", title: "Kategorische Outputs" },
-  { id: "3", title: "Pattern Matching" },
-  { id: "4", title: "Numerische Prädiktionen" },
-  { id: "5", title: "Synthetische Ergebnisse" },
-  { id: "6", title: "Forecasting" },
-  { id: "7", title: "Metadaten: Wie gut ist der Output?" },
-  { id: "8", title: "Fazit" },
+  { id: "2", title: "Warum der Output entscheident ist" },
+  { id: "3", title: "Kategorische Outputs" },
+  { id: "4", title: "Pattern Matching" },
+  { id: "5", title: "Numerische Prädiktionen" },
+  { id: "6", title: "Synthetische Ergebnisse" },
+  { id: "7", title: "Forecasting" },
+  { id: "8", title: "Metadaten: Wie gut ist der Output?" },
+  { id: "9", title: "Fazit" },
 ];
 
 const exampleOutputTable = [
@@ -1834,6 +1856,10 @@ const OutputTechnik = {
     "Mehr als nur ein Ergebnis: KI-Outputs kritisch verstehen und richtig deuten.",
   content: [
     <ChapterHeader text={"Output - Technik"} number={6} />,
+    <section>
+      <Accordion sections={sectionsOutputTechnik} />
+      <SubNavigation sections={sectionsOutputTechnik} />
+    </section>,
     <section>
       <h2>Einleitung: Warum der Output entscheident ist</h2>
       <p>
@@ -1856,8 +1882,6 @@ const OutputTechnik = {
         von KI-Systemen und erläutert, wie sie gelesen, interpretiert und
         kritisch hinterfragt werden können.
       </p>
-      <Accordion sections={sectionsOutputTechnik} />
-      <SubNavigation sections={sectionsOutputTechnik} />
     </section>,
     <section>
       <h2>1. Kategorische Outputs</h2>
@@ -1984,7 +2008,7 @@ const OutputTechnik = {
       </p>
     </section>,
     <section>
-      <h2>Synthetische Ergebnisse</h2>
+      <h2>4. Synthetische Ergebnisse</h2>
       <p>
         Synthetische Outputs entstehen, wenn ein KI-System{" "}
         <b>neue Daten erzeugt</b>, anstatt vorhandene zu bewerten. Dazu gehören
@@ -2884,11 +2908,13 @@ const Einleitung = {
           Information Processing)
         </b>
         , das Technik und menschliches Denken gemeinsam betrachtet.
-        {/* <ThemeImage
+      </p>
+      <p>
+        <ThemeImage
           darkSrc={iip_dark}
           lightSrc={iip_light}
           alt="Bild integrierten Informationsverarbeitung"
-        /> */}
+        />
       </p>
       <p>Dabei beschäftigen wir uns unter anderem mit folgenden Fragen:</p>
       <ul>

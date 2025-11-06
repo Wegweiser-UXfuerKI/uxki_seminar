@@ -60,16 +60,18 @@ const Usability = {
     <section>
       <h2>Definition Usability</h2>
       <p>
-        <b>Usability</b>, im Fachjargon auch als „Gebrauchstauglichkeit“
-        bezeichnet, beschreibt die Qualität der Interaktion zwischen Menschen
-        und interaktiven Systemen. In Alltagssprache würden wir am ehesten von
-        „Benutzerfreundlichkeit“ oder von einer „intuitiven Bedienung“ sprechen.
+        <b>Usability</b>, im Fachjargon auch als
+        &bdquo;Gebrauchstauglichkeit&ldquo; bezeichnet, beschreibt die Qualität
+        der Interaktion zwischen Menschen und interaktiven Systemen. In
+        Alltagssprache würden wir am ehesten von
+        &bdquo;Benutzerfreundlichkeit&ldquo; oder von einer &bdquo;intuitiven
+        Bedienung&ldquo; sprechen.
       </p>
       <p>
         Gute Usability ist eine Grundvoraussetzung für erfolgreiche
         Mensch-Computer-Interaktion. Undurchdachte oder schlecht gestaltete
         Systeme führen dagegen schnell zu Bedienproblemen, kognitiver
-        Überlastung und Frustration bei den Nutzer:innen – also zu einer
+        Überlastung und Frustration bei den Nutzer:innen - also zu einer
         schlechten Usability.
       </p>
       <p>
@@ -161,7 +163,7 @@ const Usability = {
         <b>schlechte Zufriedenstellung</b>.
       </p>
       <p>
-        Unterm Strich ist es damit eine <b>schlechte Usability</b> – trotz
+        Unterm Strich ist es damit eine <b>schlechte Usability</b> - trotz
         prinzipieller Effektivität.
       </p>
       <h3>
@@ -182,23 +184,27 @@ const Usability = {
     <section>
       <h2>Fazit aus den Fallbeispielen</h2>
       <p>
-        Es ist wichtig zu verstehen, dass ein System nicht „eine“ Usability hat,
-        sondern dass Effektivität, Effizienz und Zufriedenstellung immer davon
-        abhängig sind, wer ein System verwendet, zu welchem Zweck es verwendet
-        wird und wie und wo damit interagiert wird.{" "}
+        Es ist wichtig zu verstehen, dass ein System nicht &bdquo;eine&ldquo;
+        Usability hat, sondern dass Effektivität, Effizienz und
+        Zufriedenstellung immer davon abhängig sind, wer ein System verwendet,
+        zu welchem Zweck es verwendet wird und wie und wo damit interagiert
+        wird.{" "}
         <b>
           Usability ist also keine Systemeigenschaft, sondern ergibt sich immer
           aus dem Kontext der Verwendung.
         </b>
       </p>
       <p>
-        Im Bezug auf Usability gibt es daher keine inhärent „guten“ oder
-        „schlechten“ Systeme, sondern es hängt immer davon, für was und von wem
-        etwas verwendet wird. Oder wie es der vielbeachtete Usability-Experte
-        und UX-Designer Bill Buxton auf den Punkt bringt:
+        Im Bezug auf Usability gibt es daher keine inhärent &bdquo;guten&ldquo;
+        oder &bdquo;schlechten&ldquo; Systeme, sondern es hängt immer davon ab,
+        für was und von wem etwas verwendet wird. Oder wie es der vielbeachtete
+        Usability-Experte und UX-Designer Bill Buxton auf den Punkt bringt:
       </p>
       <p>
-        <b>„Everything is best for something and worst for something else.“</b>
+        <b>
+          &bdquo;Everything is best for something and worst for something
+          else.&ldquo;
+        </b>
       </p>
       <p>
         Usability ist immer die Verwendbarkeit und Praxistauglichkeit eines
@@ -206,10 +212,10 @@ const Usability = {
         genaue Definition in der DIN EN ISO 9241-11 bringt dies zum Ausdruck:
       </p>
       <p className="specialText">
-        „Die Gebrauchstauglichkeit ist das Ausmaß, in dem ein System, ein
+        &bdquo;Die Gebrauchstauglichkeit ist das Ausmaß, in dem ein System, ein
         Produkt oder eine Dienstleistung durch bestimmte Benutzer genutzt werden
         kann, um in einem bestimmten Nutzungskontext bestimmte Ziele effektiv,
-        effizient und zufriedenstellend zu erreichen.“
+        effizient und zufriedenstellend zu erreichen.&ldquo;
       </p>
     </section>,
     <section>
@@ -315,11 +321,12 @@ const Nutzungskontext = {
     <section>
       <h2>Warum ist der Nutzungskontext wichtig?</h2>
       <p>
-        Wenn Sie die Usability (Gebrauchstauglichkeit) eines interaktiven System
-        bewerten oder verbessern möchten, muss der jeweilige Nutzungskontext und
-        dessen Anforderungen bekannt sein. Das System ist nicht automatisch
-        gebrauchstauglich, weil es bestimmte Funktionen bietet. Es kommt darauf
-        an, <b>wie gut das System in der Praxis funktioniert</b> (also in seinen
+        Wenn Sie die Usability (Gebrauchstauglichkeit) eines interaktiven
+        Systems bewerten oder verbessern möchten, muss der jeweilige
+        Nutzungskontext und dessen Anforderungen bekannt sein. Das System ist
+        nicht automatisch gebrauchstauglich, weil es bestimmte Funktionen
+        bietet. Es kommt darauf an,{" "}
+        <b>wie gut das System in der Praxis funktioniert</b> (also in seinen
         realen Nutzungskontexten) und ob es von der Zielgruppe dabei{" "}
         <b>effektiv, effizient und zufriedenstellend</b> genutzt werden kann.
       </p>
@@ -335,16 +342,16 @@ const Nutzungskontext = {
         und ihre Perspektive bei der Konzeption und Entwicklung mit
         einzubeziehen. Das kann die spätere Akzeptanz und den Erfolg des Systems
         deutlich erhöhen. Auf den ersten Blick wirkt dies aufwändig und
-        vielleicht sogar abschreckend. Dennoch gilt hier das Motto "Alles ist
-        besser als nichts!". Bereits einige wenige informelle Gespräche mit
-        zukünftigen Benutzer:innen, Notizen über deren Arbeitsweise und Fotos
-        von deren Arbeitsumgebung können schon helfen, um den Nutzungskontext
-        erheblich besser zu verstehen. Selbst kleine Schritte sind immer noch
-        besser, als dass eine Software vom bequemen Schreibtisch und fernab vom
-        realen Nutzungskontext komplett am Bedarf vorbei gestaltet wird. Deshalb
-        ist es auf jeden Fall wichtig, direkt mit den realen Zielgruppen in
-        Kontakt zu treten – selbst wenn es nur für ein informelles Gespräch beim
-        Kaffee ist.
+        vielleicht sogar abschreckend. Dennoch gilt hier das Motto &bdquo;Alles
+        ist besser als nichts!&ldquo;. Bereits einige wenige informelle
+        Gespräche mit zukünftigen Benutzer:innen, Notizen über deren
+        Arbeitsweise und Fotos von deren Arbeitsumgebung können schon helfen, um
+        den Nutzungskontext erheblich besser zu verstehen. Selbst kleine
+        Schritte sind immer noch besser, als dass eine Software vom bequemen
+        Schreibtisch und fernab vom realen Nutzungskontext komplett am Bedarf
+        vorbei gestaltet wird. Deshalb ist es auf jeden Fall wichtig, direkt mit
+        den realen Zielgruppen in Kontakt zu treten - selbst wenn es nur für ein
+        informelles Gespräch beim Kaffee ist.
       </p>
     </section>,
     <section>
@@ -433,15 +440,16 @@ const Nutzungskontext = {
         Möglichkeit zur Speicherung wiederverwendbarer Standard-Textbausteine
         oder Makros. Das ist wünschenswert, sofern sich damit im Endeffekt die
         Aufgaben schneller und besser erledigen lassen. Man spricht hier vom{" "}
-        <b>“Ease of Use”</b> und die Effizienz steht dabei im Vordergrund, da
-        man davon ausgeht, dass die Benutzer:innen in solchen Funktionen
-        geschult werden und viel Übung haben.
+        <b>&bdquo;Ease of Use&ldquo;</b> und die Effizienz steht dabei im
+        Vordergrund, da man davon ausgeht, dass die Benutzer:innen in solchen
+        Funktionen geschult werden und viel Übung haben.
       </p>
       <p>
         Eine Funktion, die von ungeschulten Benutzer:innen nur sehr selten
         verwendet wird, muss sich dagegen viel einfacher, selbsterklärender und
-        “intuitiver” präsentieren. Man spricht hier vom <b>“Ease of Learn”</b>{" "}
-        und die Erlernbarkeit steht dabei im Vordergrund.
+        &bdquo;intuitiver&ldquo; präsentieren. Man spricht hier vom{" "}
+        <b>&bdquo;Ease of Learn&ldquo;</b> und die Erlernbarkeit steht dabei im
+        Vordergrund.
       </p>
       <p>
         <b>Ease of Use</b> (auch Benutzungseffizienz) und <b>Ease of Learn</b>{" "}
@@ -500,7 +508,7 @@ const Nutzungskontext = {
         Dateien und Dokumenten in verschiedensten Ordnerstrukturen und Formaten
         lassen sich auch durch eine moderne KI nicht einfach in eine
         zuverlässige Informationsquelle verwandeln. Auch hier gilt der
-        Informatik-Grundsatz <b>“Garbage in, Garbage out!”</b>.
+        Informatik-Grundsatz <b>&bdquo;Garbage in, Garbage out!&ldquo;</b>.
       </p>
       <p>
         Selbst bei gepflegten Dokumentenbeständen als Wissensgrundlage für
@@ -525,7 +533,6 @@ const Nutzungskontext = {
         bewerten kann, welche Prozesse sich dafür eignen, bevor eine Umsetzung
         durchgeführt oder beauftragt wird.
       </p>
-
       <h3>4. Umgebung</h3>
       <p>
         Ein System muss je nach Umgebung sehr unterschiedliche Anforderungen
@@ -666,7 +673,7 @@ const Nutzungskontext = {
         Anmerkung: Dabei wird vom Idealfall ausgegangen. Wir wissen sehr gut,
         dass die Realität oft weit davon entfernt ist und eine solche Analyse
         oftmals nicht so umfassend durchgeführt werden kann. Daher gilt hier
-        wieder “Alles ist besser als nichts!”.
+        wieder &bdquo;Alles ist besser als nichts!&ldquo;.
       </p>
       <p>Die Analyse erfolgt in zwei Schritten:</p>
       <TabSwitchView>
@@ -695,7 +702,8 @@ const Nutzungskontext = {
         </div>
         <div title="2. Analyse & Dokumentation">
           <p>
-            Die gesammelten Daten werden geordnet und aufbereitet, z. B. durch:
+            Die gesammelten Daten werden geordnet und aufbereitet,
+            beispielsweise durch:
           </p>
           <ul>
             <li>
@@ -837,9 +845,9 @@ const UserExperience = {
       <p>
         Die <b>User Experience</b> (UX) ist ein immer wichtigeres Ziel bei der
         Gestaltung digitaler Systeme. Auch wenn es dafür unterschiedliche
-        Übersetzungen gibt, ist <b>„Benutzungserlebnis”</b> unserer Meinung nach
-        der passendste deutsche Begriff. UX beschreibt die Gesamtheit der
-        Eindrücke, Gefühle und Erlebnisse, die Nutzer:innen{" "}
+        Übersetzungen gibt, ist <b>&bdquo;Benutzungserlebnis&ldquo;</b> unserer
+        Meinung nach der passendste deutsche Begriff. UX beschreibt die
+        Gesamtheit der Eindrücke, Gefühle und Erlebnisse, die Nutzer:innen{" "}
         <b>vor, während und nach der Interaktion</b> mit einem Produkt oder
         System haben. Gute Usability wird mittlerweile vorausgesetzt. Aber
         Erlebnisse, die den Benutzer:innen einen Eindruck von
@@ -880,9 +888,10 @@ const UserExperience = {
         anderen ab.
       </p>
       <p className="specialText">
-        Laut ISO 9241-210 umfasst die UX „alle Wahrnehmungen und Reaktionen
-        einer Person, die sich aus der Nutzung oder erwarteten Nutzung eines
-        Produkts, Systems oder einer Dienstleistung ergeben.“
+        Laut ISO 9241-210 umfasst die UX &bdquo;alle Wahrnehmungen und
+        Reaktionen einer Person, die sich aus der Nutzung oder erwarteten
+        Nutzung eines Produkts, Systems oder einer Dienstleistung
+        ergeben.&ldquo;
       </p>
     </section>,
     <section>
@@ -917,21 +926,22 @@ const UserExperience = {
       <p>
         Es lohnt sich also, digitale Systeme nicht nur durch eine rein
         funktionale und pragmatische Brille zu betrachten. Anstelle von
-        „Funktioniert es?” und „Wie gut kommen die Nutzer:innen damit zurecht?”
-        tritt zusätzlich die Frage „Wie wirkt es auf die Nutzer:innen und ist
-        dies die erwünschte Wirkung?”.
+        &bdquo;Funktioniert es?&ldquo; und &bdquo;Wie gut kommen die
+        Nutzer:innen damit zurecht?&ldquo; tritt zusätzlich die Frage &bdquo;Wie
+        wirkt es auf die Nutzer:innen und ist dies die erwünschte
+        Wirkung?&ldquo;.
       </p>
     </section>,
     <section>
       <h2>Wie erreicht man eine gute UX?</h2>
       <p>
-        Eine gute User Experience (UX) kann nicht direkt „designt“ werden, denn
-        sie entsteht im subjektiven Erleben der Nutzer:innen. Oder wie Preece et
-        al. (2015) treffend formulieren:
+        Eine gute User Experience (UX) kann nicht direkt &bdquo;designt&ldquo;
+        werden, denn sie entsteht im subjektiven Erleben der Nutzer:innen. Oder
+        wie Preece et al. (2015) treffend formulieren:
       </p>
       <p className="specialText text-center">
-        „You cannot design a user experience, only design for a user
-        experience.“
+        &bdquo;You cannot design a user experience, only design for a user
+        experience.&ldquo;
       </p>
       <p>
         Das bedeutet: UX-Designer:innen können ein System unter Berücksichtigung
@@ -962,8 +972,9 @@ const UserExperience = {
           entspricht
         </li>
         <li>
-          <b>Positive Emotionen</b>, etwa das Gefühl, etwas „Cooles“,
-          „Einzigartiges“ oder „Elegantes“ zu nutzen
+          <b>Positive Emotionen</b>, etwa das Gefühl, etwas
+          &bdquo;Cooles&ldquo;, &bdquo;Einzigartiges&ldquo; oder
+          &bdquo;Elegantes&ldquo; zu nutzen
         </li>
         <li>
           <b>Stärkere Markenbindung</b>, weil das Nutzungserlebnis positiv in
@@ -989,10 +1000,11 @@ const UserExperience = {
         oder ein Produkt erleben - und das betrifft nicht nur,{" "}
         <b>wie gut etwas funktioniert</b>, sondern auch,
         <b>wie es sich dabei anfühlt</b>. Also: Es geht sowohl um die praktische
-        Seite (z. B. „Finde ich schnell, was ich suche?“) als auch um die{" "}
-        <b>emotionale</b> (z. B. „Macht es mir Spaß, das zu benutzen?“ oder
-        „Fühlt es sich angenehm an?“). Im Forschungskontext lässt sich dies als
-        so genannte pragmatische und hedonische Qualitäten aufschlüsseln:
+        Seite (z. B. &bdquo;Finde ich schnell, was ich suche?&ldquo;) als auch
+        um die <b>emotionale</b> (z. B. &bdquo;Macht es mir Spaß, das zu
+        benutzen?&ldquo; oder &bdquo;Fühlt es sich angenehm an?&ldquo;). Im
+        Forschungskontext lässt sich dies als so genannte pragmatische und
+        hedonische Qualitäten aufschlüsseln:
       </p>
       <Table data={pragamatischeHedonischTableData} headerStyle={true} />
       <h3>3. Weitere Aspekte guter UX</h3>
@@ -1122,33 +1134,34 @@ const MenschComputerInteraktion = {
       </p>
       <p>
         Mentale Modelle beruhen auf Erfahrungen, Intuitionen und Analogien.
-        Jakob Nielsen (2010) beschreibt sie so: „A mental model is what the user
-        believes about the system at hand.“ Es basiert auf Glauben, nicht auf
-        Fakten. Sie helfen dabei, Komplexität zu reduzieren, indem sie Konzepte
-        und deren Beziehungen vereinfacht abbilden. Damit erfüllen seine
-        wichtige Rolle, um unseren Alltag voller Technologien zu bestreiten.
-        Viele Menschen können bspw. ihre PKWs oder Mobiltelefone bedienen, weil
-        sie ein mentales Modell von unterschiedlichen Funktionsweisen haben. Ein
-        vollständiges Wissen darüber, wie genau ein Elektromotor funktioniert
-        ist nicht notwendig, um ein E-Auto zu bedienen.
+        Jakob Nielsen (2010) beschreibt sie so: &bdquo;A mental model is what
+        the user believes about the system at hand.&ldquo; Es basiert auf
+        Glauben, nicht auf Fakten. Sie helfen dabei, Komplexität zu reduzieren,
+        indem sie Konzepte und deren Beziehungen vereinfacht abbilden. Damit
+        erfüllen seine wichtige Rolle, um unseren Alltag voller Technologien zu
+        bestreiten. Viele Menschen können bspw. ihre PKWs oder Mobiltelefone
+        bedienen, weil sie ein mentales Modell von unterschiedlichen
+        Funktionsweisen haben. Ein vollständiges Wissen darüber, wie genau ein
+        Elektromotor funktioniert ist nicht notwendig, um ein E-Auto zu
+        bedienen.
       </p>
       <p>
         Designer:innen oder Entwickler:innen verfügen meist über ein tieferes
         technisches Verständnis, wodurch sich ihre Modelle oft von denen der
         Nutzer:innen unterscheiden. Umso wichtiger ist nutzerzentriertes Design:
-        „Design with users, not just for users.“ Gute Gestaltung folgt den
-        mentalen Modellen der Nutzer:innen.{" "}
+        &bdquo;Design with users, not just for users.&ldquo; Gute Gestaltung
+        folgt den mentalen Modellen der Nutzer:innen.{" "}
       </p>
       <h3>Ein Beispiel für ein mentales Modell</h3>
       <p>
-        Viele Nutzer:innen gehen davon aus, dass ein KI-Chatbot „wie ein Mensch“
-        denkt und versteht. Ihr mentales Modell basiert auf natürlicher Sprache,
-        schnellen Antworten und auf scheinbarem Verständnis. In Wirklichkeit
-        verarbeitet der Chatbot jedoch statistische Wahrscheinlichkeiten und
-        greift auf große Sprachmodelle zurück. Ein echtes Verständnis im
-        menschlichen Sinn ist somit nicht gegeben. Dennoch ermöglicht dieses
-        vereinfachte Modell eine einfache Nutzung: Fragen stellen, Antworten
-        erhalten, Probleme lösen.{" "}
+        Viele Nutzer:innen gehen davon aus, dass ein KI-Chatbot &bdquo;wie ein
+        Mensch&ldquo; denkt und versteht. Ihr mentales Modell basiert auf
+        natürlicher Sprache, schnellen Antworten und auf scheinbarem
+        Verständnis. In Wirklichkeit verarbeitet der Chatbot jedoch statistische
+        Wahrscheinlichkeiten und greift auf große Sprachmodelle zurück. Ein
+        echtes Verständnis im menschlichen Sinn ist somit nicht gegeben. Dennoch
+        ermöglicht dieses vereinfachte Modell eine einfache Nutzung: Fragen
+        stellen, Antworten erhalten, Probleme lösen.{" "}
       </p>
       <p>
         Das Design solcher Systeme greift diese mentalen Modelle also auf, um
@@ -1156,9 +1169,9 @@ const MenschComputerInteraktion = {
         und Frustration führen, wenn der Chatbot an seine Grenzen stößt. Daher
         müssen klare Hinweise auf die tatsächlichen Fähigkeiten und Begrenzungen
         gegeben werden, um realistische Erwartungen zu fördern bspw. indem
-        irreführende Beschreibungen wie “das System muss überlegen” oder “der
-        Bot antwortet” vermieden werden, um kein menschliches Denken zu
-        suggerieren.{" "}
+        irreführende Beschreibungen wie &ldquo;das System muss überlegen” oder
+        &ldquo;der Bot antwortet” vermieden werden, um kein menschliches Denken
+        zu suggerieren.{" "}
       </p>
     </section>,
     <section>
@@ -1204,8 +1217,8 @@ const MenschComputerInteraktion = {
           "<b>Implementierung (Build)</b>: Die entworfenen Lösungen werden technisch umgesetzt und in das reale System integriert.",
           <p>
             <b>Evaluationen</b>: In Usability-Tests, A/B-Tests oder durch reale
-            Nutzungsszenarien („in the wild“) wird überprüft, wie gut das System
-            tatsächlich funktioniert. Mehr dazu im Kapitel{" "}
+            Nutzungsszenarien (&bdquo;in the wild&ldquo;) wird überprüft, wie
+            gut das System tatsächlich funktioniert. Mehr dazu im Kapitel{" "}
             <LinkHandler to={"/ux-und-usability/evaluation"}>
               <b>Evaluation</b>
             </LinkHandler>
@@ -1361,8 +1374,8 @@ const Evaluation = {
       <p>
         Dabei gilt: Usability-Tests können die Benutzerfreundlichkeit zwar
         verbessern, ersetzen aber keine gute Gestaltung. Eine gute User
-        Experience lässt sich nicht einfach „herantesten“. Eine erfolgreiche
-        Evaluation setzt daher ein grundlegendes{" "}
+        Experience lässt sich nicht einfach &bdquo;herantesten&ldquo;. Eine
+        erfolgreiche Evaluation setzt daher ein grundlegendes{" "}
         <b>Verständnis der Nutzer:innen</b> und <b>ihrer Aufgaben</b> im{" "}
         <LinkHandler to={"/ux-und-usability/nutzungskontext"}>
           <b>Nutzungskontext</b>
@@ -1451,8 +1464,6 @@ const Evaluation = {
           </p>
         </div>
         <div className="flex gap-[var(--scale2)]">
-          {/*           <img src={icon_smile} alt="Icon Lächeln" />
-           */}{" "}
           <SmileIcon className="w-[73px] h-[73px]" />
           <p>
             <b>Zufriedenheit</b>: Wie empfinden Nutzer:innen die Nutzung? <br />
@@ -1786,10 +1797,10 @@ const Fazit = {
       <h2>Die 5 Grundbegriffe und ihre Relevanz</h2>
       <List
         items={[
-          "<h4>Warum ist Usability wichtig für gemeinwohlorientierte KI?</h4> <p>Usability entspricht ungefähr dem, was viele unter „Benutzerfreundlichkeit“ verstehen. Sie stellt sicher, dass möglichst alle Menschen, unabhängig von ihrem technischen Wissen, die KI-Systeme effektiv, effizient und ohne große Hürden nutzen können. Dies ist entscheidend, um den Zugang zu gemeinwohlorientierten Diensten für eine breite Bevölkerungsschicht zu ermöglichen.</p>",
+          "<h4>Warum ist Usability wichtig für gemeinwohlorientierte KI?</h4> <p>Usability entspricht ungefähr dem, was viele unter &bdquo;Benutzerfreundlichkeit&ldquo; verstehen. Sie stellt sicher, dass möglichst alle Menschen, unabhängig von ihrem technischen Wissen, die KI-Systeme effektiv, effizient und ohne große Hürden nutzen können. Dies ist entscheidend, um den Zugang zu gemeinwohlorientierten Diensten für eine breite Bevölkerungsschicht zu ermöglichen.</p>",
           "<h4>Warum ist es wichtig, den Nutzungskontext gemeinwohlorientierter KI zu analysieren und zu verstehen?</h4> <p>Die Analyse des Nutzungskontexts hilft, die Bedürfnisse, Fähigkeiten und Herausforderungen der Zielgruppen zu verstehen. Gerade in gemeinwohlorientierten Projekten sind Kenntnisse über soziale Hintergründe, Sprachkenntnisse, Ausbildungsniveau, Barrierefreiheit und die technische Ausstattung der Nutzer:innen essenziell, um die KI inklusiv und gerecht zu gestalten.</p>",
           "<h4>Welche Rolle spielt User Experience (UX) für gemeinwohlorientierte KI?</h4> <p>Eine positive UX fördert das Vertrauen in die KI und sorgt dafür, dass Menschen die Systeme gerne und regelmäßig nutzen. Gerade bei gemeinwohlorientierten Anwendungen kann eine intuitive und ansprechende UX die Akzeptanz und Wirksamkeit erheblich steigern.</p>",
-          "<h4>Was hat Mensch-Computer-Interaktion mit gemeinwohlorientierter KI zu tun?</h4> <p>Die Mensch-Computer-Interaktion (MCI) oder Human-Computer Interaction (HCI) ist eine Forschungsdisziplin und liefert uns die notwendigen Methoden und Modelle, um die Interaktion zwischen Mensch und KI zu verbessern. Sie hilft, die Schnittstellen gebrauchstauglich, verständlich, aufgabenangemessen und barrierefrei zu gestalten. Besonders bei gemeinwohlorientierten Projekten ist es wichtig, die Bedürfnisse vielfältiger Nutzergruppen – etwa Senioren, Menschen mit Behinderungen oder technikferne Personen – zu berücksichtigen.</p>",
+          "<h4>Was hat Mensch-Computer-Interaktion mit gemeinwohlorientierter KI zu tun?</h4> <p>Die Mensch-Computer-Interaktion (MCI) oder Human-Computer Interaction (HCI) ist eine Forschungsdisziplin und liefert uns die notwendigen Methoden und Modelle, um die Interaktion zwischen Mensch und KI zu verbessern. Sie hilft, die Schnittstellen gebrauchstauglich, verständlich, aufgabenangemessen und barrierefrei zu gestalten. Besonders bei gemeinwohlorientierten Projekten ist es wichtig, die Bedürfnisse vielfältiger Nutzergruppen - etwa Senioren, Menschen mit Behinderungen oder technikferne Personen – zu berücksichtigen.</p>",
           "<h4>Wieso sollte man die UX gemeinwohlorientierter KI evaluieren?</h4> <p>Eine Evaluation macht sichtbar, ob die gemeinwohlorientierte KI tatsächlich ihren Zweck erfüllt und von den Menschen akzeptiert wird. Durch Tests, Nutzerfeedback und Datenauswertungen kann man  sicherstellen, dass die Systeme inklusiv, effizient und nachhaltig sind. Evaluationen helfen außerdem dabei, mögliche Diskriminierungen durch die Bedienkonzepte oder die KI frühzeitig zu erkennen und zu beheben.</p>",
         ]}
       />

@@ -18,6 +18,10 @@ import labels_light from "../../assets/images/kiTechnologien/labels-light.png";
 import labels_dark from "../../assets/images/kiTechnologien/labels-dark.png";
 import over_light from "../../assets/images/kiTechnologien/over-light.png";
 import over_dark from "../../assets/images/kiTechnologien/over-dark.png";
+import uuw_light from "../../assets/images/kiTechnologien/uuw-light.png";
+import uuw_dark from "../../assets/images/kiTechnologien/uuw-dark.png";
+import bl_light from "../../assets/images/kiTechnologien/bl-light.png";
+import bl_dark from "../../assets/images/kiTechnologien/bl-dark.png";
 import ArrowIcon from "../1_elements/ArrowIcon";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
 import Sources from "../Sources";
@@ -1238,6 +1242,13 @@ const VerarbeitungTechnik = {
         anderen, und so weiter. Auf diese Weise lassen sich Strukturen in den
         Daten erkennen, ohne dass vorherige Kennzeichnungen nötig sind.
       </p>
+      <p className="max-w-[800px]">
+        <ThemeImage
+          darkSrc={uuw_dark}
+          lightSrc={uuw_light}
+          alt="Bild unüberwachtes Lernen"
+        />
+      </p>
       <h3>4. Herausforderungen beim unüberwachten Lernen</h3>
       <p>
         Im Gegensatz zum überwachten Lernen bringt das unüberwachte Lernen
@@ -1347,7 +1358,13 @@ const VerarbeitungTechnik = {
           in denen sich Situationen ständig ändern und Flexibilität gefragt ist.
         </li>
       </ul>
-
+      <p className="max-w-[700px]">
+        <ThemeImage
+          darkSrc={bl_dark}
+          lightSrc={bl_light}
+          alt="Bild Bestärkendes Lernen"
+        />
+      </p>
       <h3>Zusammenfassung</h3>
       <p>
         Bestärkendes Lernen basiert auf dem Prinzip von{" "}

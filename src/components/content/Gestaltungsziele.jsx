@@ -1,4 +1,4 @@
-import ImageElement from "../../assets/icons/ux-bezogen.svg?react";
+import ImageElement from "../../assets/icons/gestaltungsziele.svg?react";
 import { LinkHandler } from "../1_elements/LinkHandler";
 import { VideoContainer } from "../1_elements/VideoContainer";
 import SubTopicCard from "../2_molecule/cards/SubTopicCard";
@@ -2114,8 +2114,8 @@ const Fazit = {
       <p>
         Die behandelten Aspekte -{" "}
         <b>
-          Vertrauenswürdigkeit, Transparenz, Erklärbarkeit, Kontrollierbarkeit und
-          mentale Modellbildung
+          Vertrauenswürdigkeit, Transparenz, Erklärbarkeit, Kontrollierbarkeit
+          und mentale Modellbildung
         </b>{" "}
         - bilden ein eng verzahntes Set an Qualitätsdimensionen. Sie greifen
         ineinander, bedingen sich gegenseitig und haben gemeinsam ein Ziel:{" "}

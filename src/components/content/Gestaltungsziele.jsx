@@ -1,4 +1,4 @@
-import ImageElement from "../../assets/icons/gestaltungsziele.svg?react";
+import ImageElement from "../../assets/icons/ux-bezogen.svg?react";
 import { LinkHandler } from "../1_elements/LinkHandler";
 import { VideoContainer } from "../1_elements/VideoContainer";
 import SubTopicCard from "../2_molecule/cards/SubTopicCard";

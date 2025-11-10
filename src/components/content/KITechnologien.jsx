@@ -1,4 +1,4 @@
-import ImageElement from "../../assets/icons/ki_technik_verstehen.svg?react";
+import ImageElement from "../../assets/icons/verarbeitung.svg?react";
 import ThemeImage from "../1_elements/ThemeImage";
 import { VideoContainer } from "../1_elements/VideoContainer";
 import { ChapterHeader } from "../3_organism/ChapterHeader";

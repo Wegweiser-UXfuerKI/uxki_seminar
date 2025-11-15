@@ -20,7 +20,7 @@ const Footer = () => (
         Projektseite
       </FooterLink>
       <FooterLink
-        href="https://ux-fuer-ki.de/impressum.html"
+        href="https://projekt.ux-fuer-ki.de/impressum.html"
         title="Zum Impressum">
         Impressum
       </FooterLink>

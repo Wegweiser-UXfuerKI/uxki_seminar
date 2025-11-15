@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../../AppContext";
+import MoonIcon from "../../../src/assets/icons/moon.svg?react";
+import SunIcon from "../../../src/assets/icons/sun.svg?react";
 
 /**
  * ThemeToggle Component
@@ -36,14 +38,18 @@ export const ThemeToggle = () => {
         backgroundColor: theme === "light" ? "var(--fg)" : "var(--bg)",
       }}>
       <span className="sr-only">Toggle theme</span>
+
+      {/* Toggle Circle */}
       <div
-        className={`h-5 w-5 transform rounded-full transition ${
-          theme === "light" ? "translate-x-1" : "translate-x-6"
-        }`}
-        style={{
-          backgroundColor: "var(--text)",
-        }}
-      />
+        className={`h-5 w-5 transform rounded-full flex items-center justify-center transition
+          ${theme === "light" ? "translate-x-1" : "translate-x-6"}`}
+        style={{ backgroundColor: "var(--text)"}}>
+        {theme === "light" ? (
+          <SunIcon width={12} height={12} style={{ fill: "var(--w)"}}/>
+        ) : (
+          <MoonIcon width={12} height={12} style={{ fill: "var(--bg)"}}/>
+        )}
+      </div>
     </button>
   );
 };

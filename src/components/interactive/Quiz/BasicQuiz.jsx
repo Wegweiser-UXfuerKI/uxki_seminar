@@ -270,14 +270,28 @@ const BasicQuiz = ({ quizData, shuffleQuestions = false }) => {
   }
 
   return (
-    <div className="max-w-[960px] mx-auto my-8 md:p-16 sm:p-12 p-88 glassBox no-hover rounded-[48px] overflow-hidden shadow-lg">
+    <div className="max-w-[960px] mx-auto my-8 md:p-16 p-[var(--scale4)] glassBox no-hover rounded-[48px] overflow-hidden shadow-lg">
       {!showResults ? (
         <>
           <Question {...questionComponentProps} />
 
-          <div className="flex  justify-between">
-            <div className="mt-8 flex flex-col justify-between items-start space-y-3">
-              <div className="text-sm text-gray-600 dark:text-gray-400 flex items-center">
+          <div className="w-full min-h-6 flex flex-col justify-between md:flex-row-reverse gap-[var(--scale2)]">
+            {showMainActionButton &&
+              Object.keys(mainButtonConfig).length > 0 && (
+                <BaseButton
+                  onClick={mainButtonConfig.action}
+                  disabled={mainButtonConfig.disabled}
+                  className={`font-medium px-6 py-4 h-min rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900 ${
+                    mainButtonConfig.disabled
+                      ? "opacity-50 cursor-not-allowed"
+                      : ""
+                  }`}
+                  ariaLabel={mainButtonConfig.text}>
+                  {mainButtonConfig.text}
+                </BaseButton>
+              )}
+            <div className="text-sm text-gray-600 dark:text-gray-400 flex flex-col md:flex-row items-center">
+              <div className="w-full md:w-fit flex justify-between items-center">
                 <BaseButton
                   onClick={() => handleNavigateQuestion("prev")}
                   disabled={!canNavigatePrev}
@@ -300,27 +314,12 @@ const BasicQuiz = ({ quizData, shuffleQuestions = false }) => {
                   ariaLabel="Nächste Frage">
                   <ArrowIcon direction="right" />
                 </BaseButton>
-                <span className="mx-2">|</span>
+              </div>
+              <span className="mx-2 hidden md:inline">|</span>
+              <div className="mt-[var(--scale2)] md:mt-0">
                 Korrekte Antworten bisher: {score}
               </div>
             </div>
-
-            {showMainActionButton &&
-              Object.keys(mainButtonConfig).length > 0 && (
-                <div className="mt-8 flex justify-end">
-                  <BaseButton
-                    onClick={mainButtonConfig.action}
-                    disabled={mainButtonConfig.disabled}
-                    className={`relative font-medium px-6 py-4 h-min rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900 ${
-                      mainButtonConfig.disabled
-                        ? "opacity-50 cursor-not-allowed"
-                        : ""
-                    }`}
-                    ariaLabel={mainButtonConfig.text}>
-                    {mainButtonConfig.text}
-                  </BaseButton>
-                </div>
-              )}
           </div>
         </>
       ) : (

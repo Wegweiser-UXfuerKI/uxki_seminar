@@ -141,34 +141,33 @@ const DropDownMenu = ({
         style={positionStyle}
         aria-label={`Untermenü für ${title}`}>
         {title && <h4>{title}</h4>}
-        {!isDisabledModule &&
-          items?.map(([link, name], index) => {
-            const isDisabled = disabledItems.some((disabledLink) =>
-              link.endsWith(`/${disabledLink}`)
-            );
-            const isActive = link === selectedLink;
+        {items?.map(([link, name], index) => {
+          const isDisabled = disabledItems.some((disabledLink) =>
+            link.endsWith(`/${disabledLink}`)
+          );
+          const isActive = link === selectedLink;
 
-            return (
-              <Link
-                key={link}
-                to={isDisabled ? "#" : `/${link}`}
-                onClick={(e) => {
-                  if (isDisabled) {
-                    e.preventDefault();
-                  } else {
-                    handleChapterChange(link);
-                  }
-                }}
-                className={`secondLevel no_underline no_link_hover rounded-lg px-2 py-1 ${
-                  isDisabled ? "disabled" : isActive ? "active" : ""
-                }`}
-                tabIndex={isDisabled ? -1 : 0}
-                role="menuitem"
-                aria-disabled={isDisabled}>
-                {`${index + 1}: ${name}`}
-              </Link>
-            );
-          })}
+          return (
+            <Link
+              key={link}
+              to={isDisabled ? "#" : `/${link}`}
+              onClick={(e) => {
+                if (isDisabled) {
+                  e.preventDefault();
+                } else {
+                  handleChapterChange(link);
+                }
+              }}
+              className={`secondLevel no_underline no_link_hover rounded-lg px-2 py-1 ${
+                isDisabled ? "disabled opacity-50 " : isActive ? "active" : ""
+              }`}
+              tabIndex={isDisabled ? -1 : 0}
+              role="menuitem"
+              aria-disabled={isDisabled}>
+              {`${index + 1}: ${name}`}
+            </Link>
+          );
+        })}
       </motion.div>
     </motion.div>
   );

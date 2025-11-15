@@ -44,7 +44,9 @@ const disabledModules = ["automatisierungspotenziale-erkennen"];
 
 // Disabled subtopics for specific modules
 // example: "automatisierungspotenziale-erkennen": ["einleitung"],
-const disabledSubtopics = {};
+const disabledSubtopics = {
+  "automatisierungspotenziale-erkennen": ["einleitung"],
+};
 
 /**
  * Collects all modules (live and dev).

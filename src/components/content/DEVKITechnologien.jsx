@@ -424,8 +424,7 @@ const InputTechnik = {
         <CarouselContainer sideVisibility={10}>
           <div
             title="Falsche Abbildung der Realität"
-            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover"
-          >
+            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
             <h4>Falsche Abbildung der Realität</h4>
             <p>
               Hier sind die Daten schlicht{" "}
@@ -440,8 +439,7 @@ const InputTechnik = {
           </div>
           <div
             title="Abbildung einer ungleichen Realität"
-            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover"
-          >
+            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
             <h4>Abbildung einer ungleichen Realität</h4>
             <p>
               In diesem Fall spiegeln die Daten die reale Welt korrekt wider -
@@ -625,8 +623,7 @@ const InputInformation = {
       </p>
       <Accordion
         title="Das Beispiel &bdquo;Wohnbrücke e. V.&ldquo;"
-        initiallyOpen
-      >
+        initiallyOpen>
         <p>
           Die Organisation <i>Wohnbrücke e. V.</i> unterstützt Menschen in Not
           bei der Wohnungssuche in einer Großstadt.
@@ -1731,7 +1728,7 @@ const VerarbeitungInformation = {
       <p>
         Solche Effekte zu erkennen, ist Teil einer reflektierten Anwendung
         dieser Methode - und genau deshalb sind PDPs besonders nützlich,{" "}
-        <b>wenn sie gemeinsam mit anderen Verfahren</b> wie Shapley-Werten
+        <b>wenn sie gemeinsam mit anderen Verfahren</b>, wie Shapley-Werten,
         eingesetzt werden.
       </p>
     </section>,
@@ -1745,9 +1742,9 @@ const VerarbeitungInformation = {
         wissen, <i>wie</i> sie wirken. Oft möchten wir auch wissen,{" "}
         <i>wie stark</i> sich das Wegfallen oder Verfälschen eines Faktors oder
         dessen Reihenfolge im System auf das Ergebnis auswirkt. <br />
-        Eine Methode, die genau das messbar macht, ist die Permutation Feature
-        Importance (PFI) - zu Deutsch: die Bedeutung eines Merkmals durch
-        Zufallsdurchmischung.
+        Eine Methode, die genau das messbar macht, ist die{" "}
+        <b>Permutation Feature Importance (PFI)</b> - zu Deutsch: die Bedeutung
+        eines Merkmals durch Zufallsdurchmischung.
       </p>
       <h3>Grundidee: Was passiert, wenn wir die Reihenfolge verändern?</h3>
       <p>
@@ -1963,7 +1960,7 @@ const OutputTechnik = {
       <p>
         Viele KI-Systeme ordnen Daten in Kategorien ein. Diese Form des Outputs
         findet sich häufig bei Klassifikationsaufgaben - etwa, wenn ein System
-        E-Mails als &bdquo;Spam&ldquo; oder &bdquo;Nich&ldquo;-Spam“ markiert,
+        E-Mails als &bdquo;Spam&ldquo; oder &bdquo;Nicht-Spam&ldquo; markiert,
         oder wenn ein Textanalysetool die Stimmung eines Textes als
         &bdquo;positiv&ldquo;, &bdquo;neutral&ldquo; oder &bdquo;negativ&ldquo;
         einstuft.
@@ -2304,7 +2301,7 @@ const OutputInformation = {
         einflussreich, Geschlecht dagegen weniger.&ldquo;
       </p>
       <p className="specialText">
-        <b>Kurz</b>: Welche Faktoren haben in genau diesem Fall das ERgebnis
+        <b>Kurz</b>: Welche Faktoren haben in genau diesem Fall das Ergebnis
         bestimmt?
       </p>
       <p>
@@ -2401,9 +2398,9 @@ const OutputInformation = {
       <p>Die KI gibt zusätzlich eine counterfaktische Empfehlung:</p>
       <p>
         <b>
-          &bdquo; Wenn der BMI um 2 Punkte reduziert wird oder der Patient 2
+          &bdquo;Wenn der BMI um 2 Punkte reduziert wird oder der Patient 2
           zusätzliche Sporteinheiten pro Woche durchführt, sinkt das
-          Diabetes-Risiko von 78% auf 45%. &ldquo;
+          Diabetes-Risiko von 78% auf 45%.&ldquo;
         </b>
       </p>
       <p>Im Interface kann die Ärztin z.B. einen Schieberegler bewegen:</p>
@@ -2708,7 +2705,7 @@ const LLM = {
         So leistungsfähig Large Language Models auch sind, besteht das Risiko,
         dass ihre Texte <b>sprachlich überzeugend und intelligent wirken</b>,
         aber <b>inhaltlich nicht korrekt</b> sind. LLMs kennen keine absolute
-        Wahrheit; sie erzeugen Inhalte ausschließlich auf Basis von
+        Wahrheit; sie erzeugen Inhalte ausschließlich auf Basis von{" "}
         <b>statistischen Wahrscheinlichkeiten</b>, die aus Trainingsdaten und
         Bewertungen abgeleitet werden, und stoßen dabei an folgende{" "}
         <b>Grenzen und Herausforderungen</b>:
@@ -2818,7 +2815,7 @@ const LLM = {
       </h4>
       <ul>
         <li>Text &rarr; alle klassischen LLMs</li>
-        <li>Multimodla (Text, Bild, Audio) &rarr; Gemini, GPT-4 multimodal</li>
+        <li>Multimodal (Text, Bild, Audio) &rarr; Gemini, GPT-4 multimodal</li>
       </ul>
       <p>
         <b>Beispiel</b>: Für ein Projekt, das Bildbeschriebungen generieren soll

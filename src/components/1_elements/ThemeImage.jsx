@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const ThemeImage = ({ lightSrc, darkSrc, alt = "" }) => {
+const ThemeImage = ({ lightSrc, darkSrc, alt = "", className = "" }) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const ThemeImage = ({ lightSrc, darkSrc, alt = "" }) => {
     <img
       src={isDarkMode ? darkSrc : lightSrc}
       alt={alt}
-      className="h-full w-full"
+      className={`h-full w-full ${className}`}
     />
   );
 };

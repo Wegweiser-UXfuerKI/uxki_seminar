@@ -50,7 +50,7 @@ const Vertrauenswürdigkeit = {
         ihre Akzeptanz und verantwortungsvolle Nutzung ist.
       </p>
       <VideoContainer
-        link="https://www.youtube-nocookie.com/embed/n5T6GVjXyJ4?rel=0&modestbranding=1"
+        link="https://www.youtube-nocookie.com/embed/aZZJB2xuY88?rel=0&modestbranding=1"
         title="Vertrauenswürdigkeit"
       />
     </section>,
@@ -474,7 +474,7 @@ const Transparenz = {
         kann, sowie dess Aspekte im Bezug zur UX.
       </p>
       <VideoContainer
-        link="https://www.youtube-nocookie.com/embed/M1daurSX-Fk?rel=0&modestbranding=1"
+        link="https://www.youtube-nocookie.com/embed/yRCWVsM9SAY?rel=0&modestbranding=1"
         title="Transparenz"
       />
     </section>,
@@ -836,7 +836,7 @@ const Erklärbarkeit = {
         Erklärbare KI ist.
       </p>
       <VideoContainer
-        link="https://www.youtube-nocookie.com/embed/fAJ8rQdWzv0?rel=0&modestbranding=1"
+        link="https://www.youtube-nocookie.com/embed/0yxclsV4ysE?rel=0&modestbranding=1"
         title="Erklärbarkeit"
       />
     </section>,
@@ -1364,7 +1364,7 @@ const Kontrollierbarkeit = {
         nutzerzentriertes, sicheres und vertrauenswürdiges KI-Design spielt.
       </p>
       <VideoContainer
-        link="https://www.youtube-nocookie.com/embed/7fRa7xfLmwc?rel=0&modestbranding=1"
+        link="https://www.youtube-nocookie.com/embed/Mu8MafXxgVI?rel=0&modestbranding=1"
         title="Kontrollierbarkeit"
       />
     </section>,

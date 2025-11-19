@@ -29,6 +29,7 @@ export const Table = ({
   headerStyle = true,
   columnWidths,
   verticalAlignedCells = false,
+  background = true,
 }) => {
   if (!data || data.length === 0) {
     return null;
@@ -51,7 +52,10 @@ export const Table = ({
 
   return (
     <div
-      className={`${styles.table_container} ${styles.background} no-hover shadow`}>
+      className={`${styles.table_container} ${
+        background ? styles.background : ""
+      } no-hover shadow`}
+    >
       <div className={styles.table} style={tableStyle}>
         {/* Header kram */}
         <div
@@ -59,7 +63,8 @@ export const Table = ({
             headerStyle
               ? `${styles.header_row} ${styles.background} no-hover shadow`
               : ""
-          }`}>
+          }`}
+        >
           {headers.map((header, index) => (
             <React.Fragment key={index}>
               <div className={styles.table_cell}>{header}</div>
@@ -76,7 +81,8 @@ export const Table = ({
             key={rowIndex}
             className={`${styles.table_row} ${
               verticalAlignedCells ? styles.align_center : styles.align_top
-            }`}>
+            }`}
+          >
             {row.map((cell, cellIndex) => (
               <React.Fragment key={cellIndex}>
                 <div className={styles.table_cell}>{cell}</div>

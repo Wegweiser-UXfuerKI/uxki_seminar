@@ -1067,7 +1067,7 @@ const VerarbeitungTechnik = {
             darkSrc={kvr_dark}
             lightSrc={kvr_light}
             alt="Grafik zur Klassifikation"
-            className="max-w-none w-[250%]"
+            className="max-w-none min-w-[250%]"
           />
         </div>
       </div>
@@ -1104,7 +1104,7 @@ const VerarbeitungTechnik = {
             darkSrc={kvr_dark}
             lightSrc={kvr_light}
             alt="Grafik zur Regression"
-            className="max-w-none w-[250%] -ml-[150%]"
+            className="max-w-none min-w-[250%] -ml-[150%]"
           />
         </div>
       </div>

@@ -46,7 +46,7 @@ const sectionsInputTechnik = [
   },
   {
     id: "8",
-    title: "Bias: Wenn Daten ein verzerrtes Bild der Realität zeigen",
+    title: "Bias",
   },
 ];
 
@@ -387,7 +387,7 @@ const InputTechnik = {
       </p>
     </section>,
     <section>
-      <h2>7. Bias: Wenn Daten ein verzerrtes Bild der Realität zeigen</h2>
+      <h2>7. Bias</h2>
       <p>
         Ein weiteres zentrales Thema im Umgang mit Daten für KI-Systeme ist{" "}
         <b>Bias</b>, also eine <b>Verzerrung oder Schieflage in den Daten</b>.
@@ -503,13 +503,13 @@ const sectionsInputGestaltung = [
   },
   {
     id: "3",
-    title: "Information Disclosure - Kontext schaffen und Vertrauen fördern",
+    title: "Information Disclosure",
   },
-  { id: "4", title: "Informationen editieren - Lernen durch Interaktion" },
+  { id: "4", title: "Informationen editieren" },
   { id: "5", title: "Zeitverlauf - Entscheidungen nachvollziehbar machen" },
   {
     id: "6",
-    title: "Fazit: Gestaltung der Informationsverarbeitung als Lernprozess",
+    title: "Fazit",
   },
 ];
 
@@ -607,9 +607,7 @@ const InputInformation = {
       </p>
     </section>,
     <section>
-      <h2>
-        2. Information Disclosure - Kontext schaffen und Vertrauen fördern
-      </h2>
+      <h2>2. Information Disclosure</h2>
       <p>
         Information Disclosure bedeutet, dass ein KI-System mehr Informationen
         bereitstellt, als nur das bloße Ergebnis.
@@ -698,7 +696,7 @@ const InputInformation = {
       </ul>
     </section>,
     <section>
-      <h2>3. Informationen editieren - Lernen durch Interaktion</h2>
+      <h2>3. Informationen editieren</h2>
       <p>
         Während Disclosure Transparenz schafft, lädt die Methode des Information
         Editierens zur aktiven Auseinandersetzung ein. <br />
@@ -824,7 +822,7 @@ const InputInformation = {
       </ul>
     </section>,
     <section>
-      <h2>5. Fazit: Gestaltung der Informationsverarbeitung als Lernprozess</h2>
+      <h2>5. Fazit</h2>
       <p>
         Diese drei Methoden - Disclosure, Editieren und Zeitverlauf -
         verdeutlichen, dass Informationsverarbeitung in KI-Systemen kein
@@ -1187,7 +1185,7 @@ const VerarbeitungTechnik = {
           Wie können diese Daten sinnvoll gruppiert oder zusammengefasst werden?
         </li>
       </ul>
-      <h3>2. Clustering - Die zentrale Methode</h3>
+      <h3>2. Clustering</h3>
       <p>
         Eine der wichtigsten Methoden im unüberwachten Lernen ist das{" "}
         <b>Clustering</b>. Darunter versteht man die{" "}
@@ -1385,11 +1383,11 @@ const sectionsVerarbeitungGestaltung = [
   },
   {
     id: "3",
-    title: "Partial Dependence Plots - Zusammenhänge sichtbar machen",
+    title: "Partial Dependence Plots",
   },
   {
     id: "4",
-    title: "Permutation Feature Importance - Welche Faktoren wirklich zählen",
+    title: "Permutation Feature Importance",
   },
 ];
 
@@ -1550,7 +1548,7 @@ const VerarbeitungInformation = {
       </p>
     </section>,
     <section>
-      <h2>2. Partial Dependence Plots - Zusammenhänge sichtbar machen</h2>
+      <h2>2. Partial Dependence Plots</h2>
       <p>
         Während <b>Shapley-Werte</b> uns zeigen, <i>welchen Anteil</i> einzelne
         Faktoren an einer Entscheidung haben, helfen{" "}
@@ -1704,9 +1702,7 @@ const VerarbeitungInformation = {
       </p>
     </section>,
     <section>
-      <h2>
-        3. Permutation Feature Importance - Welche Faktoren wirklich zählen
-      </h2>
+      <h2>3. Permutation Feature Importance</h2>
       <p>
         Wenn wir verstehen wollen, welche Eingabefaktoren für die Entscheidungen
         eines KI-Systems tatsächlich wichtig sind, reicht es nicht immer, nur zu

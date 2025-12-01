@@ -12,8 +12,10 @@ import llm_dark from "../../assets/images/kiTechnologien/LLM-dark.png";
 import llm_light from "../../assets/images/kiTechnologien/LLM-light.png";
 import iip_light from "../../assets/images/kiTechnologien/IIP-light.png";
 import iip_dark from "../../assets/images/kiTechnologien/IIP-dark.png";
-import kvr_light from "../../assets/images/kiTechnologien/kvr-light.png";
-import kvr_dark from "../../assets/images/kiTechnologien/kvr-dark.png";
+import k_light from "../../assets/images/kiTechnologien/Klassifikation-light.png";
+import k_dark from "../../assets/images/kiTechnologien/Klassifikation-dark.png";
+import r_light from "../../assets/images/kiTechnologien/Regression-light.png";
+import r_dark from "../../assets/images/kiTechnologien/Regression-dark.png";
 import labels_light from "../../assets/images/kiTechnologien/labels-light.png";
 import labels_dark from "../../assets/images/kiTechnologien/labels-dark.png";
 import over_light from "../../assets/images/kiTechnologien/over-light.png";
@@ -22,6 +24,8 @@ import uuw_light from "../../assets/images/kiTechnologien/uuw-light.png";
 import uuw_dark from "../../assets/images/kiTechnologien/uuw-dark.png";
 import bl_light from "../../assets/images/kiTechnologien/bl-light.png";
 import bl_dark from "../../assets/images/kiTechnologien/bl-dark.png";
+import shapley_light from "../../assets/images/kiTechnologien/shapley-light.png";
+import shapley_dark from "../../assets/images/kiTechnologien/shapley-dark.png";
 import ArrowIcon from "../1_elements/ArrowIcon";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
 import Sources from "../Sources";
@@ -156,7 +160,10 @@ const InputTechnik = {
         </p>
         <p>
           <b>Halbstrukturierte Daten</b>: Mischformen wie JSON oder XML, die
-          Strukturmerkmale enthalten, aber flexibel bleiben.
+          Strukturmerkmale enthalten, aber flexibel bleiben. Beides sind
+          textbasierte Formate, die Informationen in festen Strukturen
+          speichern: JSON vor allem als Schlüssel-Wert-Paare, XML in
+          verschachtelten Tags.
         </p>
       </div>
       <p>
@@ -225,7 +232,7 @@ const InputTechnik = {
           hoch&ldquo;) hingegen schon.
         </li>
         <li>
-          Intervall- und Rationskalen (z.B. Temperatur ind °C oder Einkommen in
+          Intervall- und Rationskalen (z.B. Temperatur in °C oder Einkommen in
           Euro) ermöglichen präzise mathematische Berechnungen.
         </li>
       </ul>
@@ -282,10 +289,13 @@ const InputTechnik = {
       <h2>5. Datenqualität</h2>
       <p>
         Viele Probleme in KI-Projekten entstehen nicht durch den Algorithmus,
-        sondern durch <b>mangelhafte Datenqualität</b> mit der das KI-Tool
-        arbeitet. Grund dafür können bspw. menschliche Fehler bei der Eingabe,
-        unklare oder nicht vorhandene Standardisierung oder Umbrüche zwischen
-        verschiedenen technischen Systemen sein.
+        sondern durch <b>mangelhafte Datenqualität</b>. Gründe können z.B.
+        menschliche
+        <b> Eingabefehler</b>, fehlende oder uneinheitliche{" "}
+        <b>Standardisierung</b> (z. B. unterschiedliche Formate wie Datum
+        01.02.24 vs. 2024-02-01) oder
+        <b> Systemumbrüche</b> (wenn verschiedene Systeme Daten unterschiedlich
+        speichern, z. B. fehlende Vorwahlen beim Wechsel des Systems) sein.
       </p>
       <h4>Vier zentrale Qualitätsmerkmale</h4>
       <List
@@ -364,7 +374,7 @@ const InputTechnik = {
         könnte dies fälschlicherweise als &bdquo;höhere Unzufriedenheit&ldquo;
         interpretiert werden - dabei könnten schlicht{" "}
         <b>unterschiedliche Kommunikationswege</b> oder
-        <b>bessere digitale Zugänge</b> die Ursache sein.
+        <b> bessere digitale Zugänge</b> die Ursache sein.
       </p>
       <p>Wer mit KI arbeitet, sollte daher immer fragen:</p>
       <ul>
@@ -421,7 +431,7 @@ const InputTechnik = {
         entstehen kann:
       </p>
       <div className="max-w-[960px] mx-auto">
-        <CarouselContainer sideVisibility={10}>
+        <CarouselContainer sideVisibility={10} autoPlay={false}>
           <div
             title="Falsche Abbildung der Realität"
             className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
@@ -486,10 +496,10 @@ const InputTechnik = {
         <br />
         Dazu gehört, die Herkunft und Zusammensetzung der Daten kritisch zu
         prüfen, verschiedene Perspektiven in die Entwicklung einzubeziehen und
-        den Kontext der Datennutzung offenzulegen.Gerade für Organisationen, die
-        im Dienst des Gemeinwohls arbeiten, ist dies ein entscheidender Schritt,
-        um sicherzustellen, dass KI-Systeme nicht unbeabsichtigt bestehende
-        Ungleichheiten fortschreiben, sondern dazu beitragen,{" "}
+        den Kontext der Datennutzung offenzulegen. Gerade für Organisationen,
+        die im Dienst des Gemeinwohls arbeiten, ist dies ein entscheidender
+        Schritt, um sicherzustellen, dass KI-Systeme nicht unbeabsichtigt
+        bestehende Ungleichheiten fortschreiben, sondern dazu beitragen,{" "}
         <b>fairere und inklusivere Entscheidungsprozesse</b> zu fördern.
       </p>
     </section>,
@@ -573,7 +583,7 @@ const InputInformation = {
       <p>
         Damit KI-Systeme Menschen sinnvoll unterstützen können, müssen beide
         Seiten dieselbe &bdquo;Sprache&ldquo; sprechen und sich darüber
-        austauschen, was notwendig ist, um eine Aufgabe zu lösen. br Während
+        austauschen, was notwendig ist, um eine Aufgabe zu lösen. Während
         Maschinen Informationen als strukturierte Daten, Gewichte und
         Wahrscheinlichkeiten verarbeiten, deuten Menschen dieselben
         Informationen in Bedeutungen, Erfahrungen und Zielen.
@@ -593,17 +603,18 @@ const InputInformation = {
       </p>
       <List
         items={[
-          "<b>Information Disclosure</b> - das System teilt kontextrelevante Informationen über seine Entscheidungen mit den Nutzer:innen so, dass die diese ihren Input anpassen können.",
-          "<b>Informationen editieren</b> - Nutzer:innen können Eingaben in das System verändern und so Effekte beobachten, wie sich diese Veränderungen auf das System auswirken.",
-          "<b>Zeitverlauf - das System zeigt, wie sich Informationen und Bewertungen über die Zeit hinweg verändern.</b>",
+          "<b>Information Disclosure</b> - das System teilt kontextrelevante Informationen über seine Entscheidungen mit den Nutzer:innen so, dass diese ihren Input anpassen können.",
+          "<b>Informationen editieren</b> - Nutzer:innen können Eingaben in das System verändern und so beobachten, wie sich diese Veränderungen auf das System auswirken.",
+          "<b>Zeitverlauf</b> - das System zeigt, wie sich Informationen und Bewertungen über die Zeit hinweg verändern.",
         ]}
         alignItems="center"
         size="medium"
       />
       <p>
-        Alle drei Methoden zielen darauf, Informationsverarbeitung verständlich,
-        überprüfbar und lernfähig zu machen so, dass Mensch und System
-        bestmöglichen Input für die weitere Verarbeitung generieren.
+        Alle drei Methoden sollen die Informationsverarbeitung so gestalten,
+        dass sie verständlich, nachvollziehbar und auf gegenseitiges Lernen
+        ausgelegt ist, sodass Mensch und System bestmöglichen Input für die
+        weitere Verarbeitung generieren.
       </p>
     </section>,
     <section>
@@ -616,7 +627,7 @@ const InputInformation = {
         0,73&ldquo; auszugeben, gibt das System auch Einblick in die Gründe und
         Sicherheiten seiner Einschätzung und die Faktoren, die zu dieser
         Entscheidung führen könnten. Dadurch können Nutzende besser
-        nachvollziehen, wie Entscheidungen zustande kommen - und ob sie auf
+        nachvollziehen, wie Entscheidungen zustande kommen und ob sie auf
         soliden Daten beruhen oder Unsicherheiten bestehen.
       </p>
       <Accordion
@@ -647,8 +658,8 @@ const InputInformation = {
           </li>
         </ul>
         <p>
-          So erkennen die Mitarbeitenden: Das System bewertet das Objekt positiv
-          - aber mit gewissen Unsicherheiten, die auf fehlende Daten
+          So erkennen die Mitarbeitenden: Das System bewertet das Objekt
+          positiv, aber mit gewissen Unsicherheiten, die auf fehlende Daten
           zurückzuführen sind.
         </p>
         <p>
@@ -656,7 +667,7 @@ const InputInformation = {
           Mitarbeitende lernen, welche Merkmale besonders wichtig sind und wann
           sie die Bewertung besser hinterfragen sollten. So können sie ihren
           Input in das System bestmöglich anpassen. <br />
-          Gleichzeitig entsteht eine Transparenz, die Vertrauen schafft - sowohl
+          Gleichzeitig entsteht eine Transparenz, die Vertrauen schafft, sowohl
           in das System selbst als auch in die Entscheidungen, die darauf
           basieren.
         </p>
@@ -684,12 +695,12 @@ const InputInformation = {
         </li>
         <li>
           Missverständnisse möglich: Ein hoher Confidence Score heißt nicht
-          automatisch &bdquo;richtig&ldquo;, sondern nur, dass das System sich
-          dahingehend sehr sicher ist.
+          automatisch, dass die Aussage des Systems &bdquo;richtig&ldquo; ist,
+          sondern nur, dass das System sich dahingehend sehr sicher ist.
         </li>
         <li>
           Datenschutz und Wettbewerbsinteressen können Offenlegungen
-          einschränken, beispielsweise könnte ein Tool zur Bewertung ovn
+          einschränken, beispielsweise könnte ein Tool zur Bewertung von
           Krediten nicht ohne größere Probleme die Daten anderer Nutzer:innen
           offenlegen, um seine Entscheidung zu verdeutlichen.
         </li>
@@ -735,7 +746,7 @@ const InputInformation = {
         &bdquo;Was-wäre-wenn&ldquo;-Szenarien prüfen, ob Ihr System
         nachvollziehbar arbeitet?
       </p>
-      <h3>Vorteile vom Editieren von Informationen</h3>
+      <h3>Vorteile des Editierens von Informationen</h3>
       <ul>
         <li>Fördert aktives, exploratives Lernen über Systemverhalten.</li>
         <li>
@@ -747,7 +758,7 @@ const InputInformation = {
           Modellen.
         </li>
       </ul>
-      <h3>Grenzen und Risiken vom Editieren von Informationen</h3>
+      <h3>Grenzen und Risiken des Editierens von Informationen</h3>
       <ul>
         <li>
           Nicht jede Veränderung lässt sich eindeutig interpretieren -
@@ -805,12 +816,21 @@ const InputInformation = {
       <h3>Vorteile von Zeitverläufen</h3>
       <ul>
         <li>
-          Unterstützt Nachvollziehbarkeit und Verantwortlichkeit über Zeit.
+          Erhöht Nachvollziehbarkeit: Zeigt, wie Eingaben und Ergebnisse sich
+          über die Zeit entwickeln.
         </li>
         <li>
-          Hilft, Veränderungen und Lerneffekte im System sichtbar zu machen.
+          Stärkt Verantwortlichkeit: Dokumentiert Entscheidungen und Änderungen,
+          sodass nachvollziehbar ist, wer welche Schritte unternommen hat.
         </li>
-        <li>Fördert Vertrauen, weil Entwicklungen dokumentiert sind.</li>
+        <li>
+          Macht Lerneffekte sichtbar: Zeigt, wie das System auf Feedback oder
+          Veränderungen reagiert und daraus lernt.
+        </li>
+        <li>
+          Fördert Vertrauen: Transparente Entwicklungen schaffen Sicherheit und
+          Vertrauen in das System.
+        </li>
       </ul>
       <h3>Grenzen und Herausforderungen von Zeitverläufen</h3>
       <ul>
@@ -928,8 +948,10 @@ const VerarbeitungTechnik = {
     <ChapterHeader text={"Verarbeitung - Technik"} number={4} />,
     <section>
       <p>
-        Auf technischer Ebene kann beim Verarbeiten zwischen unterschiedlichen
-        Varianten unterschieden werden. Diese werden im folgenden betrachtet.
+        Auf technischer Ebene beschreibt ‚Verarbeiten‘, wie ein KI-System
+        Eingabedaten aufnimmt, analysiert und daraus Ergebnisse oder
+        Entscheidungen ableitet. Verschiedene technische Varianten dieser
+        Verarbeitung werden im Folgenden betrachtet.
       </p>
       <Accordion sections={sectionsVerarbeitungTechnik} />
       <SubNavigation sections={sectionsVerarbeitungTechnik} />
@@ -1023,36 +1045,41 @@ const VerarbeitungTechnik = {
       <p>
         <b>Beispiel</b>: Bei einem Fruchtbilder-System lernt das Modell an den
         Trainingsbildern (&bdquo;Apfel&ldquo;, &bdquo;Birne&ldquo;,
-        &bdquo;Banane&ldquo;) und wird anschließend mit den Testbildern geprüft,
-        ob es neue Früchte korrekt erkennt.
+        &bdquo;Banane&ldquo;). Anschließend wird mit den Testbildern geprüft, ob
+        es neue Früchte korrekt erkennt.
       </p>
       <h3>3. Anwendungsbeispiele des überwachten Lernens</h3>
       <p>
         Beim überwachten Lernen gibt es zwei zentrale Anwendungsarten:{" "}
         <b>Klassifikation</b> und <b>Regression</b>.
       </p>
-      <p className="max-w-[700px]">
-        <ThemeImage
-          darkSrc={kvr_dark}
-          lightSrc={kvr_light}
-          alt="Bild Klassifikation vs. Regressionn"
-        />
-      </p>
-      <h4>Klassifikation - Daten in Kategorien einordnen</h4>
-      <p>
-        Bei der Klassifikation werden Eingaben bestimmten Kategorien zugeordnet.
-      </p>
-      <ul>
-        <li>
-          Beispiel Bilderkennung: Ein Bild wird automatisch als
-          &bdquo;Birne&ldquo; oder &bdquo;Blume&ldquo; erkannt.
-        </li>
-        <li>
-          Beispiel Bewertung: Ein System kann Tests oder Aufgaben daraufhin
-          beurteilen, ob sie &bdquo;vollständig&ldquo; oder
-          &bdquo;unvollständig&ldquo; sind.
-        </li>
-      </ul>
+      <div className="flex flex-wrap">
+        <div className="w-full md:w-2/3 pr-4">
+          <h4>Klassifikation - Daten in Kategorien einordnen</h4>
+          <p>
+            Bei der Klassifikation werden Eingaben bestimmten Kategorien
+            zugeordnet.
+          </p>
+          <ul>
+            <li>
+              Beispiel Bilderkennung: Ein Bild wird automatisch als
+              &bdquo;Äpfel&ldquo; oder &bdquo;Bälle&ldquo; erkannt.
+            </li>
+            <li>
+              Beispiel Bewertung: Ein System kann Tests oder Aufgaben daraufhin
+              beurteilen, ob sie &bdquo;vollständig&ldquo; oder
+              &bdquo;unvollständig&ldquo; sind.
+            </li>
+          </ul>
+        </div>
+        <div className="w-full md:w-1/3">
+          <ThemeImage
+            darkSrc={k_dark}
+            lightSrc={k_light}
+            alt="Bild Klassifikation Bilderkennung"
+          />
+        </div>
+      </div>
       <p>
         Das Ziel ist es also, qualitative Unterschiede zu erkennen und Daten in
         klar definierte Gruppen einzuordnen. Beim überwachten Lernen werden
@@ -1063,14 +1090,26 @@ const VerarbeitungTechnik = {
         liefert, fungiert dabei gewissermaßen als &bdquo;Aufsichtsperson&ldquo;,
         die den Algorithmus in die richtige Richtung lenkt.
       </p>
-      <h4>Regression - Vorhersage von Zahlenwerten</h4>
-      <p>
-        Während es bei der Klassifikation um Kategorien geht, beschäftigt sich
-        die <b>Regression</b> mit der Vorhersage{" "}
-        <b>kontinuierlicher Zahlenwerte</b>, auch von Regressionsproblemen.
-        Statt Labels wie &bdquo;Apfel&ldquo; oder &bdquo;Banane&ldquo; wird also
-        eine Zahl vorhergesagt, die möglichst nahe am realen Wert liegt.
-      </p>
+      <div className="flex flex-wrap mb-5">
+        <div className="w-full md:w-2/3 pr-4">
+          <h4>Regression - Vorhersage von Zahlenwerten</h4>
+          <p>
+            Während es bei der Klassifikation um Kategorien geht, beschäftigt
+            sich die <b>Regression</b> mit der Vorhersage{" "}
+            <b>kontinuierlicher Zahlenwerte</b>, auch von Regressionsproblemen.
+            Statt Labels wie &bdquo;Apfel&ldquo; oder &bdquo;Ball&ldquo; wird
+            also eine Zahl vorhergesagt, z. B. ein Preis für Äpfel im zeitlichen
+            Verlauf, die möglichst nahe am realen Wert liegt.
+          </p>
+        </div>
+        <div className="w-full md:w-1/3">
+          <ThemeImage
+            darkSrc={r_dark}
+            lightSrc={r_light}
+            alt="Bild Regression Preisvorhersage"
+          />
+        </div>
+      </div>
       <p>
         Besonders wichtig ist dabei, dass die Vorhersage meist nicht von einer
         einzelnen Einflussgröße, sondern vom Zusammenspiel mehrerer Variablen
@@ -1129,7 +1168,7 @@ const VerarbeitungTechnik = {
           "<b>Gelabelte und ausreichende Datenmenge</b>: Damit ein Modell erfolgreich überwacht lernen kann, müssen einige Voraussetzungen erfüllt sein. Zunächst sind <b>gelabelte Daten</b> erforderlich, denn ohne bekannte Ergebnisse kann das System nicht lernen. Außerdem ist eine <b>ausreichende Datenmenge</b> wichtig, um zu verhindern, dass das Modell unteranpasst und keine sinnvollen Muster erkennt (Underfitting).",
           "<b>Qualität und Vielfalt der Daten</b>: Neben der Menge spielen auch die <b>Datenqualität und Vielfalt</b> eine entscheidende Rolle. Ein vielfältiger Datensatz hilft, dass das Modell nicht nur die Trainingsdaten auswendig lernt, sondern die zugrunde liegenden Zusammenhänge erkennt und auf neue Daten übertragen werden kann. So wird Overfitting vermieden. Dabei ist zu beachten, dass natürlich nicht “irgendwelche” Daten genutzt werden sollten. Es geht vielmehr darum, einen möglichst diversen Datensatz zu dem spezifischen Problem zu haben, das das System lösen soll.",
           "Schließlich ist eine <b>klare Zieldefinition</b> notwendig: Soll das Modell Eingaben klassifizieren, also Kategorien zuordnen, oder numerische Werte vorhersagen, also eine Regression durchführen? Eine präzise Zielsetzung bestimmt den Aufbau des Modells und die Auswahl der geeigneten Daten.",
-          "<b>Einsatz von Testdaten</b>: Um zu überprüfen, wie gut ein Modell auf neue Daten reagiert, werden <b>Testdaten</b> eingesetzt. Diese Daten wurden beim Training nicht verwendet und ermöglichen eine realistische Einschätzung der Leistungsfähigkeit. Zur Bewertung des Modells werden verschiedene <b>Kennzahlen</b> herangezogen, wie z.B. Genauigkeit oder Fehlermaße",
+          "<b>Einsatz von Testdaten</b>: Um zu überprüfen, wie gut ein Modell auf neue Daten reagiert, werden <b>Testdaten</b> eingesetzt. Diese Daten wurden beim Training nicht verwendet und ermöglichen eine realistische Einschätzung der Leistungsfähigkeit. Zur Bewertung des Modells werden verschiedene <b>Kennzahlen</b> herangezogen, wie z.B. Genauigkeit oder Fehlermaße.",
         ]}
         size="medium"
       />
@@ -1514,6 +1553,11 @@ const VerarbeitungInformation = {
           <b>Stichproben</b>. <br />
           Viele gängige KI-Frameworks (z. B. SHAP in Python) bieten fertige
           Implementierungen, die diese Berechnungen automatisiert durchführen.
+          {/* <ThemeImage
+            darkSrc={shapley_dark}
+            lightSrc={shapley_light}
+            alt="SHAPLEY-Werte (Einfluss auf das Output Modell)"
+          /> */}
         </p>
       </div>
       <h3>Worauf Sie achten sollten</h3>
@@ -1826,7 +1870,7 @@ const VerarbeitungInformation = {
               zwischen Variablen fließen mit ein.
             </li>
             <li>
-              <b>Verständlich für Nicht-Expert:innen</b>: Das Prinzip &bdquo;wie
+              <b>Verständlich für Nicht-Expert:innen</b>: Das Prinzip &bdquo;wir
               mischen und schauen, was passiert&ldquo; ist leicht
               nachvollziehbar.
             </li>
@@ -1870,7 +1914,7 @@ const VerarbeitungInformation = {
 };
 
 const sectionsOutputTechnik = [
-  { id: "2", title: "Warum der Output entscheident ist" },
+  { id: "2", title: "Warum der Output entscheidend ist" },
   { id: "3", title: "Kategorische Outputs" },
   { id: "4", title: "Pattern Matching" },
   { id: "5", title: "Numerische Prädiktionen" },
@@ -1900,7 +1944,7 @@ const OutputTechnik = {
       <SubNavigation sections={sectionsOutputTechnik} />
     </section>,
     <section>
-      <h2>Einleitung: Warum der Output entscheident ist</h2>
+      <h2>Einleitung: Warum der Output entscheidend ist</h2>
       <p>
         Der Output eines KI-Systems ist das sichtbare Ergebnis aller
         vorhergehenden Verarbeitungsschritte - und damit die Grundlage, auf der
@@ -1927,7 +1971,7 @@ const OutputTechnik = {
       <p>
         Viele KI-Systeme ordnen Daten in Kategorien ein. Diese Form des Outputs
         findet sich häufig bei Klassifikationsaufgaben - etwa, wenn ein System
-        E-Mails als &bdquo;Spam&ldquo; oder &bdquo;Nich&ldquo;-Spam“ markiert,
+        E-Mails als &bdquo;Spam&ldquo; oder &bdquo;Nicht&ldquo;-Spam“ markiert,
         oder wenn ein Textanalysetool die Stimmung eines Textes als
         &bdquo;positiv&ldquo;, &bdquo;neutral&ldquo; oder &bdquo;negativ&ldquo;
         einstuft.
@@ -2131,7 +2175,7 @@ const OutputTechnik = {
       </p>
       <h4>Precision</h4>
       <p>
-        Wie viele der als &bdquo;positiv&ldquo; eingestuften Fälle warne
+        Wie viele der als &bdquo;positiv&ldquo; eingestuften Fälle waren
         tatsächlich positiv?
       </p>
       <p className="specialText">
@@ -2158,12 +2202,12 @@ const OutputTechnik = {
         </p>
       </Accordion>
       <h3>Reflexionsfragen</h3>
-      <p>Fragen die man sich im Rahmen des Outputs stellen könnte:</p>
+      <p>Fragen, die man sich im Rahmen des Outputs stellen könnte:</p>
       <List
         items={[
           "Welche Form von Output produziert das KI-System, mit dem Sie arbeiten (z.B. Textklassifikation, Score, Simulation)?",
           "Wie könnte die Darstellung der Ergebnisse verbessert werden, um sie für die Zielgruppe verständlicher oder nützlicher zu machen?",
-          "Wie stark würden Sie sich auf die Ergebnisse verlassen, wenn das System zusätzlich sein Accuracy oder Confidence mitliefert?",
+          "Wie stark würden Sie sich auf die Ergebnisse verlassen, wenn das System zusätzlich seine Accuracy oder Confidence mitliefert?",
         ]}
         alignItems="center"
         size="medium"
@@ -2235,7 +2279,7 @@ const OutputInformation = {
         relevant?
       </h2>
       <p>
-        Wenn ein Nutzer mit einem KI-System interagiert, möchte er oft
+        Wenn Nutzer:innen mit einem KI-System interagieren, möchten sie oft
         verstehen:
       </p>
       <ul>
@@ -2268,7 +2312,7 @@ const OutputInformation = {
         einflussreich, Geschlecht dagegen weniger.&ldquo;
       </p>
       <p className="specialText">
-        <b>Kurz</b>: Welche Faktoren haben in genau diesem Fall das ERgebnis
+        <b>Kurz</b>: Welche Faktoren haben in genau diesem Fall das Ergebnis
         bestimmt?
       </p>
       <p>
@@ -2387,7 +2431,7 @@ const OutputInformation = {
         items={[
           "<b>Local Feature Relevance</b> &rarr; Balken zeigt: &bdquo;Einkommen +400€, Schulden -100€ &rarr; stärkster Einfluss auf Entscheidung",
           "<b>Confidence Estimation</b> &rarr; Ampel/Prozentangabe: &bdquo;KI ist zu 85% sicher, dass der Antrag abgelehnt wird&ldquo;",
-          "<b>Counterfactual Explanation</b> &rarr; Interaktives Widget: &bdquo;Wenn Sie ihr Einkommen um 400€ erhöhen oder Schulden reduzieren, würde der Antrag genehmigt&ldquo;",
+          "<b>Counterfactual Explanation</b> &rarr; Interaktives Widget: &bdquo;Wenn Sie ihr Einkommen um 400€ erhöhen oder Schulden reduzieren, würde der Antrag genehmigt werden&ldquo;",
         ]}
         alignItems="center"
         size="medium"
@@ -2497,8 +2541,8 @@ const LLM = {
     <ChapterHeader text={"LLMs"} number={8} />,
     <section>
       <p>
-        LLMs sind große Sprachmodellen, die vorhersagen, wie ein Text
-        fortgesetzt werden könnte, basierend auf einer riesigen Textmenge.
+        LLMs sind große Sprachmodelle, die vorhersagen, wie ein Text fortgesetzt
+        werden könnte, basierend auf einer riesigen Textmenge.
       </p>
       <Accordion sections={sectionsLLMs} />
       <SubNavigation sections={sectionsLLMs} />
@@ -2537,7 +2581,7 @@ const LLM = {
         <b>Zum Beispiel:</b>
       </p>
       <p>
-        [Die Katze schläft gerne in der ... ] &rarr; Welche Wort kommt als
+        [Die Katze schläft gerne in der ... ] &rarr; Welches Wort kommt als
         nächstes?
       </p>
       <ThemeImage darkSrc={llm_dark} lightSrc={llm_light} alt="Bild LLMs" />
@@ -2603,10 +2647,10 @@ const LLM = {
       <p>
         Stellen Sie sich vor, eine Person sitzt in einem geschlossenen Raum. Sie
         versteht <b>kein Chinesisch</b>, hat aber ein Handbuch mit <b>Regeln</b>
-        , wie sie chinesische Zeichen richtig auf andere Zeichen reagieren
-        lassen kann. Durch diese Regeln kann sie auf Fragen in chinesischer
-        Schrift <b>korrekte Antworten</b> geben - so, dass Außenstehende denken
-        könnten, die Person <b>versteht Chinesisch</b>.
+        , wie sie auf chinesische Zeichen richtig mit anderen Zeichen reagieren
+        kann. Durch diese Regeln kann sie auf Fragen in chinesischer Schrift{" "}
+        <b>korrekte Antworten</b> geben. So könnten Außenstehende denken, dass
+        die Person <b>Chinesisch</b> versteht.
       </p>
       <p>
         Tatsächlich folgt sie aber nur <b>formalen Anweisungen</b>, ohne den{" "}
@@ -2630,14 +2674,14 @@ const LLM = {
         <b>keine eigenen Gedanken</b>.
       </p>
       <p>
-        Der Chinese Room regt dazu an, über menschliches und maschinelles
-        Verstehen nachzudenken. Searle stellt die Idee in den Raum, dass ein
-        System zwar auf sprachliche Eingaben sinnvoll reagieren kann, aber ohne
-        dabei tatsächlich zu <i>verstehen</i>, was es sagt. Im Kontext moderner
-        LLMs wird diese Frage erneut relevant: Wenn ein Modell Texte analysiert
-        und Antworten generiert, zeigt es dann Intelligenz und Verstehen oder
-        lediglich die Fähigkeit, sprachliche Muster zu erkennen und zu
-        reproduzieren?
+        Das &bdquo;Chinesische Zimmer&ldquo; regt dazu an, über menschliches und
+        maschinelles Verstehen nachzudenken. Searle stellt die Idee in den Raum,
+        dass ein System zwar auf sprachliche Eingaben sinnvoll reagieren kann,
+        aber ohne dabei tatsächlich zu <i>verstehen</i>, was es sagt. Im Kontext
+        moderner LLMs wird diese Frage erneut relevant: Wenn ein Modell Texte
+        analysiert und Antworten generiert, zeigt es dann Intelligenz und
+        Verstehen oder lediglich die Fähigkeit, sprachliche Muster zu erkennen
+        und zu reproduzieren?
       </p>
       <p>
         Der Chinese Room fordert uns also heraus, die Grenze zwischen echter
@@ -2673,7 +2717,7 @@ const LLM = {
         dass ihre Texte <b>sprachlich überzeugend und intelligent wirken</b>,
         aber <b>inhaltlich nicht korrekt</b> sind. LLMs kennen keine absolute
         Wahrheit; sie erzeugen Inhalte ausschließlich auf Basis von
-        <b>statistischen Wahrscheinlichkeiten</b>, die aus Trainingsdaten und
+        <b> statistischen Wahrscheinlichkeiten</b>, die aus Trainingsdaten und
         Bewertungen abgeleitet werden, und stoßen dabei an folgende{" "}
         <b>Grenzen und Herausforderungen</b>:
       </p>
@@ -2726,11 +2770,12 @@ const LLM = {
       <h3>Offene Modelle (Open Source)</h3>
       <p>
         Offene oder &bdquo;open-weight&ldquo; Modelle (z.B.{" "}
-        <b>Llama, Mistral, Zephyr</b>) gewinnen stark an Bedeutung. Während es
-        sich bei Modellen nicht unbedingt um echte Open-Source-Modelle handelt,
-        sondern nur um Open-Weight-Modelle, da für vollständige Open Source auch
-        die Trainingsdaten und der gesamte Trainingsprozess offenliegen müssten,
-        spricht man meist dennoch von Open Source. Diese Modelle ermöglichen:
+        <b>Llama, Mistral, Zephyr</b>) gewinnen stark an Bedeutung. Dabei
+        handelt es sich nicht unbedingt um echte Open-Source-Modelle, denn dafür
+        müssten auch die Trainingsdaten und der gesamte Trainingsprozess
+        offenliegen. Open-Weight-Modelle machen lediglich die Modellgewichte
+        öffentlich, werden aber häufig trotzdem als Open Source bezeichnet.
+        Diese Modelle ermöglichen:
       </p>
       <ul>
         <li>
@@ -2754,13 +2799,13 @@ const LLM = {
           Offene Internetdaten &rarr; breite Allgemeinbildung, viele Sprachstile
         </li>
         <li>
-          Lizenzierte/kuratierte Daten &rarr; verlässlicher, präziser,
+          Lizenzierte / kuratierte Daten &rarr; verlässlicher, präziser,
           kontrollierter Inhalt
         </li>
       </ul>
       <p>
         <b>Beispiel</b>: GPT-4 trainiert auf einer Mischung aus Webdaten,
-        Büchern und ARtikeln &rarr; gut für gezielte generelle Textgenerierung.
+        Büchern und Artikeln &rarr; gut für gezielte generelle Textgenerierung.
       </p>
       <h4>2. Zugänglichkeit: Wie leicht lässt sich das Modell nutzen?</h4>
       <ul>
@@ -2782,7 +2827,7 @@ const LLM = {
       </h4>
       <ul>
         <li>Text &rarr; alle klassischen LLMs</li>
-        <li>Multimodla (Text, Bild, Audio) &rarr; Gemini, GPT-4 multimodal</li>
+        <li>Multimodal (Text, Bild, Audio) &rarr; Gemini, GPT-4 multimodal</li>
       </ul>
       <p>
         <b>Beispiel</b>: Für ein Projekt, das Bildbeschriebungen generieren soll
@@ -2790,13 +2835,13 @@ const LLM = {
       </p>
       <h4>4. Ziele / Schwerpunkt: Was soll das Modell erreichen?</h4>
       <ul>
-        <li>Breite Einsatz / kreative Texte &rarr; GPT, Claude</li>
+        <li>Breiter Einsatz / kreative Texte &rarr; GPT, Claude</li>
         <li>
           Effizienz, Datenschutz, leichte Integration &rarr; Mistral, Llama
         </li>
       </ul>
       <p>
-        <b>Beispiel</b>: Ein datenschutzfeundlicher interner Chatbot &rarr;
+        <b>Beispiel</b>: Ein datenschutzfreundlicher interner Chatbot &rarr;
         Mistral oder Llama sind besser geeignet als kommerzielle APIs.
       </p>
       <h4>5. Weitere Kriterien (optional)</h4>
@@ -2903,9 +2948,8 @@ const Einleitung = {
       <p>
         Wenn wir über Künstliche Intelligenz sprechen, sprechen wir im Kern über
         <b> Informationsverarbeitung</b>. Ein KI-System kann nur so gute
-        Ergebnisse liefern, wie die Informationen sind, auf die es Zugriff hat
-        und wie diese Informationen strukturiert, interpretiert und miteinander
-        in Beziehung gesetzt werden.
+        Ergebnisse liefern, wie die Informationen, auf die es Zugriff hat, sowie
+        deren Strukturierung, Interpretation und Verknüpfung es zulassen.
       </p>
       <p className="specialText text-center">
         <b>Leitgedanke</b>: KI verstehen heißt, Informationsverarbeitung
@@ -2916,7 +2960,7 @@ const Einleitung = {
       <h3>Zielsetzung des Moduls</h3>
       <p>
         Im Rahmen dieses Moduls erhalten Sie daher nicht nur einen Überblick
-        über zentrale technische Grundlagen, etwa die Aufbereitung und
+        über zentrale technische Grundlagen, wie etwa die Aufbereitung und
         Strukturierung von Daten, verschiedene Lernarten oder die Generierung
         von Ergebnissen (Output), sondern wir verknüpfen diese Aspekte auch mit
         aktuellen Forschungserkenntnissen zur Informationsverarbeitung bei
@@ -2958,7 +3002,7 @@ const Einleitung = {
       <p>Dabei beschäftigen wir uns unter anderem mit folgenden Fragen:</p>
       <ul>
         <li>
-          Wie müssen Informationen aufbereitet sein, damit System sie
+          Wie müssen Informationen aufbereitet sein, damit Systeme sie
           &bdquo;verstehen&ldquo; und verarbeiten können?
         </li>
         <li>
@@ -2988,7 +3032,7 @@ const Einleitung = {
             topicName={item.name}
             link={item.link}
             description={item.description}
-            number={index}
+            number={index + 1}
           />
         ))}
       </div>

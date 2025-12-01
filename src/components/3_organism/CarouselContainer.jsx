@@ -17,6 +17,7 @@ export const CarouselContainer = ({
   children,
   sideVisibility = 5,
   showArrows = true,
+  autoPlay = true,
 }) => {
   if (sideVisibility > 47) {
     sideVisibility = 47;
@@ -28,21 +29,17 @@ export const CarouselContainer = ({
   const slideVisibility = Number(sideVisibility);
 
   useEffect(() => {
+    if (!autoPlay) return;
     const intervalRef = setInterval(() => {
       const x = dragX.get();
 
       if (x === 0) {
-        setSlideIndex((pv) => {
-          if (pv === numSlides - 1) {
-            return 0;
-          }
-          return pv + 1;
-        });
+        setSlideIndex((pv) => (pv === numSlides - 1 ? 0 : pv + 1));
       }
     }, AUTO_DELAY);
 
     return () => clearInterval(intervalRef);
-  }, [dragX, numSlides]);
+  }, [dragX, numSlides, autoPlay]);
 
   const onDragEnd = () => {
     const x = dragX.get();

@@ -28,7 +28,7 @@ const ThemeImage = ({ lightSrc, darkSrc, alt = "", className = "" }) => {
     <img
       src={isDarkMode ? darkSrc : lightSrc}
       alt={alt}
-      className={`h-full w-full ${className}`}
+      className={`h-auto w-full ${className}`}
     />
   );
 };

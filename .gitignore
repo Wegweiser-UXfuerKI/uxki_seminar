@@ -11,6 +11,10 @@
 # production
 /build
 
+# pdf temp
+/tmp
+/export
+
 # misc
 .DS_Store
 .env.local

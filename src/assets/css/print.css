@@ -1,0 +1,55 @@
+@media print {
+  @page {
+    margin: 0mm;
+    size: A4;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .App,
+  main {
+    width: 100% !important;
+    margin: 0 !important;
+
+    padding-top: 20mm !important;
+    padding-bottom: 20mm !important;
+    padding-left: 10mm !important;
+    padding-right: 10mm !important;
+
+    box-sizing: border-box !important;
+
+    min-height: 100vh;
+  }
+
+  #content {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    /* abstände -> padding */
+  }
+
+  .page-break {
+    break-before: page;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  header,
+  footer {
+    display: none !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    padding-top: 60px;
+  }
+}

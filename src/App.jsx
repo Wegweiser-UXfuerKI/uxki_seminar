@@ -7,6 +7,7 @@ import { ChapterLayout } from "./components/4_templates/ChapterLayout";
 import ToTopButton from "./components/2_molecule/nav/ToTopButton";
 import "./assets/css/DesignTokens.css";
 import "./assets/css/App.css";
+import "./assets/css/print.css";
 import DevTestPage from "./components/5_pages/DevTestPage";
 
 //import formbricks from "@formbricks/js";

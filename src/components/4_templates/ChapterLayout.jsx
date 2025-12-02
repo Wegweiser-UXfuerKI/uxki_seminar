@@ -31,7 +31,8 @@ export const ChapterLayout = () => {
         subtopicContent.content.map((section, sectionIndex) => (
           <div
             key={`kapitel-${sectionIndex}-section-${sectionIndex}`}
-            id={sectionIndex}>
+            id={sectionIndex}
+            className={sectionIndex === 0 ? "page-break" : ""}>
             {section}
           </div>
         ))

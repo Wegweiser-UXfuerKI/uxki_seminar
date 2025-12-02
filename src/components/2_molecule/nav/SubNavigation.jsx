@@ -75,7 +75,7 @@ const SubNavigation = ({ sections }) => {
     <nav
       aria-label="Section Navigation"
       id="sectionNav"
-      className="fixed top-[40%] right-3 flex flex-col items-end space-y-4 z-20">
+      className="fixed top-[40%] right-3 flex flex-col items-end space-y-4 z-20 no-print">
       {sections.map((section, index) => (
         <Link
           key={section.id}

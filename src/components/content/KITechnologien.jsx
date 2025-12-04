@@ -1822,15 +1822,15 @@ const VerarbeitungInformation = {
       <p>
         In diesem Fall zeigt sich: <br />
         Das Alter der Immobilie hat einen deutlich stärkeren Einfluss auf die
-        Bewertung als etwa die Ausstattung mit Klimaanlage. Das System
-        gewichtet also manche Merkmale stark, andere kaum.
+        Bewertung als etwa die Ausstattung mit Klimaanlage. Das System gewichtet
+        also manche Merkmale stark, andere kaum.
       </p>
       <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover">
         <h4>Der technische Ablauf in Kürze</h4>
         <List
           items={[
             "<b>Vorhersage mit Originaldaten</b>: Das Modell schätzt, wie geeignet jede Immobilie ist.",
-            "<b>Permutation eines Merkmals</b>: Die Werte eines Faktors (z.B. Baujahr) werden zufällig neu angeordnet.",
+            "<b>Permutation eines Merkmals</b>: Die Werte eines Faktors (z. B. Baujahr) werden zufällig neu angeordnet.",
             "<b>Vorhersage mit permutierten Daten</b>: Das Modell trifft erneut Entscheidungen, nun ohne die echte Beziehung zwischen Baujahr und Bewertung.",
             "<b>Vergleich der Fehler</b>: Wie sehr hat sich der Vorhersagefehler erhöht?",
             "<b>Wiederholung</b>: Die Schritte werden mehrfach wiederholt und gemittelt, um zufällige Schwankungen auszugleichen.",
@@ -2202,13 +2202,21 @@ const OutputTechnik = {
         <p>
           Eine Organisation, die Anträge nach Dringlichkeit sortiert, sollte
           dann auf einen hohen <b>Recall</b> achten, wenn das Übersehen eines
-          Falls (False Negative) gravierende Folgen hätte - etwa, dass eine
-          Person in Not keine schnelle Hilfe bekommt.
+          Falls (<i>False Negative</i>) gravierende Folgen hätte. <br />
+          Beispiel: Ein Sozialamt prüft Notfallhilfen für obdachlose Personen.
+          Wenn das System einen wirklich dringenden Antrag übersieht, erhält
+          jemand in akuter Not keine schnelle Hilfe. Deshalb ist es wichtiger,
+          möglichst alle echten Notfälle zu erkennen, auch wenn einige weniger
+          dringende Anträge fälschlicherweise als dringend markiert werden.
         </p>
         <p>
           Wenn hingegen Falschalarme (<i>False Positives</i>) problematisch sind
-          - etwa, weil sie Ressourcen binden - ist eine hohe Precision
-          wichtiger.
+          – etwa weil sie Ressourcen binden – ist eine <b>hohe Precision</b>{" "}
+          wichtiger. Beispiel: Dieselbe Organisation hat nur begrenzte
+          Notfallbetten. Wenn zu viele nicht dringende Fälle fälschlich als
+          dringend markiert werden, könnten echte Notfälle keinen Platz
+          bekommen. Hier ist es entscheidend, dass fast alle als dringend
+          eingestuften Fälle tatsächlich dringend sind.
         </p>
       </Accordion>
       <h3>Reflexionsfragen</h3>
@@ -2331,10 +2339,11 @@ const OutputInformation = {
       </p>
       <h4>Beispiel mit Diabetes-Diagnose</h4>
       <p>
-        Eine Ärztin gibt die Patientendaten in die KI ein. Das Modell sagt:{" "}
+        Eine Ärztin gibt die Patientendaten in die KI ein. Das Modell gibt eine
+        Vorhersage aus:{" "}
         <b>
-          &bdquo;Hohe Wahrscheinlichkeit für ein zukünftiges
-          Diabetes-Risiko.&ldquo;
+          &bdquo;Der Patient hat ein hohes Risiko, in den nächsten Jahren
+          Diabetes zu entwickeln.&ldquo;
         </b>
       </p>
       <p>
@@ -2343,8 +2352,11 @@ const OutputInformation = {
       </p>
       <Table data={lfrTable} headerStyle verticalAlignCells />
       <p>
-        So kann die Ärztin <b>verstehen, warum</b> die KI das Risiko als hoch
-        einschätzt - nicht generell, sondern <b>bei genau diesem Menschen</b>.
+        Interpretation: Die Ärztin kann jetzt sehen, dass der hohe HbA1c-Wert
+        und das Übergewicht die Hauptgründe für die hohe Risiko-Vorhersage sind.
+        Das bedeutet nicht, dass die KI „hohe Wahrscheinlichkeit für hohe
+        Wahrscheinlichkeit“ ausgibt, sondern dass die KI das <b>konkrete Risiko für
+        diesen Patienten</b> als hoch einschätzt und erklärt, warum.
       </p>
       <h3>2. Confidence Estimation (Konfidenzschätzung)</h3>
       <p>

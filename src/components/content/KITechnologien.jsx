@@ -26,6 +26,8 @@ import bl_light from "../../assets/images/kiTechnologien/bl-light.png";
 import bl_dark from "../../assets/images/kiTechnologien/bl-dark.png";
 import shapley_light from "../../assets/images/kiTechnologien/shapley-light.png";
 import shapley_dark from "../../assets/images/kiTechnologien/shapley-dark.png";
+import heatmap_light from "../../assets/images/kiTechnologien/heatmap-light.png";
+import heatmap_dark from "../../assets/images/kiTechnologien/heatmap-dark.png";
 import ArrowIcon from "../1_elements/ArrowIcon";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
 import Sources from "../Sources";
@@ -1553,11 +1555,12 @@ const VerarbeitungInformation = {
           <b>Stichproben</b>. <br />
           Viele gängige KI-Frameworks (z. B. SHAP in Python) bieten fertige
           Implementierungen, die diese Berechnungen automatisiert durchführen.
-          {/* <ThemeImage
+          Hier eine beispielhafte Darstellung:
+          <ThemeImage
             darkSrc={shapley_dark}
             lightSrc={shapley_light}
             alt="SHAPLEY-Werte (Einfluss auf das Output Modell)"
-          /> */}
+          />
         </p>
       </div>
       <h3>Worauf Sie achten sollten</h3>
@@ -1637,7 +1640,7 @@ const VerarbeitungInformation = {
         Ein <b>Partial Dependence Plot</b> könnte nun etwa zeigen,{" "}
         <b>wie das Baujahr der Immobilie</b> den Eignungswert beeinflusst.{" "}
         <br />
-        In der Abbildung verläuft eine aufsteigende Kurve:
+        In der Abbildung verläuft beispielhaft eine aufsteigende Kurve:
       </p>
       <p>
         Je neuer das Gebäude, desto höher die Bewertung durch das System. <br />
@@ -1645,7 +1648,14 @@ const VerarbeitungInformation = {
         bewerten.
       </p>
       <p>
-        Eine zweite, erweiterte Darstellung zeigt zusätzlich den{" "}
+        <ThemeImage
+          darkSrc={heatmap_dark}
+          lightSrc={heatmap_light}
+          alt="Partial Dependence Plot und Heatmap zu Zustand des Gebäudes"
+        />
+      </p>
+      <p>
+        Eine zweite, erweiterte beispielhafte Darstellung zeigt zusätzlich den{" "}
         <b>Zustand der Immobilie</b> als zweiten Faktor in einer farbigen{" "}
         <b>Heatmap</b>. <br />
         Darin erkennen wir, dass der Effekt des Baujahrs{" "}
@@ -1812,7 +1822,7 @@ const VerarbeitungInformation = {
       <p>
         In diesem Fall zeigt sich: <br />
         Das Alter der Immobilie hat einen deutlich stärkeren Einfluss auf die
-        Bewertung als etwa die Ausstattung mit Klimaanlage - das System
+        Bewertung als etwa die Ausstattung mit Klimaanlage. Das System
         gewichtet also manche Merkmale stark, andere kaum.
       </p>
       <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover">
@@ -1822,7 +1832,7 @@ const VerarbeitungInformation = {
             "<b>Vorhersage mit Originaldaten</b>: Das Modell schätzt, wie geeignet jede Immobilie ist.",
             "<b>Permutation eines Merkmals</b>: Die Werte eines Faktors (z.B. Baujahr) werden zufällig neu angeordnet.",
             "<b>Vorhersage mit permutierten Daten</b>: Das Modell trifft erneut Entscheidungen, nun ohne die echte Beziehung zwischen Baujahr und Bewertung.",
-            "<b>Verlgeich der Fehler</b>: Wie sehr hat sich der Vorhersagefehler erhöht?",
+            "<b>Vergleich der Fehler</b>: Wie sehr hat sich der Vorhersagefehler erhöht?",
             "<b>Wiederholung</b>: Die Schritte werden mehrfach wiederholt und gemittelt, um zufällige Schwankungen auszugleichen.",
           ]}
           alignItems="center"

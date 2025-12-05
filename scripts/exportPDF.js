@@ -1,8 +1,24 @@
 const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
-const PDFMerger = require("pdf-merger-js").default;
+const { PDFDocument } = require("pdf-lib")
 
+// ----- Setup ----- //
+const args = process.argv.slice(2);
+
+const cssPath = path.join(__dirname, "../src/assets/css/DesignTokens.css")
+const tmpDir = path.join(__dirname, "../tmp");
+const exportDir = path.join(__dirname, "../export");
+
+if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
+if (!fs.existsSync(exportDir)) fs.mkdirSync(exportDir);
+
+// ----- Settigns ----- //
+
+const BASE_URL = "http://localhost:5173";
+const mode = "dark";
+
+// ----- Modules ----- //
 const modules = [
   {
     linkName: "ux-und-usability",
@@ -30,30 +46,126 @@ const modules = [
   },
 ];
 
-const args = process.argv.slice(2);
 
-const tmpDir = path.join(__dirname, "../tmp");
-const exportDir = path.join(__dirname, "../export");
-if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
-if (!fs.existsSync(exportDir)) fs.mkdirSync(exportDir);
+// ----- Background Setup ----- //
+const getBackgroundHTML = () => {
+  // 1. Wir lesen deine echten DesignTokens ein
+  let designTokensCSS = "";
+  try {
+    designTokensCSS = fs.readFileSync(cssPath, "utf8");
+  } catch (e) {
+    console.error("Konnte DesignTokens.css nicht finden!", e);
+  }
 
-// ----- Settigns ----- //
+  // 2. Wir bauen das HTML. 
+  // WICHTIG: <html class="dark"> sorgt dafür, dass deine :root.dark Variablen greifen!
+  return `
+    <!DOCTYPE html>
+    <html class=${mode}> 
+    <head>
+      <style>
+        ${designTokensCSS}
 
-const BASE_URL = "http://localhost:5173";
-const mode = "dark";
+        html, body { 
+            margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; 
+        }
 
+        .pdf-bg {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: var(--bg); 
+            -webkit-print-color-adjust: exact;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 100%;
+            opacity: 40%;
+            filter: var(--blur);
+            z-index: -1;
+        }
+
+        .blob-before {
+            right: 0;
+            top: -10vw; 
+            width: 40vw;
+            height: 40vw;
+            background: var(--rGradient);
+        }
+
+        .blob-after {
+            left: 0;
+            bottom: -5vw;
+            width: 35vw;
+            height: 35vw;
+            background: var(--lGradient);
+        }
+      </style>
+    </head>
+    <body>
+      <div class="pdf-bg">
+        <div class="blob blob-before"></div>
+        <div class="blob blob-after"></div>
+      </div>
+    </body>
+    </html>
+  `;
+};
+
+async function addContentToDocument(finalDoc, contentBuffer, bgPageTemplate) {
+  const contentDoc = await PDFDocument.load(contentBuffer)
+  const contentPages = contentDoc.getPages();
+
+  const [embeddedBg] = await finalDoc.embedPages([bgPageTemplate]);
+
+  for (const contentPage of contentPages) {
+    const { width, height } = contentPage.getSize();
+
+    const newPage = finalDoc.addPage([width, height]);
+
+    newPage.drawPage(embeddedBg, {
+      x: 0,
+      y: 0,
+      width,
+      height,
+    });
+
+    const [embeddedContent] = await finalDoc.embedPages([contentPage]);
+    newPage.drawPage(embeddedContent, {
+      x: 0,
+      y: 0,
+      width,
+      height,
+    });
+  }
+}
+
+// ----- Running ----- //
 (async () => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: "new",
     defaultViewport: { width: 1200, height: 1600 },
   });
 
   const page = await browser.newPage();
-  await page.emulateMediaFeatures([
-  { name: "prefers-color-scheme", value: mode }
-]);
 
-  const merger = new PDFMerger();
+  // ----- Background stuff ----- //
+  console.log("PDF Background stuff")
+  await page.setContent(getBackgroundHTML())
+  const backgroundPdfBytes = await page.pdf({
+    format: "A4",
+    printBackground: true,
+    margin: { top: 0, bottom: 0, left: 0, right: 0 },
+  })
+
+  const backgroundDoc = await PDFDocument.load(backgroundPdfBytes);
+  const [bgPageTemplate] = await backgroundDoc.copyPages(backgroundDoc, [0])
+
+  // ----- content ----- //
+  await page.emulateMediaFeatures([
+    { name: "prefers-color-scheme", value: mode }
+  ]);
+
+  const finalDoc = await PDFDocument.create();
 
   await page.evaluateOnNewDocument((mode) => {
     document.addEventListener("DOMContentLoaded", () => {
@@ -62,12 +174,25 @@ const mode = "dark";
     });
   }, mode);
 
-  // loop all pages
+  // helper for pdf generation
+  const createPdfOptions = () => ({
+    format: "A4",
+    printBackground: true,
+    margin: { 
+      top: "20mm", 
+      bottom: "20mm", 
+      left: "20mm", 
+      right: "20mm" 
+    },
+  });
 
+  // loop all pages
   if (args[0] === "export") {
-    console.log("Vollständiger Export gestartet...");
+    console.log("Vollständiger Export gestartet");
 
     for (const module of modules) {
+      if (!module.chapter) continue;
+
       for (const chapter of module.chapter) {
         const url = `${BASE_URL}/${module.linkName}/${chapter.linkName}`;
         console.log("Rendering:", url);
@@ -78,25 +203,20 @@ const mode = "dark";
           window.dispatchEvent(new Event("beforeprint"));
         });
 
-        const pdfBuffer = await page.pdf({
-          format: "A4",
-          printBackground: true,
-        });
+        const pdfBuffer = await page.pdf(createPdfOptions());
 
-        const tmpPath = `./tmp/${module.linkName}-${chapter.linkName}.pdf`;
-        fs.writeFileSync(tmpPath, pdfBuffer);
-        merger.add(tmpPath);
+        await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate)
       }
     }
 
-    await merger.save("./export/Kurs-Komplett.pdf");
-    console.log("PDF Export vollständig!");
+    const pdfBytes = await finalDoc.save();
+    fs.writeFileSync(path.join(exportDir, "UX-fuer-Ki-kompletter-Kurs.pdf"), pdfBytes);
+
     await browser.close();
     return;
   }
 
   // -- single plage
-
   if (args[0]) {
     const url = `${BASE_URL}${args[0]}`;
     console.log("Exportiere einzelne Seite:", url);
@@ -105,16 +225,13 @@ const mode = "dark";
 
     await page.evaluate(() => window.dispatchEvent(new Event("beforeprint")));
 
-    const pdfBuffer = await page.pdf({
-      format: "A4",
-      printBackground: true,
-      scale: 0.8
-    });
+    const pdfBuffer = await page.pdf(createPdfOptions())
+    await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate);
 
     const filename = args[0].replace(/\//g, "_") + ".pdf";
-    fs.writeFileSync(`./export/${filename}`, pdfBuffer);
 
-    console.log("Einzel PDF exportiert →", filename);
+    const pdfBytes = await finalDoc.save();
+    fs.writeFileSync(path.join(exportDir, filename), pdfBytes);
   }
 
   await browser.close();

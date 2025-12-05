@@ -1,55 +1,42 @@
 @media print {
   @page {
-    margin: 0mm;
+    margin: 20mm;
     size: A4;
   }
 
-  body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-
-    margin: 0;
-    padding: 0;
+  .BgCircle,
+  .BgCircle::before,
+  .BgCircle::after {
+    background: none !important;
+    animation: none !important;
   }
 
+  body,
   .App,
-  main {
-    width: 100% !important;
-    margin: 0 !important;
-
-    padding-top: 20mm !important;
-    padding-bottom: 20mm !important;
-    padding-left: 10mm !important;
-    padding-right: 10mm !important;
-
-    box-sizing: border-box !important;
-
-    min-height: 100vh;
-  }
-
+  main,
   #content {
-    max-width: none !important;
+    background: transparent !important;
     width: 100% !important;
+    max-width: none !important;
     margin: 0 !important;
-    /* abstände -> padding */
+    padding: 0 !important;
+    box-shadow: none !important;
   }
 
-  .page-break {
-    break-before: page;
-  }
-
-  .no-print {
-    display: none !important;
-  }
-
+  .no-print,
   header,
-  footer {
+  footer,
+  button,
+  .ToTopButton {
     display: none !important;
   }
 
   section {
     page-break-inside: avoid;
     break-inside: avoid;
-    padding-top: 60px;
+  }
+
+  .page-break {
+    break-before: page;
   }
 }

@@ -41,7 +41,7 @@ export const VideoContainer = ({ link, title }) => {
       ref={videoRef}
       width="100%"
       height={videoHeight}
-      className="rounded-xl"
+      className="rounded-xl no-print"
       allowFullScreen></iframe>
   );
 };

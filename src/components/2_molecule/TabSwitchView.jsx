@@ -17,7 +17,7 @@ export const TabSwitchView = ({ children }) => {
 
   return (
     <div
-      className={`${styles.tab_container} ${styles.background} no-hover shadow`}>
+      className={`${styles.tab_container} ${styles.background} no-hover shadow no-print`}>
       <div className={styles.tab_header}>
         {tabTitles.map((title, index) => {
           const isActive = selectedTab === index;

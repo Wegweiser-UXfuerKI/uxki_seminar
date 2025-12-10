@@ -86,17 +86,25 @@ const getBackgroundHTML = () => {
 
         .blob-before {
             right: 0;
-            top: -10vw; 
-            width: 40vw;
-            height: 40vw;
+            top: 40vw; 
+            width: 30vw;
+            height: 30vw;
             background: var(--rGradient);
         }
 
         .blob-after {
             left: 0;
-            bottom: -5vw;
-            width: 35vw;
-            height: 35vw;
+            bottom: -15vw;
+            width: 25vw;
+            height: 25vw;
+            background: var(--lGradient);
+        }
+        
+        .blob-after-second {
+            left: 0;
+            top: -0vw;
+            width: 25vw;
+            height: 25vw;
             background: var(--lGradient);
         }
       </style>
@@ -105,6 +113,7 @@ const getBackgroundHTML = () => {
       <div class="pdf-bg">
         <div class="blob blob-before"></div>
         <div class="blob blob-after"></div>
+        <div class="blob blob-after-second"></div>
       </div>
     </body>
     </html>
@@ -178,12 +187,6 @@ async function addContentToDocument(finalDoc, contentBuffer, bgPageTemplate) {
   const createPdfOptions = () => ({
     format: "A4",
     printBackground: true,
-    margin: { 
-      top: "20mm", 
-      bottom: "20mm", 
-      left: "20mm", 
-      right: "20mm" 
-    },
   });
 
   // loop all pages

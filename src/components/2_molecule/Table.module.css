@@ -3,6 +3,7 @@
   max-width: 960px;
   margin: var(--scale4) auto;
   border-radius: var(--scale2);
+  break-inside: avoid;
 }
 
 .table {

@@ -75,7 +75,7 @@ export const ChapterSwitch = () => {
   }, [prevChapterLink, nextChapterLink, selectedModuleLink]);
 
   return (
-    <section className="flex sm:flex-row flex-col w-full xl:gap-28 md:gap-16 gap-10 justify-between">
+    <section className="flex sm:flex-row flex-col w-full xl:gap-28 md:gap-16 gap-10 justify-between no-print">
       <div className="md:w-1/2 w-full">
         {prevChapterLink && (
           <UXButton

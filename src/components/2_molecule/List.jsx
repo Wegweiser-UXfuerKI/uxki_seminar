@@ -18,11 +18,11 @@ import Circle from "../1_elements/Circle";
  * @returns {JSX.Element} The rendered List component.
  */
 const List = ({ items, alignItems = "top", size = "medium" }) => (
-  <ul className="list-none p-0">
+  <ul className="list-none p-0 break">
     {items.map((item, index) => (
       <li
         key={index}
-        className={`flex ${
+        className={`flex no-break ${
           alignItems === "center" ? "items-center" : "items-start"
         } lg:gap-6 gap-4 mb-8`}>
         <Circle content={index + 1} size={size} />

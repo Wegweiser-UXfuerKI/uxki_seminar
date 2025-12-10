@@ -1,7 +1,13 @@
+.only-print {
+  display: none !important;
+}
+
 @media print {
   @page {
-    margin: 20mm;
+    margin: 10mm;
+    padding: 5mm;
     size: A4;
+    overflow: visible;
   }
 
   .BgCircle,
@@ -23,6 +29,11 @@
     box-shadow: none !important;
   }
 
+  main {
+    padding: 5mm !important;
+    overflow: visible !important;
+  }
+
   .no-print,
   header,
   footer,
@@ -31,9 +42,21 @@
     display: none !important;
   }
 
-  section {
+  .only-print {
+    display: block !important;
+  }
+
+  .no-break,
+  section,
+  ul,
+  img {
     page-break-inside: avoid;
     break-inside: avoid;
+  }
+
+  .break {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
   }
 
   .page-break {

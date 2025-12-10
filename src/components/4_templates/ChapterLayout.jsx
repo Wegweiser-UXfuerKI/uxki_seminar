@@ -32,7 +32,7 @@ export const ChapterLayout = () => {
           <div
             key={`kapitel-${sectionIndex}-section-${sectionIndex}`}
             id={sectionIndex}
-            className={sectionIndex === 0 ? "page-break" : ""}>
+            className={sectionIndex === 0 ? "print:mt-10" : ""}>
             {section}
           </div>
         ))

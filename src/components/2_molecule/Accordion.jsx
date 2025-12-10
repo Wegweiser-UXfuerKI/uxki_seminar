@@ -57,7 +57,7 @@ const Accordion = ({
   return (
     <div
       id="accordion"
-      className={`w-full rounded-xl mb-6 transition ${
+      className={`w-full no-print rounded-xl mb-6 transition ${
         useGlassBox ? "glassBox" : ""
       }`}>
       {/* Accordion Title */}

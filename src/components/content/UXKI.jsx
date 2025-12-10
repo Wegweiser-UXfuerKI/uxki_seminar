@@ -113,7 +113,9 @@ const WahrgenommeneAutonomie = {
         Informationsverarbeitung zu viel Automatisierung vorhanden ist (Onnasch
         et al., 2014).
       </p>
-      <h4>Einfluss der Automatisierung auf die menschliche Leistung</h4>
+      <h4 className="page-break">
+        Einfluss der Automatisierung auf die menschliche Leistung
+      </h4>
       <p>
         Parasuraman et al. (2000) haben vier zentrale Faktoren identifiziert,
         die beeinflussen, wie Automatisierung die menschliche Leistung
@@ -287,7 +289,7 @@ const WahrgenommeneAutonomie = {
         Automatisierungsgrad individuell anpassen, was zu einem effizienteren
         und reibungsloseren Verkehrserlebnis führt.
       </p>
-      <h3>2. Situationsbewusstsein unterstützen</h3>
+      <h3 className="page-break">2. Situationsbewusstsein unterstützen</h3>
       <h4>Beispiel: Notfallmanagementsysteme in Städten</h4>
       <p>
         Ein Notfallmanagementsystem liefert Echtzeitdaten zu städtischen
@@ -330,7 +332,9 @@ const WahrgenommeneAutonomie = {
         nachvollziehen können, wie die Empfehlungen zustande kommen. Dies
         fördert einen effizienteren und informierten Entscheidungsprozess.
       </p>
-      <h4>Beispiel: Überwachungssysteme für den öffentlichen Verkehr</h4>
+      <h4 className="page-break">
+        Beispiel: Überwachungssysteme für den öffentlichen Verkehr
+      </h4>
       <p>
         Ein städtisches Verkehrssystem analysiert den Verkehrsfluss und erklärt
         transparent, wie Ampelschaltungen optimiert oder bestimmte Routen
@@ -407,7 +411,7 @@ const WahrgenommenesSituationsbewusstsein = {
         auftreten können. Diese Fähigkeit ist wichtig, um gute Entscheidungen in
         verschiedenen Situationen zu treffen.
       </p>
-      <p>
+      <p className="no-print">
         Eine ausführliche Erklärung der Definition finden Sie im folgenden
         Video.
       </p>
@@ -601,7 +605,7 @@ const WahrgenommeneInformationOverload = {
         Wenn Menschen durch kognitive Zwänge bewusster über Entscheidungen
         nachdenken sollen, kann das zwar positive Effekte haben, aber die höhere
         mentale Anstrengung könnte dazu führen, dass sie diese Methode weniger
-        gerne nutzen – besonders, wenn eine einfachere direkte Empfehlung
+        gerne nutzen - besonders, wenn eine einfachere direkte Empfehlung
         verfügbar ist.
       </p>
     </section>,
@@ -777,7 +781,7 @@ const PerceivedTrustworthiness = {
           <b>Prozess:</b> Die Methoden und Verfahren, die das System verwendet.
         </li>
       </ol>
-      <h4>
+      <h4 className="page-break">
         Kognitives vs. affektives Vertrauen nach Madsen und Gregor (2000):
       </h4>
       <p>
@@ -839,7 +843,7 @@ const PerceivedTrustworthiness = {
         Umfeld können ebenfalls relevant sein.
       </p>
     </section>,
-    <section id="studie">
+    <section id="studie" className="break">
       <h2>3. Studien zur User Experience und KI</h2>
       <h4>
         Schrills (2024): Einfluss der Systemzuverlässigkeit auf Nutzervertrauen
@@ -857,7 +861,7 @@ const PerceivedTrustworthiness = {
         KI-Systems einen größeren Einfluss auf die Nutzung hat als traditionelle
         Methoden zur Messung von Vertrauen.
       </p>
-      <h4>
+      <h4 className="page-break">
         Vereschak et al. (2024): Menschliche Einflüsse und
         Stakeholder-spezifische Anforderungen
       </h4>
@@ -899,7 +903,7 @@ const PerceivedTrustworthiness = {
         auf die Nutzung zu verstehen.
       </p>
     </section>,
-    <section id="guidelines">
+    <section id="guidelines" className="break">
       <h2>5. Design-Guidelines zur Förderung der Vertrauenswürdigkeit</h2>
       <h4>1. Förderung von Transparenz und Verständlichkeit</h4>
       <p>
@@ -942,7 +946,9 @@ const PerceivedTrustworthiness = {
         berücksichtigt, stärkt die emotionale Bindung und das Vertrauen der
         Nutzer in das System.
       </p>
-      <h4>5. Kontextbezogene Erklärungen für Empfehlungen geben</h4>
+      <h4 className="page-break">
+        5. Kontextbezogene Erklärungen für Empfehlungen geben
+      </h4>
       <p>
         Um situatives Vertrauen zu fördern, sollten Systeme kontextabhängige
         Erklärungen liefern, die auf die spezifische Entscheidungssituation der
@@ -992,7 +998,7 @@ const PerceivedConfidence = {
         title={"Perceived Confidence"}
       />
     </section>,
-    <section id="definition">
+    <section id="definition" className="break">
       <h2>1. Definition wahrgenommene Diagnostizität</h2>
       <p>
         Die wahrgenommene Diagnostizität (Perceived Confidence/Diagnosticity)
@@ -1008,7 +1014,7 @@ const PerceivedConfidence = {
         Nutzenden.
       </p>
     </section>,
-    <section id="konzepte">
+    <section id="konzepte" className="break">
       <h2>2. Relevante Konzepte und Modelle</h2>
       <h3>Auswahl von Handlungsmöglichkeiten</h3>
       <p>
@@ -1027,7 +1033,7 @@ const PerceivedConfidence = {
         spezifischer Informationen hilft das System, die Entscheidung über den
         nächsten Schritt gezielt zu erleichtern.
       </p>
-      <h3>
+      <h3 className="page-break">
         Unterschied zwischen wahrgenommener und tatsächlicher Diagnostizität
       </h3>
       <p>
@@ -1198,7 +1204,7 @@ const Zusammenfassung = {
         KI-Systemen eine besondere Rolle spielen.
       </p>
     </section>,
-    <section id="kernaspekte">
+    <section id="kernaspekte" className="break">
       <h2>Die 5 UX-Kernaspekte und deren Designrichtlinien</h2>
       <h3>1. Adaptive Automatisierung für wahrgenommene Autonomie</h3>
       <p>
@@ -1230,7 +1236,7 @@ const Zusammenfassung = {
         Sie visuelle Darstellungen oder erklärende Hinweise, um komplexe Abläufe
         verständlicher zu machen.
       </p>
-      <h3>
+      <h3 className="page-break">
         3. Flexibilität bei der Informationsverarbeitung zur Reduzierung der
         mentalen Belastung
       </h3>

@@ -79,7 +79,7 @@ const Einleitung = {
         entwickelte, sondern auch große Teile des parlamentarischen EU-Apparats
         durchlaufen hat.
       </p>
-      <div className="w-full rounded-xl">
+      <div className="w-full rounded-xl no-print">
         <InteractiveModal title={"Timeline zum EU AI Act"}>
           <Timeline />
         </InteractiveModal>
@@ -98,7 +98,7 @@ const Einleitung = {
         .
       </p>
     </section>,
-    <section id="vergleich">
+    <section id="vergleich" className="break">
       <h2>2. Vergleich mit anderen Ländern / Regionen</h2>
       <h3>insbesondere England, USA und Kanada</h3>
       <p>
@@ -116,7 +116,7 @@ const Einleitung = {
         Stand der KI-Regulierung in anderen Nationen zu werfen, um diese
         Vorstellung besser einordnen zu können.
       </p>
-      <h3>Vereinigtes Königreich</h3>
+      <h3 className="page-break">Vereinigtes Königreich</h3>
       <p>
         Schaut man dazu beispielsweise über den Kanal ins Vereinigte Königreich,
         so stellt man fest, dass auch dort weitreichende Maßnahmen für die
@@ -221,7 +221,7 @@ const Einleitung = {
         Unternehmen, Forschung und Endnutzer:innen befähigt, rechtssicher mit KI
         umzugehen.
       </p>
-      <h3>Anwendungsbereich und betroffene Systeme</h3>
+      <h3 className="page-break">Anwendungsbereich und betroffene Systeme</h3>
       <p>
         Der Act findet Anwendung bei verschiedenen KI-Systemen, abhängig von
         ihrem Risiko. Hochrisiko-Systeme umfassen beispielsweise KI-Anwendungen
@@ -245,7 +245,7 @@ const Einleitung = {
         entwickeln oder bereitstellen, müssen hingegen sicherstellen, dass ihre
         Produkte konform sind.
       </p>
-      <h3>Sanktionen bei Verstößen</h3>
+      <h3 className="page-break">Sanktionen bei Verstößen</h3>
       <p>
         Bei Verstößen gegen den EU AI Act drohen erhebliche Sanktionen. Die
         vorgeschlagenen Strafen umfassen Bußgelder von bis zu 35 Millionen Euro
@@ -255,7 +255,7 @@ const Einleitung = {
         Nutzung von KI sicherstellen sollen.
       </p>
     </section>,
-    <section id="fazit">
+    <section id="fazit" className="break">
       <h2>4. Fazit</h2>
       <p>
         Zusammenfassend lässt sich sagen, dass der EU AI Act ein umfassendes und
@@ -311,7 +311,7 @@ const RisikostufenAnwendungsbeispiele = {
         Systemen in die verschiedenen Risikostufen betrachten und Ihnen ein Tool
         vorstellen, das Sie selbst zur Einstufung nutzen können.{" "}
       </p>
-      <p>
+      <p className="no-print">
         Für eine einfache Übersicht über die verschiedenen Risikostufen schauen
         Sie sich gerne folgendes Video an:
       </p>
@@ -385,7 +385,7 @@ const RisikostufenAnwendungsbeispiele = {
         beim Anbieter so gesichert werden, dass dieser Sie auf Anfrage der
         EU-Behörden übertragen kann.
       </p>
-      <h3>Beispiel 2</h3>
+      <h3 className="page-break">Beispiel 2</h3>
       <p>
         Für unser zweites Beispiel stellen wir uns vor wir sind Teil einer in
         den USA und Europa agierenden auf Nachhaltigkeit und Tierwohl
@@ -521,7 +521,7 @@ const RisikostufenAuswirkungen = {
       <Accordion sections={sectionRisikostufenAuswirkungen} />
       <SubNavigation sections={sectionRisikostufenAuswirkungen} />
     </section>,
-    <section id="massnahmen">
+    <section id="massnahmen" className="break">
       <h2>1. Was muss je nach Risikostufe beachtet werden?</h2>
       <p>
         Dieser Text zielt darauf ab, ein tieferes Verständnis der verschiedenen
@@ -562,7 +562,7 @@ const RisikostufenAuswirkungen = {
         um sicherzustellen, dass diese Systeme weder entwickelt noch innerhalb
         der Europäischen Union eingesetzt werden.
       </p>
-      <h3>Hochrisiko-KI-Systeme</h3>
+      <h3 className="page-break">Hochrisiko-KI-Systeme</h3>
       <p>
         Hochrisiko-KI-Systeme sind solche, die erhebliche Risiken für
         Gesundheit, Sicherheit und grundlegende Rechte darstellen. Diese Systeme
@@ -622,7 +622,7 @@ const RisikostufenAuswirkungen = {
         ordnungsgemäße Datenverwaltung ist entscheidend, um die Zuverlässigkeit
         und Fairness des KI-Systems zu gewährleisten.
       </p>
-      <h4>Artikel 11</h4>
+      <h4 className="page-break">Artikel 11</h4>
       <p>
         Umfassende technische Dokumentation, wie in Artikel 11 gefordert, ist
         unerlässlich, um die Einhaltung zu demonstrieren. Dies umfasst
@@ -649,7 +649,7 @@ const RisikostufenAuswirkungen = {
         treffen können. Hier kann auch an der Vereinfachung von z.B. Interfaces
         gearbeitet werden, um Artikel 13 besser zu erfüllen.
       </p>
-      <h4>Artikel 14</h4>
+      <h4 className="page-break">Artikel 14</h4>
       <p>
         Artikel 14 unterstreicht die Bedeutung von menschlicher Aufsicht, auch
         human oversight im Englischen. Eine angemessene menschliche Überwachung
@@ -702,7 +702,7 @@ const RisikostufenAuswirkungen = {
         darstellen.
       </p>
     </section>,
-    <section>
+    <section className="no-print">
       <h2>Risikostufen-Pyramide</h2>
       <p>
         Hier können Sie sich noch einmal die unterschiedlichen Stufen
@@ -714,7 +714,7 @@ const RisikostufenAuswirkungen = {
         </InteractiveModal>
       </div>
     </section>,
-    <section id="videoRisikostufen">
+    <section id="videoRisikostufen" className="no-print">
       <h2>2. Designimplikationen des EU AI Acts</h2>
       <VideoContainer
         link={
@@ -795,7 +795,7 @@ const HLEG = {
       <Accordion sections={sectionHLEG} />
       <SubNavigation sections={sectionHLEG} />
     </section>,
-    <section id="hleg">
+    <section id="hleg" className="break">
       <h2>1. Die Rolle der High-Level Expert Group für Trustworthy AI</h2>
       <h4>
         Die High-Level Expert Group on Artificial Intelligence und ihre Ziele
@@ -973,7 +973,7 @@ const HLEG = {
         (High-Level Expert Group on Artificial Intelligence, 2019).
       </p>
     </section>,
-    <section id="fazit">
+    <section id="fazit" className="break">
       <h2>4. Zusammenfassung der Kriterien und Ziele der HLEG</h2>
       <ul>
         <li>Menschliche Autonomie und Aufsicht</li>

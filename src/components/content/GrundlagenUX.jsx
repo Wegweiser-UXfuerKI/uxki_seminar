@@ -57,7 +57,7 @@ const Usability = {
       <Accordion sections={sectionsUsability} />
       <SubNavigation sections={sectionsUsability} />
     </section>,
-    <section>
+    <section className="break">
       <h2>Definition Usability</h2>
       <p>
         <b>Usability</b>, im Fachjargon auch als
@@ -229,7 +229,7 @@ const Usability = {
         thematisieren.
       </p>
     </section>,
-    <section>
+    <section className="no-print">
       <h2>Wissensüberprüfung</h2>
       <p>
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
@@ -299,7 +299,7 @@ const Nutzungskontext = {
       <Accordion sections={sectionsNutzungskontext} />
       <SubNavigation sections={sectionsNutzungskontext} />
     </section>,
-    <section>
+    <section className="break">
       <h2>Definition Nutzungskontext</h2>
       <p>
         Der Nutzungskontext beschreibt die Umstände, unter denen ein digitales
@@ -318,7 +318,7 @@ const Nutzungskontext = {
         size="medium"
       />
     </section>,
-    <section>
+    <section className="break">
       <h2>Warum ist der Nutzungskontext wichtig?</h2>
       <p>
         Wenn Sie die Usability (Gebrauchstauglichkeit) eines interaktiven
@@ -393,12 +393,14 @@ const Nutzungskontext = {
           KI, Lernstil
         </li>
       </ul>
-      <h3>2. Aufgaben</h3>
-      <p>
-        Die Aufgaben beschreiben, was die Benutzer:innen mit einem System
-        erreichen wollen. Das hat großen Einfluss darauf, welche Funktionen ein
-        System besitzt.
-      </p>
+      <div className="no-break">
+        <h3>2. Aufgaben</h3>
+        <p>
+          Die Aufgaben beschreiben, was die Benutzer:innen mit einem System
+          erreichen wollen. Das hat großen Einfluss darauf, welche Funktionen
+          ein System besitzt.
+        </p>
+      </div>
       <p>Dazu könnte man sich folgende Aspekte ansehen:</p>
       {/* Same here: Reine Liste oder nummeriert? */}
       <ul>
@@ -493,7 +495,7 @@ const Nutzungskontext = {
         System muss somit schnell verständlich sein, damit sie ihre Ziele ohne
         Frustration erreichen.
       </p>
-      <h3>3. Chatbots als Allheilmittel</h3>
+      <h3 className="page-break">3. Chatbots als Allheilmittel</h3>
       <p>
         Durch den Erfolg von ChatGPT wird heute sehr oft die Automatisierung von
         Aufgaben durch Chatbots als eine Art Allheilmittel betrachtet. Dies
@@ -560,7 +562,7 @@ const Nutzungskontext = {
       <p>
         <b>Physische Umgebung:</b>
       </p>
-      <ul>
+      <ul className="break">
         <li>
           <b>Arbeitsplatzbedingungen</b>, z.B. Lärmpegel in der Umgebung und die
           Anwesenheit anderer Personen vs. Zuverlässigkeit und Datenschutz bei
@@ -604,7 +606,28 @@ const Nutzungskontext = {
           Offline-Funktionalität und schnelle Spracheingabe berücksichtigen.
         </p>
       </Accordion>
-      <div className="mb-12">
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print">
+        <h4>1. Mobiler Beratungsbus für Geflüchtete</h4>
+        <p>
+          In einem mobilen Beratungsbus für Geflüchtete arbeiten die
+          Mitarbeitenden mit Tablets. Die Beratung findet häufig unter freiem
+          Himmel statt, bei instabiler Internetverbindung und unter hohem
+          Zeitdruck. Die Arbeit erfolgt dabei oft im Stehen oder in
+          improvisierten Sitzpositionen.
+        </p>
+        <p>
+          In diesem Nutzungskontext ist der Einsatz heute typischer
+          KI-Technologien, z. B. Chatbots, nur bedingt geeignet, da die
+          technische Infrastruktur sowie die körperlichen und zeitlichen
+          Rahmenbedingungen für deren Einsatz nicht optimal sind. Heutige
+          Chatbots brauchen in der Regel schnelle Internetverbindungen und
+          basieren auf Eingaben über Tastatur oder Sprache, die mit spürbaren
+          Verzögerungen durch weit entfernte Server erst verarbeitet und dann
+          beantwortet werden. Die Anwendung sollte dagegen
+          Offline-Funktionalität und schnelle Spracheingabe berücksichtigen.
+        </p>
+      </div>
+      <div className="mb-12 no-print">
         {" "}
         {/* TODO: uniform distance */}
         <Accordion
@@ -619,6 +642,17 @@ const Nutzungskontext = {
             ermöglichen konzentriertes Arbeiten.
           </p>
         </Accordion>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print page-break">
+        <h4>2. Digital ausgerichtete NGO mit Online-Beratung</h4>
+        <p>
+          In einer digital ausgerichteten NGO, die Online-Beratung anbietet,
+          arbeiten die Teams in ruhigen Büros mit ergonomischen Arbeitsplätzen.
+          Dort stehen leistungsfähige Laptops oder Desktop-PCs mit großen
+          Bildschirmen, Headsets und stabiler Internetverbindung zur Verfügung.
+          Die Beratungen folgen einem festen Zeitplan und ermöglichen
+          konzentriertes Arbeiten.
+        </p>
       </div>
       <h3>5. Hilfsmittel</h3>
       <p>Die technischen Bedingungen umfassen folgende Punkte:</p>
@@ -659,7 +693,7 @@ const Nutzungskontext = {
         fehlen.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>Wie erfolgt eine Nutzungskontextanalyse?</h2>
       <p>
         Die Nutzungskontextanalyse untersucht die vier oben genannten Aspekte.
@@ -675,7 +709,7 @@ const Nutzungskontext = {
         oftmals nicht so umfassend durchgeführt werden kann. Daher gilt hier
         wieder &bdquo;Alles ist besser als nichts!&ldquo;.
       </p>
-      <p>Die Analyse erfolgt in zwei Schritten:</p>
+      <p className="page-break">Die Analyse erfolgt in zwei Schritten:</p>
       <TabSwitchView>
         <div title="1. Datenerhebung">
           <p>
@@ -723,7 +757,52 @@ const Nutzungskontext = {
           </ul>
         </div>
       </TabSwitchView>
-      <p>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>1. Datenerhebung</h4>
+        <p>
+          Zunächst werden Informationen über Benutzende, Aufgaben und
+          Nutzungssituation gesammelt. Mögliche Methoden:
+        </p>
+        <ul>
+          <li>
+            {" "}
+            <b>Interviews</b>: Gezielte Befragung von Nutzer:innen oder
+            Expert:innen.
+          </li>
+          <li>
+            {" "}
+            <b>Umfragen</b>: Standardisierte Erhebung von Meinungen und
+            Erfahrungen über Fragebögen.
+          </li>
+          <li>
+            {" "}
+            <b>Fokusgruppen</b>: Gruppendiskussion zur Sammlung
+            unterschiedlicher Perspektiven.
+          </li>
+        </ul>
+        <h4>2. Analyse & Dokumentation</h4>
+        <p>
+          Die gesammelten Daten werden geordnet und aufbereitet, beispielsweise
+          durch:
+        </p>
+        <ul>
+          <li>
+            {" "}
+            <b>Personas</b>: Fiktive, aber realitätsnahe Nutzerprofile.
+          </li>
+          <li>
+            {" "}
+            <b>Nutzungsszenarien, Problemszenarien</b>: Beschreibungen typischer
+            Nutzungs- oder Problemsituationen.
+          </li>
+          <li>
+            {" "}
+            <b>Aufgabenanalyse</b>: Zerlegung von Aufgaben in Teilaufgaben (z.B.
+            mittels Hierarchical Task Analysis).
+          </li>
+        </ul>
+      </div>
+      <p className="page-break">
         Auf Basis dieser Analysen werden <b>Usability-Ziele</b> und{" "}
         <b>konkrete Nutzungsanforderungen</b> abgeleitet. Diese sind die
         Grundlage für Gestaltung und Evaluation. Später können damit gezielte{" "}
@@ -754,7 +833,7 @@ const Nutzungskontext = {
         .
       </p>
     </section>,
-    <section>
+    <section className="no-print">
       <h2>Wissensüberprüfung</h2>
       <p>
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
@@ -840,7 +919,7 @@ const UserExperience = {
       <Accordion sections={sectionsUX} />
       <SubNavigation sections={sectionsUX} />
     </section>,
-    <section>
+    <section className="break">
       <h2>Was ist UX?</h2>
       <p>
         Die <b>User Experience</b> (UX) ist ein immer wichtigeres Ziel bei der
@@ -855,7 +934,7 @@ const UserExperience = {
         Systems vermitteln? Diese bleiben in Erinnerung und machen den
         Unterschied!
       </p>
-      <p>Nehmen wir als Beispiel ein Smartphone:</p>
+      <p className="page-break">Nehmen wir als Beispiel ein Smartphone:</p>
       <ul>
         <li>
           Bereits vor der ersten Nutzung können Vorfreude und Erwartungen
@@ -894,7 +973,7 @@ const UserExperience = {
         ergeben.&ldquo;
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>UX als Markenversprechen</h2>
       <p>
         Die Bedeutung von UX ist bei Systemen für gemeinwohlorientierte
@@ -932,7 +1011,7 @@ const UserExperience = {
         Wirkung?&ldquo;.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>Wie erreicht man eine gute UX?</h2>
       <p>
         Eine gute User Experience (UX) kann nicht direkt &bdquo;designt&ldquo;
@@ -962,7 +1041,7 @@ const UserExperience = {
       <p>
         <b>Zentrale Ziele einer guten UX können sein:</b>
       </p>
-      <ul>
+      <ul className="break">
         <li>
           <b>Produktive und einfache Interaktion</b>, die Nutzer:innen effizient
           ans Ziel bringt
@@ -982,7 +1061,7 @@ const UserExperience = {
         </li>
       </ul>
     </section>,
-    <section>
+    <section className="break">
       <h2>Wichtige UX-Faktoren im Detail</h2>
       <h3>1. Erlebnispotential</h3>
       <p>
@@ -998,7 +1077,7 @@ const UserExperience = {
       <p>
         Wir können also festhalten, UX bedeutet, wie Menschen eine Website, App
         oder ein Produkt erleben - und das betrifft nicht nur,{" "}
-        <b>wie gut etwas funktioniert</b>, sondern auch,
+        <b>wie gut etwas funktioniert</b>, sondern auch,{" "}
         <b>wie es sich dabei anfühlt</b>. Also: Es geht sowohl um die praktische
         Seite (z. B. &bdquo;Finde ich schnell, was ich suche?&ldquo;) als auch
         um die <b>emotionale</b> (z. B. &bdquo;Macht es mir Spaß, das zu
@@ -1006,8 +1085,10 @@ const UserExperience = {
         Forschungskontext lässt sich dies als so genannte pragmatische und
         hedonische Qualitäten aufschlüsseln:
       </p>
-      <Table data={pragamatischeHedonischTableData} headerStyle={true} />
-      <h3>3. Weitere Aspekte guter UX</h3>
+      <div className="print:pt-1">
+        <Table data={pragamatischeHedonischTableData} headerStyle={true} />
+      </div>
+      <h3 className="page-break">3. Weitere Aspekte guter UX</h3>
       <Table data={weitereAspkteTableDate} headerStyle={true} />
     </section>,
     <section>
@@ -1027,6 +1108,18 @@ const UserExperience = {
           Atmosphäre schafft.
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print">
+        <h4>Beispiel für gute UX</h4>
+        <p>
+          Ein KI-gestützter Chatbot kann eine positive User Experience bieten,
+          wenn er sich intuitiv bedienen lässt, natürliche Sprache verwendet und
+          klare Anweisungen gibt. Besonders überzeugend ist das
+          Benutzungserlebnis, wenn der Chatbot Probleme schnell und präzise
+          löst, sich an die individuellen Bedürfnisse und Präferenzen der
+          Nutzer:innen anpasst und dabei eine freundliche, empathische
+          Atmosphäre schafft.
+        </p>
+      </div>
       <Accordion title="Beispiel für schlechte UX" initiallyOpen={false}>
         <p>
           Negative UX entsteht hingegen, wenn es zu Missverständnissen kommt,
@@ -1038,6 +1131,18 @@ const UserExperience = {
           sie den Dialog ermüdend und ineffizient wirken lassen.
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print">
+        <h4>Beispiel für schlechte UX</h4>
+        <p>
+          Negative UX entsteht hingegen, wenn es zu Missverständnissen kommt,
+          etwa weil Benutzereingaben falsch interpretiert oder unklare Antworten
+          gegeben werden. Auch mangelnde Flexibilität, also die Unfähigkeit, auf
+          unerwartete oder komplexe Anliegen einzugehen, beeinträchtigt das
+          Nutzungserlebnis. Lange Reaktionszeiten, unnötige Interaktionen und
+          wiederholte Eingabeaufforderungen führen schnell zu Frustration, da
+          sie den Dialog ermüdend und ineffizient wirken lassen.
+        </p>
+      </div>
     </section>,
     <section>
       <h2>Fazit: UX bedeutet Nutzerzentrierung</h2>
@@ -1057,7 +1162,7 @@ const UserExperience = {
         eine positive UX systematisch gestaltet und evaluiert werden kann.
       </p>
     </section>,
-    <section>
+    <section className="no-print">
       <h2>Wissensüberprüfung</h2>
       <p>
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
@@ -1093,7 +1198,7 @@ const MenschComputerInteraktion = {
       <Accordion sections={sectionsHCI} />
       <SubNavigation sections={sectionsHCI} />
     </section>,
-    <section>
+    <section className="break">
       <h2>Definition Mensch-Computer-Interaktion (HCI)</h2>
       <p>
         Die Mensch-Computer-Interaktion (engl. Human-Computer Interaction, HCI)
@@ -1122,7 +1227,7 @@ const MenschComputerInteraktion = {
         Schaffung positiverer oder "besserer" Nutzungserlebnisse.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>Warum ist menschzentrierte Gestaltung wichtig?</h2>
       <p>
         Ein zentrales Ziel menschzentrierter Gestaltung ist es, die Lücke
@@ -1203,7 +1308,7 @@ const MenschComputerInteraktion = {
         Sie diese Vorgehensweisen als Inspiration oder Leitlinien nutzen, um
         einen für Sie passenden Prozess zu entwickeln.
       </p>
-      <h3>1. User-Centered Design (UCD)</h3>
+      <h3 className="page-break">1. User-Centered Design (UCD)</h3>
       <p>
         Der UCD ist ein iterativer Gestaltungsprozess, bei dem die Bedürfnisse,
         Erwartungen und Einschränkungen der Nutzer:innen von Anfang an in den
@@ -1228,7 +1333,7 @@ const MenschComputerInteraktion = {
         alignItems="center"
         size="medium"
       />
-      <p>
+      <p className="page-break">
         Im letzten Schritt des iterativen Prozesses (understand) werden die
         Ergebnisse der Evaluationen interpretiert und die Erkenntnisse in die
         Study-Phase zurückgeführt.
@@ -1278,7 +1383,7 @@ const MenschComputerInteraktion = {
         size="medium"
       />
     </section>,
-    <section>
+    <section className="no-print">
       <h2>Wissensüberprüfung</h2>
       <p>
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
@@ -1361,7 +1466,7 @@ const Evaluation = {
       <Accordion sections={sectionsEvaluation} />
       <SubNavigation sections={sectionsEvaluation} />
     </section>,
-    <section>
+    <section className="break">
       <h2>Warum sind Evaluationen wichtig?</h2>
       <p>
         Evaluationen sind, wie Sie im vorherigen Modul gesehen haben, ein
@@ -1384,7 +1489,7 @@ const Evaluation = {
         werden.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>Wann wird evaluiert?</h2>
       <p>
         Evaluationen sind nicht nur eine abschließende Qualitätskontrolle,
@@ -1407,9 +1512,11 @@ const Evaluation = {
           funktioniert.
         </li>
       </ol>
-      <Table data={evaluationTypeData} />
+      <div className="print:pt-1">
+        <Table data={evaluationTypeData} />
+      </div>
     </section>,
-    <section>
+    <section className="break">
       <h2>Wie wird evaluiert und mit wem?</h2>
       <p>
         Beim Evaluieren unterscheidet man dabei häufig zwischen empirischen und
@@ -1585,6 +1692,117 @@ const Evaluation = {
           </p>
         </div>
       </TabSwitchView>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print">
+        <h4>Usability-Tests</h4>
+        <p>
+          In einem Usability-Test bearbeiten Nutzer:innen typische Aufgaben mit
+          dem System, während Expert:innen ihr Verhalten beobachten, um Probleme
+          und Barrieren zu erkennen. Diese Methode liefert Einblicke in die
+          tatsächliche Nutzung und hilft dabei, konkrete Usability-Probleme zu
+          identifizieren. Der Aufwand ist jedoch hoch, und der künstliche
+          Testrahmen kann das Verhalten der Nutzer:innen beeinflussen. Zudem
+          sind die Ergebnisse wegen der kleinen Teilnehmerzahl oft nicht
+          vollständig repräsentativ.
+        </p>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print">
+        <h4>Heuristische Evaluation</h4>
+        <p>
+          Bei der heuristischen Evaluation prüfen Expert:innen das System anhand
+          von Usability-Heuristiken (z.B.{" "}
+          <a
+            href="https://www.nngroup.com/articles/ten-usability-heuristics/"
+            target="_blank"
+            rel="noopener noreferrer">
+            die 10 Regeln von Nielsen
+          </a>
+          ). So lassen sich offensichtliche Usability-Probleme schnell
+          identifizieren, ohne dass Nutzer:innen einbezogen werden müssen. Das
+          macht die Methode kostengünstig und effizient für eine erste
+          Einschätzung. Allerdings ist die Bewertung subjektiv und hängt stark
+          von der Erfahrung der Expert:innen ab. Zudem werden oft nicht alle
+          Probleme erkannt, die bei echten Nutzer:innen auftreten würden. Mehr
+          zur Durchführung{" "}
+          <a
+            href="https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-print">
+            hier
+          </a>
+          <a
+            href="https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="only-print">
+            https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/
+          </a>
+          .
+        </p>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print page-break">
+        <h4>Fragebögen</h4>
+        <p>
+          Standardisierte Fragebögen sind eine einfache und effiziente Methode,
+          um die subjektive Einschätzung der Usability durch Nutzer:innen zu
+          erfassen. Zu bekannten zählen:
+        </p>
+        <ul>
+          <li>
+            <p>
+              die{" "}
+              <a
+                href="https://germanupa.de/wissen/fragebogenmatrix/sus/"
+                target="_blank"
+                rel="noopener noreferrer">
+                System Usability Scale
+              </a>{" "}
+              (
+              <a
+                href="http://interaction-design-group.de/toolbox/wp-content/uploads/2016/05/SUS.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                Deutsche Variante
+              </a>
+              )
+            </p>
+          </li>
+          <li>
+            <p>
+              <a
+                href="https://site.unibo.it/hfrs/en/questionnaire-and-scales-2/quis"
+                target="_blank"
+                rel="noopener noreferrer">
+                Questionnaire for User Interface Satisfaction (QUIS)
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a
+                href="https://www.researchgate.net/publication/230786746_Measuring_Usability_with_the_USE_Questionnaire"
+                target="_blank"
+                rel="noopener noreferrer">
+                USE-Fragebogen (Usefulness, Satisfaction, and Ease of Use)
+              </a>
+            </p>
+          </li>
+        </ul>
+        <p>
+          Diese Fragebögen lassen sich schnell durchführen, liefern quantitative
+          Daten und können mit vielen Nutzer:innen gleichzeitig eingesetzt
+          werden. Sie eignen sich besonders gut, um erste
+          Usability-Einschätzungen zu gewinnen oder um mehrere Versionen eines
+          Systems zu vergleichen.
+        </p>
+        <p>
+          Allerdings erfassen sie meist nur oberflächliche Aspekte und sind
+          stark von der Ehrlichkeit und dem Verständnis der Teilnehmenden für
+          die gestellten Fragen abhängig. Daher sollten sie idealerweise mit
+          weiteren Methoden kombiniert werden, um ein umfassenderes Bild der
+          Usability zu erhalten.
+        </p>
+      </div>
     </section>,
     <section>
       <h2>Methoden zur Messung der User Experience (UX)</h2>
@@ -1636,8 +1854,52 @@ const Evaluation = {
           </p>
         </div>
       </TabSwitchView>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print">
+        <h4>Interviews</h4>
+        <p>
+          Interviews ermöglichen tiefe Einblicke in die Gedanken, Gefühle und
+          Erfahrungen der Nutzer:innen. Durch offene Fragen erhält man
+          detailliertes Feedback zur Wahrnehmung eines Produkts. Die Methode ist
+          flexibel und kontextbezogen, jedoch zeitaufwendig und nur bedingt
+          repräsentativ.
+        </p>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print">
+        <h4>Emotionsanalyse und physiologische Messungen</h4>
+        <p>
+          Techniken wie Eye-Tracking, Emotionserkennung oder
+          Hautleitfähigkeitsmessung erfassen unbewusste, emotionale Reaktionen
+          auf ein Produkt. Diese objektiven Daten helfen dabei, subtile Aspekte
+          der User Experience zu verstehen, die über bloße Befragungen
+          hinausgehen. Sie sind aber oft technisch aufwändig, teuer, schwer zu
+          interpretieren und können das Nutzerverhalten beeinflussen.
+        </p>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print">
+        <h4>Fragebögen</h4>
+        <p>
+          Standardisierte Fragebögen wie der{" "}
+          <a
+            href="https://www.ueq-online.org/"
+            target="_blank"
+            rel="noopener noreferrer">
+            User Experience Questionnaire (UEQ)
+          </a>{" "}
+          oder{" "}
+          <a
+            href="https://germanupa.de/wissen/fragebogenmatrix/attrakdiff"
+            target="_blank"
+            rel="noopener noreferrer">
+            AttrakDiff
+          </a>{" "}
+          liefern schnelle, vergleichbare Ergebnisse zu verschiedenen
+          UX-Dimensionen. Sie sind einfach durchzuführen und gut validiert,
+          erfassen jedoch hauptsächlich subjektive Eindrücke und bieten wenig
+          Tiefe hinsichtlich der Ursachen hinter den Bewertungen.
+        </p>
+      </div>
     </section>,
-    <section>
+    <section className="break">
       <h2>Kombination von Methoden für eine umfassende Messung</h2>
       <p>
         Ein Multi-Methoden-Ansatz kombiniert verschiedene Erhebungsverfahren, um
@@ -1663,7 +1925,7 @@ const Evaluation = {
           verstehen.
         </li>
       </ol>
-      <p>
+      <p className="page-break">
         Allerdings wird auch hier von einem idealen Vorgehen ausgegangen und
         kann in realen Projekten den Anforderungen entsprechend abgewandelt
         werden.
@@ -1681,7 +1943,7 @@ const Evaluation = {
         size="medium"
       />
     </section>,
-    <section>
+    <section className="no-print">
       <h2>Wissensüberprüfung</h2>
       <p>
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
@@ -1784,7 +2046,7 @@ const Fazit = {
   description: "Hier wird ein allgemeines Fazit geschlossen.",
   content: [
     <ChapterHeader text={"Fazit"} number={7} />,
-    <section>
+    <section className="no-print">
       <SubNavigation sections={sectionsOutro} />
       <VideoContainer
         link={
@@ -1793,7 +2055,7 @@ const Fazit = {
         title={"Outro"}
       />
     </section>,
-    <section>
+    <section className="break">
       <h2>Die 5 Grundbegriffe und ihre Relevanz</h2>
       <List
         items={[

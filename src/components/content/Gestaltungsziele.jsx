@@ -43,7 +43,7 @@ const Vertrauenswürdigkeit = {
       <Accordion sections={sectionsVertrauenswürdigkeit} />
       <SubNavigation sections={sectionsVertrauenswürdigkeit} />
     </section>,
-    <section>
+    <section className="no-print">
       <p>
         Im folgenden Video wird grundlegend erläutert, was Vertrauenswürdigkeit
         in KI-Systemen bedeutet und warum sie eine zentrale Voraussetzung für
@@ -54,7 +54,7 @@ const Vertrauenswürdigkeit = {
         title="Vertrauenswürdigkeit"
       />
     </section>,
-    <section>
+    <section className="break">
       <h2>1. Einführung: Warum ist Trustworthy AI ein zentrales Thema?</h2>
       <p>
         Vertrauenswürdigkeit ist eine Schlüsseldimension für die erfolgreiche
@@ -226,6 +226,44 @@ const Vertrauenswürdigkeit = {
           </ul>
         </div>
       </TabSwitchView>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Kognitives Vertrauen</h4>
+        <p>
+          Beruht auf der rationalen Einschätzung der Systemleistung. Es
+          entsteht, wenn Nutzer:innen das System als kompetent, vorhersehbar und
+          zuverlässig wahrnehmen.
+        </p>
+        <p>
+          <b>Fördernde Faktoren:</b>
+        </p>
+        <ul className="mt-5">
+          <li>technische Kompetenz und Genauigkeit</li>
+          <li>konsistente, nachvollziehbare Entscheidungen</li>
+          <li>transparente Abläufe</li>
+          <li>Stabilität und Verlässlichkeit im Betrieb</li>
+        </ul>
+      </div>
+      <div className="print:pt-1">
+        <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+          <h4>Affektives Vertrauen</h4>
+          <p>
+            Beruht auf emotionaler Resonanz und sozialer Wahrnehmung. Es
+            entsteht, wenn Nutzer:innen das Gefühl haben, fair behandelt zu
+            werden oder dass das System ihre Interessen unterstützt.
+          </p>
+          <ul>
+            <li>
+              menschlich wirkendes, empathisches Design - aber Achtung, es
+              sollte kein <i>uncanny valley</i> entstehen
+            </li>
+            <li>freundliche, respektvolle Sprache und soziale Signale</li>
+            <li>
+              ethisches Verhalten (z.B. keine Manipulation, kein übertriebener
+              Druck)
+            </li>
+          </ul>
+        </div>
+      </div>
       <p className="mt-10">
         UX-Design muss beide Dimensionen - kognitiv und affektiv - mitdenken, um
         angemessenes Vertrauen in KI-Systeme zu ermöglichen.
@@ -266,7 +304,7 @@ const Vertrauenswürdigkeit = {
         <b>Vertrauen kalibrieren</b> (nutzerseitig).
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>4. Dimensionen vertrauenswürdiger KI-System</h2>
       <p>
         Für ein System, das als vertrauenswürdig gelten soll, werden in der
@@ -283,8 +321,7 @@ const Vertrauenswürdigkeit = {
         <b>UX-Bezug</b>: Nutzer:innen müssen über Systemstatus, Ausfälle oder
         Sicherheitsereignisse klar informiert werden.
       </p>
-
-      <h4>b) Transparenz und Erklärbarkeit</h4>
+      <h4 className="page-break">b) Transparenz und Erklärbarkeit</h4>
       <p>
         Entscheidungen und Prozesse sollen nachvollziehbar und überprüfbar sein.
         Dazu zählt u. a. die Offenlegung der Funktionsweise (z. B.
@@ -320,7 +357,7 @@ const Vertrauenswürdigkeit = {
         können, welche Daten genutzt werden.
       </p>
 
-      <h4>e) Rechenschaftspflicht & Verantwortung</h4>
+      <h4 className="page-break">e) Rechenschaftspflicht & Verantwortung</h4>
       <p>
         Es muss klar sein, wer für das Verhalten des Systems verantwortlich ist,
         und es muss möglich sein, Entscheidungen im Nachhinein zu überprüfen.
@@ -407,8 +444,41 @@ const Vertrauenswürdigkeit = {
           </ul>
         </div>
       </TabSwitchView>
-
-      <h4 className="mt-10">Kombination von Messmethoden</h4>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Messung von Vertrauen (subjektiv)</h4>
+        <ul className="mt-0">
+          <li>
+            <b>Umfragen & Fragebögen</b>: z. B. Trust in Automation Scale,
+            NASA-TLX (für mentale Belastung)
+          </li>
+          <li>
+            <b>Verhaltensindikatoren</b>: Bspw. Häufigkeit, mit der Nutzer:innen
+            Empfehlungen der KI folgen oder sie ablehnen
+          </li>
+          <li>
+            <b>Langzeitbeobachtung</b>: Veränderungen des Vertrauens über
+            wiederholte Nutzung
+          </li>
+        </ul>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Messung von Vertrauenswürdigkeit (objektiv)</h4>
+        <ul className="mt-0">
+          <li>
+            <b>Technische Metriken</b>: Genauigkeit, Fehlerraten,
+            Fairness-Indikatoren, Robustheitstests
+          </li>
+          <li>
+            <b>Audit & Compliance-Prüfungen</b>: Abgleich mit regulatorischen
+            Standards (z. B. EU AI Act, ISO-Normen)
+          </li>
+          <li>
+            <b>Erklärbarkeits-Checks</b>: Verständlichkeit und Korrektheit der
+            bereitgestellten Erklärungen
+          </li>
+        </ul>
+      </div>
+      <h4 className="mt-10 page-break">Kombination von Messmethoden</h4>
       <p>
         Gemeinsame Auswertung, um <i>Trust Calibration</i> zu prüfen - also ob
         subjektives Vertrauen mit objektiver Vertrauenswürdigkeit übereinstimmt.
@@ -426,7 +496,7 @@ const Vertrauenswürdigkeit = {
         Sondern: Wie gestalten wir KI, die überzeugt?
       </p>
     </section>,
-    <section>
+    <section className="no-print">
       <h2>Wissensüberprüfung</h2>
       <p>
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
@@ -467,7 +537,7 @@ const Transparenz = {
       <Accordion sections={sectionsTransparenz} />
       <SubNavigation sections={sectionsTransparenz} />
     </section>,
-    <section>
+    <section className="no-print">
       <p>
         Im folgenden Video wird Transparenz von KI-Systemen anhand eines
         Beispiels erklärt und darauf eingegangen wie man Transparenz erreichen
@@ -478,7 +548,7 @@ const Transparenz = {
         title="Transparenz"
       />
     </section>,
-    <section>
+    <section className="break">
       <h2>1. Einleitung: Warum ist Transparenz wichtig?</h2>
       <p>
         Transparenz ist ein zentrales Prinzip im Kontext vertrauenswürdiger KI.
@@ -618,7 +688,9 @@ const Transparenz = {
           Eigentum
         </li>
       </ul>
-      <h4>Was passiert ohne zielgerichtete Transparenz?</h4>
+      <h4 className="page-break">
+        Was passiert ohne zielgerichtete Transparenz?
+      </h4>
       <ul>
         <li>
           Nutzer:innen erhalten Daten - aber nicht{" "}
@@ -634,7 +706,7 @@ const Transparenz = {
         </li>
       </ul>
     </section>,
-    <section>
+    <section className="break">
       <h2>5. Wie lässt sich Transparenz herstellen?</h2>
       <p>
         <b>
@@ -662,7 +734,9 @@ const Transparenz = {
           Wie wurden sie validiert?
         </li>
       </ul>
-      <h4>UX-bezogene Transparenz: Was brauchen Nutzer:innen?</h4>
+      <h4 className="page-break">
+        UX-bezogene Transparenz: Was brauchen Nutzer:innen?
+      </h4>
       <p>
         Aus UX-Sicht geht es nicht nur um Offenlegung, sondern um{" "}
         <b>verstehbare Darstellung</b>. Ziel ist es, Nutzer:innen die
@@ -680,6 +754,16 @@ const Transparenz = {
           <li>Welche Grenzen, Risiken oder Unsicherheiten bestehen?</li>
         </ul>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Wichtige UX-Fragen zur Transparenz</h4>
+        <ul>
+          <li>Welche Daten nutzt die KI - und warum?</li>
+          <li>Wie wurde das Modell trainiert?</li>
+          <li>Wie kommt das System zu seinem Ergebnis?</li>
+          <li>Wie zuverlässig ist dieses Ergebnis?</li>
+          <li>Welche Grenzen, Risiken oder Unsicherheiten bestehen?</li>
+        </ul>
+      </div>
       <div className="h-[var(--scale3)]"></div>
       <h3>Drei Arten von Transparenz</h3>
       <h4>1. Prozess-Transparenz</h4>
@@ -698,8 +782,8 @@ const Transparenz = {
       <p className="specialText">
         <b>UX-Bezug</b>: Prozessinformationen müssen in einer Form verfügbar
         sein, die sowohl für Fachleute als auch für betroffene Nutzer:innen
-        zugänglich ist - z.B. über interaktive Dokumentationen oder „About this
-        AI“-Sektionen.
+        zugänglich ist - z.B. über interaktive Dokumentationen oder &bdquo;About
+        this AI&ldquo;-Sektionen.
       </p>
       <h4>2. Entscheidungs-Transparenz</h4>
       <p>Nachvollziehbarkeit einzelner Entscheidungen oder Outputs der KI</p>
@@ -719,7 +803,7 @@ const Transparenz = {
         <b>handlungsrelevant</b> sein, z. B. durch visuelle Hervorhebung
         relevanter Datenpunkte oder Szenario-abhängige Erklärtexte.
       </p>
-      <h4>3. Governance-Transparenz</h4>
+      <h4 className="page-break">3. Governance-Transparenz</h4>
       <p>
         Offenlegung der organisatorischen und regulatorischen Rahmenbedingungen,
         unter denen ein KI-System betrieben wird.
@@ -793,7 +877,7 @@ const Transparenz = {
         verantwortungsvoller Nutzung.
       </p>
     </section>,
-    <section>
+    <section className="no-print">
       <h2>Wissensüberprüfung</h2>
       <p>
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
@@ -817,7 +901,7 @@ const sectionsErklaerbarkeit = [
 const Erklärbarkeit = {
   linkName: "erklaerbarkeit",
   name: "Erklärbare KI (XAI)",
-  description: "Was macht eine gute Erklärung aus – und für wen?",
+  description: "Was macht eine gute Erklärung aus - und für wen?",
   content: [
     <ChapterHeader text={"Erklärbare KI (XAI)"} number={4} />,
     <section>
@@ -830,7 +914,7 @@ const Erklärbarkeit = {
       <Accordion sections={sectionsErklaerbarkeit} />
       <SubNavigation sections={sectionsErklaerbarkeit} />
     </section>,
-    <section>
+    <section className="no-print">
       <p>
         Im folgenden Video wird anhand eines Beispiels grundlegend erklärt was
         Erklärbare KI ist.
@@ -840,7 +924,7 @@ const Erklärbarkeit = {
         title="Erklärbarkeit"
       />
     </section>,
-    <section>
+    <section className="break">
       <h2>1. Einleitung: Was ist XAI und warum ist sie wichtig?</h2>
       <p>
         Erklärbare Künstliche Intelligenz (engl. Explainable AI, XAI) bezieht
@@ -851,7 +935,7 @@ const Erklärbarkeit = {
         muss auch erklären können, warum sie zu einer bestimmten Entscheidung
         gelangt ist.
       </p>
-      <p>Diese Erklärbarkeit ist zentral für:</p>
+      <p className="page-break">Diese Erklärbarkeit ist zentral für:</p>
       <ul>
         <li>
           den <b>Aufbau von Vertrauen</b> in automatisierten Systeme,
@@ -878,7 +962,7 @@ const Erklärbarkeit = {
         bedeutsam ist.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>2. Sind KI-Systeme immer erklärbar?</h2>
       <p>
         Nicht jedes KI-System lässt sich einfach erklären. Während regelbasierte
@@ -925,7 +1009,7 @@ const Erklärbarkeit = {
           Zusammenhänge sichtbar sind.
         </li>
       </ul>
-      <h3>Konsequenz</h3>
+      <h3 className="page-break">Konsequenz</h3>
       <p>
         Die Black-Box-Natur moderner KI-Modelle macht es schwierig,{" "}
         <b>Erklärbarkeit</b> und <b>Nachvollziehbarkeit</b> zu gewährleisten.
@@ -1004,6 +1088,35 @@ const Erklärbarkeit = {
           </ul>
         </div>
       </TabSwitchView>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Lokale Erklärungen</h4>
+        <p>
+          Diese beziehen sich auf eine <b>konkrete Entscheidung</b> eines
+          KI-Systems. Sie beantworten die Frage: &bdquo;Warum genau wurde in
+          diesem Fall X und nicht Y entschieden?&ldquo;
+        </p>
+        <ul>
+          <li>Zeigen den Einfluss einzelner Eingabeparameter</li>
+          <li>Typische Methoden: SHAP, LIME, Counterfactuals</li>
+        </ul>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Globale Erklärungen</h4>
+        <p>
+          Sie beschreiben die <b>allgemeine Funktionsweise</b> des Modells über
+          viele Entscheidungen hinweg:
+        </p>
+        <ul>
+          <li>
+            Sie geben einen Überblick über Entscheidungslogik des Modells und
+            erläutern,
+          </li>
+          <li>
+            welchen Einfluss verschiedene Variablen haben und wie sie
+            zusammenhängen
+          </li>
+        </ul>
+      </div>
       <div className="h-[var(--scale3)]"></div>
       <Accordion
         title="Beispiel für ein Kreditbewertungsmodell"
@@ -1028,6 +1141,28 @@ const Erklärbarkeit = {
           unabhängig von einer einzelnen Kundenentscheidung.
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Beispiel für ein Kreditbewertungsmodell</h4>
+        <p>
+          Ein Kreditbewertungsmodell (Scoring-Modell) wird global analysiert, um
+          zu verstehen, welche Faktoren insgesamt am stärksten die
+          Kreditwürdigkeit beeinflussen. <br /> Die globale Erklärung zeigt z.
+          B.:
+        </p>
+        <ul>
+          <li>Einkommen hat hohen positiven Einfluss auf den Score.</li>
+          <li>Hohe Kreditkartenauslastung wirkt sich negativ aus.</li>
+          <li>Alter spielt nur eine geringe Rolle.</li>
+        </ul>
+        <p>
+          <b>Wechselwirkungen</b>: Hohe Auslastung und niedriges Einkommen
+          verstärken den negativen Effekt.
+        </p>
+        <p>
+          So wird deutlich, welche Muster das Modell generell gelernt hat,
+          unabhängig von einer einzelnen Kundenentscheidung.
+        </p>
+      </div>
       <h3 className="mt-20">Weitere Einteilungen (Speith, 2020)</h3>
       <p>
         <b>Post-hoc vs. intrinsisch</b>: Erklärung wird entweder nachträglich
@@ -1083,6 +1218,53 @@ const Erklärbarkeit = {
           </ul>
         </div>
       </TabSwitchView>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Modellbasierte (intrinsische) Erklärbarkeit</h4>
+        <ul>
+          <li>
+            <b>Entscheidungsbäume</b> - Entscheidungen folgen klaren Regeln
+          </li>
+          <li>
+            <b>Lineare Modelle</b> - Einfluss jedes Faktors ist direkt absehbar
+          </li>
+          <li>
+            <b>Regel- oder logikbasierte Systeme</b> - nachvollziehbare
+            IF-THEN-Strukturen
+          </li>
+        </ul>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Post-hoc-Erklärungen</h4>
+        <p>
+          Hier wird das Verhalten eines komplexen, intransparenten Modells
+          nachträglich analysiert. Häufige Ansätze sind:
+        </p>
+        <ul>
+          <li>
+            <b> Feature-Attribution:</b> Wie wichtig war ein bestimmtes
+            Eingabefeature für diese Entscheidung?
+            <ul>
+              <li>
+                <b>SHAP (SHapley Additive exPlanations)</b>
+              </li>
+              <li>
+                <b>LIME (Local Interpretable Model-Agnostic Explanations)</b>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Kontrastive Erklärung</b>: Warum wurde A statt B vorhergesagt?
+          </li>
+          <li>
+            <b>Gegenfaktische Erklärung</b>: Was müsste sich an den Eingabedaten
+            ändern, damit B statt A passiert?
+          </li>
+          <li>
+            <b>Symbolisch vs. visuell</b>: Textlich formuliert vs. visuelle
+            Hilfsmittel wie Diagramme, Heatmaps, Salience Maps
+          </li>
+        </ul>
+      </div>
     </section>,
     <section>
       <h2>5. Wirkung von Erklärungen - Chancen und Risiken</h2>
@@ -1150,6 +1332,67 @@ const Erklärbarkeit = {
           </ul>
         </div>
       </TabSwitchView>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Gut gestaltete Erklärungen</h4>
+        <ul>
+          <li>
+            <b>Verständlichkeit</b>: Klar, nachvollziehbar, ohne Fachjargon
+          </li>
+          <li>
+            <b>Relevanz</b>: Fokussiert auf das, was Nutzer:innen wirklich
+            interessiert
+          </li>
+          <li>
+            <b>Treffsicherheit</b>: Erfasst die zentrale Logik der
+            Entscheidungen
+          </li>
+          <li>
+            <b>Vertrauensbildung</b>: Fördert angemessenes Vertrauen (weder
+            blind noch misstrauisch)
+          </li>
+          <li>
+            <b>Lernförderlich</b>: Hilft, ein mentales Modell aufzubauen
+          </li>
+        </ul>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Grenzen</h4>
+        <ul>
+          <li>
+            <b>Komplexität des Modells</b>: Hochdimensionale Netze haben keine
+            klaren "Entscheidungswege"
+          </li>
+          <li>
+            <b>Datenabhängigkeit</b>: Erklärungen sind nur so gut wie die Daten,
+            die verwendet wurden
+          </li>
+          <li>
+            <b>Missverständnisse</b>: Nutzer:innen interpretieren Erklärungen
+            anders als intendiert
+          </li>
+          <li>
+            <b>Manipulation</b>: Erklärungen können auch genutzt werden, um
+            Vertrauen zu erzwingen
+          </li>
+        </ul>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Problematisch</h4>
+        <ul>
+          <li>
+            <b>Falsche oder ungenaue Erklärungen</b> können zu fehlerhaften
+            Verhalten führen
+          </li>
+          <li>
+            <b>Übermäßige Vereinfachungen</b> können relevante Aspekte
+            verschleiern
+          </li>
+          <li>
+            <b>Erklärungen können manipulativ wirken</b>, wenn sie Vertrauen
+            erzeugen sollen, wo Misstrauen angemessen wäre
+          </li>
+        </ul>
+      </div>
       {/* <p>Gut gestaltete Erklärungen können:</p>
       <ul>
         <li>
@@ -1220,6 +1463,19 @@ const Erklärbarkeit = {
           .
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Beispiel aus der Forschung (Kühl et al., 2024)</h4>
+        <p>
+          In einem Experiment zu Altersschätzungen zeigte sich: Teilnehmende
+          vertrauten einem System mehr, wenn es eine Erklärung lieferte - selbst
+          wenn die Entscheidung objektiv falsch war. Das bedeutet:{" "}
+          <b>
+            Eine gut präsentierte, aber falsche Erklärung kann gefährlicher sein
+            als keine Erklärung
+          </b>
+          .
+        </p>
+      </div>
     </section>,
     <section>
       <h2>6. Gestaltungshinweise und praktische Tipps</h2>
@@ -1258,7 +1514,7 @@ const Erklärbarkeit = {
           tut, sondern nur das, was sinnvoll und hilfreich ist
         </li>
       </ul>
-      <h3>Methoden und Darstellung</h3>
+      <h3 className="page-break">Methoden und Darstellung</h3>
       <ul>
         <li>
           <b>Visualisierung nutzen</b>: z.B. Feature-Highlights,
@@ -1314,7 +1570,7 @@ const Erklärbarkeit = {
         themselves.&ldquo; - Hoffman et al. (2023)
       </p>
     </section>,
-    <section>
+    <section className="no-print">
       <h2>Wissensüberprüfung</h2>
       <p>
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
@@ -1357,7 +1613,7 @@ const Kontrollierbarkeit = {
       <Accordion sections={sectionsKontrollierbarkeit} />
       <SubNavigation sections={sectionsKontrollierbarkeit} />
     </section>,
-    <section>
+    <section className="no-print">
       <p>
         Im folgenden Video wird grundlegend erläutert, was Kontrollierbarkeit in
         der Mensch-KI-Interaktion bedeutet und warum sie eine Schlüsselrolle für
@@ -1368,7 +1624,7 @@ const Kontrollierbarkeit = {
         title="Kontrollierbarkeit"
       />
     </section>,
-    <section>
+    <section className="break">
       <h2 className="font-black">
         Grundlagen der Kontrollierbarkeit in KI (UX-orientiert)
       </h2>
@@ -1489,7 +1745,7 @@ const Kontrollierbarkeit = {
           Möglichkeit zur Überprüfung, ob die gewünschte Wirkung eingetreten ist
         </li>
       </ul>
-      <h4>e) Adaptivität mit Nutzerkontrolle</h4>
+      <h4 className="page-break">e) Adaptivität mit Nutzerkontrolle</h4>
       <p>
         KI kann sich an das Verhalten und die Präferenzen des Nutzers anpassen,
         sollte dabei aber stets abschaltbare und <i>übersteuerbare</i>{" "}
@@ -1579,7 +1835,7 @@ const Kontrollierbarkeit = {
         überfordert oder durch unnötige Eingriffe ermüdet zu werden.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h3>2. Design-Pattern für Human Oversight</h3>
       <p>
         Human Oversight kann in der Praxis in unterschiedlichen Formen umgesetzt
@@ -1591,7 +1847,7 @@ const Kontrollierbarkeit = {
         bedeutet das, diese Mechanismen so zu integrieren, dass sie{" "}
         <b>sichtbar</b>, <b>verständlich</b> und <b>bedienbar</b> sind.
       </p>
-      <h4>a) Human-in-the-Loop (HITL)</h4>
+      <h4 className="page-break">a) Human-in-the-Loop (HITL)</h4>
       <p>
         Der Mensch überprüft und bestätigt kritische Entscheidungen vor ihrer
         Umsetzung.
@@ -1671,7 +1927,7 @@ const Kontrollierbarkeit = {
         alignItems="center"
       />
     </section>,
-    <section>
+    <section className="break">
       <h3>3. UX-Herausforderungen bei Human Oversight</h3>
       <p>
         Human Oversight stellt nicht nur technische, sondern vor allem
@@ -1759,7 +2015,9 @@ const Kontrollierbarkeit = {
           </li>
         </ul>
       </p>
-      <h4>Zusatzproblem: Balance zwischen Kontrolle und Autonomie</h4>
+      <h4 className="page-break">
+        Zusatzproblem: Balance zwischen Kontrolle und Autonomie
+      </h4>
       <p>
         Zu restriktives Oversight-Design kann die Effizienz der KI untergraben,
         während zu wenig Kontrolle Risiken erhöht. Die UX-Herausforderung
@@ -1767,7 +2025,7 @@ const Kontrollierbarkeit = {
         Kontext, Nutzererfahrung und Risikolage anpassen.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h3>4. Messung und Evaluation von Human Oversight</h3>
       <p>
         Damit Human Oversight nicht nur als formale Anforderung existiert,
@@ -1778,7 +2036,7 @@ const Kontrollierbarkeit = {
       </p>
       <h4>1. Quantitative Metriken</h4>
       <p>Diese Metriken erfassen messbare Aspekte der Oversight-Wirksamkeit:</p>
-      <ul>
+      <ul className="break">
         <li>
           <b>Eingriffshäufigkeit: </b> Wie oft greifen Nutzer:innen in den
           KI-Betrieb ein? <br />
@@ -1864,7 +2122,7 @@ const Kontrollierbarkeit = {
         der Zeit ändern, was regelmäßige Re-Evaluationen nötig macht.
       </p>
     </section>,
-    <section>
+    <section className="no-print">
       <h2>Wissensüberprüfung</h2>
       <p>
         Im folgenden Quiz können die Inhalte dieses Kapitels nochmal wiederholt
@@ -1899,7 +2157,7 @@ const MentaleModellkomplementarität = {
       <Accordion sections={sectionsMentaleKomplement} />
       <SubNavigation sections={sectionsMentaleKomplement} />
     </section>,
-    <section>
+    <section className="break">
       <h2>1. Einleitung: Was sind mentale Modelle?</h2>
       <p>
         Mentale Modelle sind <b>innere, vereinfachte Repräsentationen</b> davon,

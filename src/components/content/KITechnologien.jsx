@@ -132,7 +132,7 @@ const InputTechnik = {
         mit denen das KI-System trainiert wurde.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>
         3. Wie müssen Daten gestaltet sein, um von KI-Systemen genutzt zu
         werden?
@@ -179,7 +179,7 @@ const InputTechnik = {
         Input für eingesetzte KI-Systeme dienen können.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>4. Möglichkeiten der Kategorisierung von Daten</h2>
       <p>
         Um zu verstehen, welche Art von Daten man einem KI-System zur Verfügung
@@ -219,7 +219,7 @@ const InputTechnik = {
         trainiert wurde, spiegelt sie möglicherweise eine Realität wider, die so
         gar nicht mehr existiert.
       </p>
-      <h3>Skalenniveau</h3>
+      <h3 className="page-break">Skalenniveau</h3>
       <p>
         Daten lassen sich außerdem nach ihrem <b>Skalenniveau</b> unterscheiden
         - also danach, wie genau sie messbar sind.
@@ -252,7 +252,7 @@ const InputTechnik = {
         (&bdquo;15&ldquo;), und einer echten numerischen Variable - kann bei der
         Verarbeitung durch eine KI große Auswirkungen haben.
       </p>
-      <h3>Praxisbezug</h3>
+      <h3 className="page-break">Praxisbezug</h3>
       <p>
         In der Praxis ist es hilfreich, diese verschiedenen Kategorien im Blick
         zu behalten. Wer etwa in einer Organisation arbeitet, die mithilfe von
@@ -320,8 +320,19 @@ const InputTechnik = {
           diese falschen Positive dann händisch filtern müssen.
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Ein Beispiel dazu</h4>
+        <p>
+          Eine Organisation möchte mithilfe von KI prüfen, ob Förderanträge
+          vollständig ausgefüllt sind. Wenn jedoch alte Formulare im Umlauf sind
+          oder Einträge unterschiedlich benannt wurden (&bdquo;Straße&ldquo; vs.
+          &bdquo;Str.&ldquo;), kann die KI falsche Lücken oder Dubletten
+          erkennen und so zusätzliche Arbeit für Mitarbeitende erzeugen, die
+          diese falschen Positive dann händisch filtern müssen.
+        </p>
+      </div>
     </section>,
-    <section>
+    <section className="break">
       <h2>
         6. Beziehungen zwischen Daten: Abhängigkeiten, Korrelationen und
         Kausalität
@@ -398,7 +409,7 @@ const InputTechnik = {
         <b>Interpretation dieser Muster bleibt menschliche Aufgabe</b>.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>7. Bias</h2>
       <p>
         Ein weiteres zentrales Thema im Umgang mit Daten für KI-Systeme ist{" "}
@@ -432,7 +443,7 @@ const InputTechnik = {
         Man unterscheidet dabei zwei grundsätzliche Arten, wie ein Bias
         entstehen kann:
       </p>
-      <div className="max-w-[960px] mx-auto">
+      <div className="max-w-[960px] mx-auto no-print">
         <CarouselContainer sideVisibility={10} autoPlay={false}>
           <div
             title="Falsche Abbildung der Realität"
@@ -464,6 +475,30 @@ const InputTechnik = {
             </p>
           </div>
         </CarouselContainer>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Falsche Abbildung der Realität</h4>
+        <p>
+          Hier sind die Daten schlicht{" "}
+          <b>fehlerhaft, unvollständig oder falsch erhoben</b>. Vielleicht
+          wurden bestimmte Gruppen gar nicht befragt, Datensätze ungleichmäßig
+          aktualisiert oder Eingabefehler nie korrigiert. Ein Chatbot, der
+          Anfragen von Bürger:innen beantwortet, könnte etwa eine Schieflage
+          aufweisen, wenn die zugrunde liegenden Textbeispiele überwiegend aus
+          einer bestimmten Altersgruppe stammen.
+        </p>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Abbildung einer ungleichen Realität</h4>
+        <p>
+          In diesem Fall spiegeln die Daten die reale Welt korrekt wider - doch
+          diese Welt ist selbst <b>ungleich oder diskriminierend</b>. Wenn eine
+          KI beispielsweise historische Personaldaten analysiert, in denen
+          Männer häufiger Führungspositionen innehatten, dann
+          &bdquo;lernt&ldquo; sie diese Ungleichheit mit, selbst wenn niemand
+          sie absichtlich eingebaut hat. Sie läuft so Gefahr, diese Ungleichheit
+          zu reproduzieren.
+        </p>
       </div>
       <p>
         Bias ist deshalb nicht nur ein technisches, sondern vor allem ein{" "}
@@ -580,7 +615,7 @@ const InputInformation = {
       <Accordion sections={sectionsInputGestaltung} />
       <SubNavigation sections={sectionsInputGestaltung} />
     </section>,
-    <section>
+    <section className="break">
       <h2>1. Einleitung: Methoden integrierter Informationsverarbeitung</h2>
       <p>
         Damit KI-Systeme Menschen sinnvoll unterstützen können, müssen beide
@@ -619,7 +654,7 @@ const InputInformation = {
         weitere Verarbeitung generieren.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>2. Information Disclosure</h2>
       <p>
         Information Disclosure bedeutet, dass ein KI-System mehr Informationen
@@ -674,7 +709,48 @@ const InputInformation = {
           basieren.
         </p>
       </Accordion>
-      <h3>Reflexionsfrage</h3>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Das Beispiel &bdquo;Wohnbrücke e. V.&ldquo;</h4>
+        <p>
+          Die Organisation <i>Wohnbrücke e. V.</i> unterstützt Menschen in Not
+          bei der Wohnungssuche in einer Großstadt.
+          <br />
+          Um Wohnungsangebote systematisch zu bewerten, nutzt sie ein KI-System,
+          das jeder Immobilie einen Eignungswert zwischen 0 und 1 zuweist.
+        </p>
+        <p>
+          Ein Angebot in der Lindenstraße 12 erhält etwa den Wert 0,82. <br />
+          Das System zeigt außerdem an:
+        </p>
+        <ul>
+          <li>
+            <b>Hauptfaktoren</b>: Barrierefreiheit (+0,15), Nähe zu
+            Betreuungseinrichtungen (+0,12), moderate Miete (+0,08).
+          </li>
+          <li>
+            <b>Unsicherheiten</b>: Kein aktuelles Bildmaterial vorhanden,
+            fehlende Angaben zur Heizungsart.
+          </li>
+          <li>
+            <b>Confidence Score</b>: 0,76 (relativ hohe Sicherheit).
+          </li>
+        </ul>
+        <p>
+          So erkennen die Mitarbeitenden: Das System bewertet das Objekt
+          positiv, aber mit gewissen Unsicherheiten, die auf fehlende Daten
+          zurückzuführen sind.
+        </p>
+        <p>
+          Durch solche Offenlegungen wird die Entscheidungslogik greifbarer.
+          Mitarbeitende lernen, welche Merkmale besonders wichtig sind und wann
+          sie die Bewertung besser hinterfragen sollten. So können sie ihren
+          Input in das System bestmöglich anpassen. <br />
+          Gleichzeitig entsteht eine Transparenz, die Vertrauen schafft, sowohl
+          in das System selbst als auch in die Entscheidungen, die darauf
+          basieren.
+        </p>
+      </div>
+      <h3 className="page-break">Reflexionsfrage</h3>
       <p className="specialText">
         Wann wäre es in Ihrem Arbeitskontext hilfreich, zu sehen, wie sicher
         sich ein System bei seiner Einschätzung ist?
@@ -742,6 +818,31 @@ const InputInformation = {
           oder neue Objekte realistischer einzuschätzen.
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print">
+        <h4>Editieren bei Wohnbrücke e. V.</h4>
+        <p>
+          Die Mitarbeitenden testen verschiedene Annahmen, um die Logik des
+          Systems besser zu verstehen. <br />
+          Sie wählen wieder das Objekt in der Lindenstraße 12, das aktuell den
+          Eignungswert 0,82 hat.
+        </p>
+        <p>Nun verändern sie einzelne Eingaben:</p>
+        <Table data={editierenWohnbrückeTable} headerStyle verticalAlignCells />
+        <p>Die Ergebnisse machen sichtbar:</p>
+        <ul>
+          <li>
+            Das System legt großen Wert auf Barrierefreiheit (-0,14 Punkte
+            Verlust).
+          </li>
+          <li>Auch Entfernung zu Betreuungseinrichtungen wirkt stark.</li>
+          <li>Mietkosten sind relevant, aber mit kleinerem Einfluss.</li>
+        </ul>
+        <p>
+          Mitarbeitende verstehen nun, welche Eingaben kritisch sind und wo das
+          System Schwerpunkte setzt. Das hilft ihnen, Daten gezielter zu prüfen
+          oder neue Objekte realistischer einzuschätzen.
+        </p>
+      </div>
       <h3>Reflexionsfrage</h3>
       <p className="specialText">
         Wie könnten Sie in Ihrem Projekt mit
@@ -776,7 +877,7 @@ const InputInformation = {
         </li>
       </ul>
     </section>,
-    <section>
+    <section className="break">
       <h2>4. Zeitverlauf - Entscheidungen nachvollziehbar machen</h2>
       <p>
         Die dritte Methode erweitert die Perspektive: <br />
@@ -810,6 +911,26 @@ const InputInformation = {
           insgesamt?
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Zeitverlauf bei Wohnbrücke e. V.</h4>
+        <p>
+          Das Team verfolgt über drei Monate hinweg, wie sich die Bewertung der{" "}
+          <b>Wohnung Lindenstraße 12</b> entwickelt:
+        </p>
+        <Table data={zeitverlaufTable} headerStyle verticalAlignCells />
+        <p>
+          Dieser Verlauf zeigt: Das System reagiert auf neue Informationen
+          dynamisch. Für die Organisation bedeutet das Transparenz - sie kann
+          sehen, warum ein Objekt heute anders bewertet wird als vor einem
+          Monat.
+        </p>
+        <p>
+          Zudem können die Daten genutzt werden, um Trends zu erkennen: <br />
+          Verändern sich Bewertungen ganzer Stadtteile? <br />
+          Wie stark beeinflussen steigende Energiekosten die Eignungswerte
+          insgesamt?
+        </p>
+      </div>
       <h3>Reflexionsfrage</h3>
       <p className="specialText">
         Wie könnte ein Verlaufs- oder Änderungsprotokoll in Ihrem Projekt
@@ -834,7 +955,9 @@ const InputInformation = {
           Vertrauen in das System.
         </li>
       </ul>
-      <h3>Grenzen und Herausforderungen von Zeitverläufen</h3>
+      <h3 className="page-break">
+        Grenzen und Herausforderungen von Zeitverläufen
+      </h3>
       <ul>
         <li>Erhöhter Speicher- und Dokumentationsaufwand.</li>
         <li>
@@ -950,15 +1073,15 @@ const VerarbeitungTechnik = {
     <ChapterHeader text={"Verarbeitung - Technik"} number={4} />,
     <section>
       <p>
-        Auf technischer Ebene beschreibt ‚Verarbeiten‘, wie ein KI-System
-        Eingabedaten aufnimmt, analysiert und daraus Ergebnisse oder
+        Auf technischer Ebene beschreibt &bdquo;Verarbeiten&ldquo;, wie ein
+        KI-System Eingabedaten aufnimmt, analysiert und daraus Ergebnisse oder
         Entscheidungen ableitet. Verschiedene technische Varianten dieser
         Verarbeitung werden im Folgenden betrachtet.
       </p>
       <Accordion sections={sectionsVerarbeitungTechnik} />
       <SubNavigation sections={sectionsVerarbeitungTechnik} />
     </section>,
-    <section>
+    <section className="break">
       <h2>Überwachtes Lernen</h2>
       <p>
         Ein Verfahren des maschinellen Lernens, bei dem ein System anhand von
@@ -988,6 +1111,23 @@ const VerarbeitungTechnik = {
           />
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Beispiel:</h4>
+        <p>
+          Stellen Sie sich vor, wir möchten ein System trainieren,
+          handschriftliche Buchstaben zu erkennen. Jede Buchstabendarstellung im
+          Datensatz ist bereits mit dem richtigen Buchstaben <b>labelt</b>, also
+          beschriftet. Das System lernt so, die Muster der Buchstaben zu
+          erkennen.
+        </p>
+        <p className="p-10 pt-0">
+          <ThemeImage
+            darkSrc={labels_dark}
+            lightSrc={labels_light}
+            alt="Bild Muster der Buchstaben"
+          />
+        </p>
+      </div>
       <h3 className="pt-10">2. Wichtige Bestandteile des Lernprozesses</h3>
       <p>
         Beim überwachten Lernen spielen zwei zentrale Aspekte eine wichtige
@@ -1141,7 +1281,33 @@ const VerarbeitungTechnik = {
           </li>
         </ul>
       </Accordion>
-      <h3>4. Herausforderungen beim überwachten Lernen</h3>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Beispiele</h4>
+        <ul>
+          <li>
+            <b>Einkommen</b>: Schätzung des Gehalts einer Person auf Basis von
+            Alter, Ausbildung, Berufserfahrung und Branche.
+          </li>
+          <li>
+            <b>Werbung</b>: Vorhersage der Klickrate einer Online-Anzeige in
+            Abhängigkeit von Text, Gestaltung, Zielgruppe und bisherigen
+            Nutzerverhalten.
+          </li>
+          <li>
+            <b>Verkehr</b>: Prognose der Anzahl von Unfällen, wobei Faktoren wie
+            Straßenbedingungen, Wetter, Tageszeit und
+            Geschwidigkeitsbegrenzungen einfließen.
+          </li>
+          <li>
+            <b>Immobilien</b>: Schätzung des Verkaufspreises einer Wohnung oder
+            eines Hauses anhand von Lage, Wohnfläche, Baujahr, Ausstattung und
+            energetischem Zustand.
+          </li>
+        </ul>
+      </div>
+      <h3 className="page-break">
+        4. Herausforderungen beim überwachten Lernen
+      </h3>
       <p>
         Beim überwachten Lernen gibt es zwei zentrale Probleme, die die
         Leistungsfähigkeit eines Modells stark beeinflussen können:{" "}
@@ -1216,7 +1382,7 @@ const VerarbeitungTechnik = {
         <b>wenn noch keine Kategorien existieren</b> oder wenn es darum geht,
         Daten <b>neu zu ordnen oder in Gruppen einzuteilen</b>.
       </p>
-      <p>Die zentralen Fragestellungen lauten daher:</p>
+      <p className="page-break">Die zentralen Fragestellungen lauten daher:</p>
       <ul>
         <li>
           Wie lässt sich Struktur in einer großen Menge unlabeled Daten
@@ -1254,7 +1420,7 @@ const VerarbeitungTechnik = {
         So entstehen sinnvolle Gruppen, die eine spätere Analyse oder
         Verarbeitung erleichtern.
       </p>
-      <p>
+      <p className="page-break">
         Ein wichtiger Aspekt beim Clustering ist die <b>Anzahl der Cluster</b>:
       </p>
       <ul>
@@ -1288,7 +1454,9 @@ const VerarbeitungTechnik = {
           alt="Bild unüberwachtes Lernen"
         />
       </p>
-      <h3>4. Herausforderungen beim unüberwachten Lernen</h3>
+      <h3 className="page-break">
+        4. Herausforderungen beim unüberwachten Lernen
+      </h3>
       <p>
         Im Gegensatz zum überwachten Lernen bringt das unüberwachte Lernen
         besondere Schwierigkeiten mit sich. Da <b>keine Labels</b> vorhanden
@@ -1460,7 +1628,7 @@ const VerarbeitungInformation = {
       <Accordion sections={sectionsVerarbeitungGestaltung} initiallyOpen />
       <SubNavigation sections={sectionsVerarbeitungGestaltung} />
     </section>,
-    <section>
+    <section className="break">
       <h2>1. Shapley-Werte - Wer trägt welchen Anteil an der Entscheidung?</h2>
       <p>
         Wenn KI-Systeme Entscheidungen treffen, ist das Ergebnis oft nur eine
@@ -1471,7 +1639,7 @@ const VerarbeitungInformation = {
         zu den wichtigsten Werkzeugen gehört, um{" "}
         <b>Entscheidungsprozesse in KI-Systemen transparent</b> zu machen.
       </p>
-      <h3>Vom Spiel zur Entscheidung - die Grundidee</h3>
+      <h3 className="page-break">Vom Spiel zur Entscheidung - die Grundidee</h3>
       <p>
         Der Name geht auf den Mathematiker <b>Lloyd Shapley</b> zurück, der sich
         mit fairer Verteilung von Gewinnen in kooperativen Spielen beschäftigte.{" "}
@@ -1509,7 +1677,7 @@ const VerarbeitungInformation = {
         und zwar fair, indem alle möglichen Kombinationen von Merkmalen
         berücksichtigt werden.
       </p>
-      <h3>Ein praktisches Beispiel</h3>
+      <h3 className="page-break">Ein praktisches Beispiel</h3>
       <p>
         Eine gemeinwohlorientierte Organisation möchte mit Unterstützung eines
         KI-Systems einschätzen,{" "}
@@ -1531,7 +1699,9 @@ const VerarbeitungInformation = {
         Mit <b>Shapley-Werten</b> lässt sich nachvollziehen, wie stark jedes
         Merkmal dazu beigetragen hat - etwa:
       </p>
-      <Table data={shapleyTable} headerStyle verticalAlignCells />
+      <div className="print:pt-1">
+        <Table data={shapleyTable} headerStyle verticalAlignCells />
+      </div>
       <p>
         Solche Werte zeigen: Die höheren Kosten und der schlechte Zustand haben
         die Bewertung stark gedrückt, während Lage und Größe positiv gewirkt
@@ -1539,7 +1709,7 @@ const VerarbeitungInformation = {
         verstehen, sondern auch diskutieren,{" "}
         <b>ob die Gewichtung dieser Faktoren fair und sinnvoll ist</b>.
       </p>
-      <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover">
+      <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover no-break">
         <h4>Wie Shapley-Werte berechnet werden</h4>
         <p>
           In der Praxis wird für jede Variable berechnet,{" "}
@@ -1594,7 +1764,7 @@ const VerarbeitungInformation = {
         <b>Nachvollziehbarkeit und Fairness</b> in KI-Entscheidungen zu fördern.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>2. Partial Dependence Plots</h2>
       <p>
         Während <b>Shapley-Werte</b> uns zeigen, <i>welchen Anteil</i> einzelne
@@ -1605,7 +1775,7 @@ const VerarbeitungInformation = {
         <b>wer wie stark mitspielt</b>, zeigen PDPs,{" "}
         <b>wie das Zusammenspiel aussieht</b>.
       </p>
-      <h3>Was zeigt ein PDP?</h3>
+      <h3 className="page-break">Was zeigt ein PDP?</h3>
       <p>
         Ein <b>Partial Dependence Plot</b> stellt visuell dar,{" "}
         <b>wie sich der vorhergesagte Wert eines Modells verändert</b>, wenn
@@ -1677,7 +1847,7 @@ const VerarbeitungInformation = {
         <b>Zusammenhänge intuitiv zu erkennen</b> - auch ohne tief in die
         Modelllogik einzusteigen.
       </p>
-      <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover">
+      <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover no-break">
         <h4>Wie ein PDP funktioniert</h4>
         <p>
           Ein PDP wird erstellt, indem man{" "}
@@ -1738,6 +1908,44 @@ const VerarbeitungInformation = {
           </ul>
         </div>
       </TabSwitchView>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Vorteile</h4>
+        <ul className="mt-0">
+          <li>
+            Sie sind <b>intuitiv und leicht verständlich.</b>
+          </li>
+          <li>
+            Sie helfen, <b>nichtlineare Zusammenhänge</b> zu erkennen (z.B.
+            Schwellen oder Sättigungseffekte).
+          </li>
+          <li>
+            Sie unterstützen Teams dabei,{" "}
+            <b>Modellentscheidungen visuell zu prüfen</b> - auch ohne
+            technisches Detailwissen.
+          </li>
+        </ul>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Grenzen</h4>
+        <ul className="mt-0">
+          <li>
+            PDPs setzen voraus, dass <b>Faktoren unabhängig voneinander</b>{" "}
+            betrachtet werden können. <br />
+            In der Realität sind Variablen aber oft <b>korreliert</b> - etwa,
+            dass neuere Gebäude meistens teurer sind. <br />
+            Dadurch können im PDP <b>unrealistische Kombinationen</b> entstehen,
+            z.B. „sehr altes Gebäude mit extrem hohem Zustand“, die im echten
+            Datensatz gar nicht vorkommen. <br />
+            Das Modell zeigt dann zwar eine scheinbare Abhängigkeit, die{" "}
+            <b>in der Praxis aber keine Bedeutung</b> hat.
+          </li>
+          <li>
+            Zudem können PDPs <b>nur ein oder zwei Merkmale gleichzeitig</b>{" "}
+            darstellen. Für komplexere Interaktionen braucht es andere Verfahren
+            (z.B. Shapley- oder ICE-Plots).
+          </li>
+        </ul>
+      </div>
       <h3 className="mt-10">Beispiel für eine Fehlinterpretation</h3>
       <p>
         Angenommen, ein PDP zeigt, dass die Bewertung einer Immobilie{" "}
@@ -1908,6 +2116,49 @@ const VerarbeitungInformation = {
           </ul>
         </div>
       </TabSwitchView>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Vorteile</h4>
+        <ul className="mt-0">
+          <li>
+            <b>Einfach und modellunabhängig</b>: Sie funktioniert mit fastem
+            jedem KI-Modell, ohne dass es neu trainiert werden muss.
+          </li>
+          <li>
+            <b>Erhöht Transparenz und Fairness</b>: Zeigt auf, welche Faktoren
+            in der Praxis tatsächlich Einfluss nehmen.
+          </li>
+          <li>
+            <b>Berücksichtigt Interaktionen</b>: Auch Kombinationseffekte
+            zwischen Variablen fließen mit ein.
+          </li>
+          <li>
+            <b>Verständlich für Nicht-Expert:innen</b>: Das Prinzip &bdquo;wir
+            mischen und schauen, was passiert&ldquo; ist leicht nachvollziehbar.
+          </li>
+        </ul>
+      </div>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Grenzen und Herausforderungen</h4>
+        <ul className="mt-0">
+          <li>
+            <b>Kein Verständnis der Richtung</b>: PFI zeigt nur,{" "}
+            <i>wie stark</i> ein Faktor wirkt - nicht{" "}
+            <i>ob er positiv oder negativ</i> wirkt.
+          </li>
+          <li>
+            <b>Zufälligkeit und Streuung</b>: Da die Methode auf
+            Zufallsdurchmischung basiert, können Ergebnisse schwanken. <br />
+            Eine Mehrfach-Wiederholung (und Mittelung) stabilisiert die
+            Ergebnisse, kostet aber <b>mehr Rechenzeit</b>.
+          </li>
+          <li>
+            <b>Keine Aussage über Ursache und Wirkung</b>: PFI misst Bedeutung,
+            nicht Kausalität. Ein hoher Wert bedeutet nicht, dass dieses Merkmal{" "}
+            <i>verursacht</i>, dass das Ergebnis so ausfällt - nur, dass es eng
+            damit verknüpft ist.
+          </li>
+        </ul>
+      </div>
       <h3 className="mt-10">Beispielhafte Fehlinterpretation</h3>
       <p>
         Wenn die Organisation feststellt, dass das Merkmal „Postleitzahl“ sehr
@@ -1953,7 +2204,7 @@ const OutputTechnik = {
       <Accordion sections={sectionsOutputTechnik} />
       <SubNavigation sections={sectionsOutputTechnik} />
     </section>,
-    <section>
+    <section className="break">
       <h2>Einleitung: Warum der Output entscheidend ist</h2>
       <p>
         Der Output eines KI-Systems ist das sichtbare Ergebnis aller
@@ -2013,6 +2264,20 @@ const OutputTechnik = {
           ohne diesen Unsicherheitsbereich zu berücksichtigen.
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Beispiel aus der Praxis</h4>
+        <p>
+          Eine Organisation, die Bürgeranfragen automatisch vorsortieren möchte,
+          nutzt ein KI-Modell, das E-Mails in die Kategorien &bdquo;Lob&ldquo;,
+          &bdquo;Beschwerde&ldquo;, &bdquo;Antrag&ldquo; und
+          &bdquo;Sonstiges&ldquo; einteilt. Eine Nachricht wird als „Antrag“
+          klassifiziert, mit einer Wahrscheinlichkeit von 55 %. Auf den ersten
+          Blick mag das ausreichend erscheinen - doch die zweitwahrscheinlichste
+          Kategorie &bdquo;Beschwerde&ldquo; liegt bei 40 %. Es wäre also
+          riskant, die E-Mail automatisch einem Bearbeitungsprozess zuzuweisen,
+          ohne diesen Unsicherheitsbereich zu berücksichtigen.
+        </p>
+      </div>
       <p className="specialText">
         <b>Merksatz</b>: Kategorische Outputs sollten nie als absolute
         Wahrheiten interpretiert werden. Ein Blick auf die zweit- oder
@@ -2044,6 +2309,19 @@ const OutputTechnik = {
           und gefährdete Fälle schneller zu identifizieren.
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Beispiel aus der Praxis</h4>
+        <p>
+          Ein gemeinnütziges Gesundheitsprojekt analysiert Gesprächsverläufe aus
+          einer Online-Beratung. Das System erkennt, dass Anfragen, in denen
+          Wörter wie <i>&bdquo;überfordert&ldquo;</i>,{" "}
+          <i>&bdquo;allein&ldquo;</i> oder{" "}
+          <i>&bdquo;nicht mehr weiter&ldquo;</i> vorkommen, häufig in einer
+          Eskalation enden, wenn innerhalb von 24 Stunden keine Antwort erfolgt.
+          Diese Mustererkennung hilft der Organisation, Prioritäten zu setzen
+          und gefährdete Fälle schneller zu identifizieren.
+        </p>
+      </div>
       <p>
         Pattern Matching liefert also keine Bewertung, sondern erkennt
         Strukturen, die menschlichen Entscheidenden Hinweise geben. Dabei gilt:
@@ -2089,6 +2367,30 @@ const OutputTechnik = {
           über Methoden wie Shapley-Werte oder Permutationsanalysen).
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print">
+        <h4>Beispiel aus der Praxis</h4>
+        <p>
+          Eine soziale Einrichtung möchte geeigneten Wohnraum für Familien in
+          Not finden. Das KI-Modell bewertet 100 verfügbare Wohnungen anhand von
+          Größe, Lage, Zustand und Mietkosten.
+          <br />
+          Der Output sieht vereinfacht so aus:
+        </p>
+        <Table
+          data={exampleOutputTable}
+          headerStyle={false}
+          verticalAlignCells={true}
+        />
+        <div className="print:pt-2">
+          <p>
+            Je höher der Wert, desto besser die Eignung. Die Organisation kann
+            diese Bewertung als Orientierungshilfe nutzen - sollte aber immer
+            prüfen,{" "}
+            <b>welche Merkmale den Score am stärksten beeinflusst haben</b> (z.
+            B. über Methoden wie Shapley-Werte oder Permutationsanalysen).
+          </p>
+        </div>
+      </div>
       <p>
         Numerische Prädiktionen ermöglichen es auch, die <b>Abweichung</b> eines
         Werts zu quantifizieren - ein Vorteil, wenn Systeme durch Lernen
@@ -2124,6 +2426,19 @@ const OutputTechnik = {
           unterstützen, ohne reale Eingriffe vornehmen zu müssen.
         </p>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Beispiel aus der Praxis</h4>
+        <p>
+          Ein Stadtentwicklungsprojekt möchte ermitteln, wie sich neue
+          Grünflächen auf die Lebensqualität in einem Viertel auswirken könnten.
+          Das KI-System erzeugt auf Basis vorhandener Umweltdaten und
+          Bürgerbefragungen synthetische Szenarien, die verschiedene
+          Kombinationen von Bebauungsdichte, Verkehrsaufkommen und Grünanteil
+          zeigen. <br />
+          Diese Simulationen helfen, Entscheidungen über die Stadtplanung zu
+          unterstützen, ohne reale Eingriffe vornehmen zu müssen.
+        </p>
+      </div>
       <p>
         Synthetische Ergebnisse bieten also große Chancen für Planung,
         Simulation und Bildung. Gleichzeitig stellt sich die Frage nach{" "}
@@ -2136,7 +2451,7 @@ const OutputTechnik = {
         keine Abbilder der Realität.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>5. Forecasting</h2>
       <p>
         Forecasting ist die Vorhersage zukünftiger Entwicklungen auf Basis
@@ -2158,6 +2473,22 @@ const OutputTechnik = {
           <li>In Ferienzeiten sinkt die Spendenbereitschaft um rund 12%.</li>
         </ul>
       </Accordion>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Beispiel aus der Praxis</h4>
+        <p>
+          Eine Organisation, die Lebensmittelspenden koordiniert, nutzt
+          Forecasting, um den künftigen Bedarf an bestimmten Produkten zu
+          planen. <br />
+          Das Modell zeigt:
+        </p>
+        <ul>
+          <li>
+            Wenn die Temperaturen im Winter unter 0°C fallen, steigt die
+            Nachfrage nach warmen Mahlzeiten um durchschnittlich 18%.
+          </li>
+          <li>In Ferienzeiten sinkt die Spendenbereitschaft um rund 12%.</li>
+        </ul>
+      </div>
       <p>
         Diese Informationen ermöglichen es, Ressourcen effizienter einzuplanen
         und Engpässe frühzeitig zu vermeiden.
@@ -2169,7 +2500,7 @@ const OutputTechnik = {
         Genauigkeit solcher Vorhersagen erheblich beeinträchtigen.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2>6. Metadaten: Wie gut ist der Output?</h2>
       <p>
         Neben den inhaltlichen Ergebnissen liefern viele KI-Systeme sogenannte
@@ -2192,7 +2523,7 @@ const OutputTechnik = {
         <b>Beispiel</b>: 50 Anträge wurden als &bdquo;dringend&ldquo; markiert,
         aber nur 40 waren es tatsächlich &rarr; Precision = 40/50 = 80%.
       </p>
-      <h4>Recall</h4>
+      <h4 className="page-break">Recall</h4>
       <p>Wie viele der tatsächlich positiven Fälle wurden erkannt?</p>
       <p className="specialText">
         <b>Beispiel</b>: Es gab 60 wirklich dringende Anträge, 40 davon wurden
@@ -2219,7 +2550,29 @@ const OutputTechnik = {
           eingestuften Fälle tatsächlich dringend sind.
         </p>
       </Accordion>
-      <h3>Reflexionsfragen</h3>
+      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
+        <h4>Bedeutung in der Praxis</h4>
+        <p>
+          Eine Organisation, die Anträge nach Dringlichkeit sortiert, sollte
+          dann auf einen hohen <b>Recall</b> achten, wenn das Übersehen eines
+          Falls (<i>False Negative</i>) gravierende Folgen hätte. <br />
+          Beispiel: Ein Sozialamt prüft Notfallhilfen für obdachlose Personen.
+          Wenn das System einen wirklich dringenden Antrag übersieht, erhält
+          jemand in akuter Not keine schnelle Hilfe. Deshalb ist es wichtiger,
+          möglichst alle echten Notfälle zu erkennen, auch wenn einige weniger
+          dringende Anträge fälschlicherweise als dringend markiert werden.
+        </p>
+        <p>
+          Wenn hingegen Falschalarme (<i>False Positives</i>) problematisch sind
+          – etwa weil sie Ressourcen binden – ist eine <b>hohe Precision</b>{" "}
+          wichtiger. Beispiel: Dieselbe Organisation hat nur begrenzte
+          Notfallbetten. Wenn zu viele nicht dringende Fälle fälschlich als
+          dringend markiert werden, könnten echte Notfälle keinen Platz
+          bekommen. Hier ist es entscheidend, dass fast alle als dringend
+          eingestuften Fälle tatsächlich dringend sind.
+        </p>
+      </div>
+      <h3 className="page-break">Reflexionsfragen</h3>
       <p>Fragen, die man sich im Rahmen des Outputs stellen könnte:</p>
       <List
         items={[
@@ -2291,7 +2644,7 @@ const OutputInformation = {
       <Accordion sections={sectionsOutputGestaltung} initiallyOpen />
       <SubNavigation sections={sectionsOutputGestaltung} />
     </section>,
-    <section>
+    <section className="break">
       <h2>
         Was ist bei Interaktion mit KI-Systemen im Bezug auf den Output
         relevant?
@@ -2314,7 +2667,9 @@ const OutputInformation = {
           &rarr; <i>Counterfactual Explanation</i>
         </li>
       </ul>
-      <h3>1. Local Feature Relevance (Lokale Merkmalsbedeutung)</h3>
+      <h3 className="page-break">
+        1. Local Feature Relevance (Lokale Merkmalsbedeutung)
+      </h3>
       <p>
         Hier wird{" "}
         <b>
@@ -2354,9 +2709,10 @@ const OutputInformation = {
       <p>
         Interpretation: Die Ärztin kann jetzt sehen, dass der hohe HbA1c-Wert
         und das Übergewicht die Hauptgründe für die hohe Risiko-Vorhersage sind.
-        Das bedeutet nicht, dass die KI „hohe Wahrscheinlichkeit für hohe
-        Wahrscheinlichkeit“ ausgibt, sondern dass die KI das <b>konkrete Risiko für
-        diesen Patienten</b> als hoch einschätzt und erklärt, warum.
+        Das bedeutet nicht, dass die KI &bdquo;hohe Wahrscheinlichkeit für hohe
+        Wahrscheinlichkeit&ldquo; ausgibt, sondern dass die KI das{" "}
+        <b>konkrete Risiko für diesen Patienten</b> als hoch einschätzt und
+        erklärt, warum.
       </p>
       <h3>2. Confidence Estimation (Konfidenzschätzung)</h3>
       <p>
@@ -2400,7 +2756,9 @@ const OutputInformation = {
           Eventuell müssten weitere Tests gemacht werden.
         </li>
       </ul>
-      <h3>3. Counterfactual Explanation (Was-wäre-wenn-Erklärung)</h3>
+      <h3 className="page-break">
+        3. Counterfactual Explanation (Was-wäre-wenn-Erklärung)
+      </h3>
       <p>
         Eine counterfaktische Erklärung zeigt,{" "}
         <b>
@@ -2578,7 +2936,7 @@ const LLM = {
         Grundlage vieler moderner Anwendungen wie Chatbots, automatische
         Übersetzungen oder Textanalysen.
       </p>
-      <p>
+      <p className="no-print">
         Das folgende Video gibt einen kurzen Überblick über die Funktionsweise
         von LLMs sowie typische Anwendungsszenarien und deren Grenzen. Diese
         Aspekte werden in den nächsten Abschnitten vertieft.
@@ -2613,7 +2971,7 @@ const LLM = {
         <b>nicht manuell beschriftet</b> werden, da das Modell selbst lernt,
         Sprachmuster zu erkennen.
       </p>
-      <p>
+      <p className="page-break">
         Im Training entdeckt das LLM typische <b>Muster und Strukturen</b> der
         Sprache, beispielsweise:
       </p>
@@ -2649,7 +3007,9 @@ const LLM = {
         Einheiten. Durch diese Tokenisierung wird die Sprache sehr flexibel und
         kann detaillierter verwendet werden.
       </p>
-      <h4>Kreativität und Variation bei der Texterzeugung</h4>
+      <h4 className="page-break">
+        Kreativität und Variation bei der Texterzeugung
+      </h4>
       <p>
         Wenn das LLM ein neues Wort (oder Token) vorhersagt, wählt es nicht
         immer die <b>wahrscheinlichste</b> Option. Stattdessen kann es aus
@@ -2678,7 +3038,9 @@ const LLM = {
         Tatsächlich folgt sie aber nur <b>formalen Anweisungen</b>, ohne den{" "}
         <b>Bedeutungsinhalt</b> der Sprache zu begreifen.
       </p>
-      <p>Searle nutzte dieses Gedankenexperiment, um zu zeigen:</p>
+      <p className="page-break">
+        Searle nutzte dieses Gedankenexperiment, um zu zeigen:
+      </p>
       <p className="specialText">
         Auch wenn ein Computer (oder ein LLM) scheinbar intelligente Antworten
         gibt, bedeutet das <b>nicht</b>, dass er <b>wirklich versteht</b>, was
@@ -2762,7 +3124,7 @@ const LLM = {
         <b>aktuellen Ereignisse</b> oder <b>neuen Daten</b> nach dem Zeitpunkt
         seines Trainings.
       </p>
-      <h4>4. Bias (Voreingenommenheit)</h4>
+      <h4 className="page-break">4. Bias (Voreingenommenheit)</h4>
       <p>
         Da LLMs auf menschlichen Texten trainiert werden, übernehmen sie auch{" "}
         <b>gesellschaftliche Vorurteile</b> oder <b>einseitige Darstellungen</b>
@@ -2787,7 +3149,7 @@ const LLM = {
         </b>
         .
       </p>
-      <h3>Beispiele bekannter LLMs</h3>
+      <h3 className="page-break">Beispiele bekannter LLMs</h3>
       <Table data={llmTable} headerStyle={true} verticalAlignCells={true} />
       <h3>Offene Modelle (Open Source)</h3>
       <p>

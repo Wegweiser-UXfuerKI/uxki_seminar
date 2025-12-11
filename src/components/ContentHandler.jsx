@@ -11,6 +11,7 @@ import devgrundlagenux from "./content/DEVGrundlagenUX";
 import devUxki from "./content/DEVUXKI";
 import devGestaltungsziele from "./content/DEVGestaltungsziele";
 import devKITechnologien from "./content/DEVKITechnologien";
+import devAutomatisierungspotenziale from "./content/DevIdentifikationProzesse";
 
 // List of files for all (live-)Modules
 const moduleFiles = [
@@ -28,6 +29,7 @@ const devModuleFiles = [
   devUxki,
   devGestaltungsziele,
   devKITechnologien,
+  devAutomatisierungspotenziale,
 ];
 
 // modules in development

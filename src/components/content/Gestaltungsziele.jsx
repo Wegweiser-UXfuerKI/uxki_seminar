@@ -2491,7 +2491,7 @@ const Einleitung = {
     <section>
       <h2>Aufbau der Lernmodule</h2>
       <p>Die behandelten UX-bezogenen Eigenschaften von KI-Systemen sind:</p>
-      <div className="flex flex-wrap justify-center -mx-4">
+      <div className="flex flex-wrap justify-center -mx-4 no-print">
         {linksAndNames.map((item, index) => (
           <SubTopicCard
             key={item.link || index}
@@ -2501,6 +2501,17 @@ const Einleitung = {
             number={index}
           />
         ))}
+      </div>
+      <div className="only-print">
+        <List
+          items={[
+            `<h4>${linksAndNames[0].name}</h4> <p>${linksAndNames[0].description}</p>`,
+            `<h4>${linksAndNames[1].name}</h4> <p>${linksAndNames[1].description}</p>`,
+            `<h4>${linksAndNames[2].name}</h4> <p>${linksAndNames[2].description}</p>`,
+            `<h4>${linksAndNames[3].name}</h4> <p>${linksAndNames[3].description}</p>`,
+            `<h4>${linksAndNames[4].name}</h4> <p>${linksAndNames[4].description}</p>`,
+          ]}
+        />
       </div>
       <p className="mt-[var(--scale4)]">
         Jede Lektion führt in eine zentrale Eigenschaft ein, liefert{" "}

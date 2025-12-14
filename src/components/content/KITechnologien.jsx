@@ -3409,7 +3409,7 @@ const Einleitung = {
     </section>,
     <section>
       <h3>Kapitelübersicht</h3>
-      <div className="flex flex-wrap justify-center -mx-4">
+      <div className="flex flex-wrap justify-center -mx-4 no-print">
         {linksAndNames.map((item, index) => (
           <SubTopicCard
             key={item.link || index}
@@ -3419,6 +3419,19 @@ const Einleitung = {
             number={index + 1}
           />
         ))}
+      </div>
+      <div className="only-print">
+        <List
+          items={[
+            `<h4>${linksAndNames[0].name}</h4> <p>${linksAndNames[0].description}</p>`,
+            `<h4>${linksAndNames[1].name}</h4> <p>${linksAndNames[1].description}</p>`,
+            `<h4>${linksAndNames[2].name}</h4> <p>${linksAndNames[2].description}</p>`,
+            `<h4>${linksAndNames[3].name}</h4> <p>${linksAndNames[3].description}</p>`,
+            `<h4>${linksAndNames[4].name}</h4> <p>${linksAndNames[4].description}</p>`,
+            `<h4>${linksAndNames[5].name}</h4> <p>${linksAndNames[5].description}</p>`,
+            `<h4>${linksAndNames[6].name}</h4> <p>${linksAndNames[6].description}</p>`,
+          ]}
+        />
       </div>
     </section>,
   ],

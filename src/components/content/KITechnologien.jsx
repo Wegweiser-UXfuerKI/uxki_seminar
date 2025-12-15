@@ -3313,7 +3313,7 @@ const Einleitung = {
     "Hier wird ein Überblick über die die KI Technologien und deren Funktionsweise gegeben.",
   content: [
     <ChapterHeader text={"Einleitung"} number={1} />,
-    <section>
+    <section className="break">
       <h2>
         Einleitung: Warum Daten und Informationsverarbeitung die Grundlage für
         KI-Verständnis sind

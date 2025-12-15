@@ -1,5 +1,6 @@
 import ImageElement from "../../assets/icons/automatisierungspotenziale.svg?react";
 import { LinkHandler } from "../1_elements/LinkHandler";
+import { VideoContainer } from "../1_elements/VideoContainer";
 import Accordion from "../2_molecule/Accordion";
 import List from "../2_molecule/List";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
@@ -7,6 +8,8 @@ import { Table } from "../2_molecule/Table";
 import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
+
+import videoThumbnail from "../../assets/images/thumbnails/Modul5.jpg";
 
 const sectionsEinleitung = [
   { id: "2", title: "Einleitung - Grundlagen" },
@@ -29,7 +32,7 @@ const Einleitung = {
       <Accordion sections={sectionsEinleitung} />
       <SubNavigation sections={sectionsEinleitung} />
     </section>,
-    <section>
+    <section className="break">
       <p>
         In diesem fünften Modul vertiefen wir das Thema Automatisierung und den
         gezielten Einsatz von KI-Systemen in gemeinwohlorientierten
@@ -91,6 +94,39 @@ const Einleitung = {
         </b>
         .
       </p>
+      <p className="no-print">
+        Im folgenden Video wird ein Überblick über die unterschiedlichen Aspekte
+        bei der Identifikation gegeben, auf die in den folgenden Kapiteln näher
+        eingegangen wird.
+      </p>
+      <VideoContainer
+        link={
+          "https://www.youtube-nocookie.com/embed/0GpnGeD7BCM?rel=0&modestbranding=1"
+        }
+        title={"Intro"}
+      />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p className="mb-0" style={{ marginBottom: 0 }}>
+          Im folgenden Video wird ein Überblick über die unterschiedlichen
+          Aspekte bei der Identifikation gegeben, auf die in den folgenden
+          Kapiteln näher eingegangen wird.
+        </p>
+        <a href="https://youtu.be/0GpnGeD7BCM">
+          <img
+            src={videoThumbnail}
+            alt="Video Thumbnail"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/0GpnGeD7BCM"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/0GpnGeD7BCM
+          </a>
+        </h4>
+      </div>
     </section>,
     <section>
       <h2>

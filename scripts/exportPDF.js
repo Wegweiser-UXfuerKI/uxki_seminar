@@ -39,11 +39,55 @@ const modules = [
       { linkName: "wahrgenommene-autonomie" },
       { linkName: "wahrgenommenes-situationsbewusstsein" },
       { linkName: "wahrgenommene-mentale-belastung" },
-      { linkName: "wahrgenommene-vetrauenswuerdigkeit" },
-      { linkName: "wahrgenommene-diagnostizität" },
+      { linkName: "wahrgenommene-vertrauenswuerdigkeit" },
+      { linkName: "wahrgenommene-diagnostizitaet" },
       { linkName: "zusammenfassung-ausblick" },
     ],
   },
+  {
+    linkName: "gestaltungsziele-menschzentrierte-ki",
+    chapter: [
+      { linkName: "einleitung"},
+      { linkName: "vertrauenswuerdigkeit" },
+      { linkName: "transparenz" },
+      { linkName: "erklaerbarkeit" },
+      { linkName: "kontrollierbarkeit" },
+      { linkName: "mentale-modelle" },
+      { linkName: "fazit" },
+    ]
+  },
+  {
+    linkName: "ki-technologien-verstehen",
+    chapter: [
+      { linkName: "einleitung"},
+      { linkName: "input-technik" },
+      { linkName: "input-gestaltung" },
+      { linkName: "verarbeitung-technik" },
+      { linkName: "verarbeitung-gestaltung" },
+      { linkName: "output-technik" },
+      { linkName: "output-gestaltung" },
+      { linkName: "llm" },
+    ]
+  },
+  {
+    linkName: "dev/automatisierungspotenziale-erkennen",
+    chapter: [
+      { linkName: "einleitung"},
+      { linkName: "automatisierung-verstehen" },
+      { linkName: "eignung-der-automatisierung-einschaetzen" },
+      { linkName: "preferred-automation-tasks-scale" },
+      { linkName: "wann-ist-ki-sinnvoll" },
+    ]
+  },
+  {
+    linkName: "eu-ai-act",
+    chapter: [
+      { linkName: "einleitung"},
+      { linkName: "risikostufen-anwendungsbeispiele" },
+      { linkName: "risikostufen-auswirkungen" },
+      { linkName: "high-level-expert-group" },
+    ]
+  }
 ];
 
 

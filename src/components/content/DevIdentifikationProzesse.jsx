@@ -923,7 +923,7 @@ const PATS = {
       />
       <p>
         Die Skala besteht aus <b>zwölf Fragen</b>, die auf einer{" "}
-        <b>xsechsstufigen Bewertungsskala</b> beantwortet werden:
+        <b>sechsstufigen Bewertungsskala</b> beantwortet werden:
       </p>
       <ul>
         <li>von &bdquo;bevorzuge vollständig menschliche Ausführung&ldquo;</li>

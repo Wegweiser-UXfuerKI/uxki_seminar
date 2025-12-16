@@ -1,4 +1,5 @@
 import ImageElement from "../../assets/icons/automatisierungspotenziale.svg?react";
+import ThemeImage from "../1_elements/ThemeImage";
 import { LinkHandler } from "../1_elements/LinkHandler";
 import { VideoContainer } from "../1_elements/VideoContainer";
 import Accordion from "../2_molecule/Accordion";
@@ -10,6 +11,9 @@ import { CarouselContainer } from "../3_organism/CarouselContainer";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 
 import videoThumbnail from "../../assets/images/thumbnails/Modul5.jpg";
+import autoStufen_dark from "../../assets/images/prozesse/autoStufen_dark.png";
+import autoStufen_light from "../../assets/images/prozesse/autoStufen_light.png";
+import pats from "../../assets/images/prozesse/pats.png";
 
 const sectionsEinleitung = [
   { id: "2", title: "Einleitung - Grundlagen" },
@@ -254,7 +258,7 @@ const sectionsAutomatisierungVerstehen = [
   },
   {
     id: "3",
-    title: "Warum Automatisierung bei gemeinwohl besonders sensibel ist",
+    title: "Warum Automatisierung bei Gemeinwohl besonders sensibel ist",
   },
   {
     id: "4",
@@ -691,7 +695,7 @@ const EignungSchaetzen = {
       <p>Ein klassisches Beispiel ist der Unterschied zwischen:</p>
       <ul>
         <li>
-          einem Assistenzsystem, das lediglich warnt (z. B. beim verlassen der
+          einem Assistenzsystem, das lediglich warnt (z. B. beim Verlassen der
           Fahrspur), und
         </li>
         <li>
@@ -788,12 +792,17 @@ const EignungSchaetzen = {
           automatisiert sein.
         </b>
       </p>
-      {/* BILD Stufen der Automatisierung */}
       <p>
         So kann beispielsweise die Datenerfassung vollständig automatisiert
         sein, während die Entscheidung bewusst beim Menschen verbleibt. Moderne
         Systeme können zudem so gestaltet werden, dass sie ihre
         Automatisierungsstufe situativ anpassen.
+        <ThemeImage
+          darkSrc={autoStufen_dark}
+          lightSrc={autoStufen_light}
+          alt="Bild Stufen der Automatisierung"
+          className="pt-5"
+        />
       </p>
       <p>Für die Systemgestaltung bedeutet das:</p>
       <ul>
@@ -909,7 +918,7 @@ const PATS = {
         innerhalb einer Organisation zu überprüfen wie die verschiedenen
         Stakeholder eine Automatisierung des Prozesses bewerten würden. Sie
         basiert auf den vier zentralen Funktionen von Automatisierung nach
-        Parasuraman et Al.:
+        Parasuraman et al.:
       </p>
       <List
         items={[
@@ -931,7 +940,12 @@ const PATS = {
           bis &bdquo;bevorzuge vollständig automatisierte Ausführung&ldquo;
         </li>
       </ul>
-      {/* BILD PATS */}
+      <ThemeImage
+        darkSrc={pats}
+        lightSrc={pats}
+        alt="Bild PATS Skala"
+        className="pb-10"
+      />
       <p>
         Die Ergebnisse können in verschiedenen Szenarien verglichen werden (z.
         B. &bdquo;normaler Betrieb&ldquo; vs. &bdquo;akuter

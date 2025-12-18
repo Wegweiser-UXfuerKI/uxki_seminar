@@ -19,6 +19,7 @@ import ucd_dark from "../../assets/images/grundlagenUX/ucd-dark.png";
 import ucd_light from "../../assets/images/grundlagenUX/ucd-light.png";
 import ux_dark from "../../assets/images/grundlagenUX/ux-dark.png";
 import ux_light from "../../assets/images/grundlagenUX/ux-light.png";
+import ux_intro from "../../assets/images/thumbnails/UX_Intro.webp";
 
 import CheckIcon from "../../assets/icons/grundlagenUX/check.svg?react";
 import ClockIcon from "../../assets/icons/grundlagenUX/clock.svg?react";
@@ -2017,6 +2018,27 @@ const Einleitung = {
         }
         title={"Einleitungsvideo"}
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Im folgenden Video wird ein Überblick über die fünf wichtigen Begriffe
+          des Moduls gegeben und warum sie wichtig sind.
+        </p>
+        <a href="https://youtu.be/9cgmeenl72s">
+          <img
+            src={ux_intro}
+            alt="Video Thumbnail"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/9cgmeenl72s"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/9cgmeenl72s
+          </a>
+        </h4>
+      </div>
     </section>,
     <section id="aspekte">
       <h2>Wichtige Begriffe</h2>

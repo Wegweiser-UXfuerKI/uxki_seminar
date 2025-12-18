@@ -10,7 +10,7 @@ import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 
-import videoThumbnail from "../../assets/images/thumbnails/Modul5.jpg";
+import videoThumbnail from "../../assets/images/thumbnails/Identifikation_erkennen.webp";
 import autoStufen_dark from "../../assets/images/prozesse/autoStufen_dark.png";
 import autoStufen_light from "../../assets/images/prozesse/autoStufen_light.png";
 import pats from "../../assets/images/prozesse/pats.png";

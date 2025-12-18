@@ -8,12 +8,17 @@ import { ChapterHeader } from "../3_organism/ChapterHeader";
 import List from "../2_molecule/List";
 import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import BasicQuiz from "../interactive/Quiz/BasicQuiz";
+import Sources from "../Sources";
 
 import vertrauenswuerdigkeitQuiz from "../SimpleQuizContent/gestaltungsziele/vertrauenswuerdigkeit.json";
 import transparenzQuiz from "../SimpleQuizContent/gestaltungsziele/transparenz.json";
 import erklaerbarkeitQuiz from "../SimpleQuizContent/gestaltungsziele/erklaerbarkeit.json";
 import kontrollierbarkeitQuiz from "../SimpleQuizContent/gestaltungsziele/kontrollierbarkeit.json";
-import Sources from "../Sources";
+
+import thumbnail_vertrauenswuerdigkeit from "../../assets/images/thumbnails/Gestaltungsziele_Vertrauens.webp";
+import thumbnail_transparent from "../../assets/images/thumbnails/Gestaltungsziele_Transparenz.webp";
+import thumbnail_erklaerbarkeit from "../../assets/images/thumbnails/Gestaltungsziele_Erklarbarkeit.webp";
+import thumbnail_kontrollierbarkeit from "../../assets/images/thumbnails/Gestaltungsziele_Kontrollierbarkeit.webp";
 
 const sectionsVertrauenswürdigkeit = [
   { id: "3", title: "Warum ist Trustworthy AI ein zentrales Thema?" },
@@ -43,8 +48,8 @@ const Vertrauenswürdigkeit = {
       <Accordion sections={sectionsVertrauenswürdigkeit} />
       <SubNavigation sections={sectionsVertrauenswürdigkeit} />
     </section>,
-    <section className="no-print">
-      <p>
+    <section>
+      <p className="no-print">
         Im folgenden Video wird grundlegend erläutert, was Vertrauenswürdigkeit
         in KI-Systemen bedeutet und warum sie eine zentrale Voraussetzung für
         ihre Akzeptanz und verantwortungsvolle Nutzung ist.
@@ -53,6 +58,29 @@ const Vertrauenswürdigkeit = {
         link="https://www.youtube-nocookie.com/embed/aZZJB2xuY88?rel=0&modestbranding=1"
         title="Vertrauenswürdigkeit"
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Im folgenden Video wird grundlegend erläutert, was
+          Vertrauenswürdigkeit in KI-Systemen bedeutet und warum sie eine
+          zentrale Voraussetzung für ihre Akzeptanz und verantwortungsvolle
+          Nutzung ist.
+        </p>
+        <a href="https://youtu.be/aZZJB2xuY88">
+          <img
+            src={thumbnail_vertrauenswuerdigkeit}
+            alt="Video Thumbnail Vertrauenswürdigkeit"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/aZZJB2xuY88"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/aZZJB2xuY88
+          </a>
+        </h4>
+      </div>
     </section>,
     <section className="break">
       <h2>1. Einführung: Warum ist Trustworthy AI ein zentrales Thema?</h2>
@@ -268,7 +296,9 @@ const Vertrauenswürdigkeit = {
         UX-Design muss beide Dimensionen - kognitiv und affektiv - mitdenken, um
         angemessenes Vertrauen in KI-Systeme zu ermöglichen.
       </p>
-      <h3>3b) Warum reicht Vertrauen allein nicht aus?</h3>
+      <h3 className="page-break">
+        3b) Warum reicht Vertrauen allein nicht aus?
+      </h3>
       <p>
         Ein entscheidender Punkt: Nur weil Menschen einem System vertrauen, ist
         es noch lange nicht vertrauenswürdig. Und umgekehrt.
@@ -304,7 +334,7 @@ const Vertrauenswürdigkeit = {
         <b>Vertrauen kalibrieren</b> (nutzerseitig).
       </p>
     </section>,
-    <section className="break">
+    <section>
       <h2>4. Dimensionen vertrauenswürdiger KI-System</h2>
       <p>
         Für ein System, das als vertrauenswürdig gelten soll, werden in der
@@ -357,7 +387,7 @@ const Vertrauenswürdigkeit = {
         können, welche Daten genutzt werden.
       </p>
 
-      <h4 className="page-break">e) Rechenschaftspflicht & Verantwortung</h4>
+      <h4>e) Rechenschaftspflicht & Verantwortung</h4>
       <p>
         Es muss klar sein, wer für das Verhalten des Systems verantwortlich ist,
         und es muss möglich sein, Entscheidungen im Nachhinein zu überprüfen.
@@ -537,8 +567,8 @@ const Transparenz = {
       <Accordion sections={sectionsTransparenz} />
       <SubNavigation sections={sectionsTransparenz} />
     </section>,
-    <section className="no-print">
-      <p>
+    <section>
+      <p className="no-print">
         Im folgenden Video wird Transparenz von KI-Systemen anhand eines
         Beispiels erklärt und darauf eingegangen wie man Transparenz erreichen
         kann, sowie dess Aspekte im Bezug zur UX.
@@ -547,6 +577,28 @@ const Transparenz = {
         link="https://www.youtube-nocookie.com/embed/yRCWVsM9SAY?rel=0&modestbranding=1"
         title="Transparenz"
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Im folgenden Video wird Transparenz von KI-Systemen anhand eines
+          Beispiels erklärt und darauf eingegangen wie man Transparenz erreichen
+          kann, sowie dess Aspekte im Bezug zur UX.
+        </p>
+        <a href="https://youtu.be/yRCWVsM9SAY">
+          <img
+            src={thumbnail_transparent}
+            alt="Video Thumbnail"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/yRCWVsM9SAY"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/yRCWVsM9SAY
+          </a>
+        </h4>
+      </div>
     </section>,
     <section className="break">
       <h2>1. Einleitung: Warum ist Transparenz wichtig?</h2>
@@ -914,8 +966,8 @@ const Erklärbarkeit = {
       <Accordion sections={sectionsErklaerbarkeit} />
       <SubNavigation sections={sectionsErklaerbarkeit} />
     </section>,
-    <section className="no-print">
-      <p>
+    <section>
+      <p className="no-print">
         Im folgenden Video wird anhand eines Beispiels grundlegend erklärt was
         Erklärbare KI ist.
       </p>
@@ -923,6 +975,27 @@ const Erklärbarkeit = {
         link="https://www.youtube-nocookie.com/embed/0yxclsV4ysE?rel=0&modestbranding=1"
         title="Erklärbarkeit"
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Im folgenden Video wird anhand eines Beispiels grundlegend erklärt was
+          Erklärbare KI ist.
+        </p>
+        <a href="https://youtu.be/0yxclsV4ysE">
+          <img
+            src={thumbnail_erklaerbarkeit}
+            alt="Video Thumbnail Erklärbarkeit"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/0yxclsV4ysE"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/0yxclsV4ysE
+          </a>
+        </h4>
+      </div>
     </section>,
     <section className="break">
       <h2>1. Einleitung: Was ist XAI und warum ist sie wichtig?</h2>
@@ -1613,8 +1686,8 @@ const Kontrollierbarkeit = {
       <Accordion sections={sectionsKontrollierbarkeit} />
       <SubNavigation sections={sectionsKontrollierbarkeit} />
     </section>,
-    <section className="no-print">
-      <p>
+    <section>
+      <p className="no-print">
         Im folgenden Video wird grundlegend erläutert, was Kontrollierbarkeit in
         der Mensch-KI-Interaktion bedeutet und warum sie eine Schlüsselrolle für
         nutzerzentriertes, sicheres und vertrauenswürdiges KI-Design spielt.
@@ -1623,6 +1696,29 @@ const Kontrollierbarkeit = {
         link="https://www.youtube-nocookie.com/embed/Mu8MafXxgVI?rel=0&modestbranding=1"
         title="Kontrollierbarkeit"
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Im folgenden Video wird grundlegend erläutert, was Kontrollierbarkeit
+          in der Mensch-KI-Interaktion bedeutet und warum sie eine
+          Schlüsselrolle für nutzerzentriertes, sicheres und vertrauenswürdiges
+          KI-Design spielt.
+        </p>
+        <a href="https://youtu.be/Mu8MafXxgVI">
+          <img
+            src={thumbnail_kontrollierbarkeit}
+            alt="Video Thumbnail Kontrollierbarkeit"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/Mu8MafXxgVI"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/Mu8MafXxgVI
+          </a>
+        </h4>
+      </div>
     </section>,
     <section className="break">
       <h2 className="font-black">
@@ -1704,7 +1800,7 @@ const Kontrollierbarkeit = {
         Hohe Transparenz erleichtert es, mentale Modelle zu bilden, die
         Grundlage für effektive Kontrolle sind.
       </p>
-      <h4>b) Vorhersagbarkeit</h4>
+      <h4 className="page-break">b) Vorhersagbarkeit</h4>
       <p>
         Ein KI-System sollte in vergleichbaren Situationen konsistent reagieren.
         Vorhersagbarkeit verringert die kognitive Belastung, da Nutzer:innen
@@ -1733,7 +1829,7 @@ const Kontrollierbarkeit = {
         </li>
         <li>Sichtbarkeit und Erreichbarkeit der Kontrollfunktionen</li>
       </ul>
-      <h4>d) Rückmeldungen & Erklärungen</h4>
+      <h4 className="page-break">d) Rückmeldungen & Erklärungen</h4>
       <p>
         Kontrollierbarkeit hängt davon ab, ob Nutzer:innen die Auswirkungen
         ihrer Eingriffe nachvollziehen können. Effektive Feedback-Mechanismen:
@@ -1745,7 +1841,7 @@ const Kontrollierbarkeit = {
           Möglichkeit zur Überprüfung, ob die gewünschte Wirkung eingetreten ist
         </li>
       </ul>
-      <h4 className="page-break">e) Adaptivität mit Nutzerkontrolle</h4>
+      <h4>e) Adaptivität mit Nutzerkontrolle</h4>
       <p>
         KI kann sich an das Verhalten und die Präferenzen des Nutzers anpassen,
         sollte dabei aber stets abschaltbare und <i>übersteuerbare</i>{" "}
@@ -1780,7 +1876,7 @@ const Kontrollierbarkeit = {
         Mensch-KI-Interaktion bündelt.
       </p>
     </section>,
-    <section>
+    <section className="break">
       <h2 className="font-black">
         Human Oversight als spezielle Form der Kontrollierbarkeit
       </h2>
@@ -1804,7 +1900,7 @@ const Kontrollierbarkeit = {
           letzte Verantwortung für kritische Ergebnisse trägt.
         </li>
       </ol>
-      <p>
+      <p className="page-break">
         In der Praxis umfasst Human Oversight alle Maßnahmen, die gewährleisten,
         dass:
       </p>
@@ -1835,7 +1931,7 @@ const Kontrollierbarkeit = {
         überfordert oder durch unnötige Eingriffe ermüdet zu werden.
       </p>
     </section>,
-    <section className="break">
+    <section>
       <h3>2. Design-Pattern für Human Oversight</h3>
       <p>
         Human Oversight kann in der Praxis in unterschiedlichen Formen umgesetzt
@@ -1847,7 +1943,7 @@ const Kontrollierbarkeit = {
         bedeutet das, diese Mechanismen so zu integrieren, dass sie{" "}
         <b>sichtbar</b>, <b>verständlich</b> und <b>bedienbar</b> sind.
       </p>
-      <h4 className="page-break">a) Human-in-the-Loop (HITL)</h4>
+      <h4>a) Human-in-the-Loop (HITL)</h4>
       <p>
         Der Mensch überprüft und bestätigt kritische Entscheidungen vor ihrer
         Umsetzung.
@@ -1927,7 +2023,7 @@ const Kontrollierbarkeit = {
         alignItems="center"
       />
     </section>,
-    <section className="break">
+    <section>
       <h3>3. UX-Herausforderungen bei Human Oversight</h3>
       <p>
         Human Oversight stellt nicht nur technische, sondern vor allem
@@ -1964,7 +2060,7 @@ const Kontrollierbarkeit = {
           </li>
         </ul>
       </p>
-      <h4>b) Alert Fatigue</h4>
+      <h4 className="page-break">b) Alert Fatigue</h4>
       <p>
         Wenn zu viele Warnungen oder Eingriffsaufforderungen erscheinen -
         insbesondere mit geringer Relevanz - tritt das Gegenteil der
@@ -2015,9 +2111,7 @@ const Kontrollierbarkeit = {
           </li>
         </ul>
       </p>
-      <h4 className="page-break">
-        Zusatzproblem: Balance zwischen Kontrolle und Autonomie
-      </h4>
+      <h4>Zusatzproblem: Balance zwischen Kontrolle und Autonomie</h4>
       <p>
         Zu restriktives Oversight-Design kann die Effizienz der KI untergraben,
         während zu wenig Kontrolle Risiken erhöht. Die UX-Herausforderung
@@ -2034,9 +2128,9 @@ const Kontrollierbarkeit = {
         Evaluation sowohl quantitative Leistungsdaten als auch qualitative
         Nutzererfahrungen.
       </p>
-      <h4>1. Quantitative Metriken</h4>
+      <h4 className="page-break">1. Quantitative Metriken</h4>
       <p>Diese Metriken erfassen messbare Aspekte der Oversight-Wirksamkeit:</p>
-      <ul className="break">
+      <ul>
         <li>
           <b>Eingriffshäufigkeit: </b> Wie oft greifen Nutzer:innen in den
           KI-Betrieb ein? <br />
@@ -2276,7 +2370,7 @@ const MentaleModellkomplementarität = {
         <b>auf den mentalen Zustand des Menschen reagieren</b>, z.B. durch
         adaptive Erklärungen oder Warnhinweise.
       </p>
-      <h4>d) Gemeinsame Aufgabenstruktur</h4>
+      <h4 className="page-break">d) Gemeinsame Aufgabenstruktur</h4>
       <p>
         Interfaces sollten <b>Aufgaben so aufbereiten</b>, dass sie menschliche
         und maschinelle Beiträge sichtbar und kombinierbar machen.
@@ -2490,7 +2584,9 @@ const Einleitung = {
     </section>,
     <section>
       <h2>Aufbau der Lernmodule</h2>
-      <p>Die behandelten UX-bezogenen Eigenschaften von KI-Systemen sind:</p>
+      <p className="no-print">
+        Die behandelten UX-bezogenen Eigenschaften von KI-Systemen sind:
+      </p>
       <div className="flex flex-wrap justify-center -mx-4 no-print">
         {linksAndNames.map((item, index) => (
           <SubTopicCard
@@ -2502,7 +2598,10 @@ const Einleitung = {
           />
         ))}
       </div>
-      <div className="only-print">
+      <p className="only-print" style={{ marginBottom: "48px" }}>
+        Die behandelten UX-bezogenen Eigenschaften von KI-Systemen sind:
+      </p>
+      <div className="only-print -mt-5">
         <List
           items={[
             `<h4>${linksAndNames[0].name}</h4> <p>${linksAndNames[0].description}</p>`,

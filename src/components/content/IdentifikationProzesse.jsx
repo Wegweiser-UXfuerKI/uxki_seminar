@@ -10,7 +10,7 @@ import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import { CarouselContainer } from "../3_organism/CarouselContainer";
 import { ChapterHeader } from "../3_organism/ChapterHeader";
 
-import videoThumbnail from "../../assets/images/thumbnails/Modul5.jpg";
+import videoThumbnail from "../../assets/images/thumbnails/Identifikation_erkennen.webp";
 import autoStufen_dark from "../../assets/images/prozesse/autoStufen_dark.png";
 import autoStufen_light from "../../assets/images/prozesse/autoStufen_light.png";
 import pats from "../../assets/images/prozesse/pats.png";
@@ -455,6 +455,68 @@ const AutomatisierungVerstehen = {
           </p>
         </div>
       </TabSwitchView>
+      <div className="pt-3 mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)]">
+          <h4>Ressourcen</h4>
+          <p>
+            Gemeinwohlorientierte Organisationen verfügen häufig über{" "}
+            <b>begrenzte finanzielle und personelle Ressourcen</b>.
+            Automatisierung kann hier ein großes Potenzial bieten:
+          </p>
+          <ul>
+            <li>Zeitersparnis für Mitarbeitende</li>
+            <li>Entlastung von Routineaufgaben</li>
+            <li>bessere Skalierbarkeit von Angeboten</li>
+          </ul>
+          <p>Gleichzeitig bedeutet dies auch:</p>
+          <ul>
+            <li>Fehlentscheidungen sind schwerer zu korrigieren</li>
+            <li>investierte Mittel lassen sich oft nicht so leicht ersetzen</li>
+            <li>
+              falsche Automatisierung kann langfristig mehr Schaden als Nutzen
+              bringen
+            </li>
+          </ul>
+          <p>
+            Daraus entsteht ein Spannungsfeld: Der Druck, neue Technologien
+            nicht zu verpassen, trifft auf die Notwendigkeit, besonders
+            sorgfältig und effizient vorzugehen.
+          </p>
+        </div>
+      </div>
+      <div className="pt-3 mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)]">
+          <h4>Vertrauen</h4>
+          <p>
+            Vertrauen ist für jede Organisation zentral - für
+            gemeinwohlorientierte Organisationen jedoch existentiell:
+          </p>
+          <ul>
+            <li>Sie arbeiten häufig mit vulnerablen Gruppen</li>
+            <li>Sie sind für viele Menschen eine der wenigen Anlaufstellen</li>
+            <li>
+              Sie sind auf die Unterstützung von Ehrenamtlichen angewiesen
+            </li>
+          </ul>
+          <p>
+            Ein schlecht umgesetztes automatisiertes System - beispielsweise ein
+            unpersönlicher oder fehleranfälliger Chatbot - kann dazu führen,
+            dass sich Menschen:
+          </p>
+          <ul>
+            <li>nicht ernst genommen fühlen</li>
+            <li>sich zurückziehen</li>
+            <li>das Vertrauen in die Organisation verlieren</li>
+          </ul>
+          <p>
+            Gleichzeitig kann auch intern Vertrauen zerstört werden, wenn
+            Ehrenamtliche und Mitarbeitende das Gefühl haben, ihre Arbeit werde
+            durch Technik entwertet oder unzureichend unterstützt. Ein Verlust
+            von Vertrauen bedroht die grundlegenden Strukturen
+            gemeinwohlorientierter Arbeit.
+          </p>
+        </div>
+      </div>
     </section>,
     <section>
       <h2>Beispiel: Gelungene vs. nicht gelungene Automatisierung</h2>
@@ -499,6 +561,51 @@ const AutomatisierungVerstehen = {
           </p>
         </div>
       </TabSwitchView>
+      <div className="pt-3 mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)]">
+          <h4>Positives Beispiel (teilautomatisiert, unterstützend)</h4>
+          <p>
+            Eine Organisation möchte das Matching von Freiwilligen mit passenden
+            Einsatzstellen verbessern. Eine Software erstellt auf Basis von
+            Interessen, zeitlichen Verfügbarkeiten und Standort Vorschläge. Die
+            finale Entscheidung wird jedoch weiterhin von Mitarbeitenden
+            getroffen. Daraus ergeben sich folgende Vorteile:
+          </p>
+          <ul>
+            <li>Zeitersparnis im Auswahlprozess</li>
+            <li>menschliche Kontrolle bleibt erhalten</li>
+            <li>Freiwillige fühlen sich weiterhin individuell wahrgenommen</li>
+          </ul>
+          <p>
+            <b>&rarr; Effizient, unterstützend, vertrauensfördernd</b>
+          </p>
+        </div>
+      </div>
+      <div className="pt-3 mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)]">
+          <h4>Negatives Beispiel (vollautomatisiert, entkoppelt)</h4>
+          <p>
+            Eine Beratungsstelle für Menschen mit psychischen Erkrankungen
+            ersetzt den Erstkontakt vollständig durch einen Chatbot. Die
+            Implementierung ist komplex und teuer. Betroffene fühlen sich nicht
+            ernst genommen, da sie keinen menschlichen Kontakt mehr haben.
+            Gleichzeitig fällt für Mitarbeitende eine wichtige
+            Informationsquelle weg: die direkte Interaktion mit Ratsuchenden.
+            Das erzeugt folgende Probleme:
+          </p>
+          <ul>
+            <li>Hoher Ressourcenaufwand</li>
+            <li>Vertrauensverlust bei Betroffenen</li>
+            <li>Verlust wertvoller sozialer Signale</li>
+          </ul>
+          <p>
+            <b>
+              &rarr; Ineffizient, belastet Vertrauen, geht an Mitarbeitenden
+              vorbei
+            </b>
+          </p>
+        </div>
+      </div>
     </section>,
     <section>
       <h2>Reflexionsfragen für Ihre Organisation</h2>
@@ -611,7 +718,7 @@ const EignungSchaetzen = {
       <Accordion sections={sectionsAutomationSchaetzen} />
       <SubNavigation sections={sectionsAutomationSchaetzen} />
     </section>,
-    <section>
+    <section className="break">
       <p>
         Nachdem wir gesehen haben, was gute und weniger geeignete
         Anwendungsräume für Automatisierung und KI sind, stellt sich die
@@ -687,12 +794,16 @@ const EignungSchaetzen = {
         unterschiedlich stark automatisierte Systeme auf die Rolle, Wahrnehmung
         und Leistungsfähigkeit von Menschen auswirken.
       </p>
-      <Table
-        data={LevelOfAutomationTable}
-        headerStyle
-        columnWidths={["3fr", "1fr", "10fr"]}
-      />
-      <p>Ein klassisches Beispiel ist der Unterschied zwischen:</p>
+      <div className="print:pt-3">
+        <Table
+          data={LevelOfAutomationTable}
+          headerStyle
+          columnWidths={["3fr", "1fr", "10fr"]}
+        />
+      </div>
+      <p className="page-break">
+        Ein klassisches Beispiel ist der Unterschied zwischen:
+      </p>
       <ul>
         <li>
           einem Assistenzsystem, das lediglich warnt (z. B. beim Verlassen der
@@ -718,10 +829,78 @@ const EignungSchaetzen = {
         Vier Bereiche der Automatisierung entlang der menschlichen
         Informationsverarbeitung
       </h2>
-      <CarouselContainer sideVisibility={10} autoPlay={false}>
-        <div
-          title="Information Acquisition - Informationsbeschaffung"
-          className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
+      <div className="no-print">
+        <CarouselContainer sideVisibility={10} autoPlay={false}>
+          <div
+            title="Information Acquisition - Informationsbeschaffung"
+            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
+            <h4>Information Acquisition - Informationsbeschaffung</h4>
+            <p>
+              Diese Ebene bezieht sich auf das{" "}
+              <b>Sammeln und Registrieren von Eingangsdaten</b>. Automatisierung
+              in diesem Bereich unterstützt menschliche sensorische Prozesse,
+              indem Daten schneller, vollständiger oder kontinuierlicher erfasst
+              werden.
+            </p>
+            <p>
+              Beispiel im Organisationskontext: Ein System sammelt automatisch
+              Anmeldungen, Standortdaten oder Verfügbarkeiten von Freiwilligen,
+              anstatt dass diese manuell zusammengetragen werden.
+            </p>
+          </div>
+          <div
+            title="Information Analysis - Informationsanalyse"
+            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
+            <h4>Information Analysis - Informationsanalyse</h4>
+            <p>
+              Hier geht es um <b>kognitive Funktionen</b> wie Vergleichen,
+              Strukturieren, Extrapolieren oder Vorhersagen. Systeme können
+              Muster erkennen, Zusammenhänge herstellen oder Daten
+              vorverarbeiten.
+            </p>
+            <p>
+              Beispiel: Ein System analysiert eingehende Daten und schlägt auf
+              dieser Basis mögliche Einsatzstellen für Freiwillige vor.
+            </p>
+          </div>
+          <div
+            title="Decision & Action Selection - Entscheidungs- und Handlungsauswahl"
+            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
+            <h4>
+              Decision & Action Selection - Entscheidungs- und Handlungsauswahl
+            </h4>
+            <p>
+              In dieser Phase werden{" "}
+              <b>Handlungsoptionen abgewogen und ausgewählt</b>. Eine
+              Automatisierung bedeutet hier, dass das System bereits
+              Entscheidungen trifft oder stark vorgibt - mit oder ohne
+              menschliche Bestätigung.
+            </p>
+            <p>
+              Beispiel: Das System entscheidet selbstständig, welcher
+              Freiwillige welcher Einsatzstelle zugewiesen wird, anstatt nur
+              Vorschläge zu liefern.
+            </p>
+          </div>
+          <div
+            title="Action Implementation - Handlungsausführung"
+            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
+            <h4>Action Implementation - Handlungsausführung</h4>
+            <p>
+              Diese letzte Phase betrifft die{" "}
+              <b>eigentliche Umsetzung der Entscheidung</b>. Automatisierung
+              ersetzt hier in der Regel direkt die physische oder kommunikative
+              Handlung eines Menschen.
+            </p>
+            <p>
+              Beispiel: Ein System versendet automatisch Zusagen, Termine und
+              Zugangsdaten an Freiwillige und Einsatzstellen.
+            </p>
+          </div>
+        </CarouselContainer>
+      </div>
+      <div className="mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)]">
           <h4>Information Acquisition - Informationsbeschaffung</h4>
           <p>
             Diese Ebene bezieht sich auf das{" "}
@@ -736,9 +915,9 @@ const EignungSchaetzen = {
             anstatt dass diese manuell zusammengetragen werden.
           </p>
         </div>
-        <div
-          title="Information Analysis - Informationsanalyse"
-          className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
+      </div>
+      <div className="mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)]">
           <h4>Information Analysis - Informationsanalyse</h4>
           <p>
             Hier geht es um <b>kognitive Funktionen</b> wie Vergleichen,
@@ -750,9 +929,9 @@ const EignungSchaetzen = {
             dieser Basis mögliche Einsatzstellen für Freiwillige vor.
           </p>
         </div>
-        <div
-          title="Decision & Action Selection - Entscheidungs- und Handlungsauswahl"
-          className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
+      </div>
+      <div className="pt-3 mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)]">
           <h4>
             Decision & Action Selection - Entscheidungs- und Handlungsauswahl
           </h4>
@@ -760,7 +939,7 @@ const EignungSchaetzen = {
             In dieser Phase werden{" "}
             <b>Handlungsoptionen abgewogen und ausgewählt</b>. Eine
             Automatisierung bedeutet hier, dass das System bereits
-            Entscheidungen trifft oder stark vorgibt – mit oder ohne menschliche
+            Entscheidungen trifft oder stark vorgibt - mit oder ohne menschliche
             Bestätigung.
           </p>
           <p>
@@ -769,9 +948,9 @@ const EignungSchaetzen = {
             liefern.
           </p>
         </div>
-        <div
-          title="Action Implementation - Handlungsausführung"
-          className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
+      </div>
+      <div className="mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)]">
           <h4>Action Implementation - Handlungsausführung</h4>
           <p>
             Diese letzte Phase betrifft die{" "}
@@ -784,7 +963,7 @@ const EignungSchaetzen = {
             Zugangsdaten an Freiwillige und Einsatzstellen.
           </p>
         </div>
-      </CarouselContainer>
+      </div>
       <p className="specialText">
         <b>
           Wichtig ist: Ein System hat nicht ein einziges Automatisierungslevel,
@@ -792,7 +971,7 @@ const EignungSchaetzen = {
           automatisiert sein.
         </b>
       </p>
-      <p>
+      <p className="page-break">
         So kann beispielsweise die Datenerfassung vollständig automatisiert
         sein, während die Entscheidung bewusst beim Menschen verbleibt. Moderne
         Systeme können zudem so gestaltet werden, dass sie ihre
@@ -904,7 +1083,7 @@ const PATS = {
       <Accordion sections={sectionsPATS} />
       <SubNavigation sections={sectionsPATS} />
     </section>,
-    <section>
+    <section className="break">
       <p>
         Neben technischen und organisatorischen Überlegungen ist es entscheidend
         zu verstehen,{" "}
@@ -923,9 +1102,9 @@ const PATS = {
       <List
         items={[
           "<b>Daten sammeln</b> - Informationen erfassen, filtern und organisieren",
-          "<b>Daten analysieren</b - Muster erkennen und Schlussfolgerungen ziehen",
-          "<b>Entscheidungen treffen</b - Optionen abwägen und auswählen",
-          "<b>Handlungen umsetzen</b - Entscheidungen praktisch durchführen",
+          "<b>Daten analysieren</b> - Muster erkennen und Schlussfolgerungen ziehen",
+          "<b>Entscheidungen treffen</b> - Optionen abwägen und auswählen",
+          "<b>Handlungen umsetzen</b> - Entscheidungen praktisch durchführen",
         ]}
         alignItems="center"
         size="small"
@@ -946,7 +1125,7 @@ const PATS = {
         alt="Bild PATS Skala"
         className="pb-10"
       />
-      <p>
+      <p className="page-break">
         Die Ergebnisse können in verschiedenen Szenarien verglichen werden (z.
         B. &bdquo;normaler Betrieb&ldquo; vs. &bdquo;akuter
         Personalmangel&ldquo;), um für die beteiligten Personen durchzuspielen,
@@ -1039,18 +1218,20 @@ const KISinnvoll = {
       </p>
     </section>,
     <section>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover no-break">
-        <h3>Checkliste: Eignung von KI-Technologien</h3>
-        <List
-          items={[
-            "Gibt es ausreichend digitale Daten? Sind in Menge und Qualität genügend Daten vorhanden, aus denen ein System lernen kann?",
-            "Steht Mustererkennung im Fokus (statt starrer Regeln)? Geht es darum, Zusammenhänge, Tendenzen oder Abweichungen zu identifizieren, anstatt feste Entscheidungsbäume abzuarbeiten?",
-            "Kann das Ergebnis überprüft oder erklärt werden? Ist Nachvollziehbarkeit möglich (z. B. durch Vergleich, Plausibilitätsprüfung, menschliche Kontrolle)?",
-            "Sind Datenschutz und Bias handhabbar? Können Risiken im Umgang mit personenbezogenen Daten und Verzerrungen (Bias) realistisch kontrolliert werden?",
-            "Ist das System langfristig wartbar und verantwortbar? Gibt es Ressourcen, Wissen und Zuständigkeiten für Pflege, Monitoring und Weiterentwicklung?",
-            "Entspricht ein mögliches System den rechtlichen Rahmenbedingungen? (z. B. DSGVO, AI Act, organisationsinterne Richtlinien)",
-          ]}
-        />
+      <div className="print:pt-3">
+        <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover no-break">
+          <h3>Checkliste: Eignung von KI-Technologien</h3>
+          <List
+            items={[
+              "Gibt es ausreichend digitale Daten? Sind in Menge und Qualität genügend Daten vorhanden, aus denen ein System lernen kann?",
+              "Steht Mustererkennung im Fokus (statt starrer Regeln)? Geht es darum, Zusammenhänge, Tendenzen oder Abweichungen zu identifizieren, anstatt feste Entscheidungsbäume abzuarbeiten?",
+              "Kann das Ergebnis überprüft oder erklärt werden? Ist Nachvollziehbarkeit möglich (z. B. durch Vergleich, Plausibilitätsprüfung, menschliche Kontrolle)?",
+              "Sind Datenschutz und Bias handhabbar? Können Risiken im Umgang mit personenbezogenen Daten und Verzerrungen (Bias) realistisch kontrolliert werden?",
+              "Ist das System langfristig wartbar und verantwortbar? Gibt es Ressourcen, Wissen und Zuständigkeiten für Pflege, Monitoring und Weiterentwicklung?",
+              "Entspricht ein mögliches System den rechtlichen Rahmenbedingungen? (z. B. DSGVO, AI Act, organisationsinterne Richtlinien)",
+            ]}
+          />
+        </div>
       </div>
       <p>
         Neben der technischen Machbarkeit ist die menschliche Perspektive

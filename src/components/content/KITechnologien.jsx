@@ -7,6 +7,8 @@ import List from "../2_molecule/List";
 import { TabSwitchView } from "../2_molecule/TabSwitchView";
 import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
+import { CarouselContainer } from "../3_organism/CarouselContainer";
+import Sources from "../Sources";
 
 import llm_dark from "../../assets/images/kiTechnologien/LLM-dark.png";
 import llm_light from "../../assets/images/kiTechnologien/LLM-light.png";
@@ -29,8 +31,7 @@ import shapley_dark from "../../assets/images/kiTechnologien/shapley-dark.png";
 import heatmap_light from "../../assets/images/kiTechnologien/heatmap-light.png";
 import heatmap_dark from "../../assets/images/kiTechnologien/heatmap-dark.png";
 import ArrowIcon from "../1_elements/ArrowIcon";
-import { CarouselContainer } from "../3_organism/CarouselContainer";
-import Sources from "../Sources";
+import thumbnail_llm from "../../assets/images/thumbnails/KITechnik_LLM.webp";
 
 import tmpSources from "./KiTechnologienSorucesTMP.json";
 import SubTopicCard from "../2_molecule/cards/SubTopicCard";
@@ -320,16 +321,19 @@ const InputTechnik = {
           diese falschen Positive dann händisch filtern müssen.
         </p>
       </Accordion>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
-        <h4>Ein Beispiel dazu</h4>
-        <p>
-          Eine Organisation möchte mithilfe von KI prüfen, ob Förderanträge
-          vollständig ausgefüllt sind. Wenn jedoch alte Formulare im Umlauf sind
-          oder Einträge unterschiedlich benannt wurden (&bdquo;Straße&ldquo; vs.
-          &bdquo;Str.&ldquo;), kann die KI falsche Lücken oder Dubletten
-          erkennen und so zusätzliche Arbeit für Mitarbeitende erzeugen, die
-          diese falschen Positive dann händisch filtern müssen.
-        </p>
+      <div className="pt-3 only-print no-break">
+        <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
+          <h4>Ein Beispiel dazu</h4>
+          <p>
+            Eine Organisation möchte mithilfe von KI prüfen, ob Förderanträge
+            vollständig ausgefüllt sind. Wenn jedoch alte Formulare im Umlauf
+            sind oder Einträge unterschiedlich benannt wurden
+            (&bdquo;Straße&ldquo; vs. &bdquo;Str.&ldquo;), kann die KI falsche
+            Lücken oder Dubletten erkennen und so zusätzliche Arbeit für
+            Mitarbeitende erzeugen, die diese falschen Positive dann händisch
+            filtern müssen.
+          </p>
+        </div>
       </div>
     </section>,
     <section className="break">
@@ -476,17 +480,19 @@ const InputTechnik = {
           </div>
         </CarouselContainer>
       </div>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
-        <h4>Falsche Abbildung der Realität</h4>
-        <p>
-          Hier sind die Daten schlicht{" "}
-          <b>fehlerhaft, unvollständig oder falsch erhoben</b>. Vielleicht
-          wurden bestimmte Gruppen gar nicht befragt, Datensätze ungleichmäßig
-          aktualisiert oder Eingabefehler nie korrigiert. Ein Chatbot, der
-          Anfragen von Bürger:innen beantwortet, könnte etwa eine Schieflage
-          aufweisen, wenn die zugrunde liegenden Textbeispiele überwiegend aus
-          einer bestimmten Altersgruppe stammen.
-        </p>
+      <div className="pt-3 only-print no-break">
+        <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
+          <h4>Falsche Abbildung der Realität</h4>
+          <p>
+            Hier sind die Daten schlicht{" "}
+            <b>fehlerhaft, unvollständig oder falsch erhoben</b>. Vielleicht
+            wurden bestimmte Gruppen gar nicht befragt, Datensätze ungleichmäßig
+            aktualisiert oder Eingabefehler nie korrigiert. Ein Chatbot, der
+            Anfragen von Bürger:innen beantwortet, könnte etwa eine Schieflage
+            aufweisen, wenn die zugrunde liegenden Textbeispiele überwiegend aus
+            einer bestimmten Altersgruppe stammen.
+          </p>
+        </div>
       </div>
       <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
         <h4>Abbildung einer ungleichen Realität</h4>
@@ -508,24 +514,26 @@ const InputTechnik = {
         <b>Zugang zu Unterstützung, Sichtbarkeit oder Teilhabe</b> entscheiden
         können.
       </p>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
-        <h4>Leitfragen zum Erkennen von Bias</h4>
-        <ul className="mt-[var(--scale5)]">
-          <li>
-            Wer oder was ist in den Daten <b>überrepräsentiert</b>?
-          </li>
-          <li>
-            Wer oder was <b>kommt kaum oder gar nicht vor</b>?
-          </li>
-          <li>
-            Welche historischen oder strukturellen Ungleichheiten könnten sich
-            in den genutzten Daten widerspiegeln?
-          </li>
-          <li>
-            Welche Werte oder Annahmen liegen in der Datenerhebung selbst
-            verborgen (z.B. Sprache, Begrifflichkeiten, Klassifikationen)?
-          </li>
-        </ul>
+      <div className="pt-3 no-break">
+        <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
+          <h4>Leitfragen zum Erkennen von Bias</h4>
+          <ul className="mt-[var(--scale5)]">
+            <li>
+              Wer oder was ist in den Daten <b>überrepräsentiert</b>?
+            </li>
+            <li>
+              Wer oder was <b>kommt kaum oder gar nicht vor</b>?
+            </li>
+            <li>
+              Welche historischen oder strukturellen Ungleichheiten könnten sich
+              in den genutzten Daten widerspiegeln?
+            </li>
+            <li>
+              Welche Werte oder Annahmen liegen in der Datenerhebung selbst
+              verborgen (z.B. Sprache, Begrifflichkeiten, Klassifikationen)?
+            </li>
+          </ul>
+        </div>
       </div>
       <p>
         Bias lässt sich nie vollständig vermeiden - aber er lässt sich erkennen,
@@ -709,46 +717,49 @@ const InputInformation = {
           basieren.
         </p>
       </Accordion>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
-        <h4>Das Beispiel &bdquo;Wohnbrücke e. V.&ldquo;</h4>
-        <p>
-          Die Organisation <i>Wohnbrücke e. V.</i> unterstützt Menschen in Not
-          bei der Wohnungssuche in einer Großstadt.
-          <br />
-          Um Wohnungsangebote systematisch zu bewerten, nutzt sie ein KI-System,
-          das jeder Immobilie einen Eignungswert zwischen 0 und 1 zuweist.
-        </p>
-        <p>
-          Ein Angebot in der Lindenstraße 12 erhält etwa den Wert 0,82. <br />
-          Das System zeigt außerdem an:
-        </p>
-        <ul>
-          <li>
-            <b>Hauptfaktoren</b>: Barrierefreiheit (+0,15), Nähe zu
-            Betreuungseinrichtungen (+0,12), moderate Miete (+0,08).
-          </li>
-          <li>
-            <b>Unsicherheiten</b>: Kein aktuelles Bildmaterial vorhanden,
-            fehlende Angaben zur Heizungsart.
-          </li>
-          <li>
-            <b>Confidence Score</b>: 0,76 (relativ hohe Sicherheit).
-          </li>
-        </ul>
-        <p>
-          So erkennen die Mitarbeitenden: Das System bewertet das Objekt
-          positiv, aber mit gewissen Unsicherheiten, die auf fehlende Daten
-          zurückzuführen sind.
-        </p>
-        <p>
-          Durch solche Offenlegungen wird die Entscheidungslogik greifbarer.
-          Mitarbeitende lernen, welche Merkmale besonders wichtig sind und wann
-          sie die Bewertung besser hinterfragen sollten. So können sie ihren
-          Input in das System bestmöglich anpassen. <br />
-          Gleichzeitig entsteht eine Transparenz, die Vertrauen schafft, sowohl
-          in das System selbst als auch in die Entscheidungen, die darauf
-          basieren.
-        </p>
+      <div className="pt-3 only-print no-break">
+        <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
+          <h4>Das Beispiel &bdquo;Wohnbrücke e. V.&ldquo;</h4>
+          <p>
+            Die Organisation <i>Wohnbrücke e. V.</i> unterstützt Menschen in Not
+            bei der Wohnungssuche in einer Großstadt.
+            <br />
+            Um Wohnungsangebote systematisch zu bewerten, nutzt sie ein
+            KI-System, das jeder Immobilie einen Eignungswert zwischen 0 und 1
+            zuweist.
+          </p>
+          <p>
+            Ein Angebot in der Lindenstraße 12 erhält etwa den Wert 0,82. <br />
+            Das System zeigt außerdem an:
+          </p>
+          <ul>
+            <li>
+              <b>Hauptfaktoren</b>: Barrierefreiheit (+0,15), Nähe zu
+              Betreuungseinrichtungen (+0,12), moderate Miete (+0,08).
+            </li>
+            <li>
+              <b>Unsicherheiten</b>: Kein aktuelles Bildmaterial vorhanden,
+              fehlende Angaben zur Heizungsart.
+            </li>
+            <li>
+              <b>Confidence Score</b>: 0,76 (relativ hohe Sicherheit).
+            </li>
+          </ul>
+          <p>
+            So erkennen die Mitarbeitenden: Das System bewertet das Objekt
+            positiv, aber mit gewissen Unsicherheiten, die auf fehlende Daten
+            zurückzuführen sind.
+          </p>
+          <p>
+            Durch solche Offenlegungen wird die Entscheidungslogik greifbarer.
+            Mitarbeitende lernen, welche Merkmale besonders wichtig sind und
+            wann sie die Bewertung besser hinterfragen sollten. So können sie
+            ihren Input in das System bestmöglich anpassen. <br />
+            Gleichzeitig entsteht eine Transparenz, die Vertrauen schafft,
+            sowohl in das System selbst als auch in die Entscheidungen, die
+            darauf basieren.
+          </p>
+        </div>
       </div>
       <h3 className="page-break">Reflexionsfrage</h3>
       <p className="specialText">
@@ -828,7 +839,9 @@ const InputInformation = {
         </p>
         <p>Nun verändern sie einzelne Eingaben:</p>
         <Table data={editierenWohnbrückeTable} headerStyle verticalAlignCells />
-        <p>Die Ergebnisse machen sichtbar:</p>
+        <div className="pt-3">
+          <p>Die Ergebnisse machen sichtbar:</p>
+        </div>
         <ul>
           <li>
             Das System legt großen Wert auf Barrierefreiheit (-0,14 Punkte
@@ -911,25 +924,30 @@ const InputInformation = {
           insgesamt?
         </p>
       </Accordion>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
-        <h4>Zeitverlauf bei Wohnbrücke e. V.</h4>
-        <p>
-          Das Team verfolgt über drei Monate hinweg, wie sich die Bewertung der{" "}
-          <b>Wohnung Lindenstraße 12</b> entwickelt:
-        </p>
-        <Table data={zeitverlaufTable} headerStyle verticalAlignCells />
-        <p>
-          Dieser Verlauf zeigt: Das System reagiert auf neue Informationen
-          dynamisch. Für die Organisation bedeutet das Transparenz - sie kann
-          sehen, warum ein Objekt heute anders bewertet wird als vor einem
-          Monat.
-        </p>
-        <p>
-          Zudem können die Daten genutzt werden, um Trends zu erkennen: <br />
-          Verändern sich Bewertungen ganzer Stadtteile? <br />
-          Wie stark beeinflussen steigende Energiekosten die Eignungswerte
-          insgesamt?
-        </p>
+      <div className="pt-3 mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale3)] h-full glassBox no-hover">
+          <h4>Zeitverlauf bei Wohnbrücke e. V.</h4>
+          <p>
+            Das Team verfolgt über drei Monate hinweg, wie sich die Bewertung
+            der <b>Wohnung Lindenstraße 12</b> entwickelt:
+          </p>
+          <Table data={zeitverlaufTable} headerStyle verticalAlignCells />
+          <p>
+            Dieser Verlauf zeigt: Das System reagiert auf neue Informationen
+            dynamisch. Für die Organisation bedeutet das Transparenz - sie kann
+            sehen, warum ein Objekt heute anders bewertet wird als vor einem
+            Monat.
+          </p>
+          <div className="no-break pt-3">
+            <p>
+              Zudem können die Daten genutzt werden, um Trends zu erkennen:{" "}
+              <br />
+              Verändern sich Bewertungen ganzer Stadtteile? <br />
+              Wie stark beeinflussen steigende Energiekosten die Eignungswerte
+              insgesamt?
+            </p>
+          </div>
+        </div>
       </div>
       <h3>Reflexionsfrage</h3>
       <p className="specialText">
@@ -1281,29 +1299,31 @@ const VerarbeitungTechnik = {
           </li>
         </ul>
       </Accordion>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
-        <h4>Beispiele</h4>
-        <ul>
-          <li>
-            <b>Einkommen</b>: Schätzung des Gehalts einer Person auf Basis von
-            Alter, Ausbildung, Berufserfahrung und Branche.
-          </li>
-          <li>
-            <b>Werbung</b>: Vorhersage der Klickrate einer Online-Anzeige in
-            Abhängigkeit von Text, Gestaltung, Zielgruppe und bisherigen
-            Nutzerverhalten.
-          </li>
-          <li>
-            <b>Verkehr</b>: Prognose der Anzahl von Unfällen, wobei Faktoren wie
-            Straßenbedingungen, Wetter, Tageszeit und
-            Geschwidigkeitsbegrenzungen einfließen.
-          </li>
-          <li>
-            <b>Immobilien</b>: Schätzung des Verkaufspreises einer Wohnung oder
-            eines Hauses anhand von Lage, Wohnfläche, Baujahr, Ausstattung und
-            energetischem Zustand.
-          </li>
-        </ul>
+      <div className="mb-[var(--scale4)] pt-3 only-print no-break">
+        <div className="rounded-xl p-[var(--scale3)] h-full glassBox no-hover">
+          <h4>Beispiele</h4>
+          <ul>
+            <li>
+              <b>Einkommen</b>: Schätzung des Gehalts einer Person auf Basis von
+              Alter, Ausbildung, Berufserfahrung und Branche.
+            </li>
+            <li>
+              <b>Werbung</b>: Vorhersage der Klickrate einer Online-Anzeige in
+              Abhängigkeit von Text, Gestaltung, Zielgruppe und bisherigen
+              Nutzerverhalten.
+            </li>
+            <li>
+              <b>Verkehr</b>: Prognose der Anzahl von Unfällen, wobei Faktoren
+              wie Straßenbedingungen, Wetter, Tageszeit und
+              Geschwidigkeitsbegrenzungen einfließen.
+            </li>
+            <li>
+              <b>Immobilien</b>: Schätzung des Verkaufspreises einer Wohnung
+              oder eines Hauses anhand von Lage, Wohnfläche, Baujahr,
+              Ausstattung und energetischem Zustand.
+            </li>
+          </ul>
+        </div>
       </div>
       <h3 className="page-break">
         4. Herausforderungen beim überwachten Lernen
@@ -1709,29 +1729,31 @@ const VerarbeitungInformation = {
         verstehen, sondern auch diskutieren,{" "}
         <b>ob die Gewichtung dieser Faktoren fair und sinnvoll ist</b>.
       </p>
-      <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover no-break">
-        <h4>Wie Shapley-Werte berechnet werden</h4>
-        <p>
-          In der Praxis wird für jede Variable berechnet,{" "}
-          <b>wie sich das Ergebnis verändert</b>, wenn sie zum Modell
-          &bdquo;hinzugefügt&ldquo; oder &bdquo;weggelassen&ldquo; wird - und
-          das über alle möglichen Kombinationen von Variablen hinweg. <br />
-          Der Durchschnitt dieser Veränderungen ergibt den Shapley-Wert einer
-          Variable.
-        </p>
-        <p>
-          Da die vollständige Berechnung bei vielen Variablen sehr aufwändig
-          ist, arbeiten Anwendungen meist mit <b>Näherungsverfahren</b> oder{" "}
-          <b>Stichproben</b>. <br />
-          Viele gängige KI-Frameworks (z. B. SHAP in Python) bieten fertige
-          Implementierungen, die diese Berechnungen automatisiert durchführen.
-          Hier eine beispielhafte Darstellung:
-          <ThemeImage
-            darkSrc={shapley_dark}
-            lightSrc={shapley_light}
-            alt="SHAPLEY-Werte (Einfluss auf das Output Modell)"
-          />
-        </p>
+      <div className="print:pt-3 mb-8 no-break">
+        <div className="rounded-xl p-[var(--scale2)] glassBox no-hover">
+          <h4>Wie Shapley-Werte berechnet werden</h4>
+          <p>
+            In der Praxis wird für jede Variable berechnet,{" "}
+            <b>wie sich das Ergebnis verändert</b>, wenn sie zum Modell
+            &bdquo;hinzugefügt&ldquo; oder &bdquo;weggelassen&ldquo; wird - und
+            das über alle möglichen Kombinationen von Variablen hinweg. <br />
+            Der Durchschnitt dieser Veränderungen ergibt den Shapley-Wert einer
+            Variable.
+          </p>
+          <p>
+            Da die vollständige Berechnung bei vielen Variablen sehr aufwändig
+            ist, arbeiten Anwendungen meist mit <b>Näherungsverfahren</b> oder{" "}
+            <b>Stichproben</b>. <br />
+            Viele gängige KI-Frameworks (z. B. SHAP in Python) bieten fertige
+            Implementierungen, die diese Berechnungen automatisiert durchführen.
+            Hier eine beispielhafte Darstellung:
+            <ThemeImage
+              darkSrc={shapley_dark}
+              lightSrc={shapley_light}
+              alt="SHAPLEY-Werte (Einfluss auf das Output Modell)"
+            />
+          </p>
+        </div>
       </div>
       <h3>Worauf Sie achten sollten</h3>
       <p>
@@ -1847,27 +1869,29 @@ const VerarbeitungInformation = {
         <b>Zusammenhänge intuitiv zu erkennen</b> - auch ohne tief in die
         Modelllogik einzusteigen.
       </p>
-      <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover no-break">
-        <h4>Wie ein PDP funktioniert</h4>
-        <p>
-          Ein PDP wird erstellt, indem man{" "}
-          <b>den Wert eines Merkmals systematisch variiert</b> (z. B. das
-          Baujahr von 1950 bis 2020) und dabei beobachtet,{" "}
-          <b>wie sich die Modellvorhersage verändert</b>, während alle anderen
-          Merkmale konstant bleiben. <br />
-          Diese Veränderungen werden dann <b>als Kurve oder Fläche</b>{" "}
-          visualisiert.
-        </p>
-        <ul>
-          <li>
-            <b>1D-PDPs</b> zeigen die Auswirkung <b>eines einzelnen Faktors</b>{" "}
-            (z.B. Baujahr).
-          </li>
-          <li>
-            <b>2D-PDPs</b> zeigen die <b>Wechselwirkung zweier Faktoren</b>{" "}
-            (z.B. Baujahr und Zustand).
-          </li>
-        </ul>
+      <div className="print:pt-3 mb-8 no-break">
+        <div className="rounded-xl p-[var(--scale2)] glassBox no-hover">
+          <h4>Wie ein PDP funktioniert</h4>
+          <p>
+            Ein PDP wird erstellt, indem man{" "}
+            <b>den Wert eines Merkmals systematisch variiert</b> (z. B. das
+            Baujahr von 1950 bis 2020) und dabei beobachtet,{" "}
+            <b>wie sich die Modellvorhersage verändert</b>, während alle anderen
+            Merkmale konstant bleiben. <br />
+            Diese Veränderungen werden dann <b>als Kurve oder Fläche</b>{" "}
+            visualisiert.
+          </p>
+          <ul>
+            <li>
+              <b>1D-PDPs</b> zeigen die Auswirkung{" "}
+              <b>eines einzelnen Faktors</b> (z.B. Baujahr).
+            </li>
+            <li>
+              <b>2D-PDPs</b> zeigen die <b>Wechselwirkung zweier Faktoren</b>{" "}
+              (z.B. Baujahr und Zustand).
+            </li>
+          </ul>
+        </div>
       </div>
       <h3>Vorteile und Grenzen von PDPs</h3>
       <TabSwitchView>
@@ -1925,26 +1949,28 @@ const VerarbeitungInformation = {
           </li>
         </ul>
       </div>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
-        <h4>Grenzen</h4>
-        <ul className="mt-0">
-          <li>
-            PDPs setzen voraus, dass <b>Faktoren unabhängig voneinander</b>{" "}
-            betrachtet werden können. <br />
-            In der Realität sind Variablen aber oft <b>korreliert</b> - etwa,
-            dass neuere Gebäude meistens teurer sind. <br />
-            Dadurch können im PDP <b>unrealistische Kombinationen</b> entstehen,
-            z.B. „sehr altes Gebäude mit extrem hohem Zustand“, die im echten
-            Datensatz gar nicht vorkommen. <br />
-            Das Modell zeigt dann zwar eine scheinbare Abhängigkeit, die{" "}
-            <b>in der Praxis aber keine Bedeutung</b> hat.
-          </li>
-          <li>
-            Zudem können PDPs <b>nur ein oder zwei Merkmale gleichzeitig</b>{" "}
-            darstellen. Für komplexere Interaktionen braucht es andere Verfahren
-            (z.B. Shapley- oder ICE-Plots).
-          </li>
-        </ul>
+      <div className="pt-3 mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale3)] h-full glassBox no-hover">
+          <h4>Grenzen</h4>
+          <ul className="mt-0">
+            <li>
+              PDPs setzen voraus, dass <b>Faktoren unabhängig voneinander</b>{" "}
+              betrachtet werden können. <br />
+              In der Realität sind Variablen aber oft <b>korreliert</b> - etwa,
+              dass neuere Gebäude meistens teurer sind. <br />
+              Dadurch können im PDP <b>unrealistische Kombinationen</b>{" "}
+              entstehen, z.B. „sehr altes Gebäude mit extrem hohem Zustand“, die
+              im echten Datensatz gar nicht vorkommen. <br />
+              Das Modell zeigt dann zwar eine scheinbare Abhängigkeit, die{" "}
+              <b>in der Praxis aber keine Bedeutung</b> hat.
+            </li>
+            <li>
+              Zudem können PDPs <b>nur ein oder zwei Merkmale gleichzeitig</b>{" "}
+              darstellen. Für komplexere Interaktionen braucht es andere
+              Verfahren (z.B. Shapley- oder ICE-Plots).
+            </li>
+          </ul>
+        </div>
       </div>
       <h3 className="mt-10">Beispiel für eine Fehlinterpretation</h3>
       <p>
@@ -2033,24 +2059,26 @@ const VerarbeitungInformation = {
         Bewertung als etwa die Ausstattung mit Klimaanlage. Das System gewichtet
         also manche Merkmale stark, andere kaum.
       </p>
-      <div className="rounded-xl p-[var(--scale2)] mb-8 glassBox no-hover">
-        <h4>Der technische Ablauf in Kürze</h4>
-        <List
-          items={[
-            "<b>Vorhersage mit Originaldaten</b>: Das Modell schätzt, wie geeignet jede Immobilie ist.",
-            "<b>Permutation eines Merkmals</b>: Die Werte eines Faktors (z. B. Baujahr) werden zufällig neu angeordnet.",
-            "<b>Vorhersage mit permutierten Daten</b>: Das Modell trifft erneut Entscheidungen, nun ohne die echte Beziehung zwischen Baujahr und Bewertung.",
-            "<b>Vergleich der Fehler</b>: Wie sehr hat sich der Vorhersagefehler erhöht?",
-            "<b>Wiederholung</b>: Die Schritte werden mehrfach wiederholt und gemittelt, um zufällige Schwankungen auszugleichen.",
-          ]}
-          alignItems="center"
-          size="small"
-        />
-        <p>
-          Das Ergebnis: ein Wichtigkeitswert pro Merkmal, der zeigt, welche
-          Faktoren das Modell wirklich nutzt, um seine Entscheidungen zu
-          treffen.
-        </p>
+      <div className="print:pt-3 mb-8">
+        <div className="rounded-xl p-[var(--scale2)] glassBox no-hover">
+          <h4>Der technische Ablauf in Kürze</h4>
+          <List
+            items={[
+              "<b>Vorhersage mit Originaldaten</b>: Das Modell schätzt, wie geeignet jede Immobilie ist.",
+              "<b>Permutation eines Merkmals</b>: Die Werte eines Faktors (z. B. Baujahr) werden zufällig neu angeordnet.",
+              "<b>Vorhersage mit permutierten Daten</b>: Das Modell trifft erneut Entscheidungen, nun ohne die echte Beziehung zwischen Baujahr und Bewertung.",
+              "<b>Vergleich der Fehler</b>: Wie sehr hat sich der Vorhersagefehler erhöht?",
+              "<b>Wiederholung</b>: Die Schritte werden mehrfach wiederholt und gemittelt, um zufällige Schwankungen auszugleichen.",
+            ]}
+            alignItems="center"
+            size="small"
+          />
+          <p>
+            Das Ergebnis: ein Wichtigkeitswert pro Merkmal, der zeigt, welche
+            Faktoren das Modell wirklich nutzt, um seine Entscheidungen zu
+            treffen.
+          </p>
+        </div>
       </div>
       <h3>Warum das relevant ist</h3>
       <p>
@@ -2137,27 +2165,29 @@ const VerarbeitungInformation = {
           </li>
         </ul>
       </div>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
-        <h4>Grenzen und Herausforderungen</h4>
-        <ul className="mt-0">
-          <li>
-            <b>Kein Verständnis der Richtung</b>: PFI zeigt nur,{" "}
-            <i>wie stark</i> ein Faktor wirkt - nicht{" "}
-            <i>ob er positiv oder negativ</i> wirkt.
-          </li>
-          <li>
-            <b>Zufälligkeit und Streuung</b>: Da die Methode auf
-            Zufallsdurchmischung basiert, können Ergebnisse schwanken. <br />
-            Eine Mehrfach-Wiederholung (und Mittelung) stabilisiert die
-            Ergebnisse, kostet aber <b>mehr Rechenzeit</b>.
-          </li>
-          <li>
-            <b>Keine Aussage über Ursache und Wirkung</b>: PFI misst Bedeutung,
-            nicht Kausalität. Ein hoher Wert bedeutet nicht, dass dieses Merkmal{" "}
-            <i>verursacht</i>, dass das Ergebnis so ausfällt - nur, dass es eng
-            damit verknüpft ist.
-          </li>
-        </ul>
+      <div className="pt-3 mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale3)] h-full glassBox no-hover">
+          <h4>Grenzen und Herausforderungen</h4>
+          <ul className="mt-0">
+            <li>
+              <b>Kein Verständnis der Richtung</b>: PFI zeigt nur,{" "}
+              <i>wie stark</i> ein Faktor wirkt - nicht{" "}
+              <i>ob er positiv oder negativ</i> wirkt.
+            </li>
+            <li>
+              <b>Zufälligkeit und Streuung</b>: Da die Methode auf
+              Zufallsdurchmischung basiert, können Ergebnisse schwanken. <br />
+              Eine Mehrfach-Wiederholung (und Mittelung) stabilisiert die
+              Ergebnisse, kostet aber <b>mehr Rechenzeit</b>.
+            </li>
+            <li>
+              <b>Keine Aussage über Ursache und Wirkung</b>: PFI misst
+              Bedeutung, nicht Kausalität. Ein hoher Wert bedeutet nicht, dass
+              dieses Merkmal <i>verursacht</i>, dass das Ergebnis so ausfällt -
+              nur, dass es eng damit verknüpft ist.
+            </li>
+          </ul>
+        </div>
       </div>
       <h3 className="mt-10">Beispielhafte Fehlinterpretation</h3>
       <p>
@@ -2264,19 +2294,22 @@ const OutputTechnik = {
           ohne diesen Unsicherheitsbereich zu berücksichtigen.
         </p>
       </Accordion>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print no-break">
-        <h4>Beispiel aus der Praxis</h4>
-        <p>
-          Eine Organisation, die Bürgeranfragen automatisch vorsortieren möchte,
-          nutzt ein KI-Modell, das E-Mails in die Kategorien &bdquo;Lob&ldquo;,
-          &bdquo;Beschwerde&ldquo;, &bdquo;Antrag&ldquo; und
-          &bdquo;Sonstiges&ldquo; einteilt. Eine Nachricht wird als „Antrag“
-          klassifiziert, mit einer Wahrscheinlichkeit von 55 %. Auf den ersten
-          Blick mag das ausreichend erscheinen - doch die zweitwahrscheinlichste
-          Kategorie &bdquo;Beschwerde&ldquo; liegt bei 40 %. Es wäre also
-          riskant, die E-Mail automatisch einem Bearbeitungsprozess zuzuweisen,
-          ohne diesen Unsicherheitsbereich zu berücksichtigen.
-        </p>
+      <div className="pt-3 mb-[var(--scale4)] only-print no-break">
+        <div className="rounded-xl p-[var(--scale3)] h-full glassBox no-hover">
+          <h4>Beispiel aus der Praxis</h4>
+          <p>
+            Eine Organisation, die Bürgeranfragen automatisch vorsortieren
+            möchte, nutzt ein KI-Modell, das E-Mails in die Kategorien
+            &bdquo;Lob&ldquo;, &bdquo;Beschwerde&ldquo;, &bdquo;Antrag&ldquo;
+            und &bdquo;Sonstiges&ldquo; einteilt. Eine Nachricht wird als
+            „Antrag“ klassifiziert, mit einer Wahrscheinlichkeit von 55 %. Auf
+            den ersten Blick mag das ausreichend erscheinen - doch die
+            zweitwahrscheinlichste Kategorie &bdquo;Beschwerde&ldquo; liegt bei
+            40 %. Es wäre also riskant, die E-Mail automatisch einem
+            Bearbeitungsprozess zuzuweisen, ohne diesen Unsicherheitsbereich zu
+            berücksichtigen.
+          </p>
+        </div>
       </div>
       <p className="specialText">
         <b>Merksatz</b>: Kategorische Outputs sollten nie als absolute
@@ -2381,7 +2414,7 @@ const OutputTechnik = {
           headerStyle={false}
           verticalAlignCells={true}
         />
-        <div className="print:pt-2">
+        <div className="pt-3">
           <p>
             Je höher der Wert, desto besser die Eignung. Die Organisation kann
             diese Bewertung als Orientierungshilfe nutzen - sollte aber immer
@@ -2667,9 +2700,7 @@ const OutputInformation = {
           &rarr; <i>Counterfactual Explanation</i>
         </li>
       </ul>
-      <h3 className="page-break">
-        1. Local Feature Relevance (Lokale Merkmalsbedeutung)
-      </h3>
+      <h3>1. Local Feature Relevance (Lokale Merkmalsbedeutung)</h3>
       <p>
         Hier wird{" "}
         <b>
@@ -2692,7 +2723,7 @@ const OutputInformation = {
         Typische Anwendung im Interface: Heatmaps, Balkendiagramme, Tooltipps
         &bdquo;Dieses Merkmal hatte den größten Einfluss&ldquo;
       </p>
-      <h4>Beispiel mit Diabetes-Diagnose</h4>
+      <h4 className="page-break">Beispiel mit Diabetes-Diagnose</h4>
       <p>
         Eine Ärztin gibt die Patientendaten in die KI ein. Das Modell gibt eine
         Vorhersage aus:{" "}
@@ -2714,7 +2745,9 @@ const OutputInformation = {
         <b>konkrete Risiko für diesen Patienten</b> als hoch einschätzt und
         erklärt, warum.
       </p>
-      <h3>2. Confidence Estimation (Konfidenzschätzung)</h3>
+      <h3 className="page-break">
+        2. Confidence Estimation (Konfidenzschätzung)
+      </h3>
       <p>
         Das ist die{" "}
         <b>
@@ -2945,6 +2978,28 @@ const LLM = {
         link="https://www.youtube-nocookie.com/embed/KZ5LL1xhAg4?rel=0&modestbranding=1"
         title="Vertrauenswürdigkeit"
       />
+      <div className="rounded-xl p-[var(--scale2)] mt-5 bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Das folgende Video gibt einen kurzen Überblick über die Funktionsweise
+          von LLMs sowie typische Anwendungsszenarien und deren Grenzen. Diese
+          Aspekte werden in den nächsten Abschnitten vertieft.
+        </p>
+        <a href="https://youtu.be/KZ5LL1xhAg4">
+          <img
+            src={thumbnail_llm}
+            alt="Video Thumbnail LLMs"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/KZ5LL1xhAg4"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/KZ5LL1xhAg4
+          </a>
+        </h4>
+      </div>
     </section>,
     <section>
       <h2>2. Funktionsweise von Large Language Models (LLMs)</h2>
@@ -3258,7 +3313,7 @@ const LLM = {
         alignItems="center"
         size="medium"
       />
-      <p>
+      <p className="page-break">
         <b>Kurz gesagt</b>: LLMs sind beeindruckende Sprachwerkzeuge, aber{" "}
         <b>keine denkenden Wesen</b>. Sie kombinieren{" "}
         <b>mathematische Mustererkennung</b> mit menschlicher Anleitung, um

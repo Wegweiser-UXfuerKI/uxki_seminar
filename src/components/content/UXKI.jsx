@@ -4,6 +4,14 @@ import { VideoContainer } from "../1_elements/VideoContainer";
 import SubTopicCard from "../2_molecule/cards/SubTopicCard";
 import List from "../2_molecule/List";
 
+import thumbnail_intro from "../../assets/images/thumbnails/UXKI_Intro.webp";
+import thumbnail_autonomie from "../../assets/images/thumbnails/UXKI_Autonomy.webp";
+import thumbnail_sa from "../../assets/images/thumbnails/UXKI_SA.webp";
+import thumbnail_mentalebelastung from "../../assets/images/thumbnails/UXKI_MentaleBelastung.webp";
+import thumbnail_vertrauen from "../../assets/images/thumbnails/UXKI_Trust.webp";
+import thumbail_confidence from "../../assets/images/thumbnails/UXKI_Confidence.webp";
+import thumbail_outro from "../../assets/images/thumbnails/UXKI_Outro.webp";
+
 //TODO: place components globaly for every modul page?
 import Accordion from "../2_molecule/Accordion";
 import SubNavigation from "../2_molecule/nav/SubNavigation";
@@ -44,6 +52,27 @@ const WahrgenommeneAutonomie = {
         }
         title={"Perceived Autonomy"}
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Im folgenden Video wird ein Überblick über den Begriff Wahrgenomme
+          Autonomie gegeben.
+        </p>
+        <a href="https://youtu.be/7QDwxEpQNHk">
+          <img
+            src={thumbnail_autonomie}
+            alt="Video Thumbnail"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/7QDwxEpQNHk"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/7QDwxEpQNHk
+          </a>
+        </h4>
+      </div>
     </section>,
     <section id="definition">
       <h2>1. Definition wahrgenommener Autonomie</h2>
@@ -56,7 +85,7 @@ const WahrgenommeneAutonomie = {
         wahrgenommen wird oder ob es lediglich als ausführendes Werkzeug dient.
       </p>
     </section>,
-    <section id="konzepte">
+    <section id="konzepte" className="break">
       <h2>2. Relevante Konzepte und Modelle</h2>
       <h3>Automatisierungsstufen (Levels of Automation)</h3>
       <p>
@@ -113,9 +142,7 @@ const WahrgenommeneAutonomie = {
         Informationsverarbeitung zu viel Automatisierung vorhanden ist (Onnasch
         et al., 2014).
       </p>
-      <h4 className="page-break">
-        Einfluss der Automatisierung auf die menschliche Leistung
-      </h4>
+      <h4>Einfluss der Automatisierung auf die menschliche Leistung</h4>
       <p>
         Parasuraman et al. (2000) haben vier zentrale Faktoren identifiziert,
         die beeinflussen, wie Automatisierung die menschliche Leistung
@@ -350,7 +377,7 @@ const WahrgenommeneAutonomie = {
       <h4>Beispiel: Smart City Mobilitätsplattformen</h4>
       <p>
         Eine Smart City Mobilitätsplattform ermöglicht es den Bürgern, ihre
-        persönlichen Verkehrspräferenzen festzulegen – von bevorzugten
+        persönlichen Verkehrspräferenzen festzulegen - von bevorzugten
         Verkehrsmitteln über favorisierte Routen bis hin zu umweltbewussten
         Zielen wie der Reduzierung des CO2-Fußabdrucks. Die Plattform generiert
         daraufhin maßgeschneiderte Vorschläge, z. B. alternative Verkehrsmittel
@@ -401,6 +428,27 @@ const WahrgenommenesSituationsbewusstsein = {
         }
         title={"Perceived Situationawareness"}
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Im folgenden Video wird ein Überblick über das Wahrgenommene
+          Situationsbewusstsein gegeben.
+        </p>
+        <a href="https://youtu.be/mhUXTuMQ5mY">
+          <img
+            src={thumbnail_sa}
+            alt="Video Thumbnail"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/mhUXTuMQ5mY"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/mhUXTuMQ5mY
+          </a>
+        </h4>
+      </div>
     </section>,
     <section id="definition">
       <h2>1. Definition Situationsbewusstsein</h2>
@@ -534,7 +582,7 @@ const WahrgenommenesSituationsbewusstsein = {
         Informationen hervor und bieten Hilfetexte zur Erklärung komplexer
         Funktionen.
       </p>
-      <h3>3. Vorhersehbarkeit verbessern</h3>
+      <h3 className="page-break">3. Vorhersehbarkeit verbessern</h3>
       <p>
         Systeme sollten Rückmeldungen geben, die die Auswirkungen von Handlungen
         aufzeigen, z. B. durch Simulationen oder Vorschauen.
@@ -580,6 +628,27 @@ const WahrgenommeneInformationOverload = {
         }
         title={"Wahrgenommene Mentale Belastung"}
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Was ist die wahrgenommene Mentale Belastung? In diesem Video wird ein
+          Überblick gegeben.
+        </p>
+        <a href="https://youtu.be/0GpnGeD7BCM">
+          <img
+            src={thumbnail_mentalebelastung}
+            alt="Video Thumbnail"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/0GpnGeD7BCM"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/0GpnGeD7BCM
+          </a>
+        </h4>
+      </div>
     </section>,
     <section id="definition">
       <h2>1. Definition Mentale Belastung</h2>
@@ -723,8 +792,29 @@ const PerceivedTrustworthiness = {
         }
         title={"Wahrgenommene Vertrauenswürdigkeit"}
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Dieses Video zeigt wie man einem System vertrauen kann und welche
+          Formen es gibt.
+        </p>
+        <a href="https://youtu.be/ZGpk3LJDTzg">
+          <img
+            src={thumbnail_vertrauen}
+            alt="Video Thumbnail"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/ZGpk3LJDTzg"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/ZGpk3LJDTzg
+          </a>
+        </h4>
+      </div>
     </section>,
-    <section id="definition">
+    <section id="definition" className="break">
       <h2>1. Definition Wahrgenommene Vertrauenswürdigkeit</h2>
       <p>
         Im Kontext von KI-Systemen beschreibt die wahrgenommene
@@ -741,7 +831,7 @@ const PerceivedTrustworthiness = {
         wo ethische und soziale Aspekte besonders relevant sind.
       </p>
     </section>,
-    <section id="konzepte">
+    <section id="konzepte" className="break">
       <h2>2. Relevante Konzepte und Modelle</h2>
       <h4>
         Drei Schlüsselfaktoren des Vertrauens in Systeme nach Mayer et al.
@@ -781,7 +871,7 @@ const PerceivedTrustworthiness = {
           <b>Prozess:</b> Die Methoden und Verfahren, die das System verwendet.
         </li>
       </ol>
-      <h4 className="page-break">
+      <h4>
         Kognitives vs. affektives Vertrauen nach Madsen und Gregor (2000):
       </h4>
       <p>
@@ -804,7 +894,7 @@ const PerceivedTrustworthiness = {
           sprachbasierten Assistenzsystemen oder Robotern.
         </li>
       </ol>
-      <h4>
+      <h4 className="page-break">
         Drei Dimensionen des Vertrauens in der Automatisierung nach Hoff und
         Bashir (2015):
       </h4>
@@ -997,6 +1087,27 @@ const PerceivedConfidence = {
         }
         title={"Perceived Confidence"}
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Im folgenden Video wird ein Überblick über den Begriff Diagnostizität
+          gegeben.
+        </p>
+        <a href="https://youtu.be/jdsnWIIGT7c">
+          <img
+            src={thumbail_confidence}
+            alt="Video Thumbnail"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/jdsnWIIGT7c"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/jdsnWIIGT7c
+          </a>
+        </h4>
+      </div>
     </section>,
     <section id="definition" className="break">
       <h2>1. Definition wahrgenommene Diagnostizität</h2>
@@ -1033,7 +1144,7 @@ const PerceivedConfidence = {
         spezifischer Informationen hilft das System, die Entscheidung über den
         nächsten Schritt gezielt zu erleichtern.
       </p>
-      <h3 className="page-break">
+      <h3>
         Unterschied zwischen wahrgenommener und tatsächlicher Diagnostizität
       </h3>
       <p>
@@ -1064,7 +1175,7 @@ const PerceivedConfidence = {
         Optionen gibt, hilft der allgemeine Informationswert mehr.
       </p>
     </section>,
-    <section id="studie">
+    <section id="studie" className="break">
       <h2>3. Studien zur User Experience und KI</h2>
       <h4>
         Schrills und Franke (2023): Einfluss der Diagnostizität auf Vertrauen
@@ -1198,6 +1309,27 @@ const Zusammenfassung = {
         }
         title={"Outro"}
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Zum Ende des Moduls wird eine kurze Zusammenfassung über die Inhalte
+          des Moduls gegeben.
+        </p>
+        <a href="https://youtu.be/Qmg1FlFCSMw">
+          <img
+            src={thumbail_outro}
+            alt="Video Thumbnail"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/Qmg1FlFCSMw"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/Qmg1FlFCSMw
+          </a>
+        </h4>
+      </div>
       <p className="pt-5">
         In dieser Lektion haben wir uns eingehend mit den spezifischen Aspekten
         der User Experience (UX) auseinandergesetzt, die im Kontext von
@@ -1236,7 +1368,7 @@ const Zusammenfassung = {
         Sie visuelle Darstellungen oder erklärende Hinweise, um komplexe Abläufe
         verständlicher zu machen.
       </p>
-      <h3 className="page-break">
+      <h3>
         3. Flexibilität bei der Informationsverarbeitung zur Reduzierung der
         mentalen Belastung
       </h3>
@@ -1254,7 +1386,7 @@ const Zusammenfassung = {
         priorisieren. Zum Beispiel kann eine Zusammenfassungsansicht für weniger
         erfahrene Nutzer und eine Detailansicht für Experten angeboten werden.
       </p>
-      <h3>
+      <h3 className="page-break">
         4. Zuverlässigkeit und klare Darstellung zur Förderung der
         wahrgenommenen Vertrauenswürdigkeit
       </h3>
@@ -1958,6 +2090,28 @@ const EinführungUXKI = {
         }
         title={"Intro"}
       />
+      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
+        <p style={{ marginBottom: "8px" }}>
+          Im folgenden Video wird ein Überblick über die unterschiedlichen
+          Aspekte bei der Identifikation gegeben, auf die in den folgenden
+          Kapiteln näher eingegangen wird.
+        </p>
+        <a href="https://youtu.be/dbBIEqBMudI">
+          <img
+            src={thumbnail_intro}
+            alt="Video Thumbnail"
+            className="rounded-lg overflow-hidden"
+          />
+        </a>
+        <h4 className="w-full text-center mt-1">
+          <a
+            href="https://youtu.be/dbBIEqBMudI"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://youtu.be/dbBIEqBMudI
+          </a>
+        </h4>
+      </div>
       <p className="mt-5">
         In der vorigen Lektion haben wir etablierte UX-Konstrukte betrachtet,
         die allgemeine Nutzererfahrungen beschreiben. KI-Systeme hingegen

@@ -42,13 +42,11 @@ const devModules = [
 ];
 
 // Temporarily deactivated modules
-const disabledModules = ["automatisierungspotenziale-erkennen"];
+const disabledModules = [];
 
 // Disabled subtopics for specific modules
 // example: "automatisierungspotenziale-erkennen": ["einleitung"],
-const disabledSubtopics = {
-  "automatisierungspotenziale-erkennen": ["einleitung"],
-};
+const disabledSubtopics = {};
 
 /**
  * Collects all modules (live and dev).

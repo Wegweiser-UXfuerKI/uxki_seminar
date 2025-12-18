@@ -3506,7 +3506,7 @@ const Quellen = {
     "Hier befinden sich die verwendeten Quellen in Reihenfolge des ersten Auftretens",
   content: [
     <ChapterHeader text={"Quellen"} number={9} />,
-    <section>
+    <section className="break">
       <Sources sourceData={tmpSourceList} />
     </section>,
   ],

@@ -1454,9 +1454,9 @@ const Quellen = {
     "Hier befinden sich die verwendeten Quellen in Reihenfolge des ersten Auftretens",
   content: [
     <ChapterHeader text={"Quellen"} number={8} />,
-    <section>
+    <section className="break">
       <h4>Literatur zu Wahrgenommener Autonomie</h4>
-      <ul>
+      <ul className="break">
         <li>
           Parasuraman, R., Sheridan, T., & Wickens, C. (2000). A model for types
           and levels of human interaction with automation.{" "}
@@ -1464,7 +1464,7 @@ const Quellen = {
             IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems
             and Humans, 30
           </b>
-          (3), 286–297.{" "}
+          (3), 286-297.{" "}
           <a
             href="https://doi.org/10.1109/3468.844354"
             target="_blank"
@@ -1550,7 +1550,7 @@ const Quellen = {
         </li>
       </ul>
       <h4>Literatur zu Wahrgenommenem Situationsbewusstsein (SA)</h4>
-      <ul>
+      <ul className="break">
         <li>
           Edgar, G. K., Catherwood, D., Baker, S., Sallis, G., Bertels, M.,
           Edgar, H. E., Nikolla, D., Buckle, S., Goodwin, C. & Whelan, A.
@@ -1659,8 +1659,10 @@ const Quellen = {
           </a>
         </li>
       </ul>
-      <h4>Literatur zu Wahrgenommene Mentale Arbeitsbelastung</h4>
-      <ul>
+      <h4 className="page-break">
+        Literatur zu Wahrgenommene Mentale Arbeitsbelastung
+      </h4>
+      <ul className="break">
         <li>
           Miller, T. (2023). Explainable AI is Dead, Long Live Explainable AI!:
           Hypothesis-driven Decision Support using Evaluative AI.{" "}
@@ -1751,7 +1753,7 @@ const Quellen = {
         </li>
       </ul>
       <h4>Literatur zu Wahrgenommene Vertrauenswürdigkeit</h4>
-      <ul>
+      <ul className="break">
         <li>
           Mayer, R. C., Davis, J. H., & Schoorman, F. D. (1995). An Integrative
           Model of Organizational Trust.{" "}
@@ -1855,7 +1857,7 @@ const Quellen = {
       </ul>
 
       <h4>Literatur zu Wahrgenommene Confidence / Diagnosticity</h4>
-      <ul>
+      <ul className="break">
         <li>
           Wickens, C. D., & Scott, B. D. (1983). A comparison of verbal and
           graphical information presentation in a complex information

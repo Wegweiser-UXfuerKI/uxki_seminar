@@ -2494,7 +2494,7 @@ const Quellen = {
     "Hier befinden sich die verwendeten Quellen der einzelnen Kapitel.",
   content: [
     <ChapterHeader text={"Quellen"} number={8} />,
-    <section>
+    <section className="break">
       <Sources />
     </section>,
   ],

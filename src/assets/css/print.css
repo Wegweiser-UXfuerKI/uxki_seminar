@@ -50,6 +50,7 @@
   section,
   ul,
   img,
+  li,
   .specialText {
     page-break-inside: avoid;
     break-inside: avoid;

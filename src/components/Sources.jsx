@@ -105,30 +105,22 @@ function Sources({ sourceData }) {
       // Dieses Array wird befüllt, egal ob aus Props oder Fetch
       let newGroups = [];
 
-      // --- Logik 1: Props verwenden, falls vorhanden ---
       if (sourceData && sourceData.length > 0) {
         console.log("Lade Quellen aus Props...");
 
         newGroups = sourceData.map((item, index) => {
-          // Stelle sicher, dass der Titel definiert ist (kann "" sein)
           const title = item.title || "";
 
           return {
-            // Eindeutiger Key: Titel ODER (falls leer) ein Index-Fallback
             key: title || `prop-section-${index}`,
-            // Der anzuzeigende Titel (kann "" sein)
             title: title,
-            // Die verarbeitete Liste
             list: item.data ? processCitationData(item.data) : [],
           };
         });
-      }
-      // --- Logik 2: Fetch verwenden, falls keine Props da sind ---
-      else if (selectedModuleLink && moduleMap[selectedModuleLink]) {
+      } else if (selectedModuleLink && moduleMap[selectedModuleLink]) {
         console.log("Lade Quellen aus Context/Fetch...");
         const moduleChapters = moduleMap[selectedModuleLink];
 
-        // Wir nutzen Promise.all, um alle Fetches parallel auszuführen
         newGroups = await Promise.all(
           Object.entries(moduleChapters).map(
             async ([chapterKey, chapterFileName]) => {
@@ -147,8 +139,6 @@ function Sources({ sourceData }) {
 
                 return {
                   key: chapterKey,
-                  // --- HIER IST DIE ÄNDERUNG (1) ---
-                  // Setze den Titel nur, wenn die Liste nicht leer ist.
                   title:
                     list.length > 0
                       ? getSubtopicNameByLink(selectedModuleLink, chapterKey)
@@ -162,8 +152,6 @@ function Sources({ sourceData }) {
                 );
                 return {
                   key: chapterKey,
-                  // --- HIER IST DIE ÄNDERUNG (2) ---
-                  // Setze den Titel bei einem Fehler auf leer.
                   title: "",
                   list: [],
                 };
@@ -182,30 +170,27 @@ function Sources({ sourceData }) {
   }, [selectedModuleLink, sourceData]);
 
   return (
-    <>
+    <div className="break">
       <h2>Literaturverzeichnis</h2>
 
-      {/* NEU: Iteriere über das 'citationGroups' Array */}
       {citationGroups.map((group) => (
-        <section key={group.key} id={group.key}>
-          {/* HIER IST DIE GEWÜNSCHTE ÄNDERUNG:
-            Rendere die <h3> nur, wenn group.title "truthy" ist 
-            (d.h. nicht null, undefined oder ein leerer String "").
-          */}
-          {group.title && <h3>{group.title}</h3>}
+        <section key={group.key} id={group.key} className="break">
+          {group.title && (
+            <h3 className="print:mt-[var(--scale4)]">{group.title}</h3>
+          )}
 
-          <ul>
+          <ul className="break">
             {group.list.map((citation, index) => (
               <li
                 key={index}
-                className="text-left"
+                className="text-left no-break"
                 dangerouslySetInnerHTML={{ __html: citation }}
               />
             ))}
           </ul>
         </section>
       ))}
-    </>
+    </div>
   );
 }
 

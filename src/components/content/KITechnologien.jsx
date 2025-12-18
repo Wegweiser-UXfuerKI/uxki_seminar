@@ -2630,7 +2630,7 @@ const OutputInformation = {
     "Ein guter KI-Output beantwortet mehr als nur die Frage nach dem Ergebnis. Er erklärt das 'Warum', das 'Wie sicher' und das 'Was wäre wenn' für Nutzervertrauen.",
   content: [
     <ChapterHeader
-      text={"Output - Integrierte Informationsverarbeitung"}
+      text={"Output -\nIntegrierte Informationsverarbeitung"}
       number={7}
     />,
     <section>

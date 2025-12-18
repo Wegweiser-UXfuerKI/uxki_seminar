@@ -13,7 +13,7 @@ export const ChapterHeader = ({ text, number }) => {
   return (
     <section className="titleSubtopic relative mb-0">
       <h1
-        className="relative flex items-end lg:min-h-[240px] min-h-[160px]"
+        className="relative flex items-end lg:min-h-[240px] min-h-[160px] w-full hyphens-auto whitespace-normal print:whitespace-pre-line"
         data-number={String(number).padStart(2, "0")}>
         {text}
       </h1>

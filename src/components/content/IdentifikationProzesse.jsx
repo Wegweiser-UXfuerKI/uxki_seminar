@@ -15,6 +15,9 @@ import autoStufen_dark from "../../assets/images/prozesse/autoStufen_dark.png";
 import autoStufen_light from "../../assets/images/prozesse/autoStufen_light.png";
 import pats from "../../assets/images/prozesse/pats.png";
 
+import moduleSources from "./AutomatisierungspotenzialeErkennenSources.json";
+import Sources from "../Sources";
+
 const sectionsEinleitung = [
   { id: "2", title: "Einleitung - Grundlagen" },
   { id: "3", title: "Beispiel: Gemeinwohlorientierte Beratung" },
@@ -1287,6 +1290,26 @@ const KISinnvoll = {
   ],
 };
 
+const tmpSourceList = [
+  {
+    title: "",
+    data: moduleSources,
+  },
+];
+
+const Quellen = {
+  linkName: "quellen",
+  name: "Quellen",
+  description:
+    "Hier befinden sich die verwendeten Quellen in Reihenfolge des ersten Auftretens",
+  content: [
+    <ChapterHeader text={"Quellen"} number={9} />,
+    <section>
+      <Sources sourceData={tmpSourceList} />
+    </section>,
+  ],
+};
+
 const IdentifikationProzesse = {
   linkName: "automatisierungspotenziale-erkennen",
   name: "Automatisierungspotenziale erkennen",
@@ -1297,6 +1320,7 @@ const IdentifikationProzesse = {
     EignungSchaetzen,
     PATS,
     KISinnvoll,
+    Quellen,
   ],
 };
 

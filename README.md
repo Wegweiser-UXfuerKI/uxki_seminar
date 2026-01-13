@@ -35,6 +35,6 @@ Quellen können als CSL JSON geladen werden. Dazu müssen die Dateien pro Kapite
 
 ## PDF-Export
 Die Inhalte des Projekts können als PDF Exportiert werden, entweder alle Kapitela aller Module oder alternativ einzelne spezifische Kapitel.
-Der Export findet mit dem Dark-Mode der Seite statt, innerhalb des Skripts kann der ```mode``` acuh auf "light" gesetzt werden, damit der Light-Mode für den Export genutzt wird.
+Der Export findet mit dem Dark-Mode der Seite statt, innerhalb des Skripts kann der ```mode``` auch auf "light" gesetzt werden, damit der Light-Mode für den Export genutzt wird.
 Alle Module können exportiert werden über: ```node .\scripts\exportPDF.js export```.
 Einzelne Kapitel können über ```node .\scripts\exportPDF.js /module-link/chapter-link``` exportiert werden.

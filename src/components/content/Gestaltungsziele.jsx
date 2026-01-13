@@ -90,10 +90,11 @@ const Vertrauenswürdigkeit = {
         Leistungsfähigkeit die Funktionsweise bestimmt, entscheidet unter
         anderem die Wahrnehmung der Vertrauenswürdigkeit darüber, ob Menschen
         ein System akzeptieren, verantwortungsvoll nutzen und langfristig
-        beibehalten. Es ist daher wichtig, dass Systeme auch Signale enthalten,
-        die Menschen zeigen, wie vertrauenswürdig sie generell oder in
-        bestimmten Entscheidungen sind. Vertrauenswürdigkeit wird deswegen auch
-        von vielen gesellschaftlichen Initiativen und{" "}
+        beibehalten. Es ist daher wichtig, dass Systeme über Mechanismen oder
+        Merkmale verfügen, die Menschen erkennen lassen, wie vertrauenswürdig
+        sie generell oder in bestimmten Entscheidungen sind.
+        Vertrauenswürdigkeit wird deswegen auch von vielen gesellschaftlichen
+        Initiativen und{" "}
         <LinkHandler to={"/eu-ai-act/high-level-expert-group"}>
           Expertenkommissionen
         </LinkHandler>{" "}
@@ -138,9 +139,9 @@ const Vertrauenswürdigkeit = {
         auch Menschen die Möglichkeit geben soll, das System einzuschätzen.
       </p>
       <p>
-        Vorschlag als Überleitung: Aufgrund der Komplexität ist eine Definition
-        des Begriffs nicht immer einfach. Im nächsten Abschnitt widmen wir uns
-        deshalb der Frage,{" "}
+        Aufgrund der Komplexität des Begriffs Vertrauenswürdigkeit ist eine
+        Definition nicht einfach. Im nächsten Abschnitt widmen wir uns deshalb
+        der Frage,{" "}
         <b>warum es schwierig ist, Vertrauenswürdigkeit klar zu definieren</b>,
         und nähern uns dadurch einer Definition an.
       </p>
@@ -244,7 +245,8 @@ const Vertrauenswürdigkeit = {
           <ul>
             <li>
               menschlich wirkendes, empathisches Design - aber Achtung, es
-              sollte kein <i>uncanny valley</i> entstehen
+              sollte kein <i>uncanny valley</i> (fast menschlich wirkt schnell
+              unheimlich) entstehen
             </li>
             <li>freundliche, respektvolle Sprache und soziale Signale</li>
             <li>
@@ -301,7 +303,8 @@ const Vertrauenswürdigkeit = {
       </h3>
       <p>
         Ein entscheidender Punkt: Nur weil Menschen einem System vertrauen, ist
-        es noch lange nicht vertrauenswürdig. Und umgekehrt.
+        es noch lange nicht vertrauenswürdig. Und umgekehrt vertrauen Menschen
+        einem System nicht direkt, nur weil es Vertrauenswürdig ist.
       </p>
       <ol>
         <li>
@@ -335,7 +338,7 @@ const Vertrauenswürdigkeit = {
       </p>
     </section>,
     <section>
-      <h2>4. Dimensionen vertrauenswürdiger KI-System</h2>
+      <h2>4. Dimensionen vertrauenswürdiger KI-Systeme</h2>
       <p>
         Für ein System, das als vertrauenswürdig gelten soll, werden in der
         Regel folgende Eigenschaften gefordert:
@@ -571,7 +574,7 @@ const Transparenz = {
       <p className="no-print">
         Im folgenden Video wird Transparenz von KI-Systemen anhand eines
         Beispiels erklärt und darauf eingegangen wie man Transparenz erreichen
-        kann, sowie dess Aspekte im Bezug zur UX.
+        kann, sowie dessen Aspekte im Bezug zur UX.
       </p>
       <VideoContainer
         link="https://www.youtube-nocookie.com/embed/yRCWVsM9SAY?rel=0&modestbranding=1"
@@ -581,7 +584,7 @@ const Transparenz = {
         <p style={{ marginBottom: "8px" }}>
           Im folgenden Video wird Transparenz von KI-Systemen anhand eines
           Beispiels erklärt und darauf eingegangen wie man Transparenz erreichen
-          kann, sowie dess Aspekte im Bezug zur UX.
+          kann, sowie dessen Aspekte im Bezug zur UX.
         </p>
         <a href="https://youtu.be/yRCWVsM9SAY">
           <img
@@ -828,7 +831,7 @@ const Transparenz = {
         </li>
         <li>
           <b>Zweck</b>: Hilft Nutzer:innen und Prüfern, konkrete Ergebnisse zu
-          verstehen, zu hinterfragen und ggf. zu korrigieren.
+          verstehen, zu hinterfragen und ggf. zu korrigieren
         </li>
       </ul>
       <p className="specialText">
@@ -847,7 +850,7 @@ const Transparenz = {
         </li>
         <li>
           <b>Zweck</b>: Hilft Nutzer:innen und Prüfern, konkrete Ergebnisse zu
-          verstehen, zu hinterfragen und ggf. zu korrigieren.
+          verstehen, zu hinterfragen und ggf. zu korrigieren
         </li>
       </ul>
       <p className="specialText">
@@ -868,7 +871,7 @@ const Transparenz = {
         </li>
         <li>
           <b>Zweck</b>: Ermöglicht es Stakeholdern, die Verantwortungsstruktur
-          zu verstehen und im Problemfall geeignete Ansprechpersonen zu finden.
+          zu verstehen und im Problemfall geeignete Ansprechpersonen zu finden
         </li>
       </ul>
       <p className="specialText">
@@ -1011,7 +1014,7 @@ const Erklärbarkeit = {
       <p className="page-break">Diese Erklärbarkeit ist zentral für:</p>
       <ul>
         <li>
-          den <b>Aufbau von Vertrauen</b> in automatisierten Systeme,
+          den <b>Aufbau von Vertrauen</b> in automatisierten Systemen,
         </li>
         <li>
           die <b>Verantwortungszuschreibung</b> bei fehlerhaften Entscheidungen,
@@ -1391,7 +1394,7 @@ const Erklärbarkeit = {
         <div title="Problematisch">
           <ul>
             <li>
-              <b>Falsche oder ungenaue Erklärungen</b> können zu fehlerhaften
+              <b>Falsche oder ungenaue Erklärungen</b> können zu fehlerhaftem
               Verhalten führen
             </li>
             <li>
@@ -1527,8 +1530,9 @@ const Erklärbarkeit = {
         initiallyOpen={false}>
         <p>
           In einem Experiment zu Altersschätzungen zeigte sich: Teilnehmende
-          vertrauten einem System mehr, wenn es eine Erklärung lieferte - selbst
-          wenn die Entscheidung objektiv falsch war. Das bedeutet:{" "}
+          vertrauten einem System mehr, wenn es eine plausbile Erklärung (egal
+          ob richtig oder falsch) lieferte - selbst wenn die Entscheidung
+          objektiv falsch war. Das bedeutet:{" "}
           <b>
             Eine gut präsentierte, aber falsche Erklärung kann gefährlicher sein
             als keine Erklärung
@@ -1540,8 +1544,9 @@ const Erklärbarkeit = {
         <h4>Beispiel aus der Forschung (Kühl et al., 2024)</h4>
         <p>
           In einem Experiment zu Altersschätzungen zeigte sich: Teilnehmende
-          vertrauten einem System mehr, wenn es eine Erklärung lieferte - selbst
-          wenn die Entscheidung objektiv falsch war. Das bedeutet:{" "}
+          vertrauten einem System mehr, wenn es eine plausbile Erklärung (egal
+          ob richtig oder falsch) lieferte - selbst wenn die Entscheidung
+          objektiv falsch war. Das bedeutet:{" "}
           <b>
             Eine gut präsentierte, aber falsche Erklärung kann gefährlicher sein
             als keine Erklärung
@@ -2239,7 +2244,8 @@ const sectionsMentaleKomplement = [
 const MentaleModellkomplementarität = {
   linkName: "mentale-modelle",
   name: "Mentale Modelle",
-  description: "Wie ergänzen sich Mensch und Maschine kognitiv?",
+  description:
+    "Wie denken Menschen über Systeme - und warum ist das entscheidend?",
   content: [
     <ChapterHeader text={"Mentale Modelle"} number={6} />,
     <section>
@@ -2566,8 +2572,8 @@ const Einleitung = {
           wie gut Menschen die <b>Funktion und Grenzen</b> der KI verstehen,
         </li>
         <li>
-          ob sie der KI <b>angemessen vertrauen</b> (nicht blind oder
-          skeptisch),
+          ob sie der KI <b>angemessen vertrauen</b> (kein blindes oder
+          skeptisches nutzen),
         </li>
         <li>
           ob sie im <b>kritischen Moment handlungsfähig</b> bleiben,

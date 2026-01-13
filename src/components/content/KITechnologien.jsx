@@ -1354,7 +1354,7 @@ const VerarbeitungTechnik = {
       <List
         items={[
           "<b>Gelabelte und ausreichende Datenmenge</b>: Damit ein Modell erfolgreich überwacht lernen kann, müssen einige Voraussetzungen erfüllt sein. Zunächst sind <b>gelabelte Daten</b> erforderlich, denn ohne bekannte Ergebnisse kann das System nicht lernen. Außerdem ist eine <b>ausreichende Datenmenge</b> wichtig, um zu verhindern, dass das Modell unteranpasst und keine sinnvollen Muster erkennt (Underfitting).",
-          "<b>Qualität und Vielfalt der Daten</b>: Neben der Menge spielen auch die <b>Datenqualität und Vielfalt</b> eine entscheidende Rolle. Ein vielfältiger Datensatz hilft, dass das Modell nicht nur die Trainingsdaten auswendig lernt, sondern die zugrunde liegenden Zusammenhänge erkennt und auf neue Daten übertragen werden kann. So wird Overfitting vermieden. Dabei ist zu beachten, dass natürlich nicht “irgendwelche” Daten genutzt werden sollten. Es geht vielmehr darum, einen möglichst diversen Datensatz zu dem spezifischen Problem zu haben, das das System lösen soll.",
+          "<b>Qualität und Vielfalt der Daten</b>: Neben der Menge spielen auch die <b>Datenqualität und Vielfalt</b> eine entscheidende Rolle. Ein vielfältiger Datensatz hilft, dass das Modell nicht nur die Trainingsdaten auswendig lernt, sondern die zugrunde liegenden Zusammenhänge erkennt und auf neue Daten übertragen kann. So wird Overfitting vermieden. Dabei ist zu beachten, dass natürlich nicht “irgendwelche” Daten genutzt werden sollten. Es geht vielmehr darum, einen möglichst diversen Datensatz zu dem spezifischen Problem zu haben, das das System lösen soll.",
           "Schließlich ist eine <b>klare Zieldefinition</b> notwendig: Soll das Modell Eingaben klassifizieren, also Kategorien zuordnen, oder numerische Werte vorhersagen, also eine Regression durchführen? Eine präzise Zielsetzung bestimmt den Aufbau des Modells und die Auswahl der geeigneten Daten.",
           "<b>Einsatz von Testdaten</b>: Um zu überprüfen, wie gut ein Modell auf neue Daten reagiert, werden <b>Testdaten</b> eingesetzt. Diese Daten wurden beim Training nicht verwendet und ermöglichen eine realistische Einschätzung der Leistungsfähigkeit. Zur Bewertung des Modells werden verschiedene <b>Kennzahlen</b> herangezogen, wie z.B. Genauigkeit oder Fehlermaße.",
         ]}
@@ -1641,7 +1641,7 @@ const VerarbeitungInformation = {
   linkName: "verarbeitung-gestaltung",
   name: "Verarbeitung - Gestaltung",
   description:
-    "Wie kann die Verarbeitung von KI-Systemen gestaltet werden damit einzuordnen ist, ob es so arbeitet wie gewünscht?",
+    "Wie kann die Verarbeitung von KI-Systemen gestaltet werden, damit einzuordnen ist, ob es so arbeitet wie gewünscht?",
   content: [
     <ChapterHeader text={"Verarbeitung - Gestaltung"} number={5} />,
     <section>
@@ -2815,8 +2815,8 @@ const OutputInformation = {
       <p>
         Typische Anwendung im Interface:
         <br />
-        Interaktive &bdquo;Was-wäre-wenn&ldquo;-Slider: Nutzer:innen kann Werte
-        verändern und sieht direkt, wie sich das Ergebnis ändert.
+        Interaktive &bdquo;Was-wäre-wenn&ldquo;-Slider: Nutzer:innen können
+        Werte verändern und sieht direkt, wie sich das Ergebnis ändert.
       </p>
       <h4>Beispiel mit Diabetes-Diagnose</h4>
       <p>Die KI gibt zusätzlich eine counterfaktische Empfehlung:</p>
@@ -3036,7 +3036,7 @@ const LLM = {
         <li>Welche Bedeutungen und Zusammenhänge zwischen Wörtern bestehen</li>
       </ul>
       <p>
-        Sobal das Modell trainiert ist, kann es <b>neue Texte generieren</b>,
+        Sobald das Modell trainiert ist, kann es <b>neue Texte generieren</b>,
         Wort für Wort - oder genauer gesagt, <b>Token für Token</b>. Aber was
         genau ist ein <b>Token</b>?
       </p>
@@ -3269,7 +3269,7 @@ const LLM = {
         <li>Multimodal (Text, Bild, Audio) &rarr; Gemini, GPT-4 multimodal</li>
       </ul>
       <p>
-        <b>Beispiel</b>: Für ein Projekt, das Bildbeschriebungen generieren soll
+        <b>Beispiel</b>: Für ein Projekt, das Bildbeschreibungen generieren soll
         &rarr; GPT-4 multimodal oder Gemini.
       </p>
       <h4>4. Ziele / Schwerpunkt: Was soll das Modell erreichen?</h4>
@@ -3317,7 +3317,7 @@ const LLM = {
         <b>Kurz gesagt</b>: LLMs sind beeindruckende Sprachwerkzeuge, aber{" "}
         <b>keine denkenden Wesen</b>. Sie kombinieren{" "}
         <b>mathematische Mustererkennung</b> mit menschlicher Anleitung, um
-        Texte zu erzeugen, die sinnvoll nützlich und kreativ wirken.
+        Texte zu erzeugen, die sinnvoll, nützlich und kreativ wirken.
       </p>
     </section>,
   ],

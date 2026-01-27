@@ -9,6 +9,7 @@ import "./assets/css/DesignTokens.css";
 import "./assets/css/App.css";
 import "./assets/css/print.css";
 import DevTestPage from "./components/5_pages/DevTestPage";
+import ExportTitle from "./components/5_pages/ExportTitle";
 
 //import formbricks from "@formbricks/js";
 
@@ -61,6 +62,7 @@ function App() {
               />
               <Route path="*" element={<Navigate to="/" replace />} />
               <Route path="dev/test" element={<DevTestPage />} />
+              <Route path="title/:text?/:number?" element={<ExportTitle />} />
             </Routes>
             <ToTopButton />
           </main>

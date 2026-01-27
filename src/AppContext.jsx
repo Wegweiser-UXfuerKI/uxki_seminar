@@ -66,6 +66,7 @@ const AppProvider = ({ children }) => {
 
     // custom dev page
     if (moduleLink === "test") return;
+    if (moduleLink === "title") return;
 
     const isRootPath = pathSegments.length === 0;
     if (isRootPath) {

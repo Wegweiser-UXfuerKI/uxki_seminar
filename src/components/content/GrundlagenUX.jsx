@@ -644,16 +644,18 @@ const Nutzungskontext = {
           </p>
         </Accordion>
       </div>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print page-break">
-        <h4>2. Digital ausgerichtete NGO mit Online-Beratung</h4>
-        <p>
-          In einer digital ausgerichteten NGO, die Online-Beratung anbietet,
-          arbeiten die Teams in ruhigen Büros mit ergonomischen Arbeitsplätzen.
-          Dort stehen leistungsfähige Laptops oder Desktop-PCs mit großen
-          Bildschirmen, Headsets und stabiler Internetverbindung zur Verfügung.
-          Die Beratungen folgen einem festen Zeitplan und ermöglichen
-          konzentriertes Arbeiten.
-        </p>
+      <div className="pt-3 page-break only-print">
+        <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
+          <h4>2. Digital ausgerichtete NGO mit Online-Beratung</h4>
+          <p>
+            In einer digital ausgerichteten NGO, die Online-Beratung anbietet,
+            arbeiten die Teams in ruhigen Büros mit ergonomischen
+            Arbeitsplätzen. Dort stehen leistungsfähige Laptops oder Desktop-PCs
+            mit großen Bildschirmen, Headsets und stabiler Internetverbindung
+            zur Verfügung. Die Beratungen folgen einem festen Zeitplan und
+            ermöglichen konzentriertes Arbeiten.
+          </p>
+        </div>
       </div>
       <h3>5. Hilfsmittel</h3>
       <p>Die technischen Bedingungen umfassen folgende Punkte:</p>
@@ -1555,7 +1557,7 @@ const Evaluation = {
       </p>
       <div className="flex flex-col gap-[var(--scale4)] justify-center">
         <div className="flex gap-[var(--scale2)]">
-          <CheckIcon className="w-[73px] h-[73px]" />
+          <CheckIcon className="w-[73px] h-[73px] min-w-[73px] shrink-0" />
           <p>
             <b>Effektivität</b>: Können Nutzer:innen ihre Aufgaben erfolgreich
             erledigen? <br />
@@ -1563,7 +1565,7 @@ const Evaluation = {
           </p>
         </div>
         <div className="flex gap-[var(--scale2)]">
-          <ClockIcon className="w-[73px] h-[73px]" />
+          <ClockIcon className="w-[73px] h-[73px] min-w-[73px] shrink-0" />
           <p>
             <b>Effizienz</b>: Wie schnell und mühelos gelingt die Nutzung?{" "}
             <br />
@@ -1572,14 +1574,14 @@ const Evaluation = {
           </p>
         </div>
         <div className="flex gap-[var(--scale2)]">
-          <SmileIcon className="w-[73px] h-[73px]" />
+          <SmileIcon className="w-[73px] h-[73px] min-w-[73px] shrink-0" />
           <p>
             <b>Zufriedenheit</b>: Wie empfinden Nutzer:innen die Nutzung? <br />
             Beispiel: Keine negativen Rückmeldungen, positive Bewertungen.
           </p>
         </div>
         <div className="flex gap-[var(--scale2)]">
-          <LoveIcon className="w-[73px] h-[73px]" />
+          <LoveIcon className="w-[73px] h-[73px] min-w-[73px] shrink-0" />
           <p>
             <b>Freude an der Nutzung</b>: Macht die Anwendung Spaß oder fühlt
             sie sich frustrierend an? <br />
@@ -1723,14 +1725,7 @@ const Evaluation = {
           Einschätzung. Allerdings ist die Bewertung subjektiv und hängt stark
           von der Erfahrung der Expert:innen ab. Zudem werden oft nicht alle
           Probleme erkannt, die bei echten Nutzer:innen auftreten würden. Mehr
-          zur Durchführung{" "}
-          <a
-            href="https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="no-print">
-            hier
-          </a>
+          zur Durchführung:{" "}
           <a
             href="https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/"
             target="_blank"
@@ -1738,71 +1733,72 @@ const Evaluation = {
             className="only-print">
             https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/
           </a>
-          .
         </p>
       </div>
-      <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover only-print page-break">
-        <h4>Fragebögen</h4>
-        <p>
-          Standardisierte Fragebögen sind eine einfache und effiziente Methode,
-          um die subjektive Einschätzung der Usability durch Nutzer:innen zu
-          erfassen. Zu bekannten zählen:
-        </p>
-        <ul>
-          <li>
-            <p>
-              die{" "}
-              <a
-                href="https://germanupa.de/wissen/fragebogenmatrix/sus/"
-                target="_blank"
-                rel="noopener noreferrer">
-                System Usability Scale
-              </a>{" "}
-              (
-              <a
-                href="http://interaction-design-group.de/toolbox/wp-content/uploads/2016/05/SUS.pdf"
-                target="_blank"
-                rel="noopener noreferrer">
-                Deutsche Variante
-              </a>
-              )
-            </p>
-          </li>
-          <li>
-            <p>
-              <a
-                href="https://site.unibo.it/hfrs/en/questionnaire-and-scales-2/quis"
-                target="_blank"
-                rel="noopener noreferrer">
-                Questionnaire for User Interface Satisfaction (QUIS)
-              </a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a
-                href="https://www.researchgate.net/publication/230786746_Measuring_Usability_with_the_USE_Questionnaire"
-                target="_blank"
-                rel="noopener noreferrer">
-                USE-Fragebogen (Usefulness, Satisfaction, and Ease of Use)
-              </a>
-            </p>
-          </li>
-        </ul>
-        <p>
-          Diese Fragebögen lassen sich schnell durchführen, liefern quantitative
-          Daten und können mit vielen Nutzer:innen gleichzeitig eingesetzt
-          werden. Sie eignen sich besonders gut, um erste
-          Usability-Einschätzungen zu gewinnen oder um mehrere Versionen eines
-          Systems zu vergleichen.
-        </p>
-        <p>
-          Allerdings erfassen sie meist nur oberflächliche Aspekte und sind
-          stark von der Ehrlichkeit und dem Verständnis der Teilnehmenden für
-          die gestellten Fragen abhängig. Daher sollten sie idealerweise mit
-          weiteren Methoden kombiniert werden, um ein umfassenderes Bild der
-          Usability zu erhalten.
-        </p>
+      <div className="pt-3 page-break only-print">
+        <div className="rounded-xl p-[var(--scale3)] mb-[var(--scale4)] h-full glassBox no-hover">
+          <h4>Fragebögen</h4>
+          <p>
+            Standardisierte Fragebögen sind eine einfache und effiziente
+            Methode, um die subjektive Einschätzung der Usability durch
+            Nutzer:innen zu erfassen. Zu bekannten zählen:
+          </p>
+          <ul>
+            <li>
+              <p>
+                die{" "}
+                <a
+                  href="https://germanupa.de/wissen/fragebogenmatrix/sus/"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  System Usability Scale
+                </a>{" "}
+                (
+                <a
+                  href="http://interaction-design-group.de/toolbox/wp-content/uploads/2016/05/SUS.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Deutsche Variante
+                </a>
+                )
+              </p>
+            </li>
+            <li>
+              <p>
+                <a
+                  href="https://site.unibo.it/hfrs/en/questionnaire-and-scales-2/quis"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Questionnaire for User Interface Satisfaction (QUIS)
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a
+                  href="https://www.researchgate.net/publication/230786746_Measuring_Usability_with_the_USE_Questionnaire"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  USE-Fragebogen (Usefulness, Satisfaction, and Ease of Use)
+                </a>
+              </p>
+            </li>
+          </ul>
+          <p>
+            Diese Fragebögen lassen sich schnell durchführen, liefern
+            quantitative Daten und können mit vielen Nutzer:innen gleichzeitig
+            eingesetzt werden. Sie eignen sich besonders gut, um erste
+            Usability-Einschätzungen zu gewinnen oder um mehrere Versionen eines
+            Systems zu vergleichen.
+          </p>
+          <p>
+            Allerdings erfassen sie meist nur oberflächliche Aspekte und sind
+            stark von der Ehrlichkeit und dem Verständnis der Teilnehmenden für
+            die gestellten Fragen abhängig. Daher sollten sie idealerweise mit
+            weiteren Methoden kombiniert werden, um ein umfassenderes Bild der
+            Usability zu erhalten.
+          </p>
+        </div>
       </div>
     </section>,
     <section>
@@ -2018,26 +2014,28 @@ const Einleitung = {
         }
         title={"Einleitungsvideo"}
       />
-      <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center only-print">
-        <p style={{ marginBottom: "8px" }}>
-          Im folgenden Video wird ein Überblick über die fünf wichtigen Begriffe
-          des Moduls gegeben und warum sie wichtig sind.
-        </p>
-        <a href="https://youtu.be/9cgmeenl72s">
-          <img
-            src={ux_intro}
-            alt="Video Thumbnail"
-            className="rounded-lg overflow-hidden"
-          />
-        </a>
-        <h4 className="w-full text-center mt-1">
-          <a
-            href="https://youtu.be/9cgmeenl72s"
-            target="_blank"
-            rel="noopener noreferrer">
-            https://youtu.be/9cgmeenl72s
+      <div className="pt-3 only-print">
+        <div className="rounded-xl p-[var(--scale2)] bg-[var(--box)] shadow flex flex-col gap-[var(--scale2)] justify-center">
+          <p style={{ marginBottom: "8px" }}>
+            Im folgenden Video wird ein Überblick über die fünf wichtigen
+            Begriffe des Moduls gegeben und warum sie wichtig sind.
+          </p>
+          <a href="https://youtu.be/9cgmeenl72s">
+            <img
+              src={ux_intro}
+              alt="Video Thumbnail"
+              className="rounded-lg overflow-hidden"
+            />
           </a>
-        </h4>
+          <h4 className="w-full text-center mt-1">
+            <a
+              href="https://youtu.be/9cgmeenl72s"
+              target="_blank"
+              rel="noopener noreferrer">
+              https://youtu.be/9cgmeenl72s
+            </a>
+          </h4>
+        </div>
       </div>
     </section>,
     <section id="aspekte">

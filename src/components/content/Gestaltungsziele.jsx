@@ -34,7 +34,7 @@ const Vertrauenswürdigkeit = {
   linkName: "vertrauenswuerdigkeit",
   name: "Vertrauenswürdigkeit",
   description:
-    "Wann empfinden Menschen eine KI als glaubwürdig und verlässlich?",
+    "Wann empfinden Menschen eine KI als glaubwürdig und verlässlich? Dieses Kapitel betrachtet Dimensionen wie Sicherheit und Erklärbarkeit und zeigt, wie UX-Design hilft, Nutzervertrauen richtig zu kalibrieren und Fehlentscheidungen zu vermeiden.",
   content: [
     <ChapterHeader text={"Vertrauenswürdigkeit"} number={2} />,
     <section>
@@ -557,7 +557,8 @@ const sectionsTransparenz = [
 const Transparenz = {
   linkName: "transparenz",
   name: "Transparenz",
-  description: "Wie viel Einsicht in Prozesse und Daten brauchen Nutzer:innen?",
+  description:
+    "Wie kommt eine KI zu ihrem Ergebnis? Dieses Kapitel zeigt, wie Sie technische Prozesse in verständliche Erklärungen übersetzen, damit Nutzer Entscheidungen der KI wirklich verstehen und bewerten können.",
   content: [
     <ChapterHeader text={"Transparenz in KI-Systemen"} number={3} />,
     <section>
@@ -956,7 +957,8 @@ const sectionsErklaerbarkeit = [
 const Erklärbarkeit = {
   linkName: "erklaerbarkeit",
   name: "Erklärbare KI (XAI)",
-  description: "Was macht eine gute Erklärung aus - und für wen?",
+  description:
+    "Was macht eine gute Erklärung aus - und für wen? Dieses Kapitel beleuchtet Chancen und Risiken von XAI und zeigt Methoden, um Nutzerkompetenz zu stärken, statt blindes Vertrauen in KI-Systeme zu erzeugen.",
   content: [
     <ChapterHeader text={"Erklärbare KI (XAI)"} number={4} />,
     <section>
@@ -1677,7 +1679,8 @@ const sectionsKontrollierbarkeit = [
 const Kontrollierbarkeit = {
   linkName: "kontrollierbarkeit",
   name: "Kontrollierbarkeit",
-  description: "Wie und wann können Menschen sinnvoll eingreifen?",
+  description:
+    "Wie verhindern wir blindes Vertrauen in KI? Dieses Kapitel zeigt, wie Sie Interfaces gestalten, die Herausforderung die es gibt und wie Sie Nutzern die nötige Kontrolle geben, um Fehler rechtzeitig zu korrigieren.",
   content: [
     <ChapterHeader text={"Kontrollierbarkeit"} number={5} />,
     <section>
@@ -2245,7 +2248,7 @@ const MentaleModellkomplementarität = {
   linkName: "mentale-modelle",
   name: "Mentale Modelle",
   description:
-    "Wie denken Menschen über Systeme - und warum ist das entscheidend?",
+    "Wie denken Menschen über Systeme - und warum ist das entscheidend? Mentale Modelle sind innere Repräsentationen, die unser Handeln steuern. Erfahren Sie, warum diese Modelle für eine sichere Vorhersage von Systemverhalten entscheidend sind.",
   content: [
     <ChapterHeader text={"Mentale Modelle"} number={6} />,
     <section>

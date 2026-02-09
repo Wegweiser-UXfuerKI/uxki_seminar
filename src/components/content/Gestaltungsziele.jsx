@@ -440,8 +440,7 @@ const Vertrauenswürdigkeit = {
       <h2>6. Messung von Vertrauen und Vertrauenswürdigkeit</h2>
       <p>
         Die Evaluation muss zwischen <b>subjektivem Vertrauen</b> und{" "}
-        <b>objektiver Vertrauenswürdigkeit</b> unterscheiden. Beide Größen
-        können auseinanderfallen und sollten separat erhoben werden.
+        <b>objektiver Vertrauenswürdigkeit</b> unterscheiden. Diese beiden Maße können auseinanderfallen und sollten separat erhoben werden.
       </p>
       <TabSwitchView>
         <div title="Messung von Vertrauen (subjektiv)">
@@ -700,7 +699,7 @@ const Transparenz = {
         </li>
 
         <li>
-          Nutzer:innen erhalten zwar Daten, aber nicht das, was für eine{" "}
+          Nutzer:innen erhalten zwar Informationen, aber nicht das, was für eine{" "}
           <b>vertrauenswürdige Bewertung</b> der Entscheidung wichtig wäre.
         </li>
       </ul>
@@ -1885,10 +1884,10 @@ const Kontrollierbarkeit = {
       </p>
     </section>,
     <section className="break">
-      <h2 className="font-black">
+      <h3 className="font-black">
         Human Oversight als spezielle Form der Kontrollierbarkeit
-      </h2>
-      <h3>1. Definition & Zielsetzung</h3>
+      </h3>
+      <h3>3. Definition & Zielsetzung Human Oversight</h3>
       <p>
         <b>Human Oversight</b> bezeichnet die systematisch gestaltete
         Möglichkeit für Menschen, den Betrieb und die Entscheidungen eines
@@ -1940,7 +1939,7 @@ const Kontrollierbarkeit = {
       </p>
     </section>,
     <section>
-      <h3>2. Design-Pattern für Human Oversight</h3>
+      <h3>4. Design-Pattern für Human Oversight</h3>
       <p>
         Human Oversight kann in der Praxis in unterschiedlichen Formen umgesetzt
         werden. Diese <i>Design-Patterns</i> unterscheiden sich vor allem darin,{" "}
@@ -2032,7 +2031,7 @@ const Kontrollierbarkeit = {
       />
     </section>,
     <section>
-      <h3>3. UX-Herausforderungen bei Human Oversight</h3>
+      <h3>5. UX-Herausforderungen bei Human Oversight</h3>
       <p>
         Human Oversight stellt nicht nur technische, sondern vor allem
         gestalterische Herausforderungen. Selbst wenn Eingriffsmöglichkeiten
@@ -2128,7 +2127,7 @@ const Kontrollierbarkeit = {
       </p>
     </section>,
     <section className="break">
-      <h3>4. Messung und Evaluation von Human Oversight</h3>
+      <h3>6. Messung und Evaluation von Human Oversight</h3>
       <p>
         Damit Human Oversight nicht nur als formale Anforderung existiert,
         sondern tatsächlich wirksam ist, muss er regelmäßig{" "}
@@ -2586,7 +2585,7 @@ const Einleitung = {
         </li>
       </ul>
       <p>
-        Sie sind damit zentrale Voraussetzungen für <b>Human-Centered AI</b> und
+        Diese Eigenschaften sind damit zentrale Voraussetzungen für <b>Human-Centered AI</b> und
         ein entscheidener Faktor für die{" "}
         <b>gesellschaftliche Akzeptanz und Sicherheit</b> von KI-Systemen.
       </p>

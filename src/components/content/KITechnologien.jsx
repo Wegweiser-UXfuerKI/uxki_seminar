@@ -451,7 +451,8 @@ const InputTechnik = {
         <CarouselContainer sideVisibility={10} autoPlay={false}>
           <div
             title="Falsche Abbildung der Realität"
-            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
+            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover"
+          >
             <h4>Falsche Abbildung der Realität</h4>
             <p>
               Hier sind die Daten schlicht{" "}
@@ -466,7 +467,8 @@ const InputTechnik = {
           </div>
           <div
             title="Abbildung einer ungleichen Realität"
-            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover">
+            className="rounded-xl p-[var(--scale2)] h-full bg-[var(--box)] shadow no-hover"
+          >
             <h4>Abbildung einer ungleichen Realität</h4>
             <p>
               In diesem Fall spiegeln die Daten die reale Welt korrekt wider -
@@ -677,7 +679,8 @@ const InputInformation = {
       </p>
       <Accordion
         title="Das Beispiel &bdquo;Wohnbrücke e. V.&ldquo;"
-        initiallyOpen>
+        initiallyOpen
+      >
         <p>
           Die Organisation <i>Wohnbrücke e. V.</i> unterstützt Menschen in Not
           bei der Wohnungssuche in einer Großstadt.
@@ -1116,10 +1119,10 @@ const VerarbeitungTechnik = {
       <Accordion title="Beispiel:" initiallyOpen={false}>
         <p>
           Stellen Sie sich vor, wir möchten ein System trainieren,
-          handschriftliche Buchstaben zu erkennen. Jede Buchstabendarstellung im
-          Datensatz ist bereits mit dem richtigen Buchstaben <b>labelt</b>, also
-          beschriftet. Das System lernt so, die Muster der Buchstaben zu
-          erkennen.
+          handschriftliche Buchstaben oder Zeichen zu erkennen. Jede
+          Zeichendarstellung im Datensatz ist bereits mit dem richtigen Zeichen{" "}
+          <b>labelt</b>, also beschriftet. Das System lernt so, die Muster der
+          Zeichen zu erkennen.
         </p>
         <p className="p-10 pt-0">
           <ThemeImage
@@ -1222,8 +1225,9 @@ const VerarbeitungTechnik = {
           </p>
           <ul>
             <li>
-              Beispiel Bilderkennung: Ein Bild wird automatisch als
-              &bdquo;Äpfel&ldquo; oder &bdquo;Bälle&ldquo; erkannt.
+              Beispiel Bilderkennung: Ein Bild wird automatisch die beiden
+              runden Objekte &bdquo;Äpfel&ldquo; oder &bdquo;Bälle&ldquo;
+              erkannt.
             </li>
             <li>
               Beispiel Bewertung: Ein System kann Tests oder Aufgaben daraufhin
@@ -2638,13 +2642,17 @@ const OutputTechnik = {
 
 const sectionsOutputGestaltung = [
   {
-    id: "2",
-    title:
-      "Was ist bei Interaktion mit KI-Systemen im Bezug auf den Output relevant?",
+    id: "3",
+    title: "Local Feature Relevance (Lokale Merkmalsbedeutung)",
   },
-  { id: "3", title: "UX-Beispiel: Kreditbewilligung" },
+  { id: "4", title: "Confidence Estimation (Konfidenzschätzung)" },
+  {
+    id: "5",
+    title: "Counterfactual Explanation (Was-wäre-wenn-Erklärung)",
+  },
+  { id: "6", title: "UX-Beispiel: Kreditbewilligung" },
 
-  { id: "5", title: "Fazit" },
+  { id: "7", title: "Fazit" },
 ];
 
 const lfrTable = [
@@ -2700,6 +2708,8 @@ const OutputInformation = {
           &rarr; <i>Counterfactual Explanation</i>
         </li>
       </ul>
+    </section>,
+    <section>
       <h3>1. Local Feature Relevance (Lokale Merkmalsbedeutung)</h3>
       <p>
         Hier wird{" "}
@@ -2745,6 +2755,8 @@ const OutputInformation = {
         <b>konkrete Risiko für diesen Patienten</b> als hoch einschätzt und
         erklärt, warum.
       </p>
+    </section>,
+    <section>
       <h3 className="page-break">
         2. Confidence Estimation (Konfidenzschätzung)
       </h3>
@@ -2789,6 +2801,8 @@ const OutputInformation = {
           Eventuell müssten weitere Tests gemacht werden.
         </li>
       </ul>
+    </section>,
+    <section>
       <h3 className="page-break">
         3. Counterfactual Explanation (Was-wäre-wenn-Erklärung)
       </h3>
@@ -2995,7 +3009,8 @@ const LLM = {
           <a
             href="https://youtu.be/KZ5LL1xhAg4"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             https://youtu.be/KZ5LL1xhAg4
           </a>
         </h4>

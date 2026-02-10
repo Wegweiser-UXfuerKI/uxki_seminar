@@ -28,7 +28,8 @@ const Slide = ({ number, color }) => (
       fontSize: "3rem",
       color: "white",
       borderRadius: "8px",
-    }}>
+    }}
+  >
     Slide {number}
   </div>
 );
@@ -49,8 +50,10 @@ const DevTestPage = () => {
         <CarouselContainer>
           <div
             title="Modellbasierte (intrinsische) Erklärbarkeit"
-            className="rounded-xl p-[var(--scale2)] h-full shadow no-hover">
+            className="rounded-xl p-[var(--scale2)] h-full shadow no-hover"
+          >
             <p>Das Modell selbst ist bereits transparent und verständlich.</p>
+            <p>Test1234</p>
             <ul>
               <li>
                 <b>Entscheidungsbäume</b> - Entscheidungen folgen klaren Regeln
@@ -67,7 +70,8 @@ const DevTestPage = () => {
           </div>
           <div
             title="Post-hoc-Erklärungen"
-            className="rounded-xl p-[var(--scale2)] h-full shadow no-hover">
+            className="rounded-xl p-[var(--scale2)] h-full shadow no-hover"
+          >
             <p>
               Hier wird das Verhalten eines komplexen, intransparenten Modells
               nachträglich analysiert. Häufige Ansätze sind:

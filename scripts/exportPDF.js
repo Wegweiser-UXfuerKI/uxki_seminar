@@ -14,6 +14,7 @@ if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
 
 // ----- Settigns ----- //
 const BASE_URL = "http://localhost:5173";
+const CONCURRENCY_LIMIT = 4;
 
 // ----- Modules ----- //
 const modules = [
@@ -306,7 +307,7 @@ async function processMode(browser, mode, task, specificArg = null) {
   else {
     const modulesToProcess =
       task === "all" || task === "course"
-        ? modules
+        ? modules // Speichert die Ergebnisse: { "http://...": Buffer }
         : [modules.find((m) => m.linkName === specificArg)].filter(Boolean);
 
     modulesToProcess.forEach((mod) => {

@@ -355,7 +355,11 @@ async function processMode(browser, mode, task, specificArg = null) {
       for (const chapter of module.chapter) {
         const url = `${BASE_URL}/${module.linkName}/${chapter.linkName}`;
         if (urlBufferMap[url]) {
-          await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate);
+          await addContentToDocument(
+            finalDoc,
+            urlBufferMap[url],
+            bgPageTemplate,
+          );
         }
       }
     }

@@ -391,7 +391,7 @@ async function processMode(browser, mode, task, specificArg = null) {
           const url = `${BASE_URL}/${module.linkName}/${chap.linkName}`;
           if (urlBufferMap[url]) {
             await addContentToDocument(
-              modDoc,
+              moduleDoc,
               urlBufferMap[url],
               bgPageTemplate,
             );

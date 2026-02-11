@@ -354,8 +354,9 @@ async function processMode(browser, mode, task, specificArg = null) {
 
       for (const chapter of module.chapter) {
         const url = `${BASE_URL}/${module.linkName}/${chapter.linkName}`;
-        const pdfBuffer = await renderPage(page, url, createPdfOptions());
-        await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate);
+        if (urlBufferMap[url]) {
+          await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate);
+        }
       }
     }
     const pdfBytes = await finalDoc.save();
@@ -382,10 +383,15 @@ async function processMode(browser, mode, task, specificArg = null) {
       );
 
       if (module.chapter) {
-        for (const chapter of module.chapter) {
-          const url = `${BASE_URL}/${module.linkName}/${chapter.linkName}`;
-          const pdfBuffer = await renderPage(page, url, createPdfOptions());
-          await addContentToDocument(moduleDoc, pdfBuffer, bgPageTemplate);
+        for (const chap of module.chapter) {
+          const url = `${BASE_URL}/${module.linkName}/${chap.linkName}`;
+          if (urlBufferMap[url]) {
+            await addContentToDocument(
+              modDoc,
+              urlBufferMap[url],
+              bgPageTemplate,
+            );
+          }
         }
       }
       const pdfBytes = await moduleDoc.save();
@@ -398,14 +404,18 @@ async function processMode(browser, mode, task, specificArg = null) {
 
   // Task single Chapter
   if (task === "page" && specificArg) {
-    console.log(`Erstelle Chapter-PDF: ${specificArg} (${mode})`);
-    const finalDoc = await PDFDocument.create();
-    const url = `${BASE_URL}${specificArg.startsWith("/") ? specificArg : "/" + specificArg}`;
-    const pdfBuffer = await renderPage(page, url, createPdfOptions());
-    await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate);
-
-    const filename = specificArg.replace(/\//g, "_") + ".pdf";
-    fs.writeFileSync(path.join(modeDir, filename), pdfBytes);
+    const pageDoc = await PDFDocument.create();
+    const item = tasks[0];
+    if (urlBufferMap[item.url]) {
+      await addContentToDocument(
+        pageDoc,
+        urlBufferMap[item.url],
+        bgPageTemplate,
+      );
+      const filename = specificArg.replace(/\//g, "_") + ".pdf";
+      fs.writeFileSync(path.join(modeDir, filename), await pageDoc.save());
+      console.log(`✔ Gespeichert: ${filename}`);
+    }
   }
 
   await page.close();

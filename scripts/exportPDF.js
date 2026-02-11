@@ -184,7 +184,7 @@ async function addContentToDocument(finalDoc, contentBuffer, bgPageTemplate) {
   }
 }
 
-async function appendPdfFromFile(finalDoc, currentMode, fileNameWithoutExt) {
+async function appendPdfFromFile(finalDoc, fileNameWithoutExt, currentMode) {
   const filePath = path.join(
     pdfBaseDir,
     currentMode,

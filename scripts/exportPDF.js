@@ -270,11 +270,13 @@ async function processMode(browser, mode, task, specificArg = null) {
     console.log(`Erstelle: Gesamter_Kurs.pdf (${mode})`);
     const finalDoc = await PDFDocument.create();
 
-    await appendPdfFromFile(finalDoc, `Titel_Modul_${i + 1}`, mode);
+    await appendPdfFromFile(finalDoc, "Titel_Gesamt", mode);
 
     for (let i = 0; i < modules.length; i++) {
       const module = modules[i];
       if (!module.chapter) continue;
+
+      await appendPdfFromFile(finalDoc, `Titel_Modul_${i + 1}`, mode);
 
       for (const chapter of module.chapter) {
         const url = `${BASE_URL}/${module.linkName}/${chapter.linkName}`;

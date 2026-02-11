@@ -93,6 +93,24 @@ const modules = [
   },
 ];
 
+async function asyncPool(poolLimit, array, iteratorFn) {
+  const ret = [];
+  const executing = [];
+  for (const item of array) {
+    const p = Promise.resolve().then(() => iteratorFn(item, array));
+    ret.push(p);
+
+    if (poolLimit <= array.length) {
+      const e = p.then(() => executing.splice(executing.indexOf(e), 1));
+      executing.push(e);
+      if (executing.length >= poolLimit) {
+        await Promise.race(executing);
+      }
+    }
+  }
+  return Promise.all(ret);
+}
+
 // ----- Background Setup ----- //
 const getBackgroundHTML = (mode) => {
   let designTokensCSS = "";
@@ -219,42 +237,14 @@ async function appendPdfFromFile(finalDoc, fileNameWithoutExt, currentMode) {
   }
 }
 
-async function renderPage(page, url, createPdfOptions) {
-  console.log("Rendering:", url);
-  await page.goto(url, { waitUntil: "networkidle0" });
-  await page.setViewport({ width: 1200, height: 1600 });
-  await page.evaluate(() => {
-    window.dispatchEvent(new Event("beforeprint"));
-  });
-  return await page.pdf(createPdfOptions);
-}
-
-async function processMode(browser, mode, task, specificArg = null) {
-  console.log(`Starte modus: ${mode.toUpperCase()}`);
-
-  const modeDir = path.join(pdfBaseDir, mode);
-  const titlePagesDir = path.join(modeDir, "titlepages");
-  if (!fs.existsSync(modeDir)) fs.mkdirSync(modeDir);
-  if (!fs.existsSync(titlePagesDir)) fs.mkdirSync(titlePagesDir);
-
+async function renderPageToBuffer(browser, url, mode) {
   const page = await browser.newPage();
 
-  // Background for mode
-  console.log(`Generate BG for ${mode}`);
-  await page.setContent(getBackgroundHTML(mode));
-  const backgroundPdfBytes = await page.pdf({
-    format: "A4",
-    printBackground: true,
-    margin: { top: 0, bottom: 0, left: 0, right: 0 },
-  });
-
-  const backgroundDoc = await PDFDocument.load(backgroundPdfBytes);
-  const [bgPageTemplate] = await backgroundDoc.copyPages(backgroundDoc, [0]);
-
-  // browser context for mode
+  await page.setViewport({ width: 1200, height: 1600 });
   await page.emulateMediaFeatures([
     { name: "prefers-color-scheme", value: mode },
   ]);
+
   await page.evaluateOnNewDocument((m) => {
     document.addEventListener("DOMContentLoaded", () => {
       document.documentElement.classList.remove("light", "dark");
@@ -262,7 +252,90 @@ async function processMode(browser, mode, task, specificArg = null) {
     });
   }, mode);
 
-  const createPdfOptions = () => ({ format: "A4", printBackground: true });
+  console.log(`  Rendering (Start): ${url}`);
+  try {
+    await page.goto(url, { waitUntil: "networkidle0", timeout: 60000 });
+
+    await page.evaluate(() => {
+      window.dispatchEvent(new Event("beforeprint"));
+    });
+
+    const buffer = await page.pdf({ format: "A4", printBackground: true });
+    console.log(`  Rendering (Done):  ${url}`);
+
+    await page.close();
+    return buffer;
+  } catch (error) {
+    console.error(`  ERROR bei ${url}:`, error.message);
+    await page.close();
+    return null;
+  }
+}
+
+async function processMode(browser, mode, task, specificArg = null) {
+  console.log(`Starte modus: ${mode.toUpperCase()}`);
+
+  const modeDir = path.join(pdfBaseDir, mode);
+  if (!fs.existsSync(modeDir)) fs.mkdirSync(modeDir);
+
+  // Background for mode
+  console.log(`Generate BG for ${mode}`);
+  const bgPage = await browser.newPage();
+  await page.setContent(getBackgroundHTML(mode));
+  const backgroundPdfBytes = await page.pdf({
+    format: "A4",
+    printBackground: true,
+    margin: { top: 0, bottom: 0, left: 0, right: 0 },
+  });
+  await bgPage.close();
+
+  const backgroundDoc = await PDFDocument.load(backgroundPdfBytes);
+  const [bgPageTemplate] = await backgroundDoc.copyPages(backgroundDoc, [0]);
+
+  let tasks = [];
+
+  // Einzelne Seite
+  if (task === "page" && specificArg) {
+    tasks.push({
+      url: `${BASE_URL}${specificArg.startsWith("/") ? specificArg : "/" + specificArg}`,
+      type: "page",
+      id: specificArg,
+    });
+  }
+  // Alles oder Module
+  else {
+    const modulesToProcess =
+      task === "all" || task === "course"
+        ? modules
+        : [modules.find((m) => m.linkName === specificArg)].filter(Boolean);
+
+    modulesToProcess.forEach((mod) => {
+      if (mod.chapter) {
+        mod.chapter.forEach((chap) => {
+          tasks.push({
+            url: `${BASE_URL}/${mod.linkName}/${chap.linkName}`,
+            type: "chapter",
+            moduleId: mod.linkName,
+            chapterId: chap.linkName,
+          });
+        });
+      }
+    });
+  }
+
+  // 3. PARALLEL RENDERING
+  console.log(
+    `Rendering von ${tasks.length} Seiten (Parallel: ${CONCURRENCY_LIMIT})`,
+  );
+
+  const urlBufferMap = {};
+
+  await asyncPool(CONCURRENCY_LIMIT, tasks, async (item) => {
+    const buffer = await renderPageToBuffer(browser, item.url, mode);
+    if (buffer) {
+      urlBufferMap[item.url] = buffer;
+    }
+  });
 
   // -- TASKS -- //
   // gesamter Kurs

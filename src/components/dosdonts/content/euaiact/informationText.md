@@ -1,4 +1,4 @@
-# Der EUAI-Act
+# Der EU AI Act
 
 ## Risikostufen
 

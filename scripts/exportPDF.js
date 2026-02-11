@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer");
-const { PDFDocument } = require("pdf-lib")
+const { PDFDocument } = require("pdf-lib");
 
 // ----- Setup ----- //
 const args = process.argv.slice(2);
 
-const cssPath = path.join(__dirname, "../src/assets/css/DesignTokens.css")
+const cssPath = path.join(__dirname, "../src/assets/css/DesignTokens.css");
 const tmpDir = path.join(__dirname, "../tmp");
 const exportDir = path.join(__dirname, "../export");
 
@@ -30,7 +30,7 @@ const modules = [
       { linkName: "mensch-computer-interaktion" },
       { linkName: "evaluation" },
       { linkName: "fazit" },
-      { linkName: "quellen"}
+      { linkName: "quellen" },
     ],
   },
   {
@@ -43,26 +43,26 @@ const modules = [
       { linkName: "wahrgenommene-vertrauenswuerdigkeit" },
       { linkName: "wahrgenommene-diagnostizitaet" },
       { linkName: "zusammenfassung-ausblick" },
-      { linkName: "quellen"}
+      { linkName: "quellen" },
     ],
   },
   {
     linkName: "gestaltungsziele-menschzentrierte-ki",
     chapter: [
-      { linkName: "einleitung"},
+      { linkName: "einleitung" },
       { linkName: "vertrauenswuerdigkeit" },
       { linkName: "transparenz" },
       { linkName: "erklaerbarkeit" },
       { linkName: "kontrollierbarkeit" },
       { linkName: "mentale-modelle" },
       { linkName: "fazit" },
-      { linkName: "quellen"}
-    ]
+      { linkName: "quellen" },
+    ],
   },
   {
     linkName: "ki-technologien-verstehen",
     chapter: [
-      { linkName: "einleitung"},
+      { linkName: "einleitung" },
       { linkName: "input-technik" },
       { linkName: "input-gestaltung" },
       { linkName: "verarbeitung-technik" },
@@ -70,32 +70,31 @@ const modules = [
       { linkName: "output-technik" },
       { linkName: "output-gestaltung" },
       { linkName: "llm" },
-      { linkName: "quellen"}
-    ]
+      { linkName: "quellen" },
+    ],
   },
   {
     linkName: "automatisierungspotenziale-erkennen",
     chapter: [
-      { linkName: "einleitung"},
+      { linkName: "einleitung" },
       { linkName: "automatisierung-verstehen" },
       { linkName: "eignung-der-automatisierung-einschaetzen" },
       { linkName: "preferred-automation-tasks-scale" },
       { linkName: "wann-ist-ki-sinnvoll" },
-      { linkName: "quellen"}
-    ]
+      { linkName: "quellen" },
+    ],
   },
   {
     linkName: "eu-ai-act",
     chapter: [
-      { linkName: "einleitung"},
+      { linkName: "einleitung" },
       { linkName: "risikostufen-anwendungsbeispiele" },
       { linkName: "risikostufen-auswirkungen" },
       { linkName: "high-level-expert-group" },
-      { linkName: "quellen"}
-    ]
-  }
+      { linkName: "quellen" },
+    ],
+  },
 ];
-
 
 // ----- Background Setup ----- //
 const getBackgroundHTML = () => {
@@ -167,7 +166,7 @@ const getBackgroundHTML = () => {
 };
 
 async function addContentToDocument(finalDoc, contentBuffer, bgPageTemplate) {
-  const contentDoc = await PDFDocument.load(contentBuffer)
+  const contentDoc = await PDFDocument.load(contentBuffer);
   const contentPages = contentDoc.getPages();
 
   const [embeddedBg] = await finalDoc.embedPages([bgPageTemplate]);
@@ -195,66 +194,80 @@ async function addContentToDocument(finalDoc, contentBuffer, bgPageTemplate) {
 }
 
 async function appendPdfFromFile(finalDoc, fileNameWithoutExt) {
-    const filePath = path.join(exportDir, mode, fileNameWithoutExt + ".pdf");
-    
-    if (!fs.existsSync(filePath)) {
-        console.warn(`WARNUNG: Titelblatt nicht gefunden: ${filePath}`);
-        return; 
-    }
+  const filePath = path.join(exportDir, mode, fileNameWithoutExt + ".pdf");
 
-    try {
-        const coverPdfBytes = fs.readFileSync(filePath);
-        const coverDoc = await PDFDocument.load(coverPdfBytes);
+  if (!fs.existsSync(filePath)) {
+    console.warn(`WARNUNG: Titelblatt nicht gefunden: ${filePath}`);
+    return;
+  }
 
-        const copiedPages = await finalDoc.copyPages(coverDoc, coverDoc.getPageIndices());
-        copiedPages.forEach((page) => finalDoc.addPage(page));
-        console.log(`+ Titelblatt eingefügt: ${fileNameWithoutExt}`);
-    } catch (e) {
-        console.error(`Fehler beim Laden des Titelblatts ${fileNameWithoutExt}:`, e);
-    }
+  try {
+    const coverPdfBytes = fs.readFileSync(filePath);
+    const coverDoc = await PDFDocument.load(coverPdfBytes);
+
+    const copiedPages = await finalDoc.copyPages(
+      coverDoc,
+      coverDoc.getPageIndices(),
+    );
+    copiedPages.forEach((page) => finalDoc.addPage(page));
+    console.log(`+ Titelblatt eingefügt: ${fileNameWithoutExt}`);
+  } catch (e) {
+    console.error(
+      `Fehler beim Laden des Titelblatts ${fileNameWithoutExt}:`,
+      e,
+    );
+  }
 }
 
 // ----- Running ----- //
 (async () => {
   const browser = await puppeteer.launch({
     headless: "new",
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+    ],
     defaultViewport: { width: 1200, height: 1600 },
   });
 
   const page = await browser.newPage();
 
   // ----- Background stuff ----- //
-  console.log("PDF Background stuff")
-  await page.setContent(getBackgroundHTML())
+  console.log("PDF Background stuff");
+  await page.setContent(getBackgroundHTML());
   const backgroundPdfBytes = await page.pdf({
     format: "A4",
     printBackground: true,
     margin: { top: 0, bottom: 0, left: 0, right: 0 },
-  })
+  });
 
   if (args[0] === "bg" || args[0] === "background") {
-        console.log("Exportiere nur Hintergrund...");
-        
-        fs.writeFileSync(path.join(exportDir, "Background-Only.pdf"), backgroundPdfBytes);
-        console.log("- Background-Only.pdf gespeichert");
+    console.log("Exportiere nur Hintergrund...");
 
-        await page.setViewport({ width: 794, height: 1123, deviceScaleFactor: 2 });
-        await page.screenshot({ 
-            path: path.join(exportDir, "Background-Only.png"),
-            fullPage: true 
-        });
-        console.log("- Background-Only.png gespeichert");
+    fs.writeFileSync(
+      path.join(exportDir, "Background-Only.pdf"),
+      backgroundPdfBytes,
+    );
+    console.log("- Background-Only.pdf gespeichert");
 
-        await browser.close();
-        return;
-    }
+    await page.setViewport({ width: 794, height: 1123, deviceScaleFactor: 2 });
+    await page.screenshot({
+      path: path.join(exportDir, "Background-Only.png"),
+      fullPage: true,
+    });
+    console.log("- Background-Only.png gespeichert");
+
+    await browser.close();
+    return;
+  }
 
   const backgroundDoc = await PDFDocument.load(backgroundPdfBytes);
-  const [bgPageTemplate] = await backgroundDoc.copyPages(backgroundDoc, [0])
+  const [bgPageTemplate] = await backgroundDoc.copyPages(backgroundDoc, [0]);
 
   // ----- content ----- //
   await page.emulateMediaFeatures([
-    { name: "prefers-color-scheme", value: mode }
+    { name: "prefers-color-scheme", value: mode },
   ]);
 
   const finalDoc = await PDFDocument.create();
@@ -274,31 +287,30 @@ async function appendPdfFromFile(finalDoc, fileNameWithoutExt) {
 
   // loop all pages
   const renderPageAndAppend = async (url) => {
-      console.log("Rendering:", url);
-      await page.goto(url, { waitUntil: "networkidle0" });
-      await page.setViewport({ width: 1200, height: 1600 });
-      
-      await page.evaluate(() => {
-        window.dispatchEvent(new Event("beforeprint"));
-      });
+    console.log("Rendering:", url);
+    await page.goto(url, { waitUntil: "networkidle0" });
+    await page.setViewport({ width: 1200, height: 1600 });
 
-      const pdfBuffer = await page.pdf(createPdfOptions());
-      await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate);
+    await page.evaluate(() => {
+      window.dispatchEvent(new Event("beforeprint"));
+    });
+
+    const pdfBuffer = await page.pdf(createPdfOptions());
+    await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate);
   };
 
   // --- LOGIK ENTSCHEIDUNG --- //
 
   const inputArg = args[0] ? args[0].replace(/^\//, "") : null;
 
-  const targetModuleIndex = modules.findIndex(m => m.linkName === inputArg)
+  const targetModuleIndex = modules.findIndex((m) => m.linkName === inputArg);
   const targetModule = modules[targetModuleIndex];
-
 
   // KOMPLETTER EXPORT
   if (inputArg === "export") {
     console.log("--- Vollständiger Export gestartet ---");
-    await appendPdfFromFile(finalDoc, "_Fin_Titelblatt")
-    
+    await appendPdfFromFile(finalDoc, "_Fin_Titelblatt");
+
     for (let i = 0; i < modules.length; i++) {
       const module = modules[i];
       if (!module.chapter) continue;
@@ -310,7 +322,7 @@ async function appendPdfFromFile(finalDoc, fileNameWithoutExt) {
         await renderPageAndAppend(url);
       }
     }
-    
+
     const pdfBytes = await finalDoc.save();
     fs.writeFileSync(path.join(exportDir, "Gesamter_Kurs.pdf"), pdfBytes);
   }
@@ -319,17 +331,23 @@ async function appendPdfFromFile(finalDoc, fileNameWithoutExt) {
   else if (targetModule) {
     console.log(`--- Exportiere Modul: ${targetModule.linkName} ---`);
 
-    await appendPdfFromFile(finalDoc, `_Fin_Titel_Modul_${targetModuleIndex + 1}`)
+    await appendPdfFromFile(
+      finalDoc,
+      `_Fin_Titel_Modul_${targetModuleIndex + 1}`,
+    );
 
     if (targetModule.chapter) {
-        for (const chapter of targetModule.chapter) {
-            const url = `${BASE_URL}/${targetModule.linkName}/${chapter.linkName}`;
-            await renderPageAndAppend(url);
-        }
+      for (const chapter of targetModule.chapter) {
+        const url = `${BASE_URL}/${targetModule.linkName}/${chapter.linkName}`;
+        await renderPageAndAppend(url);
+      }
     }
 
     const pdfBytes = await finalDoc.save();
-    fs.writeFileSync(path.join(exportDir, mode, `Modul_${targetModule.linkName}.pdf`), pdfBytes);
+    fs.writeFileSync(
+      path.join(exportDir, mode, `Modul_${targetModule.linkName}.pdf`),
+      pdfBytes,
+    );
   }
 
   // EINZELNE SEITE

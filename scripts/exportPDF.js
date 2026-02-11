@@ -421,8 +421,6 @@ async function processMode(browser, mode, task, specificArg = null) {
       console.log(`✔ Gespeichert: ${filename}`);
     }
   }
-
-  await page.close();
 }
 
 // ----- Running ----- //

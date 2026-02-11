@@ -281,8 +281,8 @@ async function processMode(browser, mode, task, specificArg = null) {
   // Background for mode
   console.log(`Generate BG for ${mode}`);
   const bgPage = await browser.newPage();
-  await page.setContent(getBackgroundHTML(mode));
-  const backgroundPdfBytes = await page.pdf({
+  await bgPage.setContent(getBackgroundHTML(mode));
+  const backgroundPdfBytes = await bgPage.pdf({
     format: "A4",
     printBackground: true,
     margin: { top: 0, bottom: 0, left: 0, right: 0 },

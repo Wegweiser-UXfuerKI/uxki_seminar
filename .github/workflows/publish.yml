@@ -40,8 +40,6 @@ jobs:
 
       - name: Generate PDF
         run: node scripts/exportPDF.js export
-        env:
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
 
       - name: Copy PDF to dist
         run: |

@@ -8,15 +8,12 @@ const args = process.argv.slice(2);
 
 const cssPath = path.join(__dirname, "../src/assets/css/DesignTokens.css");
 const tmpDir = path.join(__dirname, "../tmp");
-const exportDir = path.join(__dirname, "../export");
+const pdfBaseDir = path.join(__dirname, "../public/PDF");
 
 if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
-if (!fs.existsSync(exportDir)) fs.mkdirSync(exportDir);
 
 // ----- Settigns ----- //
-
 const BASE_URL = "http://localhost:5173";
-const mode = "light";
 
 // ----- Modules ----- //
 const modules = [
@@ -97,7 +94,7 @@ const modules = [
 ];
 
 // ----- Background Setup ----- //
-const getBackgroundHTML = () => {
+const getBackgroundHTML = (mode) => {
   let designTokensCSS = "";
   try {
     designTokensCSS = fs.readFileSync(cssPath, "utf8");
@@ -110,17 +107,14 @@ const getBackgroundHTML = () => {
     <head>
       <style>
         ${designTokensCSS}
-
         html, body { 
             margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; 
         }
-
         .pdf-bg {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background: var(--bg); 
             -webkit-print-color-adjust: exact;
         }
-
         .blob {
             position: absolute;
             border-radius: 100%;
@@ -128,7 +122,6 @@ const getBackgroundHTML = () => {
             filter: var(--blur);
             z-index: -1;
         }
-
         .blob-before {
             right: 0;
             top: 40vw; 
@@ -136,7 +129,6 @@ const getBackgroundHTML = () => {
             height: 30vw;
             background: var(--rGradient);
         }
-
         .blob-after {
             left: 0;
             bottom: -15vw;
@@ -144,7 +136,6 @@ const getBackgroundHTML = () => {
             height: 25vw;
             background: var(--lGradient);
         }
-        
         .blob-after-second {
             left: 0;
             top: -0vw;
@@ -193,11 +184,18 @@ async function addContentToDocument(finalDoc, contentBuffer, bgPageTemplate) {
   }
 }
 
-async function appendPdfFromFile(finalDoc, fileNameWithoutExt) {
-  const filePath = path.join(exportDir, mode, fileNameWithoutExt + ".pdf");
+async function appendPdfFromFile(finalDoc, currentMode, fileNameWithoutExt) {
+  const filePath = path.join(
+    pdfBaseDir,
+    currentMode,
+    "titlepages",
+    fileNameWithoutExt + ".pdf",
+  );
 
   if (!fs.existsSync(filePath)) {
-    console.warn(`WARNUNG: Titelblatt nicht gefunden: ${filePath}`);
+    console.warn(
+      `[${currentMode}] WARNUNG: Titelblatt nicht gefunden: ${filePath}`,
+    );
     return;
   }
 
@@ -210,13 +208,131 @@ async function appendPdfFromFile(finalDoc, fileNameWithoutExt) {
       coverDoc.getPageIndices(),
     );
     copiedPages.forEach((page) => finalDoc.addPage(page));
-    console.log(`+ Titelblatt eingefügt: ${fileNameWithoutExt}`);
+    console.log(
+      `[${currentMode}] + Titelblatt eingefügt: ${fileNameWithoutExt}`,
+    );
   } catch (e) {
     console.error(
-      `Fehler beim Laden des Titelblatts ${fileNameWithoutExt}:`,
+      `[${currentMode}] Fehler beim Laden des Titelblatts ${fileNameWithoutExt}:`,
       e,
     );
   }
+}
+
+async function renderPage(page, url, createPdfOptions) {
+  console.log("Rendering:", url);
+  await page.goto(url, { waitUntil: "networkidle0" });
+  await page.setViewport({ width: 1200, height: 1600 });
+  await page.evaluate(() => {
+    window.dispatchEvent(new Event("beforeprint"));
+  });
+  return await page.pdf(createPdfOptions);
+}
+
+async function processMode(browser, mode, task, specificArg = null) {
+  console.log(`Starte modus: ${mode.toUpperCase()}`);
+
+  const modeDir = path.join(pdfBaseDir, mode);
+  const titlePagesDir = path.join(modeDir, "titlepages");
+  if (!fs.existsSync(modeDir)) fs.mkdirSync(modeDir);
+  if (!fs.existsSync(titlePagesDir)) fs.mkdirSync(titlePagesDir);
+
+  const page = await browser.newPage();
+
+  // Background for mode
+  console.log(`Generate BG for ${mode}`);
+  await page.setContent(getBackgroundHTML(mode));
+  const backgroundPdfBytes = await page.pdf({
+    format: "A4",
+    printBackground: true,
+    margin: { top: 0, bottom: 0, left: 0, right: 0 },
+  });
+
+  const backgroundDoc = await PDFDocument.load(backgroundPdfBytes);
+  const [bgPageTemplate] = await backgroundDoc.copyPages(backgroundDoc, [0]);
+
+  // browser context for mode
+  await page.emulateMediaFeatures([
+    { name: "prefers-color-scheme", value: mode },
+  ]);
+  await page.evaluateOnNewDocument((m) => {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.documentElement.classList.remove("light", "dark");
+      document.documentElement.classList.add(m);
+    });
+  }, mode);
+
+  const createPdfOptions = () => ({ format: "A4", printBackground: true });
+
+  // -- TASKS -- //
+  // gesamter Kurs
+  if (task === "all" || task === "course") {
+    console.log(`Erstelle: Gesamter_Kurs.pdf (${mode})`);
+    const finalDoc = await PDFDocument.create();
+
+    await appendPdfFromFile(finalDoc, `Titel_Modul_${i + 1}`, mode);
+
+    for (let i = 0; i < modules.length; i++) {
+      const module = modules[i];
+      if (!module.chapter) continue;
+
+      for (const chapter of module.chapter) {
+        const url = `${BASE_URL}/${module.linkName}/${chapter.linkName}`;
+        const pdfBuffer = await renderPage(page, url, createPdfOptions());
+        await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate);
+      }
+    }
+    const pdfBytes = await finalDoc.save();
+    fs.writeFileSync(path.join(modeDir, `Gesamter_Kurs_${mode}.pdf`), pdfBytes);
+  }
+
+  // Einzelnes Modul (mit deckblatt)
+  if (task === "all" || task.startsWith("modul")) {
+    const modulesToProcess =
+      task === "all"
+        ? modules
+        : [modules.find((m) => m.linkName === specificArg)].filter(Boolean);
+
+    for (const module of modulesToProcess) {
+      const moduleIndex = modules.indexOf(module);
+      console.log(`Erstelle PDF von Modul: ${module.linkName} (${mode})`);
+
+      const moduleDoc = await PDFDocument.create();
+
+      await appendPdfFromFile(
+        moduleDoc,
+        `Titel_Modul_${moduleIndex + 1}`,
+        mode,
+      );
+
+      if (module.chapter) {
+        for (const chapter of module.chapter) {
+          const url = `${BASE_URL}/${module.linkName}/${chapter.linkName}`;
+          const pdfBuffer = await renderPage(page, url, createPdfOptions());
+          await addContentToDocument(moduleDoc, pdfBuffer, bgPageTemplate);
+        }
+      }
+      const pdfBytes = await moduleDoc.save();
+      fs.writeFileSync(
+        path.join(modeDir, `Modul_${module.linkName}.pdf`),
+        pdfBytes,
+      );
+    }
+  }
+
+  // Task single Chapter
+  if (task === "page" && specificArg) {
+    console.log(`Erstelle Chapter-PDF: ${specificArg} (${mode})`);
+    const finalDoc = await PDFDocument.create();
+    const url = `${BASE_URL}${specificArg.startsWith("/") ? specificArg : "/" + specificArg}`;
+    const pdfBuffer = await renderPage(page, url, createPdfOptions());
+    await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate);
+
+    const filename = specificArg.replace(/\//g, "_") + ".pdf";
+    fs.writeFileSync(path.join(modeDir, filename), pdfBytes);
+  }
+
+  await page.close();
 }
 
 // ----- Running ----- //
@@ -231,136 +347,40 @@ async function appendPdfFromFile(finalDoc, fileNameWithoutExt) {
     defaultViewport: { width: 1200, height: 1600 },
   });
 
-  const page = await browser.newPage();
+  const arg1 = args[0] ? args[0].replace(/^\//, "") : null;
+  const arg2 = args[1];
 
-  // ----- Background stuff ----- //
-  console.log("PDF Background stuff");
-  await page.setContent(getBackgroundHTML());
-  const backgroundPdfBytes = await page.pdf({
-    format: "A4",
-    printBackground: true,
-    margin: { top: 0, bottom: 0, left: 0, right: 0 },
-  });
-
-  if (args[0] === "bg" || args[0] === "background") {
-    console.log("Exportiere nur Hintergrund...");
-
-    fs.writeFileSync(
-      path.join(exportDir, "Background-Only.pdf"),
-      backgroundPdfBytes,
-    );
-    console.log("- Background-Only.pdf gespeichert");
-
-    await page.setViewport({ width: 794, height: 1123, deviceScaleFactor: 2 });
-    await page.screenshot({
-      path: path.join(exportDir, "Background-Only.png"),
-      fullPage: true,
-    });
-    console.log("- Background-Only.png gespeichert");
-
+  try {
+    // case 1: GH Workflow => Alles
+    if (arg1 === "ci") {
+      console.log("CI MODE - generatin everything for light and dark");
+      await processMode(browser, "light", "all");
+      await processMode(browser, "dark", "all");
+    }
+    // case 2: Alles
+    else if (arg1 === "export" || arg1 === "course") {
+      const mode = arg2 || "light";
+      await processMode(browser, mode, "course");
+    }
+    // case 3: specific module
+    else if (modules.find((m) => m.linkName === arg1)) {
+      const mode = arg2 || "light";
+      await processMode(browser, mode, "modul", arg1);
+    }
+    // case 4: single chapter
+    else if (arg1) {
+      const mode = arg2 || "light";
+      await processMode(browser, mode, "page", arg1);
+    } else {
+      console.log(
+        "Keine gültigen Argumente. Nutzung: node script.js [ci | export | <modul-name> | <pfad>] [light|dark]",
+      );
+    }
+  } catch (e) {
+    console.error("FATAL ERROR:", e);
+    process.exit(1);
+  } finally {
     await browser.close();
-    return;
+    console.log("Jobs done");
   }
-
-  const backgroundDoc = await PDFDocument.load(backgroundPdfBytes);
-  const [bgPageTemplate] = await backgroundDoc.copyPages(backgroundDoc, [0]);
-
-  // ----- content ----- //
-  await page.emulateMediaFeatures([
-    { name: "prefers-color-scheme", value: mode },
-  ]);
-
-  const finalDoc = await PDFDocument.create();
-
-  await page.evaluateOnNewDocument((mode) => {
-    document.addEventListener("DOMContentLoaded", () => {
-      document.documentElement.classList.remove("light", "dark");
-      document.documentElement.classList.add(mode);
-    });
-  }, mode);
-
-  // helper for pdf generation
-  const createPdfOptions = () => ({
-    format: "A4",
-    printBackground: true,
-  });
-
-  // loop all pages
-  const renderPageAndAppend = async (url) => {
-    console.log("Rendering:", url);
-    await page.goto(url, { waitUntil: "networkidle0" });
-    await page.setViewport({ width: 1200, height: 1600 });
-
-    await page.evaluate(() => {
-      window.dispatchEvent(new Event("beforeprint"));
-    });
-
-    const pdfBuffer = await page.pdf(createPdfOptions());
-    await addContentToDocument(finalDoc, pdfBuffer, bgPageTemplate);
-  };
-
-  // --- LOGIK ENTSCHEIDUNG --- //
-
-  const inputArg = args[0] ? args[0].replace(/^\//, "") : null;
-
-  const targetModuleIndex = modules.findIndex((m) => m.linkName === inputArg);
-  const targetModule = modules[targetModuleIndex];
-
-  // KOMPLETTER EXPORT
-  if (inputArg === "export") {
-    console.log("--- Vollständiger Export gestartet ---");
-    await appendPdfFromFile(finalDoc, "_Fin_Titelblatt");
-
-    for (let i = 0; i < modules.length; i++) {
-      const module = modules[i];
-      if (!module.chapter) continue;
-
-      await appendPdfFromFile(finalDoc, `_Fin_Titel_Modul_${i + 1}`);
-
-      for (const chapter of module.chapter) {
-        const url = `${BASE_URL}/${module.linkName}/${chapter.linkName}`;
-        await renderPageAndAppend(url);
-      }
-    }
-
-    const pdfBytes = await finalDoc.save();
-    fs.writeFileSync(path.join(exportDir, "Gesamter_Kurs.pdf"), pdfBytes);
-  }
-
-  // MODUL EXPORT
-  else if (targetModule) {
-    console.log(`--- Exportiere Modul: ${targetModule.linkName} ---`);
-
-    await appendPdfFromFile(
-      finalDoc,
-      `_Fin_Titel_Modul_${targetModuleIndex + 1}`,
-    );
-
-    if (targetModule.chapter) {
-      for (const chapter of targetModule.chapter) {
-        const url = `${BASE_URL}/${targetModule.linkName}/${chapter.linkName}`;
-        await renderPageAndAppend(url);
-      }
-    }
-
-    const pdfBytes = await finalDoc.save();
-    fs.writeFileSync(
-      path.join(exportDir, mode, `Modul_${targetModule.linkName}.pdf`),
-      pdfBytes,
-    );
-  }
-
-  // EINZELNE SEITE
-  else if (inputArg) {
-    const url = `${BASE_URL}${args[0].startsWith("/") ? args[0] : "/" + args[0]}`;
-    console.log("--- Exportiere einzelne Seite ---", url);
-
-    await renderPageAndAppend(url);
-
-    const filename = inputArg.replace(/\//g, "_") + ".pdf";
-    const pdfBytes = await finalDoc.save();
-    fs.writeFileSync(path.join(exportDir, filename), pdfBytes);
-  }
-
-  await browser.close();
 })();

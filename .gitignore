@@ -15,6 +15,10 @@
 /tmp
 /export
 
+# ignore pdf in public pdf folder, but consider the titlepages
+public/PDF/**/*.pdf
+!public/PDF/**/titlepages/*.pdf
+
 # misc
 .DS_Store
 .env.local

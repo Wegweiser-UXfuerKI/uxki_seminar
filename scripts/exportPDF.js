@@ -20,6 +20,7 @@ const CONCURRENCY_LIMIT = 4;
 const modules = [
   {
     linkName: "ux-und-usability",
+    name: "UX und Usability",
     chapter: [
       { linkName: "einleitung" },
       { linkName: "usability" },
@@ -33,6 +34,7 @@ const modules = [
   },
   {
     linkName: "ki-bezogene-ux",
+    name: "KI-bezogene UX",
     chapter: [
       { linkName: "einleitung-ki-bezogene-ux" },
       { linkName: "wahrgenommene-autonomie" },
@@ -46,6 +48,7 @@ const modules = [
   },
   {
     linkName: "gestaltungsziele-menschzentrierte-ki",
+    name: "Gestaltungsziele für menschzentrierte KI",
     chapter: [
       { linkName: "einleitung" },
       { linkName: "vertrauenswuerdigkeit" },
@@ -59,6 +62,7 @@ const modules = [
   },
   {
     linkName: "ki-technologien-verstehen",
+    name: "KI-Technologien verstehen",
     chapter: [
       { linkName: "einleitung" },
       { linkName: "input-technik" },
@@ -73,6 +77,7 @@ const modules = [
   },
   {
     linkName: "automatisierungspotenziale-erkennen",
+    name: "Automatisierungspotenziale erkennen",
     chapter: [
       { linkName: "einleitung" },
       { linkName: "automatisierung-verstehen" },
@@ -84,6 +89,7 @@ const modules = [
   },
   {
     linkName: "eu-ai-act",
+    name: "EU AI Act",
     chapter: [
       { linkName: "einleitung" },
       { linkName: "risikostufen-anwendungsbeispiele" },
@@ -364,7 +370,7 @@ async function processMode(browser, mode, task, specificArg = null) {
       }
     }
     const pdfBytes = await finalDoc.save();
-    fs.writeFileSync(path.join(modeDir, `Gesamter_Kurs_${mode}.pdf`), pdfBytes);
+    fs.writeFileSync(path.join(modeDir, `Gesamter_Kurs.pdf`), pdfBytes);
   }
 
   // Einzelnes Modul (mit deckblatt)
@@ -400,7 +406,7 @@ async function processMode(browser, mode, task, specificArg = null) {
       }
       const pdfBytes = await moduleDoc.save();
       fs.writeFileSync(
-        path.join(modeDir, `Modul_${module.linkName}.pdf`),
+        path.join(modeDir, `Modul ${module.name}.pdf`),
         pdfBytes,
       );
     }
@@ -418,7 +424,7 @@ async function processMode(browser, mode, task, specificArg = null) {
       );
       const filename = specificArg.replace(/\//g, "_") + ".pdf";
       fs.writeFileSync(path.join(modeDir, filename), await pageDoc.save());
-      console.log(`✔ Gespeichert: ${filename}`);
+      console.log(`Gespeichert: ${filename}`);
     }
   }
 }

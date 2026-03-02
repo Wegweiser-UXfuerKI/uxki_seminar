@@ -33,6 +33,7 @@ import mensch_computer_quiz from "../SimpleQuizContent/grundlagenUX/mensch-compu
 import evaluation_quiz from "../SimpleQuizContent/grundlagenUX/evaluation.json";
 import SubTopicCard from "../2_molecule/cards/SubTopicCard";
 import { LinkHandler } from "../1_elements/LinkHandler";
+import { PDFDownload } from "../2_molecule/PDFDownload";
 
 const sectionsUsability = [
   { id: "2", title: "Definition" },
@@ -587,7 +588,8 @@ const Nutzungskontext = {
       </p>
       <Accordion
         title="1. Mobiler Beratungsbus für Geflüchtete"
-        initiallyOpen={false}>
+        initiallyOpen={false}
+      >
         <p>
           In einem mobilen Beratungsbus für Geflüchtete arbeiten die
           Mitarbeitenden mit Tablets. Die Beratung findet häufig unter freiem
@@ -633,7 +635,8 @@ const Nutzungskontext = {
         {/* TODO: uniform distance */}
         <Accordion
           title="2. Digital ausgerichtete NGO mit Online-Beratung"
-          initiallyOpen={false}>
+          initiallyOpen={false}
+        >
           <p>
             In einer digital ausgerichteten NGO, die Online-Beratung anbietet,
             arbeiten die Teams in ruhigen Büros mit ergonomischen
@@ -1613,7 +1616,8 @@ const Evaluation = {
             <a
               href="https://www.nngroup.com/articles/ten-usability-heuristics/"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               die 10 Regeln von Nielsen
             </a>
             ). So lassen sich offensichtliche Usability-Probleme schnell
@@ -1626,7 +1630,8 @@ const Evaluation = {
             <a
               href="https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               hier
             </a>
             .
@@ -1645,14 +1650,16 @@ const Evaluation = {
                 <a
                   href="https://germanupa.de/wissen/fragebogenmatrix/sus/"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   System Usability Scale
                 </a>{" "}
                 (
                 <a
                   href="http://interaction-design-group.de/toolbox/wp-content/uploads/2016/05/SUS.pdf"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   Deutsche Variante
                 </a>
                 )
@@ -1663,7 +1670,8 @@ const Evaluation = {
                 <a
                   href="https://site.unibo.it/hfrs/en/questionnaire-and-scales-2/quis"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   Questionnaire for User Interface Satisfaction (QUIS)
                 </a>
               </p>
@@ -1673,7 +1681,8 @@ const Evaluation = {
                 <a
                   href="https://www.researchgate.net/publication/230786746_Measuring_Usability_with_the_USE_Questionnaire"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   USE-Fragebogen (Usefulness, Satisfaction, and Ease of Use)
                 </a>
               </p>
@@ -1716,7 +1725,8 @@ const Evaluation = {
           <a
             href="https://www.nngroup.com/articles/ten-usability-heuristics/"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             die 10 Regeln von Nielsen
           </a>
           ). So lassen sich offensichtliche Usability-Probleme schnell
@@ -1730,7 +1740,8 @@ const Evaluation = {
             href="https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/"
             target="_blank"
             rel="noopener noreferrer"
-            className="only-print">
+            className="only-print"
+          >
             https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/
           </a>
         </p>
@@ -1750,14 +1761,16 @@ const Evaluation = {
                 <a
                   href="https://germanupa.de/wissen/fragebogenmatrix/sus/"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   System Usability Scale
                 </a>{" "}
                 (
                 <a
                   href="http://interaction-design-group.de/toolbox/wp-content/uploads/2016/05/SUS.pdf"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   Deutsche Variante
                 </a>
                 )
@@ -1768,7 +1781,8 @@ const Evaluation = {
                 <a
                   href="https://site.unibo.it/hfrs/en/questionnaire-and-scales-2/quis"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   Questionnaire for User Interface Satisfaction (QUIS)
                 </a>
               </p>
@@ -1778,7 +1792,8 @@ const Evaluation = {
                 <a
                   href="https://www.researchgate.net/publication/230786746_Measuring_Usability_with_the_USE_Questionnaire"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   USE-Fragebogen (Usefulness, Satisfaction, and Ease of Use)
                 </a>
               </p>
@@ -1834,14 +1849,16 @@ const Evaluation = {
             <a
               href="https://www.ueq-online.org/"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               User Experience Questionnaire (UEQ)
             </a>{" "}
             oder{" "}
             <a
               href="https://germanupa.de/wissen/fragebogenmatrix/attrakdiff"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               AttrakDiff
             </a>{" "}
             liefern schnelle, vergleichbare Ergebnisse zu verschiedenen
@@ -1879,14 +1896,16 @@ const Evaluation = {
           <a
             href="https://www.ueq-online.org/"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             User Experience Questionnaire (UEQ)
           </a>{" "}
           oder{" "}
           <a
             href="https://germanupa.de/wissen/fragebogenmatrix/attrakdiff"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             AttrakDiff
           </a>{" "}
           liefern schnelle, vergleichbare Ergebnisse zu verschiedenen
@@ -2031,7 +2050,8 @@ const Einleitung = {
             <a
               href="https://youtu.be/9cgmeenl72s"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               https://youtu.be/9cgmeenl72s
             </a>
           </h4>
@@ -2062,6 +2082,9 @@ const Einleitung = {
           ]}
         />
       </div>
+    </section>,
+    <section>
+      <PDFDownload pdfTitle="Modul UX und Usability" />
     </section>,
   ],
 };

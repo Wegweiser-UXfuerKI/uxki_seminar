@@ -68,6 +68,8 @@ const AppProvider = ({ children }) => {
     if (moduleLink === "test") return;
     if (moduleLink === "title") return;
 
+    if (moduleLink === "PDF" || moduleLink === "pdf") return;
+
     const isRootPath = pathSegments.length === 0;
     if (isRootPath) {
       clearSelection();

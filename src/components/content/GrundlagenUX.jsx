@@ -2083,9 +2083,11 @@ const Einleitung = {
         />
       </div>
     </section>,
+    /*
     <section>
       <PDFDownload pdfTitle="Modul UX und Usability" />
     </section>,
+    */
   ],
 };
 

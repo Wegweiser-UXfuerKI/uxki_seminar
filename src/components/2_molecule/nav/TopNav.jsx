@@ -8,6 +8,7 @@ import {
   getModuleLinksAndNames,
   getSubtopicLinksAndNamesByModulelink,
 } from "../../ContentHandler";
+import { LinkHandler } from "../../1_elements/LinkHandler";
 
 /**
  * TopNav component to display navigation for tablet screens.
@@ -50,13 +51,14 @@ const TopNav = () => {
 
   return (
     <nav className="w-full flex items-center justify-start p-4 gap-2">
-      <Link
+      <LinkHandler
         to="/"
         aria-label="Zur Startseite"
         onClick={homeScrollCheck}
-        className="inlineLink mr-1">
+        className="inlineLink mr-1"
+      >
         Kursübersicht
-      </Link>
+      </LinkHandler>
       {selectedModuleLink && (
         <>
           <RightArrow />

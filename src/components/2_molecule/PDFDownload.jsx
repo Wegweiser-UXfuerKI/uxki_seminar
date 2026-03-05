@@ -29,7 +29,7 @@ export const PDFDownload = ({ pdfTitle }) => {
       <div className="rounded-xl bg-[var(--box)] shadow no-hover flex flex-col items-center w-fit">
         <div className="flex gap-[var(--scale2)] p-[var(--scale2)]">
           <a
-            href={`/PDF/${theme}/${pdfTitle}.pdf`}
+            href={`${import.meta.env.BASE_URL}PDF/${theme}/${pdfTitle}.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex gap-1"
@@ -47,14 +47,14 @@ export const PDFDownload = ({ pdfTitle }) => {
         {isExpanded && (
           <div className="flex flex-col gap-[var(--scale2)] p-[var(--scale2)] border-t w-full">
             <a
-              href={`/PDF/light/${pdfTitle}.pdf`}
+              href={`${import.meta.env.BASE_URL}PDF/light/${pdfTitle}.pdf`}
               target="_blank"
               rel="noopener noreferrer"
             >
               Helle Version
             </a>
             <a
-              href={`/PDF/dark/${pdfTitle}.pdf`}
+              href={`${import.meta.env.BASE_URL}PDF/dark/${pdfTitle}.pdf`}
               target="_blank"
               rel="noopener noreferrer"
             >

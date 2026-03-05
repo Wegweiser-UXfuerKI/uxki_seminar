@@ -4,7 +4,7 @@ import ArrowIcon from "../1_elements/ArrowIcon";
 import DownloadIcon from "../../assets/icons/download.svg?react";
 
 export const PDFDownload = ({ pdfTitle }) => {
-  const { theme } = useContext(AppContext);
+  const { theme, selectedModuleName } = useContext(AppContext);
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -12,13 +12,18 @@ export const PDFDownload = ({ pdfTitle }) => {
       <h2>Lieber in Textform?</h2>
       {pdfTitle === "Gesamter_Kurs" ? (
         <p>
-          Hier können Sie den gesamten Inhalt in Textform herunterladen. Wenn
-          Sie lieber die einzelnen Module herunterladen möchten finden Sie diese
-          in den jeweiligen Einleitungskapiteln der Module.
+          Zur Unterstütztung des Selbststudiums werden die Inhalte als PDF zur
+          Verfügung gestellt. Hier können Sie den gesamten Inhalt in Textform
+          herunterladen. Wenn Sie die einzelnen Module als PDF herunterladen
+          möchten finden Sie diese in den jeweiligen Einleitungskapiteln der
+          Module.
         </p>
       ) : (
         <p style={{ marginBottom: 0 }}>
-          Hier können Sie den Inhalt dieses Moduls in Textform herunterladen.
+          Zur Unterstützung des Selbststudiums werden die Inhalte dieses Moduls
+          als PDF zur Verfügung gestellt. Hier können Sie die Inhalte des
+          Kapitels {selectedModuleName} herunterladen. Eine PDF mit allen
+          Inhalten finden Sie auf der Startseite der Lehranwendung.
         </p>
       )}
       <div className="rounded-xl bg-[var(--box)] shadow no-hover flex flex-col items-center w-fit">

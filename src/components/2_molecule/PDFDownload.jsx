@@ -2,10 +2,21 @@ import { useContext, useState } from "react";
 import { AppContext } from "../../AppContext";
 import ArrowIcon from "../1_elements/ArrowIcon";
 import DownloadIcon from "../../assets/icons/download.svg?react";
+import { useEffect } from "react";
 
 export const PDFDownload = ({ pdfTitle }) => {
   const { theme, selectedModuleName } = useContext(AppContext);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [mode, setMode] = useState(null);
+
+  useEffect(() => {
+    if (theme === "system") {
+      const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setMode(isDark ? "dark" : "light");
+    } else {
+      setMode(theme);
+    }
+  });
 
   return (
     <div className="w-full flex flex-col gap-[var(--scale2)]">
@@ -29,7 +40,7 @@ export const PDFDownload = ({ pdfTitle }) => {
       <div className="rounded-xl bg-[var(--box)] shadow no-hover flex flex-col items-center w-fit">
         <div className="flex gap-[var(--scale2)] p-[var(--scale2)]">
           <a
-            href={`${import.meta.env.BASE_URL}PDF/${theme}/${pdfTitle}.pdf`}
+            href={`${import.meta.env.BASE_URL}PDF/${mode}/${pdfTitle}.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex gap-1"

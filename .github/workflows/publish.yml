@@ -64,10 +64,10 @@ jobs:
           MESSAGE: "Build: ({sha}) {msg}"
 
       - name: Deploy to Server via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets. FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
           local-dir: ./dist/
-          dry-run: true
